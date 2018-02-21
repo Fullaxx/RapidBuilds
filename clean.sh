@@ -1,0 +1,11 @@
+#!/bin/bash
+
+# find . \( -type f -o -type l \) \( -name '*.txz' -o -name '*.xzm' \) -exec rm {} \;
+
+find . -type l -name '*.txz' -exec rm {} \;
+find . -type l -name '*.xzm' -exec rm {} \;
+
+find . -type f -name '*.txz' -exec rm {} \;
+find . -type f -name '*.xzm' -exec rm {} \;
+
+find . -type f -name '*~' -exec rm {} \;
