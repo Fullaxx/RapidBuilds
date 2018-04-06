@@ -1,5 +1,5 @@
 
-for MODCFG in ${PROJECTBASE}/???-*/???-*.cfg.sh; do source ${MODCFG}; done
+for PKGCFG in ${PROJECTBASE}/???-*/packages.cfg.sh; do source ${PKGCFG}; done
 
 ### DEP TRACKING ######################
 
