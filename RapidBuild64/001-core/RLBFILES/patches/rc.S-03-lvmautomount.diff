@@ -1,0 +1,31 @@
+--- rc.S	2017-11-14 16:49:09.327142836 +0000
++++ rc.S.new	2017-11-14 16:51:15.145821915 +0000
+@@ -105,6 +105,28 @@
+   fi
+ fi
+ 
++## RL Added
++sed -e '/\/dev\/sr0/d' -i /etc/fstab
++echo "/dev/sr0 /mnt/cdrom auto noauto,nodev,nosuid 0 0" >> /etc/fstab
++
++# fanthom's LVM automount:
++blkid | grep /dev/mapper > /tmp/mapper$$
++if grep /dev /tmp/mapper$$ >/dev/null; then
++  echo -e "\n# LVM partitions" >>/etc/fstab
++  LVM=`wc -l /tmp/mapper$$ | cut -d " " -f1`
++  if grep "noauto" /proc/cmdline >/dev/null; then AUTO=noauto; else AUTO=auto; fi
++  x=1
++  while [ $x -le $LVM ]; do
++    NAME=`awk NR==$x /tmp/mapper$$ | awk '{print$1}' | cut -d ':' -f1 | sed "s@/dev/mapper/@@"`
++    FS=`awk NR==$x /tmp/mapper$$ | awk '{print$3}' | cut -d '=' -f2 | sed s/'"'//g`
++    mkdir /mnt/$NAME
++    echo "/dev/mapper/$NAME /mnt/$NAME $FS $AUTO,noatime,users,suid,dev,exec 0 0 # AutoUpdate" >>/etc/fstab
++    x=$(($x+1))
++  done
++fi
++rm /tmp/mapper$$
++### RL Added ###
++
+ # Open any volumes created by cryptsetup.
+ #
+ # Some notes on /etc/crypttab in Slackware:

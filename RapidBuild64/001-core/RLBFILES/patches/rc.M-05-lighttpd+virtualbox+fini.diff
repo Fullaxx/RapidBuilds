@@ -1,0 +1,43 @@
+--- rc.M	2017-11-20 15:15:51.892192725 +0000
++++ rc.M.new	2017-11-20 15:23:48.497305402 +0000
+@@ -336,14 +336,40 @@
+   /etc/rc.d/rc.gpm start
+ fi
+ 
++### RL Added ###
++# Start Lighttpd web server:
++if [ -x /etc/rc.d/rc.lighttpd -a -r /etc/lighttpd/lighttpd.conf ]; then
++  /etc/rc.d/rc.lighttpd start
++fi
++
++# Install VirtualBox if available
++if [ -x /etc/rc.d/rc.VirtualBox ]; then
++  /etc/rc.d/rc.VirtualBox
++fi
++### RL Added ###
++
+ # If there are SystemV init scripts for this runlevel, run them.
+ if [ -x /etc/rc.d/rc.sysvinit ]; then
+   /etc/rc.d/rc.sysvinit
+ fi
+ 
++### RL Added ###
++# Remove unneeded modules
++if [ -x /etc/rc.d/rc.rl_module_cleanup ]; then
++  /etc/rc.d/rc.rl_module_cleanup
++fi
++### RL Added ###
++
+ # Start the local setup procedure.
+ if [ -x /etc/rc.d/rc.local ]; then
+   /etc/rc.d/rc.local
+ fi
+ 
++### RL Added ###
++# Start the rc.fini script
++if [ -x /etc/rc.d/rc.rl_fini ]; then
++  /etc/rc.d/rc.rl_fini
++fi
++### RL Added ###
++
+ # All done.

@@ -1,0 +1,11 @@
+--- rc.6	2017-11-15 00:12:03.000000000 +0000
++++ rc.6.new	2017-11-20 15:32:34.101939587 +0000
+@@ -29,7 +29,7 @@
+ 		shutdown_command="halt"
+ 		;;
+ 	*6)
+-		shutdown_command=reboot
++		shutdown_command="reboot"
+ 		;;
+ 	*)
+ 		echo "$0: call me as \"rc.0\" or \"rc.6\" please!"

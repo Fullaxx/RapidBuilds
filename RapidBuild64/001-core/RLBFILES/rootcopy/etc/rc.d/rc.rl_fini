@@ -1,0 +1,51 @@
+#!/bin/bash
+# Mount all discs, disable guest, autostart gui
+#
+# Author: Tomas M. <http://slax.linux-live.org>
+#
+# Modified for Slax_remix by fanthom
+
+. /usr/lib/liblinuxlive
+
+#if [ -x /etc/rc.d/rc.rl_glib_schema_compile ]; then
+#  /etc/rc.d/rc.rl_glib_schema_compile &
+#fi
+
+if [ -x /etc/rc.d/rc.rl_jail32 ]; then
+  /etc/rc.d/rc.rl_jail32 &
+fi
+
+if [ -x /etc/rc.d/rc.rl_fonts ]; then
+  /etc/rc.d/rc.rl_fonts &
+fi
+
+if [ -x /usr/sbin/makewhatis ]; then
+  makewhatis &
+fi
+
+# debug
+if grep debug /proc/cmdline 2>/dev/null >/dev/null; then
+   show_debug_banner
+   /mnt/live/bin/ash || /bin/bash || /bin/sh
+fi
+
+#if ! grep -qw slaxdrive /etc/fstab; then
+#    echo -en "\n# Slax Drive\nnone /mnt/slaxdrive slaxdrive defaults 0 0 # This is for Slax Drive integration into KDE\n" >>/etc/fstab
+#fi
+
+# if autoexec= boot parameter is present, automatically start the command given.
+# If you need to execute several commands, separate them using ';'
+# If you need to use spaces in your command, use ~ instead
+# If you wish to reboot/poweroff after the command's execution is finished,
+#  simply use autoexec=yourCommand;poweroff for example.
+AUTOCMD=$(cmdline_value "autoexec" | tr "~" " ")
+if [ "$AUTOCMD" != "" ]; then
+   echo "starting autoexec command:  su --login -c \"$AUTOCMD\""
+   su --login -c "$AUTOCMD"
+fi
+
+# make sure the terminal is fully usable even with framebuffer
+#if [ -e /dev/fb0 ]; then
+#   for i in $(seq 1 30); do echo; done
+#   reset
+#fi

@@ -1,0 +1,5 @@
+BUILDBASE="/tmp/${PROJNAME}"
+BDIR="${BUILDBASE}/output"
+BOOTDIR="${BDIR}/shell/boot"
+SLAXDIR="${BDIR}/shell/slax"
+BASEDIR="${BDIR}/shell/slax/base"

@@ -1,0 +1,16 @@
+--- rc.6	2017-11-20 16:51:21.033465714 +0000
++++ rc.6.new	2017-11-20 16:52:57.362479179 +0000
+@@ -169,13 +169,6 @@
+   sleep 2
+ fi
+ 
+-# Shut down PCMCIA devices:
+-if [ -x /etc/rc.d/rc.pcmcia ]; then
+-  /etc/rc.d/rc.pcmcia stop
+-  # The cards might need a little extra time here to deactivate:
+-  /bin/sleep 5
+-fi
+-
+ # Turn off process accounting:
+ if [ -x /sbin/accton -a -r /var/log/pacct ]; then
+   /sbin/accton off

@@ -1,0 +1,27 @@
+#!/bin/bash
+#
+# /etc/rc.d/rc.ldconfig:  script to properly configure and run ldconfig.
+
+LDCONF="/etc/ld.so.conf"
+
+if [ -e /usr/lib64/seamonkey ]; then
+  echo "/usr/lib64/seamonkey" >> $LDCONF
+elif [ -e /usr/lib/seamonkey ]; then
+  echo "/usr/lib/seamonkey" >> $LDCONF
+fi
+
+if [ -e /usr/lib64/firefox ]; then
+  echo "/usr/lib64/firefox" >> $LDCONF
+elif [ -e /usr/lib/firefox ]; then
+  echo "/usr/lib/firefox" >> $LDCONF
+fi
+
+if [ -d /opt/cuda/lib64 ]; then
+  echo "/opt/cuda/lib64" >> $LDCONF
+fi
+
+if [ -d /opt/cuda/lib ]; then
+  echo "/opt/cuda/lib" >> $LDCONF
+fi
+
+/sbin/ldconfig >/dev/null 2>/dev/null

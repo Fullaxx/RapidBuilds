@@ -1,0 +1,25 @@
+--- rc.S	2017-11-19 01:17:23.000000000 +0000
++++ rc.S.new	2017-11-20 14:21:12.205418928 +0000
+@@ -27,11 +27,19 @@
+   fi
+ fi
+ 
+-# Load the loop device kernel module:
+-if [ -x /etc/rc.d/rc.loop ]; then
+-  /etc/rc.d/rc.loop start
++### RL Added ###
++# Search for nVidia hardware
++if lspci -n | grep -qi ': 10de:' ; then
++  if [ -x /etc/rc.d/rc.nvidia ]; then
++    . /etc/rc.d/rc.nvidia
++  fi
+ fi
+ 
++# Always rebuild kmod deps
++echo "Updating Kernel Module Dependencies..."
++depmod -a
++### RL Added ###
++
+ # Initialize udev to manage /dev entries and hotplugging.
+ # You may turn off udev by making the /etc/rc.d/rc.udev file non-executable
+ # or giving the "nohotplug" option at boot, but realize that if you turn off

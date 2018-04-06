@@ -1,0 +1,9 @@
+--- rc.S	2017-11-20 14:50:44.317514140 +0000
++++ rc.S.new	2017-11-20 14:51:00.277351980 +0000
+@@ -376,3 +376,6 @@
+ fi
+ chmod 600 /etc/random-seed
+ 
++if [ -x /etc/rc.d/rc.rl_init ]; then
++  . /etc/rc.d/rc.rl_init
++fi

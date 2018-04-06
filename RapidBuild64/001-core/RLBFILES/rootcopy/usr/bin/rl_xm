@@ -1,0 +1,31 @@
+#!/bin/bash
+# eXplode Module
+
+usage()
+{
+  echo "Usage: $0 <xzm module> <directory>"
+  exit 1
+}
+
+if [ "$#" != "2" ]; then
+  usage
+fi
+
+MOD="$1"
+DIR="$2"
+
+if [ ! -e "$MOD" ]; then
+  echo "$MOD not found!"
+  usage
+fi
+
+if [ "$DIR" != "/" ]; then
+  if [ -d "$DIR" ]; then
+    echo "$DIR exists!"
+    usage
+  else
+    mkdir "$DIR"
+  fi
+fi
+
+xzm2dir "$MOD" "$DIR"

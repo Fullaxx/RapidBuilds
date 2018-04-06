@@ -1,0 +1,52 @@
+#!/bin/bash
+
+if [ x"$1" == "x" ]; then
+  echo "Couldnt set a new home dir for root..."
+  echo "$0 <new homedir>"
+  exit -1
+fi
+
+RHDIR="$1"
+
+if [ ! -d $RHDIR ]; then
+  echo "$RHDIR does not exist..."
+  echo "Creating $RHDIR..."
+  mkdir $RHDIR
+fi
+
+sed -e "s@root:x:0:0::/root:/bin/bash@root:x:0:0::$RHDIR:/bin/bash@" -i /etc/passwd
+
+FILE=".xinitrc"
+if [ -r /root/$FILE -a ! -e $RHDIR/$FILE ]; then
+  cp -a /root/$FILE $RHDIR/
+fi
+
+FILE=".htoprc"
+if [ -r /root/$FILE -a ! -e $RHDIR/$FILE ]; then
+  cp -a /root/$FILE $RHDIR/
+fi
+
+DIR=".fluxbox"
+if [ -r /root/$DIR -a ! -e $RHDIR/$DIR ]; then
+  cp -a /root/$DIR $RHDIR/
+fi
+
+DIR=".config"
+if [ -r /root/$DIR -a ! -e $RHDIR/$DIR ]; then
+  cp -a /root/$DIR $RHDIR/
+fi
+
+DIR=".bluefish"
+if [ -r /root/$DIR -a ! -e $RHDIR/$DIR ]; then
+  cp -a /root/$DIR $RHDIR/
+fi
+
+DIR=".wireshark"
+if [ -r /root/$DIR -a ! -e $RHDIR/$DIR ]; then
+  cp -a /root/$DIR $RHDIR/
+fi
+
+#DIR="bin"
+#if [ -r /root/$DIR -a ! -e $RHDIR/$DIR ]; then
+#  cp -a /root/$DIR $RHDIR/
+#fi

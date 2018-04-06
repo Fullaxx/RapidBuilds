@@ -1,0 +1,22 @@
+--- rc.S	2017-11-20 14:42:55.832248350 +0000
++++ rc.S.new	2017-11-20 14:50:25.047709939 +0000
+@@ -328,19 +328,6 @@
+   /etc/rc.d/rc.cgmanager start
+ fi
+ 
+-# Clean up some temporary files:
+-rm -f /var/run/* /var/run/*/* /var/run/*/*/* /etc/nologin \
+-  /etc/dhcpc/*.pid /etc/forcefsck /etc/fastboot \
+-  /var/state/saslauthd/saslauthd.pid \
+-  /tmp/.Xauth* 1> /dev/null 2> /dev/null
+-  ( cd /var/log/setup/tmp && rm -rf * )
+-  ( cd /tmp && rm -rf kde-[a-zA-Z]* ksocket-[a-zA-Z]* hsperfdata_[a-zA-Z]* plugtmp* )
+-
+-# Clear /var/lock/subsys:
+-if [ -d /var/lock/subsys ]; then
+-  rm -f /var/lock/subsys/*
+-fi
+-
+ # Create /tmp/{.ICE-unix,.X11-unix} if they are not present:
+ if [ ! -e /tmp/.ICE-unix ]; then
+   mkdir -p /tmp/.ICE-unix

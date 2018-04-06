@@ -1,0 +1,9 @@
+# 007-wireless options
+if [ "${INCMOD007WIRELESS}" == "Y" ]; then
+  INCBLUETOOTH="Y"
+  INCIPWFIRMWARE="Y"
+  INCZDFIRMWARE="Y"
+  INCWPASUPPLICANT="Y"
+  INCKISMET="N"
+  INCREAVER="N"
+fi

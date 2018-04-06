@@ -1,0 +1,32 @@
+#!/bin/bash
+
+SCRIPT="/etc/rc.d/rc.rl_add_ug"
+#if [ -r "$SCRIPT" ]; then chmod +x "$SCRIPT"; fi
+
+SCRIPT="/etc/rc.d/rc.ntpd"
+#if [ -r "$SCRIPT" ]; then chmod -x "$SCRIPT"; fi
+
+SCRIPT="/etc/rc.d/rc.sshd"
+#if [ -r "$SCRIPT" ]; then chmod -x "$SCRIPT"; fi
+
+SCRIPT="/etc/rc.d/rc.radvd"
+#if [ -r "$SCRIPT" ]; then chmod +x "$SCRIPT"; fi
+
+SCRIPT="/etc/rc.d/rc.wicd"
+if [ -r "$SCRIPT" ]; then chmod -x "$SCRIPT"; fi
+
+SCRIPT="/etc/rc.d/rc.mysql_init"
+#if [ -r "$SCRIPT" ]; then chmod -x "$SCRIPT"; fi
+
+SCRIPT="/etc/rc.d/rc.mysqld"
+#if [ -r "$SCRIPT" ]; then chmod -x "$SCRIPT"; fi
+
+SCRIPT="/etc/rc.d/rc.lighttpd"
+if [ -r "$SCRIPT" ]; then chmod -x "$SCRIPT"; fi
+
+SCRIPT="/etc/rc.d/rc.samba"
+#if [ -r "$SCRIPT" ]; then chmod +x "$SCRIPT"; fi
+
+SCRIPT="/etc/rc.d/rc.VirtualBox"
+#if [ -r "$SCRIPT" ]; then chmod -x "$SCRIPT"; fi
+

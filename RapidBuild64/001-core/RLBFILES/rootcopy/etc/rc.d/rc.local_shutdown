@@ -1,0 +1,4 @@
+#!/bin/sh
+#
+# /etc/rc.d/rc.local_shutdown:  Local system shutdown script.
+

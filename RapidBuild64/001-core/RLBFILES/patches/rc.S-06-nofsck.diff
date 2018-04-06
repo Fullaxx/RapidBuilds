@@ -1,0 +1,15 @@
+--- rc.S	2017-11-14 16:55:05.313408650 +0000
++++ rc.S.new	2017-11-14 16:55:42.353020666 +0000
+@@ -291,12 +291,6 @@
+   /sbin/sysctl -e --system 2> /dev/null | grep -v "Applying /etc/sysctl.conf"
+ fi
+ 
+-# Check all the non-root filesystems:
+-if [ ! -r /etc/fastboot ]; then
+-  echo "Checking non-root filesystems:"
+-  /sbin/fsck $FORCEFSCK -C -R -A -a
+-fi
+-
+ # Mount usbfs only if it is found in /etc/fstab:
+ if grep -wq usbfs /proc/filesystems; then
+   if ! grep -wq usbfs /proc/mounts ; then

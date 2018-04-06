@@ -1,0 +1,55 @@
+#!/bin/bash
+# Mount all discs, disable guest, autostart gui
+#
+# Author: Tomas M. <http://slax.linux-live.org>
+#
+# Modified for Slax_remix by fanthom
+
+. /usr/lib/liblinuxlive
+
+# Toggle the "executableness" of your startup scripts
+if [ -x /etc/rc.d/rc.rl_boot_services ]; then
+  /etc/rc.d/rc.rl_boot_services
+fi
+
+# Add extra users and groups if needed
+if [ -x /etc/rc.d/rc.rl_add_ug ]; then
+  /etc/rc.d/rc.rl_add_ug
+fi
+
+# Change the root home dir
+NEWROOTHOME="`cmdline_value roothome`"
+if [ -n "$NEWROOTHOME" ]; then
+  if [ -x /etc/rc.d/rc.rl_setroothome ]; then
+    echo "Setting home directory to: $NEWROOTHOME"
+    /etc/rc.d/rc.rl_setroothome "$NEWROOTHOME"
+  fi
+fi
+
+# change the root password
+NEWROOTPASS="`cmdline_value rootpasswd`"
+if [ "$NEWROOTPASS" = "ask" ]; then
+  echo -ne "\nEnter new password for root: "
+  read -s NEWROOTPASS
+fi
+
+if [ -n "$NEWROOTPASS" ]; then
+  echo "Setting new password for root"
+  echo "root:$NEWROOTPASS" | /usr/sbin/chpasswd
+fi
+
+# Change the ntp server IP address
+NTP_SERVER_ADDR="`cmdline_value ntps`"
+if [ -n "$NTP_SERVER_ADDR" ]; then
+  echo "Setting NTP Server IP to: $NTP_SERVER_ADDR"
+  #sed -e "s/server pool.ntp.org iburst/server $NTP_SERVER_ADDR iburst/" -i /etc/ntp.conf
+  if grep -q pool.ntp.org /etc/hosts ; then sed -e '/pool.ntp.org/d' -i /etc/hosts; fi
+  echo "$NTP_SERVER_ADDR pool.ntp.org" >> /etc/hosts
+fi
+
+# Set my IP address
+IFCMD=$(cmdline_value "staticip" | tr ":" " ")
+if [ -n "$IFCMD" ]; then
+   echo "Running ifconfig $IFCMD up"
+   su --login -c "ifconfig $IFCMD up"
+fi

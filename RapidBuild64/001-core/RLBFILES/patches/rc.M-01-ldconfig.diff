@@ -1,0 +1,19 @@
+--- rc.M	2017-11-18 17:21:12.000000000 +0000
++++ rc.M.new	2017-11-20 15:10:35.035443357 +0000
+@@ -14,11 +14,13 @@
+ # Tell the viewers what's going to happen.
+ echo "Going multiuser..."
+ 
++### RL Added ###
+ # Update all the shared library links:
+-if [ -x /sbin/ldconfig ]; then
+-  echo "Updating shared library links:  /sbin/ldconfig &"
+-  /sbin/ldconfig &
++if [ -x /etc/rc.d/rc.rl_ldconfig ]; then
++  echo "Updating shared library links:  /etc/rc.d/rc.rl_ldconfig &"
++  /etc/rc.d/rc.rl_ldconfig &
+ fi
++### RL Added ###
+ 
+ # Screen blanks after 15 minutes idle time, and powers down in one hour
+ # if the kernel supports APM or ACPI power management:

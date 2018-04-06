@@ -1,0 +1,24 @@
+--- rc.S	2015-03-01 13:00:32.000000000 +0000
++++ rc.S.new	2015-03-01 13:01:48.000000000 +0000
+@@ -178,19 +178,8 @@
+ fi
+ 
+ # Set the system time from the hardware clock using hwclock --hctosys.
+-if [ -x /sbin/hwclock ]; then
+-  # Check for a broken motherboard RTC clock (where ioports for rtc are
+-  # unknown) to prevent hwclock causing a hang:
+-  if ! grep -q rtc /proc/ioports ; then
+-    CLOCK_OPT="--directisa"
+-  fi
+-  if grep -wq "^UTC" /etc/hardwareclock ; then
+-    echo -n "Setting system time from the hardware clock (UTC): "
+-    /sbin/hwclock $CLOCK_OPT --utc --hctosys
+-  else
+-    echo -n "Setting system time from the hardware clock (localtime): "
+-    /sbin/hwclock $CLOCK_OPT --localtime --hctosys
+-  fi
++if [ -x /etc/rc.d/rc.hwclock ]; then
++  /etc/rc.d/rc.hwclock hctosys
+   date
+ fi
+ 

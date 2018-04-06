@@ -1,0 +1,20 @@
+--- rc.6	2017-11-20 17:04:26.485430834 +0000
++++ rc.6.new	2017-11-20 17:11:33.621128728 +0000
+@@ -215,11 +215,13 @@
+   /etc/rc.d/rc.cgmanager stop
+ fi
+ 
+-echo "Unmounting local file systems:"
+-/bin/umount -v -a -t no,proc,sysfs | tr -d ' ' | grep successfully | sed "s/:successfullyunmounted/ has been successfully unmounted./g" 2> /dev/null
++# Deactivate all slax modules activated after boot (otherwise booting media wont be unmounted properly)
++echo "deactivating slax modules inserted during slax session"
++for x in `grep devpts -A 500 /proc/mounts | grep .xzm | cut -d " " -f2`; do deactivate $x; done
+ 
+-echo "Remounting root filesystem read-only:"
+-/bin/mount -v -n -o remount,ro /
++# Slax needs to silently skip aufs
++echo "Unmounting local file systems:"
++/bin/umount -v -a -t no,proc,sysfs,usbfs,aufs | tr -d ' ' | grep successfully | sed "s/:successfullyunmounted/ has been successfully unmounted./g"
+ 
+ # This never hurts:
+ /bin/sync

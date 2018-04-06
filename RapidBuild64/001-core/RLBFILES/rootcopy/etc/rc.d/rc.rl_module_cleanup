@@ -1,0 +1,136 @@
+#!/bin/bash
+#
+# /etc/rc.d/rc.modules:  Local system initialization script.
+#
+# This script will load modules at startup
+# It will also removed unused modules
+
+MODLIST=""
+MODLIST+="BusLogic"
+MODLIST+=" 3w-xxxx"
+MODLIST+=" 3w-9xxx"
+MODLIST+=" 3w-sas"
+MODLIST+=" megaraid_mbox"
+MODLIST+=" megaraid_sas"
+MODLIST+=" megaraid_mm"
+#MODLIST+=" megaraid" (not built as of 3.2.23)
+MODLIST+=" mpt2sas"
+MODLIST+=" mptspi"
+MODLIST+=" sym53c8xx"
+MODLIST+=" mptfc"
+MODLIST+=" mptsas"
+MODLIST+=" mptctl"
+
+# Added 14Aug2013
+MODLIST+=" floppy"
+MODLIST+=" nbd"
+MODLIST+=" aoe"
+MODLIST+=" advansys"
+MODLIST+=" hpsa"
+MODLIST+=" scsi_wait_scan"
+
+MODLIST+=" atp870u"
+MODLIST+=" hptiop"
+MODLIST+=" pmcraid"
+MODLIST+=" aic79xx"
+MODLIST+=" aic7xxx"
+MODLIST+=" aic94xx"
+MODLIST+=" pm8001"
+MODLIST+=" aacraid"
+MODLIST+=" ipr"
+MODLIST+=" gdth"
+MODLIST+=" arcmsr"
+MODLIST+=" stex"
+MODLIST+=" vmw_pvscsi"
+MODLIST+=" mvsas"
+MODLIST+=" qla4xxx"
+MODLIST+=" qla2xxx"
+MODLIST+=" qla1280"
+MODLIST+=" iscsi_boot_sysfs"
+
+MODLIST+=" sata_inic162x"
+MODLIST+=" pata_hpt3x2n"
+MODLIST+=" pata_sch"
+MODLIST+=" sata_promise"
+MODLIST+=" pata_pdc202xx_old"
+MODLIST+=" pata_amd"
+MODLIST+=" sata_sil24"
+MODLIST+=" pata_oldpiix"
+MODLIST+=" pata_artop"
+MODLIST+=" pata_hpt3x3"
+MODLIST+=" acard_ahci"
+MODLIST+=" pata_hpt37x"
+MODLIST+=" sata_vsc"
+MODLIST+=" pata_hpt366"
+MODLIST+=" sata_svw"
+MODLIST+=" sata_sx4"
+MODLIST+=" pata_sil680"
+MODLIST+=" pata_pdc2027x"
+MODLIST+=" pata_mpiix"
+MODLIST+=" pata_jmicron"
+MODLIST+=" pata_atiixp"
+MODLIST+=" ata_piix"
+MODLIST+=" sata_uli"
+MODLIST+=" pata_ali"
+MODLIST+=" sata_mv"
+MODLIST+=" pata_marvell"
+MODLIST+=" sata_sis"
+MODLIST+=" pata_sis"
+MODLIST+=" sata_via"
+MODLIST+=" pata_via"
+MODLIST+=" sata_sil"
+MODLIST+=" sata_nv"
+
+#lsmod | grep $MOD | awk '{print $3}' | grep -q 0
+#if [ "$?" == "0" ]; then rmmod $MOD; fi
+
+for MOD in $MODLIST; do
+  SEARCHNAME=`echo $MOD | tr - _`
+  if cat /proc/modules | awk '{print $1}' | grep -q $SEARCHNAME; then
+    if ! lspci -v | grep Kernel | grep -qi $MOD; then rmmod $MOD; fi
+  fi
+done
+
+MOD="scsi_transport_fc"
+lsmod | grep $MOD | awk '{print $3}' | grep -q 0
+if [ "$?" == "0" ]; then rmmod $MOD; fi
+
+MOD="scsi_transport_spi"
+lsmod | grep $MOD | awk '{print $3}' | grep -q 0
+if [ "$?" == "0" ]; then rmmod $MOD; fi
+
+MOD="mptscsih"
+lsmod | grep $MOD | awk '{print $3}' | grep -q 0
+if [ "$?" == "0" ]; then rmmod $MOD; fi
+
+MOD="mptbase"
+lsmod | grep $MOD | awk '{print $3}' | grep -q 0
+if [ "$?" == "0" ]; then rmmod $MOD; fi
+
+MOD="ata_generic"
+lsmod | grep $MOD | awk '{print $3}' | grep -q 0
+if [ "$?" == "0" ]; then rmmod $MOD; fi
+
+MOD="libahci"
+lsmod | grep $MOD | awk '{print $3}' | grep -q 0
+if [ "$?" == "0" ]; then rmmod $MOD; fi
+
+MOD="raid_class"
+lsmod | grep $MOD | awk '{print $3}' | grep -q 0
+if [ "$?" == "0" ]; then rmmod $MOD; fi
+
+MOD="libiscsi"
+lsmod | grep $MOD | awk '{print $3}' | grep -q 0
+if [ "$?" == "0" ]; then rmmod $MOD; fi
+
+MOD="scsi_transport_iscsi"
+lsmod | grep $MOD | awk '{print $3}' | grep -q 0
+if [ "$?" == "0" ]; then rmmod $MOD; fi
+
+MOD="isci"
+lsmod | grep $MOD | awk '{print $3}' | grep -q 0
+if [ "$?" == "0" ]; then rmmod $MOD; fi
+
+MOD="libsas"
+lsmod | grep $MOD | awk '{print $3}' | grep -q 0
+if [ "$?" == "0" ]; then rmmod $MOD; fi
