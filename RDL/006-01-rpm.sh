@@ -1,0 +1,6 @@
+if [ "${INCRPM}" == "Y" ]; then
+  INCMOZILLANSS="Y"
+  INCSEAMONKEYSOLIBS="Y"
+  INCELFUTILS="Y"
+  INCDB48="Y"
+fi

@@ -1,0 +1,7 @@
+if [ "${INCSAMBA}" == "Y" ]; then
+  INCLIBAIO="Y"
+  INCGPGME="Y"
+  INCLIBASSUAN="Y"
+  INCLIBTALLOC="Y"
+  INCLIBTEVENT="Y"
+fi
