@@ -7,36 +7,35 @@ TIMESTAMPEDISO="0"
 # This is the list of categories that will be rebuilt by "./rebuild.sh all"
 PROJECTCATEGORIES="1"
 
+RAPIDBUILDSDIR="/opt/RL/RapidBuilds"
+RAPIDSHELLSDIR="/opt/RL/RapidShells"
+RAPIDKERNELSDIR="/opt/RL/RapidKernel"
 PACKAGESDIR="/opt/RL/packages"
-SHELLSDIR="/opt/RL/RapidShells"
-RLSHELL="${SHELLSDIR}/RapidInstall-sr09.tar"
+
+PROJECTBASE="${RAPIDBUILDSDIR}/RapidInstall64"
+RAPIDDEPLOGIC="${RAPIDBUILDSDIR}/RDL"
+RLSHELL="${RAPIDSHELLSDIR}/RapidInstall-sr09.tar"
 ISOOUTPUTDIR="/opt/RL/isos/"
 
 if [ "$ARCH" == "x86_64" ]; then
   SLACKPKGDIR="${PACKAGESDIR}/slackware/Slack64-${SLACKPKGVERS}/slackware64"
   SLACKEXTRA="${PACKAGESDIR}/slackware/Slack64-${SLACKPKGVERS}/extra"
-  KERNELPKGDIR="/opt/RL/RapidKernel/64/${KERNVERS}"
+  KERNELPKGDIR="${RAPIDKERNELSDIR}/64/${KERNVERS}"
   LIBDIR="lib64"
 else
   SLACKPKGDIR="${PACKAGESDIR}/slackware/Slack32-${SLACKPKGVERS}/slackware32"
   SLACKEXTRA="${PACKAGESDIR}/slackware/Slack32-${SLACKPKGVERS}/extra"
-  KERNELPKGDIR="/opt/RL/RapidKernel/32/${KERNVERS}"
+  KERNELPKGDIR="${RAPIDKERNELSDIR}/32/${KERNVERS}"
   LIBDIR="lib"
 fi
 
-if [ ! -d ${KERNELPKGDIR} ]; then
-  echo "${KERNELPKGDIR} - FIX KERNELPKGDIR in spec.sh"
+FUNCTIONSFILE="${PROJECTBASE}/functions.sh"
+if [ ! -r ${FUNCTIONSFILE} ]; then
+  echo "${FUNCTIONSFILE} not found"
   exit 1
 fi
+source ${FUNCTIONSFILE}
 
-if [ -x ./rebuild.sh -a -r ./functions.sh ]; then
-  source ./functions.sh
-elif [ -r ../functions.sh ]; then
-  source ../functions.sh
-else
-  echo "functions.sh not found"
-  exit 1
-fi
-
+kernelcheck
 rootcheck
 loadconfig
