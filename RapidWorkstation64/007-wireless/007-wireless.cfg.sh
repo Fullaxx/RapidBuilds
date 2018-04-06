@@ -1,0 +1,1 @@
+../basis/007-wireless/007-wireless.cfg.sh

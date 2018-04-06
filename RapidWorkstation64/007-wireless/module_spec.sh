@@ -1,0 +1,1 @@
+../basis/007-wireless/module_spec.sh
