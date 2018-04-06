@@ -1,5 +1,10 @@
 #!/bin/bash
 
+if [ `id -u` != "0" ]; then
+  echo "Got Root?"
+  exit 1
+fi
+
 # find . \( -type f -o -type l \) \( -name '*.txz' -o -name '*.xzm' \) -exec rm {} \;
 
 find . -type l -name '*.txz' -exec rm {} \;
