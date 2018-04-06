@@ -23,13 +23,22 @@ ln -s ${SLACKPKGDIR}/l/pcre2-*.txz
 ln -s ${SLACKPKGDIR}/l/sg3_utils-*.txz
 ln -s ${SLACKPKGDIR}/l/shared-mime-info-*.txz
 
+# curl,lynx,rsync,wget would be affected by these, what else?
+ln -s ${SLACKPKGDIR}/n/ca-certificates-*.txz
+ln -s ${SLACKPKGDIR}/n/cyrus-sasl-*.txz
+ln -s ${SLACKPKGDIR}/n/gnutls-*.txz
 ln -s ${SLACKPKGDIR}/n/libgcrypt-*.txz
 ln -s ${SLACKPKGDIR}/n/libgpg-error-*.txz
-ln -s ${SLACKPKGDIR}/n/cyrus-sasl-*.txz
 ln -s ${SLACKPKGDIR}/n/nettle-*.txz
+ln -s ${SLACKPKGDIR}/n/openssl-*.txz
 ln -s ${SLACKPKGDIR}/n/p11-kit-*.txz
 # ln -s ${SLACKPKGDIR}/n/nghttp2-*.txz
 # Sat Mar 24 19:47:01 UTC 2018
+
+if [ "${INCGPGME}" == "Y" ]; then
+# Samba,mcabber
+  ln -s ${SLACKPKGDIR}/n/gpgme-*.txz
+fi
 
 if [ "${INCLIBASSUAN}" == "Y" ]; then
 # Samba,gpgme,gnupg2
@@ -58,6 +67,11 @@ fi
 
 if [ "${INCLIBNIH}" == "Y" ]; then
   ln -s ${SLACKPKGDIR}/l/libnih-*.txz
+fi
+
+if [ "${INCLIBNDP}" == "Y" ]; then
+# NetworkManager needs libndp
+  ln -s ${SLACKPKGDIR}/n/libndp-*.txz
 fi
 
 # Sat Mar 24 19:47:01 UTC 2018
