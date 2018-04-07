@@ -1,6 +1,7 @@
 # Make sure we have the RDL tree
 rapiddeplogichceck
 
+# Read in each modules package requests
 for PKGCFG in ${PROJECTBASE}/???-*/packages.cfg.sh; do source ${PKGCFG}; done
 
 #######################################
@@ -14,9 +15,7 @@ if [ "${INCMOD005SERVER}" == "Y" ]; then
 fi
 
 if [ "${INCMOD006DEVEL}" == "Y" ]; then
-  INCLIBCROCO="Y"
+  for DEPSCR in ${RAPIDDEPLOGIC}/006-*.sh; do source ${DEPSCR}; done
 fi
-
-for DEPSCR in ${RAPIDDEPLOGIC}/006-*.sh; do source ${DEPSCR}; done
 
 for DEPSCR in ${RAPIDDEPLOGIC}/009-*.sh; do source ${DEPSCR}; done

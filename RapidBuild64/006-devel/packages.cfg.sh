@@ -1,5 +1,7 @@
 # 006-devel options
 if [ "${INCMOD006DEVEL}" == "Y" ]; then
+  INCLIBCROCO="Y"
+
   INCBC="Y"
   INCRPM="Y"
   INCVIM="Y"
