@@ -85,6 +85,10 @@ if [ "${INCPKGTOOLS}" == "Y" ]; then
   ln -s ${SLACKPKGDIR}/a/pkgtools-*.txz
 fi
 
+if [ "${INCPLZIP}" == "Y" ]; then
+  ln -s ${SLACKPKGDIR}/a/plzip-*.txz
+fi
+
 if [ "${INCSDPARM}" == "Y" ]; then
   ln -s ${SLACKPKGDIR}/a/sdparm-*.txz
 fi
@@ -159,6 +163,10 @@ fi
 
 if [ "${INCMPGONETWOTHREE}" == "Y" ]; then
   ln -s ${SLACKPKGDIR}/ap/mpg123-*.txz
+fi
+
+if [ "${INCRZIP}" == "Y" ]; then
+  ln -s ${SLACKPKGDIR}/ap/rzip-*.txz
 fi
 
 if [ "${INCPMUTILS}" == "Y" ]; then

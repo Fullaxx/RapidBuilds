@@ -8,7 +8,6 @@ rm -f *.txz *.xzm
 ln -s ${SLACKPKGDIR}/l/fuse-*.txz
 ln -s ${SLACKPKGDIR}/l/icu4c-*.txz
 
-ln -s ${SLACKPKGDIR}/l/libarchive-*.txz
 ln -s ${SLACKPKGDIR}/l/libidn2-*.txz
 ln -s ${SLACKPKGDIR}/l/libnl-*.txz
 ln -s ${SLACKPKGDIR}/l/libnl3-*.txz
@@ -22,6 +21,23 @@ ln -s ${SLACKPKGDIR}/l/pcre2-*.txz
 ln -s ${SLACKPKGDIR}/l/sg3_utils-*.txz
 ln -s ${SLACKPKGDIR}/l/shared-mime-info-*.txz
 
+ln -s ${SLACKPKGDIR}/n/ca-certificates-*.txz
+ln -s ${SLACKPKGDIR}/n/cyrus-sasl-*.txz
+ln -s ${SLACKPKGDIR}/n/gnutls-*.txz
+ln -s ${SLACKPKGDIR}/n/nettle-*.txz
+ln -s ${SLACKPKGDIR}/n/openssl-*.txz
+ln -s ${SLACKPKGDIR}/n/p11-kit-*.txz
+# ln -s ${SLACKPKGDIR}/n/nghttp2-*.txz
+# Sat Mar 24 19:47:01 UTC 2018
+
+if [ "${INCLIBARCHIVE}" == "Y" ]; then
+  ln -s ${SLACKPKGDIR}/l/libarchive-*.txz
+fi
+
+if [ "${INCLZLIB}" == "Y" ]; then
+  ln -s ${SLACKPKGDIR}/a/lzlib-*.txz
+fi
+
 if [ "${INCLIBPCAP}" == "Y" ]; then
   ln -s ${SLACKPKGDIR}/l/libpcap-*.txz
 fi
@@ -33,16 +49,6 @@ fi
 if [ "${INCLIBGPGERROR}" == "Y" ]; then
   ln -s ${SLACKPKGDIR}/n/libgpg-error-*.txz
 fi
-
-# curl,lynx,rsync,wget would be affected by these, what else?
-ln -s ${SLACKPKGDIR}/n/ca-certificates-*.txz
-ln -s ${SLACKPKGDIR}/n/cyrus-sasl-*.txz
-ln -s ${SLACKPKGDIR}/n/gnutls-*.txz
-ln -s ${SLACKPKGDIR}/n/nettle-*.txz
-ln -s ${SLACKPKGDIR}/n/openssl-*.txz
-ln -s ${SLACKPKGDIR}/n/p11-kit-*.txz
-# ln -s ${SLACKPKGDIR}/n/nghttp2-*.txz
-# Sat Mar 24 19:47:01 UTC 2018
 
 if [ "${INCGPGME}" == "Y" ]; then
 # Samba,mcabber
