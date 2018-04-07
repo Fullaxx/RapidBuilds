@@ -35,6 +35,19 @@ if [ -d ${SEARCHDIR} ]; then
   done
 fi
 
+SEARCHDIR="RLBFILES/rootcopy/usr/lib"
+if [ -d ${SEARCHDIR} ]; then
+  for FILE in ${SEARCHDIR}/* ; do
+    LOCALPATH=`echo ${FILE} | cut -d/ -f3-`
+    echo "Installing ${LOCALPATH} ..."
+    install -Dp -o root -g root -m 0644 ${FILE} "${DIR}/usr/lib/`basename ${FILE}`" || exit 1
+  done
+fi
+
+for SLAXFILE in activate deactivate deb2xzm dir2xzm mkfileswap mkslaxsave rpm2xzm slax-usb.sh txz2lzm txz2xzm xzm2dir; do
+  chmod 0700 ${DIR}/usr/bin/$SLAXFILE
+done
+
 if [ -x ${DIR}/sbin/rescan-scsi-bus ]; then
   ln -s /sbin/rescan-scsi-bus ${DIR}/usr/bin/rl_sata_rescan.sh
 fi

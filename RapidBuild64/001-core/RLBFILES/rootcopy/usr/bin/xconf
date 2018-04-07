@@ -1,0 +1,53 @@
+#!/bin/sh
+# xconf:      Auto configure X.
+# By:	      Tomas M. <http://slax.linux-live.org>
+#
+
+GENERATED_CONFIGFILE=$HOME/xorg.conf.new
+XConfig=/etc/X11/xorg.conf
+
+. /etc/X11/gui.conf
+
+if [ "$SKIP_XCONF" = "yes" ]; then
+   echo "The file /etc/X11/gui.conf disallows xconf autoconfiguration, skipping."
+   echo "This is normal if you have own module with xorg.conf configuration."
+else
+
+   echo "Trying to autoconfigure Xwindow system, please wait..."
+   /usr/bin/X -configure 2>/dev/null
+
+   if [ ! $? = 0 ]; then
+      echo "cannot run auto config. Try xorgsetup (menu) or xorgconfig (plaintext) commands."
+      exit 1
+   fi
+
+   echo "creating $XConfig..."
+   rm -f $XConfig
+
+   cat $GENERATED_CONFIGFILE | egrep -v "^[[:space:]]*#" | while read LINE ;
+   do
+     # configure mouse
+     if echo $LINE | egrep -i "/dev/mouse" 1>/dev/null ; then
+        echo "Option \"ZAxisMapping\" \"4 5\"" >> $XConfig
+        echo "Option \"Buttons\" \"3\"" >> $XConfig
+     fi
+     echo "$LINE" >> $XConfig
+   # workaround for nv driver bug:
+   if echo $LINE | egrep -i "Driver *\"nv\"" 1>/dev/null ; then
+   echo "/usr/bin/xconf: nv driver bug workaround for $XConfig"
+   echo "Option \"XAANoOffscreenPixmaps\" \"true\"" >> $XConfig
+   fi
+   done
+
+   if [ "$CONF_EXTENSIONS" = "yes" ]; then
+      echo "Section \"Extensions\"" >>$XConfig
+      echo "  Option \"Composite\" \"Enable\"" >>$XConfig
+      echo "EndSection" >>$XConfig
+   fi
+
+   rm -f $GENERATED_CONFIGFILE
+   echo "all done. Run startx now."
+
+fi
+
+echo "If you get black screen or Out-Of-Sync, hit Ctrl+Alt+NumPlus few times"

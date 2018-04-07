@@ -1,0 +1,62 @@
+#!/bin/bash
+# Create an empty file in /mnt and activate is as a file for persistent changes
+# Author: Tomas M <http://www.slax.org>
+#
+
+. /usr/lib/liblinuxlive
+
+allow_only_root
+
+CHFILE=$(readlink -f "$1")
+CHSIZE=$(echo $2 | sed -r "s/[^0-9]//")
+MOUNT=/$INITRAMDISK/$MEMORY
+NEW=newchanges
+
+usage()
+{
+   echo >&2
+   echo "mkslaxsave - create a file for persistent changes and use it immediately" >&2
+   echo "usage: $0 [/mnt/path/slaxsave.dat | /mnt/path/directory] [size MB]" >&2
+   echo " - Minimum size is 17 (for 17MB)" >&2
+   echo " - If the file already exists, it will NOT be overwritten," >&2
+   echo "   but it will be 'reused' on the fly" >&2
+   echo " - If the size given is bigger than the size of existing file," >&2
+   echo "   the file will be enlarged (it will grow)" >&2
+   echo " - If a directory is used instead of filename, size is ignored" >&2
+   echo "   and the used space is allocated dynamically" >&2
+   echo >&2
+}
+
+if [ "$(cat /proc/mounts | fgrep " $MOUNT " | cut -d " " -f 1)" != "tmpfs" ]; then
+   echo "Active changes already detected in $MOUNT..."
+   exit 1
+fi
+
+if mountpoint $MOUNT/$NEW >/dev/null 2>&1; then
+   echo "Active changes already detected in $MOUNT/$NEW..."
+   exit 2
+fi
+
+if [ ! "$CHSIZE" -o ! "$CHFILE" ]; then
+   usage
+   exit 3
+fi
+
+if [ "$(echo "$CHFILE" | egrep "^/mnt/" | egrep -v "^/mnt/live/")" = "" ]; then
+   echo "you must use path in /mnt, I am sorry" >&2
+   exit 4
+fi
+
+if [ ! -d "$CHFILE" ]; then
+   echo "creating/updating the file for changes, this may take few minutes..."
+   touch $CHFILE
+   if [ $? -ne 0 ]; then exit 5; fi
+
+   grow_changes $CHFILE $CHSIZE
+   mkdir -p $MOUNT/$NEW
+   mount -o loop $CHFILE $MOUNT/$NEW
+   CHFILE=$MOUNT/$NEW
+fi
+
+mkdir -p $CHFILE/changes
+mount -n -o remount,add:0:$CHFILE/changes=rw aufs /
