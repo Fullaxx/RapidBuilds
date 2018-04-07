@@ -12,7 +12,6 @@ ln -s ${SLACKPKGDIR}/l/libarchive-*.txz
 ln -s ${SLACKPKGDIR}/l/libidn2-*.txz
 ln -s ${SLACKPKGDIR}/l/libnl-*.txz
 ln -s ${SLACKPKGDIR}/l/libnl3-*.txz
-ln -s ${SLACKPKGDIR}/l/libpcap-*.txz
 ln -s ${SLACKPKGDIR}/l/libsigc++-*.txz
 ln -s ${SLACKPKGDIR}/l/libtasn1-*.txz
 ln -s ${SLACKPKGDIR}/l/libunistring-*.txz
@@ -22,6 +21,10 @@ ln -s ${SLACKPKGDIR}/l/pcre-*.txz
 ln -s ${SLACKPKGDIR}/l/pcre2-*.txz
 ln -s ${SLACKPKGDIR}/l/sg3_utils-*.txz
 ln -s ${SLACKPKGDIR}/l/shared-mime-info-*.txz
+
+if [ "${INCLIBPCAP}" == "Y" ]; then
+  ln -s ${SLACKPKGDIR}/l/libpcap-*.txz
+fi
 
 if [ "${INCLIBGCRYPT}" == "Y" ]; then
   ln -s ${SLACKPKGDIR}/n/libgcrypt-*.txz
@@ -47,7 +50,7 @@ if [ "${INCGPGME}" == "Y" ]; then
 fi
 
 if [ "${INCPINENTRY}" == "Y" ]; then
-# gnupg2 reqs pinentry
+# cryptsetup,gnupg2 reqs pinentry
   ln -s ${SLACKPKGDIR}/n/pinentry-*.txz
 fi
 

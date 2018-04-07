@@ -184,7 +184,6 @@ if [ "${INCNETFILTER}" == "Y" ]; then
   ln -s ${SLACKPKGDIR}/n/libnfnetlink-*.txz
   ln -s ${SLACKPKGDIR}/n/nfacct-*.txz
 # ln -s ${SLACKPKGDIR}/n/ulogd-*.txz
-  ln -s ${SLACKPKGDIR}/n/iptraf-ng-*.txz
 
   ln -s ${SLACKPKGDIR}/n/nftables-*.txz
   ln -s ${SLACKPKGDIR}/n/libnftnl-*.txz
@@ -208,6 +207,10 @@ fi
 
 if [ "${INCIFTOP}" == "Y" ]; then
   ln -s ${SLACKPKGDIR}/n/iftop-*.txz
+fi
+
+if [ "${INCIPTRAFNG}" == "Y" ]; then
+  ln -s ${SLACKPKGDIR}/n/iptraf-ng-*.txz
 fi
 
 if [ "${INCGNUPG}" == "Y" ]; then
