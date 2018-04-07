@@ -23,12 +23,18 @@ ln -s ${SLACKPKGDIR}/l/pcre2-*.txz
 ln -s ${SLACKPKGDIR}/l/sg3_utils-*.txz
 ln -s ${SLACKPKGDIR}/l/shared-mime-info-*.txz
 
+if [ "${INCLIBGCRYPT}" == "Y" ]; then
+  ln -s ${SLACKPKGDIR}/n/libgcrypt-*.txz
+fi
+
+if [ "${INCLIBGPGERROR}" == "Y" ]; then
+  ln -s ${SLACKPKGDIR}/n/libgpg-error-*.txz
+fi
+
 # curl,lynx,rsync,wget would be affected by these, what else?
 ln -s ${SLACKPKGDIR}/n/ca-certificates-*.txz
 ln -s ${SLACKPKGDIR}/n/cyrus-sasl-*.txz
 ln -s ${SLACKPKGDIR}/n/gnutls-*.txz
-ln -s ${SLACKPKGDIR}/n/libgcrypt-*.txz
-ln -s ${SLACKPKGDIR}/n/libgpg-error-*.txz
 ln -s ${SLACKPKGDIR}/n/nettle-*.txz
 ln -s ${SLACKPKGDIR}/n/openssl-*.txz
 ln -s ${SLACKPKGDIR}/n/p11-kit-*.txz
@@ -40,11 +46,6 @@ if [ "${INCGPGME}" == "Y" ]; then
   ln -s ${SLACKPKGDIR}/n/gpgme-*.txz
 fi
 
-if [ "${INCLIBASSUAN}" == "Y" ]; then
-# Samba,gpgme,gnupg2
-  ln -s ${SLACKPKGDIR}/n/libassuan-*.txz
-fi
-
 if [ "${INCPINENTRY}" == "Y" ]; then
 # gnupg2 reqs pinentry
   ln -s ${SLACKPKGDIR}/n/pinentry-*.txz
@@ -53,6 +54,11 @@ fi
 if [ "${INCLIBSECRET}" == "Y" ]; then
 # pinentry reqs libsecret
   ln -s ${SLACKPKGDIR}/l/libsecret-*.txz
+fi
+
+if [ "${INCLIBASSUAN}" == "Y" ]; then
+# Samba,gpgme,gnupg2,pinentry reqs libassuan
+  ln -s ${SLACKPKGDIR}/n/libassuan-*.txz
 fi
 
 # Bind9, Samba, mplayer need talloc/tevent VERIFY THIS
