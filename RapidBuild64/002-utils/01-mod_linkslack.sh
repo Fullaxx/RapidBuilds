@@ -214,7 +214,7 @@ if [ "${INCGNUPG}" == "Y" ]; then
   ln -s ${SLACKPKGDIR}/n/gnupg-*.txz
 fi
 
-if [ "${INCGNUPG2}" == "Y" ]; then
+if [ "${INCGNUPGTWO}" == "Y" ]; then
   ln -s ${SLACKPKGDIR}/n/gnupg2-*.txz
   ln -s ${SLACKPKGDIR}/n/npth-*.txz
   ln -s ${SLACKPKGDIR}/n/libksba-*.txz
