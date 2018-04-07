@@ -12,24 +12,27 @@ if [ -f ${SLOCATEGROUPFILE} ]; then
   fi
 fi
 
-if [ "${INCPULSE}" != "Y" ]; then
-  rm -f ${DIR}/usr/${LIBDIR}/mpg123/output_pulse.{la,so}
+if [ "${INCALSA}" == "Y" ]; then
+  if [ "${INCMOD003INTERP}" != "Y" ]; then
+    rm -f ${DIR}/usr/${LIBDIR}/alsa-lib/smixer/smixer-python.so
+  fi
 fi
 
-if [ "${INCMOD003INTERP}" != "Y" ]; then
-  rm -f ${DIR}/usr/${LIBDIR}/alsa-lib/smixer/smixer-python.so
+if [ "${INCGROFF}" == "Y" ]; then
+  if [ "${INCMOD010XORG}" != "Y" ]; then
+    rm -f ${DIR}/usr/bin/{gxditview,xtotroff}
+  fi
 fi
 
-if [ "${INCMOD010XORG}" != "Y" ]; then
-  rm -f ${DIR}/usr/${LIBDIR}/mpg123/output_sdl.{la,so}
-fi
+if [ "${INCMPGONETWOTHREE}" == "Y" ]; then
+  if [ "${INCPULSE}" != "Y" ]; then
+    rm -f ${DIR}/usr/${LIBDIR}/mpg123/output_pulse.{la,so}
+  fi
 
-#NMPLUG="${DIR}/usr/${LIBDIR}/libproxy/*/modules/network_networkmanager.so"
-#if [ -e ${NMPLUG} ]; then
-#  if [ "$INCNETWORKMANAGER" != "Y" ]; then
-#    rm -f ${NMPLUG}
-#  fi
-#fi
+  if [ "${INCMOD010XORG}" != "Y" ]; then
+    rm -f ${DIR}/usr/${LIBDIR}/mpg123/output_sdl.{la,so}
+  fi
+fi
 
 if [ -d ${DIR}/etc/cron.hourly ]; then
 # Write an hourly sync script

@@ -48,7 +48,7 @@ fi
 
 # Clean up grub
 if [ "${INCMOD010XORG}" != "Y" ]; then
-  rm -f ${DIR}/usr/bin/usr/bin/grub-mkfont
+  rm -f ${DIR}/usr/bin/grub-mkfont
 fi
 
 # Clean up ???

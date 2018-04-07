@@ -14,7 +14,7 @@ ln -s ${SLACKPKGDIR}/d/python-setuptools-*.txz || exit 1
 ln -s ${SLACKPKGDIR}/d/scons-*.txz
 ln -s ${SLACKPKGDIR}/d/Cython-*.txz
 
-if [ "$INCMOD010XORG" == "Y" ]; then
+if [ "${INCMOD010XORG}" == "Y" ]; then
   ln -s ${SLACKPKGDIR}/l/pygobject-*.txz
   ln -s ${SLACKPKGDIR}/l/pycairo-*.txz
   ln -s ${SLACKPKGDIR}/l/pygtk-*.txz

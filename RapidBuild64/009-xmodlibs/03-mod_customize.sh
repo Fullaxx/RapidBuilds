@@ -3,16 +3,19 @@
 source ../spec.sh
 source ./module_spec.sh
 
-NMPLUG="${DIR}/usr/${LIBDIR}/libproxy/*/modules/network_networkmanager.so"
-if [ -e ${NMPLUG} ]; then
+#Clean up libproxy
+if [ "${INCLIBPROXY}" == "Y" ]; then
   if [ "$INCNETWORKMANAGER" != "Y" ]; then
-    rm ${NMPLUG}
+    rm -f ${DIR}/usr/${LIBDIR}/libproxy/*/modules/network_networkmanager.so
   fi
 fi
 
 # Clean up PinEntry
 if [ "${INCPINENTRY}" == "Y" ]; then
   rm -f ${DIR}/usr/bin/pinentry-gnome3
+  if [ "${INCMOD010XORG}" != "Y" ]; then
+    rm -f ${DIR}/usr/bin/pinentry-gtk-2
+  fi
   if [ "$INCQT" != "Y" ]; then
     rm -f ${DIR}/usr/bin/pinentry-qt
     rm -f ${DIR}/usr/bin/pinentry-qt4
