@@ -1,1 +1,0 @@
-../basis/003-interp/02r-rootcopy.sh

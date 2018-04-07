@@ -19,7 +19,7 @@ PACKAGESDIR="/opt/RL/packages"
 
 PROJECTBASE="${RAPIDBUILDSDIR}/RapidFileserver64"
 RAPIDDEPLOGIC="${RAPIDBUILDSDIR}/RDL"
-RLSHELL="${RAPIDSHELLSDIR}/RapidBuild-sr09.tar"
+RLSHELL="${RAPIDSHELLSDIR}/RapidFileserver-sr09.tar"
 ISOOUTPUTDIR="/opt/RL/isos/"
 
 if [ "$ARCH" == "x86_64" ]; then
