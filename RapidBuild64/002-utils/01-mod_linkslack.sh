@@ -122,12 +122,6 @@ if [ "${INCALSA}" == "Y" ]; then
   ln -s ${SLACKPKGDIR}/l/libsamplerate-*.txz
 fi
 
-# bc is req'd for kerel compilation
-ln -s ${SLACKPKGDIR}/ap/bc-*.txz
-
-# Don't you want to burn a RapidLinux LiveCD?
-ln -s ${SLACKPKGDIR}/ap/cdrtools-*.txz
-
 if [ "${INCDCTHREEDD}" == "Y" ]; then
   ln -s ${SLACKPKGDIR}/ap/dc3dd-*.txz
 fi
@@ -297,6 +291,9 @@ if [ "${INCVLAN}" == "Y" ]; then
 fi
 
 ###########################################################
+
+# Don't you want to burn a RapidLinux LiveCD?
+ln -s ${SLACKPKGDIR}/ap/cdrtools-*.txz
 
 ln -s ${SLACKPKGDIR}/ap/sqlite-*.txz
 ln -s ${SLACKPKGDIR}/ap/sudo-*.txz

@@ -1,5 +1,6 @@
 if [ "${INCSAMBA}" == "Y" ]; then
   INCLIBAIO="Y"
+  INCLIBARCHIVE="Y"
   INCGPGME="Y"
   INCLIBASSUAN="Y"
   INCLIBTALLOC="Y"
