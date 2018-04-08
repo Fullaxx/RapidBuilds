@@ -18,4 +18,9 @@ if [ "${INCMOD006DEVEL}" == "Y" ]; then
   for DEPSCR in ${RAPIDDEPLOGIC}/006-*.sh; do source ${DEPSCR}; done
 fi
 
+if [ "${INCMOD010XORG}" == "Y" ]; then
+  for DEPSCR in ${RAPIDDEPLOGIC}/010-*.sh; do source ${DEPSCR}; done
+fi
+
+# Internal Library Dependencies
 for DEPSCR in ${RAPIDDEPLOGIC}/009-*.sh; do source ${DEPSCR}; done

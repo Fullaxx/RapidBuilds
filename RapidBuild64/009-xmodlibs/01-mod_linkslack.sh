@@ -195,7 +195,6 @@ if [ "${INCLIBMPC}" == "Y" ]; then
   ln -s ${SLACKPKGDIR}/l/libmpc-*.txz
 fi
 
-
 if [ "${INCLIBUNWIND}" == "Y" ]; then
 # XXX needs libunwind
   ln -s ${SLACKPKGDIR}/l/libunwind-*.txz
@@ -217,12 +216,16 @@ if [ "${INCDB48}" == "Y" ]; then
 fi
 
 if [ "${INCLIBRSVG}" == "Y" ]; then
-# librsvg needs libcroco
   ln -s ${SLACKPKGDIR}/l/librsvg-*.txz
 fi
 
 if [ "${INCLIBCROCO}" == "Y" ]; then
+# librsvg needs libcroco
   ln -s ${SLACKPKGDIR}/l/libcroco-*.txz
+fi
+
+if [ "${INCFRIBIDI}" == "Y" ]; then
+  ln -s ${SLACKPKGDIR}/l/fribidi-*.txz
 fi
 
 # XXX FIX THESE
