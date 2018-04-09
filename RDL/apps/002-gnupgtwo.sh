@@ -1,0 +1,6 @@
+if [ "${INCGNUPGTWO}" == "Y" ]; then
+  INCPINENTRY="Y"
+  INCLIBASSUAN="Y"
+  INCLIBGCRYPT="Y"
+  INCLIBGPGERROR="Y"
+fi
