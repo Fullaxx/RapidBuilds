@@ -29,7 +29,7 @@ if [ "${INCMPGONETWOTHREE}" == "Y" ]; then
     rm -f ${DIR}/usr/${LIBDIR}/mpg123/output_pulse.{la,so}
   fi
 
-  if [ "${INCMOD010XORG}" != "Y" ]; then
+  if [ "${INCSDL}" != "Y" ]; then
     rm -f ${DIR}/usr/${LIBDIR}/mpg123/output_sdl.{la,so}
   fi
 fi

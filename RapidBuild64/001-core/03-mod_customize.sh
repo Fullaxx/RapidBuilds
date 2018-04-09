@@ -28,17 +28,13 @@ sed -e 's#\\u@\\h:\\w#[\\u@\\h (\\w)]#' -i ${DIR}/etc/profile
 sed -e 's/export LANG=en_US.UTF-8/#export LANG=en_US.UTF-8/g' -i ${DIR}/etc/profile.d/lang.sh
 sed -e 's/#export LANG=C/export LANG=C/g' -i ${DIR}/etc/profile.d/lang.sh
 
-# Clean up dbus
+# Clean up dbus and grub
 if [ "${INCMOD010XORG}" != "Y" ]; then
   rm -f ${DIR}/usr/bin/dbus-launch
-fi
-
-# Clean up grub
-if [ "${INCMOD010XORG}" != "Y" ]; then
   rm -f ${DIR}/usr/bin/grub-mkfont
 fi
 
-# Clean up ???
-if [ "${INCMOD010XORG}" != "Y" ]; then
+# Clean up glibc
+if [ "${INCGD}" != "Y" ]; then
   rm -f ${DIR}/usr/bin/memusagestat
 fi

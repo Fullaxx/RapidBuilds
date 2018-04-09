@@ -249,8 +249,3 @@ fi
 if [ "${INCLIBPOLKIT}" == "Y" ]; then
   ln -s ${SLACKPKGDIR}/l/polkit-?.*.txz
 fi
-
-if [ "${INCVTE}" == "Y" ]; then
-# xfce4-terminal needs vte
-  ln -s ${SLACKPKGDIR}/l/vte-*.txz
-fi
