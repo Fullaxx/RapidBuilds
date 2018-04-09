@@ -1,16 +1,3 @@
-rapiddeplogichceck()
-{
-  if [ -z "${RAPIDDEPLOGIC}" ]; then
-    echo "RAPIDDEPLOGIC not defined in spec.sh!"
-    exit 1
-  fi
-
-  if [ ! -d "${RAPIDDEPLOGIC}" ]; then
-    echo "${RAPIDDEPLOGIC} not found!"
-    exit 1
-  fi
-}
-
 kernelcheck()
 {
   if [ -z "${KERNELPKGDIR}" ]; then
@@ -32,6 +19,106 @@ rootcheck()
   fi
 }
 
+rapidbasecheck()
+{
+  if [ -z "${PROJECTBASE}" ]; then
+    echo "PROJECTBASE not defined in spec.sh!"
+    exit 1
+  fi
+
+  if [ ! -d "${PROJECTBASE}" ]; then
+    echo "${PROJECTBASE} not found!"
+    exit 1
+  fi
+}
+
+rapiddeplogiccheck()
+{
+  if [ -z "${RAPIDDEPLOGIC}" ]; then
+    echo "RAPIDDEPLOGIC not defined in spec.sh!"
+    exit 1
+  fi
+
+  if [ ! -d "${RAPIDDEPLOGIC}" ]; then
+    echo "${RAPIDDEPLOGIC} not found!"
+    exit 1
+  fi
+}
+
+loadrdllibs()
+{
+# enable
+  shopt -s nullglob
+
+  if [ "${INCMOD012XAPPS}" == "Y" ]; then
+    for DEPSCR in ${RAPIDDEPLOGIC}/libs/012-*.sh; do source ${DEPSCR}; done
+  fi
+
+  if [ "${INCMOD010XORG}" == "Y" ]; then
+    for DEPSCR in ${RAPIDDEPLOGIC}/libs/010-*.sh; do source ${DEPSCR}; done
+  fi
+
+  if [ "${INCMOD006DEVEL}" == "Y" ]; then
+    for DEPSCR in ${RAPIDDEPLOGIC}/libs/006-*.sh; do source ${DEPSCR}; done
+  fi
+
+  if [ "${INCMOD005SERVER}" == "Y" ]; then
+    for DEPSCR in ${RAPIDDEPLOGIC}/libs/005-*.sh; do source ${DEPSCR}; done
+  fi
+
+  if [ "${INCMOD002UTILS}" == "Y" ]; then
+    for DEPSCR in ${RAPIDDEPLOGIC}/libs/002-*.sh; do source ${DEPSCR}; done
+  fi
+
+# Internal Library Dependencies
+  for DEPSCR in ${RAPIDDEPLOGIC}/libs/009-*.sh; do source ${DEPSCR}; done
+
+# disable
+  shopt -u nullglob
+}
+
+loadrdlapps()
+{
+# enable
+  shopt -s nullglob
+
+  if [ "${INCMOD012XAPPS}" == "Y" ]; then
+    for DEPSCR in ${RAPIDDEPLOGIC}/apps/012-*.sh; do source ${DEPSCR}; loadrdllibs; done
+  fi
+
+  if [ "${INCMOD006DEVEL}" == "Y" ]; then
+    for DEPSCR in ${RAPIDDEPLOGIC}/apps/006-*.sh; do source ${DEPSCR}; loadrdllibs; done
+  fi
+
+  if [ "${INCMOD005SERVER}" == "Y" ]; then
+    for DEPSCR in ${RAPIDDEPLOGIC}/apps/005-*.sh; do source ${DEPSCR}; loadrdllibs; done
+  fi
+
+  if [ "${INCMOD002UTILS}" == "Y" ]; then
+    for DEPSCR in ${RAPIDDEPLOGIC}/apps/002-*.sh; do source ${DEPSCR}; loadrdllibs; done
+  fi
+
+# disable
+  shopt -u nullglob
+}
+
+loadconfig()
+{
+  kernelcheck
+  rapidbasecheck
+  rapiddeplogiccheck
+  rootcheck
+
+# enable
+  shopt -s nullglob
+
+# Read in each modules package requests
+  for PKGCFG in ${PROJECTBASE}/???-*/packages.cfg.sh; do source ${PKGCFG}; loadrdlapps; done
+
+# disable
+  shopt -u nullglob
+}
+
 linkmodule()
 {
   ln -s "$1"
@@ -47,12 +134,12 @@ bail()
   exit 1
 }
 
-loadconfig()
-{
-  CONFIGFILE="${PROJECTBASE}/config.sh"
-  if [ ! -r ${CONFIGFILE} ]; then
-    echo "${CONFIGFILE} not found!"
-    exit 1
-  fi
-  source "${CONFIGFILE}"
-}
+#loadconfig()
+#{
+#  CONFIGFILE="${PROJECTBASE}/config.sh"
+#  if [ ! -r ${CONFIGFILE} ]; then
+#    echo "${CONFIGFILE} not found!"
+#    exit 1
+#  fi
+#  source "${CONFIGFILE}"
+#}

@@ -115,13 +115,6 @@ fi
 
 ###########################################################
 
-if [ "${INCALSA}" == "Y" ]; then
-  ln -s ${SLACKPKGDIR}/ap/alsa-utils-*.txz
-  ln -s ${SLACKPKGDIR}/l/alsa-lib-*.txz
-  ln -s ${SLACKPKGDIR}/l/alsa-oss-*.txz
-  ln -s ${SLACKPKGDIR}/l/libsamplerate-*.txz
-fi
-
 if [ "${INCDCTHREEDD}" == "Y" ]; then
   ln -s ${SLACKPKGDIR}/ap/dc3dd-*.txz
 fi

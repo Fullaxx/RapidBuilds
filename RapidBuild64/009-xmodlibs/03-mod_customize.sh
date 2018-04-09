@@ -3,7 +3,7 @@
 source ../spec.sh
 source ./module_spec.sh
 
-#Clean up libproxy
+# Clean up libproxy
 if [ "${INCLIBPROXY}" == "Y" ]; then
   if [ "$INCNETWORKMANAGER" != "Y" ]; then
     rm -f ${DIR}/usr/${LIBDIR}/libproxy/*/modules/network_networkmanager.so
@@ -20,4 +20,9 @@ if [ "${INCPINENTRY}" == "Y" ]; then
     rm -f ${DIR}/usr/bin/pinentry-qt
     rm -f ${DIR}/usr/bin/pinentry-qt4
   fi
+fi
+
+# Clean up libsamplerate
+if [ "${INCLIBSNDFILE}" != "Y" ]; then
+  rm -f ${DIR}/usr/bin/sndfile-resample
 fi
