@@ -30,6 +30,10 @@ ln -s ${SLACKPKGDIR}/n/p11-kit-*.txz
 # ln -s ${SLACKPKGDIR}/n/nghttp2-*.txz
 # Sat Mar 24 19:47:01 UTC 2018
 
+if [ "${INCUPOWER}" == "Y" ]; then
+  ln -s ${SLACKPKGDIR}/a/upower-*.txz
+fi
+
 if [ "${INCALSA}" == "Y" ]; then
   ln -s ${SLACKPKGDIR}/ap/alsa-utils-*.txz
   ln -s ${SLACKPKGDIR}/l/alsa-lib-*.txz
