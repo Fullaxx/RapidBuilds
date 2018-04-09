@@ -5,7 +5,7 @@ ARCH="x86_64"
 TIMESTAMPEDISO="0"
 
 # This is the list of categories that will be rebuilt by "./rebuild.sh all"
-PROJECTCATEGORIES="1 2 3 5 6 7 9"
+PROJECTCATEGORIES="1 2 3 5 6 7 9 10 12"
 
 # Can we automate this by checking the existance of dirs?
 INCMOD002UTILS="Y"
@@ -13,6 +13,8 @@ INCMOD003INTERP="Y"
 INCMOD005SERVER="Y"
 INCMOD006DEVEL="Y"
 INCMOD007WIRELESS="Y"
+INCMOD010XORG="Y"
+INCMOD012XAPPS="Y"
 
 RAPIDBUILDSDIR="/opt/RL/RapidBuilds"
 RAPIDSHELLSDIR="/opt/RL/RapidShells"
@@ -43,6 +45,4 @@ if [ ! -r ${FUNCTIONSFILE} ]; then
 fi
 source ${FUNCTIONSFILE}
 
-kernelcheck
-rootcheck
 loadconfig

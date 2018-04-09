@@ -36,6 +36,4 @@ if [ ! -r ${FUNCTIONSFILE} ]; then
 fi
 source ${FUNCTIONSFILE}
 
-kernelcheck
-rootcheck
 loadconfig
