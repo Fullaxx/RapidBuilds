@@ -26,6 +26,11 @@ for PKG in *.txz; do
     sed -e 's/^if/#if/g' -e 's/^fi/#fi/g' -e 's/  echo/#echo/' -e 's@  /sbin/ldconfig@#/sbin/ldconfig@' -i ${DIR}/install/doinst.sh || exit 1
   fi
 
+  if [[ ${PKG} == polkit-*.txz ]]; then
+    echo "${PKG}: Removing /etc/{passwd,group} manipulation from install/doinst.sh ..."
+    sed -e s@etc/passwd@/dev/null@g -e s@etc/group@/dev/null@g -i ${DIR}/install/doinst.sh || exit 1
+  fi
+
   if [ -d ${DIR}/install ]; then
     if [ -f ${DIR}/install/doinst.sh ]; then
       bash -c "cd ${DIR}; source ./install/doinst.sh"
