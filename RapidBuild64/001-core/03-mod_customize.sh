@@ -13,19 +13,6 @@ if [ ! -e ${DIR}/usr/bin/env ]; then ln -s /bin/env ${DIR}/usr/bin/env; fi
 if [ ! -e ${DIR}/usr/bin/lzm2dir ]; then ln -s xzm2dir ${DIR}/usr/bin/lzm2dir; fi
 if [ ! -e ${DIR}/usr/bin/tgz2xzm ]; then ln -s txz2xzm ${DIR}/usr/bin/tgz2xzm; fi
 
-# https://slackbuilds.org/uid_gid.txt
-echo "privoxy:x:206:206:privoxy:/:/bin/false" >> ${DIR}/etc/passwd
-echo "privoxy:x:206:" >> ${DIR}/etc/group
-echo "lighttpd:x:208:208:lighttpd:/:/bin/false" >> ${DIR}/etc/passwd
-echo "lighttpd:x:208:" >> ${DIR}/etc/group
-echo "postgres:x:209:209:postgres:/:/bin/false" >> ${DIR}/etc/passwd
-echo "postgres:x:209:" >> ${DIR}/etc/group
-echo "clamav:x:210:210:clamav:/:/bin/false" >> ${DIR}/etc/passwd
-echo "clamav:x:210:" >> ${DIR}/etc/group
-echo "kvm:x:221:" >> ${DIR}/etc/group
-echo "tomcat:x:232:232:tomcat:/:/bin/false" >> ${DIR}/etc/passwd
-echo "tomcat:x:232:" >> ${DIR}/etc/group
-
 # sed -e 's/--noclear //' -i fs/etc/inittab
 sed -e '/\/usr\/local\/lib64/d' -i ${DIR}/etc/ld.so.conf
 sed -e 's/export LESS="-M"/export LESS="-M -r"/' -i ${DIR}/etc/profile
