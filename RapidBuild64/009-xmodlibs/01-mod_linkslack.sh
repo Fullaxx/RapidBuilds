@@ -32,6 +32,13 @@ ln -s ${SLACKPKGDIR}/n/p11-kit-*.txz
 
 if [ "${INCUPOWER}" == "Y" ]; then
   ln -s ${SLACKPKGDIR}/a/upower-*.txz
+  ln -s ${SLACKPKGDIR}/l/libimobiledevice-*.txz
+  ln -s ${SLACKPKGDIR}/l/libplist-*.txz
+fi
+
+if [ "${INCUSBMUXD}" == "Y" ]; then
+  ln -s ${SLACKPKGDIR}/ap/usbmuxd-*.txz
+  ln -s ${SLACKPKGDIR}/l/libusbmuxd-*.txz
 fi
 
 if [ "${INCALSA}" == "Y" ]; then
@@ -133,8 +140,7 @@ if [ "${INCLIBPROXY}" == "Y" ]; then
   ln -s ${SLACKPKGDIR}/l/libproxy-*.txz
 fi
 
-if [ "${INCJS185}" == "Y" ]; then
-# libproxy needs js185
+if [ "${INCJSONEEIGHTYFIVE}" == "Y" ]; then
   ln -s ${SLACKPKGDIR}/l/js185-*.txz
 fi
 
