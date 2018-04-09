@@ -134,8 +134,11 @@ fi
 if [ "${INCGROFF}" == "Y" ]; then
   ln -s ${SLACKPKGDIR}/ap/groff-*.txz
 fi
+if [ "${INCJOE}" == "Y" ]; then
+  ln -s ${SLACKPKGDIR}/ap/joe-*.txz
+fi
 
-if [ "$INCLMSENSORS" == "Y" ]; then
+if [ "${INCLMSENSORS}" == "Y" ]; then
   ln -s ${SLACKPKGDIR}/ap/lm_sensors-*.txz
 fi
 
