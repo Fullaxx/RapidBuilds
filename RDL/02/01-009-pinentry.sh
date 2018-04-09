@@ -1,6 +1,0 @@
-if [ "${INCPINENTRY}" == "Y" ]; then
-  INCLIBASSUAN="Y"
-  INCLIBSECRET="Y"
-  INCLIBGCRYPT="Y"
-  INCLIBGPGERROR="Y"
-fi
