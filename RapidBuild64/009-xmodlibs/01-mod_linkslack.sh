@@ -96,6 +96,10 @@ if [ "${INCLIBASSUAN}" == "Y" ]; then
   ln -s ${SLACKPKGDIR}/n/libassuan-*.txz
 fi
 
+if [ "${INCLIBGLADE}" == "Y" ]; then
+  ln -s ${SLACKPKGDIR}/l/libglade-*.txz
+fi
+
 if [ "${INCLIBTIRPC}" == "Y" ]; then
   ln -s ${SLACKPKGDIR}/n/libtirpc-*.txz
 fi

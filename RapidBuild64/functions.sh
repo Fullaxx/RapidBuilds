@@ -66,6 +66,10 @@ loadrdllibs()
     for DEPSCR in ${RAPIDDEPLOGIC}/libs/005-*.sh; do source ${DEPSCR}; done
   fi
 
+  if [ "${INCMOD003INTERP}" == "Y" ]; then
+    for DEPSCR in ${RAPIDDEPLOGIC}/libs/003-*.sh; do source ${DEPSCR}; done
+  fi
+
   if [ "${INCMOD002UTILS}" == "Y" ]; then
     for DEPSCR in ${RAPIDDEPLOGIC}/libs/002-*.sh; do source ${DEPSCR}; done
   fi
@@ -96,6 +100,10 @@ loadrdlapps()
 
   if [ "${INCMOD005SERVER}" == "Y" ]; then
     for DEPSCR in ${RAPIDDEPLOGIC}/apps/005-*.sh; do source ${DEPSCR}; loadrdllibs; done
+  fi
+
+  if [ "${INCMOD003INTERP}" == "Y" ]; then
+    for DEPSCR in ${RAPIDDEPLOGIC}/apps/003-*.sh; do source ${DEPSCR}; loadrdllibs; done
   fi
 
   if [ "${INCMOD002UTILS}" == "Y" ]; then
