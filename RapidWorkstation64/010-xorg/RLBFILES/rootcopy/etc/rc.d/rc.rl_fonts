@@ -1,0 +1,15 @@
+#!/bin/bash
+#
+# /etc/rc.d/rc.rl_fonts
+#
+# Make sure X knows about all the installed fonts
+
+for FDIR in /usr/share/fonts/*; do
+  mkfontdir $FDIR
+done
+
+# Update the X font indexes:
+if [ -x /usr/bin/fc-cache ]; then
+  #echo "Updating X font indexes:  /usr/bin/fc-cache -f &"
+  /usr/bin/fc-cache -f &
+fi
