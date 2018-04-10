@@ -227,7 +227,7 @@ if [ "${INCLIBMPC}" == "Y" ]; then
 fi
 
 if [ "${INCLIBUNWIND}" == "Y" ]; then
-# XXX needs libunwind
+# strace needs libunwind
   ln -s ${SLACKPKGDIR}/l/libunwind-*.txz
 fi
 
