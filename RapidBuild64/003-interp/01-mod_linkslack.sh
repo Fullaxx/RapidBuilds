@@ -35,17 +35,16 @@ ln -s ${SLACKPKGDIR}/l/python-urllib3-*.txz || exit 1
 #  ln -s ${SLACKPKGDIR}/l/python-pillow-*.txz || exit 1
 #fi
 
-
-if [ "$INCPERL" == "Y" ]; then
+if [ "${INCPERL}" == "Y" ]; then
   ln -s ${SLACKPKGDIR}/d/perl-*.txz
 fi
 
-if [ "$INCRUBY" == "Y" ]; then
+if [ "${INCRUBY}" == "Y" ]; then
   ln -s ${SLACKPKGDIR}/d/ruby-*.txz
   ln -s ${SLACKPKGDIR}/l/libyaml-*.txz
 fi
 
-if [ "$INCTCL" == "Y" ]; then
+if [ "${INCTCL}" == "Y" ]; then
   ln -s ${SLACKPKGDIR}/tcl/tcl-*.txz
   ln -s ${SLACKPKGDIR}/tcl/tk-*.txz
   ln -s ${SLACKPKGDIR}/tcl/tix-*.txz

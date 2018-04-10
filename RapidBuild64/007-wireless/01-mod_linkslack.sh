@@ -6,7 +6,7 @@ source ./module_spec.sh
 rm -f *.txz *.xzm
 
 ln -s ${SLACKPKGDIR}/n/iw-*.txz
-ln -s ${SLACKPKGDIR}/n/wireless-tools-*.txz
+ln -s ${SLACKPKGDIR}/n/wireless_tools-*.txz
 
 if [ "$INCIPWFIRMWARE" == "Y" ]; then
   for PKG in ${SLACKPKGDIR}/n/ipw*.txz; do ln -s $PKG; done

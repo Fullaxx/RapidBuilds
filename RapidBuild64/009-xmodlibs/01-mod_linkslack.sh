@@ -27,8 +27,7 @@ ln -s ${SLACKPKGDIR}/n/gnutls-*.txz
 ln -s ${SLACKPKGDIR}/n/nettle-*.txz
 ln -s ${SLACKPKGDIR}/n/openssl-*.txz
 ln -s ${SLACKPKGDIR}/n/p11-kit-*.txz
-# ln -s ${SLACKPKGDIR}/n/nghttp2-*.txz
-# Sat Mar 24 19:47:01 UTC 2018
+ln -s ${SLACKPKGDIR}/n/nghttp2-*.txz
 
 if [ "${INCUPOWER}" == "Y" ]; then
   ln -s ${SLACKPKGDIR}/a/upower-*.txz
@@ -97,6 +96,10 @@ if [ "${INCLIBASSUAN}" == "Y" ]; then
   ln -s ${SLACKPKGDIR}/n/libassuan-*.txz
 fi
 
+if [ "${INCLIBTIRPC}" == "Y" ]; then
+  ln -s ${SLACKPKGDIR}/n/libtirpc-*.txz
+fi
+
 # Bind9, Samba, mplayer need talloc/tevent VERIFY THIS
 
 if [ "${INCLIBTALLOC}" == "Y" ]; then
@@ -116,10 +119,9 @@ if [ "${INCLIBNDP}" == "Y" ]; then
   ln -s ${SLACKPKGDIR}/n/libndp-*.txz
 fi
 
-# Sat Mar 24 19:47:01 UTC 2018
-#if [ "${INCJANSSON}" == "Y" ]; then
-#  ln -s ${SLACKPKGDIR}/l/jansson-*.txz
-#fi
+if [ "${INCJANSSON}" == "Y" ]; then
+  ln -s ${SLACKPKGDIR}/l/jansson-*.txz
+fi
 
 if [ "${INCASPELL}" == "Y" ]; then
 # enchant and bluefish need aspell
@@ -212,7 +214,6 @@ if [ "${INCTONELIB}" == "Y" ]; then
 fi
 
 if [ "${INCEXPAT}" == "Y" ]; then
-# XXX needs expat
   ln -s ${SLACKPKGDIR}/l/expat-*.txz
 fi
 

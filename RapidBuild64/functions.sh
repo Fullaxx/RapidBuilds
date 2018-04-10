@@ -86,6 +86,10 @@ loadrdlapps()
     for DEPSCR in ${RAPIDDEPLOGIC}/apps/012-*.sh; do source ${DEPSCR}; loadrdllibs; done
   fi
 
+  if [ "${INCMOD010XORG}" == "Y" ]; then
+    for DEPSCR in ${RAPIDDEPLOGIC}/apps/010-*.sh; do source ${DEPSCR}; loadrdllibs; done
+  fi
+
   if [ "${INCMOD006DEVEL}" == "Y" ]; then
     for DEPSCR in ${RAPIDDEPLOGIC}/apps/006-*.sh; do source ${DEPSCR}; loadrdllibs; done
   fi

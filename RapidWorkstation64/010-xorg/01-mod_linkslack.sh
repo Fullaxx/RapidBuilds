@@ -12,16 +12,7 @@ ln -s ${SLACKPKGDIR}/x/dejavu-fonts-ttf-*.txz
 ln -s ${SLACKPKGDIR}/x/liberation-fonts-ttf-*.txz
 ln -s ${SLACKPKGDIR}/x/urw-core35-fonts-otf-*.txz
 
-ln -s ${SLACKPKGDIR}/x/bigreqsproto-*.txz
-ln -s ${SLACKPKGDIR}/x/compositeproto-*.txz
-ln -s ${SLACKPKGDIR}/x/damageproto-*.txz
-ln -s ${SLACKPKGDIR}/x/dmxproto-*.txz
-ln -s ${SLACKPKGDIR}/x/dri2proto-*.txz
-ln -s ${SLACKPKGDIR}/x/dri3proto-*.txz
-ln -s ${SLACKPKGDIR}/x/fixesproto-*.txz
-ln -s ${SLACKPKGDIR}/x/fontcacheproto-*.txz
 ln -s ${SLACKPKGDIR}/x/fontconfig-*.txz
-ln -s ${SLACKPKGDIR}/x/fontsproto-*.txz
 ln -s ${SLACKPKGDIR}/x/iceauth-*.txz
 ln -s ${SLACKPKGDIR}/x/libICE-*.txz
 ln -s ${SLACKPKGDIR}/x/libSM-*.txz
@@ -55,40 +46,24 @@ ln -s ${SLACKPKGDIR}/x/libxshmfence-*.txz
 ln -s ${SLACKPKGDIR}/x/mkfontdir-*.txz
 ln -s ${SLACKPKGDIR}/x/mkfontscale-*.txz
 ln -s ${SLACKPKGDIR}/x/pixman-*.txz
-ln -s ${SLACKPKGDIR}/x/presentproto-*.txz
-ln -s ${SLACKPKGDIR}/x/printproto-*.txz
-ln -s ${SLACKPKGDIR}/x/randrproto-*.txz
-ln -s ${SLACKPKGDIR}/x/recordproto-*.txz
-ln -s ${SLACKPKGDIR}/x/renderproto-*.txz
-ln -s ${SLACKPKGDIR}/x/resourceproto-*.txz
 ln -s ${SLACKPKGDIR}/x/util-macros-*.txz # What is this used for?
 ln -s ${SLACKPKGDIR}/x/x11-skel-*.txz
 ln -s ${SLACKPKGDIR}/x/xauth-*.txz
-ln -s ${SLACKPKGDIR}/x/xextproto-*.txz
-ln -s ${SLACKPKGDIR}/x/xf86bigfontproto-*.txz
-ln -s ${SLACKPKGDIR}/x/xf86driproto-*.txz
 ln -s ${SLACKPKGDIR}/x/xhost-*.txz
-ln -s ${SLACKPKGDIR}/x/xineramaproto-*.txz
 ln -s ${SLACKPKGDIR}/x/xorg-server-?.??.?-*.txz || exit 1
-ln -s ${SLACKPKGDIR}/x/xproto-*.txz
+ln -s ${SLACKPKGDIR}/x/xorgproto-*.txz
 ln -s ${SLACKPKGDIR}/x/xrandr-*.txz
 ln -s ${SLACKPKGDIR}/x/xrdb-*.txz
 ln -s ${SLACKPKGDIR}/x/xterm-*.txz
 
 if [ "${INCXLOCALDISPLAY}" == "Y" ]; then
-  ln -s ${SLACKPKGDIR}/x/evieext-*.txz
-  ln -s ${SLACKPKGDIR}/x/inputproto-*.txz
-#  ln -s ${SLACKPKGDIR}/x/libXevie-*.txz (needed by at?)
   ln -s ${SLACKPKGDIR}/x/libXtst-*.txz
   ln -s ${SLACKPKGDIR}/x/libevdev-*.txz
   ln -s ${SLACKPKGDIR}/a/libgudev-*.txz
   ln -s ${SLACKPKGDIR}/x/libinput-*.txz
   ln -s ${SLACKPKGDIR}/x/libwacom-*.txz
-  ln -s ${SLACKPKGDIR}/x/kbproto-*.txz
   ln -s ${SLACKPKGDIR}/x/mtdev-*.txz
-#  ln -s ${SLACKPKGDIR}/x/videoproto-*.txz
   ln -s ${SLACKPKGDIR}/x/xev-*.txz
-#  ln -s ${SLACKPKGDIR}/x/xf86vidmodeproto-*.txz
   ln -s ${SLACKPKGDIR}/x/xinit-*.txz
   ln -s ${SLACKPKGDIR}/x/xinput-*.txz
   ln -s ${SLACKPKGDIR}/x/xkbcomp-*.txz
@@ -100,15 +75,23 @@ if [ "${INCXLOCALDISPLAY}" == "Y" ]; then
   ln -s ${SLACKPKGDIR}/x/xf86-video-cirrus-*.txz
 fi
 
-if [ "${INCALLXFONTS}" == "Y" ]; then
-  ln -s ${SLACKPKGDIR}/x/sazanami-fonts-ttf-*.txz
-  ln -s ${SLACKPKGDIR}/x/sinhala_lklug-font-ttf-*.txz
-  ln -s ${SLACKPKGDIR}/x/tibmachuni-font-ttf-*.txz
-  ln -s ${SLACKPKGDIR}/x/ttf-indic-fonts-*.txz
-  ln -s ${SLACKPKGDIR}/x/ttf-tlwg-*.txz
-  ln -s ${SLACKPKGDIR}/x/wqy-zenhei-font-ttf-*.txz
-  for PKG in ${SLACKPKGDIR}/x/font-*.txz; do ln -s ${PKG}; done
+if [ "${INCADOBEFONTS}" == "Y" ]; then
+  for PKG in ${SLACKPKGDIR}/x/font-adobe-*.txz; do ln -s ${PKG}; done
 fi
+
+if [ "${INCBITSTREAMFONTS}" == "Y" ]; then
+  for PKG in ${SLACKPKGDIR}/x/font-bitstream-*.txz; do ln -s ${PKG}; done
+fi
+
+#if [ "${INCALLXFONTS}" == "Y" ]; then
+#  ln -s ${SLACKPKGDIR}/x/sazanami-fonts-ttf-*.txz
+#  ln -s ${SLACKPKGDIR}/x/sinhala_lklug-font-ttf-*.txz
+#  ln -s ${SLACKPKGDIR}/x/tibmachuni-font-ttf-*.txz
+#  ln -s ${SLACKPKGDIR}/x/ttf-indic-fonts-*.txz
+#  ln -s ${SLACKPKGDIR}/x/ttf-tlwg-*.txz
+#  ln -s ${SLACKPKGDIR}/x/wqy-zenhei-font-ttf-*.txz
+#  for PKG in ${SLACKPKGDIR}/x/font-*.txz; do ln -s ${PKG}; done
+#fi
 
 if [ "${INCLIBXKLAVIER}" == "Y" ]; then
   ln -s ${SLACKPKGDIR}/l/libxklavier-*.txz
@@ -121,7 +104,6 @@ fi
 if [ "${INCMESA}" == "Y" ]; then
   ln -s ${SLACKPKGDIR}/x/freeglut-*.txz
   ln -s ${SLACKPKGDIR}/x/glew-*.txz
-  ln -s ${SLACKPKGDIR}/x/glproto-*.txz
   ln -s ${SLACKPKGDIR}/x/glu-*.txz
   ln -s ${SLACKPKGDIR}/x/libepoxy-*.txz
   ln -s ${SLACKPKGDIR}/x/mesa-*.txz
@@ -148,7 +130,10 @@ fi
 if [ "${INCXF86DGA}" == "Y" ]; then
   ln -s ${SLACKPKGDIR}/x/libXxf86dga-*.txz
   ln -s ${SLACKPKGDIR}/x/xf86dga-*.txz
-  ln -s ${SLACKPKGDIR}/x/xf86dgaproto-*.txz
+fi
+
+if [ "${INCXF86MISC}" == "Y" ]; then
+  ln -s ${SLACKPKGDIR}/x/libXxf86misc-*.txz
 fi
 
 if [ "${INCMAKEDEPEND}" == "Y" ]; then

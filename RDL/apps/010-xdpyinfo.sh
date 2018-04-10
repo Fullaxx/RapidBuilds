@@ -1,0 +1,5 @@
+if [ "${INCXDPYINFO}" == "Y" ]; then
+  INCXCOMPOSITE="Y"
+  INCXF86DGA="Y"
+  INCXF86MISC="Y"
+fi
