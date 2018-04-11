@@ -1,0 +1,4 @@
+if [ "${INCXF86VIDEOVMWARE}" == "Y" ]; then
+  INCXDESKTOPENVIRONMENT="Y"
+  INCMESA="Y"
+fi

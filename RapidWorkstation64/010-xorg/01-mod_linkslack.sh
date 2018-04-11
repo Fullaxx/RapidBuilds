@@ -57,7 +57,7 @@ ln -s ${SLACKPKGDIR}/x/xrandr-*.txz
 ln -s ${SLACKPKGDIR}/x/xrdb-*.txz
 ln -s ${SLACKPKGDIR}/x/xterm-*.txz
 
-if [ "${INCXLOCALDISPLAY}" == "Y" ]; then
+if [ "${INCXDESKTOPENVIRONMENT}" == "Y" ]; then
   ln -s ${SLACKPKGDIR}/x/libXtst-*.txz
   ln -s ${SLACKPKGDIR}/x/libevdev-*.txz
   ln -s ${SLACKPKGDIR}/a/libgudev-*.txz
@@ -71,9 +71,39 @@ if [ "${INCXLOCALDISPLAY}" == "Y" ]; then
   ln -s ${SLACKPKGDIR}/x/xkeyboard-config-*.txz
   for PKG in ${SLACKPKGDIR}/x/xf86-input-*.txz; do ln -s ${PKG}; done
 
-#  for PKG in ${SLACKPKGDIR}/x/xf86-video-*.txz; do ln -s ${PKG}; done
   ln -s ${SLACKPKGDIR}/x/xf86-video-vesa-*.txz
   ln -s ${SLACKPKGDIR}/x/xf86-video-cirrus-*.txz
+  ln -s ${SLACKPKGDIR}/x/xf86-video-vboxvideo-*.txz
+  ln -s ${SLACKPKGDIR}/x/xf86-video-v4l-*.txz
+fi
+
+if [ "${INCXF86VIDEOAMDGPU}" == "Y" ]; then
+  ln -s ${SLACKPKGDIR}/x/xf86-video-amdgpu-*.txz
+fi
+
+if [ "${INCXF86VIDEOAST}" == "Y" ]; then
+  ln -s ${SLACKPKGDIR}/x/xf86-video-ast-*.txz
+fi
+
+if [ "${INCXF86VIDEOATI}" == "Y" ]; then
+  ln -s ${SLACKPKGDIR}/x/xf86-video-ati-*.txz
+fi
+
+if [ "${INCXF86VIDEOINTEL}" == "Y" ]; then
+  ln -s ${SLACKPKGDIR}/x/xf86-video-intel-*.txz
+  ln -s ${SLACKPKGDIR}/x/intel-vaapi-driver-*.txz
+fi
+
+if [ "${INCXF86VIDEOMGA}" == "Y" ]; then
+  ln -s ${SLACKPKGDIR}/x/xf86-video-mga-*.txz
+fi
+
+if [ "${INCXF86VIDEONOUVEAU}" == "Y" ]; then
+  ln -s ${SLACKPKGDIR}/x/xf86-video-nouveau-*.txz
+fi
+
+if [ "${INCXF86VIDEOVMWARE}" == "Y" ]; then
+  ln -s ${SLACKPKGDIR}/x/xf86-video-vmware-*.txz
 fi
 
 if [ "${INCADOBEFONTS}" == "Y" ]; then
@@ -116,7 +146,7 @@ if [ "${INCMESA}" == "Y" ]; then
 fi
 
 if [ "${INCLIBVA}" == "Y" ]; then
-  ln -s ${SLACKPKGDIR}/x/libva-?.?.?-*.txz
+  ln -s ${SLACKPKGDIR}/x/libva-?.?.?-*.txz || exit 1
 fi
 
 if [ "${INCLIBVDPAU}" == "Y" ]; then

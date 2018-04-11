@@ -1,0 +1,3 @@
+if [ "${INCXF86VIDEOAST}" == "Y" ]; then
+  INCXDESKTOPENVIRONMENT="Y"
+fi
