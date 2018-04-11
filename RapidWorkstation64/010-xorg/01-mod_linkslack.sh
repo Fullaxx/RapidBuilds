@@ -11,6 +11,7 @@ ln -s ${SLACKPKGDIR}/l/harfbuzz-*.txz
 ln -s ${SLACKPKGDIR}/x/dejavu-fonts-ttf-*.txz
 ln -s ${SLACKPKGDIR}/x/liberation-fonts-ttf-*.txz
 ln -s ${SLACKPKGDIR}/x/urw-core35-fonts-otf-*.txz
+#######################################
 
 ln -s ${SLACKPKGDIR}/x/fontconfig-*.txz
 ln -s ${SLACKPKGDIR}/x/iceauth-*.txz
@@ -81,6 +82,11 @@ fi
 
 if [ "${INCBITSTREAMFONTS}" == "Y" ]; then
   for PKG in ${SLACKPKGDIR}/x/font-bitstream-*.txz; do ln -s ${PKG}; done
+fi
+
+if [ "${INCGHOSTSCRIPT}" == "Y" ]; then
+  ln -s ${SLACKPKGDIR}/ap/ghostscript-?.*.txz || exit 1
+  ln -s ${SLACKPKGDIR}/ap/ghostscript-fonts-std-*.txz
 fi
 
 #if [ "${INCALLXFONTS}" == "Y" ]; then
