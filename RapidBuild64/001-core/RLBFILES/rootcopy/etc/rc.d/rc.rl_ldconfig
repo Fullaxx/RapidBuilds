@@ -16,6 +16,12 @@ elif [ -e /usr/lib/firefox ]; then
   echo "/usr/lib/firefox" >> $LDCONF
 fi
 
+if [ -e /usr/lib64/thunderbird ]; then
+  echo "/usr/lib64/thunderbird" >> $LDCONF
+elif [ -e /usr/lib/thunderbird ]; then
+  echo "/usr/lib/thunderbird" >> $LDCONF
+fi
+
 if [ -d /opt/cuda/lib64 ]; then
   echo "/opt/cuda/lib64" >> $LDCONF
 fi
