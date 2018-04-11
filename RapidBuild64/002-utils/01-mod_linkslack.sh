@@ -53,6 +53,10 @@ if [ "${INCLOGROTATE}" == "Y" ]; then
   ln -s ${SLACKPKGDIR}/a/logrotate-*.txz
 fi
 
+if [ "${INCLBZIPTWO}" == "Y" ]; then
+  ln -s ${SLACKPKGDIR}/a/lbzip2-*.txz
+fi
+
 if [ "${INCLRZIP}" == "Y" ]; then
   ln -s ${SLACKPKGDIR}/a/lrzip-*.txz
 fi
