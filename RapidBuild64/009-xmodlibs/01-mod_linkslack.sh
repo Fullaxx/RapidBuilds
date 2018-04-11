@@ -104,8 +104,6 @@ if [ "${INCLIBTIRPC}" == "Y" ]; then
   ln -s ${SLACKPKGDIR}/n/libtirpc-*.txz
 fi
 
-# Bind9, Samba, mplayer need talloc/tevent VERIFY THIS
-
 if [ "${INCLIBTALLOC}" == "Y" ]; then
   ln -s ${SLACKPKGDIR}/l/talloc-*.txz
 fi
@@ -204,7 +202,7 @@ if [ "${INCLIBMCRYPT}" == "Y" ]; then
 fi
 
 if [ "${INCLIBVPX}" == "Y" ]; then
-# /usr/lib64/php/extensions/gd.so needs libvpx
+# /usr/lib64/php/extensions/gd.so, ffmpeg need libvpx
   ln -s ${SLACKPKGDIR}/l/libvpx-*.txz
 fi
 
@@ -253,4 +251,9 @@ fi
 
 if [ "${INCLIBPOLKIT}" == "Y" ]; then
   ln -s ${SLACKPKGDIR}/l/polkit-?.*.txz
+fi
+
+if [ "${INCLIBSSHONE}" == "Y" ]; then
+# ffmpeg needs libssh
+  ln -s ${SLACKPKGDIR}/l/libssh-*.txz
 fi

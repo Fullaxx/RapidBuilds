@@ -115,6 +115,14 @@ if [ "${INCMESA}" == "Y" ]; then
   ln -s ${SLACKPKGDIR}/x/mesa-*.txz
 fi
 
+if [ "${INCLIBVA}" == "Y" ]; then
+  ln -s ${SLACKPKGDIR}/x/libva-?.?.?-*.txz
+fi
+
+if [ "${INCLIBVDPAU}" == "Y" ]; then
+  ln -s ${SLACKPKGDIR}/x/libvdpau-*.txz
+fi
+
 if [ "${INCXCBUTIL}" == "Y" ]; then
   ln -s ${SLACKPKGDIR}/x/xcb-util-?.?.?-*.txz || exit 1
 # ln -s ${SLACKPKGDIR}/x//xcb-util-image-0.4.0-x86_64-2.txz
@@ -125,21 +133,25 @@ if [ "${INCXCBUTIL}" == "Y" ]; then
 # ln -s ${SLACKPKGDIR}/x/xcb-util-cursor-0.1.3-x86_64-1.txz
 fi
 
-if [ "${INCXCOMPOSITE}" == "Y" ]; then
+if [ "${INCLIBXCOMPOSITE}" == "Y" ]; then
   ln -s ${SLACKPKGDIR}/x/libXcomposite-*.txz
 fi
 
-if [ "${INCXVMC}" == "Y" ]; then
+if [ "${INCLIBXVMC}" == "Y" ]; then
   ln -s ${SLACKPKGDIR}/x/libXvMC-*.txz
 fi
 
-if [ "${INCXF86DGA}" == "Y" ]; then
+if [ "${INCLIBXXF86DGA}" == "Y" ]; then
   ln -s ${SLACKPKGDIR}/x/libXxf86dga-*.txz
-  ln -s ${SLACKPKGDIR}/x/xf86dga-*.txz
+#  ln -s ${SLACKPKGDIR}/x/xf86dga-*.txz
 fi
 
-if [ "${INCXF86MISC}" == "Y" ]; then
+if [ "${INCLIBXXF86MISC}" == "Y" ]; then
   ln -s ${SLACKPKGDIR}/x/libXxf86misc-*.txz
+fi
+
+if [ "${INCLIBXSCRNSAVER}" == "Y" ]; then
+  ln -s ${SLACKPKGDIR}/x/libXScrnSaver-*.txz
 fi
 
 if [ "${INCMAKEDEPEND}" == "Y" ]; then

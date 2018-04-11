@@ -1,3 +1,3 @@
 if [ "${INCMESA}" == "Y" ]; then
-  INCXVMC="Y"
+  INCLIBXVMC="Y"
 fi
