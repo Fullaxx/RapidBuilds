@@ -215,6 +215,11 @@ if [ "${INCTONELIB}" == "Y" ]; then
   ln -s ${SLACKPKGDIR}/l/t1lib-*.txz
 fi
 
+if [ "${INCLIBCROCO}" == "Y" ]; then
+# gettext,librsvg needs libcroco
+  ln -s ${SLACKPKGDIR}/l/libcroco-*.txz
+fi
+
 if [ "${INCEXPAT}" == "Y" ]; then
   ln -s ${SLACKPKGDIR}/l/expat-*.txz
 fi
