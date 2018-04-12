@@ -144,6 +144,11 @@ if [ "${INCLIBPROXY}" == "Y" ]; then
   ln -s ${SLACKPKGDIR}/l/libproxy-*.txz
 fi
 
+if [ "${INCNEON}" == "Y" ]; then
+# audactous needs neon
+  ln -s ${SLACKPKGDIR}/l/neon-*.txz
+fi
+
 if [ "${INCJSONEEIGHTYFIVE}" == "Y" ]; then
   ln -s ${SLACKPKGDIR}/l/js185-*.txz
 fi
@@ -261,4 +266,9 @@ fi
 if [ "${INCLIBSSHONE}" == "Y" ]; then
 # ffmpeg needs libssh
   ln -s ${SLACKPKGDIR}/l/libssh-*.txz
+fi
+
+if [ "${INCGLIBONE}" == "Y" ]; then
+# xmms needs glib
+  ln -s ${SLACKPKGDIR}/l/glib-1.2.10-*.txz || exit 1
 fi

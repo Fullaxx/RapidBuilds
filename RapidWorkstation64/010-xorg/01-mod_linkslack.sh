@@ -163,6 +163,11 @@ if [ "${INCXCBUTIL}" == "Y" ]; then
 # ln -s ${SLACKPKGDIR}/x/xcb-util-cursor-0.1.3-x86_64-1.txz
 fi
 
+if [ "${INCLIBXAW3DXFT}" == "Y" ]; then
+#  ln -s ${SLACKPKGDIR}/x/libXaw3d-*.txz
+  ln -s ${SLACKPKGDIR}/x/libXaw3dXft-*.txz
+fi
+
 if [ "${INCLIBXCOMPOSITE}" == "Y" ]; then
   ln -s ${SLACKPKGDIR}/x/libXcomposite-*.txz
 fi

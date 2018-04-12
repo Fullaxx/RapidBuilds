@@ -1,3 +1,5 @@
-if [ "${INCNOEN}" == "Y" ]; then
+if [ "${INCNEON}" == "Y" ]; then
+  INCEXPAT="Y"
   INCLIBPROXY="Y"
+  INCJSONEEIGHTYFIVE="Y"
 fi
