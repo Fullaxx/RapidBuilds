@@ -1,13 +1,8 @@
 # 006-devel options
 if [ "${INCMOD006DEVEL}" == "Y" ]; then
-  INCLIBCROCO="Y"
-
-  INCBC="Y"
-  INCRPM="Y"
-  INCVIM="Y"
-
   INCAUTOCONF="Y"
   INCAUTOMAKE="Y"
+  INCBC="Y"
   INCBINUTILS="Y"
   INCBISON="Y"
   INCCMAKE="Y"
@@ -31,7 +26,9 @@ if [ "${INCMOD006DEVEL}" == "Y" ]; then
   INCPATCHELF="Y"
   INCPKGCONFIG="Y"
   INCPMAKE="N"
+  INCRPM="Y"
   INCSTRACE="Y"
   INCSUBVERSION="N"
+  INCVIM="Y"
   INCYASM="Y"
 fi
