@@ -1,0 +1,7 @@
+if [ "${INCPULSE}" == "Y" ]; then
+  INCALSA="Y"
+# SOFT INCGCONF="Y"
+  INCLIBSNDFILE="Y"
+  INCORC="Y"
+  INCSPEEXDSP="Y"
+fi

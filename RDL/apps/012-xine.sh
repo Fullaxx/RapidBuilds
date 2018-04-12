@@ -1,0 +1,9 @@
+if [ "${INCXINE}" == "Y" ]; then
+# INCX264="Y"
+# INCX265="Y"
+  INCFFMPEG="Y"
+  INCLIBMNG="Y"
+  INCLIBVPX="Y"
+  INCIMAGEMAGICK="Y"
+# SOFT SAMBA
+fi

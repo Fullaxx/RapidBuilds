@@ -1,0 +1,9 @@
+if [ "${INCLIBRSVG}" == "Y" ]; then
+  INCCAIRO="Y"
+  INCEXPAT="Y"
+  INCFRIBIDI="Y"
+  INCGDK="Y"
+  INCLIBCROCO="Y"
+  INCMESA="Y"
+  INCPANGO="Y"
+fi

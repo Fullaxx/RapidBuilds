@@ -1,0 +1,38 @@
+if [ "${INCXFCE}" == "Y" ]; then
+  INCXDESKTOPENVIRONMENT="Y"
+
+  INCADWAITAICONTHEME="Y"
+  INCDBUSGLIB="Y"
+  INCGLADETHREE="Y"
+  INCGTKTWO="Y"
+  INCGTKTHREE="Y"
+  INCHICOLORICONTHEME="Y"
+  INCLIBEXIF="Y"
+  INCLIBNOTIFY="Y"
+  INCLIBPOLKIT="Y"
+# xfce4-panel needs libwnck
+  INCLIBWNCK="Y"
+  INCLIBXKLAVIER="Y"
+  INCLIBXRES="Y"
+  INCSTARTUPNOTIFICATION="Y"
+# xfce4-terminal needs vte
+  INCVTE="Y"
+  INCXCBUTIL="Y"
+fi
+
+if [ "${INCXFCETUMBLER}" == "Y" ]; then
+  INCGSTREAMER="Y"
+  INCPOPPLER="Y"
+fi
+
+if [ "${INCXFCEPOWERMANAGER}" == "Y" ]; then
+  INCUPOWER="Y"
+fi
+
+if [ "${INCXFCESCREENSHOOTER}" == "Y" ]; then
+  INCLIBSOUP="Y"
+fi
+
+if [ "${INCXFCESETTINGS}" == "Y" ]; then
+  INCUPOWER="Y"
+fi

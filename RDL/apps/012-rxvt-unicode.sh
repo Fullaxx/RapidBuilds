@@ -1,0 +1,5 @@
+if [ "${INCRXVTUNICODE}" == "Y" ]; then
+  INCEXPAT="Y"
+  INCGDK="Y"
+  INCSTARTUPNOTIFICATION="Y"
+fi

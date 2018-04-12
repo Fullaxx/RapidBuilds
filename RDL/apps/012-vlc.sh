@@ -1,0 +1,8 @@
+if [ "${INCVLC}" == "Y" ]; then
+# INCX264="Y"
+# INCX265="Y"
+  INCFFMPEG="Y"
+  INCLIBRSVG="Y"
+  INCSVGALIB="Y"
+# SOFT SAMBA
+fi

@@ -1,0 +1,4 @@
+if [ "${INCENLIGHTENMENT}" == "Y" ]; then
+  INCXDESKTOPENVIRONMENT="Y"
+  INCFRIBIDI="Y"
+fi

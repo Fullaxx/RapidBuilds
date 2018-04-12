@@ -1,0 +1,4 @@
+if [ "${INCFLUXBOX}" == "Y" ]; then
+  INCXDESKTOPENVIRONMENT="Y"
+  INCFRIBIDI="Y"
+fi

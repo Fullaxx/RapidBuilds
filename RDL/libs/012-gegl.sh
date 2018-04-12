@@ -1,0 +1,7 @@
+if [ "${INCGEGL}" == "Y" ]; then
+# SOFT INCFFMPEG="Y"
+  INCILMBASE="Y"
+  INCLIBRSVG="Y"
+  INCOPENEXR="Y"
+  INCSDL="Y"
+fi
