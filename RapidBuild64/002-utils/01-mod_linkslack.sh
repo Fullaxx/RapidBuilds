@@ -61,6 +61,10 @@ if [ "${INCLRZIP}" == "Y" ]; then
   ln -s ${SLACKPKGDIR}/a/lrzip-*.txz
 fi
 
+if [ "${INCLZIP}" == "Y" ]; then
+  ln -s ${SLACKPKGDIR}/a/lzip-*.txz
+fi
+
 if [ "${INCMCELOG}" == "Y" ]; then
   ln -s ${SLACKPKGDIR}/a/mcelog-*.txz
 fi
