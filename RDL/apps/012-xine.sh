@@ -5,5 +5,5 @@ if [ "${INCXINE}" == "Y" ]; then
   INCLIBMNG="Y"
   INCLIBVPX="Y"
   INCIMAGEMAGICK="Y"
-# SOFT SAMBA
+  INCSAMBALIBS="Y"
 fi
