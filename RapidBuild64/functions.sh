@@ -11,6 +11,19 @@ kernelcheck()
   fi
 }
 
+shellcheck()
+{
+  if [ -z "${RLSHELL}" ]; then
+    echo "RLSHELL not defined in spec.sh!"
+    exit 1
+  fi
+
+  if [ ! -f ${RLSHELL} ]; then
+    echo "${RLSHELL} not found!"
+    exit 1
+  fi
+}
+
 rootcheck()
 {
   if [ `id -u` != "0" ]; then
@@ -117,6 +130,7 @@ loadrdlapps()
 loadconfig()
 {
   kernelcheck
+  shellcheck
   rapidbasecheck
   rapiddeplogiccheck
   rootcheck
