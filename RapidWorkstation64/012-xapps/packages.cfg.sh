@@ -26,5 +26,6 @@ if [ "${INCMOD012XAPPS}" == "Y" ]; then
   INCXLOCK="N"
   INCXMMS="N"
   INCXPAINT="N"
+  INCXPDF="N"
   INCTIGERVNC="N"
 fi

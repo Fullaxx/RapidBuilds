@@ -102,6 +102,10 @@ if [ "${INCXPAINT}" == "Y" ]; then
   ln -s ${SLACKPKGDIR}/xap/xpaint-*.txz
 fi
 
+if [ "${INCXPDF}" == "Y" ]; then
+  ln -s ${SLACKPKGDIR}/xap/xpdf-*.txz
+fi
+
 if [ "${INCTIGERVNC}" == "Y" ]; then
   linkmodule ${SLACKEXTRA}/tigervnc/tigervnc-*.txz
 fi
