@@ -94,6 +94,10 @@ if [ "${INCXF86VIDEOINTEL}" == "Y" ]; then
   ln -s ${SLACKPKGDIR}/x/intel-vaapi-driver-*.txz
 fi
 
+if [ "${INCINTELGPUTOOLS}" == "Y" ]; then
+  ln -s ${SLACKPKGDIR}/x/intel-gpu-tools-*.txz
+fi
+
 if [ "${INCXF86VIDEOMGA}" == "Y" ]; then
   ln -s ${SLACKPKGDIR}/x/xf86-video-mga-*.txz
 fi

@@ -272,3 +272,8 @@ if [ "${INCGLIBONE}" == "Y" ]; then
 # xmms needs glib
   ln -s ${SLACKPKGDIR}/l/glib-1.2.10-*.txz || exit 1
 fi
+
+if [ "${INCGSL}" == "Y" ]; then
+# intel-gpu-tools needs gsl, does anything else need it?
+  ln -s ${SLACKPKGDIR}/l/gsl-*.txz
+fi
