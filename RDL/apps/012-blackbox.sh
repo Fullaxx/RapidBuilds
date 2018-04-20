@@ -1,0 +1,4 @@
+if [ "${INCBLACKBOX}" == "Y" ]; then
+  INCXDESKTOPENVIRONMENT="Y"
+#  INCFRIBIDI="Y"
+fi

@@ -6,6 +6,10 @@ source ./module_spec.sh
 rm -f *.txz *.xzm
 
 ### Desktop Environments ##############
+if [ "${INCBLACKBOX}" == "Y" ]; then
+  ln -s ${SLACKPKGDIR}/xap/blackbox-*.txz
+fi
+
 if [ "${INCFLUXBOX}" == "Y" ]; then
   ln -s ${SLACKPKGDIR}/xap/fluxbox-*.txz
 fi

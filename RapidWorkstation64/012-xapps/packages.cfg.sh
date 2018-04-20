@@ -1,14 +1,19 @@
 # 012-xapps options
 if [ "${INCMOD012XAPPS}" == "Y" ]; then
 # Desktop ENV
+  INCBLACKBOX="N"
   INCFLUXBOX="Y"
   INCXFCE="N"
   INCXFCETUMBLER="N"
   INCXFCEPOWERMANAGER="N"
   INCXFCESETTINGS="N"
 
+# Set a default DE, if you desire
+  DEFAULTDE="fluxbox"
+
 # Apps
   INCAUDACIOUS="N"
+  INCGFTP="N"
   INCGIMP="N"
   INCGKRELLM="N"
   INCGPARTED="N"
