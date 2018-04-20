@@ -50,6 +50,10 @@ if [ "${INCAUDACIOUS}" == "Y" ]; then
   ln -s ${SLACKPKGDIR}/xap/audacious-plugins-*.txz
 fi
 
+if [ "${INCGFTP}" == "Y" ]; then
+  ln -s ${SLACKPKGDIR}/xap/gftp-*.txz
+fi
+
 if [ "${INCGIMP}" == "Y" ]; then
   ln -s ${SLACKPKGDIR}/xap/gimp-*.txz
 fi
