@@ -302,9 +302,6 @@ ln -s ${SLACKPKGDIR}/ap/cdrtools-*.txz
 ln -s ${SLACKPKGDIR}/ap/sqlite-*.txz
 ln -s ${SLACKPKGDIR}/ap/sudo-*.txz
 
-# I forgot why this is here
-ln -s ${SLACKPKGDIR}/d/libtool-*.txz
-
 ln -s ${SLACKPKGDIR}/n/curl-*.txz
 ln -s ${SLACKPKGDIR}/n/rsync-*.txz
 ln -s ${SLACKPKGDIR}/n/wget-*.txz

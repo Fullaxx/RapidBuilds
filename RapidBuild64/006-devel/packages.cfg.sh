@@ -16,6 +16,7 @@ if [ "${INCMOD006DEVEL}" == "Y" ]; then
   INCGIT="Y"
   INCGUILE="Y"
   INCINTLTOOL="Y"
+  INCLIBTOOL="Y"
   INCLLVM="Y"
   INCM4="Y"
   INCMAKE="Y"

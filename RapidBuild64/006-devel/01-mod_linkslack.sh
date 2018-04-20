@@ -76,6 +76,10 @@ if [ "${INCINTLTOOL}" == "Y" ]; then
   ln -s ${SLACKPKGDIR}/d/intltool-*.txz
 fi
 
+if [ "${INCLIBTOOL}" == "Y" ]; then
+  ln -s ${SLACKPKGDIR}/d/libtool-*.txz
+fi
+
 if [ "${INCLLVM}" == "Y" ]; then
   ln -s ${SLACKPKGDIR}/d/llvm-*.txz
 fi
