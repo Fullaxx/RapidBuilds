@@ -90,6 +90,11 @@ if [ "${INCRXVTUNICODE}" == "Y" ]; then
   ln -s ${SLACKPKGDIR}/xap/rxvt-unicode-*.txz
 fi
 
+if [ "${INCXINE}" == "Y" ]; then
+  ln -s ${SLACKPKGDIR}/xap/xine-ui-*.txz
+  ln -s ${SLACKPKGDIR}/xap/xine-lib-*.txz
+fi
+
 if [ "${INCXLOCK}" == "Y" ]; then
   ln -s ${SLACKPKGDIR}/xap/xlockmore-*.txz
 fi
@@ -399,7 +404,7 @@ if [ "${INCOPUS}" == "Y" ]; then
 fi
 
 if [ "${INCOPENJPEG}" == "Y" ]; then
-# Evince, ffmpeg, vlc, xine
+# Evince, ffmpeg, vlc
   ln -s ${SLACKPKGDIR}/l/openjpeg-*.txz
 fi
 
