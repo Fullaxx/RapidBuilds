@@ -16,11 +16,11 @@ RAPIDBUILDSDIR="/opt/RL/RapidBuilds"
 RAPIDSHELLSDIR="/opt/RL/RapidShells"
 RAPIDKERNELSDIR="/opt/RL/RapidKernel"
 PACKAGESDIR="/opt/RL/packages"
+ISOOUTPUTDIR="/opt/RL/isos/"
 
 PROJECTBASE="${RAPIDBUILDSDIR}/RapidFileserver64"
 RAPIDDEPLOGIC="${RAPIDBUILDSDIR}/RDL"
 RLSHELL="${RAPIDSHELLSDIR}/RapidFileserver-sr09.tar"
-ISOOUTPUTDIR="/opt/RL/isos/"
 
 if [ "$ARCH" == "x86_64" ]; then
   SLACKPKGDIR="${PACKAGESDIR}/slackware/Slack64-${SLACKPKGVERS}/slackware64"
