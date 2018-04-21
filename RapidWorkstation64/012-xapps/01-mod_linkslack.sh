@@ -482,7 +482,11 @@ if [ "${INCWAVPACK}" == "Y" ]; then
 fi
 ### Libraries #########################
 
+# IS THIS GONE NOW??
 if [ "${INCMOZILLAFIREFOX}" == "Y" -a "${INCMPLAYER}" == "Y" ]; then
   linkmodule ${SLACKEXTRA}/mplayerplug-in/mplayerplug-in-*.txz
 fi
 
+if [ "${INCCONSOLEKITTWO}" == "Y" ]; then
+  ln -s ${SLACKPKGDIR}/l/ConsoleKit2-*.txz
+fi

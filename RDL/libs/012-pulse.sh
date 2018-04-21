@@ -1,5 +1,6 @@
 if [ "${INCPULSE}" == "Y" ]; then
   INCALSA="Y"
+  INCCONSOLEKITTWO="Y"
 # SOFT INCGCONF="Y"
   INCLIBSNDFILE="Y"
   INCORC="Y"
