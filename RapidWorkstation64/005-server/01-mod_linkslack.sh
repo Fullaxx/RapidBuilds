@@ -7,7 +7,6 @@ rm -f *.txz *.xzm
 
 if [ "${INCLXC}" == "Y" ]; then
   ln -s ${SLACKPKGDIR}/ap/lxc-*.txz
-  ln -s ${SLACKPKGDIR}/ap/cgmanager-*.txz
   ln -s ${SLACKPKGDIR}/a/libcgroup-*.txz
 fi
 

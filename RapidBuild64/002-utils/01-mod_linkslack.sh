@@ -13,6 +13,10 @@ if [ "${INCBTRFSPROGS}" == "Y" ]; then
   ln -s ${SLACKPKGDIR}/a/btrfs-progs-*.txz
 fi
 
+if [ "${INCCGMANAGER}" == "Y" ]; then
+  ln -s ${SLACKPKGDIR}/ap/cgmanager-*.txz
+fi
+
 if [ "${INCCPIO}" == "Y" ]; then
   ln -s ${SLACKPKGDIR}/a/cpio-*.txz
 fi

@@ -277,3 +277,7 @@ if [ "${INCGSL}" == "Y" ]; then
 # intel-gpu-tools needs gsl, does anything else need it?
   ln -s ${SLACKPKGDIR}/l/gsl-*.txz
 fi
+
+if [ "${INCCONSOLEKITTWO}" == "Y" ]; then
+  ln -s ${SLACKPKGDIR}/l/ConsoleKit2-*.txz
+fi
