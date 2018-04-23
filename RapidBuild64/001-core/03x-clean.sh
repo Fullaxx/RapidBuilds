@@ -3,6 +3,17 @@
 source ../spec.sh
 source ./module_spec.sh
 
+# Clean up dbus and grub
+if [ "${INCMOD010XORG}" != "Y" ]; then
+  rm ${DIR}/usr/bin/dbus-launch
+  rm ${DIR}/usr/bin/grub-mkfont
+fi
+
+# Clean up glibc
+if [ "${INCGD}" != "Y" ]; then
+  rm ${DIR}/usr/bin/memusagestat
+fi
+
 # What other libraries from aaa_elflibs-*.txz can we remove?
 rm -f ${DIR}/usr/$LIBDIR/libcurl.*
 rm -f ${DIR}/usr/$LIBDIR/libasound.*
@@ -21,6 +32,3 @@ if [ -d ${DIR}/mnt/cdrecorder ]; then rmdir ${DIR}/mnt/cdrecorder; fi
 
 if [ -e ${DIR}/etc/rc.d/rc.S.orig ]; then rm ${DIR}/etc/rc.d/rc.S.orig; fi
 if [ -e ${DIR}/etc/rc.d/rc.M.orig ]; then rm ${DIR}/etc/rc.d/rc.M.orig; fi
-
-# This will be unnecessary soon
-rm -rf ${DIR}/etc/rc.d/old ${DIR}/usr/bin/old

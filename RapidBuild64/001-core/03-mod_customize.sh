@@ -26,14 +26,3 @@ sed -e 's/# SHA_CRYPT_MAX_ROUNDS 5000/SHA_CRYPT_MAX_ROUNDS 999999/' -i ${DIR}/et
 
 sed -e 's/export LANG=en_US.UTF-8/#export LANG=en_US.UTF-8/g' -i ${DIR}/etc/profile.d/lang.sh
 sed -e 's/#export LANG=C/export LANG=C/g' -i ${DIR}/etc/profile.d/lang.sh
-
-# Clean up dbus and grub
-if [ "${INCMOD010XORG}" != "Y" ]; then
-  rm -f ${DIR}/usr/bin/dbus-launch
-  rm -f ${DIR}/usr/bin/grub-mkfont
-fi
-
-# Clean up glibc
-if [ "${INCGD}" != "Y" ]; then
-  rm -f ${DIR}/usr/bin/memusagestat
-fi
