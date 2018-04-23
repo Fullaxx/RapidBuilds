@@ -10,6 +10,10 @@ if [ "${INCBC}" == "Y" ]; then
   ln -s ${SLACKPKGDIR}/ap/bc-*.txz
 fi
 
+if [ "${INCLINUXDOCTOOLS}" == "Y" ]; then
+  ln -s ${SLACKPKGDIR}/ap/linuxdoc-tools-*.txz
+fi
+
 if [ "${INCRPM}" == "Y" ]; then
   ln -s ${SLACKPKGDIR}/ap/rpm-*.txz
   ln -s ${SLACKPKGDIR}/a/rpm2tgz-*.txz

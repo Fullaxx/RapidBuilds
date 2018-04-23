@@ -1,13 +1,20 @@
 # 006-devel options
 if [ "${INCMOD006DEVEL}" == "Y" ]; then
+# ap family of packages
+  INCBC="Y"
+  INCLINUXDOCTOOLS="N"
+  INCRPM="Y"
+  INCVIM="Y"
+
+# d family of packages
   INCAUTOCONF="Y"
   INCAUTOMAKE="Y"
-  INCBC="Y"
   INCBINUTILS="Y"
   INCBISON="Y"
   INCCMAKE="Y"
   INCCVS="N"
-  INCEXPAT="Y" #009
+# expat found in 009-xmodlibs
+  INCEXPAT="Y"
   INCFLEX="Y"
   INCGCC="Y"
   INCGCCGPLUSPLUS="Y"
@@ -27,9 +34,7 @@ if [ "${INCMOD006DEVEL}" == "Y" ]; then
   INCPATCHELF="Y"
   INCPKGCONFIG="Y"
   INCPMAKE="N"
-  INCRPM="Y"
   INCSTRACE="Y"
   INCSUBVERSION="N"
-  INCVIM="Y"
   INCYASM="Y"
 fi
