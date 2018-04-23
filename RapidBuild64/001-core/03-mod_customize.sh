@@ -23,7 +23,6 @@ sed -e 's#    /usr/sbin/acpid#    sleep 3; /usr/sbin/acpid#' -i ${DIR}/etc/rc.d/
 sed -e 's/ENCRYPT_METHOD SHA256/ENCRYPT_METHOD SHA512/' -i ${DIR}/etc/login.defs
 sed -e 's/# SHA_CRYPT_MIN_ROUNDS 5000/SHA_CRYPT_MIN_ROUNDS 999999/' -i ${DIR}/etc/login.defs
 sed -e 's/# SHA_CRYPT_MAX_ROUNDS 5000/SHA_CRYPT_MAX_ROUNDS 999999/' -i ${DIR}/etc/login.defs
-sed -e 's#\\u@\\h:\\w#[\\u@\\h (\\w)]#' -i ${DIR}/etc/profile
 
 sed -e 's/export LANG=en_US.UTF-8/#export LANG=en_US.UTF-8/g' -i ${DIR}/etc/profile.d/lang.sh
 sed -e 's/#export LANG=C/export LANG=C/g' -i ${DIR}/etc/profile.d/lang.sh
