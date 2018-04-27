@@ -1,0 +1,1 @@
+../basis/007-wireless/02r-rootcopy.sh

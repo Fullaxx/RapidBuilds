@@ -1,0 +1,1 @@
+../basis/010-xorg/04-mod_locale.sh

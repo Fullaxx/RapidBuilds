@@ -1,0 +1,1 @@
+../basis/006-devel/08-mod_package.sh

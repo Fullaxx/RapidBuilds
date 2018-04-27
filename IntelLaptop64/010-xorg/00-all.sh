@@ -1,0 +1,1 @@
+../basis/010-xorg/00-all.sh
