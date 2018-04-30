@@ -1,0 +1,5 @@
+if [ "${INCGEANY}" == "Y" ]; then
+  INCGTKTWO="Y"
+  INCLIBPNG="Y"
+  INCLIBPTHREADSTUBS="Y"
+fi

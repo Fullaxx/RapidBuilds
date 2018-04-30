@@ -353,6 +353,14 @@ if [ "${INCLIBOGG}" == "Y" ]; then
   ln -s ${SLACKPKGDIR}/l/libogg-*.txz
 fi
 
+if [ "${INCLIBPNG}" == "Y" ]; then
+  ln -s ${SLACKPKGDIR}/l/libpng-*.txz
+fi
+
+if [ "${INCLIBPTHREADSTUBS}" == "Y" ]; then
+  ln -s ${SLACKPKGDIR}/x/libpthread-stubs-*.txz
+fi
+
 if [ "${INCLIBRAW}" == "Y" ]; then
 # imagemagick needs libraw
   ln -s ${SLACKPKGDIR}/l/LibRaw-*.txz
