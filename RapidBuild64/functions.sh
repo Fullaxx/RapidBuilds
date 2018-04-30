@@ -1,3 +1,16 @@
+slackwarecheck()
+{
+  if [ -z "${SLACKPKGDIR}" ]; then
+    echo "SLACKPKGDIR not defined in spec.sh!"
+    exit 1
+  fi
+
+  if [ ! -d ${SLACKPKGDIR} ]; then
+    echo "${SLACKPKGDIR} not found!"
+    exit 1
+  fi
+}
+
 kernelcheck()
 {
   if [ -z "${KERNELPKGDIR}" ]; then
@@ -129,6 +142,7 @@ loadrdlapps()
 
 loadconfig()
 {
+  slackwarecheck
   kernelcheck
   shellcheck
   rapidbasecheck
