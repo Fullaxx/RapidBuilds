@@ -495,6 +495,6 @@ fi
 ### Libraries #########################
 
 # IS THIS GONE NOW??
-if [ "${INCMOZILLAFIREFOX}" == "Y" -a "${INCMPLAYER}" == "Y" ]; then
-  linkmodule ${SLACKEXTRA}/mplayerplug-in/mplayerplug-in-*.txz
-fi
+#if [ "${INCMOZILLAFIREFOX}" == "Y" -a "${INCMPLAYER}" == "Y" ]; then
+#  linkmodule ${SLACKEXTRA}/mplayerplug-in/mplayerplug-in-*.txz
+#fi
