@@ -281,3 +281,11 @@ fi
 if [ "${INCCONSOLEKITTWO}" == "Y" ]; then
   ln -s ${SLACKPKGDIR}/l/ConsoleKit2-*.txz
 fi
+
+if [ "${INCJSONC}" == "Y" ]; then
+  ln -s ${SLACKPKGDIR}/l/json-c-*.txz
+fi
+
+if [ "${INCJSONGLIB}" == "Y" ]; then
+  ln -s ${SLACKPKGDIR}/l/json-glib-*.txz
+fi

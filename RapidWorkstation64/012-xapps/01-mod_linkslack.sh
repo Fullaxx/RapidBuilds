@@ -204,6 +204,10 @@ if [ "${INCFLAC}" == "Y" ]; then
   ln -s ${SLACKPKGDIR}/ap/flac-*.txz
 fi
 
+if [ "${INCEXIVTWO}" == "Y" ]; then
+  ln -s ${SLACKPKGDIR}/l/exiv2-*.txz
+fi
+
 if [ "${INCFFMPEG}" == "Y" ]; then
   ln -s ${SLACKPKGDIR}/l/ffmpeg-*.txz
 fi
@@ -232,6 +236,10 @@ fi
 
 if [ "${INCGEGL}" == "Y" ]; then
   ln -s ${SLACKPKGDIR}/l/gegl-*.txz
+fi
+
+if [ "${INCGEXIVTWO}" == "Y" ]; then
+  ln -s ${SLACKPKGDIR}/l/gexiv2-*.txz
 fi
 
 if [ "${INCGIFLIB}" == "Y" ]; then
@@ -396,8 +404,7 @@ if [ "${INCLIBWNCK}" == "Y" ]; then
 fi
 
 if [ "${INCLIBWMF}" == "Y" ]; then
-  ln -s ${SLACKPKGDIR}/l/libwmf-?.*.txz || exit 1
-# ln -s ${SLACKPKGDIR}/l/libwmf-docs-*.txz
+  ln -s ${SLACKPKGDIR}/l/libwmf-*.txz
 fi
 
 if [ "${INCOPENCL}" == "Y" ]; then
@@ -491,6 +498,11 @@ fi
 
 if [ "${INCWAVPACK}" == "Y" ]; then
   ln -s ${SLACKPKGDIR}/l/wavpack-*.txz
+fi
+
+if [ "${INCLIBMYPAINT}" == "Y" ]; then
+  ln -s ${SLACKPKGDIR}/x/libmypaint-*.txz
+  ln -s ${SLACKPKGDIR}/x/mypaint-brushes-*.txz
 fi
 ### Libraries #########################
 
