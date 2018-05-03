@@ -7,6 +7,10 @@ if [ "$#" == "0" ]; then
   exit 1
 fi
 
+if [ ! -f spec.sh ]; then
+  cd `dirname $0`
+fi
+
 if [ -r spec.sh ]; then
   source spec.sh
 else
@@ -14,10 +18,8 @@ else
   exit 1
 fi
 
-rootcheck
-
 if [ "$1" == "all" ]; then
-  ./rebuild.sh $PROJECTCATEGORIES && cd baseoutput && ./00-all.sh || exit 1
+  ./rebuild.sh ${PROJECTCATEGORIES} && cd baseoutput && ./00-all.sh || exit 1
   exit 0
 fi
 
