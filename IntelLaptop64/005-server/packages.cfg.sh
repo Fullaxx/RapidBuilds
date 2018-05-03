@@ -1,1 +1,13 @@
-../basis/005-server/packages.cfg.sh
+# 005-server options
+if [ "${INCMOD005SERVER}" == "Y" ]; then
+  INCLIBMICROHTTPD="Y"
+  INCLXC="N"
+  INCMARIADB="N"
+  INCPHP="N"
+  INCREDIS="Y"
+  INCSAMBA="Y"
+  INCNETSNMP="N"
+  INCAPACHEHTTPD="N"
+  INCPROFTPD="N"
+  INCVSFTPD="N"
+fi
