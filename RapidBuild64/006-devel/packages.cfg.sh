@@ -2,7 +2,7 @@
 if [ "${INCMOD006DEVEL}" == "Y" ]; then
 # ap family of packages
   INCBC="Y"
-  INCLINUXDOCTOOLS="N"
+  INCLINUXDOCTOOLS="Y"
   INCRPM="Y"
   INCVIM="Y"
 
