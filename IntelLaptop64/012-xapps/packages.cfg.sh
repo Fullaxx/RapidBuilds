@@ -13,6 +13,7 @@ if [ "${INCMOD012XAPPS}" == "Y" ]; then
 
 # Apps
   INCAUDACIOUS="Y"
+  INCBLUEFISH="Y"
   INCCHROME="Y"
   INCGEANY="Y"
   INCGFTP="N"

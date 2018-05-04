@@ -3,6 +3,10 @@
 source ../spec.sh
 source ./module_spec.sh
 
+if [ "${INCBLUEFISH}" == "Y" ]; then
+  linkmodule "${PACKAGESDIR}/bluefish/bluefish-1.0.7-${ARCH}-bksrc1.xzm"
+fi
+
 if [ "${INCCHROME}" == "Y" ]; then
   linkmodule "${PACKAGESDIR}/chrome/chrome-latest-${ARCH}.xzm"
 fi
