@@ -13,9 +13,6 @@ if [ "${INCMOD012XAPPS}" == "Y" ]; then
 
 # Apps
   INCAUDACIOUS="Y"
-  INCBLUEFISH="Y"
-  INCCHROME="Y"
-  INCGEANY="Y"
   INCGFTP="N"
   INCGIMP="Y"
   INCGKRELLM="Y"
@@ -32,6 +29,12 @@ if [ "${INCMOD012XAPPS}" == "Y" ]; then
   INCXMMS="N"
   INCXPAINT="Y"
   INCXPDF="N"
+
+# Custom Additions
+  INCBLUEFISH="Y"
+  INCCHROME="Y"
+  INCETERM="Y"
+  INCGEANY="Y"
   INCVERACRYPTGUI="Y"
   INCVIVALDI="Y"
 fi

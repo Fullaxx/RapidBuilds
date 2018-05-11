@@ -1,0 +1,5 @@
+if [ "${INCIMLIBTWO}" == "Y" ]; then
+  INCLIBPNG="Y"
+  INCGIFLIB="Y"
+  INCLIBJPEGTURBO="Y"
+fi

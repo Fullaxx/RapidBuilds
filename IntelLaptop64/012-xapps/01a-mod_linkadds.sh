@@ -11,6 +11,15 @@ if [ "${INCCHROME}" == "Y" ]; then
   linkmodule "${PACKAGESDIR}/chrome/chrome-latest-${ARCH}.xzm"
 fi
 
+if [ "${INCETERM}" == "Y" ]; then
+  linkmodule "${PACKAGESDIR}/Eterm/Eterm-0.9.6-x86_64-bksrc1.xzm"
+  linkmodule "${PACKAGESDIR}/Eterm/libast-0.7-x86_64-bksrc1.xzm"
+fi
+
+if [ "${INCIMLIBTWO}" == "Y" ]; then
+  linkmodule "${PACKAGESDIR}/Eterm/imlib2-1.5.1-x86_64-bksrc1.xzm"
+fi
+
 if [ "${INCVERACRYPTGUI}" == "Y" ]; then
   linkmodule "${PACKAGESDIR}/veracrypt/veracrypt-gui-latest-${ARCH}.xzm"
 fi
