@@ -2,6 +2,7 @@
 
 source ../spec.sh
 source ./module_spec.sh
+set -e
 
 if [ -d ${BDIR} ]; then rm -r ${BDIR}; fi
 mkdir -p ${BDIR}
@@ -22,15 +23,15 @@ mkdir ${DIR}
 
 for PKG in ../0[01]*/0[01]?a-doc.xzm; do
   echo "Exploding ${PKG} ..."
-  xzm2dir ${PKG} ${DIR} >/dev/null || exit 1
+  xzm2dir ${PKG} ${DIR} >/dev/null
 done
 for PKG in ../0[01]*/0[01]?a-gtkdocs.xzm; do
   echo "Exploding ${PKG} ..."
-  xzm2dir ${PKG} ${DIR} >/dev/null || exit 1
+  xzm2dir ${PKG} ${DIR} >/dev/null
 done
 for PKG in ../0[01]*/0[01]?a-info.xzm; do
   echo "Exploding ${PKG} ..."
-  xzm2dir ${PKG} ${DIR} >/dev/null || exit 1
+  xzm2dir ${PKG} ${DIR} >/dev/null
 done
 
 ####################################
@@ -41,7 +42,7 @@ mkdir ${DIR}
 
 for PKG in ../0[01]*/0[01]?a-man.xzm; do
   echo "Exploding ${PKG} ..."
-  xzm2dir ${PKG} ${DIR} >/dev/null || exit 1
+  xzm2dir ${PKG} ${DIR} >/dev/null
 done
 find ${DIR} -type f -exec chmod 0644 {} \;
 
@@ -54,10 +55,10 @@ rm -rf ${DIR}
 mkdir ${DIR}
 
 echo "Exploding 003-interp.xzm ..."
-xzm2dir 003-interp.xzm ${DIR} >/dev/null || exit 1
+xzm2dir 003-interp.xzm ${DIR} >/dev/null
 for PKG in ../0[01]*/0[01]?a-python.xzm; do
   echo "Exploding ${PKG} ..."
-  xzm2dir ${PKG} ${DIR} >/dev/null || exit 1
+  xzm2dir ${PKG} ${DIR} >/dev/null
 done
 
 fi
@@ -71,10 +72,10 @@ rm -rf ${DIR}
 mkdir ${DIR}
 
 echo "Exploding 006-devel.xzm ..."
-xzm2dir 006-devel.xzm ${DIR} >/dev/null || exit 1
+xzm2dir 006-devel.xzm ${DIR} >/dev/null
 for PKG in ../0[01]*/0[01]?a-inc.xzm; do
   echo "Exploding ${PKG} ..."
-  xzm2dir ${PKG} ${DIR} >/dev/null || exit 1
+  xzm2dir ${PKG} ${DIR} >/dev/null
 done
 
 fi
