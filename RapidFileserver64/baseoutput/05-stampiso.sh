@@ -1,1 +1,0 @@
-../basis/baseoutput/05-stampiso.sh
