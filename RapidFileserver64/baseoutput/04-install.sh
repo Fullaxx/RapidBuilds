@@ -1,0 +1,1 @@
+../basis/baseoutput/04-install.sh
