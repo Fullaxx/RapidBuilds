@@ -18,7 +18,7 @@ if [ "${INCPERL}" == "Y" ]; then
 fi
 
 if [ "${INCPYTHON}" == "Y" ]; then
-  ln -s ${SLACKPKGDIR}/d/python3-?.?.*-*-?.txz || exit 1
+  ln -s ${SLACKPKGDIR}/d/python3-3.?.*-*-?.txz || exit 1
   ln -s ${SLACKPKGDIR}/d/python-2.?.*-*-?.txz || exit 1
 fi
 
