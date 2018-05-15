@@ -11,23 +11,24 @@ if [ "$#" != "1" ]; then
 fi
 
 DISK="$1"
-#RLPART="$DISK$2"
+#RLPART="${DISK}$2"
 
-if `mount | grep -q $DISK` ; then
-  rl_disk_unmount.sh $DISK || exit -1
+if `mount | grep -q ${DISK}` ; then
+  rl_disk_unmount.sh ${DISK} || exit -1
 fi
 
 echo
-echo "Zapping $DISK..."
-sgdisk -Z $DISK 2>&1 | grep Zapping
+echo "Zapping ${DISK}..."
+sgdisk -Z ${DISK} 2>&1 | grep Zapping
 partprobe >/dev/null 2>&1
-dd if=/dev/zero of=$DISK count=100 2>/dev/null
+dd if=/dev/zero of=${DISK} count=100 2>/dev/null
 
 echo
 echo "Creating Partition (1)..."
-PARTMBSIZE="1024"
-parted -s "$DISK" mklabel msdos
-parted -a cylinder -s "$DISK" mkpart primary ext2 1 "$PARTMBSIZE"
+PARTMBSIZE="4096"
+parted -s "${DISK}" mklabel msdos
+parted -a cylinder -s "${DISK}" mkpart primary ext2 1 "${PARTMBSIZE}"
+parted "${DISK}" set 1 boot on
 
 echo
 echo "Creating Filesystems..."

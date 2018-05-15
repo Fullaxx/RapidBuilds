@@ -13,10 +13,9 @@ fi
 DISK="$1"
 MNTDIR="$2"
 
-if [ -d "$MNTDIR/boot" -a -d "$MNTDIR/slax" ]; then
-  grub-install --disk-module=biosdisk --target=i386-pc --root-directory="$MNTDIR" --no-floppy --recheck "$DISK"
-  # grub-install --root-directory="$MNTDIR" --no-floppy "$DISK"
+if [ -d "${MNTDIR}/boot" -a -d "${MNTDIR}/slax" ]; then
+  grub-install --disk-module=biosdisk --target=i386-pc --root-directory="${MNTDIR}" --no-floppy --recheck "${DISK}"
 else
-  echo "$MNTDIR/boot or $MNTDIR/slax is missing!"
+  echo "${MNTDIR}/boot or ${MNTDIR}/slax is missing!"
   exit 1
 fi
