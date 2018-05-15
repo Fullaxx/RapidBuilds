@@ -17,7 +17,7 @@ PATH=.:$(dirname $0):/usr/lib:$PATH
 
 TMPDIR=/tmp/txz2lzm$$
 
-installpkg -root $TMPDIR $1
+/sbin/installpkg -root $TMPDIR $1
 if [ $? != 0 ]; then echo "error installing package"; exit; fi
 
 # optimalization procedures, this doesn't hurt
