@@ -50,10 +50,6 @@ if [ "${INCAUDACIOUS}" == "Y" ]; then
   ln -s ${SLACKPKGDIR}/xap/audacious-plugins-*.txz
 fi
 
-if [ "${INCGEANY}" == "Y" ]; then
-  linkmodule "${PACKAGESDIR}/geany/geany-1.33-x86_64-bksrc1.xzm"
-fi
-
 if [ "${INCGFTP}" == "Y" ]; then
   ln -s ${SLACKPKGDIR}/xap/gftp-*.txz
 fi
