@@ -32,9 +32,6 @@ if [ "${INCMOD012XAPPS}" == "Y" ]; then
 
 # Custom Additions
   INCBLUEFISH="Y"
-  INCCHROME="Y"
   INCETERM="Y"
   INCGEANY="Y"
-  INCVERACRYPTGUI="Y"
-  INCVIVALDI="Y"
 fi
