@@ -9,5 +9,6 @@ if [ "${INCMOD003INTERP}" == "Y" ]; then
 # just about everything needs db48
   INCDB48="Y"
 
+  INCFTPSYNC="Y"
   INCPASTEBINIT="Y"
 fi

@@ -3,13 +3,14 @@ if [ "${INCMOD012XAPPS}" == "Y" ]; then
 # Desktop ENV
   INCBLACKBOX="N"
   INCFLUXBOX="Y"
+  INCOPENBOX="Y"
   INCXFCE="N"
   INCXFCETUMBLER="N"
   INCXFCEPOWERMANAGER="N"
   INCXFCESETTINGS="N"
 
 # Set a default DE, if you desire
-  DEFAULTDE="fluxbox"
+  DEFAULTDE="openbox"
 
 # Apps
   INCAUDACIOUS="Y"
@@ -34,4 +35,7 @@ if [ "${INCMOD012XAPPS}" == "Y" ]; then
   INCBLUEFISH="Y"
   INCETERM="Y"
   INCGEANY="Y"
+  INCHSETROOT="Y"
+  INCOBCONF="Y"
+  INCXFE="Y"
 fi
