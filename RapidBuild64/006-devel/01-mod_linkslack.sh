@@ -140,6 +140,10 @@ if [ "${INCYASM}" == "Y" ]; then
   ln -s ${SLACKPKGDIR}/d/yasm-*.txz
 fi
 
+if [ "${INCEMACS}" == "Y" ]; then
+  ln -s ${SLACKPKGDIR}/e/emacs-*.txz
+fi
+
 linkmodule "${KERNELPKGDIR}/kernel-crippledsrc.xzm"
 linkmodule "${KERNELPKGDIR}/kernel-headers.xzm"
 echo -n "Using Kernel: "; echo "${KERNVERS}"

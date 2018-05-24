@@ -37,4 +37,7 @@ if [ "${INCMOD006DEVEL}" == "Y" ]; then
   INCSTRACE="Y"
   INCSUBVERSION="N"
   INCYASM="Y"
+
+# e family of packages
+  INCEMACS="Y"
 fi
