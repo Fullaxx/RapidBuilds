@@ -1,13 +1,16 @@
 # 005-server options
 if [ "${INCMOD005SERVER}" == "Y" ]; then
-  INCLIBMICROHTTPD="Y"
   INCLXC="N"
   INCMARIADB="N"
   INCPHP="N"
-  INCREDIS="Y"
   INCSAMBA="Y"
   INCNETSNMP="N"
   INCAPACHEHTTPD="N"
   INCPROFTPD="N"
   INCVSFTPD="N"
+
+# Custom Additions
+  INCLIBMICROHTTPD="Y"
+  INCREDIS="Y"
+  INCZEROMQ="Y"
 fi
