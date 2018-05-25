@@ -72,5 +72,6 @@ if [ "${INCMOD002UTILS}" == "Y" ]; then
   INCVLAN="N"
 
   INCCALC="Y"
+  INCCURLFTPFS="Y"
   INCLOOPAESSETUP="Y"
 fi

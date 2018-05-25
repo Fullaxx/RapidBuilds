@@ -12,6 +12,10 @@ if [ "${INCETERM}" == "Y" ]; then
   linkmodule "${PACKAGESDIR}/Eterm/libast-0.7-${ARCH}-bksrc1.xzm"
 fi
 
+if [ "${INCFBPANEL}" == "Y" ]; then
+  linkmodule "${PACKAGESDIR}/fbpanel/fbpanel-6.1-${ARCH}-bksrc1.xzm"
+fi
+
 if [ "${INCGEANY}" == "Y" ]; then
   linkmodule "${PACKAGESDIR}/geany/geany-1.33-${ARCH}-bksrc1.xzm"
 fi
