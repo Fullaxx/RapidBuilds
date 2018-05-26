@@ -175,6 +175,10 @@ if [ "${INCPMUTILS}" == "Y" ]; then
   ln -s ${SLACKPKGDIR}/ap/pm-utils-*.txz
 fi
 
+if [ "${INCSCIM}" == "Y" ]; then
+  ln -s ${SLACKPKGDIR}/ap/sc-im-*.txz
+fi
+
 if [ "${INCSYSSTAT}" == "Y" ]; then
   ln -s ${SLACKPKGDIR}/ap/sysstat-*.txz
 fi

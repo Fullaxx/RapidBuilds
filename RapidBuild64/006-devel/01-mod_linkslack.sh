@@ -112,6 +112,10 @@ if [ "${INCOPENCLHEADERS}" == "Y" ]; then
   ln -s ${SLACKPKGDIR}/d/opencl-headers-*.txz
 fi
 
+if [ "${INCPARALLEL}" == "Y" ]; then
+  ln -s ${SLACKPKGDIR}/d/parallel-*.txz
+fi
+
 if [ "${INCPATCHELF}" == "Y" ]; then
   ln -s ${SLACKPKGDIR}/d/patchelf-*.txz
 fi

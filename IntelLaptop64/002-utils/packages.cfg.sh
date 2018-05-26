@@ -1,5 +1,6 @@
 # 002-utils options
 if [ "${INCMOD002UTILS}" == "Y" ]; then
+# a family of packages
   INCKERNELFIRMWARE="N"
   INCBTRFSPROGS="Y"
   INCCGMANAGER="N"
@@ -31,6 +32,7 @@ if [ "${INCMOD002UTILS}" == "Y" ]; then
   INCUSBMODESWITCH="Y"
   INCUSBUTILS="Y"
 
+# ap family of packages
   INCDCTHREEDD="N"
   INCDDRESCUE="N"
   INCDIFFUTILS="Y"
@@ -43,8 +45,10 @@ if [ "${INCMOD002UTILS}" == "Y" ]; then
   INCMPGONETWOTHREE="N"
   INCRZIP="N"
   INCPMUTILS="N"
+  INCSCIM="Y"
   INCSYSSTAT="Y"
 
+# n family of packages
   INCNETFILTER="Y"
   INCBRIDGEUTILS="Y"
   INCDNSMASQ="N"
@@ -71,6 +75,7 @@ if [ "${INCMOD002UTILS}" == "Y" ]; then
   INCTRACEROUTE="Y"
   INCVLAN="N"
 
+# Custom Additions
   INCCALC="Y"
   INCCURLFTPFS="Y"
   INCLOOPAESSETUP="Y"
