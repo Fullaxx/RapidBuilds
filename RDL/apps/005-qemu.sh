@@ -1,5 +1,10 @@
 if [ "${INCQEMU}" == "Y" ]; then
+  INCFRIBIDI="Y"
+  INCGTKTHREE="Y"
   INCLIBAIO="Y"
-  INCYAJL="Y"
   INCLIBJPEGTURBO="Y"
+  INCLIBPNG="Y"
+  INCSDLTWO="Y"
+  INCVTE="Y"
+# INCYAJL="Y"
 fi
