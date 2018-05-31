@@ -289,3 +289,7 @@ fi
 if [ "${INCJSONGLIB}" == "Y" ]; then
   ln -s ${SLACKPKGDIR}/l/json-glib-*.txz
 fi
+
+if [ "${INCLIBZIP}" == "Y" ]; then
+  ln -s ${SLACKPKGDIR}/l/libzip-*.txz
+fi
