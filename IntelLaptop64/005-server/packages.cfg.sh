@@ -11,6 +11,7 @@ if [ "${INCMOD005SERVER}" == "Y" ]; then
 
 # Custom Additions
   INCLIBMICROHTTPD="Y"
+  INCLIBVIRT="Y"
   INCREDIS="Y"
   INCZEROMQ="Y"
 fi
