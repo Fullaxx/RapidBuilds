@@ -19,6 +19,10 @@ if [ "${INCRPM}" == "Y" ]; then
   ln -s ${SLACKPKGDIR}/a/rpm2tgz-*.txz
 fi
 
+if [ "${INCTEXINFO}" == "Y" ]; then
+  ln -s ${SLACKPKGDIR}/ap/texinfo-*.txz
+fi
+
 if [ "${INCVIM}" == "Y" ]; then
   ln -s ${SLACKPKGDIR}/ap/vim-*.txz
 fi

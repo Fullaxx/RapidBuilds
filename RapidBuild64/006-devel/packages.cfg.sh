@@ -4,6 +4,7 @@ if [ "${INCMOD006DEVEL}" == "Y" ]; then
   INCBC="Y"
   INCLINUXDOCTOOLS="Y"
   INCRPM="Y"
+  INCTEXINFO="Y"
   INCVIM="Y"
 
 # d family of packages
