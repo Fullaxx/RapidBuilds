@@ -24,8 +24,9 @@ for PKG in *.txz; do
   tar xf ${PKG} -C ${DIR} || exit 1
 
   if [[ ${PKG} == glibc-zoneinfo-*.txz ]]; then
-    echo "${PKG}: Removing chroot command from glibc-zoneinfo install/doinst.sh ..."
-    sed -e 's@chroot . /bin/cp@cp@' -i ${DIR}/install/doinst.sh || exit 1
+    echo "${PKG}: Removing default timezone setting from glibc-zoneinfo install/doinst.sh ..."
+    # sed -e 's@chroot . /bin/cp@cp@' -i ${DIR}/install/doinst.sh || exit 1
+    patch ${DIR}/install/doinst.sh RLBFILES/patches/glibc-zoneinfo-install.diff || exit 1
   fi
 
   if [ -d ${DIR}/install ]; then
