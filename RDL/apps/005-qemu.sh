@@ -6,5 +6,4 @@ if [ "${INCQEMU}" == "Y" ]; then
   INCLIBPNG="Y"
   INCSDLTWO="Y"
   INCVTE="Y"
-# INCYAJL="Y"
 fi
