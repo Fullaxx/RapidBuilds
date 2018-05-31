@@ -11,6 +11,10 @@ if [ "${INCLIBVIRT}" == "Y" ]; then
   linkmodule "${PACKAGESDIR}/libvirt/libvirt-4.3.0-${ARCH}-bksrc1.xzm"
 fi
 
+if [ "${INCNOVNC}" == "Y" ]; then
+  linkmodule "${PACKAGESDIR}/noNVC/noVNC-20180531-noarch-bksrc1.xzm"
+fi
+
 if [ "${INCREDIS}" == "Y" ]; then
   linkmodule "${PACKAGESDIR}/redis/redis-4.0.9-${ARCH}-bksrc1.xzm"
   linkmodule "${PACKAGESDIR}/redis/webdis-latest-${ARCH}.xzm"
