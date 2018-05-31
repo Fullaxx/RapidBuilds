@@ -1,7 +1,7 @@
 # 002-utils options
 if [ "${INCMOD002UTILS}" == "Y" ]; then
 # a family of packages
-  INCKERNELFIRMWARE="N"
+  INCKERNELFIRMWARE="Y"
   INCBTRFSPROGS="Y"
   INCCGMANAGER="N"
   INCCPIO="Y"
