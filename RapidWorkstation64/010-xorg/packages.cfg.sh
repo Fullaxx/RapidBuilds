@@ -14,6 +14,9 @@ if [ "${INCMOD010XORG}" == "Y" ]; then
   INCXF86VIDEONOUVEAU="N"
   INCXF86VIDEOVMWARE="N"
 
+# What are these used for?
+  INCINTELGPUTOOLS="Y"
+
 # Simple X Apps
   INCMAKEDEPEND="N"
   INCMOTIF="N"
