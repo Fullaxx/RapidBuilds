@@ -11,6 +11,26 @@ if [ "${INCLIBVIRT}" == "Y" ]; then
   linkmodule "${PACKAGESDIR}/libvirt/libvirt-4.3.0-${ARCH}-bksrc1.xzm"
 fi
 
+if [ "${INCNODEZEROTEN}" == "Y" ]; then
+  linkmodule "${PACKAGESDIR}/node/node-v0.10.48-${ARCH}-bksrc1.xzm"
+fi
+
+if [ "${INCNODEZEROTWELVE}" == "Y" ]; then
+  linkmodule "${PACKAGESDIR}/node/node-v0.12.18-${ARCH}-bksrc1.xzm"
+fi
+
+if [ "${INCNODEFOUR}" == "Y" ]; then
+  linkmodule "${PACKAGESDIR}/node/node-v4.9.1-${ARCH}-bksrc1.xzm"
+fi
+
+if [ "${INCNODESIX}" == "Y" ]; then
+  linkmodule "${PACKAGESDIR}/node/node-v6.14.2-${ARCH}-bksrc1.xzm"
+fi
+
+if [ "${INCNODEEIGHT}" == "Y" ]; then
+  linkmodule "${PACKAGESDIR}/node/node-v8.11.2-${ARCH}-bksrc1.xzm"
+fi
+
 if [ "${INCNOVNC}" == "Y" ]; then
   linkmodule "${PACKAGESDIR}/noNVC/noVNC-20180531-noarch-bksrc1.xzm"
 fi
