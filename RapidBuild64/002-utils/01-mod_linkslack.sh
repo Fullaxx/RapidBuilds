@@ -179,6 +179,10 @@ if [ "${INCSCIM}" == "Y" ]; then
   ln -s ${SLACKPKGDIR}/ap/sc-im-*.txz
 fi
 
+if [ "${INCSLACKPKG}" == "Y" ]; then
+  ln -s ${SLACKPKGDIR}/ap/slackpkg-*.txz
+fi
+
 if [ "${INCSYSSTAT}" == "Y" ]; then
   ln -s ${SLACKPKGDIR}/ap/sysstat-*.txz
 fi
