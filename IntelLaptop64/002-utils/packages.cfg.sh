@@ -46,6 +46,7 @@ if [ "${INCMOD002UTILS}" == "Y" ]; then
   INCRZIP="N"
   INCPMUTILS="N"
   INCSCIM="Y"
+  INCSLACKPKG="N"
   INCSYSSTAT="Y"
 
 # n family of packages
