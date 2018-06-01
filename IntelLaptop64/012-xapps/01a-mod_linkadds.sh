@@ -7,6 +7,10 @@ if [ "${INCBLUEFISH}" == "Y" ]; then
   linkmodule "${PACKAGESDIR}/bluefish/bluefish-1.0.7-${ARCH}-bksrc1.xzm"
 fi
 
+if [ "${INCBLUEFISHTWO}" == "Y" ]; then
+  linkmodule "${PACKAGESDIR}/bluefish/bluefish-2.2.7-${ARCH}-bksrc1.xzm"
+fi
+
 if [ "${INCETERM}" == "Y" ]; then
   linkmodule "${PACKAGESDIR}/Eterm/Eterm-0.9.6-${ARCH}-bksrc1.xzm"
   linkmodule "${PACKAGESDIR}/Eterm/libast-0.7-${ARCH}-bksrc1.xzm"
