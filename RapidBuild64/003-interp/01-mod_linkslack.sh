@@ -26,7 +26,7 @@ if [ "${INCPYTHONPIP}" == "Y" ]; then
   ln -s ${SLACKPKGDIR}/l/python-pip-*.txz
 fi
 if [ "${INCPYTHONSETUPTOOLS}" == "Y" ]; then
-  ln -s ${SLACKPKGDIR}/l/python-setuptools-*.txz
+  ln -s ${SLACKPKGDIR}/d/python-setuptools-*.txz
 fi
 
 if [ "${INCPYCURL}" == "Y" ]; then

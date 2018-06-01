@@ -6,6 +6,8 @@ if [ "${INCMOD003INTERP}" == "Y" ]; then
   INCLUA="N"
   INCTCL="N"
 
+  INCPYTHONSETUPTOOLS="Y"
+
 # just about everything needs db48
   INCDB48="Y"
 fi
