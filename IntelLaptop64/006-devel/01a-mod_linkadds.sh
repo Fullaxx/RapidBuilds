@@ -3,6 +3,10 @@
 source ../spec.sh
 source ./module_spec.sh
 
+if [ "${INCASTYLE}" == "Y" ]; then
+  linkmodule "${PACKAGESDIR}/astyle/astyle-3.1-${ARCH}-bksrc1.xzm"
+fi
+
 if [ "${INCCGDB}" == "Y" ]; then
   linkmodule "${PACKAGESDIR}/cgdb/cgdb-0.7.0-${ARCH}-bksrc1.xzm"
 fi

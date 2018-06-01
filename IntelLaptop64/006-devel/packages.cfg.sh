@@ -44,6 +44,7 @@ if [ "${INCMOD006DEVEL}" == "Y" ]; then
   INCEMACS="Y"
 
 # Custom Additions
+  INCASTYLE="Y"
   INCCGDB="Y"
   INCVALGRIND="Y"
   INCVALKYRIE="N"
