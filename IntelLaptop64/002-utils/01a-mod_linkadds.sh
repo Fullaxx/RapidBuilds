@@ -7,6 +7,14 @@ if [ "${INCCALC}" == "Y" ]; then
   linkmodule "${PACKAGESDIR}/calc/calc-2.12.6.5-${ARCH}-bksrc1.xzm"
 fi
 
+if [ "${INCCOLORTAIL}" == "Y" ]; then
+  linkmodule "${PACKAGESDIR}/colortail/colortail-0.3.3-${ARCH}-bksrc1.xzm"
+fi
+
+if [ "${INCCORKSCREW}" == "Y" ]; then
+  linkmodule "${PACKAGESDIR}/corkscrew/corkscrew-2.0-${ARCH}-bksrc1.xzm"
+fi
+
 if [ "${INCCURLFTPFS}" == "Y" ]; then
   linkmodule "${PACKAGESDIR}/curlftpfs/curlftpfs-0.9.2-${ARCH}-bksrc1.xzm"
 fi
