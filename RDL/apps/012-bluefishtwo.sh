@@ -1,6 +1,6 @@
 if [ "${INCBLUEFISH}" == "Y" ]; then
   INCFRIBIDI="Y"
-  INCGTKTWO="Y"
+  INCGTKTHREE="Y"
   INCLIBPNG="Y"
   INCLIBXCOMPOSITE="Y"
 fi
