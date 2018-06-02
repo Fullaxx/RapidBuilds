@@ -1,4 +1,4 @@
-if [ "${INCBLUEFISH}" == "Y" ]; then
+if [ "${INCBLUEFISHTWO}" == "Y" ]; then
   INCFRIBIDI="Y"
   INCGTKTHREE="Y"
   INCLIBPNG="Y"
