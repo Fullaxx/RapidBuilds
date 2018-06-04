@@ -77,6 +77,7 @@ if [ "${INCMOD002UTILS}" == "Y" ]; then
   INCVLAN="N"
 
 # Custom Additions
+  INCACPI="Y"
   INCCALC="Y"
   INCCOLORTAIL="Y"
   INCCORKSCREW="Y"

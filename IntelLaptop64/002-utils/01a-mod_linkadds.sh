@@ -3,6 +3,10 @@
 source ../spec.sh
 source ./module_spec.sh
 
+if [ "${INCACPI}" == "Y" ]; then
+  linkmodule "${PACKAGESDIR}/acpi/acpi-1.7-${ARCH}-bksrc1.xzm"
+fi
+
 if [ "${INCCALC}" == "Y" ]; then
   linkmodule "${PACKAGESDIR}/calc/calc-2.12.6.5-${ARCH}-bksrc1.xzm"
 fi
