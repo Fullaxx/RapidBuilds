@@ -14,6 +14,7 @@ if [ "${INCMOD006DEVEL}" == "Y" ]; then
   INCBISON="Y"
   INCCMAKE="Y"
   INCCVS="N"
+  INCDOXYGEN="N"
 # expat found in 009-xmodlibs
   INCEXPAT="Y"
   INCFLEX="Y"

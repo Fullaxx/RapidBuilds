@@ -51,6 +51,10 @@ if [ "${INCCVS}" == "Y" ]; then
   ln -s ${SLACKPKGDIR}/d/cvs-*.txz
 fi
 
+if [ "${INCDOXYGEN}" == "Y" ]; then
+  ln -s ${SLACKPKGDIR}/d/doxygen-*.txz
+fi
+
 if [ "${INCFLEX}" == "Y" ]; then
 # flex is req'd for bc
   ln -s ${SLACKPKGDIR}/d/flex-*.txz
