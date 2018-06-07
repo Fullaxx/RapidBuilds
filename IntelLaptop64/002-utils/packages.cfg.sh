@@ -48,6 +48,7 @@ if [ "${INCMOD002UTILS}" == "Y" ]; then
   INCSCIM="Y"
   INCSLACKPKG="N"
   INCSYSSTAT="Y"
+  INCTERMINUSFONT="N"
 
 # n family of packages
   INCNETFILTER="Y"

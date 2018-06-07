@@ -187,6 +187,10 @@ if [ "${INCSYSSTAT}" == "Y" ]; then
   ln -s ${SLACKPKGDIR}/ap/sysstat-*.txz
 fi
 
+if [ "${INCTERMINUSFONT}" == "Y" ]; then
+  ln -s ${SLACKPKGDIR}/ap/terminus-font-*.txz
+fi
+
 ###########################################################
 
 if [ "${INCNETFILTER}" == "Y" ]; then
