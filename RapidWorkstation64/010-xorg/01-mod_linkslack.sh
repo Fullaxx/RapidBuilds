@@ -114,6 +114,10 @@ if [ "${INCADOBEFONTS}" == "Y" ]; then
   for PKG in ${SLACKPKGDIR}/x/font-adobe-*.txz; do ln -s ${PKG}; done
 fi
 
+if [ "${INCBHFONTS}" == "Y" ]; then
+  for PKG in ${SLACKPKGDIR}/x/font-bh-*.txz; do ln -s ${PKG}; done
+fi
+
 if [ "${INCBITSTREAMFONTS}" == "Y" ]; then
   for PKG in ${SLACKPKGDIR}/x/font-bitstream-*.txz; do ln -s ${PKG}; done
 fi
