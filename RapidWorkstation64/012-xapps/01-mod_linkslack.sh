@@ -90,6 +90,10 @@ if [ "${INCRXVTUNICODE}" == "Y" ]; then
   ln -s ${SLACKPKGDIR}/xap/rxvt-unicode-*.txz
 fi
 
+if [ "${INCSOMA}" == "Y" ]; then
+  ln -s ${SLACKPKGDIR}/ap/soma-*.txz
+fi
+
 if [ "${INCXINE}" == "Y" ]; then
   ln -s ${SLACKPKGDIR}/xap/xine-ui-*.txz
   ln -s ${SLACKPKGDIR}/xap/xine-lib-*.txz
