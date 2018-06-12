@@ -24,10 +24,13 @@ if [ "${INCMOD012XAPPS}" == "Y" ]; then
   INCRDESKTOP="N"
   INCRXVTUNICODE="N"
   INCSOMA="N"
+  INCVIMGVIM="N"
   INCXINE="N"
   INCXLOCK="N"
   INCXMMS="N"
   INCXPAINT="N"
   INCXPDF="N"
+
+# extra family of packages
   INCTIGERVNC="N"
 fi

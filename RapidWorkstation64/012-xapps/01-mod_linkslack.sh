@@ -94,6 +94,10 @@ if [ "${INCSOMA}" == "Y" ]; then
   ln -s ${SLACKPKGDIR}/ap/soma-*.txz
 fi
 
+if [ "${INCVIMGVIM}" == "Y" ]; then
+  ln -s ${SLACKPKGDIR}/xap/vim-gvim-*.txz
+fi
+
 if [ "${INCXINE}" == "Y" ]; then
   ln -s ${SLACKPKGDIR}/xap/xine-ui-*.txz
   ln -s ${SLACKPKGDIR}/xap/xine-lib-*.txz
@@ -116,11 +120,11 @@ if [ "${INCXPDF}" == "Y" ]; then
 fi
 
 if [ "${INCTIGERVNC}" == "Y" ]; then
-  linkmodule ${SLACKEXTRA}/tigervnc/tigervnc-*.txz
+  ln -s ${SLACKEXTRA}/tigervnc/tigervnc-*.txz
 fi
 
 if [ "${INCFLTK}" == "Y" ]; then
-  linkmodule ${SLACKEXTRA}/fltk/fltk-*.txz
+  ln -s ${SLACKEXTRA}/fltk/fltk-*.txz
 fi
 ### Apps ##############################
 
