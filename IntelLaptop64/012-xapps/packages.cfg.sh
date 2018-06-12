@@ -43,5 +43,5 @@ if [ "${INCMOD012XAPPS}" == "Y" ]; then
   INCGEANY="Y"
   INCHSETROOT="Y"
   INCOBCONF="Y"
-  INCXFE="Y"
+  INCXFE="N"
 fi
