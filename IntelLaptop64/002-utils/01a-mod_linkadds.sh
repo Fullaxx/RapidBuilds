@@ -26,3 +26,7 @@ fi
 if [ "${INCLOOPAESSETUP}" == "Y" ]; then
   linkmodule "${PACKAGESDIR}/loop-aes-losetup/loop-aes-losetup-2.30.1-${ARCH}-bksrc1.xzm"
 fi
+
+if [ "${INCNUMACTL}" == "Y" ]; then
+  linkmodule "${PACKAGESDIR}/numactl/numactl-2.0.11-${ARCH}-bksrc1.xzm"
+fi
