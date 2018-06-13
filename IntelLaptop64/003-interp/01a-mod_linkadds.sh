@@ -7,7 +7,7 @@ if [ "${INCFTPSYNC}" == "Y" ]; then
   linkmodule "${PACKAGESDIR}/ftpsync/ftpsync-20180521-noarch-bksrc1.xzm"
 fi
 
-if [ "${INCPASTBINIT}" == "Y" ]; then
+if [ "${INCPASTEBINIT}" == "Y" ]; then
   linkmodule "${PACKAGESDIR}/pastebinit/pastebinit-1.5-noarch-bksrc1.xzm"
 fi
 
