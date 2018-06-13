@@ -94,10 +94,6 @@ if [ "${INCXF86VIDEOINTEL}" == "Y" ]; then
   ln -s ${SLACKPKGDIR}/x/intel-vaapi-driver-*.txz
 fi
 
-if [ "${INCINTELGPUTOOLS}" == "Y" ]; then
-  ln -s ${SLACKPKGDIR}/x/intel-gpu-tools-*.txz
-fi
-
 if [ "${INCXF86VIDEOMGA}" == "Y" ]; then
   ln -s ${SLACKPKGDIR}/x/xf86-video-mga-*.txz
 fi
@@ -275,9 +271,6 @@ if [ "${INCXWININFO}" == "Y" ]; then
   ln -s ${SLACKPKGDIR}/x/xwininfo-*.txz
 fi
 
-
-# intel-gpu-tools-1.21-x86_64-1.txz
-# intel-vaapi-driver-2.1.0-x86_64-1.txz
-
-# This is needed for intel-gpu-tools
-# ln -s ${SLACKPKGDIR}/l/gsl-*.txz
+if [ "${INCINTELGPUTOOLS}" == "Y" ]; then
+  ln -s ${SLACKPKGDIR}/x/intel-gpu-tools-*.txz
+fi

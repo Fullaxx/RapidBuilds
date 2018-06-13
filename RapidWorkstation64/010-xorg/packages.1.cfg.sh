@@ -15,9 +15,6 @@ if [ "${INCMOD010XORG}" == "Y" ]; then
   INCXF86VIDEONOUVEAU="N"
   INCXF86VIDEOVMWARE="N"
 
-# What are these used for?
-  INCINTELGPUTOOLS="Y"
-
 # Simple X Apps
   INCMAKEDEPEND="N"
   INCMOTIF="N"
@@ -38,4 +35,7 @@ if [ "${INCMOD010XORG}" == "Y" ]; then
   INCXVINFO="N"
   INCXWD="N"
   INCXWININFO="N"
+
+# What are these used for? Intel GPU hacking?
+  INCINTELGPUTOOLS="N"
 fi
