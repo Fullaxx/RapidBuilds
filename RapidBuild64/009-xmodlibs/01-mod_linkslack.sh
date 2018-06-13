@@ -5,291 +5,291 @@ source ./module_spec.sh
 
 rm -f *.txz *.xzm
 
-ln -s ${SLACKPKGDIR}/l/fuse-*.txz
-ln -s ${SLACKPKGDIR}/l/icu4c-*.txz
+linkpackage ${SLACKPKGDIR}/l/fuse-*.txz
+linkpackage ${SLACKPKGDIR}/l/icu4c-*.txz
 
-ln -s ${SLACKPKGDIR}/l/libidn2-*.txz
-ln -s ${SLACKPKGDIR}/l/libnl-*.txz
-ln -s ${SLACKPKGDIR}/l/libnl3-*.txz
-ln -s ${SLACKPKGDIR}/l/libsigc++-*.txz
-ln -s ${SLACKPKGDIR}/l/libtasn1-*.txz
-ln -s ${SLACKPKGDIR}/l/libunistring-*.txz
-ln -s ${SLACKPKGDIR}/l/libxml2-*.txz
+linkpackage ${SLACKPKGDIR}/l/libidn2-*.txz
+linkpackage ${SLACKPKGDIR}/l/libnl-*.txz
+linkpackage ${SLACKPKGDIR}/l/libnl3-*.txz
+linkpackage ${SLACKPKGDIR}/l/libsigc++-*.txz
+linkpackage ${SLACKPKGDIR}/l/libtasn1-*.txz
+linkpackage ${SLACKPKGDIR}/l/libunistring-*.txz
+linkpackage ${SLACKPKGDIR}/l/libxml2-*.txz
 
-ln -s ${SLACKPKGDIR}/l/pcre-*.txz
-ln -s ${SLACKPKGDIR}/l/pcre2-*.txz
-ln -s ${SLACKPKGDIR}/l/sg3_utils-*.txz
-ln -s ${SLACKPKGDIR}/l/shared-mime-info-*.txz
+linkpackage ${SLACKPKGDIR}/l/pcre-*.txz
+linkpackage ${SLACKPKGDIR}/l/pcre2-*.txz
+linkpackage ${SLACKPKGDIR}/l/sg3_utils-*.txz
+linkpackage ${SLACKPKGDIR}/l/shared-mime-info-*.txz
 
-ln -s ${SLACKPKGDIR}/n/ca-certificates-*.txz
-ln -s ${SLACKPKGDIR}/n/cyrus-sasl-*.txz
-ln -s ${SLACKPKGDIR}/n/gnutls-*.txz
-ln -s ${SLACKPKGDIR}/n/nettle-*.txz
-ln -s ${SLACKPKGDIR}/n/openssl-*.txz
-ln -s ${SLACKPKGDIR}/n/p11-kit-*.txz
-ln -s ${SLACKPKGDIR}/n/nghttp2-*.txz
+linkpackage ${SLACKPKGDIR}/n/ca-certificates-*.txz
+linkpackage ${SLACKPKGDIR}/n/cyrus-sasl-*.txz
+linkpackage ${SLACKPKGDIR}/n/gnutls-*.txz
+linkpackage ${SLACKPKGDIR}/n/nettle-*.txz
+linkpackage ${SLACKPKGDIR}/n/openssl-*.txz
+linkpackage ${SLACKPKGDIR}/n/p11-kit-*.txz
+linkpackage ${SLACKPKGDIR}/n/nghttp2-*.txz
 
 if [ "${INCUPOWER}" == "Y" ]; then
-  ln -s ${SLACKPKGDIR}/a/upower-*.txz
-  ln -s ${SLACKPKGDIR}/l/libimobiledevice-*.txz
-  ln -s ${SLACKPKGDIR}/l/libplist-*.txz
+  linkpackage ${SLACKPKGDIR}/a/upower-*.txz
+  linkpackage ${SLACKPKGDIR}/l/libimobiledevice-*.txz
+  linkpackage ${SLACKPKGDIR}/l/libplist-*.txz
 fi
 
 if [ "${INCUSBMUXD}" == "Y" ]; then
-  ln -s ${SLACKPKGDIR}/ap/usbmuxd-*.txz
-  ln -s ${SLACKPKGDIR}/l/libusbmuxd-*.txz
+  linkpackage ${SLACKPKGDIR}/ap/usbmuxd-*.txz
+  linkpackage ${SLACKPKGDIR}/l/libusbmuxd-*.txz
 fi
 
 if [ "${INCALSA}" == "Y" ]; then
-  ln -s ${SLACKPKGDIR}/ap/alsa-utils-*.txz
-  ln -s ${SLACKPKGDIR}/l/alsa-lib-*.txz
-  ln -s ${SLACKPKGDIR}/l/alsa-oss-*.txz
+  linkpackage ${SLACKPKGDIR}/ap/alsa-utils-*.txz
+  linkpackage ${SLACKPKGDIR}/l/alsa-lib-*.txz
+  linkpackage ${SLACKPKGDIR}/l/alsa-oss-*.txz
 fi
 
 if [ "${INCLIBSAMPLERATE}" == "Y" ]; then
 # alsa needs libsamplerate
-  ln -s ${SLACKPKGDIR}/l/libsamplerate-*.txz
+  linkpackage ${SLACKPKGDIR}/l/libsamplerate-*.txz
 fi
 
 if [ "${INCFFTW}" == "Y" ]; then
 # alsa,imagemagick needs fftw
-  ln -s ${SLACKPKGDIR}/l/fftw-*.txz
+  linkpackage ${SLACKPKGDIR}/l/fftw-*.txz
 fi
 
 if [ "${INCLIBARCHIVE}" == "Y" ]; then
-  ln -s ${SLACKPKGDIR}/l/libarchive-*.txz
+  linkpackage ${SLACKPKGDIR}/l/libarchive-*.txz
 fi
 
 if [ "${INCLZLIB}" == "Y" ]; then
-  ln -s ${SLACKPKGDIR}/a/lzlib-*.txz
+  linkpackage ${SLACKPKGDIR}/a/lzlib-*.txz
 fi
 
 if [ "${INCLIBPCAP}" == "Y" ]; then
-  ln -s ${SLACKPKGDIR}/l/libpcap-*.txz
+  linkpackage ${SLACKPKGDIR}/l/libpcap-*.txz
 fi
 
 if [ "${INCLIBGCRYPT}" == "Y" ]; then
-  ln -s ${SLACKPKGDIR}/n/libgcrypt-*.txz
+  linkpackage ${SLACKPKGDIR}/n/libgcrypt-*.txz
 fi
 
 if [ "${INCLIBGPGERROR}" == "Y" ]; then
-  ln -s ${SLACKPKGDIR}/n/libgpg-error-*.txz
+  linkpackage ${SLACKPKGDIR}/n/libgpg-error-*.txz
 fi
 
 if [ "${INCGPGME}" == "Y" ]; then
 # Samba,mcabber
-  ln -s ${SLACKPKGDIR}/n/gpgme-*.txz
+  linkpackage ${SLACKPKGDIR}/n/gpgme-*.txz
 fi
 
 if [ "${INCPINENTRY}" == "Y" ]; then
 # cryptsetup,gnupg2 reqs pinentry
-  ln -s ${SLACKPKGDIR}/n/pinentry-*.txz
+  linkpackage ${SLACKPKGDIR}/n/pinentry-*.txz
 fi
 
 if [ "${INCLIBSECRET}" == "Y" ]; then
 # pinentry reqs libsecret
-  ln -s ${SLACKPKGDIR}/l/libsecret-*.txz
+  linkpackage ${SLACKPKGDIR}/l/libsecret-*.txz
 fi
 
 if [ "${INCLIBASSUAN}" == "Y" ]; then
 # Samba,gpgme,gnupg2,pinentry reqs libassuan
-  ln -s ${SLACKPKGDIR}/n/libassuan-*.txz
+  linkpackage ${SLACKPKGDIR}/n/libassuan-*.txz
 fi
 
 if [ "${INCLIBGLADE}" == "Y" ]; then
-  ln -s ${SLACKPKGDIR}/l/libglade-*.txz
+  linkpackage ${SLACKPKGDIR}/l/libglade-*.txz
 fi
 
 if [ "${INCLIBTIRPC}" == "Y" ]; then
-  ln -s ${SLACKPKGDIR}/n/libtirpc-*.txz
+  linkpackage ${SLACKPKGDIR}/n/libtirpc-*.txz
 fi
 
 if [ "${INCLIBTALLOC}" == "Y" ]; then
-  ln -s ${SLACKPKGDIR}/l/talloc-*.txz
+  linkpackage ${SLACKPKGDIR}/l/talloc-*.txz
 fi
 
 if [ "${INCLIBTEVENT}" == "Y" ]; then
-  ln -s ${SLACKPKGDIR}/l/tevent-*.txz
+  linkpackage ${SLACKPKGDIR}/l/tevent-*.txz
 fi
 
 if [ "${INCLIBNIH}" == "Y" ]; then
-  ln -s ${SLACKPKGDIR}/l/libnih-*.txz
+  linkpackage ${SLACKPKGDIR}/l/libnih-*.txz
 fi
 
 if [ "${INCLIBNDP}" == "Y" ]; then
 # NetworkManager needs libndp
-  ln -s ${SLACKPKGDIR}/n/libndp-*.txz
+  linkpackage ${SLACKPKGDIR}/n/libndp-*.txz
 fi
 
 if [ "${INCJANSSON}" == "Y" ]; then
-  ln -s ${SLACKPKGDIR}/l/jansson-*.txz
+  linkpackage ${SLACKPKGDIR}/l/jansson-*.txz
 fi
 
 if [ "${INCASPELL}" == "Y" ]; then
 # enchant and bluefish need aspell
-  ln -s ${SLACKPKGDIR}/l/aspell-en-*.txz
-  ln -s ${SLACKPKGDIR}/l/aspell-?.*.txz || exit 1
+  linkpackage ${SLACKPKGDIR}/l/aspell-en-*.txz
+  linkpackage ${SLACKPKGDIR}/l/aspell-?.*.txz
 fi
 
 if [ "${INCENCHANT}" == "Y" ]; then
-  ln -s ${SLACKPKGDIR}/l/enchant-*.txz
+  linkpackage ${SLACKPKGDIR}/l/enchant-*.txz
 fi
 
 if [ "${INCHUNSPELL}" == "Y" ]; then
-  ln -s ${SLACKPKGDIR}/l/hunspell-*.txz
+  linkpackage ${SLACKPKGDIR}/l/hunspell-*.txz
 fi
 
 if [ "${INCLIBPROXY}" == "Y" ]; then
 # neon,hexchat need libproxy
-  ln -s ${SLACKPKGDIR}/l/libproxy-*.txz
+  linkpackage ${SLACKPKGDIR}/l/libproxy-*.txz
 fi
 
 if [ "${INCNEON}" == "Y" ]; then
 # audactous needs neon
-  ln -s ${SLACKPKGDIR}/l/neon-*.txz
+  linkpackage ${SLACKPKGDIR}/l/neon-*.txz
 fi
 
 if [ "${INCJSONEEIGHTYFIVE}" == "Y" ]; then
-  ln -s ${SLACKPKGDIR}/l/js185-*.txz
+  linkpackage ${SLACKPKGDIR}/l/js185-*.txz
 fi
 
 if [ "${INCSERF}" == "Y" ]; then
 # subversion needs serf
-  ln -s ${SLACKPKGDIR}/l/serf-*.txz
+  linkpackage ${SLACKPKGDIR}/l/serf-*.txz
 fi
 
 if [ "${INCLIBAPR}" == "Y" ]; then
-  ln -s ${SLACKPKGDIR}/l/apr-1.*.txz || exit 1
-  ln -s ${SLACKPKGDIR}/l/apr-util-*.txz
+  linkpackage ${SLACKPKGDIR}/l/apr-1.*.txz
+  linkpackage ${SLACKPKGDIR}/l/apr-util-*.txz
 fi
 
 if [ "${INCLOUDMOUTH}" == "Y" ]; then
-  ln -s ${SLACKPKGDIR}/l/loudmouth-*.txz
+  linkpackage ${SLACKPKGDIR}/l/loudmouth-*.txz
 fi
 
 if [ "${INCMOZILLANSS}" == "Y" ]; then
-  ln -s ${SLACKPKGDIR}/l/mozilla-nss-*.txz
+  linkpackage ${SLACKPKGDIR}/l/mozilla-nss-*.txz
 fi
 
 if [ "${INCSEAMONKEYSOLIBS}" == "Y" ]; then
-  ln -s ${SLACKPKGDIR}/l/seamonkey-solibs-*.txz
+  linkpackage ${SLACKPKGDIR}/l/seamonkey-solibs-*.txz
 fi
 
 if [ "${INCDBUSGLIB}" == "Y" ]; then
-  ln -s ${SLACKPKGDIR}/l/dbus-glib-*.txz
+  linkpackage ${SLACKPKGDIR}/l/dbus-glib-*.txz
 fi
 
 if [ "${INCLIBSODIUM}" == "Y" ]; then
 # zeromq needs libsodium
-  ln -s ${SLACKPKGDIR}/l/libsodium-*.txz
+  linkpackage ${SLACKPKGDIR}/l/libsodium-*.txz
 fi
 
 if [ "${INCJUDY}" == "Y" ]; then
 # MariaDB needs Judy
-  ln -s ${SLACKPKGDIR}/l/judy-*.txz
+  linkpackage ${SLACKPKGDIR}/l/judy-*.txz
 fi
 
 if [ "${INCJEMALLOC}" == "Y" ]; then
 # MariaDB needs jemalloc
-  ln -s ${SLACKPKGDIR}/l/jemalloc-*.txz
+  linkpackage ${SLACKPKGDIR}/l/jemalloc-*.txz
 fi
 
 if [ "${INCLIBAIO}" == "Y" ]; then
-  ln -s ${SLACKPKGDIR}/l/libaio-*.txz
+  linkpackage ${SLACKPKGDIR}/l/libaio-*.txz
 fi
 
 if [ "${INCLIBIODBC}" == "Y" ]; then
-  ln -s ${SLACKPKGDIR}/l/libiodbc-*.txz
+  linkpackage ${SLACKPKGDIR}/l/libiodbc-*.txz
 fi
 
 if [ "${INCLIBMCRYPT}" == "Y" ]; then
-  ln -s ${SLACKPKGDIR}/l/libmcrypt-*.txz
+  linkpackage ${SLACKPKGDIR}/l/libmcrypt-*.txz
 fi
 
 if [ "${INCLIBVPX}" == "Y" ]; then
 # /usr/lib64/php/extensions/gd.so, ffmpeg need libvpx
-  ln -s ${SLACKPKGDIR}/l/libvpx-*.txz
+  linkpackage ${SLACKPKGDIR}/l/libvpx-*.txz
 fi
 
 if [ "${INCLIBXSLT}" == "Y" ]; then
 # needed by PHP and /usr/lib64/java/lib/amd64/libjfxwebkit.so
-  ln -s ${SLACKPKGDIR}/l/libxslt-*.txz
+  linkpackage ${SLACKPKGDIR}/l/libxslt-*.txz
 fi
 
 if [ "${INCTONELIB}" == "Y" ]; then
-  ln -s ${SLACKPKGDIR}/l/t1lib-*.txz
+  linkpackage ${SLACKPKGDIR}/l/t1lib-*.txz
 fi
 
 if [ "${INCLIBCROCO}" == "Y" ]; then
 # gettext,librsvg needs libcroco
-  ln -s ${SLACKPKGDIR}/l/libcroco-*.txz
+  linkpackage ${SLACKPKGDIR}/l/libcroco-*.txz
 fi
 
 if [ "${INCEXPAT}" == "Y" ]; then
-  ln -s ${SLACKPKGDIR}/l/expat-*.txz
+  linkpackage ${SLACKPKGDIR}/l/expat-*.txz
 fi
 
 if [ "${INCGC}" == "Y" ]; then
 # XXX needs GC
-  ln -s ${SLACKPKGDIR}/l/gc-*.txz
+  linkpackage ${SLACKPKGDIR}/l/gc-*.txz
 fi
 
 if [ "${INCLIBMPC}" == "Y" ]; then
 # GCC needs libmpc
-  ln -s ${SLACKPKGDIR}/l/libmpc-*.txz
+  linkpackage ${SLACKPKGDIR}/l/libmpc-*.txz
 fi
 
 if [ "${INCLIBUNWIND}" == "Y" ]; then
 # strace needs libunwind
-  ln -s ${SLACKPKGDIR}/l/libunwind-*.txz
+  linkpackage ${SLACKPKGDIR}/l/libunwind-*.txz
 fi
 
 if [ "${INCGNOMEKEYRING}" == "Y" ]; then
 # svn needs gnome-keyring
-  ln -s ${SLACKPKGDIR}/l/libgnome-keyring-*.txz
+  linkpackage ${SLACKPKGDIR}/l/libgnome-keyring-*.txz
 fi
 
 if [ "${INCELFUTILS}" == "Y" ]; then
 # rpm needs elfutils
-  ln -s ${SLACKPKGDIR}/l/elfutils-*.txz
+  linkpackage ${SLACKPKGDIR}/l/elfutils-*.txz
 fi
 
 if [ "${INCDB48}" == "Y" ]; then
 # rpm needs db48
-  ln -s ${SLACKPKGDIR}/l/db48-*.txz
+  linkpackage ${SLACKPKGDIR}/l/db48-*.txz
 fi
 
 if [ "${INCLIBPOLKIT}" == "Y" ]; then
-  ln -s ${SLACKPKGDIR}/l/polkit-?.*.txz
+  linkpackage ${SLACKPKGDIR}/l/polkit-?.*.txz
 fi
 
 if [ "${INCLIBSSHONE}" == "Y" ]; then
 # ffmpeg needs libssh
-  ln -s ${SLACKPKGDIR}/l/libssh-*.txz
+  linkpackage ${SLACKPKGDIR}/l/libssh-*.txz
 fi
 
 if [ "${INCGLIBONE}" == "Y" ]; then
 # xmms needs glib
-  ln -s ${SLACKPKGDIR}/l/glib-1.2.10-*.txz || exit 1
+  linkpackage ${SLACKPKGDIR}/l/glib-1.2.10-*.txz
 fi
 
 if [ "${INCGSL}" == "Y" ]; then
 # intel-gpu-tools needs gsl, does anything else need it?
-  ln -s ${SLACKPKGDIR}/l/gsl-*.txz
+  linkpackage ${SLACKPKGDIR}/l/gsl-*.txz
 fi
 
 if [ "${INCCONSOLEKITTWO}" == "Y" ]; then
-  ln -s ${SLACKPKGDIR}/l/ConsoleKit2-*.txz
+  linkpackage ${SLACKPKGDIR}/l/ConsoleKit2-*.txz
 fi
 
 if [ "${INCJSONC}" == "Y" ]; then
-  ln -s ${SLACKPKGDIR}/l/json-c-*.txz
+  linkpackage ${SLACKPKGDIR}/l/json-c-*.txz
 fi
 
 if [ "${INCJSONGLIB}" == "Y" ]; then
-  ln -s ${SLACKPKGDIR}/l/json-glib-*.txz
+  linkpackage ${SLACKPKGDIR}/l/json-glib-*.txz
 fi
 
 if [ "${INCLIBZIP}" == "Y" ]; then
-  ln -s ${SLACKPKGDIR}/l/libzip-*.txz
+  linkpackage ${SLACKPKGDIR}/l/libzip-*.txz
 fi

@@ -6,322 +6,322 @@ source ./module_spec.sh
 rm -f *.txz *.xzm
 
 if [ "${INCKERNELFIRMWARE}" == "Y" ]; then
-  ln -s ${SLACKPKGDIR}/a/kernel-firmware-*.txz
+  linkpackage ${SLACKPKGDIR}/a/kernel-firmware-*.txz
 fi
 
 if [ "${INCBTRFSPROGS}" == "Y" ]; then
-  ln -s ${SLACKPKGDIR}/a/btrfs-progs-*.txz
+  linkpackage ${SLACKPKGDIR}/a/btrfs-progs-*.txz
 fi
 
 if [ "${INCCGMANAGER}" == "Y" ]; then
-  ln -s ${SLACKPKGDIR}/ap/cgmanager-*.txz
+  linkpackage ${SLACKPKGDIR}/ap/cgmanager-*.txz
 fi
 
 if [ "${INCCPIO}" == "Y" ]; then
-  ln -s ${SLACKPKGDIR}/a/cpio-*.txz
+  linkpackage ${SLACKPKGDIR}/a/cpio-*.txz
 fi
 
 if [ "${INCCPUFREQUTILS}" == "Y" ]; then
-  ln -s ${SLACKPKGDIR}/a/cpufrequtils-*.txz
+  linkpackage ${SLACKPKGDIR}/a/cpufrequtils-*.txz
 fi
 
 if [ "${INCCRYPTSETUP}" == "Y" ]; then
-  ln -s ${SLACKPKGDIR}/a/cryptsetup-*.txz
+  linkpackage ${SLACKPKGDIR}/a/cryptsetup-*.txz
 fi
 
 if [ "${INCDCRON}" == "Y" ]; then
-  ln -s ${SLACKPKGDIR}/a/dcron-*.txz
+  linkpackage ${SLACKPKGDIR}/a/dcron-*.txz
 fi
 
 if [ "${INCDOSFSTOOLS}" == "Y" ]; then
-  ln -s ${SLACKPKGDIR}/a/dosfstools-*.txz
+  linkpackage ${SLACKPKGDIR}/a/dosfstools-*.txz
 fi
 
 if [ "${INCFLOPPY}" == "Y" ]; then
-  ln -s ${SLACKPKGDIR}/a/floppy-*.txz
+  linkpackage ${SLACKPKGDIR}/a/floppy-*.txz
 fi
 
 if [ "${INCHAVEGED}" == "Y" ]; then
-  ln -s ${SLACKPKGDIR}/a/haveged-*.txz
+  linkpackage ${SLACKPKGDIR}/a/haveged-*.txz
 fi
 
 if [ "${INCHDPARM}" == "Y" ]; then
-  ln -s ${SLACKPKGDIR}/a/hdparm-*.txz
+  linkpackage ${SLACKPKGDIR}/a/hdparm-*.txz
 fi
 
 if [ "${INCINFOZIP}" == "Y" ]; then
-  ln -s ${SLACKPKGDIR}/a/infozip-*.txz
+  linkpackage ${SLACKPKGDIR}/a/infozip-*.txz
 fi
 
 if [ "${INCINOTIFYTOOLS}" == "Y" ]; then
-  ln -s ${SLACKPKGDIR}/a/inotify-tools-*.txz
+  linkpackage ${SLACKPKGDIR}/a/inotify-tools-*.txz
 fi
 
 if [ "${INCLOGROTATE}" == "Y" ]; then
-  ln -s ${SLACKPKGDIR}/a/logrotate-*.txz
+  linkpackage ${SLACKPKGDIR}/a/logrotate-*.txz
 fi
 
 if [ "${INCLBZIPTWO}" == "Y" ]; then
-  ln -s ${SLACKPKGDIR}/a/lbzip2-*.txz
+  linkpackage ${SLACKPKGDIR}/a/lbzip2-*.txz
 fi
 
 if [ "${INCLRZIP}" == "Y" ]; then
-  ln -s ${SLACKPKGDIR}/a/lrzip-*.txz
+  linkpackage ${SLACKPKGDIR}/a/lrzip-*.txz
 fi
 
 if [ "${INCLZIP}" == "Y" ]; then
-  ln -s ${SLACKPKGDIR}/a/lzip-*.txz
+  linkpackage ${SLACKPKGDIR}/a/lzip-*.txz
 fi
 
 if [ "${INCMCELOG}" == "Y" ]; then
-  ln -s ${SLACKPKGDIR}/a/mcelog-*.txz
+  linkpackage ${SLACKPKGDIR}/a/mcelog-*.txz
 fi
 
 if [ "${INCMDADM}" == "Y" ]; then
-  ln -s ${SLACKPKGDIR}/a/mdadm-*.txz
+  linkpackage ${SLACKPKGDIR}/a/mdadm-*.txz
 fi
 
 if [ "${INCMINICOM}" == "Y" ]; then
-  ln -s ${SLACKPKGDIR}/a/minicom-*.txz
+  linkpackage ${SLACKPKGDIR}/a/minicom-*.txz
 fi
 
 if [ "${INCNCOMPRESS}" == "Y" ]; then
-  ln -s ${SLACKPKGDIR}/a/ncompress-*.txz
+  linkpackage ${SLACKPKGDIR}/a/ncompress-*.txz
 fi
 
 if [ "${INCNTFSTHREEG}" == "Y" ]; then
-  ln -s ${SLACKPKGDIR}/a/ntfs-3g-*.txz
+  linkpackage ${SLACKPKGDIR}/a/ntfs-3g-*.txz
 fi
 
 if [ "${INCPATCH}" == "Y" ]; then
-  ln -s ${SLACKPKGDIR}/a/patch-*.txz
+  linkpackage ${SLACKPKGDIR}/a/patch-*.txz
 fi
 
 if [ "${INCPKGTOOLS}" == "Y" ]; then
-  ln -s ${SLACKPKGDIR}/a/pkgtools-*.txz
+  linkpackage ${SLACKPKGDIR}/a/pkgtools-*.txz
 fi
 
 if [ "${INCPLZIP}" == "Y" ]; then
-  ln -s ${SLACKPKGDIR}/a/plzip-*.txz
+  linkpackage ${SLACKPKGDIR}/a/plzip-*.txz
 fi
 
 if [ "${INCSDPARM}" == "Y" ]; then
-  ln -s ${SLACKPKGDIR}/a/sdparm-*.txz
+  linkpackage ${SLACKPKGDIR}/a/sdparm-*.txz
 fi
 
 if [ "${INCSHARUTILS}" == "Y" ]; then
-  ln -s ${SLACKPKGDIR}/a/sharutils-*.txz
+  linkpackage ${SLACKPKGDIR}/a/sharutils-*.txz
 fi
 
 if [ "${INCMLOCATE}" == "Y" ]; then
-  ln -s ${SLACKPKGDIR}/a/mlocate-*.txz
+  linkpackage ${SLACKPKGDIR}/a/mlocate-*.txz
 fi
 
 if [ "${INCSMARTMONTOOLS}" == "Y" ]; then
-  ln -s ${SLACKPKGDIR}/a/smartmontools-*.txz
+  linkpackage ${SLACKPKGDIR}/a/smartmontools-*.txz
 fi
 
 if [ "${INCUSBMODESWITCH}" == "Y" ]; then
-  ln -s ${SLACKPKGDIR}/a/usb_modeswitch-*.txz
+  linkpackage ${SLACKPKGDIR}/a/usb_modeswitch-*.txz
 fi
 
 if [ "${INCUSBUTILS}" == "Y" ]; then
-  ln -s ${SLACKPKGDIR}/a/usbutils-*.txz
+  linkpackage ${SLACKPKGDIR}/a/usbutils-*.txz
 fi
 
 ###########################################################
 
 if [ "${INCDCTHREEDD}" == "Y" ]; then
-  ln -s ${SLACKPKGDIR}/ap/dc3dd-*.txz
+  linkpackage ${SLACKPKGDIR}/ap/dc3dd-*.txz
 fi
 
 if [ "${INCDDRESCUE}" == "Y" ]; then
-  ln -s ${SLACKPKGDIR}/ap/ddrescue-*.txz
+  linkpackage ${SLACKPKGDIR}/ap/ddrescue-*.txz
 fi
 
 if [ "${INCDIFFUTILS}" == "Y" ]; then
-  ln -s ${SLACKPKGDIR}/ap/diffutils-*.txz
+  linkpackage ${SLACKPKGDIR}/ap/diffutils-*.txz
 fi
 
 if [ "${INCDVDPLUSRWTOOLS}" == "Y" ]; then
-  ln -s ${SLACKPKGDIR}/ap/dvd+rw-tools-*.txz
+  linkpackage ${SLACKPKGDIR}/ap/dvd+rw-tools-*.txz
 fi
 
 if [ "${INCGROFF}" == "Y" ]; then
-  ln -s ${SLACKPKGDIR}/ap/groff-*.txz
+  linkpackage ${SLACKPKGDIR}/ap/groff-*.txz
 fi
 if [ "${INCJOE}" == "Y" ]; then
-  ln -s ${SLACKPKGDIR}/ap/joe-*.txz
+  linkpackage ${SLACKPKGDIR}/ap/joe-*.txz
 fi
 
 if [ "${INCLMSENSORS}" == "Y" ]; then
-  ln -s ${SLACKPKGDIR}/ap/lm_sensors-*.txz
+  linkpackage ${SLACKPKGDIR}/ap/lm_sensors-*.txz
 fi
 
 if [ "${INCMANPAGES}" == "Y" ]; then
-  ln -s ${SLACKPKGDIR}/ap/man-db-*.txz
-  ln -s ${SLACKPKGDIR}/ap/man-pages-*.txz
+  linkpackage ${SLACKPKGDIR}/ap/man-db-*.txz
+  linkpackage ${SLACKPKGDIR}/ap/man-pages-*.txz
 fi
 
 if [ "${INCMIDNIGHTCOMMANDER}" == "Y" ]; then
-  ln -s ${SLACKPKGDIR}/ap/mc-*.txz
+  linkpackage ${SLACKPKGDIR}/ap/mc-*.txz
 fi
 
 if [ "${INCMPGONETWOTHREE}" == "Y" ]; then
-  ln -s ${SLACKPKGDIR}/ap/mpg123-*.txz
+  linkpackage ${SLACKPKGDIR}/ap/mpg123-*.txz
 fi
 
 if [ "${INCRZIP}" == "Y" ]; then
-  ln -s ${SLACKPKGDIR}/ap/rzip-*.txz
+  linkpackage ${SLACKPKGDIR}/ap/rzip-*.txz
 fi
 
 if [ "${INCPMUTILS}" == "Y" ]; then
-  ln -s ${SLACKPKGDIR}/ap/pm-utils-*.txz
+  linkpackage ${SLACKPKGDIR}/ap/pm-utils-*.txz
 fi
 
 if [ "${INCSCIM}" == "Y" ]; then
-  ln -s ${SLACKPKGDIR}/ap/sc-im-*.txz
+  linkpackage ${SLACKPKGDIR}/ap/sc-im-*.txz
 fi
 
 if [ "${INCSLACKPKG}" == "Y" ]; then
-  ln -s ${SLACKPKGDIR}/ap/slackpkg-*.txz
+  linkpackage ${SLACKPKGDIR}/ap/slackpkg-*.txz
 fi
 
 if [ "${INCSYSSTAT}" == "Y" ]; then
-  ln -s ${SLACKPKGDIR}/ap/sysstat-*.txz
+  linkpackage ${SLACKPKGDIR}/ap/sysstat-*.txz
 fi
 
 if [ "${INCTERMINUSFONT}" == "Y" ]; then
-  ln -s ${SLACKPKGDIR}/ap/terminus-font-*.txz
+  linkpackage ${SLACKPKGDIR}/ap/terminus-font-*.txz
 fi
 
 ###########################################################
 
 if [ "${INCNETFILTER}" == "Y" ]; then
-  ln -s ${SLACKPKGDIR}/n/conntrack-tools-*.txz
-# ln -s ${SLACKPKGDIR}/n/ipset-*.txz
-  ln -s ${SLACKPKGDIR}/n/iptables-*.txz
-  ln -s ${SLACKPKGDIR}/n/libnetfilter_acct-*.txz
-  ln -s ${SLACKPKGDIR}/n/libnetfilter_conntrack-*.txz
-  ln -s ${SLACKPKGDIR}/n/libnetfilter_cthelper-*.txz
-  ln -s ${SLACKPKGDIR}/n/libnetfilter_cttimeout-*.txz
-# ln -s ${SLACKPKGDIR}/n/libnetfilter_log-*.txz
-  ln -s ${SLACKPKGDIR}/n/libnetfilter_queue-*.txz
-  ln -s ${SLACKPKGDIR}/n/libnfnetlink-*.txz
-  ln -s ${SLACKPKGDIR}/n/nfacct-*.txz
-# ln -s ${SLACKPKGDIR}/n/ulogd-*.txz
+  linkpackage ${SLACKPKGDIR}/n/conntrack-tools-*.txz
+# linkpackage ${SLACKPKGDIR}/n/ipset-*.txz
+  linkpackage ${SLACKPKGDIR}/n/iptables-*.txz
+  linkpackage ${SLACKPKGDIR}/n/libnetfilter_acct-*.txz
+  linkpackage ${SLACKPKGDIR}/n/libnetfilter_conntrack-*.txz
+  linkpackage ${SLACKPKGDIR}/n/libnetfilter_cthelper-*.txz
+  linkpackage ${SLACKPKGDIR}/n/libnetfilter_cttimeout-*.txz
+# linkpackage ${SLACKPKGDIR}/n/libnetfilter_log-*.txz
+  linkpackage ${SLACKPKGDIR}/n/libnetfilter_queue-*.txz
+  linkpackage ${SLACKPKGDIR}/n/libnfnetlink-*.txz
+  linkpackage ${SLACKPKGDIR}/n/nfacct-*.txz
+# linkpackage ${SLACKPKGDIR}/n/ulogd-*.txz
 
-  ln -s ${SLACKPKGDIR}/n/nftables-*.txz
-  ln -s ${SLACKPKGDIR}/n/libnftnl-*.txz
+  linkpackage ${SLACKPKGDIR}/n/nftables-*.txz
+  linkpackage ${SLACKPKGDIR}/n/libnftnl-*.txz
 fi
 
 if [ "${INCBRIDGEUTILS}" == "Y" ]; then
-  ln -s ${SLACKPKGDIR}/n/bridge-utils-*.txz
+  linkpackage ${SLACKPKGDIR}/n/bridge-utils-*.txz
 fi
 
 if [ "${INCDNSMASQ}" == "Y" ]; then
-  ln -s ${SLACKPKGDIR}/n/dnsmasq-*.txz
+  linkpackage ${SLACKPKGDIR}/n/dnsmasq-*.txz
 fi
 
 if [ "${INCEBTABLES}" == "Y" ]; then
-  ln -s ${SLACKPKGDIR}/n/ebtables-*.txz
+  linkpackage ${SLACKPKGDIR}/n/ebtables-*.txz
 fi
 
 if [ "${INCETHTOOL}" == "Y" ]; then
-  ln -s ${SLACKPKGDIR}/n/ethtool-*.txz
+  linkpackage ${SLACKPKGDIR}/n/ethtool-*.txz
 fi
 
 if [ "${INCIFTOP}" == "Y" ]; then
-  ln -s ${SLACKPKGDIR}/n/iftop-*.txz
+  linkpackage ${SLACKPKGDIR}/n/iftop-*.txz
 fi
 
 if [ "${INCIPTRAFNG}" == "Y" ]; then
-  ln -s ${SLACKPKGDIR}/n/iptraf-ng-*.txz
+  linkpackage ${SLACKPKGDIR}/n/iptraf-ng-*.txz
 fi
 
 if [ "${INCGNUPG}" == "Y" ]; then
-  ln -s ${SLACKPKGDIR}/n/gnupg-*.txz
+  linkpackage ${SLACKPKGDIR}/n/gnupg-*.txz
 fi
 
 if [ "${INCGNUPGTWO}" == "Y" ]; then
-  ln -s ${SLACKPKGDIR}/n/gnupg2-*.txz
-  ln -s ${SLACKPKGDIR}/n/npth-*.txz
-  ln -s ${SLACKPKGDIR}/n/libksba-*.txz
+  linkpackage ${SLACKPKGDIR}/n/gnupg2-*.txz
+  linkpackage ${SLACKPKGDIR}/n/npth-*.txz
+  linkpackage ${SLACKPKGDIR}/n/libksba-*.txz
 fi
 
 if [ "${INCLYNX}" == "Y" ]; then
-  ln -s ${SLACKPKGDIR}/n/lynx-*.txz
+  linkpackage ${SLACKPKGDIR}/n/lynx-*.txz
 fi
 
 if [ "${INCMCABBER}" == "Y" ]; then
-  ln -s ${SLACKPKGDIR}/n/mcabber-*.txz
+  linkpackage ${SLACKPKGDIR}/n/mcabber-*.txz
 fi
 
 if [ "${INCMTR}" == "Y" ]; then
-  ln -s ${SLACKPKGDIR}/n/mtr-*.txz
+  linkpackage ${SLACKPKGDIR}/n/mtr-*.txz
 fi
 
 if [ "${INCNETCAT}" == "Y" ]; then
-  ln -s ${SLACKPKGDIR}/n/nc-*.txz
+  linkpackage ${SLACKPKGDIR}/n/nc-*.txz
 fi
 
 if [ "${INCNETWORKMANAGER}" == "Y" ]; then
 # libproxy wants NetworkManager
-  ln -s ${SLACKPKGDIR}/n/NetworkManager-*.txz
+  linkpackage ${SLACKPKGDIR}/n/NetworkManager-*.txz
 fi
 
 if [ "${INCNETKITFTP}" == "Y" ]; then
-  ln -s ${SLACKPKGDIR}/n/netkit-ftp-*.txz
+  linkpackage ${SLACKPKGDIR}/n/netkit-ftp-*.txz
 fi
 
 if [ "${INCNMAP}" == "Y" ]; then
-  ln -s ${SLACKPKGDIR}/n/nmap-*.txz
+  linkpackage ${SLACKPKGDIR}/n/nmap-*.txz
 fi
 
 if [ "${INCOPENVPN}" == "Y" ]; then
-  ln -s ${SLACKPKGDIR}/n/openvpn-*.txz
+  linkpackage ${SLACKPKGDIR}/n/openvpn-*.txz
 fi
 
 if [ "${INCPPP}" == "Y" ]; then
-  ln -s ${SLACKPKGDIR}/n/ppp-*.txz
+  linkpackage ${SLACKPKGDIR}/n/ppp-*.txz
 fi
 
 if [ "${INCSSHFS}" == "Y" ]; then
-  ln -s ${SLACKPKGDIR}/n/sshfs-*.txz
+  linkpackage ${SLACKPKGDIR}/n/sshfs-*.txz
 fi
 
 if [ "${INCSTUNNEL}" == "Y" ]; then
-  ln -s ${SLACKPKGDIR}/n/stunnel-*.txz
+  linkpackage ${SLACKPKGDIR}/n/stunnel-*.txz
 fi
 
 if [ "${INCTCPDUMP}" == "Y" ]; then
-  ln -s ${SLACKPKGDIR}/n/tcpdump-*.txz
+  linkpackage ${SLACKPKGDIR}/n/tcpdump-*.txz
 fi
 
 if [ "${INCTELNET}" == "Y" ]; then
-  ln -s ${SLACKPKGDIR}/n/telnet-*.txz
+  linkpackage ${SLACKPKGDIR}/n/telnet-*.txz
 fi
 
 if [ "${INCTFTPHPA}" == "Y" ]; then
-  ln -s ${SLACKPKGDIR}/n/tftp-hpa-*.txz
+  linkpackage ${SLACKPKGDIR}/n/tftp-hpa-*.txz
 fi
 
 if [ "${INCTRACEROUTE}" == "Y" ]; then
-  ln -s ${SLACKPKGDIR}/n/traceroute-*.txz
+  linkpackage ${SLACKPKGDIR}/n/traceroute-*.txz
 fi
 
 if [ "${INCVLAN}" == "Y" ]; then
-  ln -s ${SLACKPKGDIR}/n/vlan-*.txz
+  linkpackage ${SLACKPKGDIR}/n/vlan-*.txz
 fi
 
 ###########################################################
 
 # Don't you want to burn a RapidLinux LiveCD?
-ln -s ${SLACKPKGDIR}/ap/cdrtools-*.txz
+linkpackage ${SLACKPKGDIR}/ap/cdrtools-*.txz
 
-ln -s ${SLACKPKGDIR}/ap/sqlite-*.txz
-ln -s ${SLACKPKGDIR}/ap/sudo-*.txz
+linkpackage ${SLACKPKGDIR}/ap/sqlite-*.txz
+linkpackage ${SLACKPKGDIR}/ap/sudo-*.txz
 
-ln -s ${SLACKPKGDIR}/n/curl-*.txz
-ln -s ${SLACKPKGDIR}/n/rsync-*.txz
-ln -s ${SLACKPKGDIR}/n/wget-*.txz
+linkpackage ${SLACKPKGDIR}/n/curl-*.txz
+linkpackage ${SLACKPKGDIR}/n/rsync-*.txz
+linkpackage ${SLACKPKGDIR}/n/wget-*.txz

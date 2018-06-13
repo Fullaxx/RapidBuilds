@@ -155,13 +155,14 @@ loadconfig()
   shopt -u nullglob
 }
 
-linkmodule()
+linkpackage()
 {
-  ln -s "$1"
-  if [ ! -e "$1" ]; then
+  PKG=`realpath $1`
+  if [ ! -e "${PKG}" ]; then
     echo "$1 does not exist..."
     exit 1
   fi
+  ln -s "${PKG}"
 }
 
 bail()

@@ -6,271 +6,271 @@ source ./module_spec.sh
 rm -f *.txz *.xzm
 
 # Some default fonts to get things working
-ln -s ${SLACKPKGDIR}/l/freetype-*.txz
-ln -s ${SLACKPKGDIR}/l/harfbuzz-*.txz
-ln -s ${SLACKPKGDIR}/x/dejavu-fonts-ttf-*.txz
-ln -s ${SLACKPKGDIR}/x/liberation-fonts-ttf-*.txz
-ln -s ${SLACKPKGDIR}/x/urw-core35-fonts-otf-*.txz
+linkpackage ${SLACKPKGDIR}/l/freetype-*.txz
+linkpackage ${SLACKPKGDIR}/l/harfbuzz-*.txz
+linkpackage ${SLACKPKGDIR}/x/dejavu-fonts-ttf-*.txz
+linkpackage ${SLACKPKGDIR}/x/liberation-fonts-ttf-*.txz
+linkpackage ${SLACKPKGDIR}/x/urw-core35-fonts-otf-*.txz
 #######################################
 
-ln -s ${SLACKPKGDIR}/x/fontconfig-*.txz
-ln -s ${SLACKPKGDIR}/x/iceauth-*.txz
-ln -s ${SLACKPKGDIR}/x/libICE-*.txz
-ln -s ${SLACKPKGDIR}/x/libSM-*.txz
-ln -s ${SLACKPKGDIR}/x/libX11-*.txz
-ln -s ${SLACKPKGDIR}/x/libXau-*.txz
-ln -s ${SLACKPKGDIR}/x/libXaw-*.txz
-ln -s ${SLACKPKGDIR}/x/libXdamage-*.txz
-ln -s ${SLACKPKGDIR}/x/libXdmcp-*.txz
-ln -s ${SLACKPKGDIR}/x/libXcursor-*.txz
-ln -s ${SLACKPKGDIR}/x/libXext-*.txz
-ln -s ${SLACKPKGDIR}/x/libXfixes-*.txz
-ln -s ${SLACKPKGDIR}/x/libXfont2-*.txz
-ln -s ${SLACKPKGDIR}/x/libXfontcache-*.txz
-ln -s ${SLACKPKGDIR}/x/libXft-*.txz
-ln -s ${SLACKPKGDIR}/x/libXi-*.txz
-ln -s ${SLACKPKGDIR}/x/libXinerama-*.txz
-ln -s ${SLACKPKGDIR}/x/libXmu-*.txz
-ln -s ${SLACKPKGDIR}/x/libXpm-*.txz
-ln -s ${SLACKPKGDIR}/x/libXrandr-*.txz
-ln -s ${SLACKPKGDIR}/x/libXrender-*.txz
-ln -s ${SLACKPKGDIR}/x/libXt-*.txz
-ln -s ${SLACKPKGDIR}/x/libXv-*.txz
-ln -s ${SLACKPKGDIR}/x/libXxf86vm-*.txz
-ln -s ${SLACKPKGDIR}/x/libdmx-*.txz
-ln -s ${SLACKPKGDIR}/x/libdrm-*.txz
-ln -s ${SLACKPKGDIR}/x/libfontenc-*.txz
-ln -s ${SLACKPKGDIR}/x/libpciaccess-*.txz
-ln -s ${SLACKPKGDIR}/x/libxcb-*.txz
-ln -s ${SLACKPKGDIR}/x/libxkbfile-*.txz
-ln -s ${SLACKPKGDIR}/x/libxshmfence-*.txz
-ln -s ${SLACKPKGDIR}/x/mkfontdir-*.txz
-ln -s ${SLACKPKGDIR}/x/mkfontscale-*.txz
-ln -s ${SLACKPKGDIR}/x/pixman-*.txz
-ln -s ${SLACKPKGDIR}/x/util-macros-*.txz # What is this used for?
-ln -s ${SLACKPKGDIR}/x/x11-skel-*.txz
-ln -s ${SLACKPKGDIR}/x/xauth-*.txz
-ln -s ${SLACKPKGDIR}/x/xhost-*.txz
-ln -s ${SLACKPKGDIR}/x/xorg-server-?.??.?-*.txz || exit 1
-ln -s ${SLACKPKGDIR}/x/xorgproto-*.txz
-ln -s ${SLACKPKGDIR}/x/xrandr-*.txz
-ln -s ${SLACKPKGDIR}/x/xrdb-*.txz
-ln -s ${SLACKPKGDIR}/x/xterm-*.txz
+linkpackage ${SLACKPKGDIR}/x/fontconfig-*.txz
+linkpackage ${SLACKPKGDIR}/x/iceauth-*.txz
+linkpackage ${SLACKPKGDIR}/x/libICE-*.txz
+linkpackage ${SLACKPKGDIR}/x/libSM-*.txz
+linkpackage ${SLACKPKGDIR}/x/libX11-*.txz
+linkpackage ${SLACKPKGDIR}/x/libXau-*.txz
+linkpackage ${SLACKPKGDIR}/x/libXaw-*.txz
+linkpackage ${SLACKPKGDIR}/x/libXdamage-*.txz
+linkpackage ${SLACKPKGDIR}/x/libXdmcp-*.txz
+linkpackage ${SLACKPKGDIR}/x/libXcursor-*.txz
+linkpackage ${SLACKPKGDIR}/x/libXext-*.txz
+linkpackage ${SLACKPKGDIR}/x/libXfixes-*.txz
+linkpackage ${SLACKPKGDIR}/x/libXfont2-*.txz
+linkpackage ${SLACKPKGDIR}/x/libXfontcache-*.txz
+linkpackage ${SLACKPKGDIR}/x/libXft-*.txz
+linkpackage ${SLACKPKGDIR}/x/libXi-*.txz
+linkpackage ${SLACKPKGDIR}/x/libXinerama-*.txz
+linkpackage ${SLACKPKGDIR}/x/libXmu-*.txz
+linkpackage ${SLACKPKGDIR}/x/libXpm-*.txz
+linkpackage ${SLACKPKGDIR}/x/libXrandr-*.txz
+linkpackage ${SLACKPKGDIR}/x/libXrender-*.txz
+linkpackage ${SLACKPKGDIR}/x/libXt-*.txz
+linkpackage ${SLACKPKGDIR}/x/libXv-*.txz
+linkpackage ${SLACKPKGDIR}/x/libXxf86vm-*.txz
+linkpackage ${SLACKPKGDIR}/x/libdmx-*.txz
+linkpackage ${SLACKPKGDIR}/x/libdrm-*.txz
+linkpackage ${SLACKPKGDIR}/x/libfontenc-*.txz
+linkpackage ${SLACKPKGDIR}/x/libpciaccess-*.txz
+linkpackage ${SLACKPKGDIR}/x/libxcb-*.txz
+linkpackage ${SLACKPKGDIR}/x/libxkbfile-*.txz
+linkpackage ${SLACKPKGDIR}/x/libxshmfence-*.txz
+linkpackage ${SLACKPKGDIR}/x/mkfontdir-*.txz
+linkpackage ${SLACKPKGDIR}/x/mkfontscale-*.txz
+linkpackage ${SLACKPKGDIR}/x/pixman-*.txz
+linkpackage ${SLACKPKGDIR}/x/util-macros-*.txz # What is this used for?
+linkpackage ${SLACKPKGDIR}/x/x11-skel-*.txz
+linkpackage ${SLACKPKGDIR}/x/xauth-*.txz
+linkpackage ${SLACKPKGDIR}/x/xhost-*.txz
+linkpackage ${SLACKPKGDIR}/x/xorg-server-?.??.?-*.txz
+linkpackage ${SLACKPKGDIR}/x/xorgproto-*.txz
+linkpackage ${SLACKPKGDIR}/x/xrandr-*.txz
+linkpackage ${SLACKPKGDIR}/x/xrdb-*.txz
+linkpackage ${SLACKPKGDIR}/x/xterm-*.txz
 
 if [ "${INCXDESKTOPENVIRONMENT}" == "Y" ]; then
-  ln -s ${SLACKPKGDIR}/x/libXtst-*.txz
-  ln -s ${SLACKPKGDIR}/x/libevdev-*.txz
-  ln -s ${SLACKPKGDIR}/a/libgudev-*.txz
-  ln -s ${SLACKPKGDIR}/x/libinput-*.txz
-  ln -s ${SLACKPKGDIR}/x/libwacom-*.txz
-  ln -s ${SLACKPKGDIR}/x/mtdev-*.txz
-  ln -s ${SLACKPKGDIR}/x/xev-*.txz
-  ln -s ${SLACKPKGDIR}/x/xinit-*.txz
-  ln -s ${SLACKPKGDIR}/x/xinput-*.txz
-  ln -s ${SLACKPKGDIR}/x/xkbcomp-*.txz
-  ln -s ${SLACKPKGDIR}/x/xkeyboard-config-*.txz
-  for PKG in ${SLACKPKGDIR}/x/xf86-input-*.txz; do ln -s ${PKG}; done
+  linkpackage ${SLACKPKGDIR}/x/libXtst-*.txz
+  linkpackage ${SLACKPKGDIR}/x/libevdev-*.txz
+  linkpackage ${SLACKPKGDIR}/a/libgudev-*.txz
+  linkpackage ${SLACKPKGDIR}/x/libinput-*.txz
+  linkpackage ${SLACKPKGDIR}/x/libwacom-*.txz
+  linkpackage ${SLACKPKGDIR}/x/mtdev-*.txz
+  linkpackage ${SLACKPKGDIR}/x/xev-*.txz
+  linkpackage ${SLACKPKGDIR}/x/xinit-*.txz
+  linkpackage ${SLACKPKGDIR}/x/xinput-*.txz
+  linkpackage ${SLACKPKGDIR}/x/xkbcomp-*.txz
+  linkpackage ${SLACKPKGDIR}/x/xkeyboard-config-*.txz
+  for PKG in ${SLACKPKGDIR}/x/xf86-input-*.txz; do linkpackage ${PKG}; done
 
-  ln -s ${SLACKPKGDIR}/x/xf86-video-vesa-*.txz
-  ln -s ${SLACKPKGDIR}/x/xf86-video-cirrus-*.txz
-  ln -s ${SLACKPKGDIR}/x/xf86-video-vboxvideo-*.txz
-  ln -s ${SLACKPKGDIR}/x/xf86-video-v4l-*.txz
+  linkpackage ${SLACKPKGDIR}/x/xf86-video-vesa-*.txz
+  linkpackage ${SLACKPKGDIR}/x/xf86-video-cirrus-*.txz
+  linkpackage ${SLACKPKGDIR}/x/xf86-video-vboxvideo-*.txz
+  linkpackage ${SLACKPKGDIR}/x/xf86-video-v4l-*.txz
 fi
 
 if [ "${INCXF86VIDEOAMDGPU}" == "Y" ]; then
-  ln -s ${SLACKPKGDIR}/x/xf86-video-amdgpu-*.txz
+  linkpackage ${SLACKPKGDIR}/x/xf86-video-amdgpu-*.txz
 fi
 
 if [ "${INCXF86VIDEOAST}" == "Y" ]; then
-  ln -s ${SLACKPKGDIR}/x/xf86-video-ast-*.txz
+  linkpackage ${SLACKPKGDIR}/x/xf86-video-ast-*.txz
 fi
 
 if [ "${INCXF86VIDEOATI}" == "Y" ]; then
-  ln -s ${SLACKPKGDIR}/x/xf86-video-ati-*.txz
+  linkpackage ${SLACKPKGDIR}/x/xf86-video-ati-*.txz
 fi
 
 if [ "${INCXF86VIDEOINTEL}" == "Y" ]; then
-  ln -s ${SLACKPKGDIR}/x/xf86-video-intel-*.txz
-  ln -s ${SLACKPKGDIR}/x/intel-vaapi-driver-*.txz
+  linkpackage ${SLACKPKGDIR}/x/xf86-video-intel-*.txz
+  linkpackage ${SLACKPKGDIR}/x/intel-vaapi-driver-*.txz
 fi
 
 if [ "${INCXF86VIDEOMGA}" == "Y" ]; then
-  ln -s ${SLACKPKGDIR}/x/xf86-video-mga-*.txz
+  linkpackage ${SLACKPKGDIR}/x/xf86-video-mga-*.txz
 fi
 
 if [ "${INCXF86VIDEONOUVEAU}" == "Y" ]; then
-  ln -s ${SLACKPKGDIR}/x/xf86-video-nouveau-*.txz
+  linkpackage ${SLACKPKGDIR}/x/xf86-video-nouveau-*.txz
 fi
 
 if [ "${INCXF86VIDEOVMWARE}" == "Y" ]; then
-  ln -s ${SLACKPKGDIR}/x/xf86-video-vmware-*.txz
+  linkpackage ${SLACKPKGDIR}/x/xf86-video-vmware-*.txz
 fi
 
 if [ "${INCADOBEFONTS}" == "Y" ]; then
-  for PKG in ${SLACKPKGDIR}/x/font-adobe-*.txz; do ln -s ${PKG}; done
+  for PKG in ${SLACKPKGDIR}/x/font-adobe-*.txz; do linkpackage ${PKG}; done
 fi
 
 if [ "${INCBHFONTS}" == "Y" ]; then
-  for PKG in ${SLACKPKGDIR}/x/font-bh-*.txz; do ln -s ${PKG}; done
+  for PKG in ${SLACKPKGDIR}/x/font-bh-*.txz; do linkpackage ${PKG}; done
 fi
 
 if [ "${INCBITSTREAMFONTS}" == "Y" ]; then
-  for PKG in ${SLACKPKGDIR}/x/font-bitstream-*.txz; do ln -s ${PKG}; done
+  for PKG in ${SLACKPKGDIR}/x/font-bitstream-*.txz; do linkpackage ${PKG}; done
 fi
 
 if [ "${INCGHOSTSCRIPT}" == "Y" ]; then
-  ln -s ${SLACKPKGDIR}/ap/ghostscript-?.*.txz || exit 1
-  ln -s ${SLACKPKGDIR}/ap/ghostscript-fonts-std-*.txz
+  linkpackage ${SLACKPKGDIR}/ap/ghostscript-?.*.txz
+  linkpackage ${SLACKPKGDIR}/ap/ghostscript-fonts-std-*.txz
 fi
 
 #if [ "${INCALLXFONTS}" == "Y" ]; then
-#  ln -s ${SLACKPKGDIR}/x/sazanami-fonts-ttf-*.txz
-#  ln -s ${SLACKPKGDIR}/x/sinhala_lklug-font-ttf-*.txz
-#  ln -s ${SLACKPKGDIR}/x/tibmachuni-font-ttf-*.txz
-#  ln -s ${SLACKPKGDIR}/x/ttf-indic-fonts-*.txz
-#  ln -s ${SLACKPKGDIR}/x/ttf-tlwg-*.txz
-#  ln -s ${SLACKPKGDIR}/x/wqy-zenhei-font-ttf-*.txz
-#  for PKG in ${SLACKPKGDIR}/x/font-*.txz; do ln -s ${PKG}; done
+#  linkpackage ${SLACKPKGDIR}/x/sazanami-fonts-ttf-*.txz
+#  linkpackage ${SLACKPKGDIR}/x/sinhala_lklug-font-ttf-*.txz
+#  linkpackage ${SLACKPKGDIR}/x/tibmachuni-font-ttf-*.txz
+#  linkpackage ${SLACKPKGDIR}/x/ttf-indic-fonts-*.txz
+#  linkpackage ${SLACKPKGDIR}/x/ttf-tlwg-*.txz
+#  linkpackage ${SLACKPKGDIR}/x/wqy-zenhei-font-ttf-*.txz
+#  for PKG in ${SLACKPKGDIR}/x/font-*.txz; do linkpackage ${PKG}; done
 #fi
 
 if [ "${INCLIBXKLAVIER}" == "Y" ]; then
-  ln -s ${SLACKPKGDIR}/l/libxklavier-*.txz
+  linkpackage ${SLACKPKGDIR}/l/libxklavier-*.txz
 fi
 
 if [ "${INCLIBXRES}" == "Y" ]; then
-  ln -s ${SLACKPKGDIR}/x/libXres-*.txz
+  linkpackage ${SLACKPKGDIR}/x/libXres-*.txz
 fi
 
 if [ "${INCMESA}" == "Y" ]; then
-  ln -s ${SLACKPKGDIR}/x/freeglut-*.txz
-  ln -s ${SLACKPKGDIR}/x/glew-*.txz
-  ln -s ${SLACKPKGDIR}/x/glu-*.txz
-  ln -s ${SLACKPKGDIR}/x/libepoxy-*.txz
-  ln -s ${SLACKPKGDIR}/x/mesa-*.txz
+  linkpackage ${SLACKPKGDIR}/x/freeglut-*.txz
+  linkpackage ${SLACKPKGDIR}/x/glew-*.txz
+  linkpackage ${SLACKPKGDIR}/x/glu-*.txz
+  linkpackage ${SLACKPKGDIR}/x/libepoxy-*.txz
+  linkpackage ${SLACKPKGDIR}/x/mesa-*.txz
 fi
 
 if [ "${INCLIBVA}" == "Y" ]; then
-  ln -s ${SLACKPKGDIR}/x/libva-?.?.?-*.txz || exit 1
+  linkpackage ${SLACKPKGDIR}/x/libva-?.?.?-*.txz
 fi
 
 if [ "${INCLIBVDPAU}" == "Y" ]; then
-  ln -s ${SLACKPKGDIR}/x/libvdpau-*.txz
+  linkpackage ${SLACKPKGDIR}/x/libvdpau-*.txz
 fi
 
 if [ "${INCXCBUTIL}" == "Y" ]; then
-  ln -s ${SLACKPKGDIR}/x/xcb-util-?.?.?-*.txz || exit 1
-# ln -s ${SLACKPKGDIR}/x//xcb-util-image-0.4.0-x86_64-2.txz
-# ln -s ${SLACKPKGDIR}/x//xcb-util-keysyms-0.4.0-x86_64-2.txz
-# ln -s ${SLACKPKGDIR}/x//xcb-util-wm-0.4.1-x86_64-2.txz
-# ln -s ${SLACKPKGDIR}/x//xcb-util-errors-1.0-x86_64-1.txz
-# ln -s ${SLACKPKGDIR}/x/xcb-util-renderutil-0.3.9-x86_64-2.txz
-# ln -s ${SLACKPKGDIR}/x/xcb-util-cursor-0.1.3-x86_64-1.txz
+  linkpackage ${SLACKPKGDIR}/x/xcb-util-?.?.?-*.txz
+# linkpackage ${SLACKPKGDIR}/x//xcb-util-image-0.4.0-x86_64-2.txz
+# linkpackage ${SLACKPKGDIR}/x//xcb-util-keysyms-0.4.0-x86_64-2.txz
+# linkpackage ${SLACKPKGDIR}/x//xcb-util-wm-0.4.1-x86_64-2.txz
+# linkpackage ${SLACKPKGDIR}/x//xcb-util-errors-1.0-x86_64-1.txz
+# linkpackage ${SLACKPKGDIR}/x/xcb-util-renderutil-0.3.9-x86_64-2.txz
+# linkpackage ${SLACKPKGDIR}/x/xcb-util-cursor-0.1.3-x86_64-1.txz
 fi
 
 if [ "${INCLIBXAW3DXFT}" == "Y" ]; then
-#  ln -s ${SLACKPKGDIR}/x/libXaw3d-*.txz
-  ln -s ${SLACKPKGDIR}/x/libXaw3dXft-*.txz
+#  linkpackage ${SLACKPKGDIR}/x/libXaw3d-*.txz
+  linkpackage ${SLACKPKGDIR}/x/libXaw3dXft-*.txz
 fi
 
 if [ "${INCLIBXCOMPOSITE}" == "Y" ]; then
-  ln -s ${SLACKPKGDIR}/x/libXcomposite-*.txz
+  linkpackage ${SLACKPKGDIR}/x/libXcomposite-*.txz
 fi
 
 if [ "${INCLIBXVMC}" == "Y" ]; then
-  ln -s ${SLACKPKGDIR}/x/libXvMC-*.txz
+  linkpackage ${SLACKPKGDIR}/x/libXvMC-*.txz
 fi
 
 if [ "${INCLIBXXF86DGA}" == "Y" ]; then
-  ln -s ${SLACKPKGDIR}/x/libXxf86dga-*.txz
-#  ln -s ${SLACKPKGDIR}/x/xf86dga-*.txz
+  linkpackage ${SLACKPKGDIR}/x/libXxf86dga-*.txz
+#  linkpackage ${SLACKPKGDIR}/x/xf86dga-*.txz
 fi
 
 if [ "${INCLIBXXF86MISC}" == "Y" ]; then
-  ln -s ${SLACKPKGDIR}/x/libXxf86misc-*.txz
+  linkpackage ${SLACKPKGDIR}/x/libXxf86misc-*.txz
 fi
 
 if [ "${INCLIBXSCRNSAVER}" == "Y" ]; then
-  ln -s ${SLACKPKGDIR}/x/libXScrnSaver-*.txz
+  linkpackage ${SLACKPKGDIR}/x/libXScrnSaver-*.txz
 fi
 
 if [ "${INCMAKEDEPEND}" == "Y" ]; then
-  ln -s ${SLACKPKGDIR}/x/makedepend-*.txz
+  linkpackage ${SLACKPKGDIR}/x/makedepend-*.txz
 fi
 
 if [ "${INCMOTIF}" == "Y" ]; then
-  ln -s ${SLACKPKGDIR}/x/motif-*.txz
+  linkpackage ${SLACKPKGDIR}/x/motif-*.txz
 fi
 
 if [ "${INCTRANSSET}" == "Y" ]; then
-  ln -s ${SLACKPKGDIR}/x/transset-*.txz
+  linkpackage ${SLACKPKGDIR}/x/transset-*.txz
 fi
 
 if [ "${INCXBACKLIGHT}" == "Y" ]; then
-  ln -s ${SLACKPKGDIR}/x/xbacklight-*.txz
+  linkpackage ${SLACKPKGDIR}/x/xbacklight-*.txz
 fi
 
 if [ "${INCXCALC}" == "Y" ]; then
-  ln -s ${SLACKPKGDIR}/x/xcalc-*.txz
+  linkpackage ${SLACKPKGDIR}/x/xcalc-*.txz
 fi
 
 if [ "${INCXDG}" == "Y" ]; then
-  ln -s ${SLACKPKGDIR}/x/xdg-user-dirs-*.txz
-  ln -s ${SLACKPKGDIR}/x/xdg-utils-*.txz
+  linkpackage ${SLACKPKGDIR}/x/xdg-user-dirs-*.txz
+  linkpackage ${SLACKPKGDIR}/x/xdg-utils-*.txz
 fi
 
 if [ "${INCXDPYINFO}" == "Y" ]; then
-  ln -s ${SLACKPKGDIR}/x/xdpyinfo-*.txz
+  linkpackage ${SLACKPKGDIR}/x/xdpyinfo-*.txz
 fi
 
 if [ "${INCXDRIINFO}" == "Y" ]; then
-  ln -s ${SLACKPKGDIR}/x/xdriinfo-*.txz
+  linkpackage ${SLACKPKGDIR}/x/xdriinfo-*.txz
 fi
 
 if [ "${INCXKILL}" == "Y" ]; then
-  ln -s ${SLACKPKGDIR}/x/xkill-*.txz
+  linkpackage ${SLACKPKGDIR}/x/xkill-*.txz
 fi
 
 if [ "${INCXMAN}" == "Y" ]; then
-  ln -s ${SLACKPKGDIR}/x/xman-*.txz
+  linkpackage ${SLACKPKGDIR}/x/xman-*.txz
 fi
 
 if [ "${INCXMESSAGE}" == "Y" ]; then
-  ln -s ${SLACKPKGDIR}/x/xmessage-*.txz
+  linkpackage ${SLACKPKGDIR}/x/xmessage-*.txz
 fi
 
 if [ "${INCXMORE}" == "Y" ]; then
-  ln -s ${SLACKPKGDIR}/x/xmore-*.txz
+  linkpackage ${SLACKPKGDIR}/x/xmore-*.txz
 fi
 
 if [ "${INCXPROP}" == "Y" ]; then
-  ln -s ${SLACKPKGDIR}/x/xprop-*.txz
+  linkpackage ${SLACKPKGDIR}/x/xprop-*.txz
 fi
 
 if [ "${INCXSET}" == "Y" ]; then
-  ln -s ${SLACKPKGDIR}/x/xset-*.txz
+  linkpackage ${SLACKPKGDIR}/x/xset-*.txz
 fi
 
 if [ "${INCXSETROOT}" == "Y" ]; then
-  ln -s ${SLACKPKGDIR}/x/xsetroot-*.txz
+  linkpackage ${SLACKPKGDIR}/x/xsetroot-*.txz
 fi
 
 if [ "${INCXKBMAP}" == "Y" ]; then
-  ln -s ${SLACKPKGDIR}/x/setxkbmap-*.txz
+  linkpackage ${SLACKPKGDIR}/x/setxkbmap-*.txz
 fi
 
 if [ "${INCXVINFO}" == "Y" ]; then
-  ln -s ${SLACKPKGDIR}/x/xvinfo-*.txz
+  linkpackage ${SLACKPKGDIR}/x/xvinfo-*.txz
 fi
 
 if [ "${INCXWD}" == "Y" ]; then
-  ln -s ${SLACKPKGDIR}/x/xwd-*.txz
-  ln -s ${SLACKPKGDIR}/x/xwud-*.txz
+  linkpackage ${SLACKPKGDIR}/x/xwd-*.txz
+  linkpackage ${SLACKPKGDIR}/x/xwud-*.txz
 fi
 
 if [ "${INCXWININFO}" == "Y" ]; then
-  ln -s ${SLACKPKGDIR}/x/xwininfo-*.txz
+  linkpackage ${SLACKPKGDIR}/x/xwininfo-*.txz
 fi
 
 if [ "${INCINTELGPUTOOLS}" == "Y" ]; then
-  ln -s ${SLACKPKGDIR}/x/intel-gpu-tools-*.txz
+  linkpackage ${SLACKPKGDIR}/x/intel-gpu-tools-*.txz
 fi
