@@ -28,7 +28,7 @@ if [ "${INCIPWFIRMWARE}" == "Y" ]; then
 fi
 
 if [ "${INCWICD}" == "Y" ]; then
-  linkmodule ${SLACKEXTRA}/wicd/wicd-*.txz
+  linkpackage ${SLACKEXTRA}/wicd/wicd-*.txz
 fi
 
 if [ "${INCWPASUPPLICANT}" == "Y" ]; then

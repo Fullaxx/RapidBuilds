@@ -512,5 +512,5 @@ fi
 
 # IS THIS GONE NOW??
 #if [ "${INCMOZILLAFIREFOX}" == "Y" -a "${INCMPLAYER}" == "Y" ]; then
-#  linkmodule ${SLACKEXTRA}/mplayerplug-in/mplayerplug-in-*.txz
+#  linkpackage ${SLACKEXTRA}/mplayerplug-in/mplayerplug-in-*.txz
 #fi

@@ -103,7 +103,7 @@ linkpackage ${SLACKPKGDIR}/n/ntp-*.txz
 linkpackage ${SLACKPKGDIR}/n/openssh-*.txz
 linkpackage ${SLACKPKGDIR}/n/libmnl-*.txz
 
-linkmodule ${SLACKEXTRA}/bash-completion/bash-completion-*.txz
+linkpackage ${SLACKEXTRA}/bash-completion/bash-completion-*.txz
 
 # Needed for udisks
 # linkpackage ${SLACKPKGDIR}/l/libatasmart-*.txz
