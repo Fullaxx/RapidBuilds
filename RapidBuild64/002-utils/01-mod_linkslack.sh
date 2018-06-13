@@ -41,6 +41,10 @@ if [ "${INCFLOPPY}" == "Y" ]; then
   ln -s ${SLACKPKGDIR}/a/floppy-*.txz
 fi
 
+if [ "${INCHAVEGED}" == "Y" ]; then
+  ln -s ${SLACKPKGDIR}/a/haveged-*.txz
+fi
+
 if [ "${INCHDPARM}" == "Y" ]; then
   ln -s ${SLACKPKGDIR}/a/hdparm-*.txz
 fi
