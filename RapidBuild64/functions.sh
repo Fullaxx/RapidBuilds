@@ -149,13 +149,9 @@ loadconfig()
   rapiddeplogiccheck
   rootcheck
 
-# enable
-  shopt -s nullglob
-
 # Read in each modules package requests
-  for PKGCFG in ${PROJECTBASE}/???-*/packages.cfg.sh; do source ${PKGCFG}; loadrdlapps; done
-
-# disable
+  shopt -s nullglob
+  for PKGCFG in ${PROJECTBASE}/???-*/packages.?.cfg.sh; do source ${PKGCFG}; loadrdlapps; done
   shopt -u nullglob
 }
 
