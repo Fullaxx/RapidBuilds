@@ -1,1 +1,0 @@
-../basis/006-devel/packages.cfg.sh
