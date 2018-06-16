@@ -1,9 +1,10 @@
---- rc.S	2017-11-20 14:50:44.317514140 +0000
-+++ rc.S.new	2017-11-20 14:51:00.277351980 +0000
-@@ -376,3 +376,6 @@
+--- rc.S	2018-06-16 18:33:43.205469003 +0000
++++ rc.S.new	2018-06-16 18:35:12.594237016 +0000
+@@ -380,3 +380,7 @@
+   dd if=/dev/urandom of=/etc/random-seed count=1 bs=512 2> /dev/null
  fi
  chmod 600 /etc/random-seed
- 
++
 +if [ -x /etc/rc.d/rc.rl_init ]; then
 +  . /etc/rc.d/rc.rl_init
 +fi

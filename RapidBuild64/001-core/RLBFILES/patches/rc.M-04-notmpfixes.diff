@@ -1,12 +1,11 @@
---- rc.M	2017-11-20 15:15:10.662616473 +0000
-+++ rc.M.new	2017-11-20 15:15:28.832429714 +0000
-@@ -105,16 +105,6 @@
+--- rc.M	2018-06-16 18:43:19.387529938 +0000
++++ rc.M.new	2018-06-16 18:46:37.694829228 +0000
+@@ -120,15 +120,6 @@
    /etc/rc.d/rc.ntpd start
  fi
  
 -# Remove stale locks and junk files (must be done after mount -a!)
 -/bin/rm -f /var/lock/* /var/spool/uucp/LCK..* /tmp/.X*lock /tmp/core /core 2> /dev/null
--/bin/rm -rf /var/spool/cron/cron.?????? 2> /dev/null
 -
 -# Remove stale hunt sockets so the game can start.
 -if [ -r /tmp/hunt -o -r /tmp/hunt.stats ]; then

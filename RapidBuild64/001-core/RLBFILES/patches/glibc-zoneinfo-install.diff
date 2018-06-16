@@ -1,5 +1,5 @@
---- doinst.sh	2018-05-24 17:58:57.000000000 +0000
-+++ doinst.sh.new	2018-05-31 20:41:38.000000000 +0000
+--- doinst.sh	2018-06-14 04:54:55.000000000 +0000
++++ doinst.sh.new	2018-06-16 18:27:05.000000000 +0000
 @@ -10,47 +10,6 @@
  # /etc/localtime-copied-from will be a symlink to a file under
  # /usr/share/zoneinfo, and /etc/localtime will be a copy of that file.
@@ -22,7 +22,7 @@
 -#
 -# If we see that the machine's localtime-copied-from symlink is pointing
 -# to US/Pacific-New, change it to point to US/Pacific instead.
--if [ "$(/bin/ls -l etc/localtime-copied-from | rev | cut -f 1,2 -d / | rev)" = "US/Pacific-New" ]; then
+-if [ "$(/bin/ls -l etc/localtime-copied-from 2> /dev/null | rev | cut -f 1,2 -d / | rev)" = "US/Pacific-New" ]; then
 -  ( cd etc ; rm -rf localtime-copied-from )
 -  ( cd etc ; ln -sf /usr/share/zoneinfo/US/Pacific localtime-copied-from )
 -fi
