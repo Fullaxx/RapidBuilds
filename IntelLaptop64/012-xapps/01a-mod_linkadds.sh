@@ -48,3 +48,12 @@ if [ "${INCFOX}" == "Y" ]; then
 # XFE needs FOX
   linkpackage "${PACKAGESDIR}/fox/fox-1.6.57-${ARCH}-bksrc1.xzm"
 fi
+
+if [ "${INCEVINCE}" == "Y" ]; then
+  linkpackage "${PACKAGESDIR}/evince/evince-3.28.2-${ARCH}-bksrc1.xzm"
+fi
+
+if [ "${INCLIBGXPS}" == "Y" ]; then
+# evince needs libgxps
+  linkpackage "${PACKAGESDIR}/libgxps/libgxps-0.2.5-${ARCH}-bksrc1.xzm"
+fi

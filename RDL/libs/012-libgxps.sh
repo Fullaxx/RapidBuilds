@@ -1,0 +1,7 @@
+if [ "${INCLIBGXPS}" == "Y" ]; then
+  INCCAIRO="Y"
+  INCLCMSTWO="Y"
+  INCLIBJPEGTURBO="Y"
+  INCLIBPNG="Y"
+  INCLIBTIFF="Y"
+fi

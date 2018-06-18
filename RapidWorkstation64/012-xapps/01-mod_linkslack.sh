@@ -514,3 +514,8 @@ fi
 #if [ "${INCMOZILLAFIREFOX}" == "Y" -a "${INCMPLAYER}" == "Y" ]; then
 #  linkpackage ${SLACKEXTRA}/mplayerplug-in/mplayerplug-in-*.txz
 #fi
+
+if [ "${INCLIBTIFF}" == "Y" ]; then
+# evince needs libtiff
+  linkpackage ${SLACKPKGDIR}/l/libtiff-*.txz
+fi
