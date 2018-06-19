@@ -36,6 +36,6 @@ if [ "${INCMOD010XORG}" == "Y" ]; then
   INCXWD="N"
   INCXWININFO="N"
 
-# What are these used for? Intel GPU hacking?
   INCINTELGPUTOOLS="N"
+  INCVULKANSDK="N"
 fi

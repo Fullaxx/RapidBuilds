@@ -274,3 +274,7 @@ fi
 if [ "${INCINTELGPUTOOLS}" == "Y" ]; then
   linkpackage ${SLACKPKGDIR}/x/intel-gpu-tools-*.txz
 fi
+
+if [ "${INCVULKANSDK}" == "Y" ]; then
+  linkpackage ${SLACKPKGDIR}/x/vulkan-sdk-*.txz
+fi
