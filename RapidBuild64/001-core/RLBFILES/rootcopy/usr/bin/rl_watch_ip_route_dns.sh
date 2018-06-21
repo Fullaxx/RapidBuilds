@@ -6,4 +6,4 @@ if [ -z "$1" ]; then
 fi
 
 DEV="$1"
-watch -n2 rl_list_ip_route_dns.sh
+watch -n2 rl_list_ip_route_dns.sh ${DEV}
