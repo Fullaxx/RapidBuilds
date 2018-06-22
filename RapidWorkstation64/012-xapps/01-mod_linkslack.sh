@@ -62,6 +62,10 @@ if [ "${INCGKRELLM}" == "Y" ]; then
   linkpackage ${SLACKPKGDIR}/xap/gkrellm-*.txz
 fi
 
+if [ "${INCGNUCHESS}" == "Y" ]; then
+  linkpackage ${SLACKPKGDIR}/xap/gnuchess-*.txz
+fi
+
 if [ "${INCGPARTED}" == "Y" ]; then
   linkpackage ${SLACKPKGDIR}/xap/gparted-*.txz
 fi
