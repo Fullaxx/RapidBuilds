@@ -7,6 +7,10 @@ if [ "${INCACPI}" == "Y" ]; then
   linkpackage "${PACKAGESDIR}/acpi/acpi-1.7-${ARCH}-bksrc1.xzm"
 fi
 
+if [ "${INCBINDTOOLS}" == "Y" ]; then
+  linkpackage "${PACKAGESDIR}/bindtools/bindtools-9.11.3-${ARCH}-4.xzm"
+fi
+
 if [ "${INCCALC}" == "Y" ]; then
   linkpackage "${PACKAGESDIR}/calc/calc-2.12.6.5-${ARCH}-bksrc1.xzm"
 fi
