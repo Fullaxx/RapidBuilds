@@ -227,6 +227,10 @@ if [ "${INCEBTABLES}" == "Y" ]; then
   linkpackage ${SLACKPKGDIR}/n/ebtables-*.txz
 fi
 
+if [ "${INCEPICFIVE}" == "Y" ]; then
+  linkpackage ${SLACKPKGDIR}/n/epic5-*.txz
+fi
+
 if [ "${INCETHTOOL}" == "Y" ]; then
   linkpackage ${SLACKPKGDIR}/n/ethtool-*.txz
 fi
@@ -247,6 +251,10 @@ if [ "${INCGNUPGTWO}" == "Y" ]; then
   linkpackage ${SLACKPKGDIR}/n/gnupg2-*.txz
   linkpackage ${SLACKPKGDIR}/n/npth-*.txz
   linkpackage ${SLACKPKGDIR}/n/libksba-*.txz
+fi
+
+if [ "${INCIRSSI}" == "Y" ]; then
+  linkpackage ${SLACKPKGDIR}/n/irssi-*.txz
 fi
 
 if [ "${INCLYNX}" == "Y" ]; then
