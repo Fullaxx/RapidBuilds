@@ -149,6 +149,10 @@ if [ "${INCGSETTINGSDESLTOPSCHEMAS}" == "Y" ]; then
 # Evince needs gsettings-desktop-schemas
   linkpackage ${SLACKPKGDIR}/l/gsettings-desktop-schemas-*.txz
 fi
+
+if [ "${INCTANGOICONTHEME}" == "Y" ]; then
+  linkpackage ${SLACKPKGDIR}/l/tango-icon-theme-*.txz
+fi
 ### Themes ############################
 
 ### Libraries #########################
