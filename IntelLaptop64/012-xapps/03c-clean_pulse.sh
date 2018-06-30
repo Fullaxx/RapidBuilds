@@ -1,1 +1,0 @@
-../basis/012-xapps/03c-clean_pulse.sh
