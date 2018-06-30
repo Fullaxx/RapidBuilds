@@ -7,7 +7,7 @@ if [ "$#" == "0" ]; then
   exit 1
 fi
 
-if [ ! -f spec.sh ]; then
+if [ "$0" != "./rebuild.sh" ]; then
   cd `dirname $0`
 fi
 
