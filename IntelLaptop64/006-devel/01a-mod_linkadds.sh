@@ -11,14 +11,6 @@ if [ "${INCCGDB}" == "Y" ]; then
   linkpackage "${PACKAGESDIR}/cgdb/cgdb-0.7.0-${ARCH}-bksrc1.xzm"
 fi
 
-if [ "${INCPROTOBUF}" == "Y" ]; then
-  linkpackage "${PACKAGESDIR}/protobuf/protobuf-3.5.2-${ARCH}-bksrc1.xzm"
-fi
-
-if [ "${INCPROTOBUFC}" == "Y" ]; then
-  linkpackage "${PACKAGESDIR}/protobuf/protobuf-c-1.3.0-${ARCH}-bksrc1.xzm"
-fi
-
 if [ "${INCVALGRIND}" == "Y" ]; then
   linkpackage "${PACKAGESDIR}/valgrind/valgrind-3.13.0-${ARCH}-bksrc1.xzm"
 fi

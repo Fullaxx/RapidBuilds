@@ -35,6 +35,18 @@ if [ "${INCLOOPAESSETUP}" == "Y" ]; then
   linkpackage "${PACKAGESDIR}/loop-aes-losetup/loop-aes-losetup-2.30.1-${ARCH}-bksrc1.xzm"
 fi
 
+if [ "${INCMOSH}" == "Y" ]; then
+  linkpackage "${PACKAGESDIR}/mosh/mosh-1.3.2-${ARCH}-bksrc1.xzm"
+fi
+
 if [ "${INCNUMACTL}" == "Y" ]; then
   linkpackage "${PACKAGESDIR}/numactl/numactl-2.0.11-${ARCH}-bksrc1.xzm"
+fi
+
+if [ "${INCPROTOBUF}" == "Y" ]; then
+  linkpackage "${PACKAGESDIR}/protobuf/protobuf-3.5.2-${ARCH}-bksrc1.xzm"
+fi
+
+if [ "${INCPROTOBUFC}" == "Y" ]; then
+  linkpackage "${PACKAGESDIR}/protobuf/protobuf-c-1.3.0-${ARCH}-bksrc1.xzm"
 fi
