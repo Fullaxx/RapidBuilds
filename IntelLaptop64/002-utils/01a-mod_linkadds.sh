@@ -27,6 +27,10 @@ if [ "${INCCURLFTPFS}" == "Y" ]; then
   linkpackage "${PACKAGESDIR}/curlftpfs/curlftpfs-0.9.2-${ARCH}-bksrc1.xzm"
 fi
 
+if [ "${INCEXTUNDELETE}" == "Y" ]; then
+  linkpackage "${PACKAGESDIR}/extundelete/extundelete-0.2.4-${ARCH}-bksrc1.xzm"
+fi
+
 if [ "${INCLOOPAESSETUP}" == "Y" ]; then
   linkpackage "${PACKAGESDIR}/loop-aes-losetup/loop-aes-losetup-2.30.1-${ARCH}-bksrc1.xzm"
 fi
