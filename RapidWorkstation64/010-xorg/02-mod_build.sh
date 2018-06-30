@@ -21,7 +21,7 @@ for PKG in *.txz; do
 
   echo "Exploding ${PKG} ..."
 
-  tar xf ${PKG} -C ${DIR} || exit 1
+  tar xf ${PKG} -C ${DIR}
 
   if [ -d ${DIR}/install ]; then
 
@@ -33,7 +33,7 @@ for PKG in *.txz; do
         #sed -e "s@/usr/bin/fc-cache -f@echo /usr/bin/fc-cache -f@g" -i ${DIR}/install/doinst.sh
       fi
 
-      bash -c "cd ${DIR}; source ./install/doinst.sh"
+      bash -c "cd ${DIR}; source ./install/doinst.sh" || echo "*** FAILED *** ${PKG} install/doinst.sh (continuing anyway)"
     fi
     rm -rf ${DIR}/install
   fi
@@ -42,6 +42,6 @@ done
 
 for PKG in *.xzm; do
   echo "Exploding ${PKG} ..."
-  xzm2dir ${PKG} ${DIR} >/dev/null || exit 1
+  xzm2dir ${PKG} ${DIR} >/dev/null
 done
 shopt -u nullglob # disable

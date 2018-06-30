@@ -1,3 +1,9 @@
+bail()
+{
+  echo "$1"
+  exit 1
+}
+
 slackwarecheck()
 {
   if [ -z "${SLACKPKGDIR}" ]; then
@@ -47,6 +53,7 @@ rootcheck()
 
 rapidbasecheck()
 {
+#  echo "PROJECTBASE: ${PROJECTBASE}"
   if [ -z "${PROJECTBASE}" ]; then
     echo "PROJECTBASE not defined in spec.sh!"
     exit 1
@@ -164,19 +171,3 @@ linkpackage()
   fi
   ln -s "${PKG}"
 }
-
-bail()
-{
-  echo "$1"
-  exit 1
-}
-
-#loadconfig()
-#{
-#  CONFIGFILE="${PROJECTBASE}/config.sh"
-#  if [ ! -r ${CONFIGFILE} ]; then
-#    echo "${CONFIGFILE} not found!"
-#    exit 1
-#  fi
-#  source "${CONFIGFILE}"
-#}

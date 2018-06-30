@@ -22,10 +22,10 @@ unpacksambalibs()
 if [ "${INCMOZILLATHUNDERBIRD}" == "Y" ]; then
   if [ -d ${DIR}/usr/${LIBDIR}/thunderbird-??.?.? ]; then
     cd ${DIR}/usr/${LIBDIR}/
-    ln -s `ls -1d thunderbird-*` thunderbird || exit 1
+    ln -s `ls -1d thunderbird-*` thunderbird
   elif [ -d ${DIR}/usr/${LIBDIR}/thunderbird-??.? ]; then
     cd ${DIR}/usr/${LIBDIR}/
-    ln -s `ls -1d thunderbird-*` thunderbird || exit 1
+    ln -s `ls -1d thunderbird-*` thunderbird
   else
     echo "Could not resolve thunderbird link in ${DIR}/usr/${LIBDIR}/"
     exit 1
@@ -35,10 +35,10 @@ fi
 if [ "${INCMOZILLAFIREFOX}" == "Y" ]; then
   if [ -d ${DIR}/usr/${LIBDIR}/firefox-??.? ]; then
     cd ${DIR}/usr/${LIBDIR}/
-    ln -s `ls -1d firefox-*` firefox || exit 1
+    ln -s `ls -1d firefox-*` firefox
   elif [ -d ${DIR}/usr/${LIBDIR}/firefox-??.?.? ]; then
     cd ${DIR}/usr/${LIBDIR}/
-    ln -s `ls -1d firefox-*` firefox || exit 1
+    ln -s `ls -1d firefox-*` firefox
   else
     echo "Could not resolve firefox link in ${DIR}/usr/${LIBDIR}/"
     exit 1

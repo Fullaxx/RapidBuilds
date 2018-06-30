@@ -2,7 +2,6 @@
 
 source ../spec.sh
 source ./module_spec.sh
-set -e
 
 if [ -d ${BDIR} ]; then rm -r ${BDIR}; fi
 mkdir -p ${BDIR}

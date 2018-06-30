@@ -13,6 +13,6 @@ if [ -d ${SEARCHDIR} ]; then
   for FILE in ${SEARCHDIR}/* ; do
     LOCALPATH=`echo ${FILE} | cut -d/ -f3-`
     echo "Installing ${LOCALPATH} ..."
-    install -Dp -o root -g root -m 0755 ${FILE} "${DIR}/usr/bin/`basename ${FILE}`" || exit 1
+    install -Dp -o root -g root -m 0755 ${FILE} "${DIR}/usr/bin/`basename ${FILE}`"
   done
 fi

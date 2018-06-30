@@ -11,7 +11,7 @@ fi
 
 PATCHFILE="${PATCHESDIR}/rc.sshd.diff"
 if [ -f ${DIR}/etc/rc.d/rc.sshd -a -r ${PATCHFILE} ]; then
-  patch ${DIR}/etc/rc.d/rc.sshd < ${PATCHFILE} || exit 1
+  patch ${DIR}/etc/rc.d/rc.sshd < ${PATCHFILE}
 fi
 
 # SSHD server config defaults

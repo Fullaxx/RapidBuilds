@@ -1,5 +1,7 @@
 #!/bin/bash
 
+set -e
+
 if [ "$#" == "0" ]; then
   echo "I need a list of numbers..."
   echo "e.g. $0 1 2 3"
@@ -19,15 +21,17 @@ else
 fi
 
 if [ "$1" == "all" ]; then
-  ./rebuild.sh ${PROJECTCATEGORIES} && cd baseoutput && ./00-all.sh || exit 1
+  ./rebuild.sh ${PROJECTCATEGORIES}
+  cd baseoutput
+  ./00-all.sh
   exit 0
 fi
 
 while [ -n "$1" ]; do
   cd 00$1-* 2>/dev/null || cd 0$1-*
-  if [ "$?" != "0" ]; then exit 1; fi
+#  if [ "$?" != "0" ]; then exit 1; fi
 
-  ./00-all.sh || exit 1
+  ./00-all.sh
   cd ../
   shift
 done

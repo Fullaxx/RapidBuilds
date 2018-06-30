@@ -2,7 +2,6 @@
 
 source ../spec.sh
 source ./module_spec.sh
-set -e
 
 if [ ! -d ${BOOTDIR} ]; then
   echo "${BOOTDIR} deos not exist!"

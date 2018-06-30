@@ -19,26 +19,26 @@ for PKG in *.txz; do
 
   echo "Exploding ${PKG} ..."
 
-  tar xf ${PKG} -C ${DIR} || exit 1
+  tar xf ${PKG} -C ${DIR}
 
   if [[ ${PKG} == seamonkey-solibs-*.txz ]]; then
     echo "${PKG}: Removing ld.so.conf manipulation from install/doinst.sh ..."
-    sed -e 's/^if/#if/g' -e 's/^fi/#fi/g' -e 's/  echo/#echo/' -e 's@  /sbin/ldconfig@#/sbin/ldconfig@' -i ${DIR}/install/doinst.sh || exit 1
+    sed -e 's/^if/#if/g' -e 's/^fi/#fi/g' -e 's/  echo/#echo/' -e 's@  /sbin/ldconfig@#/sbin/ldconfig@' -i ${DIR}/install/doinst.sh
   fi
 
   if [[ ${PKG} == polkit-*.txz ]]; then
     echo "${PKG}: Removing /etc/{passwd,group} manipulation from install/doinst.sh ..."
-    sed -e s@etc/passwd@/dev/null@g -e s@etc/group@/dev/null@g -i ${DIR}/install/doinst.sh || exit 1
+    sed -e s@etc/passwd@/dev/null@g -e s@etc/group@/dev/null@g -i ${DIR}/install/doinst.sh
   fi
 
   if [[ ${PKG} == usbmuxd-*.txz ]]; then
     echo "${PKG}: Removing /etc/passwd manipulation from install/doinst.sh ..."
-    sed -e s@etc/passwd@/dev/null@g -i ${DIR}/install/doinst.sh || exit 1
+    sed -e s@etc/passwd@/dev/null@g -i ${DIR}/install/doinst.sh
   fi
 
   if [ -d ${DIR}/install ]; then
     if [ -f ${DIR}/install/doinst.sh ]; then
-      bash -c "cd ${DIR}; source ./install/doinst.sh"
+      bash -c "cd ${DIR}; source ./install/doinst.sh" || echo "*** FAILED *** ${PKG} install/doinst.sh (continuing anyway)"
     fi
     rm -rf ${DIR}/install
   fi
@@ -47,7 +47,7 @@ done
 
 for PKG in *.xzm; do
   echo "Exploding ${PKG} ..."
-  xzm2dir ${PKG} ${DIR} >/dev/null || exit 1
+  xzm2dir ${PKG} ${DIR} >/dev/null
 done
 shopt -u nullglob # disable
 

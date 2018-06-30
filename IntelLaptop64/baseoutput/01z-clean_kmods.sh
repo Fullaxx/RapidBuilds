@@ -9,7 +9,7 @@ mkdir ${DIR}
 
 PKG="000-kmods-${KERNVERS}.xzm"
 echo "Exploding ${PKG} ..."
-xzm2dir ${PKG} ${DIR} >/dev/null || exit 1
+xzm2dir ${PKG} ${DIR} >/dev/null
 
 # SAVE SOME SPACE
 
@@ -108,5 +108,5 @@ rm -rf ${DIR}/lib/modules/*/kernel/drivers/staging/irda
 
 rm ${PKG}
 echo "Repacking ${PKG} ..."
-dir2xzm ${DIR} ${PKG} >/dev/null || exit 1
+dir2xzm ${DIR} ${PKG} >/dev/null
 rm -rf ${DIR}

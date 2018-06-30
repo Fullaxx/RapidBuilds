@@ -13,7 +13,7 @@ if [ -d ${SEARCHDIR} ]; then
   for FILE in ${SEARCHDIR}/* ; do
     LOCALPATH=`echo ${FILE} | cut -d/ -f3-`
     echo "Installing ${LOCALPATH} ..."
-    install -Dp -o root -g root -m 0755 ${FILE} "${DIR}/etc/profile.d/`basename ${FILE}`" || exit 1
+    install -Dp -o root -g root -m 0755 ${FILE} "${DIR}/etc/profile.d/`basename ${FILE}`"
   done
 fi
 
@@ -22,7 +22,7 @@ if [ -d ${SEARCHDIR} ]; then
   for FILE in ${SEARCHDIR}/* ; do
     LOCALPATH=`echo ${FILE} | cut -d/ -f3-`
     echo "Installing ${LOCALPATH} ..."
-    install -Dp -o root -g root -m 0755 ${FILE} "${DIR}/etc/rc.d/`basename ${FILE}`" || exit 1
+    install -Dp -o root -g root -m 0755 ${FILE} "${DIR}/etc/rc.d/`basename ${FILE}`"
   done
 fi
 
@@ -31,7 +31,7 @@ if [ -d ${SEARCHDIR} ]; then
   for FILE in ${SEARCHDIR}/* ; do
     LOCALPATH=`echo ${FILE} | cut -d/ -f3-`
     echo "Installing ${LOCALPATH} ..."
-    install -Dp -o root -g root -m 0755 ${FILE} "${DIR}/usr/bin/`basename ${FILE}`" || exit 1
+    install -Dp -o root -g root -m 0755 ${FILE} "${DIR}/usr/bin/`basename ${FILE}`"
   done
 fi
 
@@ -40,7 +40,7 @@ if [ -d ${SEARCHDIR} ]; then
   for FILE in ${SEARCHDIR}/* ; do
     LOCALPATH=`echo ${FILE} | cut -d/ -f3-`
     echo "Installing ${LOCALPATH} ..."
-    install -Dp -o root -g root -m 0644 ${FILE} "${DIR}/usr/lib/`basename ${FILE}`" || exit 1
+    install -Dp -o root -g root -m 0644 ${FILE} "${DIR}/usr/lib/`basename ${FILE}`"
   done
 fi
 

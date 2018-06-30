@@ -2,7 +2,6 @@
 
 source ../spec.sh
 source ./module_spec.sh
-set -e
 
 if [ ! -d ${MODSDIR} ]; then
   echo "${MODSDIR} deos not exist!"
