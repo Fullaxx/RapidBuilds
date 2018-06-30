@@ -5,3 +5,6 @@ if [ "${INCEVINCE}" == "Y" ]; then
   INCLIBPNG="Y"
   INCLIBTIFF="Y"
 fi
+
+# is this an old dependency?
+# INCGSETTINGSDESKTOPSCHEMAS="Y"
