@@ -1,0 +1,1 @@
+../basis/030-multilib/module_spec.sh

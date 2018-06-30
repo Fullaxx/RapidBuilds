@@ -1,3 +1,5 @@
+set -e
+
 PROJNAME="RAPIDWS"
 SLACKPKGVERS="current"
 KERNVERS="4.9.102"
@@ -5,7 +7,7 @@ ARCH="x86_64"
 TIMESTAMPEDISO="0"
 
 # This is the list of categories that will be rebuilt by "./rebuild.sh all"
-PROJECTCATEGORIES="1 2 3 5 6 7 9 10 12"
+PROJECTCATEGORIES="1 2 3 5 6 7 9 10 12 30"
 
 # Can we automate this by checking the existance of dirs?
 INCMOD002UTILS="Y"
@@ -15,6 +17,7 @@ INCMOD006DEVEL="Y"
 INCMOD007WIRELESS="Y"
 INCMOD010XORG="Y"
 INCMOD012XAPPS="Y"
+INCMOD030MULTILIB="Y"
 
 RAPIDBUILDSDIR="/opt/RL/RapidBuilds"
 RAPIDSHELLSDIR="/opt/RL/RapidShells"
@@ -32,7 +35,7 @@ if [ "$ARCH" == "x86_64" ]; then
   KERNELPKGDIR="${RAPIDKERNELSDIR}/64/${KERNVERS}"
   LIBDIR="lib64"
 else
-  SLACKPKGDIR="${PACKAGESDIR}/slackware/Slack32-${SLACKPKGVERS}/slackware32"
+  SLACKPKGDIR="${PACKAGESDIR}/slackware/Slack32-${SLACKPKGVERS}/slackware"
   SLACKEXTRA="${PACKAGESDIR}/slackware/Slack32-${SLACKPKGVERS}/extra"
   KERNELPKGDIR="${RAPIDKERNELSDIR}/32/${KERNVERS}"
   LIBDIR="lib"
