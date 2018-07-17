@@ -18,9 +18,18 @@ rm -rf ${DIR}/lib/modules/*/kernel/drivers/ata/pata_*.ko
 rm -rf ${DIR}/lib/modules/*/kernel/drivers/ata/pdc_*.ko
 rm -rf ${DIR}/lib/modules/*/kernel/drivers/ata/sata_*.ko
 
+rm -rf ${DIR}/lib/modules/*/kernel/drivers/bcma
+
+# rm -rf ${DIR}/lib/modules/*/kernel/drivers/char/tpm
 rm -rf ${DIR}/lib/modules/*/kernel/drivers/char/xillybus
 
 rm -rf ${DIR}/lib/modules/*/kernel/drivers/cpufreq/powernow-k8.ko
+
+rm -rf ${DIR}/lib/modules/*/kernel/drivers/char/ipmi
+rm -rf ${DIR}/lib/modules/*/kernel/drivers/char/nvram.ko
+rm -rf ${DIR}/lib/modules/*/kernel/drivers/char/raw.ko
+
+rm -rf ${DIR}/lib/modules/*/kernel/drivers/edac
 
 rm -rf ${DIR}/lib/modules/*/kernel/drivers/firewire
 
@@ -32,59 +41,21 @@ rm -rf ${DIR}/lib/modules/*/kernel/drivers/gpu/drm/nouveau
 rm -rf ${DIR}/lib/modules/*/kernel/drivers/gpu/drm/radeon
 rm -rf ${DIR}/lib/modules/*/kernel/drivers/gpu/drm/vmwgfx
 
+pushd ${DIR}/lib/modules/*/kernel/drivers
+tar cf media.tar media/media.ko media/usb/uvc media/v4l2-core
+rm -rf media; tar xvf media.tar; rm media.tar
+popd
+
 rm -rf ${DIR}/lib/modules/*/kernel/drivers/mtd
 
 rm -rf ${DIR}/lib/modules/*/kernel/drivers/net/can
 
 rm -rf ${DIR}/lib/modules/*/kernel/drivers/net/dsa
 
-rm -rf ${DIR}/lib/modules/*/kernel/drivers/net/ethernet/3com
-rm -rf ${DIR}/lib/modules/*/kernel/drivers/net/ethernet/8390
-rm -rf ${DIR}/lib/modules/*/kernel/drivers/net/ethernet/adaptec
-rm -rf ${DIR}/lib/modules/*/kernel/drivers/net/ethernet/agere
-rm -rf ${DIR}/lib/modules/*/kernel/drivers/net/ethernet/alacritech
-rm -rf ${DIR}/lib/modules/*/kernel/drivers/net/ethernet/alteon
-rm -rf ${DIR}/lib/modules/*/kernel/drivers/net/ethernet/amd
-rm -rf ${DIR}/lib/modules/*/kernel/drivers/net/ethernet/atheros
-rm -rf ${DIR}/lib/modules/*/kernel/drivers/net/ethernet/broadcom
-rm -rf ${DIR}/lib/modules/*/kernel/drivers/net/ethernet/brocade
-rm -rf ${DIR}/lib/modules/*/kernel/drivers/net/ethernet/cadence
-rm -rf ${DIR}/lib/modules/*/kernel/drivers/net/ethernet/cavium
-rm -rf ${DIR}/lib/modules/*/kernel/drivers/net/ethernet/chelsio
-rm -rf ${DIR}/lib/modules/*/kernel/drivers/net/ethernet/cisco
-rm -rf ${DIR}/lib/modules/*/kernel/drivers/net/ethernet/dec
-rm -rf ${DIR}/lib/modules/*/kernel/drivers/net/ethernet/dlink
-rm -rf ${DIR}/lib/modules/*/kernel/drivers/net/ethernet/dnet.ko
-rm -rf ${DIR}/lib/modules/*/kernel/drivers/net/ethernet/ec_bhf.ko
-rm -rf ${DIR}/lib/modules/*/kernel/drivers/net/ethernet/emulex
-rm -rf ${DIR}/lib/modules/*/kernel/drivers/net/ethernet/ethoc.ko
-rm -rf ${DIR}/lib/modules/*/kernel/drivers/net/ethernet/fealnx.ko
-rm -rf ${DIR}/lib/modules/*/kernel/drivers/net/ethernet/hp
-rm -rf ${DIR}/lib/modules/*/kernel/drivers/net/ethernet/huawei
-rm -rf ${DIR}/lib/modules/*/kernel/drivers/net/ethernet/jme.ko
-rm -rf ${DIR}/lib/modules/*/kernel/drivers/net/ethernet/marvell
-rm -rf ${DIR}/lib/modules/*/kernel/drivers/net/ethernet/mellanox
-rm -rf ${DIR}/lib/modules/*/kernel/drivers/net/ethernet/micrel
-rm -rf ${DIR}/lib/modules/*/kernel/drivers/net/ethernet/myricom
-rm -rf ${DIR}/lib/modules/*/kernel/drivers/net/ethernet/natsemi
-rm -rf ${DIR}/lib/modules/*/kernel/drivers/net/ethernet/neterion
-rm -rf ${DIR}/lib/modules/*/kernel/drivers/net/ethernet/netronome
-rm -rf ${DIR}/lib/modules/*/kernel/drivers/net/ethernet/nvidia
-rm -rf ${DIR}/lib/modules/*/kernel/drivers/net/ethernet/qlogic
-rm -rf ${DIR}/lib/modules/*/kernel/drivers/net/ethernet/qualcomm
-rm -rf ${DIR}/lib/modules/*/kernel/drivers/net/ethernet/rdc
-rm -rf ${DIR}/lib/modules/*/kernel/drivers/net/ethernet/samsung
-rm -rf ${DIR}/lib/modules/*/kernel/drivers/net/ethernet/sfc
-rm -rf ${DIR}/lib/modules/*/kernel/drivers/net/ethernet/silan
-rm -rf ${DIR}/lib/modules/*/kernel/drivers/net/ethernet/sis
-rm -rf ${DIR}/lib/modules/*/kernel/drivers/net/ethernet/smsc
-rm -rf ${DIR}/lib/modules/*/kernel/drivers/net/ethernet/stmicro
-rm -rf ${DIR}/lib/modules/*/kernel/drivers/net/ethernet/sun
-rm -rf ${DIR}/lib/modules/*/kernel/drivers/net/ethernet/synopsys
-rm -rf ${DIR}/lib/modules/*/kernel/drivers/net/ethernet/tehuti
-rm -rf ${DIR}/lib/modules/*/kernel/drivers/net/ethernet/ti
-rm -rf ${DIR}/lib/modules/*/kernel/drivers/net/ethernet/via
-rm -rf ${DIR}/lib/modules/*/kernel/drivers/net/ethernet/wiznet
+pushd ${DIR}/lib/modules/*/kernel/drivers/net
+tar cf ethernet.tar ethernet/8390 ethernet/amd ethernet/intel ethernet/realtek
+rm -rf ethernet; tar xvf ethernet.tar; rm ethernet.tar
+popd
 
 rm -rf ${DIR}/lib/modules/*/kernel/drivers/net/fddi
 
@@ -95,16 +66,46 @@ rm -rf ${DIR}/lib/modules/*/kernel/drivers/net/gtp.ko
 
 rm -rf ${DIR}/lib/modules/*/kernel/drivers/net/hamradio
 
+rm -rf ${DIR}/lib/modules/*/kernel/drivers/net/irda
+
+rm -rf ${DIR}/lib/modules/*/kernel/drivers/net/ppp
+
 rm -rf ${DIR}/lib/modules/*/kernel/drivers/net/wimax
 
+pushd ${DIR}/lib/modules/*/kernel/drivers
+tar cf mfd.tar mfd/lpc_ich.ko
+rm -rf mfd; tar xvf mfd.tar; rm mfd.tar
+popd
+
 rm -rf ${DIR}/lib/modules/*/kernel/drivers/nfc
+
+rm -rf ${DIR}/lib/modules/*/kernel/drivers/nvdimm
 
 rm -rf ${DIR}/lib/modules/*/kernel/drivers/pcmcia
 
 rm -rf ${DIR}/lib/modules/*/kernel/drivers/platform/chrome
 
+rm -rf ${DIR}/lib/modules/*/kernel/drivers/regulator
+
 rm -rf ${DIR}/lib/modules/*/kernel/drivers/spi
+
 rm -rf ${DIR}/lib/modules/*/kernel/drivers/staging/irda
+
+rm -rf ${DIR}/lib/modules/*/kernel/drivers/video/fbdev/matrox
+
+rm -rf ${DIR}/lib/modules/*/kernel/net/irda
+rm -rf ${DIR}/lib/modules/*/kernel/net/nfc
+rm -rf ${DIR}/lib/modules/*/kernel/net/openvswitch
+rm -rf ${DIR}/lib/modules/*/kernel/net/phonet
+rm -rf ${DIR}/lib/modules/*/kernel/net/vmw_vsock
+rm -rf ${DIR}/lib/modules/*/kernel/net/xfrm
+
+pushd ${DIR}/lib/modules/*/kernel
+tar cf sound.tar sound/*.ko sound/core sound/drivers/snd-*.ko sound/hda sound/pci/ac97 sound/pci/hda sound/usb/snd-usb-audio.ko
+rm -rf sound; tar xvf sound.tar; rm sound.tar
+rm -r sound/core/seq
+rm sound/drivers/{snd-mtpav.ko,snd-virmidi.ko}
+popd
 
 rm ${PKG}
 echo "Repacking ${PKG} ..."
