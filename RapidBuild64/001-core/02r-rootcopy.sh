@@ -58,20 +58,3 @@ if [ -x ${DIR}/usr/bin/rapidlinux_install.sh ]; then
   chmod 0700 ${DIR}/usr/bin/rli_02_copy.sh
   chmod 0700 ${DIR}/usr/bin/rli_03_install.sh
 fi
-
-if [ -x ${DIR}/usr/bin/rl_sata_drive_stop.sh ]; then
-  chmod 0700 ${DIR}/usr/bin/rl_sata_drive_stop.sh
-fi
-
-if [ -x ${DIR}/usr/bin/rl_swapiness.sh ]; then
-  chmod 0700 ${DIR}/usr/bin/rl_swapiness.sh
-fi
-
-if [ -x ${DIR}/usr/bin/rl_free_kmem.sh ]; then
-  chmod 0700 ${DIR}/usr/bin/rl_free_kmem.sh
-fi
-
-if [ -x ${DIR}/usr/bin/rl_zram_create.sh ]; then
-  chmod 0700 ${DIR}/usr/bin/rl_zram_create.sh
-  chmod 0700 ${DIR}/usr/bin/rl_zram_setsize.sh
-fi

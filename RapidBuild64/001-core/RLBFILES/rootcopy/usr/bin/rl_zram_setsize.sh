@@ -1,6 +1,11 @@
 #!/bin/bash
 
-if [ x"$1" == "x" ]; then
+if [ `id -u` != "0" ]; then
+	echo "Got Root?"
+	exit 1
+fi
+
+if [ -z "$1" ]; then
   echo "Usage: $0 <zram dev> <\# of MB>"
   echo "Example: $0 zram0 64"
   exit 1
