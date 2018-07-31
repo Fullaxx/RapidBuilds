@@ -1,20 +1,20 @@
 #!/bin/bash
 
 if [ `id -u` != "0" ]; then
-	echo "Got Root?"
-	exit 1
+  echo "Got Root?"
+  exit 1
 fi
 
 if [ -z "$1" ]; then
-	echo "Usage: $0 <device>"
-	exit 1
+  echo "Usage: $0 <device>"
+  exit 1
 fi
 
 DEV="$1"
 
-if [ ! -b ${DEV} ]; then
-	echo "${DEV} is not a block device!"
-	exit 1
+if [ ! -b "${DEV}" ]; then
+  echo "${DEV} is not a block device!"
+  exit 1
 fi
 
 if ! lsscsi | grep -q ${DEV} ; then
@@ -23,7 +23,7 @@ if ! lsscsi | grep -q ${DEV} ; then
 fi
 
 #device=`lsscsi | grep ${DEV}`
-#if [ -z "${DEV}ice" ]; then
+#if [ -z "$device" ]; then
 #	echo "Error: could not find device: ${DEV}"
 #	exit 1
 #fi
@@ -47,9 +47,10 @@ fi
 sleep 2
 if [ -b ${DEV} ]; then
   echo "${DEV} stop failed!!"
+  exit 1
 else
   echo "${DEV} successfully stopped!"
 fi
 
-#hcil=`echo ${DEV}ice | awk '{split(substr($0, 2, 7),a,":"); print a[1], a[2], a[3], a[4]}'`
+#hcil=`echo $device | awk '{split(substr($0, 2, 7),a,":"); print a[1], a[2], a[3], a[4]}'`
 #scsiadd -r $hcil
