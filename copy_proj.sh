@@ -29,7 +29,7 @@ ln -s ../${SPROJ} basis
 ln -s basis/functions.sh
 ln -s basis/rebuild.sh
 
-for MODULE in 001-core 002-utils 003-interp 005-server 006-devel 007-wireless 009-xmodlibs 010-xorg 012-xapps 030-mulltilib baseoutput; do
+for MODULE in 001-core 002-utils 003-interp 005-server 006-devel 007-wireless 009-xmodlibs 010-xorg 012-xapps 030-multilib baseoutput; do
   if [ -d ../${SPROJ}/${MODULE} ]; then
     echo "Adding: ${MODULE}"
     mkdir ${MODULE}
