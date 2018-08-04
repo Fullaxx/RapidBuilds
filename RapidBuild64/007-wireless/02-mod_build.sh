@@ -23,7 +23,7 @@ for PKG in *.txz; do
 
   if [ -d ${DIR}/install ]; then
     if [ -f ${DIR}/install/doinst.sh ]; then
-      bash -c "cd ${DIR}; source ./install/doinst.sh" || echo "*** FAILED *** ${PKG} install/doinst.sh (continuing anyway)"
+      bash -c "cd ${DIR}; source ./install/doinst.sh" || echo "*** WARNING *** ${PKG} install/doinst.sh (continuing anyway)"
     fi
     rm -rf ${DIR}/install
   fi

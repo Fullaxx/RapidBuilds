@@ -33,7 +33,7 @@ for PKG in *.txz; do
         #sed -e "s@/usr/bin/fc-cache -f@echo /usr/bin/fc-cache -f@g" -i ${DIR}/install/doinst.sh
       fi
 
-      bash -c "cd ${DIR}; source ./install/doinst.sh" || echo "*** FAILED *** ${PKG} install/doinst.sh (continuing anyway)"
+      bash -c "cd ${DIR}; source ./install/doinst.sh" || echo "*** WARNING *** ${PKG} install/doinst.sh (continuing anyway)"
     fi
     rm -rf ${DIR}/install
   fi
