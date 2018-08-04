@@ -1,0 +1,1 @@
+../basis/001-core/00-all.sh

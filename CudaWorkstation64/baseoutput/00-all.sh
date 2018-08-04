@@ -1,0 +1,1 @@
+../basis/baseoutput/00-all.sh
