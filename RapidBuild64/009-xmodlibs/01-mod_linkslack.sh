@@ -291,5 +291,6 @@ if [ "${INCJSONGLIB}" == "Y" ]; then
 fi
 
 if [ "${INCLIBZIP}" == "Y" ]; then
+# scim needs libzip
   linkpackage ${SLACKPKGDIR}/l/libzip-*.txz
 fi
