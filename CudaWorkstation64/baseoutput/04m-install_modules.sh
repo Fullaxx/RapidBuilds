@@ -9,9 +9,10 @@ if [ ! -d ${MODSDIR} ]; then
 fi
 
 # Copy any extra modules that don't need RDL
-cp -Lpv ${PACKAGESDIR}/VirtualBox/VirtualBox-5.2.16-${ARCH}-1.xzm ${MODSDIR}/
+cp -Lpv ${PACKAGESDIR}/VirtualBox/VirtualBox-5.2.18-${ARCH}-1.xzm ${MODSDIR}/
 cp -Lpv ${PACKAGESDIR}/LibreOffice/LibreOffice-5.4.7-${ARCH}-1.xzm ${MODSDIR}/
-cp -Lpv ${PACKAGESDIR}/chrome/chrome-67.0.3396.99-${ARCH}-1.xzm ${MODSDIR}/
+#cp -Lpv ${PACKAGESDIR}/chrome/chrome-67.0.3396.99-${ARCH}-1.xzm ${MODSDIR}/
+cp -Lpv ${PACKAGESDIR}/chrome/chrome-68.0.3440.106-${ARCH}-1.xzm ${MODSDIR}/
 cp -Lpv ${PACKAGESDIR}/dbwalls/dbwalls-1920-130207.xzm ${MODSDIR}/
 cp -Lpv ${PACKAGESDIR}/java8/jdk-8u181-${ARCH}-1.xzm ${MODSDIR}/
 cp -Lpv ${PACKAGESDIR}/java8/jdkdocs-8u181-noarch-1.xzm ${MODSDIR}/
