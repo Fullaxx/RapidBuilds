@@ -3,8 +3,15 @@
 source ../spec.sh
 source ./module_spec.sh
 
+if [ -d ${DIR}/var/log/setup ]; then
+  mkdir -p ${DIR}/var/lib/pkgtools/setup
+  mv ${DIR}/var/log/setup/* ${DIR}/var/lib/pkgtools/setup/
+  rm -r ${DIR}/var/log/setup
+  ln -s ../lib/pkgtools/setup ${DIR}/var/log/setup
+fi
+
 if [ -d ${DIR}/usr/man ]; then
-  mkdir -p ${MODMANDIR}/usr/man;
+  mkdir -p ${MODMANDIR}/usr/man
   mv ${DIR}/usr/man/man? ${MODMANDIR}/usr/man
   rm -r ${DIR}/usr/man
 fi
@@ -39,16 +46,4 @@ PYEXISTS=`ls -d1 ${DIR}/usr/lib64/python?.? 2>/dev/null | wc -l`
 if [ "${PYEXISTS}" -ne "0" ]; then
   mkdir -p ${MODPYTHONDIR}/usr/${LIBDIR}
   mv ${DIR}/usr/${LIBDIR}/python?.? ${MODPYTHONDIR}/usr/${LIBDIR}/
-fi
-
-exit 0
-
-#################################################################################
-
-if [ -d ${DIR}/usr/share/doc ]; then
-  if [ `ls -1 ${DIR}/usr/share/doc/ | wc -l` != "0" ]; then
-    if [ ! -d ${DIR}/usr/doc ]; then mkdir -p ${DIR}/usr/doc; fi
-    mv ${DIR}/usr/share/doc/* ${DIR}/usr/doc/
-  fi
-  rmdir ${DIR}/usr/share/doc
 fi

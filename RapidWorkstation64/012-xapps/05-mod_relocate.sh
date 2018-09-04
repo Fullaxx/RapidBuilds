@@ -3,8 +3,15 @@
 source ../spec.sh
 source ./module_spec.sh
 
+if [ -d ${DIR}/var/log/setup ]; then
+  mkdir -p ${DIR}/var/lib/pkgtools/setup
+  mv ${DIR}/var/log/setup/* ${DIR}/var/lib/pkgtools/setup/
+  rm -r ${DIR}/var/log/setup
+  ln -s ../lib/pkgtools/setup ${DIR}/var/log/setup
+fi
+
 if [ -d ${DIR}/usr/man ]; then
-  mkdir -p ${MODMANDIR}/usr/man;
+  mkdir -p ${MODMANDIR}/usr/man
   mv ${DIR}/usr/man/man? ${MODMANDIR}/usr/man
   rm -r ${DIR}/usr/man
 fi
