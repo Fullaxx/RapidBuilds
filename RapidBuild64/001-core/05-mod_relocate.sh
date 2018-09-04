@@ -3,7 +3,7 @@
 source ../spec.sh
 source ./module_spec.sh
 
-if [ -d ${DIR}/var/log/setup ]; then
+if [ -d ${DIR}/var/log/setup -a ! -L ${DIR}/var/log/setup ]; then
   mkdir -p ${DIR}/var/lib/pkgtools/setup
   mv ${DIR}/var/log/setup/* ${DIR}/var/lib/pkgtools/setup/
   rm -r ${DIR}/var/log/setup
