@@ -3,10 +3,22 @@
 source ../spec.sh
 source ./module_spec.sh
 
-if [ ! -d ${MODSDIR} ]; then
-  echo "${MODSDIR} deos not exist!"
+if [ ! -d ${BASEDIR} ]; then
+  echo "${BASEDIR} does not exist!"
   exit 1
 fi
+
+if [ ! -d ${MODSDIR} ]; then
+  echo "${MODSDIR} does not exist!"
+  exit 1
+fi
+
+if [ ! -e ${PACKAGESDIR}/nvidia_driver/011-nvidia-390.77-${KERNVERS}.xzm ]; then
+  echo "${PACKAGESDIR}/nvidia_driver/011-nvidia-390.77-${KERNVERS}.xzm does not exist!"
+  exit 1
+fi
+
+cp -Lpv ${PACKAGESDIR}/nvidia_driver/011-nvidia-390.77-${KERNVERS}.xzm ${BASEDIR}/
 
 # Copy any extra modules that don't need RDL
 cp -Lpv ${PACKAGESDIR}/VirtualBox/VirtualBox-5.2.18-${ARCH}-1.xzm ${MODSDIR}/
@@ -16,8 +28,8 @@ cp -Lpv ${PACKAGESDIR}/chrome/chrome-68.0.3440.106-${ARCH}-1.xzm ${MODSDIR}/
 cp -Lpv ${PACKAGESDIR}/dbwalls/dbwalls-1920-130207.xzm ${MODSDIR}/
 cp -Lpv ${PACKAGESDIR}/java8/jdk-8u181-${ARCH}-1.xzm ${MODSDIR}/
 cp -Lpv ${PACKAGESDIR}/java8/jdkdocs-8u181-noarch-1.xzm ${MODSDIR}/
-cp -Lpv ${PACKAGESDIR}/nvidia_driver/011-nvidia-390.77-4.9.112.xzm ${MODSDIR}/
 cp -Lpv ${PACKAGESDIR}/nvidia_cuda_toolkit/cuda-9.2.88.1-${ARCH}-1.xzm ${MODSDIR}/
+cp -Lpv ${PACKAGESDIR}/vscode/vscode-1536225977-${ARCH}-1.xzm ${MODSDIR}/
 
 # cp -Lpv ${PACKAGESDIR}/chrome/chrome-latest-${ARCH}.xzm ${MODSDIR}/
 # cp -Lpv ${PACKAGESDIR}/chromium/chromium-64.0.3282.119-${ARCH}-1alien.xzm ${MODSDIR}/
