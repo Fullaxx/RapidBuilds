@@ -57,3 +57,7 @@ if [ "${INCLIBGXPS}" == "Y" ]; then
 # evince needs libgxps
   linkpackage "${PACKAGESDIR}/libgxps/libgxps-0.2.5-${ARCH}-bksrc1.xzm"
 fi
+
+if [ "${INCVSCODE}" == "Y" ]; then
+  linkpackage "${PACKAGESDIR}/vscode/vscode-1536225977-${ARCH}-1.xzm"
+fi
