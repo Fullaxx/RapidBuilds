@@ -19,6 +19,7 @@ if [ "${INCMOD012XAPPS}" == "Y" ]; then
   INCRXVTUNICODE="Y"
   INCSOMA="Y"
   INCXINE="Y"
+  INCXLOCK="N"
   INCXPAINT="Y"
 
 # extra family of packages
@@ -34,5 +35,6 @@ if [ "${INCMOD012XAPPS}" == "Y" ]; then
   INCGEANY="Y"
   INCHSETROOT="Y"
   INCOBCONF="Y"
-  INCXFE="N"
+  INCVSCODE="Y"
+  INCXFE="Y"
 fi
