@@ -37,4 +37,5 @@ if [ "${INCMOD012XAPPS}" == "Y" ]; then
   INCXFE="Y"
 
   INCCHROME="Y"
+  INCVSCODE="Y"
 fi
