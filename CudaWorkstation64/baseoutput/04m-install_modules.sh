@@ -27,6 +27,11 @@ if [ "${INCCHROME}" == "Y" ]; then
   cp -Lpv ${PACKAGESDIR}/chrome/chrome-68.0.3440.106-${ARCH}-1.xzm ${MODSDIR}/
 fi
 
+# VSCode needs RDL
+if [ "${INCVSCODE}" == "Y" ]; then
+  cp -Lpv ${PACKAGESDIR}/vscode/vscode-1536225977-${ARCH}-1.xzm ${MODSDIR}/
+fi
+
 # Copy any extra modules that don't need RDL
 cp -Lpv ${PACKAGESDIR}/VirtualBox/VirtualBox-5.2.18-${ARCH}-1.xzm ${MODSDIR}/
 cp -Lpv ${PACKAGESDIR}/LibreOffice/LibreOffice-5.4.7-${ARCH}-1.xzm ${MODSDIR}/
