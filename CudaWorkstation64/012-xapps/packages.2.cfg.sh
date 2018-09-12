@@ -28,13 +28,15 @@ if [ "${INCMOD012XAPPS}" == "Y" ]; then
 # Custom Additions
   INCBLUEFISH="Y"
   INCBLUEFISHTWO="N"
-  INCCHROME="Y"
   INCETERM="Y"
   INCEVINCE="Y"
   INCFBPANEL="Y"
   INCGEANY="Y"
   INCHSETROOT="Y"
   INCOBCONF="Y"
-  INCVSCODE="Y"
   INCXFE="Y"
+
+# Tagged for inclusion into Modules dir by baseoutput
+  INCCHROME="Y"
+  INCVSCODE="Y"
 fi
