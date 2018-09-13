@@ -36,7 +36,7 @@ fi
 cp -Lpv ${PACKAGESDIR}/VirtualBox/VirtualBox-5.2.18-${ARCH}-1.xzm ${MODSDIR}/
 cp -Lpv ${PACKAGESDIR}/LibreOffice/LibreOffice-5.4.7-${ARCH}-1.xzm ${MODSDIR}/
 cp -Lpv ${PACKAGESDIR}/dbwalls/dbwalls-1920-130207.xzm ${MODSDIR}/
-cp -Lpv ${PACKAGESDIR}/java8/jdk-8u181-${ARCH}-1.xzm ${MODSDIR}/
+cp -Lpv ${PACKAGESDIR}/java8/jdk-8u181-${ARCH}-2.xzm ${MODSDIR}/
 cp -Lpv ${PACKAGESDIR}/java8/jdkdocs-8u181-noarch-1.xzm ${MODSDIR}/
 cp -Lpv ${PACKAGESDIR}/nvidia_cuda_toolkit/cuda-9.2.88.1-${ARCH}-2.xzm ${MODSDIR}/
 
