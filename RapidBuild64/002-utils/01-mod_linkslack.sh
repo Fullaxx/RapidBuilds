@@ -219,10 +219,6 @@ if [ "${INCBRIDGEUTILS}" == "Y" ]; then
   linkpackage ${SLACKPKGDIR}/n/bridge-utils-*.txz
 fi
 
-if [ "${INCDNSMASQ}" == "Y" ]; then
-  linkpackage ${SLACKPKGDIR}/n/dnsmasq-*.txz
-fi
-
 if [ "${INCEBTABLES}" == "Y" ]; then
   linkpackage ${SLACKPKGDIR}/n/ebtables-*.txz
 fi

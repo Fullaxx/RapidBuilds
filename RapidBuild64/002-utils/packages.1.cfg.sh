@@ -54,7 +54,6 @@ if [ "${INCMOD002UTILS}" == "Y" ]; then
 # n family of packages
   INCNETFILTER="Y"
   INCBRIDGEUTILS="Y"
-  INCDNSMASQ="N"
   INCEBTABLES="N"
   INCEPICFIVE="N"
   INCETHTOOL="Y"
