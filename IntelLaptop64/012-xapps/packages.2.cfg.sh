@@ -23,6 +23,7 @@ if [ "${INCMOD012XAPPS}" == "Y" ]; then
   INCXPAINT="Y"
 
 # extra family of packages
+  INCRECORDMYDESKTOP="Y"
   INCTIGERVNC="Y"
 
 # Custom Additions

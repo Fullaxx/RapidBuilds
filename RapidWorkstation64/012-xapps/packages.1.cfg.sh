@@ -33,5 +33,6 @@ if [ "${INCMOD012XAPPS}" == "Y" ]; then
   INCXPDF="N"
 
 # extra family of packages
+  INCRECORDMYDESKTOP="N"
   INCTIGERVNC="N"
 fi
