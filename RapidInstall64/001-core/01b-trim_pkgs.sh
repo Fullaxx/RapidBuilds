@@ -21,7 +21,6 @@ rm openssh-*.txz
 rm popt-*.txz
 rm reiserfsprogs-*.txz
 rm screen-*.txz
-rm squashfs-tools-*.txz
 rm sysfsutils-*.txz
 rm tar-*.txz
 rm utempter-*.txz

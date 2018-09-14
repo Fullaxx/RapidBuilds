@@ -68,7 +68,6 @@ linkpackage ${SLACKPKGDIR}/ap/lsof-*.txz
 linkpackage ${SLACKPKGDIR}/ap/lsscsi-*.txz
 linkpackage ${SLACKPKGDIR}/ap/nano-*.txz
 linkpackage ${SLACKPKGDIR}/ap/screen-*.txz
-linkpackage ${SLACKPKGDIR}/ap/squashfs-tools-*.txz
 
 # req'd for NTP, and others
 linkpackage ${SLACKPKGDIR}/l/libedit-*.txz

@@ -294,3 +294,8 @@ if [ "${INCLIBZIP}" == "Y" ]; then
 # scim needs libzip
   linkpackage ${SLACKPKGDIR}/l/libzip-*.txz
 fi
+
+if [ "${INCZSTD}" == "Y" ]; then
+# squashfs-tools needs libZSTD
+  linkpackage ${SLACKPKGDIR}/l/zstd-*.txz
+fi

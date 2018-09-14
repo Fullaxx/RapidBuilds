@@ -187,6 +187,10 @@ if [ "${INCSLACKPKG}" == "Y" ]; then
   linkpackage ${SLACKPKGDIR}/ap/slackpkg-*.txz
 fi
 
+if [ "${INCSQUASHFSTOOLS}" == "Y" ]; then
+  linkpackage ${SLACKPKGDIR}/ap/squashfs-tools-*.txz
+fi
+
 if [ "${INCSYSSTAT}" == "Y" ]; then
   linkpackage ${SLACKPKGDIR}/ap/sysstat-*.txz
 fi
