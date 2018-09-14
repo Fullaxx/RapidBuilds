@@ -83,7 +83,6 @@ linkpackage ${SLACKPKGDIR}/l/glibc-?.*.txz
 # linkpackage ${SLACKPKGDIR}/l/glibc-i18n-*.txz
 
 linkpackage ${SLACKPKGDIR}/l/libssh2-*.txz
-linkpackage ${SLACKPKGDIR}/l/lzo-*.txz
 linkpackage ${SLACKPKGDIR}/l/mpfr-*.txz	#awk needs libmpfr
 linkpackage ${SLACKPKGDIR}/l/gmp-*.txz	#libmpfr needs libgmp
 linkpackage ${SLACKPKGDIR}/l/ncurses-*.txz

@@ -296,6 +296,11 @@ if [ "${INCLIBZIP}" == "Y" ]; then
 fi
 
 if [ "${INCZSTD}" == "Y" ]; then
-# squashfs-tools needs libZSTD
+# squashfs-tools needs zstd
   linkpackage ${SLACKPKGDIR}/l/zstd-*.txz
+fi
+
+if [ "${INCLZO}" == "Y" ]; then
+# squashfs-tools,btrsfs-progs,lrzip needs lzo
+  linkpackage ${SLACKPKGDIR}/l/lzo-*.txz
 fi
