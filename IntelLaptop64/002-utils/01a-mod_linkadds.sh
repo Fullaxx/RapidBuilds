@@ -31,6 +31,14 @@ if [ "${INCEXTUNDELETE}" == "Y" ]; then
   linkpackage "${PACKAGESDIR}/extundelete/extundelete-0.2.4-${ARCH}-bksrc1.xzm"
 fi
 
+if [ "${INCIPERFTWO}" == "Y" ]; then
+  linkpackage "${PACKAGESDIR}/iperf/iperf-2.0.12-${ARCH}-bksrc1.xzm"
+fi
+
+if [ "${INCIPERFTHREE}" == "Y" ]; then
+  linkpackage "${PACKAGESDIR}/iperf/iperf-3.6-${ARCH}-bksrc1.xzm"
+fi
+
 if [ "${INCLOOPAESSETUP}" == "Y" ]; then
   linkpackage "${PACKAGESDIR}/loop-aes-losetup/loop-aes-losetup-2.30.1-${ARCH}-bksrc1.xzm"
 fi
