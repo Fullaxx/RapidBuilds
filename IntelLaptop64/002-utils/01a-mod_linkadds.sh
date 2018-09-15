@@ -8,7 +8,7 @@ if [ "${INCACPI}" == "Y" ]; then
 fi
 
 if [ "${INCBINDTOOLS}" == "Y" ]; then
-  linkpackage "${PACKAGESDIR}/bindtools/bindtools-9.11.3-${ARCH}-4.xzm"
+  linkpackage "${PACKAGESDIR}/bindtools/bindtools-9.12.2_P1-${ARCH}-1.xzm"
 fi
 
 if [ "${INCCALC}" == "Y" ]; then
@@ -25,6 +25,10 @@ fi
 
 if [ "${INCCURLFTPFS}" == "Y" ]; then
   linkpackage "${PACKAGESDIR}/curlftpfs/curlftpfs-0.9.2-${ARCH}-bksrc1.xzm"
+fi
+
+if [ "${INCCURLLOADER}" == "Y" ]; then
+  linkpackage "${PACKAGESDIR}/curl-loader/curl-loader-0.56-${ARCH}-bksrc1.xzm"
 fi
 
 if [ "${INCEXTUNDELETE}" == "Y" ]; then
