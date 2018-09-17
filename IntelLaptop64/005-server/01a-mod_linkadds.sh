@@ -15,6 +15,15 @@ if [ "${INCLIBVIRT}" == "Y" ]; then
   linkpackage "${PACKAGESDIR}/libvirt/libvirt-4.3.0-${ARCH}-bksrc1.xzm"
 fi
 
+if [ "${INCNGINX}" == "Y" ]; then
+  linkpackage "${PACKAGESDIR}/nginx/nginx-1.15.3-${ARCH}-bksrc1.xzm"
+fi
+
+if [ "${INCNNG}" == "Y" ]; then
+  linkpackage "${PACKAGESDIR}/nng/nng-1.0.1-${ARCH}-bksrc1.xzm"
+  linkpackage "${PACKAGESDIR}/mbedtls/mbedtls-2.13.0-${ARCH}-bksrc1.xzm"
+fi
+
 if [ "${INCNODEZEROTEN}" == "Y" ]; then
   linkpackage "${PACKAGESDIR}/node/node-v0.10.48-${ARCH}-bksrc1.xzm"
 fi
