@@ -264,7 +264,7 @@ if [ "${INCLIBPOLKIT}" == "Y" ]; then
 fi
 
 if [ "${INCLIBSSHONE}" == "Y" ]; then
-# ffmpeg needs libssh
+# ffmpeg,libvirt needs libssh
   linkpackage ${SLACKPKGDIR}/l/libssh-*.txz
 fi
 

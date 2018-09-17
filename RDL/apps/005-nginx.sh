@@ -1,3 +1,3 @@
 if [ "${INCNGINX}" == "Y" ]; then
-  INCLIBXSLT="Y"
+  INCPERL="Y"
 fi
