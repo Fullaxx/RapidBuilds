@@ -304,3 +304,8 @@ if [ "${INCLZO}" == "Y" ]; then
 # squashfs-tools,btrsfs-progs,lrzip needs lzo
   linkpackage ${SLACKPKGDIR}/l/lzo-*.txz
 fi
+
+if [ "${INCLMDB}" == "Y" ]; then
+# samba needs lmdb
+  linkpackage ${SLACKPKGDIR}/l/lmdb-*.txz
+fi

@@ -6,4 +6,5 @@ if [ "${INCSAMBA}" == "Y" ]; then
   INCLIBASSUAN="Y"
   INCLIBTALLOC="Y"
   INCLIBTEVENT="Y"
+  INCLMDB="Y"
 fi
