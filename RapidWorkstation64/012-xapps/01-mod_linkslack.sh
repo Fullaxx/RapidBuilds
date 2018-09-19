@@ -82,6 +82,10 @@ if [ "${INCMOZILLATHUNDERBIRD}" == "Y" ]; then
   linkpackage ${SLACKPKGDIR}/xap/mozilla-thunderbird-*.txz
 fi
 
+if [ "${INCSEAMONKEY}" == "Y" ]; then
+  linkpackage ${SLACKPKGDIR}/xap/seamonkey-*.txz
+fi
+
 if [ "${INCMPLAYER}" == "Y" ]; then
   linkpackage ${SLACKPKGDIR}/xap/MPlayer-*.txz
 fi

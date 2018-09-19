@@ -19,7 +19,37 @@ unpacksambalibs()
 
 }
 
+if [ "${INCSAMBALIBS}" == "Y" -a "${INCSAMBA}" != "Y" ]; then
+  unpacksambalibs
+fi
+
+# Firefox, Thunderbird, and Seamonkey each drop this file
+# We will erase it and handle it below and a per-package basis
+if [ -f ${DIR}/etc/ld.so.conf ]; then
+  rm ${DIR}/etc/ld.so.conf
+fi
+
+if [ "${INCMOZILLAFIREFOX}" == "Y" ]; then
+  mkdir -p ${DIR}/etc/ld.so.conf.d
+  echo "/usr/${LIBDIR}/firefox" > ${DIR}/etc/ld.so.conf.d/firefox-${ARCH}.conf
+fi
+
 if [ "${INCMOZILLATHUNDERBIRD}" == "Y" ]; then
+  mkdir -p ${DIR}/etc/ld.so.conf.d
+  echo "/usr/${LIBDIR}/thunderbird" > ${DIR}/etc/ld.so.conf.d/thunderbird-${ARCH}.conf
+fi
+
+if [ "${INCSEAMONKEY}" == "Y" ]; then
+  mkdir -p ${DIR}/etc/ld.so.conf.d
+  echo "/usr/${LIBDIR}/seamonkey" > ${DIR}/etc/ld.so.conf.d/seamonkey-${ARCH}.conf
+fi
+
+exit 0
+
+if [ "${INCMOZILLATHUNDERBIRD}" == "Y" ]; then
+  mkdir -p ${DIR}/etc/ld.so.conf.d
+  echo "/usr/lib64/thunderbird" > ${DIR}/etc/ld.so.conf.d/thunderbird-x86_64.conf
+  echo "/usr/lib/thunderbird" > ${DIR}/etc/ld.so.conf.d/thunderbird-x86.conf
   if [ -d ${DIR}/usr/${LIBDIR}/thunderbird-??.?.? ]; then
     cd ${DIR}/usr/${LIBDIR}/
     ln -s `ls -1d thunderbird-*` thunderbird
@@ -33,6 +63,9 @@ if [ "${INCMOZILLATHUNDERBIRD}" == "Y" ]; then
 fi
 
 if [ "${INCMOZILLAFIREFOX}" == "Y" ]; then
+  mkdir -p ${DIR}/etc/ld.so.conf.d
+  echo "/usr/lib64/firefox" > ${DIR}/etc/ld.so.conf.d/firefox-x86_64.conf
+  echo "/usr/lib/firefox" > ${DIR}/etc/ld.so.conf.d/firefox-x86.conf
   if [ -d ${DIR}/usr/${LIBDIR}/firefox-??.? ]; then
     cd ${DIR}/usr/${LIBDIR}/
     ln -s `ls -1d firefox-*` firefox
@@ -44,12 +77,6 @@ if [ "${INCMOZILLAFIREFOX}" == "Y" ]; then
     exit 1
   fi
 fi
-
-if [ "${INCSAMBALIBS}" == "Y" -a "${INCSAMBA}" != "Y" ]; then
-  unpacksambalibs
-fi
-
-exit 0
 
 #if [ "$RLDEPTRACKING" == "N" -o "$INCCHROMIUM" == "Y" ]; then
 # This might be unnecessary - READ RapidLinux DOC about Vivaldi GDrive
