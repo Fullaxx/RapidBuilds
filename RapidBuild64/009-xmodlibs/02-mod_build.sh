@@ -21,11 +21,6 @@ for PKG in *.txz; do
 
   tar xf ${PKG} -C ${DIR}
 
-  if [[ ${PKG} == seamonkey-solibs-*.txz ]]; then
-    echo "${PKG}: Removing ld.so.conf manipulation from install/doinst.sh ..."
-    sed -e 's/^if/#if/g' -e 's/^fi/#fi/g' -e 's/  echo/#echo/' -e 's@  /sbin/ldconfig@#/sbin/ldconfig@' -i ${DIR}/install/doinst.sh
-  fi
-
   if [[ ${PKG} == polkit-*.txz ]]; then
     echo "${PKG}: Removing /etc/{passwd,group} manipulation from install/doinst.sh ..."
     sed -e s@etc/passwd@/dev/null@g -e s@etc/group@/dev/null@g -i ${DIR}/install/doinst.sh
@@ -50,6 +45,3 @@ for PKG in *.xzm; do
   xzm2dir ${PKG} ${DIR} >/dev/null
 done
 shopt -u nullglob # disable
-
-# seamonkey-solibs-2.49.1-x86_64-1.txz
-# cat fs/install/doinst.sh | sed -e 's/^if/#if/g' -e 's/^fi/#fi/g' -e 's/  echo/#echo/' -e 's@  /sbin/ldconfig@#/sbin/ldconfig@'

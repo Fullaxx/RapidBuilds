@@ -45,7 +45,7 @@ if [ "${INCSEAMONKEY}" == "Y" ]; then
 fi
 
 exit 0
-
+#######################################
 if [ "${INCMOZILLATHUNDERBIRD}" == "Y" ]; then
   mkdir -p ${DIR}/etc/ld.so.conf.d
   echo "/usr/lib64/thunderbird" > ${DIR}/etc/ld.so.conf.d/thunderbird-x86_64.conf

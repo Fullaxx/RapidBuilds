@@ -150,6 +150,7 @@ if [ "${INCNEON}" == "Y" ]; then
 fi
 
 if [ "${INCJSONEEIGHTYFIVE}" == "Y" ]; then
+# neon needs js185
   linkpackage ${SLACKPKGDIR}/l/js185-*.txz
 fi
 
@@ -171,9 +172,9 @@ if [ "${INCMOZILLANSS}" == "Y" ]; then
   linkpackage ${SLACKPKGDIR}/l/mozilla-nss-*.txz
 fi
 
-if [ "${INCSEAMONKEYSOLIBS}" == "Y" ]; then
-  linkpackage ${SLACKPKGDIR}/l/seamonkey-solibs-*.txz
-fi
+#if [ "${INCSEAMONKEYSOLIBS}" == "Y" ]; then
+#  linkpackage ${SLACKPKGDIR}/l/seamonkey-solibs-*.txz
+#fi
 
 if [ "${INCDBUSGLIB}" == "Y" ]; then
   linkpackage ${SLACKPKGDIR}/l/dbus-glib-*.txz
