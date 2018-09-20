@@ -64,6 +64,10 @@ if [ "${INCGCC}" == "Y" ]; then
   linkpackage ${SLACKPKGDIR}/d/gcc-?.?.?-*.txz
 fi
 
+if [ "${INCGCCGO}" == "Y" ]; then
+  linkpackage ${SLACKPKGDIR}/d/gcc-go-*.txz
+fi
+
 if [ "${INCGCCGPLUSPLUS}" == "Y" ]; then
   linkpackage ${SLACKPKGDIR}/d/gcc-g++-?.?.?-*.txz
 fi
