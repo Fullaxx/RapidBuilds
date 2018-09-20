@@ -1,5 +1,6 @@
 if [ "${INCEMACS}" == "Y" ]; then
   INCALSA="Y"
+  INCLCMSTWO="Y"
 
 # X is optional for emacs
 # but if we have X, then we depend on these

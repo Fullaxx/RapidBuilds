@@ -309,3 +309,10 @@ if [ "${INCLMDB}" == "Y" ]; then
 # samba needs lmdb
   linkpackage ${SLACKPKGDIR}/l/lmdb-*.txz
 fi
+
+if [ "${INCLCMSTWO}" == "Y" ]; then
+# openjpeg,imagemagick needs lcms2
+# moved in from 012-xapps
+# emacs-no-x11 needs this?
+  linkpackage ${SLACKPKGDIR}/l/lcms2-*.txz
+fi

@@ -319,11 +319,6 @@ if [ "${INCLCMS}" == "Y" ]; then
   linkpackage ${SLACKPKGDIR}/l/lcms-*.txz
 fi
 
-if [ "${INCLCMSTWO}" == "Y" ]; then
-# openjpeg,imagemagick needs lcms2
-  linkpackage ${SLACKPKGDIR}/l/lcms2-*.txz
-fi
-
 if [ "${INCLIBBLURAY}" == "Y" ]; then
 # MPlayer needs libbluray
   linkpackage ${SLACKPKGDIR}/l/libbluray-*.txz

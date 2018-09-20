@@ -43,5 +43,5 @@ if [ "${INCMOD006DEVEL}" == "Y" ]; then
   INCYASM="Y"
 
 # e family of packages
-  INCEMACS="Y"
+  INCEMACS="N"
 fi
