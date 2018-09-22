@@ -2,6 +2,7 @@
 
 source ../spec.sh
 source ./module_spec.sh
+CHROMEVERS="latest"
 
 if [ ! -d ${MODSDIR} ]; then
   echo "${MODSDIR} deos not exist!"
@@ -10,7 +11,7 @@ fi
 
 # Chrome needs RDL
 if [ "${INCCHROME}" == "Y" ]; then
-  cp -Lpv ${PACKAGESDIR}/chrome/chrome-latest-${ARCH}.xzm ${MODSDIR}/
+  cp -Lpv ${PACKAGESDIR}/chrome/chrome-${CHROMEVERS}-${ARCH}.xzm ${MODSDIR}/
 fi
 
 # VSCode needs RDL
