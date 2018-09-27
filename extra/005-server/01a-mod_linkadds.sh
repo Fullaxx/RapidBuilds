@@ -45,7 +45,7 @@ if [ "${INCNODEEIGHT}" == "Y" ]; then
 fi
 
 if [ "${INCNOVNC}" == "Y" ]; then
-  linkpackage "${PACKAGESDIR}/noNVC/noVNC-20180531-noarch-bksrc1.xzm"
+  linkpackage "${PACKAGESDIR}/python_mods/noVNC-20180531-noarch-bksrc1.xzm"
 fi
 
 if [ "${INCREDIS}" == "Y" ]; then
@@ -62,7 +62,7 @@ if [ "${INCYAJL}" == "Y" ]; then
 fi
 
 if [ "${INCZEROMQ}" == "Y" ]; then
-  linkpackage "${PACKAGESDIR}/zeromq/zeromq-4.2.3-${ARCH}-bksrc1.xzm"
+  linkpackage "${PACKAGESDIR}/zeromq/zeromq-4.2.5-${ARCH}-bksrc1.xzm"
   linkpackage "${PACKAGESDIR}/zeromq/libpgm-5.2.122-${ARCH}-bksrc1.xzm"
   linkpackage "${PACKAGESDIR}/zeromq/czmq-4.1.1-${ARCH}-bksrc1.xzm"
 fi
