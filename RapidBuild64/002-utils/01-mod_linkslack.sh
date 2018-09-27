@@ -273,6 +273,10 @@ if [ "${INCNETCAT}" == "Y" ]; then
   linkpackage ${SLACKPKGDIR}/n/nc-*.txz
 fi
 
+if [ "${INCNETPIPES}" == "Y" ]; then
+  linkpackage ${SLACKPKGDIR}/n/netpipes-*.txz
+fi
+
 if [ "${INCNETWORKMANAGER}" == "Y" ]; then
 # libproxy wants NetworkManager
   linkpackage ${SLACKPKGDIR}/n/NetworkManager-*.txz
