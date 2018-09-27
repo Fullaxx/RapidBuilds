@@ -1,5 +1,4 @@
 if [ "${INCCHROME}" == "Y" ]; then
+  INCMOZILLANSS="Y"
   INCLIBXSCRNSAVER="Y"
-#  INCGCONF="Y"
-#  INCORBITTWO="Y"
 fi
