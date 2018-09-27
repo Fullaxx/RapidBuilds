@@ -2,7 +2,7 @@
 
 source ../spec.sh
 source ./module_spec.sh
-CHROMEVERS="latest"
+#CHROMEVERS="latest"
 
 if [ ! -d ${MODSDIR} ]; then
   echo "${MODSDIR} deos not exist!"
@@ -11,7 +11,7 @@ fi
 
 # Chrome needs RDL
 if [ "${INCCHROME}" == "Y" ]; then
-  cp -Lpv ${PACKAGESDIR}/chrome/chrome-${CHROMEVERS}-${ARCH}.xzm ${MODSDIR}/
+  cp -Lpv ${PACKAGESDIR}/chrome/chrome-68.0.3440.106-x86_64-2.xzm ${MODSDIR}/
 fi
 
 # VSCode needs RDL
@@ -24,7 +24,7 @@ cp -Lpv ${PACKAGESDIR}/VirtualBox/VirtualBox-5.2.18-${ARCH}-1.xzm ${MODSDIR}/
 cp -Lpv ${PACKAGESDIR}/LibreOffice/LibreOffice-5.4.7-${ARCH}-1.xzm ${MODSDIR}/
 cp -Lpv ${PACKAGESDIR}/chromium/chromium-64.0.3282.119-${ARCH}-1alien.xzm ${MODSDIR}/
 cp -Lpv ${PACKAGESDIR}/dbwalls/dbwalls-1920-130207.xzm ${MODSDIR}/
-cp -Lpv ${PACKAGESDIR}/java8/jre-8u181-${ARCH}-2.xzm ${MODSDIR}/
+cp -Lpv ${PACKAGESDIR}/java8/jre-8u181-${ARCH}-4.xzm ${MODSDIR}/
 cp -Lpv ${PACKAGESDIR}/veracrypt/veracrypt-gui-latest-${ARCH}.xzm ${MODSDIR}/
 cp -Lpv ${PACKAGESDIR}/vivaldi/vivaldi-latest-${ARCH}.xzm ${MODSDIR}/
 cp -Lpv ${PACKAGESDIR}/vivaldi-codecs-ffmpeg-extra/vivaldi-codecs-ffmpeg-extra-65.0.3325.181-${ARCH}-1.xzm ${MODSDIR}/

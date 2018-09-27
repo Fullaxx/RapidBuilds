@@ -3,7 +3,7 @@
 source ../spec.sh
 source ./module_spec.sh
 NVDDVERS="390.87"
-CHROMEVERS="69.0.3497.100"
+#CHROMEVERS="69.0.3497.100"
 
 if [ ! -d ${BASEDIR} ]; then
   echo "${BASEDIR} does not exist!"
@@ -24,7 +24,7 @@ cp -Lpv ${PACKAGESDIR}/nvidia_driver/011-nvidia-${NVDDVERS}-${KERNVERS}.xzm ${BA
 
 # Chrome needs RDL
 if [ "${INCCHROME}" == "Y" ]; then
-  cp -Lpv ${PACKAGESDIR}/chrome/chrome-${CHROMEVERS}-${ARCH}-1.xzm ${MODSDIR}/
+  cp -Lpv ${PACKAGESDIR}/chrome/chrome-68.0.3440.106-x86_64-2.xzm ${MODSDIR}/
 fi
 
 # VSCode needs RDL
@@ -37,7 +37,7 @@ cp -Lpv ${PACKAGESDIR}/VirtualBox/VirtualBox-5.2.18-${ARCH}-1.xzm ${MODSDIR}/
 cp -Lpv ${PACKAGESDIR}/LibreOffice/LibreOffice-5.4.7-${ARCH}-1.xzm ${MODSDIR}/
 cp -Lpv ${PACKAGESDIR}/dbwalls/dbwalls-1920-130207.xzm ${MODSDIR}/
 cp -Lpv ${PACKAGESDIR}/java8/jdkdocs-8u181-noarch-1.xzm ${MODSDIR}/
-cp -Lpv ${PACKAGESDIR}/java8/jdk-8u181-${ARCH}-3.xzm ${MODSDIR}/
+cp -Lpv ${PACKAGESDIR}/java8/jdk-8u181-${ARCH}-4.xzm ${MODSDIR}/
 cp -Lpv ${PACKAGESDIR}/maven/maven-3.5.4-noarch-1.xzm ${MODSDIR}/
 cp -Lpv ${PACKAGESDIR}/netbeans/netbeans-8.1.0.xzm ${MODSDIR}/
 cp -Lpv ${PACKAGESDIR}/nvidia_cuda_toolkit/cuda-9.1.85-${ARCH}-1.xzm ${MODSDIR}/
