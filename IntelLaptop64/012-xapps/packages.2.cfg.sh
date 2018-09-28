@@ -28,7 +28,7 @@ if [ "${INCMOD012XAPPS}" == "Y" ]; then
   INCTIGERVNC="Y"
 
 # Custom Additions
-  INCBLUEFISH="Y"
+  INCBLUEFISH="N"
   INCBLUEFISHTWO="N"
   INCETERM="Y"
   INCEVINCE="Y"

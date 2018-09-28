@@ -4,7 +4,7 @@ source ../spec.sh
 source ./module_spec.sh
 
 if [ "${INCBLUEFISH}" == "Y" ]; then
-  linkpackage "${PACKAGESDIR}/bluefish/bluefish-1.0.7-${ARCH}-bksrc1.xzm"
+  linkpackage "${PACKAGESDIR}/bluefish/bluefish-1.0.7-${ARCH}-bksrc2.xzm"
 fi
 
 if [ "${INCBLUEFISHTWO}" == "Y" ]; then
