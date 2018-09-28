@@ -1,0 +1,7 @@
+if [ "${INCJUPYTER}" == "Y" ]; then
+  INCJEDI="Y"
+  INCPICKLESHARE="Y"
+  INCPROMPTTOOLKIT="Y"
+  INCPYZMQ="Y"
+  INCTRAITLETS="Y"
+fi

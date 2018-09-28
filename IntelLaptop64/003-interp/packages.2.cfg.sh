@@ -2,5 +2,7 @@
 if [ "${INCMOD003INTERP}" == "Y" ]; then
 # Custom Additions
   INCFTPSYNC="Y"
+  INCJUPYTER="N"
+  INCKEEPNOTE="Y"
   INCPASTEBINIT="Y"
 fi
