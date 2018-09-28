@@ -15,6 +15,3 @@ chown -R root.root ${SLAXDIR}
 
 # Build the ISO
 ( cd ${SLAXDIR}; ./make_iso.sh ${ISOOUTPUTDIR}/${ISOFILENAME} && echo "${ISOOUTPUTDIR}/${ISOFILENAME} created" || echo "ISO CREATION FAILED!" )
-
-# Clean Up
-rm -r ${BDIR}
