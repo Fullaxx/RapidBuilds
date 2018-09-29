@@ -241,7 +241,7 @@ if [ "${INCLIBMPC}" == "Y" ]; then
 fi
 
 if [ "${INCLIBUNWIND}" == "Y" ]; then
-# strace needs libunwind
+# strace,zeromq needs libunwind
   linkpackage ${SLACKPKGDIR}/l/libunwind-*.txz
 fi
 
