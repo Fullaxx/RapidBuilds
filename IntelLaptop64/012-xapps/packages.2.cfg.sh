@@ -36,6 +36,7 @@ if [ "${INCMOD012XAPPS}" == "Y" ]; then
   INCGEANY="Y"
   INCHSETROOT="Y"
   INCOBCONF="Y"
+  INCVLC="Y"
   INCXFE="Y"
 
 # Tagged for inclusion into Modules dir by baseoutput

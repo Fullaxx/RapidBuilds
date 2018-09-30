@@ -43,6 +43,7 @@ if [ "${INCXINE}" == "Y" ]; then
   INCVFOURLUTILS="Y"
 
   INCWAVPACK="Y"
+fi
+
 # INCX264="Y"
 # INCX265="Y"
-fi
