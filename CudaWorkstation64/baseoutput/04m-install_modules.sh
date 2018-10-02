@@ -33,6 +33,6 @@ cp -Lpv ${PACKAGESDIR}/idea/ideaIU-2018.2.4-noarch-1.xzm ${MODSDIR}/
 cp -Lpv ${PACKAGESDIR}/java8/jdkdocs-8u181-noarch-1.xzm ${MODSDIR}/
 cp -Lpv ${PACKAGESDIR}/java8/jdk-8u181-${ARCH}-4.xzm ${MODSDIR}/
 cp -Lpv ${PACKAGESDIR}/maven/maven-3.5.4-noarch-1.xzm ${MODSDIR}/
-cp -Lpv ${PACKAGESDIR}/netbeans/netbeans-8.1.0.xzm ${MODSDIR}/
+cp -Lpv ${PACKAGESDIR}/netbeans/netbeans-9.0-noarch-1.xzm ${MODSDIR}/
 cp -Lpv ${PACKAGESDIR}/nvidia_cuda_toolkit/cuda-9.1.85-${ARCH}-1.xzm ${MODSDIR}/
 cp -Lpv ${PACKAGESDIR}/nvidia_cuda_toolkit/cuda_samples-9.1.85-noarch-1.xzm ${MODSDIR}/
