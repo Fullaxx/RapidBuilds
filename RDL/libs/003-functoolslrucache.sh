@@ -1,0 +1,3 @@
+if [ "${INCFUNCTOOLSLRUCACHE}" == "Y" ]; then
+  INCSETUPTOOLSSCM="Y"
+fi

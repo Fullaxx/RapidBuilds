@@ -1,0 +1,3 @@
+if [ "${INCJSONSCHEMA}" == "Y" ]; then
+  INCFUNCTOOLSTHIRTYTWO="Y"
+fi
