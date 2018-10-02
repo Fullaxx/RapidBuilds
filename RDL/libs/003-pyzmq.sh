@@ -1,4 +1,4 @@
 if [ "${INCPYZMQ}" == "Y" ]; then
-  INCCYTHON="y"
+  INCCYTHON="Y"
   INCZEROMQ="Y"
 fi
