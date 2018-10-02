@@ -87,7 +87,7 @@ if [ "${INCJUPYTER}" == "Y" ]; then
   linkpackage "${PACKAGESDIR}/python_mods/nbformat-4.4.0-${ARCH}-bksrc1.xzm"
 
 # ipyleaflet needs ipywidgets, ipywidgets needs widgetsnbextension
-  linkpackage "${PACKAGESDIR}/python_mods/widgetsnbextension-3.4.2-x${ARCH}-bksrc1.xzm"
+  linkpackage "${PACKAGESDIR}/python_mods/widgetsnbextension-3.4.2-${ARCH}-bksrc1.xzm"
   linkpackage "${PACKAGESDIR}/python_mods/ipywidgets-7.4.2-${ARCH}-bksrc1.xzm"
   linkpackage "${PACKAGESDIR}/python_mods/ipyleaflet-0.9.0-${ARCH}-bksrc1.xzm"
 
