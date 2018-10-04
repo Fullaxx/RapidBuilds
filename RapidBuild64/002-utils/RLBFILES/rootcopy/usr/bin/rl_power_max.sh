@@ -15,13 +15,4 @@ while [ "${COUNT}" -ne "${CPUS}" ]; do
   COUNT=$(( COUNT + 1 ))
 done
 
-if [ -d /sys/devices/*/*/drm/card?/card?-eDP-?/intel_backlight ]; then
-  BSCRIPT="rl_brightness_intel.sh"
-elif [ -d /sys/class/backlight/acpi_video? ]; then
-  BSCRIPT="rl_brightness_acpi.sh"
-else
-  echo "I dont know how to adjust the brightness!"
-  exit 1
-fi
-
-${BSCRIPT} ${BVAL}
+rl_brightness.sh ${BVAL}

@@ -1,6 +1,14 @@
 #!/bin/bash
 
-cd /sys/devices/*/*/drm/card?/card?-eDP-?/intel_backlight || exit 1
+bail()
+{
+	echo "$1"
+	exit 1
+}
+
+cd /sys/devices/*/*/drm/card?/card?-eDP-?/intel_backlight || \
+cd /sys/class/backlight/acpi_video0/ || \
+bail "I dont know how to adjust the brightness!"
 
 if [ -z "$1" ]; then
   echo -n "Brightness: "
