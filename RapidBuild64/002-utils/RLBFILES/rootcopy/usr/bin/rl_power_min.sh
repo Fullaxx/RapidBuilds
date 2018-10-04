@@ -14,4 +14,14 @@ while [ "${COUNT}" -ne "${CPUS}" ]; do
   cpufreq-set -c ${COUNT} -g ${GOV}
   COUNT=$(( COUNT + 1 ))
 done
-rl_ib.sh ${BVAL}
+
+if [ -d /sys/devices/*/*/drm/card?/card?-eDP-?/intel_backlight ]; then
+  BSCRIPT="rl_brightness_intel.sh"
+elif [ -d /sys/class/backlight/acpi_video? ]; then
+  BSCRIPT="rl_brightness_acpi.sh"
+else
+  echo "I dont know how to adjust the brightness!"
+  exit 1
+fi
+
+${BSCRIPT} ${BVAL}
