@@ -2,8 +2,8 @@
 
 bail()
 {
-	echo "$1"
-	exit 1
+  echo "$1"
+  exit 1
 }
 
 cd /sys/devices/*/*/drm/card?/card?-eDP-?/intel_backlight || \
