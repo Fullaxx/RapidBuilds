@@ -1,0 +1,1 @@
+../basis/009-xmodlibs/06-mod_manifest.sh

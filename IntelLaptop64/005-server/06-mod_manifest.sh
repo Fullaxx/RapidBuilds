@@ -1,0 +1,1 @@
+../basis/005-server/06-mod_manifest.sh

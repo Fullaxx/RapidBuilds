@@ -1,0 +1,1 @@
+../basis/007-wireless/06-mod_manifest.sh
