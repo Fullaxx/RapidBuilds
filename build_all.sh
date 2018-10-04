@@ -7,7 +7,8 @@ if [ `id -u` != "0" ]; then
   exit 1
 fi
 
-RAPIDBUILDSDIR=`dirname $0`
+RAPIDBUILDSDIR=${RAPIDBUILDSDIR:-`dirname $0`}
+if [ "${RAPIDBUILDSDIR}" == "." ]; then RAPIDBUILDSDIR=`pwd`; fi
 
 ${RAPIDBUILDSDIR}/RapidBuild64/rebuild.sh all
 ${RAPIDBUILDSDIR}/RapidInstall64/rebuild.sh all
