@@ -38,3 +38,7 @@ if [ -d ${SEARCHDIR} ]; then
     install -Dp -o root -g root -m 0644 ${FILE} "${DIR}/usr/share/rapidlinux/`basename ${FILE}`"
   done
 fi
+
+if [ "${INCXWD}" != "Y" ]; then
+  rm ${DIR}/usr/bin/rl_xwd_ss_*.sh
+fi
