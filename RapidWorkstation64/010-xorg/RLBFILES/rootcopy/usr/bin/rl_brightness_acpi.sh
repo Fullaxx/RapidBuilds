@@ -1,10 +1,12 @@
 #!/bin/bash
 
+cd /sys/class/backlight/acpi_video0/ || exit 1
+
 if [ -z "$1" ]; then
   echo -n "Brightness: "
-  cat /sys/class/backlight/acpi_video0/brightness
+  cat brightness
   echo -n "Max: "
-  cat /sys/class/backlight/acpi_video0/max_brightness
+  cat max_brightness
   exit 0
 fi
 
@@ -14,7 +16,7 @@ if [ `id -u` != "0" ]; then
 fi
 
 if [ "$1" == "max" ]; then
-  cat /sys/class/backlight/acpi_video0/max_brightness > /sys/class/backlight/acpi_video0/brightness
+  cat max_brightness > brightness
 else
-  echo "$1" > /sys/class/backlight/acpi_video0/brightness
+  echo "$1" > brightness
 fi
