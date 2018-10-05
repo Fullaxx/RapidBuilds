@@ -1,5 +1,8 @@
 #!/bin/bash
 
+source ../spec.sh
+source ./module_spec.sh
+
 rm acl-*.txz
 rm attr-*.txz
 rm bash-completion-*.txz
