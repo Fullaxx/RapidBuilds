@@ -1,0 +1,6 @@
+if [ "${INCPAVUCONTROL}" == "Y" ]; then
+  INCATKMM="Y"
+  INCGTKMMTHREE="Y"
+  INCLIBCANBERRA="Y"
+  INCPULSE="Y"
+fi

@@ -460,6 +460,11 @@ if [ "${INCPANGOMM}" == "Y" ]; then
   linkpackage ${SLACKPKGDIR}/l/pangomm-*.txz
 fi
 
+if [ "${INCPAVUCONTROL}" == "Y" ]; then
+  linkpackage ${SLACKPKGDIR}/xap/pavucontrol-*.txz
+fi
+
+
 if [ "${INCPOPPLER}" == "Y" ]; then
   linkpackage ${SLACKPKGDIR}/l/poppler-?.*.txz
   linkpackage ${SLACKPKGDIR}/l/poppler-data-*.txz
@@ -469,7 +474,6 @@ if [ "${INCPULSE}" == "Y" ]; then
   linkpackage ${SLACKPKGDIR}/l/pulseaudio-*.txz
   linkpackage ${SLACKPKGDIR}/l/libasyncns-*.txz
   linkpackage ${SLACKPKGDIR}/l/sbc-*.txz
-  linkpackage ${SLACKPKGDIR}/xap/pavucontrol-*.txz
 fi
 
 if [ "${INCQT}" == "Y" ]; then
