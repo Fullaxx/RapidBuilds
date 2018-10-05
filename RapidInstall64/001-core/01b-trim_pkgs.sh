@@ -14,7 +14,6 @@ rm gzip-*.txz
 rm htop-*.txz
 rm kbd-*.txz
 rm libssh2-*.txz
-rm lzo-*.txz
 rm mpfr-*.txz
 rm ncurses-*.txz
 rm openssh-*.txz
