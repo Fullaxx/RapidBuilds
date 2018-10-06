@@ -94,6 +94,10 @@ if [ "${INCPYGOBJECT}" == "Y" ]; then
   linkpackage ${SLACKPKGDIR}/l/pygobject-*.txz
 fi
 
+if [ "${INCPYQT}" == "Y" ]; then
+  linkpackage ${SLACKPKGDIR}/l/PyQt-*.txz
+fi
+
 if [ "${INCSCONS}" == "Y" ]; then
   linkpackage ${SLACKPKGDIR}/d/scons-*.txz
 fi

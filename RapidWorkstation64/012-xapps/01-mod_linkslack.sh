@@ -478,7 +478,6 @@ fi
 
 if [ "${INCQT}" == "Y" ]; then
   linkpackage ${SLACKPKGDIR}/l/qt-*.txz
-  linkpackage ${SLACKPKGDIR}/l/PyQt-*.txz
   linkpackage ${SLACKPKGDIR}/l/polkit-qt-?-*.txz
 fi
 
