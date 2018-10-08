@@ -22,9 +22,9 @@ fi
 # Copy any extra modules that don't need RDL
 cp -Lpv ${PACKAGESDIR}/VirtualBox/VirtualBox-5.2.18-${ARCH}-1.xzm ${MODSDIR}/
 cp -Lpv ${PACKAGESDIR}/LibreOffice/LibreOffice-5.4.7-${ARCH}-1.xzm ${MODSDIR}/
-cp -Lpv ${PACKAGESDIR}/chromium/chromium-64.0.3282.119-${ARCH}-1alien.xzm ${MODSDIR}/
+cp -Lpv ${PACKAGESDIR}/chromium/chromium-69.0.3497.100-${ARCH}-1alien.xzm ${MODSDIR}/
 cp -Lpv ${PACKAGESDIR}/dbwalls/dbwalls-1920-130207.xzm ${MODSDIR}/
 cp -Lpv ${PACKAGESDIR}/java8/jre-8u181-${ARCH}-4.xzm ${MODSDIR}/
 cp -Lpv ${PACKAGESDIR}/veracrypt/veracrypt-gui-latest-${ARCH}.xzm ${MODSDIR}/
-cp -Lpv ${PACKAGESDIR}/vivaldi/vivaldi-latest-${ARCH}.xzm ${MODSDIR}/
-cp -Lpv ${PACKAGESDIR}/vivaldi-codecs-ffmpeg-extra/vivaldi-codecs-ffmpeg-extra-65.0.3325.181-${ARCH}-1.xzm ${MODSDIR}/
+cp -Lpv ${PACKAGESDIR}/vivaldi/vivaldi-stable-2.0.1309.37-2.${ARCH}.xzm ${MODSDIR}/
+cp -Lpv ${PACKAGESDIR}/vivaldi-codecs-ffmpeg-extra/vivaldi-codecs-ffmpeg-extra-69.0.3497.81-${ARCH}-1.xzm ${MODSDIR}/
