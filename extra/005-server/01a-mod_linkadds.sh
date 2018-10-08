@@ -15,6 +15,10 @@ if [ "${INCLIBVIRT}" == "Y" ]; then
   linkpackage "${PACKAGESDIR}/libvirt/libvirt-4.3.0-${ARCH}-bksrc1.xzm"
 fi
 
+if [ "${INCLIBWEBSOCKETS}" == "Y" ]; then
+  linkpackage "${PACKAGESDIR}/libwebsockets/libwebsockets-3.0.1-${ARCH}-bksrc1.xzm"
+fi
+
 if [ "${INCNGINX}" == "Y" ]; then
   linkpackage "${PACKAGESDIR}/nginx/nginx-1.15.3-${ARCH}-bksrc1.xzm"
 fi
