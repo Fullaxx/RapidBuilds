@@ -3,8 +3,8 @@ if [ "${INCMOD006DEVEL}" == "Y" ]; then
 # Departure from Default
   INCCVS="Y"
   INCDOXYGEN="Y"
-  INCMERCURIAL="Y"
   INCEMACS="Y"
+  INCMERCURIAL="Y"
   INCOPENCLHEADERS="Y"
   INCSUBVERSION="Y"
 
