@@ -1,8 +1,0 @@
-# 010-xorg options
-if [ "${INCMOD010XORG}" == "Y" ]; then
-  INCLIBVA="Y"
-  INCLIBVDPAU="Y"
-  INCXF86VIDEOINTEL="Y"
-  INCXDPYINFO="Y"
-  INCXDRIINFO="Y"
-fi
