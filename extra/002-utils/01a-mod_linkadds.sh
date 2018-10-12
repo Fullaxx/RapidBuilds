@@ -51,6 +51,10 @@ if [ "${INCMOSH}" == "Y" ]; then
   linkpackage "${PACKAGESDIR}/mosh/mosh-1.3.2-${ARCH}-bksrc1.xzm"
 fi
 
+if [ "${INCNBD}" == "Y" ]; then
+  linkpackage "${PACKAGESDIR}/nbd/nbd-3.18-${ARCH}-bksrc1.xzm"
+fi
+
 if [ "${INCNUMACTL}" == "Y" ]; then
   linkpackage "${PACKAGESDIR}/numactl/numactl-2.0.11-${ARCH}-bksrc1.xzm"
 fi
@@ -61,4 +65,8 @@ fi
 
 if [ "${INCPROTOBUFC}" == "Y" ]; then
   linkpackage "${PACKAGESDIR}/protobuf/protobuf-c-1.3.1-${ARCH}-bksrc1.xzm"
+fi
+
+if [ "${INCXNBD}" == "Y" ]; then
+  linkpackage "${PACKAGESDIR}/xnbd/xnbd-0.4.0-${ARCH}-bksrc1.xzm"
 fi
