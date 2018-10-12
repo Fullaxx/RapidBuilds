@@ -6,7 +6,7 @@ if [ "${INCMOD006DEVEL}" == "Y" ]; then
   INCEMACS="Y"
   INCMERCURIAL="Y"
   INCOPENCLHEADERS="Y"
-  INCSUBVERSION="Y"
+  INCSUBVERSION="N"
 
 # Custom Additions
   INCASTYLE="Y"
