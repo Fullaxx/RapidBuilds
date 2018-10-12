@@ -1,3 +1,3 @@
-if [ "${INCLIBPOLKIT}" == "Y" ]; then
+if [ "${INCPOLKIT}" == "Y" ]; then
   INCJSONEEIGHTYFIVE="Y"
 fi

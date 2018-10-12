@@ -7,7 +7,7 @@ if [ "${INCUSBMUXD}" == "Y" ]; then
   echo "usbmux:x:52:83:User for usbmux daemon:/var/empty:/bin/false" >> ${DIR}/etc/passwd
 fi
 
-if [ "${INCLIBPOLKIT}" == "Y" ]; then
+if [ "${INCPOLKIT}" == "Y" ]; then
   echo "polkitd:x:87:87:PolicyKit daemon owner:/var/lib/polkit:/bin/false" >> ${DIR}/etc/passwd
   echo "polkitd:x:87:" >> ${DIR}/etc/group
 fi

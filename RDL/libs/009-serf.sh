@@ -1,3 +1,3 @@
 if [ "${INCSERF}" == "Y" ]; then
-  INCLIBAPR="Y"
+  INCAPR="Y"
 fi

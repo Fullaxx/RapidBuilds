@@ -1,4 +1,4 @@
 if [ "${INCAPACHEHTTPD}" == "Y" ]; then
   INCJANSSON="Y"
-  INCLIBAPR="Y"
+  INCAPR="Y"
 fi

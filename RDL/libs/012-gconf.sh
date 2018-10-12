@@ -1,4 +1,4 @@
 if [ "${INCGCONF}" == "Y" ]; then
   INCDBUSGLIB="Y"
-  INCLIBPOLKIT="Y"
+  INCPOLKIT="Y"
 fi

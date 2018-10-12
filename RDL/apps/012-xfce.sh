@@ -9,7 +9,7 @@ if [ "${INCXFCE}" == "Y" ]; then
   INCHICOLORICONTHEME="Y"
   INCLIBEXIF="Y"
   INCLIBNOTIFY="Y"
-  INCLIBPOLKIT="Y"
+  INCPOLKIT="Y"
 # xfce4-panel needs libwnck
   INCLIBWNCK="Y"
   INCLIBXKLAVIER="Y"
