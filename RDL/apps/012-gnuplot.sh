@@ -1,0 +1,8 @@
+if [ "${INCGNUPLOT}" == "Y" ]; then
+  INCCAIRO="Y"
+  INCFRIBIDI="Y"
+  INCLIBCACA="Y"
+  INCLIBPNG="Y"
+  INCMESA="Y"
+  INCPANGO="Y"
+fi

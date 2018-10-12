@@ -66,6 +66,10 @@ if [ "${INCGNUCHESS}" == "Y" ]; then
   linkpackage ${SLACKPKGDIR}/xap/gnuchess-*.txz
 fi
 
+if [ "${INCGNUPLOT}" == "Y" ]; then
+  linkpackage ${SLACKPKGDIR}/xap/gnuplot-*.txz
+fi
+
 if [ "${INCGPARTED}" == "Y" ]; then
   linkpackage ${SLACKPKGDIR}/xap/gparted-*.txz
 fi
