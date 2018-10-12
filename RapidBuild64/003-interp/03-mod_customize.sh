@@ -3,7 +3,7 @@
 source ../spec.sh
 source ./module_spec.sh
 
-if [ "$INCMARIADB" != "Y" ]; then
+if [ "${INCMARIADB}" != "Y" ]; then
   rm -rf ${DIR}/usr/${LIBDIR}/perl5/vendor_perl/Bundle/DBD/mysql.pm
   rm -rf ${DIR}/usr/${LIBDIR}/perl5/vendor_perl/DBD/mysql
   rm -rf ${DIR}/usr/${LIBDIR}/perl5/vendor_perl/auto/DBD/mysql
