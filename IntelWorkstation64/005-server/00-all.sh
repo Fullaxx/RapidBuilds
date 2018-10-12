@@ -1,0 +1,1 @@
+../basis/005-server/00-all.sh

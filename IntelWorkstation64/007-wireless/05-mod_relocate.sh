@@ -1,0 +1,1 @@
+../basis/007-wireless/05-mod_relocate.sh

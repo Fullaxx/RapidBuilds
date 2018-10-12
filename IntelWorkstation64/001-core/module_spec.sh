@@ -1,0 +1,1 @@
+../basis/001-core/module_spec.sh

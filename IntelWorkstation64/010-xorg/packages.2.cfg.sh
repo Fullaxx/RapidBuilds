@@ -1,0 +1,9 @@
+# 010-xorg options
+if [ "${INCMOD010XORG}" == "Y" ]; then
+  INCXF86VIDEOINTEL="Y"
+  INCXBACKLIGHT="Y"
+  INCXCALC="Y"
+  INCXDPYINFO="Y"
+  INCXDRIINFO="Y"
+  INCXKBMAP="Y"
+fi

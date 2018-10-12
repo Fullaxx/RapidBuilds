@@ -1,0 +1,1 @@
+../basis/030-multilib/06-mod_manifest.sh

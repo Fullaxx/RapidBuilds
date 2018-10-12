@@ -1,0 +1,1 @@
+../basis/001-core/04-mod_locale.sh

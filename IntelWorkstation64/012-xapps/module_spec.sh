@@ -1,0 +1,1 @@
+../basis/012-xapps/module_spec.sh

@@ -1,0 +1,11 @@
+# 003-interp options
+if [ "${INCMOD003INTERP}" == "Y" ]; then
+# Custom Additions
+  INCFTPSYNC="N"
+  INCJUPYTER="Y"
+  INCKEEPNOTE="Y"
+# INCSCIPY pulls INCNUMPY
+  INCPASTEBINIT="N"
+# INCOPENBOX pulls INCPYXDG
+# INCNOVNC pulls INCWEBSOCKIFY
+fi

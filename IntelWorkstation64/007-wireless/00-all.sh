@@ -1,0 +1,1 @@
+../basis/007-wireless/00-all.sh

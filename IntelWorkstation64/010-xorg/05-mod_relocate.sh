@@ -1,0 +1,1 @@
+../basis/010-xorg/05-mod_relocate.sh

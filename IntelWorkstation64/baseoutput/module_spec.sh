@@ -1,0 +1,1 @@
+../basis/baseoutput/module_spec.sh
