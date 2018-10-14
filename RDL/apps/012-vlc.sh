@@ -1,8 +1,12 @@
 if [ "${INCVLC}" == "Y" ]; then
+  INCAFIFTYTWO="Y"
   INCALSA="Y"
   INCFFMPEG="Y"
   INCFLAC="Y"
   INCLIBDVBPSI="Y"
+  INCLIBDVDNAV="Y"
+  INCLIBDVDREAD="Y"
+  INCLIBMAD="Y"
   INCLIBMPEGTWO="Y"
   INCLIBOGG="Y"
   INCLIBPNG="Y"
@@ -21,3 +25,5 @@ fi
 # INCX264="Y"
 # INCX265="Y"
 # SOFT SAMBA
+
+# libstream_out_chromecast_plugin.so needs /usr/lib64/libprotobuf-lite.so
