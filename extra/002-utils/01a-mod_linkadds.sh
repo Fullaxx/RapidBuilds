@@ -48,7 +48,7 @@ if [ "${INCLOOPAESSETUP}" == "Y" ]; then
 fi
 
 if [ "${INCMOSH}" == "Y" ]; then
-  linkpackage "${PACKAGESDIR}/mosh/mosh-1.3.2-${ARCH}-bksrc1.xzm"
+  linkpackage "${PACKAGESDIR}/mosh/mosh-1.3.2-${ARCH}-bksrc2.xzm"
 fi
 
 if [ "${INCNBD}" == "Y" ]; then
