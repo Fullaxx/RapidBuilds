@@ -9,6 +9,10 @@ if [ "${INCBLEACH}" == "Y" ]; then
   linkpackage "${PACKAGESDIR}/python_mods/bleach-2.1.4-${ARCH}-bksrc1.xzm"
 fi
 
+if [ "${INCDSTAT}" == "Y" ]; then
+  linkpackage "${PACKAGESDIR}/python_mods/dstat-0.7.3-noarch-bksrc1.xzm"
+fi
+
 if [ "${INCFTPSYNC}" == "Y" ]; then
 # ftpsync needs File-Listing
 # File-Listing needs HTTP-Date

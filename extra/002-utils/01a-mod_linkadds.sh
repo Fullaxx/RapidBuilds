@@ -7,6 +7,10 @@ if [ "${INCACPI}" == "Y" ]; then
   linkpackage "${PACKAGESDIR}/acpi/acpi-1.7-${ARCH}-bksrc1.xzm"
 fi
 
+if [ "${INCATOP}" == "Y" ]; then
+  linkpackage "${PACKAGESDIR}/atop/atop-2.3.0-${ARCH}-bksrc1.xzm"
+fi
+
 if [ "${INCBINDTOOLS}" == "Y" ]; then
   linkpackage "${PACKAGESDIR}/bindtools/bindtools-9.12.2_P1-${ARCH}-1.xzm"
 fi
@@ -33,6 +37,14 @@ fi
 
 if [ "${INCEXTUNDELETE}" == "Y" ]; then
   linkpackage "${PACKAGESDIR}/extundelete/extundelete-0.2.4-${ARCH}-bksrc1.xzm"
+fi
+
+if [ "${INCIOPING}" == "Y" ]; then
+  linkpackage "${PACKAGESDIR}/ioping/ioping-1.1-${ARCH}-bksrc1.xzm"
+fi
+
+if [ "${INCIOTOP}" == "Y" ]; then
+  linkpackage "${PACKAGESDIR}/iotop/iotop-20181016-${ARCH}-bksrc1.xzm"
 fi
 
 if [ "${INCIPERFTWO}" == "Y" ]; then
