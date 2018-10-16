@@ -24,4 +24,4 @@ echo "clamav:x:210:" >> ${DIR}/etc/group
 echo "kvm:x:221:" >> ${DIR}/etc/group
 echo "tomcat:x:232:232:tomcat:/:/bin/false" >> ${DIR}/etc/passwd
 echo "tomcat:x:232:" >> ${DIR}/etc/group
-echo "docker:x:261:" >> ${DIR}/etc/group
+echo "docker:x:281:" >> ${DIR}/etc/group
