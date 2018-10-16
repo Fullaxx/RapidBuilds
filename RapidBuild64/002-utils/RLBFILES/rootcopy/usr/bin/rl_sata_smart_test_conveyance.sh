@@ -12,14 +12,14 @@ fi
 
 DISK="$1"
 
-if [ ! -b $DISK ]; then
-  echo "$DISK must be a block device!"
+if [ ! -b ${DISK} ]; then
+  echo "${DISK} must be a block device!"
   exit 2
 fi
 
-if ! lsscsi | grep -q $DISK ; then
-  echo "Disk $DISK not found in lsscsi output!"
+if ! lsscsi | grep -q ${DISK} ; then
+  echo "Disk ${DISK} not found in lsscsi output!"
   exit 2
 fi
 
-smartctl -t conveyance $DISK
+smartctl -t conveyance ${DISK}

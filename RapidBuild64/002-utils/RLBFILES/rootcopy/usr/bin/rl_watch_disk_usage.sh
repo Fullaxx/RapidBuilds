@@ -1,5 +1,7 @@
 #!/bin/bash
 
+# https://unix.stackexchange.com/questions/225095/how-to-get-total-read-and-total-write-iops-in-linux
+
 usage()
 {
   echo "Usage: $0 <disk>"
@@ -22,4 +24,5 @@ if ! lsscsi | grep -q ${DISK} ; then
   exit 2
 fi
 
-hdparm -I ${DISK} | grep -E 'Model|Serial|Firmware|signaling|1000'
+# watch -n1 iostat -dx ${DISK}
+iostat -dx 1 ${DISK}
