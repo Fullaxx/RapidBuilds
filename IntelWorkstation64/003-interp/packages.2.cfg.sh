@@ -2,7 +2,7 @@
 if [ "${INCMOD003INTERP}" == "Y" ]; then
 # Custom Additions
   INCFTPSYNC="N"
-  INCJUPYTER="Y"
+  INCJUPYTER="N"
   INCKEEPNOTE="Y"
 # INCSCIPY pulls INCNUMPY
   INCPASTEBINIT="N"
