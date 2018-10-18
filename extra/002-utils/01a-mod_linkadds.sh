@@ -59,6 +59,10 @@ if [ "${INCLOOPAESSETUP}" == "Y" ]; then
   linkpackage "${PACKAGESDIR}/loop-aes-losetup/loop-aes-losetup-2.30.1-${ARCH}-bksrc1.xzm"
 fi
 
+if [ "${INCLZFOUR}" == "Y" ]; then
+  linkpackage "${PACKAGESDIR}/lz4/lz4-1.8.3-${ARCH}-bksrc1.xzm"
+fi
+
 if [ "${INCMOSH}" == "Y" ]; then
   linkpackage "${PACKAGESDIR}/mosh/mosh-1.3.2-${ARCH}-bksrc2.xzm"
 fi
