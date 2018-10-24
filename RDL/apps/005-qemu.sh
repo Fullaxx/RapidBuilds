@@ -4,6 +4,7 @@ if [ "${INCQEMU}" == "Y" ]; then
   INCLIBAIO="Y"
   INCLIBJPEGTURBO="Y"
   INCLIBPNG="Y"
+  INCNUMACTL="Y"
   INCSDLTWO="Y"
   INCVTE="Y"
 fi
