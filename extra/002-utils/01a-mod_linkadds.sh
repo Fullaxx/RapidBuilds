@@ -75,6 +75,10 @@ if [ "${INCNUMACTL}" == "Y" ]; then
   linkpackage "${PACKAGESDIR}/numactl/numactl-2.0.11-${ARCH}-bksrc1.xzm"
 fi
 
+if [ "${INCNUMAD}" == "Y" ]; then
+  linkpackage "${PACKAGESDIR}/numad/numad-20181024-${ARCH}-bksrc1.xzm"
+fi
+
 if [ "${INCPROTOBUF}" == "Y" ]; then
   linkpackage "${PACKAGESDIR}/protobuf/protobuf-3.6.1-${ARCH}-bksrc1.xzm"
 fi

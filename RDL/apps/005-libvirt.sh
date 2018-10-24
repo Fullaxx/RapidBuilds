@@ -1,5 +1,7 @@
 if [ "${INCLIBVIRT}" == "Y" ]; then
   INCLIBSSHONE="Y"
+  INCNUMACTL="Y"
+  INCNUMAD="Y"
   INCQEMU="Y"
   INCYAJL="Y"
 fi
