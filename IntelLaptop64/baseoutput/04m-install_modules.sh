@@ -24,6 +24,8 @@ cp -Lpv ${PACKAGESDIR}/VirtualBox/VirtualBox-5.2.20-${ARCH}-1.xzm ${MODSDIR}/
 cp -Lpv ${PACKAGESDIR}/LibreOffice/LibreOffice-5.4.7-${ARCH}-1.xzm ${MODSDIR}/
 cp -Lpv ${PACKAGESDIR}/chromium/chromium-69.0.3497.100-${ARCH}-1alien.xzm ${MODSDIR}/
 cp -Lpv ${PACKAGESDIR}/dbwalls/dbwalls-1920-130207.xzm ${MODSDIR}/
+cp -Lpv ${PACKAGESDIR}/docker/docker-18.06.1-ce-${ARCH}-3.xzm ${MODSDIR}/
+cp -Lpv ${PACKAGESDIR}/docker-compose/docker-compose-1.22.0-${ARCH}-1.xzm ${MODSDIR}/
 cp -Lpv ${PACKAGESDIR}/java8/jre-8u181-${ARCH}-4.xzm ${MODSDIR}/
 cp -Lpv ${PACKAGESDIR}/veracrypt/veracrypt-gui-1.23-${ARCH}-1.xzm ${MODSDIR}/
 cp -Lpv ${PACKAGESDIR}/vivaldi/vivaldi-stable-2.0.1309.37-2.${ARCH}.xzm ${MODSDIR}/
