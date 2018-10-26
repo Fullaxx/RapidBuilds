@@ -80,11 +80,11 @@ if [ "${INCNUMAD}" == "Y" ]; then
 fi
 
 if [ "${INCPROTOBUF}" == "Y" ]; then
-  linkpackage "${PACKAGESDIR}/protobuf/protobuf-3.6.1-${ARCH}-bksrc1.xzm"
+  linkpackage "${PACKAGESDIR}/protobuf/protobuf-3.6.1-${ARCH}-bksrc2.xzm"
 fi
 
 if [ "${INCPROTOBUFC}" == "Y" ]; then
-  linkpackage "${PACKAGESDIR}/protobuf/protobuf-c-1.3.1-${ARCH}-bksrc2.xzm"
+  linkpackage "${PACKAGESDIR}/protobuf/protobuf-c-1.3.1-${ARCH}-bksrc3.xzm"
 fi
 
 if [ "${INCXNBD}" == "Y" ]; then
