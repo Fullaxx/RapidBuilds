@@ -10,9 +10,9 @@ fi
 RAPIDBUILDSDIR=${RAPIDBUILDSDIR:-`dirname $0`}
 if [ "${RAPIDBUILDSDIR}" == "." ]; then RAPIDBUILDSDIR=`pwd`; fi
 
-${RAPIDBUILDSDIR}/RapidBuild64/rebuild.sh all
 ${RAPIDBUILDSDIR}/RapidInstall64/rebuild.sh all
 ${RAPIDBUILDSDIR}/RapidDocker64/rebuild.sh all
+${RAPIDBUILDSDIR}/RapidBuild64/rebuild.sh all
 ${RAPIDBUILDSDIR}/RapidFileserver64/rebuild.sh all
 ${RAPIDBUILDSDIR}/RapidWorkstation64/rebuild.sh all
 
