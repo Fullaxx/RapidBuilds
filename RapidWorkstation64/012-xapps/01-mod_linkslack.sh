@@ -70,6 +70,10 @@ if [ "${INCGNUPLOT}" == "Y" ]; then
   linkpackage ${SLACKPKGDIR}/xap/gnuplot-*.txz
 fi
 
+if [ "${INCGPA}" == "Y" ]; then
+  linkpackage ${SLACKPKGDIR}/n/gpa-*.txz
+fi
+
 if [ "${INCGPARTED}" == "Y" ]; then
   linkpackage ${SLACKPKGDIR}/xap/gparted-*.txz
 fi
