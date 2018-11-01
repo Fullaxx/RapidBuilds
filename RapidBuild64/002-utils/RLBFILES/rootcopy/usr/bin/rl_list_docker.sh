@@ -8,3 +8,5 @@ fi
 docker ps
 echo
 docker images
+echo
+docker volume ls
