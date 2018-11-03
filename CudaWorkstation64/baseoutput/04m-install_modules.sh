@@ -13,7 +13,7 @@ if [ ! -d ${MODSDIR} ]; then
   exit 1
 fi
 
-cp -Lpv ${PACKAGESDIR}/nvidia_driver/011-nvidia-390.87-${KERNVERS}.xzm ${BASEDIR}/
+cp -Lpv ${PACKAGESDIR}/nvidia_driver/011-nvidia-410.73-${KERNVERS}.xzm ${BASEDIR}/
 
 # Chrome needs RDL
 if [ "${INCCHROME}" == "Y" ]; then
