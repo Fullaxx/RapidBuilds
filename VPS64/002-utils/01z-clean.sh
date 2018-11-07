@@ -4,4 +4,8 @@ source ../spec.sh
 source ./module_spec.sh
 
 rm -f cdrtools-*.txz
-# rm -f sqlite-*.txz (gpg2 needs sqlite)
+
+if [ ${INCGNUPGTWO} != "Y" ]; then
+# gpg2 needs sqlite
+  rm -f sqlite-*.txz
+fi
