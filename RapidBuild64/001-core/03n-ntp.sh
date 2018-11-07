@@ -7,8 +7,11 @@ source ./module_spec.sh
 rm -f ${DIR}/etc/localtime ${DIR}/etc/localtime-copied-from
 ln -s /usr/share/zoneinfo/Zulu ${DIR}/etc/localtime
 
-chmod 0755 ${DIR}/etc/rc.d/rc.ntpd
-if [ -r ${DIR}/etc/ntp.conf ]; then
+if [ -f ${DIR}/etc/rc.d/rc.ntpd ]; then
+  chmod 0755 ${DIR}/etc/rc.d/rc.ntpd
+fi
+
+if [ -f ${DIR}/etc/ntp.conf ]; then
 	sed -e 's@server\t127.127.1.0@#server\t127.127.1.0@' -i ${DIR}/etc/ntp.conf
 	sed -e 's/#server 0.pool.ntp.org iburst/server 0.pool.ntp.org iburst/' -i ${DIR}/etc/ntp.conf
 	sed -e 's/#server 1.pool.ntp.org iburst/server 1.pool.ntp.org iburst/' -i ${DIR}/etc/ntp.conf

@@ -14,8 +14,8 @@ if [ ! -e ${DIR}/usr/bin/lzm2dir ]; then ln -s xzm2dir ${DIR}/usr/bin/lzm2dir; f
 if [ ! -e ${DIR}/usr/bin/tgz2xzm ]; then ln -s txz2xzm ${DIR}/usr/bin/tgz2xzm; fi
 
 # sed -e 's/--noclear //' -i fs/etc/inittab
+# sed -e 's#    /usr/sbin/acpid#    sleep 3; /usr/sbin/acpid#' -i ${DIR}/etc/rc.d/rc.acpid
 sed -e '/\/usr\/local\/lib64/d' -i ${DIR}/etc/ld.so.conf
-sed -e 's#    /usr/sbin/acpid#    sleep 3; /usr/sbin/acpid#' -i ${DIR}/etc/rc.d/rc.acpid
 sed -e 's/ENCRYPT_METHOD SHA256/ENCRYPT_METHOD SHA512/' -i ${DIR}/etc/login.defs
 sed -e 's/# SHA_CRYPT_MIN_ROUNDS 5000/SHA_CRYPT_MIN_ROUNDS 999999/' -i ${DIR}/etc/login.defs
 sed -e 's/# SHA_CRYPT_MAX_ROUNDS 5000/SHA_CRYPT_MAX_ROUNDS 999999/' -i ${DIR}/etc/login.defs
