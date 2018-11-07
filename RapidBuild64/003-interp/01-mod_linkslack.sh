@@ -107,8 +107,11 @@ if [ "${INCRUBY}" == "Y" ]; then
   linkpackage ${SLACKPKGDIR}/l/libyaml-*.txz
 fi
 
-if [ "${INCTCL}" == "Y" ]; then
+if [ "${INCEXPECT}" == "Y" ]; then
   linkpackage ${SLACKPKGDIR}/tcl/expect-*.txz
+fi
+
+if [ "${INCTCL}" == "Y" ]; then
   linkpackage ${SLACKPKGDIR}/tcl/tcl-*.txz
   linkpackage ${SLACKPKGDIR}/tcl/tk-*.txz
   linkpackage ${SLACKPKGDIR}/tcl/tix-*.txz

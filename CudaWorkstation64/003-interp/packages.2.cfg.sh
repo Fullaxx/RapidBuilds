@@ -1,5 +1,7 @@
 # 003-interp options
 if [ "${INCMOD003INTERP}" == "Y" ]; then
+  INCEXPECT="Y"
+
 # Custom Additions
   INCFTPSYNC="N"
   INCJUPYTER="N"
