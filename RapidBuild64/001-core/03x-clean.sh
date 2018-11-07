@@ -3,6 +3,11 @@
 source ../spec.sh
 source ./module_spec.sh
 
+# Let's get rid of ${DIR}/var/log/setup
+rm -r ${DIR}/var/log/setup
+rm ${DIR}/run/lock/pkgtools/ldconfig.lock
+rmdir ${DIR}/run/lock/pkgtools
+
 # Clean up dbus and grub
 if [ "${INCMOD010XORG}" != "Y" ]; then
   rm ${DIR}/usr/bin/dbus-launch
