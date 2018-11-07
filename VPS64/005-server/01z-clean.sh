@@ -3,5 +3,7 @@
 source ../spec.sh
 source ./module_spec.sh
 
-rm -f czmq-*.xzm
-rm -f jzmq-*.xzm
+if [ "${INCZEROMQ}" == "Y" ]; then
+  rm czmq-*.xzm
+  rm jzmq-*.xzm
+fi
