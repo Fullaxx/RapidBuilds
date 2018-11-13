@@ -60,6 +60,10 @@ if [ "${INCIPERFTHREE}" == "Y" ]; then
   linkpackage "${PACKAGESDIR}/iperf/iperf-3.6-${ARCH}-bksrc1.xzm"
 fi
 
+if [ "${INCIPMITOOL}" == "Y" ]; then
+  linkpackage "${PACKAGESDIR}/ipmitool/ipmitool-20181113-${ARCH}-bksrc1.xzm"
+fi
+
 if [ "${INCLOOPAESSETUP}" == "Y" ]; then
   linkpackage "${PACKAGESDIR}/loop-aes-losetup/loop-aes-losetup-2.30.1-${ARCH}-bksrc1.xzm"
 fi
