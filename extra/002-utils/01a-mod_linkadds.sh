@@ -35,6 +35,11 @@ if [ "${INCCURLLOADER}" == "Y" ]; then
   linkpackage "${PACKAGESDIR}/curl-loader/curl-loader-0.56-${ARCH}-bksrc1.xzm"
 fi
 
+if [ "${INCEXFAT}" == "Y" ]; then
+  linkpackage "${PACKAGESDIR}/exfat/fuse-exfat-1.3.0-${ARCH}-bksrc1.xzm"
+  linkpackage "${PACKAGESDIR}/exfat/exfat-utils-1.3.0-${ARCH}-bksrc1.xzm"
+fi
+
 if [ "${INCEXTUNDELETE}" == "Y" ]; then
   linkpackage "${PACKAGESDIR}/extundelete/extundelete-0.2.4-${ARCH}-bksrc1.xzm"
 fi

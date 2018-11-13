@@ -54,8 +54,11 @@ if [ "${INCOPENBOX}" == "Y" ]; then
   linkpackage "${PACKAGESDIR}/openbox/openbox-3.6.1-${ARCH}-bksrc1.xzm"
 fi
 
-if [ "${INCXFE}" == "Y" ]; then
-  linkpackage "${PACKAGESDIR}/xfe/xfe-1.42-${ARCH}-bksrc1.xzm"
+if [ "${INCTILDA}" == "Y" ]; then
+# tilda needs libconfuse
+# libconfuse could be moved to extra/009-xmodlibs once something else needs it
+  linkpackage "${PACKAGESDIR}/libconfuse/libconfuse-3.2.2-${ARCH}-bksrc1.xzm"
+  linkpackage "${PACKAGESDIR}/tilda/tilda-1.4.1-${ARCH}-bksrc1.xzm"
 fi
 
 if [ "${INCVLC}" == "Y" ]; then
@@ -67,4 +70,8 @@ fi
 if [ "${INCWIRESHARK}" == "Y" ]; then
   linkpackage "${PACKAGESDIR}/portaudio/portaudio-v19-${ARCH}-bksrc1.xzm"
   linkpackage "${PACKAGESDIR}/wireshark/wireshark-2.6.4-GTK2-${ARCH}-bksrc1.xzm"
+fi
+
+if [ "${INCXFE}" == "Y" ]; then
+  linkpackage "${PACKAGESDIR}/xfe/xfe-1.42-${ARCH}-bksrc1.xzm"
 fi
