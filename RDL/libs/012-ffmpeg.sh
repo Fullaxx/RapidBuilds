@@ -15,7 +15,7 @@ if [ "${INCFFMPEG}" == "Y" ]; then
   INCOPENJPEG="Y"
   INCOPUS="Y"
   INCPULSE="Y"
-  INCSAMBALIBS="Y"
+#  INCSAMBALIBS="Y" Fri Sep 21 18:51:07 UTC 2018 Don't try to link with Samba since the latest version is not compatible.
   INCSDLTWO="Y"
   INCSPEEX="Y"
   INCTALLOC="Y"
