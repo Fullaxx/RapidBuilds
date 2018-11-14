@@ -26,9 +26,10 @@ if [ "${INCVSCODE}" == "Y" ]; then
 fi
 
 # Copy any extra modules that don't need RDL
-cp -Lpv ${PACKAGESDIR}/VirtualBox/VirtualBox-5.2.20-${ARCH}-1.xzm ${MODSDIR}/
+cp -Lpv ${PACKAGESDIR}/VirtualBox/VirtualBox-5.2.22-${ARCH}-1.xzm ${MODSDIR}/
 cp -Lpv ${PACKAGESDIR}/LibreOffice/LibreOffice-5.4.7-${ARCH}-1.xzm ${MODSDIR}/
 cp -Lpv ${PACKAGESDIR}/dbwalls/dbwalls-1920-130207.xzm ${MODSDIR}/
+cp -Lpv ${PACKAGESDIR}/dbwalls/dbwalls-2160-170805.xzm ${MODSDIR}/
 cp -Lpv ${PACKAGESDIR}/docker/docker-18.06.1-ce-${ARCH}-4.xzm ${MODSDIR}/
 cp -Lpv ${PACKAGESDIR}/docker-compose/docker-compose-1.23.1-${ARCH}-1.xzm ${MODSDIR}/
 # cp -Lpv ${PACKAGESDIR}/idea/ideaIU-2018.2.4-noarch-1.xzm ${MODSDIR}/
