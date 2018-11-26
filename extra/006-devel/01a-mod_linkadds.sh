@@ -35,6 +35,12 @@ if [ "${INCCODEEXAMPLES}" == "Y" ]; then
   linkpackage "${PACKAGESDIR}/libtom/tomsfastmath-20181113-noarch-bksrc1.xzm"
 fi
 
+if [ "${INCMEDIT}" == "Y" ]; then
+# do we need txt2tags? or is that only for building?
+#  linkpackage "${PACKAGESDIR}/txt2tags/txt2tags-20181126-x86_64-bksrc1.xzm"
+  linkpackage "${PACKAGESDIR}/medit/medit-20181126-${ARCH}-bksrc1.xzm"
+fi
+
 if [ "${INCVALGRIND}" == "Y" ]; then
   linkpackage "${PACKAGESDIR}/valgrind/valgrind-3.13.0-${ARCH}-bksrc1.xzm"
 fi
