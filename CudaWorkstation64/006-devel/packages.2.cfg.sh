@@ -9,6 +9,7 @@ if [ "${INCMOD006DEVEL}" == "Y" ]; then
   INCSUBVERSION="N"
 
 # Custom Additions
+  INCANJUTA="N"
   INCASTYLE="Y"
   INCCGDB="Y"
   INCCODEEXAMPLES="Y"

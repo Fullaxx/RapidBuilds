@@ -3,6 +3,13 @@
 source ../spec.sh
 source ./module_spec.sh
 
+if [ "${INCANJUTA}" == "Y" ]; then
+  linkpackage "${PACKAGESDIR}/gtksourceview/gtksourceview-3.24.9-${ARCH}-bksrc1.xzm"
+  linkpackage "${PACKAGESDIR}/libgda/libgda-5.2.5-${ARCH}-bksrc1.xzm"
+  linkpackage "${PACKAGESDIR}/gdl/gdl-3.28.0-${ARCH}-bksrc1.xzm"
+  linkpackage "${PACKAGESDIR}/anjuta/anjuta-3.28.0-${ARCH}-bksrc1.xzm"
+fi
+
 if [ "${INCASTYLE}" == "Y" ]; then
   linkpackage "${PACKAGESDIR}/astyle/astyle-3.1-${ARCH}-bksrc1.xzm"
 fi
