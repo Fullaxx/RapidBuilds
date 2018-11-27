@@ -4,5 +4,3 @@ if [ "${INCRPM}" == "Y" ]; then
   INCELFUTILS="Y"
   INCDB48="Y"
 fi
-
-# INCSEAMONKEYSOLIBS="Y"

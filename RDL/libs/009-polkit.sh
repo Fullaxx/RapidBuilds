@@ -1,3 +1,3 @@
 if [ "${INCPOLKIT}" == "Y" ]; then
-  INCJSONEEIGHTYFIVE="Y"
+  INCMOZJSFIFTYTWO="Y"
 fi

@@ -114,11 +114,6 @@ if [ "${INCJSONC}" == "Y" ]; then
   linkpackage ${SLACKPKGDIR}/l/json-c-*.txz
 fi
 
-if [ "${INCJSONEEIGHTYFIVE}" == "Y" ]; then
-# neon needs js185
-  linkpackage ${SLACKPKGDIR}/l/js185-*.txz
-fi
-
 if [ "${INCJSONGLIB}" == "Y" ]; then
   linkpackage ${SLACKPKGDIR}/l/json-glib-*.txz
 fi
@@ -271,6 +266,11 @@ if [ "${INCMOZILLANSS}" == "Y" ]; then
   linkpackage ${SLACKPKGDIR}/l/mozilla-nss-*.txz
 fi
 
+if [ "${INCMOZJSFIFTYTWO}" == "Y" ]; then
+# polkit needs mozjs52
+  linkpackage ${SLACKPKGDIR}/l/mozjs52-*.txz
+fi
+
 if [ "${INCNEON}" == "Y" ]; then
 # audactous needs neon
   linkpackage ${SLACKPKGDIR}/l/neon-*.txz
@@ -280,10 +280,6 @@ if [ "${INCPINENTRY}" == "Y" ]; then
 # cryptsetup,gnupg2 reqs pinentry
   linkpackage ${SLACKPKGDIR}/n/pinentry-*.txz
 fi
-
-#if [ "${INCSEAMONKEYSOLIBS}" == "Y" ]; then
-#  linkpackage ${SLACKPKGDIR}/l/seamonkey-solibs-*.txz
-#fi
 
 if [ "${INCSERF}" == "Y" ]; then
 # subversion needs serf
