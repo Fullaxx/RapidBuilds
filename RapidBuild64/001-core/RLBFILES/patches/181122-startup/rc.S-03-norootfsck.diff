@@ -1,6 +1,6 @@
---- rc.S	2017-11-14 16:51:47.285484690 +0000
-+++ rc.S.new	2017-11-14 16:51:59.925352093 +0000
-@@ -251,84 +251,6 @@
+--- rc.S	2018-11-26 16:15:08.252283637 -0700
++++ rc.S.new	2018-11-26 16:15:12.512369469 -0700
+@@ -238,83 +238,6 @@
    date
  fi
  
@@ -81,7 +81,6 @@
 -  echo "to the Linux section in your /etc/lilo.conf and type 'lilo' to reinstall it."
 -fi # Done checking root filesystem
 -
--
- # Any /etc/mtab that exists here is old, so we start with a new one:
- /bin/rm -f /etc/mtab{,~,.tmp} && /bin/touch /etc/mtab
- 
+ # If /etc/mtab is a symlink (probably to /proc/mounts) then we don't want to mess with it.
+ if [ ! -L /etc/mtab -o ! -r /etc/mtab ]; then
+   # /etc/mtab is a file (or doesn't exist), so we'll handle it the old way:

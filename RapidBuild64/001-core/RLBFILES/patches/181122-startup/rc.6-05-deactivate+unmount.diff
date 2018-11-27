@@ -1,6 +1,6 @@
---- rc.6	2018-09-14 08:15:06.181630438 -0600
-+++ rc.6.new	2018-09-14 08:22:16.133892200 -0600
-@@ -234,8 +234,13 @@
+--- rc.6	2018-11-26 16:46:25.873067057 -0700
++++ rc.6.new	2018-11-26 16:46:30.413156756 -0700
+@@ -224,9 +224,14 @@
    /etc/rc.d/rc.cgmanager stop
  fi
  
@@ -9,9 +9,10 @@
 +for x in `grep devpts -A 500 /proc/mounts | grep .xzm | cut -d " " -f2`; do deactivate $x; done
 +
 +# Slax needs to silently skip aufs
+ # Unmount local file systems:
  echo "Unmounting local file systems:"
--/bin/umount -v -a -t no,proc,sysfs | tr -d ' ' | grep successfully | sed "s/:successfullyunmounted/ has been successfully unmounted./g" 2> /dev/null
-+/bin/umount -v -a -t no,proc,sysfs,usbfs,aufs | tr -d ' ' | grep successfully | sed "s/:successfullyunmounted/ has been successfully unmounted./g" 2> /dev/null
+-/bin/umount -v -a -t no,proc,sysfs,devtmpfs,fuse.gvfsd-fuse
++/bin/umount -v -a -t no,proc,sysfs,devtmpfs,fuse.gvfsd-fuse,usbfs,aufs
  
  # JFS needs a sync here or the / partition cannot be remounted read-only.
  # In spite of this, it seems that a JFS root partition will always be checked

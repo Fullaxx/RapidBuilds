@@ -1,5 +1,5 @@
---- rc.inet2	2012-08-14 22:53:35.000000000 +0000
-+++ rc.inet2.new	2016-04-19 11:13:31.551312790 +0000
+--- rc.inet2	2018-02-21 19:25:17.000000000 -0700
++++ rc.inet2.new	2018-11-26 16:54:50.059135954 -0700
 @@ -88,7 +88,7 @@
  # Start the OpenSSH SSH daemon:
  if [ -x /etc/rc.d/rc.sshd ]; then
@@ -9,10 +9,11 @@
  fi
  
  # Start the BIND name server daemon:
-@@ -110,6 +110,16 @@
+@@ -115,6 +115,18 @@
    /etc/rc.d/rc.nfsd start
  fi
  
++### RL Added ###
 +# Start the IPv6 radvd service
 +if [ -x /etc/rc.d/rc.radvd ]; then
 +  /etc/rc.d/rc.radvd start
@@ -22,6 +23,7 @@
 +if [ -x /etc/rc.d/rc.libvirtd ]; then
 +  /etc/rc.d/rc.libvirtd start
 +fi
++### RL Added ###
 +
  # Stuff you won't need follows.  ;-)
  

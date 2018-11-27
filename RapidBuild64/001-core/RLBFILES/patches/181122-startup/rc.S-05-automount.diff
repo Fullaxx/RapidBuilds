@@ -1,6 +1,6 @@
---- rc.S	2018-02-06 16:21:50.473657892 +0000
-+++ rc.S.new	2018-02-06 16:22:19.213370852 +0000
-@@ -300,7 +300,7 @@
+--- rc.S	2018-11-26 16:16:21.283764316 -0700
++++ rc.S.new	2018-11-26 16:16:25.413848635 -0700
+@@ -288,7 +288,7 @@
    fi
  fi
  
@@ -9,7 +9,7 @@
  # because TCP/IP is not yet configured, and not proc or sysfs
  # because those have already been mounted.  Also check that
  # devpts is not already mounted before attempting to mount
-@@ -308,15 +308,15 @@
+@@ -296,15 +296,15 @@
  # We also need to wait a little bit to let USB and other
  # hotplugged devices settle (sorry to slow down the boot):
  echo "Mounting non-root local filesystems:"
