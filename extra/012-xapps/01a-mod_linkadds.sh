@@ -56,7 +56,7 @@ fi
 if [ "${INCMEDIT}" == "Y" ]; then
 # do we need txt2tags? or is that only for building?
 #  linkpackage "${PACKAGESDIR}/txt2tags/txt2tags-20181126-x86_64-bksrc1.xzm"
-  linkpackage "${PACKAGESDIR}/medit/medit-20181126-${ARCH}-bksrc1.xzm"
+  linkpackage "${PACKAGESDIR}/medit/medit-20181127-${ARCH}-bksrc1.xzm"
 fi
 
 if [ "${INCOBCONF}" == "Y" ]; then
@@ -86,5 +86,5 @@ if [ "${INCWIRESHARK}" == "Y" ]; then
 fi
 
 if [ "${INCXFE}" == "Y" ]; then
-  linkpackage "${PACKAGESDIR}/xfe/xfe-1.42-${ARCH}-bksrc1.xzm"
+  linkpackage "${PACKAGESDIR}/xfe/xfe-1.43.1-${ARCH}-bksrc1.xzm"
 fi
