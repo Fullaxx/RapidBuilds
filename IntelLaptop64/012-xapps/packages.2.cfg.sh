@@ -33,6 +33,7 @@ if [ "${INCMOD012XAPPS}" == "Y" ]; then
   INCTIGERVNC="Y"
 
 # Custom Additions
+  INCANJUTA="N"
   INCBLUEFISH="N"
   INCBLUEFISHTWO="N"
   INCETERM="Y"
@@ -40,6 +41,7 @@ if [ "${INCMOD012XAPPS}" == "Y" ]; then
   INCFBPANEL="Y"
   INCGEANY="Y"
   INCHSETROOT="Y"
+  INCMEDIT="Y"
   INCOBCONF="Y"
   INCTILDA="Y"
   INCVLC="Y"

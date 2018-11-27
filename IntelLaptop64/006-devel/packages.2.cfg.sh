@@ -6,11 +6,9 @@ if [ "${INCMOD006DEVEL}" == "Y" ]; then
   INCMERCURIAL="Y"
 
 # Custom Additions
-  INCANJUTA="N"
   INCASTYLE="Y"
   INCCGDB="Y"
   INCCODEEXAMPLES="Y"
-  INCMEDIT="Y"
   INCVALGRIND="Y"
   INCVALKYRIE="N"
 fi

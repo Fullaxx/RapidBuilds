@@ -3,6 +3,13 @@
 source ../spec.sh
 source ./module_spec.sh
 
+if [ "${INCANJUTA}" == "Y" ]; then
+  linkpackage "${PACKAGESDIR}/gtksourceview/gtksourceview-3.24.9-${ARCH}-bksrc1.xzm"
+  linkpackage "${PACKAGESDIR}/libgda/libgda-5.2.5-${ARCH}-bksrc1.xzm"
+  linkpackage "${PACKAGESDIR}/gdl/gdl-3.28.0-${ARCH}-bksrc1.xzm"
+  linkpackage "${PACKAGESDIR}/anjuta/anjuta-3.28.0-${ARCH}-bksrc1.xzm"
+fi
+
 if [ "${INCBLUEFISH}" == "Y" ]; then
   linkpackage "${PACKAGESDIR}/bluefish/bluefish-1.0.7-${ARCH}-bksrc2.xzm"
 fi
@@ -44,6 +51,12 @@ fi
 if [ "${INCLIBGXPS}" == "Y" ]; then
 # evince needs libgxps
   linkpackage "${PACKAGESDIR}/libgxps/libgxps-0.2.5-${ARCH}-bksrc1.xzm"
+fi
+
+if [ "${INCMEDIT}" == "Y" ]; then
+# do we need txt2tags? or is that only for building?
+#  linkpackage "${PACKAGESDIR}/txt2tags/txt2tags-20181126-x86_64-bksrc1.xzm"
+  linkpackage "${PACKAGESDIR}/medit/medit-20181126-${ARCH}-bksrc1.xzm"
 fi
 
 if [ "${INCOBCONF}" == "Y" ]; then
