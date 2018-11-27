@@ -15,7 +15,7 @@ fi
 
 # Chrome needs RDL
 if [ "${INCCHROME}" == "Y" ]; then
-  cp -Lpv ${PACKAGESDIR}/chrome/chrome-69.0.3497.100-x86_64-1.xzm ${MODSDIR}/
+  cp -Lpv ${PACKAGESDIR}/chrome/chrome-70.0.3538.110-x86_64-1.xzm ${MODSDIR}/
 fi
 
 # VSCode needs RDL
