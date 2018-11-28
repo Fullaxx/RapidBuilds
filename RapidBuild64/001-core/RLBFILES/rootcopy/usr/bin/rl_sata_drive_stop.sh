@@ -36,15 +36,20 @@ sdparm --command=stop ${DEV}
 
 KD=`basename ${DEV}`
 
-if [ -r /sys/block/$KD/device/state ]; then
-  echo offline > /sys/block/$KD/device/state
-fi
+sleep 2
 
-if [ -r /sys/block/$KD/device/delete ]; then
-  echo 1 > /sys/block/$KD/device/delete
+if [ -r /sys/block/${KD}/device/state ]; then
+  echo offline > /sys/block/${KD}/device/state
 fi
 
 sleep 2
+
+if [ -r /sys/block/${KD}/device/delete ]; then
+  echo 1 > /sys/block/${KD}/device/delete
+fi
+
+sleep 2
+
 if [ -b ${DEV} ]; then
   echo "${DEV} stop failed!!"
   exit 1
