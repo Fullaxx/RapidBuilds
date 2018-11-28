@@ -24,7 +24,7 @@ if [ "${INCCODEEXAMPLES}" == "Y" ]; then
   linkpackage "${PACKAGESDIR}/libbtdht/libbtdht-20181113-noarch-bksrc1.xzm"
   linkpackage "${PACKAGESDIR}/libutp/libutp-20181113-noarch-bksrc1.xzm"
   linkpackage "${PACKAGESDIR}/microjson/microjson-20181112-noarch-bksrc1.xzm"
-  linkpackage "${PACKAGESDIR}/nodeplusc/nodeplusc-20181128-noarch-bsrc1.xzm"
+  linkpackage "${PACKAGESDIR}/nodeplusc/nodeplusc-20181128-noarch-bksrc1.xzm"
   linkpackage "${PACKAGESDIR}/pdjson/pdjson-20181112-noarch-bksrc1.xzm"
   linkpackage "${PACKAGESDIR}/poco/poco-20181113-noarch-bksrc1.xzm"
   linkpackage "${PACKAGESDIR}/tiny-json/tiny-json-20181112-noarch-bksrc1.xzm"
