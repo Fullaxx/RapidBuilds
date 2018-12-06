@@ -1,0 +1,15 @@
+--- rc.M	2018-11-26 16:22:33.869081221 -0700
++++ rc.M.new	2018-11-26 16:22:37.739133046 -0700
+@@ -52,12 +52,6 @@
+   /etc/rc.d/rc.syslog start
+ fi
+ 
+-# Update the X font indexes:
+-if [ -x /usr/bin/fc-cache ]; then
+-  echo "Updating X font indexes:  /usr/bin/fc-cache -f &"
+-  /usr/bin/fc-cache -f &
+-fi
+-
+ # Run rc.udev again.  This will start udev if it is not already running
+ # (for example, upon return from runlevel 1), otherwise it will trigger it
+ # to look for device changes and to generate persistent rules if needed.

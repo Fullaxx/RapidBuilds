@@ -1,0 +1,18 @@
+--- rc.S	2018-11-18 12:38:38.000000000 -0700
++++ rc.S.new	2018-11-26 16:11:15.547699346 -0700
+@@ -27,10 +27,11 @@
+   fi
+ fi
+ 
+-# Load the loop device kernel module:
+-if [ -x /etc/rc.d/rc.loop ]; then
+-  /etc/rc.d/rc.loop start
+-fi
++### RL Added ###
++# Always rebuild kmod deps
++echo "Updating Kernel Module Dependencies..."
++/sbin/depmod -a
++### RL Added ###
+ 
+ # Initialize udev to manage /dev entries and hotplugging.
+ # You may turn off udev by making the /etc/rc.d/rc.udev file non-executable

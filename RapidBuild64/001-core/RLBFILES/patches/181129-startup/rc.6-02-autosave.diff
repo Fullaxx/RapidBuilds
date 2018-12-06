@@ -1,0 +1,16 @@
+--- rc.6	2018-11-26 16:45:50.912378911 -0700
++++ rc.6.new	2018-11-26 16:45:54.662452508 -0700
+@@ -71,6 +71,13 @@
+   fi
+ fi
+ 
++### RL Added ###
++# Run the RapidLinux AutoSave script before shutdown
++if [ -x /usr/bin/rl_autosave.sh ]; then
++  /usr/bin/rl_autosave.sh
++fi
++### RL Added ###
++
+ # Run any local shutdown scripts:
+ if [ -x /etc/rc.d/rc.local_shutdown ]; then
+   /etc/rc.d/rc.local_shutdown stop
