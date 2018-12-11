@@ -1,11 +1,17 @@
 #!/bin/bash
-# Mount all discs, disable guest, autostart gui
+# Tweak the startup sequence
 #
-# Author: Tomas M. <http://slax.linux-live.org>
+# Author: Brett Kuskie <fullaxx@gmail.com>
 #
-# Modified for Slax_remix by fanthom
 
 . /usr/lib/liblinuxlive
+
+# We used to rebuild kmod deps before udev starts
+# rc.modules is handling this like normal, but it does --quick
+# echo "Updating Kernel Module Dependencies ..."
+# /sbin/depmod -a
+
+echo "/dev/sr0 /mnt/cdrom auto noauto,nodev,nosuid 0 0" >> /etc/fstab
 
 # Toggle the "executableness" of your startup scripts
 if [ -x /etc/rc.d/rc.rl_boot_services ]; then
@@ -15,6 +21,11 @@ fi
 # Add extra users and groups if needed
 if [ -x /etc/rc.d/rc.rl_add_ug ]; then
   /etc/rc.d/rc.rl_add_ug
+fi
+
+# LVM Automounter
+if [ -x /etc/rc.d/rc.rl_lvm ]; then
+  /etc/rc.d/rc.rl_lvm
 fi
 
 # Change the root home dir
@@ -50,6 +61,6 @@ fi
 # Set my IP address
 IFCMD=$(cmdline_value "staticip" | tr ":" " ")
 if [ -n "$IFCMD" ]; then
-   echo "Running ifconfig $IFCMD up"
-   su --login -c "ifconfig $IFCMD up"
+  echo "Running ifconfig $IFCMD up"
+  su --login -c "ifconfig $IFCMD up"
 fi

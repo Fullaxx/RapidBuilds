@@ -1,0 +1,18 @@
+#!/bin/bash
+
+# fanthom's LVM automount:
+blkid | grep /dev/mapper > /tmp/mapper$$
+if grep /dev /tmp/mapper$$ >/dev/null; then
+  echo -e "\n# LVM partitions" >>/etc/fstab
+  LVM=`wc -l /tmp/mapper$$ | cut -d " " -f1`
+  if grep "noauto" /proc/cmdline >/dev/null; then AUTO=noauto; else AUTO=auto; fi
+  x=1
+  while [ $x -le $LVM ]; do
+    NAME=`awk NR==$x /tmp/mapper$$ | awk '{print$1}' | cut -d ':' -f1 | sed "s@/dev/mapper/@@"`
+    FS=`awk NR==$x /tmp/mapper$$ | awk '{print$3}' | cut -d '=' -f2 | sed s/'"'//g`
+    mkdir /mnt/$NAME
+    echo "/dev/mapper/$NAME /mnt/$NAME $FS $AUTO,noatime,users,suid,dev,exec 0 0 # AutoUpdate" >>/etc/fstab
+    x=$(($x+1))
+  done
+fi
+rm /tmp/mapper$$
