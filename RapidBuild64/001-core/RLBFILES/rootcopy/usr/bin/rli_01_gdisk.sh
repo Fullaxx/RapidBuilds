@@ -14,7 +14,7 @@ DISK="$1"
 #RLPART="${DISK}$2"
 
 if `mount | grep -q ${DISK}` ; then
-  rl_disk_unmount.sh ${DISK} || exit -1
+  rl_disk_unmount.sh ${DISK} || exit 1
 fi
 
 echo

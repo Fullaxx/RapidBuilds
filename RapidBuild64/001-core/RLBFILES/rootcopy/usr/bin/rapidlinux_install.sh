@@ -10,7 +10,7 @@ usage()
   exit 1
 }
 
-if [ "$#" == "0" -o "$#" -gt "2" ]; then
+if [ "$#" == "0" ] || [ "$#" -gt "2" ]; then
   usage
 fi
 
@@ -19,7 +19,7 @@ if [ x"$1" == "x" ]; then
 fi
 
 DISK="$1"
-HAVESLAXSOURCE="0"
+HAVERLSOURCE="0"
 
 if [ ! -b ${DISK} ]; then
   echo "${DISK} must be a block device!"
@@ -37,12 +37,12 @@ if [ ! -e ${SYSBLOCKPATH} ]; then
   exit 2
 fi
 
-if [ -d /mnt/slaxsource ]; then
-  umount /mnt/slaxsource 2>/dev/null
+if [ -d /mnt/rlsource ]; then
+  umount /mnt/rlsource 2>/dev/null
 fi
 
 if [ "$#" == "1" ]; then
-  if [ -r ./boot -a -r ./slax ]; then
+  if [ -d ./boot ] && [ -d ./rl ]; then
     SOURCE=`pwd`
   else
     echo "Provide a source media location..."
@@ -52,7 +52,7 @@ if [ "$#" == "1" ]; then
 fi
 
 if [ "$#" == "2" ]; then
-  if [ -b "$2" -o -d "$2" ]; then
+  if [ -b "$2" ] || [ -d "$2" ]; then
     SOURCE="$2"
   else
     echo "Second Argument must be a CD/Disk or directory..."
@@ -65,35 +65,35 @@ SRCDIR=`mount | grep ${SOURCE} | awk '{print $3}'`
 if [ -n "${SRCDIR}" ]; then
   if [ -r "${SRCDIR}"/boot -a -r "${SRCDIR}"/slax ]; then
     echo "Found slax media in ${SRCDIR}..."
-    HAVESLAXSOURCE="1"
+    HAVERLSOURCE="1"
   fi
 fi
 
-if [ "${HAVESLAXSOURCE}" == "0" -a -b "${SOURCE}" ]; then
-  if [ ! -d /mnt/slaxsource ]; then mkdir /mnt/slaxsource; fi
-  mount "${SOURCE}" /mnt/slaxsource
+if [ "${HAVERLSOURCE}" == "0" ] && [ -b "${SOURCE}" ]; then
+  if [ ! -d /mnt/rlsource ]; then mkdir /mnt/rlsource; fi
+  mount "${SOURCE}" /mnt/rlsource
   if [ "$?" != "0" ]; then
     echo "Could not mount ${SOURCE}..."
     echo "Aborting Install!"
     exit 4
   fi
-  if [ -r /mnt/slaxsource/boot -a -r /mnt/slaxsource/slax ]; then
-    SRCDIR="/mnt/slaxsource"
-    echo "Found slax media in ${SRCDIR}..."
-    HAVESLAXSOURCE="1"
+  if [ -r /mnt/rlsource/boot ] && [ -r /mnt/rlsource/rl ]; then
+    SRCDIR="/mnt/rlsource"
+    echo "Found RapidLinux media in ${SRCDIR}..."
+    HAVERLSOURCE="1"
   fi
 fi
 
-if [ "${HAVESLAXSOURCE}" == "0" -a -d "${SOURCE}" ]; then
-  if [ -r "${SOURCE}"/boot -a -r "${SOURCE}"/slax ]; then
+if [ "${HAVERLSOURCE}" == "0" ] && [ -d "${SOURCE}" ]; then
+  if [ -r "${SOURCE}"/boot -a -r "${SOURCE}"/rl ]; then
     SRCDIR="${SOURCE}"
-    echo "Found slax media in ${SRCDIR}..."
-    HAVESLAXSOURCE="1"
+    echo "Found RapidLinux media in ${SRCDIR}..."
+    HAVERLSOURCE="1"
   fi
 fi
 
-if [ "${HAVESLAXSOURCE}" == "0" ]; then
-  echo "Could not find slax media..."
+if [ "${HAVERLSOURCE}" == "0" ]; then
+  echo "Could not find RapidLinux media..."
   echo "Aborting Install!"
   exit 5
 fi
@@ -118,7 +118,11 @@ fi
 #RLPART="${DISK}$RLPARTNUM"
 MNTDIR="/mnt/newos"
 
-${NEXTSCRIPT} ${DISK} && rli_02_copy.sh ${DISK} ${RLPARTNUM} ${SRCDIR} $MNTDIR && rli_03_install.sh ${DISK} ${MNTDIR} && \
-echo && echo "You may reboot now and boot from your RapidLinux hard drive! (${DISK})" && exit 0
+${NEXTSCRIPT} ${DISK} && \
+rli_02_copy.sh ${DISK} ${RLPARTNUM} ${SRCDIR} ${MNTDIR} && \
+rli_03_install.sh ${DISK} ${MNTDIR} && \
+echo && \
+echo "You may reboot now and boot from your RapidLinux hard drive! (${DISK})" \
+&& exit 0
 
 echo "An Unknown Error Occured!"

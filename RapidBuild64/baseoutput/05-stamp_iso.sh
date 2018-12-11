@@ -11,7 +11,7 @@ else
 fi
 
 # Set Permissions
-chown -R root.root ${SLAXDIR}
+chown -R root.root ${RLDIR}
 
 # Build the ISO
-( cd ${SLAXDIR}; ./make_iso.sh ${ISOOUTPUTDIR}/${ISOFILENAME} && echo "${ISOOUTPUTDIR}/${ISOFILENAME} created" || echo "ISO CREATION FAILED!" )
+( cd ${RLDIR} && ./make_iso.sh ${ISOOUTPUTDIR}/${ISOFILENAME} && echo "${ISOOUTPUTDIR}/${ISOFILENAME} created" || echo "ISO CREATION FAILED!" )

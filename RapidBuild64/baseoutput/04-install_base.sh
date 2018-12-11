@@ -14,7 +14,8 @@ if [ ! -d ${BASEDIR} ]; then
 fi
 
 # Copy the specified kernel
-cp ${KERNELPKGDIR}/bzImage ${BOOTDIR}/vmlinuz
+install -D -m 0644 ${KERNELPKGDIR}/bzImage ${BOOTDIR}/vmlinuz
+install -D -m 0644 ${PACKAGESDIR}/initramfs/irfs-20181211.img.lz ${BOOTDIR}/irfs.img
 
 # Copy the modules
 cp -Lpv *.xzm ${BASEDIR}/

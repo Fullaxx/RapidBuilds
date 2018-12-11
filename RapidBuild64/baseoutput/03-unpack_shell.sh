@@ -16,3 +16,16 @@ fi
 # ${BDIR} might not exist at this point, make it again
 mkdir -p ${BDIR}/shell
 tar xf ${RLSHELL} -C ${BDIR}/shell
+
+mkdir ${BDIR}/shell/rl
+mkdir ${BDIR}/shell/rl/base
+mkdir ${BDIR}/shell/rl/modules
+mkdir ${BDIR}/shell/rl/optional
+mkdir ${BDIR}/shell/rl/rootcopy
+
+install -D -m 0644 RLBFILES/boot/rl.cfg ${BDIR}/shell/boot/rl.cfg
+install -D -m 0644 RLBFILES/boot/rl.jpg ${BDIR}/shell/boot/rl.jpg
+install -D -m 0644 RLBFILES/boot/isolinux/isolinux.cfg ${BDIR}/shell/boot/isolinux/isolinux.cfg
+install -D -m 0644 RLBFILES/boot/syslinux/syslinux.cfg ${BDIR}/shell/boot/syslinux/syslinux.cfg
+install -D -m 0644 RLBFILES/boot/grub/grub.cfg ${BDIR}/shell/boot/grub/grub.cfg
+install -D -m 0755 RLBFILES/rl/make_iso.sh ${BDIR}/shell/rl/make_iso.sh
