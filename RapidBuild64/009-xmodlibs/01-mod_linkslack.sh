@@ -11,6 +11,8 @@ linkpackage ${SLACKPKGDIR}/l/icu4c-*.txz
 linkpackage ${SLACKPKGDIR}/l/libidn2-*.txz
 linkpackage ${SLACKPKGDIR}/l/libnl-*.txz
 linkpackage ${SLACKPKGDIR}/l/libnl3-*.txz
+# wget,libsoup require libpsl
+linkpackage ${SLACKPKGDIR}/l/libpsl-*.txz
 linkpackage ${SLACKPKGDIR}/l/libsigc++-*.txz
 linkpackage ${SLACKPKGDIR}/l/libtasn1-*.txz
 linkpackage ${SLACKPKGDIR}/l/libunistring-*.txz
@@ -241,7 +243,7 @@ if [ "${INCLIBZIP}" == "Y" ]; then
 fi
 
 if [ "${INCLMDB}" == "Y" ]; then
-# samba needs lmdb
+# samba,rpm needs lmdb
   linkpackage ${SLACKPKGDIR}/l/lmdb-*.txz
 fi
 
