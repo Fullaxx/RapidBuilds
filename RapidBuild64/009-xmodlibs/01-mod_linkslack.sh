@@ -103,6 +103,10 @@ if [ "${INCHUNSPELL}" == "Y" ]; then
   linkpackage ${SLACKPKGDIR}/l/hunspell-*.txz
 fi
 
+if [ "${INCISOCODES}" == "Y" ]; then
+  linkpackage ${SLACKPKGDIR}/l/iso-codes-*.txz
+fi
+
 if [ "${INCJANSSON}" == "Y" ]; then
   linkpackage ${SLACKPKGDIR}/l/jansson-*.txz
 fi
