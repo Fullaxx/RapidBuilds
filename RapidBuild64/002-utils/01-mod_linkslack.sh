@@ -41,6 +41,10 @@ if [ "${INCFLOPPY}" == "Y" ]; then
   linkpackage ${SLACKPKGDIR}/a/floppy-*.txz
 fi
 
+if [ "${INCFTWOFSTOOLS}" == "Y" ]; then
+  linkpackage ${SLACKPKGDIR}/a/f2fs-tools-*.txz
+fi
+
 if [ "${INCHAVEGED}" == "Y" ]; then
   linkpackage ${SLACKPKGDIR}/a/haveged-*.txz
 fi
