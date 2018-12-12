@@ -9,7 +9,7 @@ for FDIR in /usr/share/fonts/*; do
 done
 
 # Update the X font indexes:
-if [ -x /usr/bin/fc-cache ]; then
-  #echo "Updating X font indexes:  /usr/bin/fc-cache -f &"
-  /usr/bin/fc-cache -f &
-fi
+#if [ -x /usr/bin/fc-cache ]; then
+# echo "Updating X font indexes:  /usr/bin/fc-cache -f &"
+#  /usr/bin/fc-cache -f &
+#fi

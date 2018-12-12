@@ -42,3 +42,7 @@ fi
 if [ "${INCXWD}" != "Y" ]; then
   rm ${DIR}/usr/bin/rl_xwd_ss_*.sh
 fi
+
+if [ "${INCTIGERVNC}" != "Y" ]; then
+  rm ${DIR}/usr/bin/rl_share_my_desktop.sh
+fi
