@@ -3,12 +3,6 @@
 source ../spec.sh
 source ./module_spec.sh
 
-bail()
-{
-  echo "$1"
-  exit 1
-}
-
 if [ ! -d ${IRFSDIR} ]; then
   echo "${IRFSDIR} never got created!"
   exit 1
@@ -24,7 +18,7 @@ fi
 # Copy the specified kernel and save the initramfs
 install -D -m 0644 ${KERNELPKGDIR}/bzImage ${BOOTDIR}/vmlinuz
 
-echo "Saving initramfs ..."
+echo "Finalizing initramfs ..."
 ( set -e; cd ${IRFSDIR} && find . | cpio -H newc -o | lzma > ${BOOTDIR}/irfs.img )
 
 # Set Permissions
