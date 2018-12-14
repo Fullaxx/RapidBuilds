@@ -9,6 +9,11 @@ bail()
   exit 1
 }
 
+if [ ! -d ${IRFSDIR} ]; then
+  echo "${IRFSDIR} never got created!"
+  exit 1
+fi
+
 if [ "$TIMESTAMPEDISO" == "1" ]; then
   TIMESTAMP=`date "+%y%m%d-%H%M%S"`
   ISOFILENAME="${PROJNAME}-${TIMESTAMP}.iso"
@@ -18,11 +23,6 @@ fi
 
 # Copy the specified kernel and save the initramfs
 install -D -m 0644 ${KERNELPKGDIR}/bzImage ${BOOTDIR}/vmlinuz
-
-if [ ! -d ${IRFSDIR} ]; then
-  echo "${IRFSDIR} never got created!"
-  exit 1
-fi
 
 echo "Saving initramfs ..."
 ( set -e; cd ${IRFSDIR} && find . | cpio -H newc -o | lzma > ${BOOTDIR}/irfs.img )
