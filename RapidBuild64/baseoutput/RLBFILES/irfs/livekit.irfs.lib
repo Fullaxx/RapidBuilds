@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/sbin/sh
 
 # Functions library :: for Linux Live Kit scripts
 # Author: Tomas M. <http://www.linux-live.org>
