@@ -4,6 +4,13 @@ bail()
   exit 1
 }
 
+verbosecopymodule()
+{
+  SHORTNAME=`basename $1`
+  echo "Installing ${SHORTNAME} ..."
+  cp -Lp "$1" "$2"
+}
+
 slackwarecheck()
 {
   if [ -z "${SLACKPKGDIR}" ]; then
