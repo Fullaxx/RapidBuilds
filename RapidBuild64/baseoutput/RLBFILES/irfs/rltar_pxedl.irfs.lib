@@ -67,7 +67,7 @@ download_rl_tarball()
   echo "DHCPCDEV = ${DHCPCDEV}" >&2
   IP=$(get_ip ${DHCPCDEV})
   echo "IP = ${IP}" >&2
-  ip addr add "${IP}/24" dev "${DHCPCDEV}"
+  ip addr add "${IP}/24" dev ${DHCPCDEV}
   ip link set ${DHCPCDEV} mtu 9000
 
   RLTAR="$(cmdline_value rltar)"
@@ -79,6 +79,6 @@ download_rl_tarball()
 
 # reset the NIC back to default down unconfigured state
   ip addr del ${IP}/24 dev ${DHCPCDEV}
-  ip link set dev $1 down
+  ip link set dev ${DHCPCDEV} down
   echo "$1/${LIVEKITNAME}"
 }
