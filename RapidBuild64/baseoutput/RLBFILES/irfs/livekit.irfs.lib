@@ -377,7 +377,7 @@ savekernel()
 #
 savedevice()
 {
-  mkdir /from
+  if [ ! -d /from ]; then mkdir /from; fi
   echo "$1" > /from/DEVICE
 }
 

@@ -13,33 +13,33 @@ custom_init_nics()
 
   LC="$(cat /proc/net/dev | wc -l)"
   for MODULE in igb ixgbe; do
-    echo "Attemping modprobe $MODULE ..." >&2
-    modprobe $MODULE >&2
+    echo "Attemping modprobe ${MODULE} ..." >&2
+    modprobe ${MODULE} >&2
     NEWLC="$(cat /proc/net/dev | wc -l)"
-    if [ "$NEWLC" == "$LC" ]; then
-      rmmod $MODULE 2>/dev/null
+    if [ "${NEWLC}" == "$LC" ]; then
+      rmmod ${MODULE} 2>/dev/null
     else
       DIFF=$((NEWLC - LC))
-      echo "$MODULE provided $DIFF new nics" >&2
-      LC="$NEWLC"
+      echo "${MODULE} provided ${DIFF} new nics" >&2
+      LC="${NEWLC}"
     fi
   done
 }
 
 # udhcpc does not set the obtained IP address to the interface
 # so we have to do this hack to get it, then set it manually
-# $1 = timeout
+# $1 = interface
 #
 get_ip()
 {
   debug_log "get_set_ip" "$*"
   local OBTAINEDIP
 
-  ifconfig $1 up
-  udhcpc -q -i $1 2>/udhcpc_output
-  OBTAINEDIP="$(grep 'lease of' /udhcpc_output | awk '{print $4}')"
-  rm -f /udhcpc_output
-  echo "$OBTAINEDIP"
+  ip link set dev $1 up
+  if [ ! -d /from ]; then mkdir /from; fi
+  udhcpc -q -i $1 2>/from/UDHCPCIP
+  OBTAINEDIP="$(grep 'lease of' /from/UDHCPCIP | awk '{print $4}')"
+  echo "${OBTAINEDIP}"
 }
 
 # Download data from http
@@ -50,7 +50,7 @@ download_rl_tarball()
   debug_log "download_rl_tarball" "$*"
   local DHCPCDEV IP RLTAR
 
-  mkdir -p "$1/$LIVEKITNAME"
+  mkdir -p "$1/${LIVEKITNAME}"
 
   custom_init_nics
 
@@ -67,18 +67,18 @@ download_rl_tarball()
   echo "DHCPCDEV = ${DHCPCDEV}" >&2
   IP=$(get_ip ${DHCPCDEV})
   echo "IP = ${IP}" >&2
-  ip addr add "$IP/24" dev "${DHCPCDEV}"
+  ip addr add "${IP}/24" dev "${DHCPCDEV}"
   ip link set ${DHCPCDEV} mtu 9000
 
   RLTAR="$(cmdline_value rltar)"
-  ( cd "$1/$LIVEKITNAME" && wget "http://${RLTAR}" && tar xf rl.tar && rm rl.tar ) >&2
-  if [ ! -d "$1/$LIVEKITNAME/base" ] || [ ! -d "$1/$LIVEKITNAME/modules" ] || [ ! -d "$1/$LIVEKITNAME/optional" ] || [ ! -d "$1/$LIVEKITNAME/rootcopy" ]; then
+  ( cd "$1/${LIVEKITNAME}" && wget "http://${RLTAR}" && tar xf rl.tar && rm rl.tar ) >&2
+  if [ ! -d "$1/${LIVEKITNAME}/base" ] || [ ! -d "$1/${LIVEKITNAME}/modules" ] || [ ! -d "$1/${LIVEKITNAME}/optional" ] || [ ! -d "$1/${LIVEKITNAME}/rootcopy" ]; then
     echo "ERROR! COULD NOT DOWNLOAD rl.tar!" >&2
-    fatal "$LIVEKITNAME data not found"
+    fatal "${LIVEKITNAME} data not found"
   fi
 
 # reset the NIC back to default down unconfigured state
-  ip addr del $IP/24 dev ${DHCPCDEV}
-  ifconfig ${DHCPCDEV} 0.0.0.0 down
-  echo "$1/$LIVEKITNAME"
+  ip addr del ${IP}/24 dev ${DHCPCDEV}
+  ip link set dev $1 down
+  echo "$1/${LIVEKITNAME}"
 }
