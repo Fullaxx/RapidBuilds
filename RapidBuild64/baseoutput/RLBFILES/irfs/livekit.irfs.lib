@@ -62,7 +62,7 @@ echolog()
 show_debug_banner()
 {
   echo
-  echo "====="
+  echo "=============================="
   echo ": Debugging started. Here is the root shell for you."
   echo ": Type your desired commands or hit Ctrl+D to continue booting."
   echo
