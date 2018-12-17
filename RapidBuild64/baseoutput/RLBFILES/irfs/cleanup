@@ -1,4 +1,4 @@
-#!/sbin/sh
+#!/bin/sh
 # This script must be executed with parameter "--start" at the end of distro shutdown
 # What it does is it executes as init (process 1) and unmounts all filesystems
 # including union and the USB device (if any), so it can be cleanly removed
