@@ -3,4 +3,5 @@
 source ../spec.sh
 source ./module_spec.sh
 
-rm -f pcre2-*.txz
+# wget now requires pcre2
+# rm -f pcre2-*.txz
