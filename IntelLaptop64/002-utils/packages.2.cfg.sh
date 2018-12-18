@@ -1,6 +1,7 @@
 # 002-utils options
 if [ "${INCMOD002UTILS}" == "Y" ]; then
 # Departure from Default
+  INCDMIDECODE="Y"
   INCIRSSI="Y"
   INCKERNELFIRMWARE="Y"
   INCNMAP="Y"
