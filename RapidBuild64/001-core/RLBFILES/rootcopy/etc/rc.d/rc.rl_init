@@ -4,7 +4,15 @@
 # Author: Brett Kuskie <fullaxx@gmail.com>
 #
 
-. /usr/lib/liblinuxlive
+# look into cmdline and echo value of $1 option
+# $1 = value name, case sensitive, for example 'changes'
+#
+cmdline_value()
+{
+#  debug_log "cmdline_value" "$*"
+#  log "searching for bootparam value: $1"
+  egrep -o "(^|[[:space:]])$1=[^[:space:]]+" /proc/cmdline | cut -d "=" -f 2- | tail -n 1
+}
 
 # We used to rebuild kmod deps before udev starts
 # rc.modules is handling this like normal, but it does --quick
@@ -29,38 +37,38 @@ if [ -x /etc/rc.d/rc.rl_lvm ]; then
 fi
 
 # Change the root home dir
-NEWROOTHOME="`cmdline_value roothome`"
-if [ -n "$NEWROOTHOME" ]; then
+NEWROOTHOME=$(cmdline_value "roothome")
+if [ -n "${NEWROOTHOME}" ]; then
   if [ -x /etc/rc.d/rc.rl_setroothome ]; then
-    echo "Setting home directory to: $NEWROOTHOME"
-    /etc/rc.d/rc.rl_setroothome "$NEWROOTHOME"
+    echo "Setting home directory to: ${NEWROOTHOME}"
+    /etc/rc.d/rc.rl_setroothome "${NEWROOTHOME}"
   fi
 fi
 
 # change the root password
-NEWROOTPASS="`cmdline_value rootpasswd`"
-if [ "$NEWROOTPASS" = "ask" ]; then
+NEWROOTPASS=$(cmdline_value "rootpasswd")
+if [ "${NEWROOTPASS}" = "ask" ]; then
   echo -ne "\nEnter new password for root: "
   read -s NEWROOTPASS
 fi
 
-if [ -n "$NEWROOTPASS" ]; then
+if [ -n "${NEWROOTPASS}" ]; then
   echo "Setting new password for root"
-  echo "root:$NEWROOTPASS" | /usr/sbin/chpasswd
+  echo "root:${NEWROOTPASS}" | /usr/sbin/chpasswd
 fi
 
 # Change the ntp server IP address
-NTP_SERVER_ADDR="`cmdline_value ntps`"
-if [ -n "$NTP_SERVER_ADDR" ]; then
-  echo "Setting NTP Server IP to: $NTP_SERVER_ADDR"
-  #sed -e "s/server pool.ntp.org iburst/server $NTP_SERVER_ADDR iburst/" -i /etc/ntp.conf
+NTP_SERVER_ADDR=$(cmdline_value "ntps")
+if [ -n "${NTP_SERVER_ADDR}" ]; then
+  echo "Setting NTP Server IP to: ${NTP_SERVER_ADDR}"
+# sed -e "s/server pool.ntp.org iburst/server ${NTP_SERVER_ADDR} iburst/" -i /etc/ntp.conf
   if grep -q pool.ntp.org /etc/hosts ; then sed -e '/pool.ntp.org/d' -i /etc/hosts; fi
-  echo "$NTP_SERVER_ADDR pool.ntp.org" >> /etc/hosts
+  echo "${NTP_SERVER_ADDR} pool.ntp.org" >> /etc/hosts
 fi
 
 # Set my IP address
 IFCMD=$(cmdline_value "staticip" | tr ":" " ")
-if [ -n "$IFCMD" ]; then
-  echo "Running ifconfig $IFCMD up"
-  su --login -c "ifconfig $IFCMD up"
+if [ -n "${IFCMD}" ]; then
+  echo "Running ifconfig ${IFCMD} up"
+  su --login -c "ifconfig ${IFCMD} up"
 fi

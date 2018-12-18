@@ -2,7 +2,7 @@
 
 # Functions library :: for Linux Live scripts 6
 # Author: Tomas M. <http://www.linux-live.org>
-# Modifications for Slax-Remix by: fanthom
+# Author: fanthom
 
 # ===========================================================
 # GLOBAL variables
@@ -22,9 +22,6 @@ COPY2RAM=$MEMORY/copy2ram
 IMAGES=$MEMORY/images
 INITRAMDISK=$MOUNTDIR/live
 LOOPMOUNT=$MOUNTDIR/tmp
-
-# this will be replaced by build script, so never change the following line!
-LIVECDNAME="slax"
 
 # =================================================================
 # debug and output functions
