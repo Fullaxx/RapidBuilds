@@ -1,6 +1,6 @@
 --- rc.M	2018-08-13 15:39:33.000000000 -0600
-+++ rc.M.new	2018-12-11 15:06:39.544144354 -0700
-@@ -392,14 +392,55 @@
++++ rc.M.new	2018-12-19 09:06:00.169483600 -0700
+@@ -392,14 +392,56 @@
    /etc/rc.d/rc.iceccd start
  fi
  
@@ -10,8 +10,9 @@
 +  /usr/sbin/update-ca-certificates
 +fi
 +
-+# Setup docker (but don't start it here)
++# Setup and Start docker
 +if [ -x /etc/rc.d/rc.rl_docker ]; then
++  /etc/rc.d/rc.rl_docker setup
 +  /etc/rc.d/rc.rl_docker start
 +fi
 +
@@ -21,7 +22,7 @@
 +fi
 +
 +# Start Lighttpd web server:
-+if [ -x /etc/rc.d/rc.lighttpd -a -r /etc/lighttpd/lighttpd.conf ]; then
++if [ -x /etc/rc.d/rc.lighttpd ] && [ -r /etc/lighttpd/lighttpd.conf ]; then
 +  /etc/rc.d/rc.lighttpd start
 +fi
 +

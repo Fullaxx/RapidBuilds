@@ -24,7 +24,7 @@ verbosecopymodule ${PACKAGESDIR}/VirtualBox/VirtualBox-5.2.22-${ARCH}-1.xzm ${MO
 verbosecopymodule ${PACKAGESDIR}/LibreOffice/LibreOffice-5.4.7-${ARCH}-1.xzm ${MODSDIR}/
 verbosecopymodule ${PACKAGESDIR}/chromium/chromium-69.0.3497.100-${ARCH}-1alien.xzm ${MODSDIR}/
 verbosecopymodule ${PACKAGESDIR}/dbwalls/dbwalls-1920-130207.xzm ${MODSDIR}/
-verbosecopymodule ${PACKAGESDIR}/docker/docker-18.09.0-${ARCH}-1.xzm ${MODSDIR}/
+verbosecopymodule ${PACKAGESDIR}/docker/docker-18.09.0-${ARCH}-2.xzm ${MODSDIR}/
 verbosecopymodule ${PACKAGESDIR}/docker-compose/docker-compose-1.23.2-${ARCH}-1.xzm ${MODSDIR}/
 verbosecopymodule ${PACKAGESDIR}/java8/jre-8u181-${ARCH}-4.xzm ${MODSDIR}/
 verbosecopymodule ${PACKAGESDIR}/veracrypt/veracrypt-console-1.23-${ARCH}-1.xzm ${MODSDIR}/
