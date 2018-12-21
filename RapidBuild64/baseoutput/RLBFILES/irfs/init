@@ -9,7 +9,7 @@ export PATH=".:/:/usr/sbin:/usr/bin:/sbin:/bin"
 /sbin/busybox --install -s /sbin
 
 # busybox installs a link to itself from init
-# we remove it so as not to interefere with the cleanup script
+# we remove it so as not to interfere with the cleanup script
 /sbin/rm /sbin/init
 
 # load any library functions we find in /lib
