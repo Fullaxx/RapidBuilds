@@ -1,0 +1,14 @@
+--- rc.M	2018-12-31 07:42:17.945956545 -0700
++++ rc.M.new	2018-12-31 07:44:27.485839814 -0700
+@@ -439,4 +439,11 @@
+   /etc/rc.d/rc.local
+ fi
+ 
++### RL Added ###
++# Start the rc.fini script
++if [ -x /etc/rc.d/rc.rl_fini ]; then
++  /etc/rc.d/rc.rl_fini
++fi
++### RL Added ###
++
+ # All done.
