@@ -1,0 +1,59 @@
+--- rc.M	2018-08-13 15:39:33.000000000 -0600
++++ rc.M.new	2018-12-19 09:06:00.169483600 -0700
+@@ -392,14 +392,56 @@
+   /etc/rc.d/rc.iceccd start
+ fi
+ 
++### RL Added ###
++# This doesnt seem to be done anywhere else
++if [ -x /usr/sbin/update-ca-certificates ]; then
++  /usr/sbin/update-ca-certificates
++fi
++
++# Setup and Start docker
++if [ -x /etc/rc.d/rc.rl_docker ]; then
++  /etc/rc.d/rc.rl_docker setup
++  /etc/rc.d/rc.rl_docker start
++fi
++
++# Start mcelog daemon
++if [ -x /etc/rc.d/rc.mcelog ]; then
++  /etc/rc.d/rc.mcelog start
++fi
++
++# Start Lighttpd web server:
++if [ -x /etc/rc.d/rc.lighttpd ] && [ -r /etc/lighttpd/lighttpd.conf ]; then
++  /etc/rc.d/rc.lighttpd start
++fi
++
++# Install VirtualBox if available
++if [ -x /etc/rc.d/rc.VirtualBox ]; then
++  /etc/rc.d/rc.VirtualBox
++fi
++### RL Added ###
++
+ # If there are SystemV init scripts for this runlevel, run them.
+ if [ -x /etc/rc.d/rc.sysvinit ]; then
+   /etc/rc.d/rc.sysvinit
+ fi
+ 
++### RL Added ###
++# Remove unneeded modules
++if [ -x /etc/rc.d/rc.rl_module_cleanup ]; then
++  /etc/rc.d/rc.rl_module_cleanup
++fi
++### RL Added ###
++
+ # Start the local setup procedure.
+ if [ -x /etc/rc.d/rc.local ]; then
+   /etc/rc.d/rc.local
+ fi
+ 
++### RL Added ###
++# Start the rc.fini script
++if [ -x /etc/rc.d/rc.rl_fini ]; then
++  /etc/rc.d/rc.rl_fini
++fi
++### RL Added ###
++
+ # All done.
