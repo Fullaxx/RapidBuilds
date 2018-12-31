@@ -63,8 +63,8 @@ fi
 
 SRCDIR=`mount | grep ${SOURCE} | awk '{print $3}'`
 if [ -n "${SRCDIR}" ]; then
-  if [ -r "${SRCDIR}"/boot -a -r "${SRCDIR}"/slax ]; then
-    echo "Found slax media in ${SRCDIR}..."
+  if [ -r "${SRCDIR}"/boot -a -r "${SRCDIR}"/rl ]; then
+    echo "Found rl media in ${SRCDIR}..."
     HAVERLSOURCE="1"
   fi
 fi

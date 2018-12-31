@@ -147,6 +147,10 @@ if [ "${INCDIFFUTILS}" == "Y" ]; then
   linkpackage ${SLACKPKGDIR}/ap/diffutils-*.txz
 fi
 
+if [ "${INCDMIDECODE}" == "Y" ]; then
+  linkpackage ${SLACKPKGDIR}/ap/dmidecode-*.txz
+fi
+
 if [ "${INCDVDPLUSRWTOOLS}" == "Y" ]; then
   linkpackage ${SLACKPKGDIR}/ap/dvd+rw-tools-*.txz
 fi

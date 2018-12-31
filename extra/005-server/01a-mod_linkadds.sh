@@ -8,15 +8,15 @@ if [ "${INCDARKHTTPD}" == "Y" ]; then
 fi
 
 if [ "${INCLIBMICROHTTPD}" == "Y" ]; then
-  linkpackage "${PACKAGESDIR}/libmicrohttpd/libmicrohttpd-0.9.59-${ARCH}-bksrc2.xzm"
+  linkpackage "${PACKAGESDIR}/libmicrohttpd/libmicrohttpd-0.9.62-${ARCH}-bksrc1.xzm"
 fi
 
 if [ "${INCLIBVIRT}" == "Y" ]; then
-  linkpackage "${PACKAGESDIR}/libvirt/libvirt-4.8.0-${ARCH}-bksrc1.xzm"
+  linkpackage "${PACKAGESDIR}/libvirt/libvirt-4.9.0-${ARCH}-bksrc1.xzm"
 fi
 
 if [ "${INCLIBWEBSOCKETS}" == "Y" ]; then
-  linkpackage "${PACKAGESDIR}/libwebsockets/libwebsockets-3.0.1-${ARCH}-bksrc1.xzm"
+  linkpackage "${PACKAGESDIR}/libwebsockets/libwebsockets-3.1.0-${ARCH}-bksrc1.xzm"
 fi
 
 if [ "${INCNGINX}" == "Y" ]; then
@@ -49,20 +49,20 @@ if [ "${INCNODEEIGHT}" == "Y" ]; then
 fi
 
 if [ "${INCNODETEN}" == "Y" ]; then
-  linkpackage "${PACKAGESDIR}/node/node-v10.12.0-${ARCH}-1.xzm"
+  linkpackage "${PACKAGESDIR}/node/node-v10.14.2-${ARCH}-1.xzm"
 fi
 
 if [ "${INCNOVNC}" == "Y" ]; then
-  linkpackage "${PACKAGESDIR}/python_mods/noVNC-20180531-noarch-bksrc1.xzm"
+  linkpackage "${PACKAGESDIR}/noVNC/noVNC-1.0.0-noarch-bksrc1.xzm"
 fi
 
 if [ "${INCREDIS}" == "Y" ]; then
-  linkpackage "${PACKAGESDIR}/redis/redis-4.0.9-${ARCH}-bksrc1.xzm"
-  linkpackage "${PACKAGESDIR}/redis/webdis-latest-${ARCH}.xzm"
+  linkpackage "${PACKAGESDIR}/redis/redis-4.0.12-${ARCH}-bksrc1.xzm"
+  linkpackage "${PACKAGESDIR}/redis/webdis-20181217-${ARCH}-bksrc1.xzm"
 fi
 
 if [ "${INCQEMU}" == "Y" ]; then
-  linkpackage "${PACKAGESDIR}/qemu/qemu-2.11.2-${ARCH}-bksrc1.xzm"
+  linkpackage "${PACKAGESDIR}/qemu/qemu-2.12.1-${ARCH}-bksrc1.xzm"
 fi
 
 if [ "${INCYAJL}" == "Y" ]; then

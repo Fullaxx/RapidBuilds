@@ -31,7 +31,7 @@ mount "${RLPART}" "${MNTDIR}" -o noatime
 echo "Copying OS from ${SRCDIR} to ${RLPART} (mounted on ${MNTDIR})..."
 cp -av "${SRCDIR}"/* "${MNTDIR}"
 
-# ROOTCOPY="$MNTDIR/slax/rootcopy"
+# ROOTCOPY="$MNTDIR/rl/rootcopy"
 # mkdir -p "$ROOTCOPY/etc/rc.d"
 # cp -a /etc/{HOSTNAME,hosts,passwd,group,shadow} "$ROOTCOPY/etc/"
 # cp -a /etc/rc.d/rc.rl_boot_services "$ROOTCOPY/etc/rc.d/"

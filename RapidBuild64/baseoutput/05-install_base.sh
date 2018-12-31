@@ -14,4 +14,6 @@ if [ ! -d ${BASEDIR} ]; then
 fi
 
 # Copy the modules
-cp -Lpv *.xzm ${BASEDIR}/
+for FINIMOD in *.xzm; do
+  verbosecopymodule ${FINIMOD} ${BASEDIR}/
+done

@@ -9,4 +9,4 @@ if [ ! -d ${MODSDIR} ]; then
 fi
 
 # Copy any extra modules that don't need RDL
-cp -Lpv ${PACKAGESDIR}/curlftpfs/curlftpfs-0.9.2-${ARCH}-bksrc1.xzm ${MODSDIR}/
+verbosecopymodule ${PACKAGESDIR}/curlftpfs/curlftpfs-0.9.2-${ARCH}-bksrc1.xzm ${MODSDIR}/

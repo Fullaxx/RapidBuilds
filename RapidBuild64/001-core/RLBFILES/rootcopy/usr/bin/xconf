@@ -1,53 +1,44 @@
-#!/bin/sh
-# xconf:      Auto configure X.
-# By:	      Tomas M. <http://slax.linux-live.org>
+#!/bin/bash
+# xconf :	Auto configure X
+# Author:	Tomas M. <http://www.linux-live.org>
+# Author:	Brett Kuskie <fullaxx@gmail.com>
 #
 
-GENERATED_CONFIGFILE=$HOME/xorg.conf.new
-XConfig=/etc/X11/xorg.conf
+GENERATED_XCONFIG=${HOME}/xorg.conf.new
+XCONFIG=/etc/X11/xorg.conf
 
-. /etc/X11/gui.conf
+echo "Trying to autoconfigure Xwindow system, please wait..."
+/usr/bin/X -configure 2>/dev/null
 
-if [ "$SKIP_XCONF" = "yes" ]; then
-   echo "The file /etc/X11/gui.conf disallows xconf autoconfiguration, skipping."
-   echo "This is normal if you have own module with xorg.conf configuration."
-else
-
-   echo "Trying to autoconfigure Xwindow system, please wait..."
-   /usr/bin/X -configure 2>/dev/null
-
-   if [ ! $? = 0 ]; then
-      echo "cannot run auto config. Try xorgsetup (menu) or xorgconfig (plaintext) commands."
-      exit 1
-   fi
-
-   echo "creating $XConfig..."
-   rm -f $XConfig
-
-   cat $GENERATED_CONFIGFILE | egrep -v "^[[:space:]]*#" | while read LINE ;
-   do
-     # configure mouse
-     if echo $LINE | egrep -i "/dev/mouse" 1>/dev/null ; then
-        echo "Option \"ZAxisMapping\" \"4 5\"" >> $XConfig
-        echo "Option \"Buttons\" \"3\"" >> $XConfig
-     fi
-     echo "$LINE" >> $XConfig
-   # workaround for nv driver bug:
-   if echo $LINE | egrep -i "Driver *\"nv\"" 1>/dev/null ; then
-   echo "/usr/bin/xconf: nv driver bug workaround for $XConfig"
-   echo "Option \"XAANoOffscreenPixmaps\" \"true\"" >> $XConfig
-   fi
-   done
-
-   if [ "$CONF_EXTENSIONS" = "yes" ]; then
-      echo "Section \"Extensions\"" >>$XConfig
-      echo "  Option \"Composite\" \"Enable\"" >>$XConfig
-      echo "EndSection" >>$XConfig
-   fi
-
-   rm -f $GENERATED_CONFIGFILE
-   echo "all done. Run startx now."
-
+if [ "$?" != "0" ]; then
+  echo "cannot run auto config. Try xorgsetup (menu) or xorgconfig (plaintext) commands."
+  exit 1
 fi
+
+echo "Creating ${XCONFIG} ..."
+rm -f ${XCONFIG}
+
+cat ${GENERATED_XCONFIG} | egrep -v "^[[:space:]]*#" | while read LINE ; do
+# configure mouse
+  if echo ${LINE} | egrep -qi "/dev/mouse" ; then
+    echo "Option \"ZAxisMapping\" \"4 5\"" >> ${XCONFIG}
+    echo "Option \"Buttons\" \"3\"" >> ${XCONFIG}
+  fi
+  echo "${LINE}" >> ${XCONFIG}
+# workaround for nv driver bug:
+  if echo ${LINE} | egrep -qi "Driver *\"nv\"" ; then
+    echo "/usr/bin/xconf: nv driver bug workaround for ${XCONFIG}"
+    echo "Option \"XAANoOffscreenPixmaps\" \"true\"" >> ${XCONFIG}
+  fi
+done
+
+if [ "${CONF_EXTENSIONS}" = "yes" ]; then
+  echo "Section \"Extensions\"" >>${XCONFIG}
+  echo "  Option \"Composite\" \"Enable\"" >>${XCONFIG}
+  echo "EndSection" >>${XCONFIG}
+fi
+
+rm -f ${GENERATED_XCONFIG}
+echo "all done. Run startx now."
 
 echo "If you get black screen or Out-Of-Sync, hit Ctrl+Alt+NumPlus few times"

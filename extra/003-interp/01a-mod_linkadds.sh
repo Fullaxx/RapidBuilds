@@ -162,5 +162,5 @@ if [ "${INCTRAITLETS}" == "Y" ]; then
 fi
 
 if [ "${INCWEBSOCKIFY}" == "Y" ]; then
-  linkpackage "${PACKAGESDIR}/python_mods/websockify-20180531-noarch-bksrc1.xzm"
+  linkpackage "${PACKAGESDIR}/python_mods/websockify-20181217-noarch-bksrc1.xzm"
 fi

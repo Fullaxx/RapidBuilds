@@ -44,8 +44,7 @@ if [ -d ${SEARCHDIR} ]; then
   done
 fi
 
-# mkslaxsave slax-usb.sh
-for FILE in activate deactivate deb2xzm dir2xzm mkfileswap rpm2xzm txz2lzm txz2xzm xzm2dir; do
+for FILE in activate deactivate deb2xzm dir2xzm rpm2xzm txz2xzm xzm2dir; do
   chmod 0700 ${DIR}/usr/bin/${FILE}
 done
 

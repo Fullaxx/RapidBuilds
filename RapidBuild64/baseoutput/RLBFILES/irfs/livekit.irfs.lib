@@ -62,7 +62,7 @@ echolog()
 show_debug_banner()
 {
   echo
-  echo "====="
+  echo "=============================="
   echo ": Debugging started. Here is the root shell for you."
   echo ": Type your desired commands or hit Ctrl+D to continue booting."
   echo
@@ -186,7 +186,7 @@ init_aufs()
 {
   debug_log "init_aufs" "$*"
   # TODO maybe check here if aufs support is working at all
-  # and procude useful error message if user has no aufs
+  # and produce useful error message if user has no aufs
   modprobe aufs 2>/dev/null
 }
 
@@ -377,7 +377,7 @@ savekernel()
 #
 savedevice()
 {
-  mkdir /from
+  if [ ! -d /from ]; then mkdir /from; fi
   echo "$1" > /from/DEVICE
 }
 
