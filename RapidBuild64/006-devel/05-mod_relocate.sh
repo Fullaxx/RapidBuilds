@@ -16,7 +16,14 @@ if [ -d ${DIR}/usr/man ]; then
   rm -r ${DIR}/usr/man
 fi
 
-if [ -d ${DIR}/usr/share/doc -a ! -L ${DIR}/usr/share/doc ]; then
+# Remove /usr/share/doc if it is empty directory
+if [ -d ${DIR}/usr/share/doc ] && [ ! -L ${DIR}/usr/share/doc ]; then
+  if [ -z "$(ls -A ${DIR}/usr/share/doc)" ]; then
+    rmdir ${DIR}/usr/share/doc
+  fi
+fi
+
+if [ -d ${DIR}/usr/share/doc ] && [ ! -L ${DIR}/usr/share/doc ]; then
   if [ ! -d ${DIR}/usr/doc ]; then mkdir -p ${DIR}/usr/doc; fi
   mv ${DIR}/usr/share/doc/* ${DIR}/usr/doc/
   rmdir ${DIR}/usr/share/doc
