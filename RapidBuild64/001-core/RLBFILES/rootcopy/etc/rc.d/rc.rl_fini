@@ -4,16 +4,9 @@
 # Author: Brett Kuskie <fullaxx@gmail.com>
 #
 
-#if [ -x /etc/rc.d/rc.rl_glib_schema_compile ]; then
-#  /etc/rc.d/rc.rl_glib_schema_compile &
-#fi
-
-if [ -x /etc/rc.d/rc.rl_fonts ]; then
-  /etc/rc.d/rc.rl_fonts &
-fi
-
-if [ -x /usr/sbin/makewhatis ]; then
-  makewhatis &
+# Remove unneeded modules
+if [ -x /etc/rc.d/rc.rl_module_cleanup ]; then
+  /etc/rc.d/rc.rl_module_cleanup
 fi
 
 # make sure the terminal is fully usable even with framebuffer
