@@ -67,6 +67,10 @@ if [ "${INCOPENBOX}" == "Y" ]; then
   linkpackage "${PACKAGESDIR}/openbox/openbox-3.6.1-${ARCH}-bksrc1.xzm"
 fi
 
+if [ "${INCST}" == "Y" ]; then
+  linkpackage "${PACKAGESDIR}/st/st-0.8.1-${ARCH}-bksrc1.xzm"
+fi
+
 if [ "${INCTILDA}" == "Y" ]; then
 # tilda needs libconfuse
 # libconfuse could be moved to extra/009-xmodlibs once something else needs it

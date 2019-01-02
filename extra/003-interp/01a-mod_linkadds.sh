@@ -127,6 +127,10 @@ if [ "${INCPROMPTTOOLKIT}" == "Y" ]; then
   linkpackage "${PACKAGESDIR}/python_mods/prompt_toolkit-1.0.15-${ARCH}-bksrc1.xzm"
 fi
 
+if [ "${INCPSUTIL}" == "Y" ]; then
+  linkpackage "${PACKAGESDIR}/python_mods/psutil-5.4.8-${ARCH}-bksrc1.xzm"
+fi
+
 if [ "${INCPYTHONDATEUTIL}" == "Y" ]; then
 # python-dateutil needs six,setuptools_scm??
 # http://slackbuilds.org/repository/14.2/python/python-dateutil/
@@ -148,6 +152,10 @@ fi
 
 if [ "${INCTERMINADO}" == "Y" ]; then
   linkpackage "${PACKAGESDIR}/python_mods/terminado-0.8.1-${ARCH}-bksrc1.xzm"
+fi
+
+if [ "${INCTERMINATOR}" == "Y" ]; then
+  linkpackage "${PACKAGESDIR}/python_mods/terminator-1.91-${ARCH}-bksrc1.xzm"
 fi
 
 if [ "${INCTORNADO}" == "Y" ]; then
