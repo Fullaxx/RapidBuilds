@@ -11,6 +11,7 @@ linkpackage ${SLACKPKGDIR}/l/freetype-*.txz
 linkpackage ${SLACKPKGDIR}/l/harfbuzz-*.txz
 linkpackage ${SLACKPKGDIR}/l/graphite2-*.txz
 linkpackage ${SLACKPKGDIR}/x/dejavu-fonts-ttf-*.txz
+linkpackage ${SLACKPKGDIR}/x/font-ibm-type1-*.txz
 linkpackage ${SLACKPKGDIR}/x/liberation-fonts-ttf-*.txz
 linkpackage ${SLACKPKGDIR}/x/urw-core35-fonts-otf-*.txz
 #######################################
