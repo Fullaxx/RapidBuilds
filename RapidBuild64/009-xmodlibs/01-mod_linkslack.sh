@@ -48,6 +48,10 @@ if [ "${INCASPELL}" == "Y" ]; then
   linkpackage ${SLACKPKGDIR}/l/aspell-?.*.txz
 fi
 
+if [ "${INCBOOST}" == "Y" ]; then
+  linkpackage ${SLACKPKGDIR}/l/boost-*.txz
+fi
+
 if [ "${INCCONSOLEKITTWO}" == "Y" ]; then
   linkpackage ${SLACKPKGDIR}/l/ConsoleKit2-*.txz
 fi
