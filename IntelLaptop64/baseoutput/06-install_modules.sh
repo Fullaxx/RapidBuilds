@@ -25,7 +25,7 @@ verbosecopymodule ${PACKAGESDIR}/LibreOffice/LibreOffice-5.4.7-${ARCH}-1.xzm ${M
 verbosecopymodule ${PACKAGESDIR}/chromium/chromium-71.0.3578.80-${ARCH}-1alien.xzm ${MODSDIR}/
 verbosecopymodule ${PACKAGESDIR}/dbwalls/dbwalls-1920-130207.xzm ${MODSDIR}/
 verbosecopymodule ${PACKAGESDIR}/docker/docker-18.09.0-${ARCH}-4.xzm ${MODSDIR}/
-verbosecopymodule ${PACKAGESDIR}/java8/jre-8u181-${ARCH}-4.xzm ${MODSDIR}/
+verbosecopymodule ${PACKAGESDIR}/java8/jre-8u191-${ARCH}-1.xzm ${MODSDIR}/
 verbosecopymodule ${PACKAGESDIR}/veracrypt/veracrypt-console-1.23-${ARCH}-1.xzm ${MODSDIR}/
 verbosecopymodule ${PACKAGESDIR}/vivaldi/vivaldi-stable-2.2.1388.37-1.${ARCH}.xzm ${MODSDIR}/
 verbosecopymodule ${PACKAGESDIR}/vivaldi-codecs-ffmpeg-extra/vivaldi-codecs-ffmpeg-extra-71.0.3578.80-${ARCH}-1.xzm ${MODSDIR}/
