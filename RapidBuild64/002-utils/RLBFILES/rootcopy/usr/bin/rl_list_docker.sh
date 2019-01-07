@@ -5,7 +5,7 @@ if [ `id -u` != "0" ]; then
   exit 1
 fi
 
-docker ps
+docker ps -a
 echo
 docker images
 echo
