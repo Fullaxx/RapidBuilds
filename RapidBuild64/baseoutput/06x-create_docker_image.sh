@@ -13,9 +13,9 @@ DOCKERFILE="${DOCKERTEMP}/Dockerfile"
 
 mkdir ${DOCKERTEMP}
 echo "FROM scratch" >> ${DOCKERFILE}
-if [ -f 010-xorg.xzm ]; then
-  cp xorg.conf ${DOCKERTEMP}/
-fi
+#if [ -f 010-xorg.xzm ]; then
+#  cp xorg.conf ${DOCKERTEMP}/
+#fi
 
 cd ${BASEDIR}
 
@@ -46,9 +46,9 @@ for TARFILE in *.tar; do
   echo "ADD ${TARFILE} /" >> ${DOCKERFILE}
 done
 
-if [ -f xorg.conf ]; then
-  echo "COPY xorg.conf /etc/X11" >> ${DOCKERFILE}
-fi
+#if [ -f xorg.conf ]; then
+#  echo "COPY xorg.conf /etc/X11" >> ${DOCKERFILE}
+#fi
 
 #echo 'CMD ["/bin/bash", "-l"]' >> ${DOCKERFILE}
 echo 'CMD ["/bin/bash"]' >> ${DOCKERFILE}
@@ -59,9 +59,6 @@ if [ -S /var/run/docker.sock ]; then
   if [ "$?" != "0" ]; then cat Dockererr; exit 1; fi
   DOCKERIMAGEID=`grep 'Successfully built' Dockerlog | awk '{print $3}'`
   docker tag ${DOCKERIMAGEID} ${DOCKERTAG}
-#  docker tag ${DOCKERIMAGEID} fullaxx/rapidbuild64
-#  docker login
-#  docker push fullaxx/rapidbuild64:latest
 fi
 
 cd; rm -rf ${DOCKERTEMP}
