@@ -29,7 +29,7 @@ cp -Lpv ${PACKAGESDIR}/LibreOffice/LibreOffice-5.4.7-${ARCH}-1.xzm ${MODSDIR}/
 cp -Lpv ${PACKAGESDIR}/dbwalls/dbwalls-1920-130207.xzm ${MODSDIR}/
 cp -Lpv ${PACKAGESDIR}/docker/docker-18.09.0-${ARCH}-4.xzm ${MODSDIR}/
 # cp -Lpv ${PACKAGESDIR}/idea/ideaIU-2018.2.4-noarch-1.xzm ${MODSDIR}/
-cp -Lpv ${PACKAGESDIR}/java8/jdkdocs-8u181-noarch-1.xzm ${MODSDIR}/
-cp -Lpv ${PACKAGESDIR}/java8/jdk-8u181-${ARCH}-4.xzm ${MODSDIR}/
+cp -Lpv ${PACKAGESDIR}/java8/jdkdocs-8u191-noarch-1.xzm ${MODSDIR}/
+cp -Lpv ${PACKAGESDIR}/java8/jdk-8u191-${ARCH}-1.xzm ${MODSDIR}/
 cp -Lpv ${PACKAGESDIR}/maven/maven-3.5.4-noarch-2.xzm ${MODSDIR}/
 cp -Lpv ${PACKAGESDIR}/netbeans/netbeans-9.0-noarch-1.xzm ${MODSDIR}/
