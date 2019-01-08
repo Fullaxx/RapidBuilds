@@ -284,6 +284,11 @@ fi
 
 if [ "${INCGSTREAMER}" == "Y" ]; then
   linkpackage ${SLACKPKGDIR}/l/gstreamer-*.txz
+  linkpackage ${SLACKPKGDIR}/l/gst-plugins-base-*.txz
+  linkpackage ${SLACKPKGDIR}/l/gst-plugins-good-*.txz
+  if [ "${INCFFMPEG}" == "Y" ]; then
+  linkpackage ${SLACKPKGDIR}/l/gst-plugins-libav-*.txz
+  fi
 fi
 
 if [ "${INCGTKMMTWO}" == "Y" ]; then
