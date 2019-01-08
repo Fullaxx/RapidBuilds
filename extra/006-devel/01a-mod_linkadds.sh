@@ -34,6 +34,11 @@ if [ "${INCCODEEXAMPLES}" == "Y" ]; then
   linkpackage "${PACKAGESDIR}/libtom/libtommath-20181114-noarch-bksrc1.xzm"
   linkpackage "${PACKAGESDIR}/libtom/libtompoly-20181113-noarch-bksrc1.xzm"
   linkpackage "${PACKAGESDIR}/libtom/tomsfastmath-20181113-noarch-bksrc1.xzm"
+
+  linkpackage "${PACKAGESDIR}/srp/csrp-20190108-noarch-bksrc1.xzm"
+  linkpackage "${PACKAGESDIR}/srp/csrp-rfc5054-20190108-noarch-bksrc1.xzm"
+  linkpackage "${PACKAGESDIR}/srp/mbedtls-csrp-20190108-noarch-bksrc1.xzm"
+  linkpackage "${PACKAGESDIR}/srp/csrp-gmp-20190108-noarch-bksrc1.xzm"
 fi
 
 if [ "${INCVALGRIND}" == "Y" ]; then
