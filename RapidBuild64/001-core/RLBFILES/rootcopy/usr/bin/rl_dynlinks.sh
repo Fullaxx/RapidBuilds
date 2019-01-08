@@ -12,8 +12,9 @@ fi
 
 SEARCHPATH+=" /usr"
 
-find ${SEARCHPATH} -type f ! -name 'ld-*.so' -executable | xargs ldd > /tmp/dynlinks.txt
+find ${SEARCHPATH} -type f ! -name 'ld-*.so' -executable | grep -v '/usr/lib64/java' | xargs ldd > /tmp/dynlinks.txt
 
 if grep 'not found' /tmp/dynlinks.txt ; then
   echo "rl_dynlinks.sh: See /tmp/dynlinks.txt for more info"
+  exit 1
 fi
