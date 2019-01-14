@@ -3,7 +3,7 @@
 source ../spec.sh
 source ./module_spec.sh
 
-rm ${DIR}/sbin/arpd
-rm ${DIR}/usr/sbin/arpd
-rm ${DIR}/usr/sbin/rarpd
-rm -r ${DIR}/var/lib/arpd
+rm -f  ${DIR}/sbin/arpd
+rm -f  ${DIR}/usr/sbin/arpd
+rm -f  ${DIR}/usr/sbin/rarpd
+rm -fr ${DIR}/var/lib/arpd
