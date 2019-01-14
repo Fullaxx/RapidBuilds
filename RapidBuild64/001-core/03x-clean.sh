@@ -10,7 +10,7 @@ rmdir ${DIR}/run/lock/pkgtools
 
 # Clean up dbus and grub
 if [ "${INCMOD010XORG}" != "Y" ]; then
-  rm ${DIR}/usr/bin/dbus-launch
+  rm -f ${DIR}/usr/bin/dbus-launch
   rm -f ${DIR}/usr/bin/grub-mkfont
 fi
 

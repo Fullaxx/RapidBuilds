@@ -42,6 +42,10 @@ if [ "${INCAPR}" == "Y" ]; then
   linkpackage ${SLACKPKGDIR}/l/apr-util-*.txz
 fi
 
+if [ "${INCARGONTWO}" == "Y" ]; then
+  linkpackage ${SLACKPKGDIR}/l/argon2-*.txz
+fi
+
 if [ "${INCASPELL}" == "Y" ]; then
 # enchant and bluefish need aspell
   linkpackage ${SLACKPKGDIR}/l/aspell-en-*.txz

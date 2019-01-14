@@ -1,4 +1,5 @@
 if [ "${INCPHP}" == "Y" ]; then
+  INCARGONTWO="Y"
   INCASPELL="Y"
   INCENCHANT="Y"
   INCLIBIODBC="Y"
