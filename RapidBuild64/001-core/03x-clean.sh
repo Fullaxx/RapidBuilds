@@ -29,10 +29,6 @@ rm -f ${DIR}/usr/$LIBDIR/libidn2.so.* #Unnecessary here, libidn2 is mandatory in
 # rm -f ${DIR}/usr/$LIBDIR/{libcups,libcupsimage}.*
 # rm -f ${DIR}/usr/$LIBDIR/{libjpeg,libturbojpeg,libpng14,libpng16,libtiff,libtiffxx}.*
 
-# from the etc-*.txz package
-#if [ -e ${DIR}/tmp/.X11-unix ]; then rmdir ${DIR}/tmp/.X11-unix; fi
-#if [ -e ${DIR}/tmp/.ICE-unix ]; then rmdir ${DIR}/tmp/.ICE-unix; fi
-
 if [ -d ${DIR}/mnt/cdrecorder ]; then rmdir ${DIR}/mnt/cdrecorder; fi
 
 if [ -e ${DIR}/etc/rc.d/rc.S.orig ]; then rm ${DIR}/etc/rc.d/rc.S.orig; fi
