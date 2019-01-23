@@ -1,38 +1,34 @@
 #!/bin/bash
 
-if [ `id -u` != "0" ]; then
-  echo "Got Root?"
+bail()
+{
+  echo "$1"
   exit 1
+}
+
+if [ `id -u` != "0" ]; then
+  bail "Got Root?"
 fi
 
 if [ -z "$1" ]; then
-  echo "Usage: $0 <device>"
-  exit 1
+  bail "Usage: $0 <device>"
 fi
 
 DEV="$1"
 
 if [ ! -b "${DEV}" ]; then
-  echo "${DEV} is not a block device!"
-  exit 1
+  bail "${DEV} is not a block device!"
 fi
 
-if ! lsscsi | grep -q ${DEV} ; then
-  echo "Could not find ${DEV}!"
-  exit 1
+if ! /usr/bin/lsscsi | grep -q ${DEV} ; then
+  bail "Could not find ${DEV}!"
 fi
 
-#device=`lsscsi | grep ${DEV}`
-#if [ -z "$device" ]; then
-#	echo "Error: could not find device: ${DEV}"
-#	exit 1
-#fi
-
-rl_disk_unmount.sh ${DEV} || ( echo "rl_disk_unmount.sh ${DEV} failed!"; exit 1 )
+/usr/bin/rl_disk_unmount.sh ${DEV} || bail "rl_disk_unmount.sh ${DEV} failed!"
 
 sync
 
-sdparm --command=stop ${DEV}
+/usr/sbin/sdparm --command=stop ${DEV}
 
 KD=`basename ${DEV}`
 
@@ -51,8 +47,7 @@ fi
 sleep 2
 
 if [ -b ${DEV} ]; then
-  echo "${DEV} stop failed!!"
-  exit 1
+  bail "${DEV} stop failed!!"
 else
   echo "${DEV} successfully stopped!"
 fi
