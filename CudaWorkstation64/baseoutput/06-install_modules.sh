@@ -35,6 +35,6 @@ verbosecopymodule ${PACKAGESDIR}/docker/docker-18.09.0-${ARCH}-4.xzm ${MODSDIR}/
 verbosecopymodule ${PACKAGESDIR}/java8/jdkdocs-8u191-noarch-1.xzm ${MODSDIR}/
 verbosecopymodule ${PACKAGESDIR}/java8/jdk-8u191-${ARCH}-1.xzm ${MODSDIR}/
 verbosecopymodule ${PACKAGESDIR}/maven/maven-3.5.4-noarch-2.xzm ${MODSDIR}/
-verbosecopymodule ${PACKAGESDIR}/netbeans/netbeans-10.0-noarch-1.xzm ${MODSDIR}/
+verbosecopymodule ${PACKAGESDIR}/netbeans/netbeans-8.2.0.xzm ${MODSDIR}/
 verbosecopymodule ${PACKAGESDIR}/nvidia_cuda_toolkit/cuda-10.0.130-${ARCH}-1.xzm ${MODSDIR}/
 verbosecopymodule ${PACKAGESDIR}/nvidia_cuda_toolkit/cuda_samples-10.0.130-noarch-1.xzm ${MODSDIR}/
