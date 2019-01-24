@@ -17,3 +17,5 @@ sed -e 's/# SHA_CRYPT_MAX_ROUNDS 5000/SHA_CRYPT_MAX_ROUNDS 999999/' -i ${DIR}/et
 # This will fix Google Chrome from finding libnss3 in /usr/lib64/firefox
 sed -e '/include /d' -i ${DIR}/etc/ld.so.conf
 echo "include /etc/ld.so.conf.d/*.conf" >> ${DIR}/etc/ld.so.conf
+
+rm ${DIR}/etc/gshadow
