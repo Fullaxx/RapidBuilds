@@ -43,6 +43,18 @@ if [ "${INCCODEEXAMPLES}" == "Y" ]; then
   linkpackage "${PACKAGESDIR}/codex/lz4-20190110-noarch-bksrc1.xzm"
   linkpackage "${PACKAGESDIR}/codex/miniz-20190110-noarch-bksrc1.xzm"
   linkpackage "${PACKAGESDIR}/codex/zlib-20190110-noarch-bksrc1.xzm"
+
+  linkpackage "${PACKAGESDIR}/codex/CyoEncode-code-20190124-noarch-bksrc1.xzm"
+  linkpackage "${PACKAGESDIR}/codex/artemkin-z85-code-20190124-noarch-bksrc1.xzm"
+  linkpackage "${PACKAGESDIR}/codex/dcurrie-ascii85-code-20190124-noarch-bksrc1.xzm"
+  linkpackage "${PACKAGESDIR}/codex/hyperfusion-ascii85-code-20190124-noarch-bksrc1.xzm"
+  linkpackage "${PACKAGESDIR}/codex/judsonx-base85-20190124-noarch-bksrc1.xzm"
+  linkpackage "${PACKAGESDIR}/codex/k6l2-z85-code-20190124-noarch-bksrc1.xzm"
+  linkpackage "${PACKAGESDIR}/codex/rafagafe-base85-code-20190124-noarch-bksrc1.xzm"
+  linkpackage "${PACKAGESDIR}/codex/roukaour-ascii85-code-20190124-noarch-bksrc1.xzm"
+  linkpackage "${PACKAGESDIR}/codex/ssiatras-ascii85-code-20190124-noarch-bksrc1.xzm"
+  linkpackage "${PACKAGESDIR}/codex/tsvetkov-z85-code-20190124-noarch-bksrc1.xzm"
+
 fi
 
 if [ "${INCVALGRIND}" == "Y" ]; then
