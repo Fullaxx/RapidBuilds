@@ -20,7 +20,7 @@ fi
 
 # VSCode needs RDL
 if [ "${INCVSCODE}" == "Y" ]; then
-  cp -Lpv ${PACKAGESDIR}/vscode/vscode-1.29.1-${ARCH}-1.xzm ${MODSDIR}/
+  cp -Lpv ${PACKAGESDIR}/vscode/vscode-1.30.2-${ARCH}-1.xzm ${MODSDIR}/
 fi
 
 # Copy any extra modules that don't need RDL
