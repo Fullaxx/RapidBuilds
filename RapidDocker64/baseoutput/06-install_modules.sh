@@ -8,4 +8,4 @@ if [ ! -d ${MODSDIR} ]; then
   exit 1
 fi
 
-verbosecopymodule ${PACKAGESDIR}/docker/docker-18.09.0-${ARCH}-4.xzm ${MODSDIR}/
+verbosecopymodule ${PACKAGESDIR}/docker/docker-18.09.1-${ARCH}-1.xzm ${MODSDIR}/
