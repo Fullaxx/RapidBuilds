@@ -1,0 +1,18 @@
+if [ "${INCGNURADIO}" == "Y" ]; then
+  INCBOOST="Y"
+  INCCHEETAHTHREE="Y"
+  INCGSL="Y"
+  INCLXML="Y"
+  INCMAKO="Y"
+  INCNUMPY="Y"
+  INCPYGTK="Y"
+  INCPYQT="Y"
+  INCPYTHONSIX="Y"
+  INCQWT="Y"
+fi
+
+# gnu-radio companion needs:
+# INCCHEETAH="Y"
+# INCLXML="Y"
+# INCNUMPY="Y"
+# INCPYGTK="Y"

@@ -9,6 +9,10 @@ if [ "${INCBLEACH}" == "Y" ]; then
   linkpackage "${PACKAGESDIR}/python_mods/bleach-2.1.4-${ARCH}-bksrc1.xzm"
 fi
 
+if [ "${INCCHEETAHTHREE}" == "Y" ]; then
+  linkpackage "${PACKAGESDIR}/python_mods/cheetah3-2.4.4-${ARCH}-bksrc1.xzm"
+fi
+
 if [ "${INCDSTAT}" == "Y" ]; then
   linkpackage "${PACKAGESDIR}/python_mods/dstat-0.7.3-noarch-bksrc1.xzm"
 fi
@@ -36,6 +40,10 @@ if [ "${INCGITPYTHON}" == "Y" ]; then
   linkpackage "${PACKAGESDIR}/python_mods/smmap2-2.0.3-${ARCH}-bksrc1.xzm"
   linkpackage "${PACKAGESDIR}/python_mods/gitdb2-2.0.2-${ARCH}-bksrc1.xzm"
   linkpackage "${PACKAGESDIR}/python_mods/GitPython-2.1.9-${ARCH}-bksrc1.xzm"
+fi
+
+if [ "${INCGNURADIO}" == "Y" ]; then
+  linkpackage "${PACKAGESDIR}/python_mods/gnuradio-3.7.13.4-${ARCH}-bksrc1.xzm"
 fi
 
 if [ "${INCJEDI}" == "Y" ]; then
@@ -105,6 +113,10 @@ fi
 
 if [ "${INCKEEPNOTE}" == "Y" ]; then
   linkpackage "${PACKAGESDIR}/python_mods/keepnote-0.7.8-${ARCH}-bksrc1.xzm"
+fi
+
+if [ "${INCLXML}" == "Y" ]; then
+  linkpackage "${PACKAGESDIR}/python_mods/lxml-4.2.6-${ARCH}-bksrc1.xzm"
 fi
 
 if [ "${INCNUMPY}" == "Y" ]; then
