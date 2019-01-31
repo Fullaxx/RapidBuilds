@@ -9,6 +9,10 @@ if [ "${INCCYTHON}" == "Y" ]; then
   linkpackage ${SLACKPKGDIR}/d/Cython-*.txz
 fi
 
+if [ "${INCMAKO}" == "Y" ]; then
+  linkpackage ${SLACKPKGDIR}/l/Mako-*.txz
+fi
+
 if [ "${INCMESON}" == "Y" ]; then
   linkpackage ${SLACKPKGDIR}/d/meson-*.txz
 fi

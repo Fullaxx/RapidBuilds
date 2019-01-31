@@ -59,6 +59,10 @@ if [ "${INCMEDIT}" == "Y" ]; then
   linkpackage "${PACKAGESDIR}/medit/medit-20181127-${ARCH}-bksrc1.xzm"
 fi
 
+if [ "${INCQWT}" == "Y" ]; then
+  linkpackage "${PACKAGESDIR}/qwt/qwt-6.1.4-${ARCH}-bksrc1.xzm"
+fi
+
 if [ "${INCOBCONF}" == "Y" ]; then
   linkpackage "${PACKAGESDIR}/openbox/obconf-2.0.4-${ARCH}-bksrc1.xzm"
 fi
