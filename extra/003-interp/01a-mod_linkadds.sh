@@ -181,6 +181,10 @@ if [ "${INCTRAITLETS}" == "Y" ]; then
   linkpackage "${PACKAGESDIR}/python_mods/traitlets-4.3.2-${ARCH}-bksrc1.xzm"
 fi
 
+if [ "${INCVIRTUALENV}" == "Y" ]; then
+  linkpackage "${PACKAGESDIR}/python_mods/virtualenv-16.1.0-${ARCH}-bksrc1.xzm"
+fi
+
 if [ "${INCWEBSOCKIFY}" == "Y" ]; then
   linkpackage "${PACKAGESDIR}/python_mods/websockify-20181217-noarch-bksrc1.xzm"
 fi
