@@ -27,7 +27,7 @@ if [ "${INCPYTHON}" == "Y" ]; then
 fi
 
 if [ "${INCPYTHONPIP}" == "Y" ]; then
-  linkpackage ${SLACKPKGDIR}/l/python-pip-*.txz
+  linkpackage ${SLACKPKGDIR}/d/python-pip-*.txz
 fi
 if [ "${INCPYTHONSETUPTOOLS}" == "Y" ]; then
   linkpackage ${SLACKPKGDIR}/d/python-setuptools-*.txz
