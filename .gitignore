@@ -1,7 +1,7 @@
 *.xzm
 *.txz
 *~
-*.txt
+*.text
 *.out
 *.err
 *.bak
