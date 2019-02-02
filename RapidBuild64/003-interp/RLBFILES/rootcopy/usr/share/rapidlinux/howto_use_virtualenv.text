@@ -1,0 +1,15 @@
+For virtualenv first make an environment:
+
+# virtualenv <path_to_folder>
+
+Then activate the environment:
+
+# source <path_to_folder>/bin/activate
+
+Now all your pip installs will be localized to that folder (not /usr/lib64/pthon2.7/site-packages)
+You can easily turn that <path_to_folder> folder into an xzm with the full path.
+
+More Info:
+https://www.pythonforbeginners.com/basics/how-to-use-python-virtualenv/
+https://packaging.python.org/guides/installing-using-pip-and-virtualenv/
+https://docs.python-guide.org/dev/virtualenvs/
