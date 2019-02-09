@@ -11,7 +11,7 @@ if [ "${INCANJUTA}" == "Y" ]; then
 fi
 
 if [ "${INCBLUEFISH}" == "Y" ]; then
-  linkpackage "${PACKAGESDIR}/bluefish/bluefish-1.0.7-${ARCH}-bksrc2.xzm"
+  linkpackage "${PACKAGESDIR}/bluefish/bluefish-1.0.7-${ARCH}-bksrc1.xzm"
 fi
 
 if [ "${INCBLUEFISHTWO}" == "Y" ]; then
