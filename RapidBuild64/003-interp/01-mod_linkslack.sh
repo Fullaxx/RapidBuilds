@@ -106,6 +106,10 @@ if [ "${INCSCONS}" == "Y" ]; then
   linkpackage ${SLACKPKGDIR}/d/scons-*.txz
 fi
 
+if [ "${INCSWIG}" == "Y" ]; then
+  linkpackage ${SLACKPKGDIR}/d/swig-*.txz
+fi
+
 if [ "${INCRUBY}" == "Y" ]; then
   linkpackage ${SLACKPKGDIR}/d/ruby-*.txz
   linkpackage ${SLACKPKGDIR}/l/libyaml-*.txz

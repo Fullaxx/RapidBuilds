@@ -5,10 +5,12 @@ if [ "${INCGNURADIO}" == "Y" ]; then
   INCLXML="Y"
   INCMAKO="Y"
   INCNUMPY="Y"
+  INCORC="Y"
   INCPYGTK="Y"
   INCPYQT="Y"
   INCPYTHONSIX="Y"
   INCQWT="Y"
+  INCSWIG="Y"
 fi
 
 # gnu-radio companion needs:
