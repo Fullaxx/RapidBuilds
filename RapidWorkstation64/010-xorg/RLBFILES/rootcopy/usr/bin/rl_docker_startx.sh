@@ -5,8 +5,11 @@ echo "Setting up X for docker ..."
 
 # Update all the shared library links:
 if [ -x /sbin/ldconfig ]; then
-  echo "Updating shared library links:  /sbin/ldconfig &"
-  /sbin/ldconfig &
+  echo "Updating shared library links:  /sbin/ldconfig"
+  /sbin/ldconfig
+else
+  echo "Could not update shared library links!"
+  exit 1
 fi
 
 # Screen blanks after 15 minutes idle time, and powers down in one hour

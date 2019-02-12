@@ -1,12 +1,16 @@
 #!/bin/bash
 
+### ALWAYS DO THIS FIRST ###
+ldconfig
+############################
+
 SEARCHPATH="/bin /sbin"
 
-if [ -d /lib -a ! -L /lib ]; then
+if [ -d /lib ] && [ ! -L /lib ]; then
   SEARCHPATH+=" /lib"
 fi
 
-if [ -d /lib64 -a ! -L /lib64 ]; then
+if [ -d /lib64 ] && [ ! -L /lib64 ]; then
   SEARCHPATH+=" /lib64"
 fi
 
