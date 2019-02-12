@@ -13,6 +13,9 @@ if [ "${INCGNURADIO}" == "Y" ]; then
   INCSWIG="Y"
 fi
 
+# WHAT NEEDS CPPUNIT?
+# INCCPPUNIT="Y"
+
 # gnu-radio companion needs:
 # INCCHEETAH="Y"
 # INCLXML="Y"

@@ -43,6 +43,7 @@ if [ "${INCGITPYTHON}" == "Y" ]; then
 fi
 
 if [ "${INCGNURADIO}" == "Y" ]; then
+  linkpackage "${PACKAGESDIR}/cppunit/cppunit-1.14.0-${ARCH}-bksrc1.xzm"
   linkpackage "${PACKAGESDIR}/python_mods/gnuradio-3.7.13.4-${ARCH}-bksrc1.xzm"
 fi
 
