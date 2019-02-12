@@ -24,7 +24,7 @@ if [ "${INCVSCODE}" == "Y" ]; then
 fi
 
 # Copy any extra modules that don't need RDL
-cp -Lpv ${PACKAGESDIR}/VirtualBox/VirtualBox-5.2.22-${ARCH}-1.xzm ${MODSDIR}/
+cp -Lpv ${PACKAGESDIR}/VirtualBox/VirtualBox-5.2.26-${ARCH}-1.xzm ${MODSDIR}/
 cp -Lpv ${PACKAGESDIR}/LibreOffice/LibreOffice-5.4.7-${ARCH}-1.xzm ${MODSDIR}/
 cp -Lpv ${PACKAGESDIR}/dbwalls/dbwalls-1920-130207.xzm ${MODSDIR}/
 cp -Lpv ${PACKAGESDIR}/docker/docker-18.09.1-${ARCH}-1.xzm ${MODSDIR}/
