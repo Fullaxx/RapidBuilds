@@ -9,6 +9,7 @@ if [ "${INCGNURADIO}" == "Y" ]; then
   INCPYGTK="Y"
   INCPYQT="Y"
   INCPYTHONSIX="Y"
+  INCPYZMQ="Y"
   INCQWT="Y"
   INCSWIG="Y"
 fi
