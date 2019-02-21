@@ -9,6 +9,10 @@ if [ "${INCCYTHON}" == "Y" ]; then
   linkpackage ${SLACKPKGDIR}/d/Cython-*.txz
 fi
 
+if [ "${INCEXPECT}" == "Y" ]; then
+  linkpackage ${SLACKPKGDIR}/tcl/expect-*.txz
+fi
+
 if [ "${INCMAKO}" == "Y" ]; then
   linkpackage ${SLACKPKGDIR}/l/Mako-*.txz
 fi
@@ -19,6 +23,10 @@ fi
 
 if [ "${INCPERL}" == "Y" ]; then
   linkpackage ${SLACKPKGDIR}/d/perl-*.txz
+fi
+
+if [ "${INCPSSH}" == "Y" ]; then
+  linkpackage ${SLACKPKGDIR}/n/pssh-*.txz
 fi
 
 if [ "${INCPYTHON}" == "Y" ]; then
@@ -102,21 +110,16 @@ if [ "${INCPYQT}" == "Y" ]; then
   linkpackage ${SLACKPKGDIR}/l/PyQt-*.txz
 fi
 
+if [ "${INCRUBY}" == "Y" ]; then
+  linkpackage ${SLACKPKGDIR}/d/ruby-*.txz
+fi
+
 if [ "${INCSCONS}" == "Y" ]; then
   linkpackage ${SLACKPKGDIR}/d/scons-*.txz
 fi
 
 if [ "${INCSWIG}" == "Y" ]; then
   linkpackage ${SLACKPKGDIR}/d/swig-*.txz
-fi
-
-if [ "${INCRUBY}" == "Y" ]; then
-  linkpackage ${SLACKPKGDIR}/d/ruby-*.txz
-  linkpackage ${SLACKPKGDIR}/l/libyaml-*.txz
-fi
-
-if [ "${INCEXPECT}" == "Y" ]; then
-  linkpackage ${SLACKPKGDIR}/tcl/expect-*.txz
 fi
 
 if [ "${INCTCL}" == "Y" ]; then
