@@ -9,6 +9,10 @@ if [ "${INCBLEACH}" == "Y" ]; then
   linkpackage "${PACKAGESDIR}/python_mods/bleach-2.1.4-${ARCH}-bksrc1.xzm"
 fi
 
+if [ "${INCBOKEH}" == "Y" ]; then
+  linkpackage "${PACKAGESDIR}/python_mods/bokeh-1.0.4-${ARCH}-bksrc1.xzm"
+fi
+
 if [ "${INCCHEETAHTHREE}" == "Y" ]; then
   linkpackage "${PACKAGESDIR}/python_mods/cheetah3-2.4.4-${ARCH}-bksrc1.xzm"
 fi
