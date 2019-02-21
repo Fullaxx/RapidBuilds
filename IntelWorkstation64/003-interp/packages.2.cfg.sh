@@ -1,5 +1,9 @@
 # 003-interp options
 if [ "${INCMOD003INTERP}" == "Y" ]; then
+
+# n family of packages
+  INCPSSH="N"
+
 # Custom Additions
   INCFTPSYNC="N"
   INCGNURADIO="Y"

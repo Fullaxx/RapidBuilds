@@ -8,6 +8,9 @@ if [ "${INCMOD003INTERP}" == "Y" ]; then
 
   INCPYTHONSETUPTOOLS="Y"
 
+# n family of packages
+  INCPSSH="N"
+
 # just about everything needs db48
   INCDB48="Y"
 fi

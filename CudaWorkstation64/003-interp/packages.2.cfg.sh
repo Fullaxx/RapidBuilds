@@ -2,6 +2,9 @@
 if [ "${INCMOD003INTERP}" == "Y" ]; then
   INCEXPECT="Y"
 
+# n family of packages
+  INCPSSH="N"
+
 # Custom Additions
   INCFTPSYNC="N"
   INCGNURADIO="Y"

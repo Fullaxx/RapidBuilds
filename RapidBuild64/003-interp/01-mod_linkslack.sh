@@ -21,6 +21,10 @@ if [ "${INCPERL}" == "Y" ]; then
   linkpackage ${SLACKPKGDIR}/d/perl-*.txz
 fi
 
+if [ "${INCPSSH}" == "Y" ]; then
+  linkpackage ${SLACKPKGDIR}/n/pssh-*.txz
+fi
+
 if [ "${INCPYTHON}" == "Y" ]; then
   linkpackage ${SLACKPKGDIR}/d/python3-3.?.*-*-?.txz
   linkpackage ${SLACKPKGDIR}/d/python-2.?.*-*-?.txz
