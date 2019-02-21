@@ -158,6 +158,10 @@ if [ "${INCPYXDG}" == "Y" ]; then
   linkpackage "${PACKAGESDIR}/python_mods/pyxdg-0.26-${ARCH}-bksrc1.xzm"
 fi
 
+if [ "${INCPYYAML}" == "Y" ]; then
+  linkpackage "${PACKAGESDIR}/python_mods/PyYAML-3.13-${ARCH}-bksrc1.xzm"
+fi
+
 if [ "${INCPYZMQ}" == "Y" ]; then
 # pyzmq needs zmq,Cython
   linkpackage "${PACKAGESDIR}/python_mods/pyzmq-17.1.0-${ARCH}-bksrc1.xzm"
