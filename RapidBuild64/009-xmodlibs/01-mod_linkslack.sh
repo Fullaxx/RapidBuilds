@@ -249,6 +249,10 @@ if [ "${INCLIBXSLT}" == "Y" ]; then
   linkpackage ${SLACKPKGDIR}/l/libxslt-*.txz
 fi
 
+if [ "${INCLIBYAML}" == "Y" ]; then
+  linkpackage ${SLACKPKGDIR}/l/libyaml-*.txz
+fi
+
 if [ "${INCLIBZIP}" == "Y" ]; then
 # scim needs libzip
   linkpackage ${SLACKPKGDIR}/l/libzip-*.txz
