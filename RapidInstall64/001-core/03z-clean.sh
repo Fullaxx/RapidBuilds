@@ -30,4 +30,5 @@ rm -f ${DIR}/usr/${LIBDIR}/libtiffxx.*
 rm -f ${DIR}/usr/${LIBDIR}/libvga.*
 rm -f ${DIR}/usr/${LIBDIR}/libvgagl.*
 
+rm -f ${DIR}/sbin/tc
 rm -f ${DIR}/usr/${LIBDIR}/tc/m_*.so
