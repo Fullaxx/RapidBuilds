@@ -3,6 +3,11 @@
 source ../spec.sh
 source ./module_spec.sh
 
+rm iputils-*.txz
+# iputils requires libidb2 (ping, arping, tracepath, traceroute6)
+# linkpackage ${SLACKPKGDIR}/l/libidn2-*.txz
+# libidn2 requires libunistring
+
 rm acl-*.txz
 rm attr-*.txz
 rm bash-completion-*.txz

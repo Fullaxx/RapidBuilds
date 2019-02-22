@@ -25,7 +25,7 @@ if [ "${INCMOD012XAPPS}" == "Y" ]; then
   INCSOMA="Y"
   INCVIMGVIM="Y"
   INCXINE="Y"
-  INCXLOCK="N"
+  INCXLOCK="Y"
   INCXPAINT="Y"
 
 # extra family of packages

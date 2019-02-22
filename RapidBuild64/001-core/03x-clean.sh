@@ -20,14 +20,24 @@ if [ "${INCGD}" != "Y" ]; then
 fi
 
 # What other libraries from aaa_elflibs-*.txz can we remove?
-rm -f ${DIR}/usr/$LIBDIR/libcurl.*
-rm -f ${DIR}/usr/$LIBDIR/libasound.*
-rm -f ${DIR}/usr/$LIBDIR/libidn2.so.* #Unnecessary here, libidn2 is mandatory in 002-utils
+rm -f ${DIR}/usr/${LIBDIR}/libcurl.*
+rm -f ${DIR}/usr/${LIBDIR}/libasound.*
+rm -f ${DIR}/usr/${LIBDIR}/libtiff.*
+rm -f ${DIR}/usr/${LIBDIR}/libtiffxx.*
+
+# Unnecessary here, libidn2 is mandatory in 002-utils
+rm -f ${DIR}/usr/${LIBDIR}/libidn2.so.*
+
+# # For RapidInstall - if libidn2 package exists in 001-core do not clean
+# if ! ls -l | grep -q libidn2; then
+# # Unnecessary here, libidn2 is mandatory in 002-utils
+#   rm -f ${DIR}/usr/${LIBDIR}/libidn2.so.*
+# fi
 
 # Not ready for this yet
-# rm -f ${DIR}/usr/$LIBDIR/libidn.so.*
-# rm -f ${DIR}/usr/$LIBDIR/{libcups,libcupsimage}.*
-# rm -f ${DIR}/usr/$LIBDIR/{libjpeg,libturbojpeg,libpng14,libpng16,libtiff,libtiffxx}.*
+# rm -f ${DIR}/usr/${LIBDIR}/libidn.so.*
+# rm -f ${DIR}/usr/${LIBDIR}/{libcups,libcupsimage}.*
+# rm -f ${DIR}/usr/${LIBDIR}/{libjpeg,libturbojpeg,libpng14,libpng16}.*
 
 if [ -d ${DIR}/mnt/cdrecorder ]; then rmdir ${DIR}/mnt/cdrecorder; fi
 
