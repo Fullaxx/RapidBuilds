@@ -1,5 +1,6 @@
 For virtualenv first make an environment:
 
+# virtualenv --python=python2.7 newsite
 # virtualenv --no-site-packages newsite
 # virtualenv --system-site-packages newsite
 
