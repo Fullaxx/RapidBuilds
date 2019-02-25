@@ -154,10 +154,6 @@ if [ "${INCPYTHONDATEUTIL}" == "Y" ]; then
   linkpackage "${PACKAGESDIR}/python_mods/python-dateutil-2.7.3-${ARCH}-bksrc1.xzm"
 fi
 
-if [ "${INCPYXDG}" == "Y" ]; then
-  linkpackage "${PACKAGESDIR}/python_mods/pyxdg-0.26-${ARCH}-bksrc1.xzm"
-fi
-
 if [ "${INCPYYAML}" == "Y" ]; then
   linkpackage "${PACKAGESDIR}/python_mods/PyYAML-3.13-${ARCH}-bksrc1.xzm"
 fi

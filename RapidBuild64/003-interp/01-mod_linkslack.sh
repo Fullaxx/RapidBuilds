@@ -110,6 +110,10 @@ if [ "${INCPYQT}" == "Y" ]; then
   linkpackage ${SLACKPKGDIR}/l/PyQt-*.txz
 fi
 
+if [ "${INCPYXDG}" == "Y" ]; then
+  linkpackage ${SLACKPKGDIR}/x/pyxdg-*.txz
+fi
+
 if [ "${INCRUBY}" == "Y" ]; then
   linkpackage ${SLACKPKGDIR}/d/ruby-*.txz
 fi
