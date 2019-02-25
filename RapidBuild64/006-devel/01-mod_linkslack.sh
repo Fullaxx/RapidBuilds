@@ -124,6 +124,10 @@ if [ "${INCOPENCLHEADERS}" == "Y" ]; then
   linkpackage ${SLACKPKGDIR}/d/opencl-headers-*.txz
 fi
 
+if [ "${INCPTWOC}" == "Y" ]; then
+  linkpackage ${SLACKPKGDIR}/d/p2c-*.txz
+fi
+
 if [ "${INCPARALLEL}" == "Y" ]; then
   linkpackage ${SLACKPKGDIR}/d/parallel-*.txz
 fi
@@ -140,7 +144,7 @@ if [ "${INCPMAKE}" == "Y" ]; then
   linkpackage ${SLACKPKGDIR}/d/pmake-*.txz
 fi
 
-if [ "${INCRE2C}" == "Y" ]; then
+if [ "${INCRETWOC}" == "Y" ]; then
   linkpackage ${SLACKPKGDIR}/d/re2c-*.txz
 fi
 
