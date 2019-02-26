@@ -11,17 +11,17 @@ if [ ! -x /usr/bin/x0vncserver ]; then
 fi
 
 if [ ! -r ~/.vnc/passwd ]; then
-  Eterm -e vncpasswd
+  xterm -e vncpasswd
 fi
 
-if [ $# -gt 0 ]; then
+if [ "$#" -gt "0" ]; then
   PC="-PollingCycle=$1"
-  echo $PC
+  echo "$PC"
 else
   PC=""
-  echo $PC
+  echo "$PC"
 fi
 
 if [ -r ~/.vnc/passwd ]; then
-  Eterm -e x0vncserver -PasswordFile="$HOME/.vnc/passwd" $PC -ZlibLevel=9
+  xterm -e x0vncserver -PasswordFile="${HOME}/.vnc/passwd" "$PC" -ZlibLevel=9
 fi
