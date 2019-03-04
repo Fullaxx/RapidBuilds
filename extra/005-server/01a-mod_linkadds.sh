@@ -8,7 +8,7 @@ if [ "${INCDARKHTTPD}" == "Y" ]; then
 fi
 
 if [ "${INCLIBMICROHTTPD}" == "Y" ]; then
-  linkpackage "${PACKAGESDIR}/libmicrohttpd/libmicrohttpd-0.9.62-${ARCH}-bksrc1.xzm"
+  linkpackage "${PACKAGESDIR}/libmicrohttpd/libmicrohttpd-0.9.63-${ARCH}-bksrc1.xzm"
 fi
 
 if [ "${INCLIBVIRT}" == "Y" ]; then
