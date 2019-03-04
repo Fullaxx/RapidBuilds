@@ -8,7 +8,7 @@ if [ "${INCDARKHTTPD}" == "Y" ]; then
 fi
 
 if [ "${INCLIBMICROHTTPD}" == "Y" ]; then
-  linkpackage "${PACKAGESDIR}/libmicrohttpd/libmicrohttpd-0.9.62-${ARCH}-bksrc1.xzm"
+  linkpackage "${PACKAGESDIR}/libmicrohttpd/libmicrohttpd-0.9.63-${ARCH}-bksrc1.xzm"
 fi
 
 if [ "${INCLIBVIRT}" == "Y" ]; then
@@ -24,8 +24,8 @@ if [ "${INCNGINX}" == "Y" ]; then
 fi
 
 if [ "${INCNNG}" == "Y" ]; then
-  linkpackage "${PACKAGESDIR}/nng/nng-1.0.1-${ARCH}-bksrc1.xzm"
-  linkpackage "${PACKAGESDIR}/mbedtls/mbedtls-2.13.0-${ARCH}-bksrc1.xzm"
+  linkpackage "${PACKAGESDIR}/mbedtls/mbedtls-2.16.0-${ARCH}-bksrc1.xzm"
+  linkpackage "${PACKAGESDIR}/nng/nng-1.1.1-${ARCH}-bksrc1.xzm"
 fi
 
 if [ "${INCNODEZEROTEN}" == "Y" ]; then
