@@ -10,7 +10,7 @@ write_to_log() {
 	echo "$NOW $1" >> $LOGFILE
 }
 
-# This could be more elegant...
+# This could be more elegant ...
 # All this needs to do is create all the parents directories for the incoming saved file
 create_rc_dirpath() {
 	touch "$1" 2>/dev/null || ( mkdir -p "$1"; rmdir "$1"; )
@@ -22,7 +22,7 @@ savefile_if_needed() {
 	LIVE="0"
 	SAVED="0"
 	
-	# if we can't find rootcopy... bail
+	# if we can't find rootcopy ... bail
 	if [ ! -d "$RLRC" ]; then
 		write_to_log "Invalid rootcopy ($RLRC)!"
 		return
@@ -31,7 +31,7 @@ savefile_if_needed() {
 	if [ -f "/$FILE" ]; then
 		LIVE=`md5sum "/$FILE" | awk '{print $1}'`
 	else
-		write_to_log "/$FILE is not a file... not saving"
+		write_to_log "/$FILE is not a file ... not saving"
 		return;
 	fi
 	
@@ -42,14 +42,14 @@ savefile_if_needed() {
 	fi
 	
 	if [ "$LIVE" != "$SAVED" ]; then
-	  write_to_log "Saving /$FILE to $RLRC/$FILE..."
+	  write_to_log "Saving /$FILE to $RLRC/$FILE ..."
 	  cp -p "/$FILE" "$RLRC/$FILE" || write_to_log "/$FILE could not be saved to $RLRC/$FILE!"
 	else
 	  write_to_log "/$FILE matches $RLRC/$FILE"
 	fi
 }
 
-echo "Starting autosave... log will be written to $LOGFILE"
+echo "Starting autosave ... log will be written to $LOGFILE"
 
 if [ ! -r "$CONFFILE" ]; then
 	write_to_log "Invalid conf file ($CONFFILE)!"
