@@ -7,10 +7,11 @@ ARCH="x86_64"
 TIMESTAMPEDISO="0"
 
 # This is the list of categories that will be rebuilt by "./rebuild.sh all"
-PROJECTCATEGORIES="1 2 9"
+PROJECTCATEGORIES="1 2 3 9"
 
 # Can we automate this by checking the existance of dirs?
 INCMOD002UTILS="Y"
+INCMOD003INTERP="Y"
 
 RAPIDBUILDSDIR=${RAPIDBUILDSDIR:-/opt/RL/RapidBuilds}
 PACKAGESDIR=${PACKAGESDIR:-/opt/RL/packages}
