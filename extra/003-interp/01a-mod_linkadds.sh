@@ -30,7 +30,7 @@ if [ "${INCGNURADIO}" == "Y" ]; then
 fi
 
 if [ "${INCJINJATWO}" == "Y" ]; then
-  linkpackage "${PACKAGESDIR}/python_mods/MarkupSafe-1.0-${ARCH}-bksrc1.xzm"
+  linkpackage "${PACKAGESDIR}/python_mods/MarkupSafe-1.1.1-${ARCH}-bksrc1.xzm"
   linkpackage "${PACKAGESDIR}/python_mods/Jinja2-2.10-${ARCH}-bksrc2.xzm"
 fi
 
