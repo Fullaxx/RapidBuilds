@@ -18,24 +18,24 @@ if `mount | grep -q ${DISK}` ; then
 fi
 
 echo
-echo "Zapping ${DISK}..."
+echo "Zapping ${DISK} ..."
 sgdisk -Z ${DISK} 2>&1 | grep Zapping
 partprobe >/dev/null 2>&1
 dd if=/dev/zero of=${DISK} count=100 2>/dev/null
 
 echo
-echo "Creating Partition (1)..."
+echo "Creating Partition (1) ..."
 sgdisk -n 1:0:+4M ${DISK} | grep successfully
 sgdisk -t 1:EF02 ${DISK} | grep successfully
 sgdisk -c 1:grub_boot ${DISK} | grep successfully
 
-echo "Creating Partition (2)..."
-PSIZE="+4G"
+echo "Creating Partition (2) ..."
+PSIZE="+8192M"
 sgdisk -n "2:0:$PSIZE" ${DISK} | grep successfully
 sgdisk -c 2:boot ${DISK} | grep successfully
 sgdisk -A 2:set:2 ${DISK} | grep successfully
 
-echo "Creating Partition (3)..."
+echo "Creating Partition (3) ..."
 sgdisk -n 3:0:0 ${DISK} | grep successfully
 sgdisk -c 3:storage ${DISK} | grep successfully
 
@@ -46,7 +46,7 @@ sgdisk -c 3:storage ${DISK} | grep successfully
 # See Syslinux#GUID_Partition_Table_aka_GPT for more information.
 
 echo
-echo "Creating Filesystems..."
+echo "Creating Filesystems ..."
 mkfs.ext2 -q -m0 ${DISK}2
 tune2fs -L boot ${DISK}2
 

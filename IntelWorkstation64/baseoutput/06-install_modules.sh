@@ -33,3 +33,6 @@ cp -Lpv ${PACKAGESDIR}/java8/jdkdocs-8u191-noarch-1.xzm ${MODSDIR}/
 cp -Lpv ${PACKAGESDIR}/java8/jdk-8u191-${ARCH}-1.xzm ${MODSDIR}/
 cp -Lpv ${PACKAGESDIR}/maven/maven-3.5.4-noarch-2.xzm ${MODSDIR}/
 cp -Lpv ${PACKAGESDIR}/netbeans/netbeans-8.2.0.xzm ${MODSDIR}/
+
+# Desktop Configuration
+cp -Lpv ${PACKAGESDIR}/rapidconfigs/rapidconfig-rapidworkstation-20190306-noarch-1.xzm ${MODSDIR}/
