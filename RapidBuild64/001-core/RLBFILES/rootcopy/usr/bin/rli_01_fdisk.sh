@@ -18,19 +18,19 @@ if `mount | grep -q ${DISK}` ; then
 fi
 
 echo
-echo "Zapping ${DISK}..."
+echo "Zapping ${DISK} ..."
 sgdisk -Z ${DISK} 2>&1 | grep Zapping
 partprobe >/dev/null 2>&1
 dd if=/dev/zero of=${DISK} count=100 2>/dev/null
 
 echo
-echo "Creating Partition (1)..."
-PARTMBSIZE="4096"
+echo "Creating Partition (1) ..."
+PARTMBSIZE="8192"
 parted -s "${DISK}" mklabel msdos
 parted -a cylinder -s "${DISK}" mkpart primary ext2 1 "${PARTMBSIZE}"
 parted "${DISK}" set 1 boot on
 
 echo
-echo "Creating Filesystems..."
+echo "Creating Filesystems ..."
 mkfs.ext2 -q -m0 ${DISK}1
 tune2fs -L boot ${DISK}1
