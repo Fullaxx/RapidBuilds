@@ -33,10 +33,6 @@ if [ "${INCDCRON}" == "Y" ]; then
   linkpackage ${SLACKPKGDIR}/a/dcron-*.txz
 fi
 
-if [ "${INCDOSFSTOOLS}" == "Y" ]; then
-  linkpackage ${SLACKPKGDIR}/a/dosfstools-*.txz
-fi
-
 if [ "${INCFLOPPY}" == "Y" ]; then
   linkpackage ${SLACKPKGDIR}/a/floppy-*.txz
 fi
