@@ -8,10 +8,6 @@ echo "/sbin/modprobe tun" >> ${DIR}/etc/rc.d/rc.modules.local
 echo >> ${DIR}/etc/rc.d/rc.modules.local
 
 cat << EOFF >> ${DIR}/etc/rc.d/rc.modules.local
-if [ -d /lib/modules/`uname -r`/kernel/drivers/char/ipmi ]; then
-  /sbin/modprobe ipmi_devintf
-fi
-
 if /usr/bin/grep flags /proc/cpuinfo | /usr/bin/grep -q vmx; then
   /sbin/modprobe kvm-intel
 fi
