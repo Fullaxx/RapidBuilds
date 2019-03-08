@@ -3,11 +3,10 @@
 source ../spec.sh
 source ./module_spec.sh
 
-echo "/sbin/modprobe configs" >> ${DIR}/etc/rc.d/rc.modules.local
-echo "/sbin/modprobe tun" >> ${DIR}/etc/rc.d/rc.modules.local
-echo >> ${DIR}/etc/rc.d/rc.modules.local
-
 cat << EOFF >> ${DIR}/etc/rc.d/rc.modules.local
+/sbin/modprobe configs
+/sbin/modprobe tun
+
 if /usr/bin/grep flags /proc/cpuinfo | /usr/bin/grep -q vmx; then
   /sbin/modprobe kvm-intel
 fi
