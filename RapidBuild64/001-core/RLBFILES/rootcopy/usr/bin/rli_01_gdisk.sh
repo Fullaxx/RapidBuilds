@@ -1,5 +1,7 @@
 #!/bin/bash
 
+set -e
+
 usage()
 {
   echo "Usage: $0 <disk>"
@@ -11,7 +13,6 @@ if [ "$#" != "1" ]; then
 fi
 
 DISK="$1"
-#RLPART="${DISK}$2"
 
 if `mount | grep -q ${DISK}` ; then
   rl_disk_unmount.sh ${DISK} || exit 1
@@ -19,9 +20,9 @@ fi
 
 echo
 echo "Zapping ${DISK} ..."
-sgdisk -Z ${DISK} 2>&1 | grep Zapping
+sgdisk -Z ${DISK} 2>&1 | grep destroyed
 partprobe >/dev/null 2>&1
-dd if=/dev/zero of=${DISK} count=100 2>/dev/null
+dd if=/dev/zero of=${DISK} count=100 2>/dev/null || true
 
 echo
 echo "Creating Partition (1) ..."
@@ -31,7 +32,7 @@ sgdisk -c 1:grub_boot ${DISK} | grep successfully
 
 echo "Creating Partition (2) ..."
 PSIZE="+8192M"
-sgdisk -n "2:0:$PSIZE" ${DISK} | grep successfully
+sgdisk -n "2:0:${PSIZE}" ${DISK} | grep successfully
 sgdisk -c 2:boot ${DISK} | grep successfully
 sgdisk -A 2:set:2 ${DISK} | grep successfully
 
@@ -47,8 +48,15 @@ sgdisk -c 3:storage ${DISK} | grep successfully
 
 echo
 echo "Creating Filesystems ..."
-mkfs.ext2 -q -m0 ${DISK}2
-tune2fs -L boot ${DISK}2
 
-mkfs.ext4 -q -m0 ${DISK}3
-tune2fs -L storage ${DISK}3
+if echo "${DISK}" | grep -q nvme ; then
+  mkfs.ext2 -q -m0 "${DISK}p2"
+  tune2fs -L boot "${DISK}p2"
+  mkfs.xfs "${DISK}p3"
+  xfs_admin -L storage "${DISK}p3"
+else
+  mkfs.ext2 -q -m0 "${DISK}2"
+  tune2fs -L boot "${DISK}2"
+  mkfs.xfs "${DISK}p3"
+  xfs_admin -L storage "${DISK}p3"
+fi

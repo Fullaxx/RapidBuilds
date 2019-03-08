@@ -1,5 +1,7 @@
 #!/bin/bash
 
+set -e
+
 usage()
 {
   echo "Usage: $0 <disk> <source media>"
@@ -7,6 +9,9 @@ usage()
   echo
   echo "To Install to blank hard drive from CD"
   echo "$0 /dev/sda /dev/sr0"
+  echo
+  echo "Here are your disks ..."
+  lsblk | grep disk
   exit 1
 }
 
@@ -26,15 +31,16 @@ if [ ! -b ${DISK} ]; then
   exit 2
 fi
 
-if ! lsscsi | grep -q ${DISK} ; then
-  echo "Disk ${DISK} not found in lsscsi output!"
-  exit 2
+DISKDEV=`echo "${DISK}" | cut -d/ -f3`
+if ! lsblk | grep disk | grep -q ${DISKDEV} ; then
+  echo "Disk ${DISKDEV} not found in lsblk output!"
+  exit 3
 fi
 
 SYSBLOCKPATH=`echo ${DISK} | sed -e 's@dev@sys/block@'`
 if [ ! -e ${SYSBLOCKPATH} ]; then
   echo "Disk ${SYSBLOCKPATH} not found in sys filesystem!"
-  exit 2
+  exit 4
 fi
 
 if [ -d /mnt/rlsource ]; then
@@ -57,7 +63,7 @@ if [ "$#" == "2" ]; then
   else
     echo "Second Argument must be a CD/Disk or directory..."
     echo "Aborting Install..."
-    exit 3
+    exit 5
   fi
 fi
 
@@ -75,7 +81,7 @@ if [ "${HAVERLSOURCE}" == "0" ] && [ -b "${SOURCE}" ]; then
   if [ "$?" != "0" ]; then
     echo "Could not mount ${SOURCE}..."
     echo "Aborting Install!"
-    exit 4
+    exit 6
   fi
   if [ -r /mnt/rlsource/boot ] && [ -r /mnt/rlsource/rl ]; then
     SRCDIR="/mnt/rlsource"
@@ -95,7 +101,7 @@ fi
 if [ "${HAVERLSOURCE}" == "0" ]; then
   echo "Could not find RapidLinux media..."
   echo "Aborting Install!"
-  exit 5
+  exit 7
 fi
 
 echo "This will *erase* ${DISK} and install RapidLinux onto it!"
@@ -104,18 +110,18 @@ read ANS
 
 if [ "$ANS" != "y" ]; then
   echo "Aborting Install!"
-  exit 6
+  exit 8
 fi
 
 if [ `uname -m` == "x86_64" ]; then
   NEXTSCRIPT="rli_01_gdisk.sh"
   RLPARTNUM="2"
+  if echo "${DISK}" | grep -q nvme ; then RLPARTNUM="p2"; fi
 else
   NEXTSCRIPT="rli_01_fdisk.sh"
   RLPARTNUM="1"
 fi
 
-#RLPART="${DISK}$RLPARTNUM"
 MNTDIR="/mnt/newos"
 
 ${NEXTSCRIPT} ${DISK} && \

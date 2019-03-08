@@ -1,5 +1,7 @@
 #!/bin/bash
 
+set -e
+
 usage()
 {
   echo "Usage: $0 <disk>"
@@ -11,7 +13,6 @@ if [ "$#" != "1" ]; then
 fi
 
 DISK="$1"
-#RLPART="${DISK}$2"
 
 if `mount | grep -q ${DISK}` ; then
   rl_disk_unmount.sh ${DISK} || exit 1
@@ -32,5 +33,5 @@ parted "${DISK}" set 1 boot on
 
 echo
 echo "Creating Filesystems ..."
-mkfs.ext2 -q -m0 ${DISK}1
-tune2fs -L boot ${DISK}1
+mkfs.ext2 -q -m0 "${DISK}1"
+tune2fs -L boot "${DISK}1"

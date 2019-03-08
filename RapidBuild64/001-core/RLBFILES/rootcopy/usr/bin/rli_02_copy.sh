@@ -1,5 +1,7 @@
 #!/bin/bash
 
+set -e
+
 usage()
 {
   echo "Usage: $0 <disk> <partnum> <srcdir> <dst mount point>"
@@ -30,14 +32,6 @@ mount "${RLPART}" "${MNTDIR}" -o noatime
 
 echo "Copying OS from ${SRCDIR} to ${RLPART} (mounted on ${MNTDIR})..."
 cp -av "${SRCDIR}"/* "${MNTDIR}"
-
-# ROOTCOPY="$MNTDIR/rl/rootcopy"
-# mkdir -p "$ROOTCOPY/etc/rc.d"
-# cp -a /etc/{HOSTNAME,hosts,passwd,group,shadow} "$ROOTCOPY/etc/"
-# cp -a /etc/rc.d/rc.rl_boot_services "$ROOTCOPY/etc/rc.d/"
-# cp -a /etc/rc.d/rc.local "$ROOTCOPY/etc/rc.d/"
-# cp -a /etc/rc.d/rc.local_shutdown "$ROOTCOPY/etc/rc.d/"
-# cp -a /etc/rc.d/rc.inet1.conf "$ROOTCOPY/etc/rc.d/"
 
 rm -rf "${MNTDIR}"/boot/grub/i386-pc
 cp -a /usr/${LIBDIR}/grub/i386-pc "${MNTDIR}"/boot/grub/
