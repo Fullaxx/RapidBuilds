@@ -175,6 +175,10 @@ if [ "${INCMIDNIGHTCOMMANDER}" == "Y" ]; then
   linkpackage ${SLACKPKGDIR}/ap/mc-*.txz
 fi
 
+if [ "${INCMOST}" == "Y" ]; then
+  linkpackage ${SLACKPKGDIR}/ap/most-*.txz
+fi
+
 if [ "${INCMPGONETWOTHREE}" == "Y" ]; then
   linkpackage ${SLACKPKGDIR}/ap/mpg123-*.txz
 fi
