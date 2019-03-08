@@ -1,7 +1,5 @@
 #!/bin/bash
 
-set -e
-
 usage()
 {
   echo "Usage: $0 <disk> <source media>"
@@ -126,7 +124,7 @@ MNTDIR="/mnt/newos"
 
 ${NEXTSCRIPT} ${DISK} && \
 rli_02_copy.sh ${DISK} ${RLPARTNUM} ${SRCDIR} ${MNTDIR} && \
-rli_03_install.sh ${DISK} ${MNTDIR} && \
+rli_03_grub.sh ${DISK} ${MNTDIR} && \
 echo && \
 echo "You may reboot now and boot from your RapidLinux hard drive! (${DISK})" \
 && exit 0
