@@ -50,13 +50,19 @@ echo
 echo "Creating Filesystems ..."
 
 if echo "${DISK}" | grep -q nvme ; then
-  mkfs.ext2 -q -m0 "${DISK}p2"
-  tune2fs -L boot "${DISK}p2"
-  mkfs.xfs "${DISK}p3"
-  xfs_admin -L storage "${DISK}p3"
+  RLPARTTWO="${DISK}p2"
+  RLPARTTHREE="${DISK}p3"
 else
-  mkfs.ext2 -q -m0 "${DISK}2"
-  tune2fs -L boot "${DISK}2"
-  mkfs.xfs "${DISK}p3"
-  xfs_admin -L storage "${DISK}p3"
+  RLPARTTWO="${DISK}2"
+  RLPARTTHREE="${DISK}3"
 fi
+
+mkfs.ext2 -q -m0 "${RLPARTTWO}"
+tune2fs -L boot "${RLPARTTWO}"
+
+mkfs.ext4 -q -m0 "${RLPARTTHREE}"
+tune2fs -L storage "${RLPARTTHREE}"
+
+# Use ext4 since RapidInstall lacks xfs_utils
+# mkfs.xfs "${RLPARTTHREE}"
+# xfs_admin -L storage "${RLPARTTHREE}"
