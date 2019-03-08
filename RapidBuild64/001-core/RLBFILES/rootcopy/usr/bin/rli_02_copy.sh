@@ -40,6 +40,11 @@ if [ -d "${MNTDIR}"/boot/grub/locale ]; then
   rm -rf "${MNTDIR}"/boot/grub/locale
 fi
 
+# for NVMe devices
+if echo "${RLPARTNUM}" | grep -q 'p' ; then
+  RLPARTNUM=`echo "${RLPARTNUM}" | cut -dp -f2`
+fi
+
 sed -e "s/hd0,x/hd0,${RLPARTNUM}/" -i "${MNTDIR}"/boot/grub/grub.cfg
 # export NOW=`date "+%Y%m%d%H%M%S"`
 # echo -n $NOW | sha1sum
