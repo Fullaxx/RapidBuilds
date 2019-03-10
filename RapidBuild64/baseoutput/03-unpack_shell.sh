@@ -28,4 +28,5 @@ install -D -m 0644 RLBFILES/boot/rl.jpg ${BDIR}/shell/boot/rl.jpg
 install -D -m 0644 RLBFILES/boot/isolinux/isolinux.cfg ${BDIR}/shell/boot/isolinux/isolinux.cfg
 install -D -m 0644 RLBFILES/boot/syslinux/syslinux.cfg ${BDIR}/shell/boot/syslinux/syslinux.cfg
 install -D -m 0644 RLBFILES/boot/grub/grub.cfg ${BDIR}/shell/boot/grub/grub.cfg
+install -D -m 0644 RLBFILES/boot/refind/refind.conf ${BDIR}/shell/boot/refind/refind.conf
 install -D -m 0755 RLBFILES/rl/make_iso.sh ${BDIR}/shell/rl/make_iso.sh
