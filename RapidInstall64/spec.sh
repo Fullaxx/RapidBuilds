@@ -15,7 +15,7 @@ ISOOUTPUTDIR=${ISOOUTPUTDIR:-/opt/RL/output}
 
 PROJECTBASE="${RAPIDBUILDSDIR}/RapidInstall64"
 RAPIDDEPLOGIC="${RAPIDBUILDSDIR}/RDL"
-RLSHELL="${PACKAGESDIR}/rapidshells/RapidLinuxShell.tar.xz"
+RLSHELL="${PACKAGESDIR}/rapidshells/RapidLinuxShell-190310.tar.xz"
 
 if [ "$ARCH" == "x86_64" ]; then
   SLACKPKGDIR="${PACKAGESDIR}/slackware/Slack64-${SLACKPKGVERS}/slackware64"
