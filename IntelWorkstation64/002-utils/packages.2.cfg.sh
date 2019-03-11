@@ -1,5 +1,8 @@
 # 002-utils options
 if [ "${INCMOD002UTILS}" == "Y" ]; then
+# a family of packages
+  INCTCSH="Y"
+
 # Custom Additions
   INCACPI="Y"
   INCATOP="Y"
