@@ -121,6 +121,10 @@ if [ "${INCSMARTMONTOOLS}" == "Y" ]; then
   linkpackage ${SLACKPKGDIR}/a/smartmontools-*.txz
 fi
 
+if [ "${INCTCSH}" == "Y" ]; then
+  linkpackage ${SLACKPKGDIR}/a/tcsh-*.txz
+fi
+
 if [ "${INCUSBMODESWITCH}" == "Y" ]; then
   linkpackage ${SLACKPKGDIR}/a/usb_modeswitch-*.txz
 fi

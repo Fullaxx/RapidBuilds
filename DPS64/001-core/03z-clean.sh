@@ -8,4 +8,4 @@ rm -f ${DIR}/usr/$LIBDIR/libidn.so.*
 rm -f ${DIR}/usr/$LIBDIR/{libcups,libcupsimage}.*
 rm -f ${DIR}/usr/$LIBDIR/{libjpeg,libturbojpeg,libpng14,libpng16,libtiff,libtiffxx}.*
 
-rm -f ${DIR}/opt/refind
+rm -rf ${DIR}/opt/refind
