@@ -15,6 +15,7 @@ fi
 DISK="$1"
 SRCDIR="$2"
 
+MNTLOC="/boot/efi"
 if echo "${DISK}" | grep -q nvme ; then
   RLPARTONE="${DISK}p1"
   RLPARTTWO="${DISK}p2"
@@ -23,30 +24,38 @@ else
   RLPARTTWO="${DISK}2"
 fi
 
-if [ ! -d /boot/efi ]; then mkdir /boot/efi; fi
-mount "${RLPARTONE}" /boot/efi
-
 echo "Installing rEFInd ..."
-( set -e; cd "/opt/refind"; ./refind-install >/dev/null )
-cat "${SRCDIR}/boot/refind/refind.conf" >> /boot/efi/EFI/BOOT/refind.conf
+( set -e; cd "/opt/refind" && \
+./refind-install --usedefault "${RLPARTONE}" >/dev/null && \
+umount "${RLPARTONE}" )
+# if mount | grep -q "${RLPARTONE}" ; then umount "${RLPARTONE}"; fi
 
-mkdir /boot/efi/rl
-cp "${SRCDIR}/boot/vmlinuz" /boot/efi/rl/
-cp "${SRCDIR}/boot/irfs.img" /boot/efi/rl/
-cp "${SRCDIR}/boot/memtest86.efi" /boot/efi/EFI/tools/
+# Remount our EFI partition and load it
+if [ ! -d "${MNTLOC}" ]; then mkdir "${MNTLOC}"; fi
+mount "${RLPARTONE}" "${MNTLOC}"
+if [ ! -d "${MNTLOC}/EFI/BOOT" ]; then echo "refind-install failed!"; exit 1; fi
+if [ ! -f "${MNTLOC}/EFI/BOOT/refind.conf" ]; then echo "refind-install failed!"; exit 1; fi
+sed -e 's/^timeout 20/timeout 5/' -i "${MNTLOC}/EFI/BOOT/refind.conf"
+cat "${SRCDIR}/boot/refind/refind.conf" >> "${MNTLOC}/EFI/BOOT/refind.conf"
+
+mkdir "${MNTLOC}/rl"
+cp "${SRCDIR}/boot/vmlinuz" "${MNTLOC}/rl/"
+cp "${SRCDIR}/boot/irfs.img" "${MNTLOC}/rl/"
+cp "${SRCDIR}/boot/memtest86.efi" "${MNTLOC}/EFI/tools/"
 if [ -f ${SRCDIR}/boot/refind/banner.jpg ]; then
-  cp "${SRCDIR}/boot/refind/banner.jpg" /boot/efi/banner.jpg
+  cp "${SRCDIR}/boot/refind/banner.jpg" "${MNTLOC}/banner.jpg"
 else
-  cp "${SRCDIR}/boot/rl.jpg" /boot/efi/banner.jpg
+  cp "${SRCDIR}/boot/rl.jpg" "${MNTLOC}/banner.jpg"
 fi
 
-if [ `uname -m` == "x86_64" ]; then
-  rm /boot/efi/EFI/BOOT/bootia32.efi
-else
-  rm /boot/efi/EFI/BOOT/bootx64.efi
-fi
-
+# Clean up a bit
+rm -r "${MNTLOC}/EFI/BOOT/icons/licenses"
 # According to https://wiki.debian.org/UEFI, aa64 is for arm64
-rm /boot/efi/EFI/BOOT/bootaa64.efi
+rm ${MNTLOC}/EFI/BOOT/*aa64.efi
+if [ `uname -m` == "x86_64" ]; then
+  rm "${MNTLOC}/EFI/BOOT/bootia32.efi"
+else
+  rm "${MNTLOC}/EFI/BOOT/bootx64.efi"
+fi
 
 umount "${RLPARTONE}"
