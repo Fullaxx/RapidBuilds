@@ -24,10 +24,7 @@ else
   LIBDIR="lib"
 fi
 
-if [ ! -d "${MNTDIR}" ]; then
-  mkdir "${MNTDIR}" 2>/dev/null
-fi
-
+if [ ! -d "${MNTDIR}" ]; then mkdir "${MNTDIR}"; fi
 mount "${RLPART}" "${MNTDIR}" -o noatime
 
 echo "Copying OS from ${SRCDIR} to ${RLPART} (mounted on ${MNTDIR})..."

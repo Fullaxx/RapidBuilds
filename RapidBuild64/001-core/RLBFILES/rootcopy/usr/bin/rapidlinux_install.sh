@@ -5,7 +5,7 @@ usage()
   echo "Usage: $0 <disk> <source media>"
   echo "Usage: $0 <disk> <source directory>"
   echo
-  echo "To Install to blank hard drive from CD"
+  echo "To Install to blank hard drive from CD/DVD"
   echo "$0 /dev/sda /dev/sr0"
   echo
   echo "Here are your disks ..."
@@ -67,7 +67,7 @@ fi
 
 SRCDIR=`mount | grep ${SOURCE} | awk '{print $3}'`
 if [ -n "${SRCDIR}" ]; then
-  if [ -r "${SRCDIR}"/boot -a -r "${SRCDIR}"/rl ]; then
+  if [ -r "${SRCDIR}"/boot ] && [ -r "${SRCDIR}"/rl ]; then
     echo "Found rl media in ${SRCDIR}..."
     HAVERLSOURCE="1"
   fi
@@ -89,7 +89,7 @@ if [ "${HAVERLSOURCE}" == "0" ] && [ -b "${SOURCE}" ]; then
 fi
 
 if [ "${HAVERLSOURCE}" == "0" ] && [ -d "${SOURCE}" ]; then
-  if [ -r "${SOURCE}"/boot -a -r "${SOURCE}"/rl ]; then
+  if [ -r "${SOURCE}"/boot ] && [ -r "${SOURCE}"/rl ]; then
     SRCDIR="${SOURCE}"
     echo "Found RapidLinux media in ${SRCDIR}..."
     HAVERLSOURCE="1"
@@ -102,11 +102,18 @@ if [ "${HAVERLSOURCE}" == "0" ]; then
   exit 7
 fi
 
-echo "This will *erase* ${DISK} and install RapidLinux onto it!"
-echo "Are you sure you want to do this (y/n)"
+if [ -n "${DOUEFI}" ] && [ "${DOUEFI}" == "1" ]; then
+  UEFI="1"
+  echo "This will *erase* ${DISK} and install RapidLinux with EFI!"
+else
+  echo "This will *erase* ${DISK} and install RapidLinux with GRUB!"
+fi
+
+#echo "This will *erase* ${DISK} and install RapidLinux onto it!"
+echo "Are you sure you want to do this (y/N)"
 read ANS
 
-if [ "$ANS" != "y" ]; then
+if [ "${ANS}" != "y" ]; then
   echo "Aborting Install!"
   exit 8
 fi
@@ -114,19 +121,28 @@ fi
 if [ `uname -m` == "x86_64" ]; then
   NEXTSCRIPT="rli_01_gdisk.sh"
   RLPARTNUM="2"
-  if echo "${DISK}" | grep -q nvme ; then RLPARTNUM="p2"; fi
 else
   NEXTSCRIPT="rli_01_fdisk.sh"
   RLPARTNUM="1"
 fi
 
 MNTDIR="/mnt/newos"
+if echo "${DISK}" | grep -q nvme ; then RLPARTNUM="p2"; fi
 
-${NEXTSCRIPT} ${DISK} && \
-rli_02_copy.sh ${DISK} ${RLPARTNUM} ${SRCDIR} ${MNTDIR} && \
-rli_03_grub.sh ${DISK} ${MNTDIR} && \
-echo && \
-echo "You may reboot now and boot from your RapidLinux hard drive! (${DISK})" \
-&& exit 0
+if [ "${UEFI}" == "1" ]; then
+  rli_01_uefi.sh ${DISK} && \
+  rli_02_uefi.sh ${DISK} ${SRCDIR} ${MNTDIR} && \
+  rli_03_refind.sh ${DISK} ${SRCDIR} || RLIERROR="1"
+else
+  ${NEXTSCRIPT} ${DISK} && \
+  rli_02_copy.sh ${DISK} ${RLPARTNUM} ${SRCDIR} ${MNTDIR} && \
+  rli_03_grub.sh ${DISK} ${MNTDIR} || RLIERROR="1"
+fi
 
-echo "An Unknown Error Occured!"
+if [ -n "${RLIERROR}" ]; then
+  echo "An Unknown Error Occured!"
+  exit 9
+fi
+
+echo
+echo "You may reboot now and boot from your RapidLinux hard drive! (${DISK})"
