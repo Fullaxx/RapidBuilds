@@ -8,6 +8,7 @@ rm bash-completion-*.txz
 rm bzip2-*.txz
 rm dbus-*.txz
 rm dialog-*.txz
+rm dosfstools-*.txz
 rm e2fsprogs-*.txz
 rm gmp-*.txz
 rm gpm-*.txz

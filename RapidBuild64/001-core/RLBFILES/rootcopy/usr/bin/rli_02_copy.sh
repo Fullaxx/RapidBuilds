@@ -24,10 +24,7 @@ else
   LIBDIR="lib"
 fi
 
-if [ ! -d "${MNTDIR}" ]; then
-  mkdir "${MNTDIR}" 2>/dev/null
-fi
-
+if [ ! -d "${MNTDIR}" ]; then mkdir "${MNTDIR}"; fi
 mount "${RLPART}" "${MNTDIR}" -o noatime
 
 echo "Copying OS from ${SRCDIR} to ${RLPART} (mounted on ${MNTDIR})..."
@@ -38,6 +35,11 @@ cp -a /usr/${LIBDIR}/grub/i386-pc "${MNTDIR}"/boot/grub/
 
 if [ -d "${MNTDIR}"/boot/grub/locale ]; then
   rm -rf "${MNTDIR}"/boot/grub/locale
+fi
+
+# for NVMe devices
+if echo "${RLPARTNUM}" | grep -q 'p' ; then
+  RLPARTNUM=`echo "${RLPARTNUM}" | cut -dp -f2`
 fi
 
 sed -e "s/hd0,x/hd0,${RLPARTNUM}/" -i "${MNTDIR}"/boot/grub/grub.cfg

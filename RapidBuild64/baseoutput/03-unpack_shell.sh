@@ -29,3 +29,9 @@ install -D -m 0644 RLBFILES/boot/isolinux/isolinux.cfg ${BDIR}/shell/boot/isolin
 install -D -m 0644 RLBFILES/boot/syslinux/syslinux.cfg ${BDIR}/shell/boot/syslinux/syslinux.cfg
 install -D -m 0644 RLBFILES/boot/grub/grub.cfg ${BDIR}/shell/boot/grub/grub.cfg
 install -D -m 0755 RLBFILES/rl/make_iso.sh ${BDIR}/shell/rl/make_iso.sh
+
+# Refind Conf and Banner
+install -D -m 0644 RLBFILES/boot/refind/refind.conf ${BDIR}/shell/boot/refind/refind.conf
+if [ -f RLBFILES/boot/refind/banner.jpg ]; then
+  install -D -m 0644 RLBFILES/boot/refind/banner.jpg ${BDIR}/shell/boot/refind/banner.jpg
+fi

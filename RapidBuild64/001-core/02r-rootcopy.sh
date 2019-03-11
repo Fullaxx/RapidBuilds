@@ -54,7 +54,9 @@ fi
 
 if [ -x ${DIR}/usr/bin/rapidlinux_install.sh ]; then
   chmod 0700 ${DIR}/usr/bin/rapidlinux_install.sh
-  chmod 0700 ${DIR}/usr/bin/rli_01_?disk.sh
-  chmod 0700 ${DIR}/usr/bin/rli_02_copy.sh
-  chmod 0700 ${DIR}/usr/bin/rli_03_install.sh
+  chmod 0700 ${DIR}/usr/bin/rli_*.sh
+fi
+
+if [ -f RLBFILES/refind.tar ]; then
+  tar xf RLBFILES/refind.tar -C ${DIR}/opt
 fi

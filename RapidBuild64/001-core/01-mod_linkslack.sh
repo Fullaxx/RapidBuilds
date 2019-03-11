@@ -15,9 +15,9 @@ linkpackage ${SLACKPKGDIR}/a/bash-*.txz
 linkpackage ${SLACKPKGDIR}/a/bin-*.txz
 linkpackage ${SLACKPKGDIR}/a/bzip2-*.txz
 linkpackage ${SLACKPKGDIR}/a/coreutils-*.txz
-# linkpackage ${SLACKPKGDIR}/a/cxxlibs-*.txz removed as of 150425
 linkpackage ${SLACKPKGDIR}/a/dbus-*.txz
 linkpackage ${SLACKPKGDIR}/a/dialog-*.txz
+linkpackage ${SLACKPKGDIR}/a/dosfstools-*.txz
 linkpackage ${SLACKPKGDIR}/a/e2fsprogs-*.txz
 linkpackage ${SLACKPKGDIR}/a/etc-*.txz
 linkpackage ${SLACKPKGDIR}/a/file-*.txz
