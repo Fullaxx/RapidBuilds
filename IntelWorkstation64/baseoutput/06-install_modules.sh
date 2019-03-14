@@ -35,4 +35,4 @@ cp -Lpv ${PACKAGESDIR}/maven/maven-3.5.4-noarch-2.xzm ${MODSDIR}/
 cp -Lpv ${PACKAGESDIR}/netbeans/netbeans-8.2.0.xzm ${MODSDIR}/
 
 # Desktop Configuration
-cp -Lpv ${PACKAGESDIR}/rapidconfigs/rapidconfig-rapidworkstation-20190306-noarch-1.xzm ${MODSDIR}/
+cp -Lpv ${PACKAGESDIR}/rapidconfigs/rapidconfig-rapidworkstation-20190312-noarch-1.xzm ${MODSDIR}/
