@@ -20,7 +20,7 @@ if [ "${INCLIBWEBSOCKETS}" == "Y" ]; then
 fi
 
 if [ "${INCNGINX}" == "Y" ]; then
-  linkpackage "${PACKAGESDIR}/nginx/nginx-1.15.7-${ARCH}-bksrc1.xzm"
+  linkpackage "${PACKAGESDIR}/nginx/nginx-1.15.9-${ARCH}-bksrc1.xzm"
 fi
 
 if [ "${INCNNG}" == "Y" ]; then

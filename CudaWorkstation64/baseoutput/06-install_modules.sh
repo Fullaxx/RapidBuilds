@@ -40,4 +40,4 @@ verbosecopymodule ${PACKAGESDIR}/nvidia_cuda_toolkit/cuda-10.0.130-${ARCH}-1.xzm
 verbosecopymodule ${PACKAGESDIR}/nvidia_cuda_toolkit/cuda_samples-10.0.130-noarch-1.xzm ${MODSDIR}/
 
 # Desktop Configuration
-cp -Lpv ${PACKAGESDIR}/rapidconfigs/rapidconfig-rapidworkstation-20190306-noarch-1.xzm ${MODSDIR}/
+cp -Lpv ${PACKAGESDIR}/rapidconfigs/rapidconfig-rapidworkstation-20190312-noarch-1.xzm ${MODSDIR}/
