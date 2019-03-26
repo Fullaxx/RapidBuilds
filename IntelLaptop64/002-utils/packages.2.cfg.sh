@@ -29,5 +29,6 @@ if [ "${INCMOD002UTILS}" == "Y" ]; then
   INCNBD="Y"
   INCPROTOBUF="Y"
   INCPROTOBUFC="Y"
+  INCTWEAK="Y"
   INCXNBD="Y"
 fi

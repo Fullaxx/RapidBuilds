@@ -64,6 +64,11 @@ if [ "${INCIPMITOOL}" == "Y" ]; then
   linkpackage "${PACKAGESDIR}/ipmitool/ipmitool-20181113-${ARCH}-bksrc1.xzm"
 fi
 
+if [ "${INCLIBMAXMINDDB}" == "Y" ]; then
+  linkpackage "${PACKAGESDIR}/geoipdat/geoipdat-190320-noarch-1.xzm"
+  linkpackage "${PACKAGESDIR}/libmaxminddb/libmaxminddb-1.3.2-${ARCH}-bksrc1.xzm"
+fi
+
 if [ "${INCLOOPAESSETUP}" == "Y" ]; then
   linkpackage "${PACKAGESDIR}/loop-aes-losetup/loop-aes-losetup-2.30.1-${ARCH}-bksrc1.xzm"
 fi
@@ -94,6 +99,10 @@ fi
 
 if [ "${INCPROTOBUFC}" == "Y" ]; then
   linkpackage "${PACKAGESDIR}/protobuf/protobuf-c-1.3.1-${ARCH}-bksrc3.xzm"
+fi
+
+if [ "${INCTWEAK}" == "Y" ]; then
+  linkpackage "${PACKAGESDIR}/tweak/tweak-3.02-${ARCH}-bksrc1.xzm"
 fi
 
 if [ "${INCXNBD}" == "Y" ]; then
