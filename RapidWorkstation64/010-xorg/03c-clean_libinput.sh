@@ -3,8 +3,8 @@
 source ../spec.sh
 source ./module_spec.sh
 
-# Clean up libinput
+# Clean up libinput, if we dont have GTK-3
 LIBINPUTFILE="${DIR}/usr/libexec/libinput/libinput-debug-gui"
-if [ -f ${LIBINPUTFILE} -a "${INCGTKTHREE}" != "Y" ]; then
+if [ -f ${LIBINPUTFILE} ] && [ "${INCGTKTHREE}" != "Y" ]; then
   rm ${LIBINPUTFILE}
 fi
