@@ -49,7 +49,7 @@ if [ "${INCNODEEIGHT}" == "Y" ]; then
 fi
 
 if [ "${INCNODETEN}" == "Y" ]; then
-  linkpackage "${PACKAGESDIR}/node/node-v10.14.2-${ARCH}-1.xzm"
+  linkpackage "${PACKAGESDIR}/node/node-v10.15.3-${ARCH}-1.xzm"
 fi
 
 if [ "${INCNOVNC}" == "Y" ]; then
@@ -57,8 +57,8 @@ if [ "${INCNOVNC}" == "Y" ]; then
 fi
 
 if [ "${INCREDIS}" == "Y" ]; then
-  linkpackage "${PACKAGESDIR}/redis/redis-4.0.12-${ARCH}-bksrc1.xzm"
-  linkpackage "${PACKAGESDIR}/redis/webdis-20181217-${ARCH}-bksrc1.xzm"
+  linkpackage "${PACKAGESDIR}/redis/redis-4.0.14-${ARCH}-bksrc1.xzm"
+  linkpackage "${PACKAGESDIR}/redis/webdis-20190402-${ARCH}-bksrc1.xzm"
 fi
 
 if [ "${INCQEMU}" == "Y" ]; then
