@@ -48,6 +48,10 @@ if [ "${INCHSETROOT}" == "Y" ]; then
   linkpackage "${PACKAGESDIR}/hsetroot/hsetroot-1.0.2-${ARCH}-bksrc1.xzm"
 fi
 
+if [ "${INCHYPER}" == "Y" ]; then
+  linkpackage "${PACKAGESDIR}/hyper/hyper-2.1.2-x86_64-1.xzm"
+fi
+
 if [ "${INCIMLIBTWO}" == "Y" ]; then
   linkpackage "${PACKAGESDIR}/Eterm/imlib2-1.5.1-${ARCH}-bksrc1.xzm"
 fi
