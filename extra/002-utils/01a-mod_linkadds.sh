@@ -78,7 +78,7 @@ if [ "${INCLZFOUR}" == "Y" ]; then
 fi
 
 if [ "${INCMOSH}" == "Y" ]; then
-  linkpackage "${PACKAGESDIR}/mosh/mosh-1.3.2-${ARCH}-bksrc2.xzm"
+  linkpackage "${PACKAGESDIR}/mosh/mosh-1.3.2-${ARCH}-bksrc3.xzm"
 fi
 
 if [ "${INCNBD}" == "Y" ]; then
@@ -99,7 +99,7 @@ if [ "${INCPROTOBUF}" == "Y" ]; then
 fi
 
 if [ "${INCPROTOBUFC}" == "Y" ]; then
-  linkpackage "${PACKAGESDIR}/protobuf/protobuf-c-1.3.1-${ARCH}-bksrc3.xzm"
+  linkpackage "${PACKAGESDIR}/protobuf/protobuf-c-1.3.1-${ARCH}-bksrc4.xzm"
 fi
 
 if [ "${INCTWEAK}" == "Y" ]; then
