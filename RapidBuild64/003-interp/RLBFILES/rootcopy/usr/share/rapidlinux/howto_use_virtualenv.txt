@@ -12,9 +12,15 @@ Now all your pip installs will be localized to that folder (not /usr/lib64/pthon
 You can easily turn that <path_to_folder> folder into an xzm with the full path.
 
 Example install
-# python -m pip -U numpy matplotlib pycuda
+# pip install jupyter
 
 More Info:
 https://www.pythonforbeginners.com/basics/how-to-use-python-virtualenv/
 https://packaging.python.org/guides/installing-using-pip-and-virtualenv/
 https://docs.python-guide.org/dev/virtualenvs/
+
+Jupyter Notebook Example
+# virtualenv --no-site-packages JN
+# source JN/bin/activate
+# pip install jupyter
+# jupyter-notebook
