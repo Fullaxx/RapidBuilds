@@ -12,7 +12,7 @@ custom_init_nics()
   local MODULE ETH LC NEWLC DIFF
 
   LC="$(cat /proc/net/dev | wc -l)"
-  for MODULE in igb ixgbe; do
+  for MODULE in igb ixgbe e1000e; do
     echo "Attemping modprobe ${MODULE} ..." >&2
     modprobe ${MODULE} >&2
     NEWLC="$(cat /proc/net/dev | wc -l)"
