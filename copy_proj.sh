@@ -44,5 +44,5 @@ for MODULE in 001-core 002-utils 003-interp 005-server 006-devel 007-wireless 00
   fi
 done
 
-echo "${SPROJ} created successfully with a basis of ${DPROJ}"
+echo "${DPROJ} created successfully with a basis of ${SPROJ}"
 echo "Dont forget to create spec.sh for ${DPROJ}!"

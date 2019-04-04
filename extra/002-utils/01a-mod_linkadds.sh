@@ -64,6 +64,11 @@ if [ "${INCIPMITOOL}" == "Y" ]; then
   linkpackage "${PACKAGESDIR}/ipmitool/ipmitool-20181113-${ARCH}-bksrc1.xzm"
 fi
 
+if [ "${INCLIBMAXMINDDB}" == "Y" ]; then
+  linkpackage "${PACKAGESDIR}/geoipdat/geoipdat-190320-noarch-1.xzm"
+  linkpackage "${PACKAGESDIR}/libmaxminddb/libmaxminddb-1.3.2-${ARCH}-bksrc1.xzm"
+fi
+
 if [ "${INCLOOPAESSETUP}" == "Y" ]; then
   linkpackage "${PACKAGESDIR}/loop-aes-losetup/loop-aes-losetup-2.30.1-${ARCH}-bksrc1.xzm"
 fi
@@ -73,7 +78,7 @@ if [ "${INCLZFOUR}" == "Y" ]; then
 fi
 
 if [ "${INCMOSH}" == "Y" ]; then
-  linkpackage "${PACKAGESDIR}/mosh/mosh-1.3.2-${ARCH}-bksrc2.xzm"
+  linkpackage "${PACKAGESDIR}/mosh/mosh-1.3.2-${ARCH}-bksrc3.xzm"
 fi
 
 if [ "${INCNBD}" == "Y" ]; then
@@ -89,11 +94,16 @@ if [ "${INCNUMAD}" == "Y" ]; then
 fi
 
 if [ "${INCPROTOBUF}" == "Y" ]; then
-  linkpackage "${PACKAGESDIR}/protobuf/protobuf-3.6.1-${ARCH}-bksrc3.xzm"
+  linkpackage "${PACKAGESDIR}/protobuf/protobuf-java-3.7.1-noarch-1.xzm"
+  linkpackage "${PACKAGESDIR}/protobuf/protobuf-3.7.1-${ARCH}-bksrc1.xzm"
 fi
 
 if [ "${INCPROTOBUFC}" == "Y" ]; then
-  linkpackage "${PACKAGESDIR}/protobuf/protobuf-c-1.3.1-${ARCH}-bksrc3.xzm"
+  linkpackage "${PACKAGESDIR}/protobuf/protobuf-c-1.3.1-${ARCH}-bksrc4.xzm"
+fi
+
+if [ "${INCTWEAK}" == "Y" ]; then
+  linkpackage "${PACKAGESDIR}/tweak/tweak-3.02-${ARCH}-bksrc1.xzm"
 fi
 
 if [ "${INCXNBD}" == "Y" ]; then

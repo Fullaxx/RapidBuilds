@@ -55,6 +55,9 @@ if [ "${INCCODEEXAMPLES}" == "Y" ]; then
   linkpackage "${PACKAGESDIR}/codex/ssiatras-ascii85-code-20190124-noarch-bksrc1.xzm"
   linkpackage "${PACKAGESDIR}/codex/tsvetkov-z85-code-20190124-noarch-bksrc1.xzm"
 
+  linkpackage "${PACKAGESDIR}/codex/jedis-20190403-noarch-bksrc1.xzm"
+  linkpackage "${PACKAGESDIR}/codex/lettuce-core-20190403-noarch-bksrc1.xzm"
+  linkpackage "${PACKAGESDIR}/codex/redisson-20190403-noarch-bksrc1.xzm"
 fi
 
 if [ "${INCVALGRIND}" == "Y" ]; then

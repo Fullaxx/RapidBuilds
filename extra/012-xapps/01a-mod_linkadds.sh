@@ -40,6 +40,10 @@ if [ "${INCGEANY}" == "Y" ]; then
   linkpackage "${PACKAGESDIR}/geany/geany-1.33-${ARCH}-bksrc1.xzm"
 fi
 
+if [ "${INCGHEX}" == "Y" ]; then
+  linkpackage "${PACKAGESDIR}/ghex/ghex-3.18.3-${ARCH}-bksrc1.xzm"
+fi
+
 if [ "${INCHSETROOT}" == "Y" ]; then
   linkpackage "${PACKAGESDIR}/hsetroot/hsetroot-1.0.2-${ARCH}-bksrc1.xzm"
 fi
@@ -99,7 +103,7 @@ fi
 
 if [ "${INCWIRESHARK}" == "Y" ]; then
   linkpackage "${PACKAGESDIR}/portaudio/portaudio-v19-${ARCH}-bksrc1.xzm"
-  linkpackage "${PACKAGESDIR}/wireshark/wireshark-2.6.4-GTK2-${ARCH}-bksrc1.xzm"
+  linkpackage "${PACKAGESDIR}/wireshark/wireshark-2.6.7-GTK2-${ARCH}-bksrc1.xzm"
 fi
 
 if [ "${INCXFE}" == "Y" ]; then
