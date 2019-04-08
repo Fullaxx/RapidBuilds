@@ -44,6 +44,10 @@ if [ "${INCGHEX}" == "Y" ]; then
   linkpackage "${PACKAGESDIR}/ghex/ghex-3.18.3-${ARCH}-bksrc1.xzm"
 fi
 
+if [ "${INCGRAVEMAN}" == "Y" ]; then
+  linkpackage "${PACKAGESDIR}/graveman/graveman-0.3.12-5-${ARCH}-bksrc1.xzm"
+fi
+
 if [ "${INCHSETROOT}" == "Y" ]; then
   linkpackage "${PACKAGESDIR}/hsetroot/hsetroot-1.0.2-${ARCH}-bksrc1.xzm"
 fi
