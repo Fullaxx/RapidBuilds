@@ -37,4 +37,4 @@ verbosecopymodule ${PACKAGESDIR}/maven/maven-3.5.4-noarch-2.xzm ${MODSDIR}/
 verbosecopymodule ${PACKAGESDIR}/netbeans/netbeans-8.2.0.xzm ${MODSDIR}/
 
 # Desktop Configuration
-verbosecopymodule ${PACKAGESDIR}/rapidconfigs/rapidconfig-rapidworkstation-20190404-noarch-1.xzm ${MODSDIR}/
+verbosecopymodule ${PACKAGESDIR}/rapidconfigs/rapidconfig-rapidworkstation-20190408-noarch-1.xzm ${MODSDIR}/

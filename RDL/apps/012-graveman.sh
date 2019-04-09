@@ -1,0 +1,9 @@
+if [ "${INCGRAVEMAN}" == "Y" ]; then
+  INCFLAC="Y"
+  INCFRIBIDI="Y"
+  INCGTKTWO="Y"
+  INCLCMSTWO="Y"
+  INCLIBPNG="Y"
+  INCLIBVORBIS="Y"
+  INCLIBOGG="Y"
+fi

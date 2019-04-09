@@ -1,0 +1,19 @@
+--- rc.M	2019-01-08 12:02:21.000000000 -0700
++++ rc.M.new	2019-04-09 05:11:19.344888196 -0600
+@@ -79,6 +79,16 @@
+   /etc/rc.d/rc.syslog start
+ fi
+ 
++### RL Added ###
++# Make sure X knows about all the installed fonts
++if [ -x /usr/bin/mkfontdir -a -x /usr/bin/mkfontscale ]; then
++  for FDIR in /usr/share/fonts/*; do
++    /usr/bin/mkfontscale ${FDIR}
++    /usr/bin/mkfontdir ${FDIR}
++  done
++fi
++### RL Added ###
++
+ # Update the X font indexes:
+ if [ -x /usr/bin/fc-cache ]; then
+   echo "Updating X font indexes:  /usr/bin/fc-cache -f &"

@@ -1,0 +1,12 @@
+--- rc.S	2019-01-21 18:27:02.000000000 -0700
++++ rc.S.new	2019-04-09 04:24:13.667923525 -0600
+@@ -447,3 +447,9 @@
+   dd if=/dev/urandom of=/etc/random-seed count=1 bs=512 2> /dev/null
+ fi
+ chmod 600 /etc/random-seed
++
++### RL Added ###
++if [ -x /etc/rc.d/rc.rl_init ]; then
++  /etc/rc.d/rc.rl_init
++fi
++### RL Added ###

@@ -17,6 +17,6 @@ fi
 
 DEV="$1"
 
-ifconfig $DEV up
+/sbin/ifconfig $DEV up
 # iwlist $DEV scan | grep -Ei 'ESSID|encryption|signal|cell'
-iwlist $DEV scan | less
+/sbin/iwlist $DEV scan | less
