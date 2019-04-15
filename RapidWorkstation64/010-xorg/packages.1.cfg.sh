@@ -1,5 +1,8 @@
 # 010-xorg options
 if [ "${INCMOD010XORG}" == "Y" ]; then
+# X requires libunwind
+  INCLIBUNWIND="Y"
+
   INCXDESKTOPENVIRONMENT="N"
   INCADOBEFONTS="N"
   INCBHFONTS="N"
