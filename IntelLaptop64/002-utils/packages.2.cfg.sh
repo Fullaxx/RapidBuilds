@@ -7,6 +7,7 @@ if [ "${INCMOD002UTILS}" == "Y" ]; then
   INCNMAP="Y"
   INCOPENVPN="Y"
   INCSCIM="Y"
+  INCTMUX="Y"
 
 # Custom Additions
   INCACPI="Y"

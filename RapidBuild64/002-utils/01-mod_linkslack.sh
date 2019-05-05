@@ -211,6 +211,10 @@ if [ "${INCTERMINUSFONT}" == "Y" ]; then
   linkpackage ${SLACKPKGDIR}/ap/terminus-font-*.txz
 fi
 
+if [ "${INCTMUX}" == "Y" ]; then
+  linkpackage ${SLACKPKGDIR}/ap/tmux-*.txz
+fi
+
 ###########################################################
 
 if [ "${INCNETFILTER}" == "Y" ]; then

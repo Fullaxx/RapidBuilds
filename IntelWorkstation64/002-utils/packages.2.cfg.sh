@@ -3,6 +3,10 @@ if [ "${INCMOD002UTILS}" == "Y" ]; then
 # a family of packages
   INCTCSH="Y"
 
+# ap family of packages
+  INCDMIDECODE="Y"
+  INCTMUX="Y"
+
 # Custom Additions
   INCACPI="Y"
   INCATOP="Y"
