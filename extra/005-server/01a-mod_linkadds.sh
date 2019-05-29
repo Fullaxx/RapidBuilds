@@ -12,7 +12,7 @@ if [ "${INCLIBMICROHTTPD}" == "Y" ]; then
 fi
 
 if [ "${INCLIBVIRT}" == "Y" ]; then
-  linkpackage "${PACKAGESDIR}/libvirt/libvirt-4.9.0-${ARCH}-bksrc1.xzm"
+  linkpackage "${PACKAGESDIR}/libvirt/libvirt-5.3.0-${ARCH}-bksrc1.xzm"
 fi
 
 if [ "${INCLIBWEBSOCKETS}" == "Y" ]; then
@@ -57,12 +57,12 @@ if [ "${INCNOVNC}" == "Y" ]; then
 fi
 
 if [ "${INCREDIS}" == "Y" ]; then
-  linkpackage "${PACKAGESDIR}/redis/redis-4.0.14-${ARCH}-bksrc1.xzm"
-  linkpackage "${PACKAGESDIR}/redis/webdis-20190402-${ARCH}-bksrc1.xzm"
+  linkpackage "${PACKAGESDIR}/redis/redis-5.0.5-${ARCH}-bksrc1.xzm"
+  linkpackage "${PACKAGESDIR}/redis/webdis-20190529-${ARCH}-bksrc1.xzm"
 fi
 
 if [ "${INCQEMU}" == "Y" ]; then
-  linkpackage "${PACKAGESDIR}/qemu/qemu-2.12.1-${ARCH}-bksrc1.xzm"
+  linkpackage "${PACKAGESDIR}/qemu/qemu-3.0.1-${ARCH}-bksrc1.xzm"
 fi
 
 if [ "${INCYAJL}" == "Y" ]; then
