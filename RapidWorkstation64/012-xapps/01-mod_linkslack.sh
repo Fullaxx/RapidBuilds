@@ -162,7 +162,7 @@ if [ "${INCHICOLORICONTHEME}" == "Y" ]; then
 fi
 
 if [ "${INCGSETTINGSDESLTOPSCHEMAS}" == "Y" ]; then
-# Evince needs gsettings-desktop-schemas
+# Evince,terminator needs gsettings-desktop-schemas
   linkpackage ${SLACKPKGDIR}/l/gsettings-desktop-schemas-*.txz
 fi
 
@@ -280,6 +280,11 @@ fi
 
 if [ "${INCGLIBMM}" == "Y" ]; then
   linkpackage ${SLACKPKGDIR}/l/glibmm-*.txz
+fi
+
+if [ "${INCGOBJECTINTROSPECTION}" == "Y" ]; then
+# terminator needs gobject-introspection
+  linkpackage ${SLACKPKGDIR}/l/gobject-introspection-*.txz
 fi
 
 if [ "${INCGSTREAMER}" == "Y" ]; then
@@ -476,7 +481,6 @@ fi
 if [ "${INCPAVUCONTROL}" == "Y" ]; then
   linkpackage ${SLACKPKGDIR}/xap/pavucontrol-*.txz
 fi
-
 
 if [ "${INCPOPPLER}" == "Y" ]; then
   linkpackage ${SLACKPKGDIR}/l/poppler-?.*.txz
