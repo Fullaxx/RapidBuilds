@@ -34,7 +34,7 @@ if [ "${INCMOD012XAPPS}" == "Y" ]; then
 
 # Custom Additions
   INCANJUTA="N"
-  INCBLUEFISH="N"
+  INCBLUEFISH="Y"
   INCBLUEFISHTWO="N"
   INCDIARRHOUEA="Y"
   INCETERM="N"
