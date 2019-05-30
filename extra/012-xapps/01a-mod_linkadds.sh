@@ -18,6 +18,10 @@ if [ "${INCBLUEFISHTWO}" == "Y" ]; then
   linkpackage "${PACKAGESDIR}/bluefish/bluefish-2.2.10-${ARCH}-bksrc1.xzm"
 fi
 
+if [ "${INCDIARRHOUEA}" == "Y" ]; then
+  linkpackage "${PACKAGESDIR}/python_mods/diarrhouea-1.0.0-${ARCH}-bksrc1.xzm"
+fi
+
 if [ "${INCETERM}" == "Y" ]; then
   linkpackage "${PACKAGESDIR}/Eterm/libast-0.7-${ARCH}-bksrc1.xzm"
   linkpackage "${PACKAGESDIR}/Eterm/Eterm-0.9.6-${ARCH}-bksrc1.xzm"
