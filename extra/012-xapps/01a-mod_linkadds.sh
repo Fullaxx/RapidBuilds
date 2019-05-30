@@ -87,6 +87,10 @@ if [ "${INCST}" == "Y" ]; then
   linkpackage "${PACKAGESDIR}/st/st-0.8.1-${ARCH}-bksrc1.xzm"
 fi
 
+if [ "${INCTERMINATOR}" == "Y" ]; then
+  linkpackage "${PACKAGESDIR}/python_mods/terminator-1.91-${ARCH}-bksrc1.xzm"
+fi
+
 if [ "${INCTILDA}" == "Y" ]; then
 # tilda needs libconfuse
 # libconfuse could be moved to extra/009-xmodlibs once something else needs it

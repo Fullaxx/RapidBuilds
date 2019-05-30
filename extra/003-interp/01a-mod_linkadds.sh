@@ -77,10 +77,6 @@ if [ "${INCSETUPTOOLSSCM}" == "Y" ]; then
   linkpackage "${PACKAGESDIR}/python_mods/setuptools_scm-3.2.0-${ARCH}-bksrc1.xzm"
 fi
 
-if [ "${INCTERMINATOR}" == "Y" ]; then
-  linkpackage "${PACKAGESDIR}/python_mods/terminator-1.91-${ARCH}-bksrc2.xzm"
-fi
-
 if [ "${INCTORNADO}" == "Y" ]; then
   linkpackage "${PACKAGESDIR}/python_mods/tornado-6.0.1-${ARCH}-bksrc1.xzm"
 fi
