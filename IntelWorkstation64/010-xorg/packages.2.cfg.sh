@@ -5,5 +5,4 @@ if [ "${INCMOD010XORG}" == "Y" ]; then
   INCXCALC="Y"
   INCXDPYINFO="Y"
   INCXDRIINFO="Y"
-  INCXKBMAP="Y"
 fi

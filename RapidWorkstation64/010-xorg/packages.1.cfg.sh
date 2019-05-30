@@ -21,6 +21,7 @@ if [ "${INCMOD010XORG}" == "Y" ]; then
 # Simple X Apps
   INCMAKEDEPEND="N"
   INCMOTIF="N"
+  INCSETXKBMAP="Y"
   INCTRANSSET="N"
   INCXBACKLIGHT="N"
   INCXCALC="N"
@@ -33,7 +34,6 @@ if [ "${INCMOD010XORG}" == "Y" ]; then
   INCXMORE="Y"
   INCXPROP="N"
   INCXSET="Y"
-  INCXKBMAP="N"
   INCXSETROOT="N"
   INCXVINFO="N"
   INCXWD="N"

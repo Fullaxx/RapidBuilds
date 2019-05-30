@@ -204,6 +204,11 @@ if [ "${INCMOTIF}" == "Y" ]; then
   linkpackage ${SLACKPKGDIR}/x/motif-*.txz
 fi
 
+if [ "${INCSETXKBMAP}" == "Y" ]; then
+# Necessary to switch to DVORAK keyboard map
+  linkpackage ${SLACKPKGDIR}/x/setxkbmap-*.txz
+fi
+
 if [ "${INCTRANSSET}" == "Y" ]; then
   linkpackage ${SLACKPKGDIR}/x/transset-*.txz
 fi
@@ -255,10 +260,6 @@ fi
 
 if [ "${INCXSETROOT}" == "Y" ]; then
   linkpackage ${SLACKPKGDIR}/x/xsetroot-*.txz
-fi
-
-if [ "${INCXKBMAP}" == "Y" ]; then
-  linkpackage ${SLACKPKGDIR}/x/setxkbmap-*.txz
 fi
 
 if [ "${INCXVINFO}" == "Y" ]; then
