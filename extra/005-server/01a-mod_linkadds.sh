@@ -53,7 +53,7 @@ if [ "${INCNODETEN}" == "Y" ]; then
 fi
 
 if [ "${INCNOVNC}" == "Y" ]; then
-  linkpackage "${PACKAGESDIR}/noVNC/noVNC-1.0.0-noarch-bksrc1.xzm"
+  linkpackage "${PACKAGESDIR}/noVNC/noVNC-1.1.0-noarch-bksrc1.xzm"
 fi
 
 if [ "${INCREDIS}" == "Y" ]; then
