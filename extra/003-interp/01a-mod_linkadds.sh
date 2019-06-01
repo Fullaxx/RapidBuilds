@@ -35,7 +35,7 @@ if [ "${INCJINJATWO}" == "Y" ]; then
 fi
 
 if [ "${INCKEEPNOTE}" == "Y" ]; then
-  linkpackage "${PACKAGESDIR}/python_mods/keepnote-0.7.8-${ARCH}-bksrc2.xzm"
+  linkpackage "${PACKAGESDIR}/python_mods/keepnote-0.7.8-${ARCH}-bksrc3.xzm"
 fi
 
 if [ "${INCLXML}" == "Y" ]; then
