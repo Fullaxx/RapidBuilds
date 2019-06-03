@@ -58,7 +58,7 @@ fi
 
 if [ "${INCREDIS}" == "Y" ]; then
   linkpackage "${PACKAGESDIR}/redis/redis-5.0.5-${ARCH}-bksrc1.xzm"
-  linkpackage "${PACKAGESDIR}/redis/webdis-20190529-${ARCH}-bksrc1.xzm"
+  linkpackage "${PACKAGESDIR}/redis/webdis-0.1.6-${ARCH}-bksrc1.xzm"
 fi
 
 if [ "${INCQEMU}" == "Y" ]; then
