@@ -115,7 +115,7 @@ fi
 
 if [ "${INCWIRESHARK}" == "Y" ]; then
   linkpackage "${PACKAGESDIR}/portaudio/portaudio-v19-${ARCH}-bksrc1.xzm"
-  linkpackage "${PACKAGESDIR}/wireshark/wireshark-2.6.7-GTK2-${ARCH}-bksrc1.xzm"
+  linkpackage "${PACKAGESDIR}/wireshark/wireshark-2.6.9-GTK2-${ARCH}-bksrc1.xzm"
 fi
 
 if [ "${INCXFE}" == "Y" ]; then
