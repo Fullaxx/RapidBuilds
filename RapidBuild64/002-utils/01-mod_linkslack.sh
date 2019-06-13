@@ -135,6 +135,10 @@ fi
 
 ###########################################################
 
+if [ "${INCCUPS}" == "Y" ]; then
+  linkpackage ${SLACKPKGDIR}/ap/cups-*.txz
+fi
+
 if [ "${INCDCTHREEDD}" == "Y" ]; then
   linkpackage ${SLACKPKGDIR}/ap/dc3dd-*.txz
 fi

@@ -4,6 +4,7 @@ if [ "${INCMOD002UTILS}" == "Y" ]; then
   INCTCSH="Y"
 
 # ap family of packages
+  INCCUPS="Y"
   INCDMIDECODE="Y"
   INCTMUX="Y"
 

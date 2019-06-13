@@ -35,6 +35,7 @@ if [ "${INCMOD002UTILS}" == "Y" ]; then
   INCUSBUTILS="Y"
 
 # ap family of packages
+  INCCUPS="N"
   INCDCTHREEDD="N"
   INCDDRESCUE="N"
   INCDIFFUTILS="Y"
