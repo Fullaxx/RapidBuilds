@@ -7,6 +7,13 @@ if [ `id -u` != "0" ]; then
   exit 1
 fi
 
+docker rmi \
+fullaxx/dps64 \
+fullaxx/vps64 \
+fullaxx/rapidworkstation64 \
+fullaxx/rapidfileserver64 \
+fullaxx/rapidbuild64
+
 RAPIDBUILDSDIR=${RAPIDBUILDSDIR:-`dirname $0`}
 if [ "${RAPIDBUILDSDIR}" == "." ]; then RAPIDBUILDSDIR=`pwd`; fi
 
