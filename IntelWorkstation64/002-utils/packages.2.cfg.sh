@@ -3,6 +3,11 @@ if [ "${INCMOD002UTILS}" == "Y" ]; then
 # a family of packages
   INCTCSH="Y"
 
+# ap family of packages
+  INCCUPS="Y"
+  INCDMIDECODE="Y"
+  INCTMUX="Y"
+
 # Custom Additions
   INCACPI="Y"
   INCATOP="Y"
@@ -14,6 +19,7 @@ if [ "${INCMOD002UTILS}" == "Y" ]; then
   INCCURLLOADER="Y"
   INCEXFAT="Y"
   INCEXTUNDELETE="Y"
+  INCHEXYL="Y"
   INCIOPING="Y"
   INCIOTOP="Y"
   INCIPERFTWO="Y"

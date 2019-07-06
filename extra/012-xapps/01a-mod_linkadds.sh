@@ -18,6 +18,10 @@ if [ "${INCBLUEFISHTWO}" == "Y" ]; then
   linkpackage "${PACKAGESDIR}/bluefish/bluefish-2.2.10-${ARCH}-bksrc1.xzm"
 fi
 
+if [ "${INCDIARRHOUEA}" == "Y" ]; then
+  linkpackage "${PACKAGESDIR}/python_mods/diarrhouea-1.0.0-${ARCH}-bksrc1.xzm"
+fi
+
 if [ "${INCETERM}" == "Y" ]; then
   linkpackage "${PACKAGESDIR}/Eterm/libast-0.7-${ARCH}-bksrc1.xzm"
   linkpackage "${PACKAGESDIR}/Eterm/Eterm-0.9.6-${ARCH}-bksrc1.xzm"
@@ -37,7 +41,7 @@ if [ "${INCFOX}" == "Y" ]; then
 fi
 
 if [ "${INCGEANY}" == "Y" ]; then
-  linkpackage "${PACKAGESDIR}/geany/geany-1.33-${ARCH}-bksrc1.xzm"
+  linkpackage "${PACKAGESDIR}/geany/geany-1.35-${ARCH}-bksrc1.xzm"
 fi
 
 if [ "${INCGHEX}" == "Y" ]; then
@@ -87,6 +91,10 @@ if [ "${INCST}" == "Y" ]; then
   linkpackage "${PACKAGESDIR}/st/st-0.8.1-${ARCH}-bksrc1.xzm"
 fi
 
+if [ "${INCTERMINATOR}" == "Y" ]; then
+  linkpackage "${PACKAGESDIR}/python_mods/terminator-1.91-${ARCH}-bksrc1.xzm"
+fi
+
 if [ "${INCTILDA}" == "Y" ]; then
 # tilda needs libconfuse
 # libconfuse could be moved to extra/009-xmodlibs once something else needs it
@@ -107,7 +115,7 @@ fi
 
 if [ "${INCWIRESHARK}" == "Y" ]; then
   linkpackage "${PACKAGESDIR}/portaudio/portaudio-v19-${ARCH}-bksrc1.xzm"
-  linkpackage "${PACKAGESDIR}/wireshark/wireshark-2.6.7-GTK2-${ARCH}-bksrc1.xzm"
+  linkpackage "${PACKAGESDIR}/wireshark/wireshark-2.6.9-GTK2-${ARCH}-bksrc1.xzm"
 fi
 
 if [ "${INCXFE}" == "Y" ]; then

@@ -35,6 +35,7 @@ if [ "${INCMOD002UTILS}" == "Y" ]; then
   INCUSBUTILS="Y"
 
 # ap family of packages
+  INCCUPS="Y"
   INCDCTHREEDD="N"
   INCDDRESCUE="N"
   INCDIFFUTILS="Y"
@@ -54,6 +55,7 @@ if [ "${INCMOD002UTILS}" == "Y" ]; then
   INCSQUASHFSTOOLS="Y"
   INCSYSSTAT="Y"
   INCTERMINUSFONT="N"
+  INCTMUX="Y"
 
 # n family of packages
   INCNETFILTER="Y"
@@ -95,6 +97,7 @@ if [ "${INCMOD002UTILS}" == "Y" ]; then
   INCCURLLOADER="Y"
   INCEXFAT="Y"
   INCEXTUNDELETE="Y"
+  INCHEXYL="Y"
   INCIOPING="Y"
   INCIOTOP="Y"
   INCIPERFTWO="Y"

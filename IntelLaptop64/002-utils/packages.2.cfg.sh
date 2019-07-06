@@ -7,6 +7,7 @@ if [ "${INCMOD002UTILS}" == "Y" ]; then
   INCNMAP="Y"
   INCOPENVPN="Y"
   INCSCIM="Y"
+  INCTMUX="Y"
 
 # Custom Additions
   INCACPI="Y"
@@ -19,6 +20,7 @@ if [ "${INCMOD002UTILS}" == "Y" ]; then
   INCCURLLOADER="Y"
   INCEXFAT="Y"
   INCEXTUNDELETE="Y"
+  INCHEXYL="Y"
   INCIOPING="Y"
   INCIOTOP="Y"
   INCIPERFTWO="Y"

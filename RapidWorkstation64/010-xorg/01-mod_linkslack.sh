@@ -6,12 +6,22 @@ source ./module_spec.sh
 rm -f *.txz *.xzm
 
 # Some default fonts to get things working
-# harfbuzz requires graphite2
+linkpackage ${SLACKPKGDIR}/ap/terminus-font-*.txz
 linkpackage ${SLACKPKGDIR}/l/freetype-*.txz
 linkpackage ${SLACKPKGDIR}/l/harfbuzz-*.txz
+# harfbuzz requires graphite2
 linkpackage ${SLACKPKGDIR}/l/graphite2-*.txz
 linkpackage ${SLACKPKGDIR}/x/dejavu-fonts-ttf-*.txz
+linkpackage ${SLACKPKGDIR}/x/encodings-*.txz
+linkpackage ${SLACKPKGDIR}/x/font-cursor-misc-*.txz
 linkpackage ${SLACKPKGDIR}/x/font-ibm-type1-*.txz
+linkpackage ${SLACKPKGDIR}/x/font-micro-misc-*.txz
+linkpackage ${SLACKPKGDIR}/x/font-misc-misc-*.txz
+linkpackage ${SLACKPKGDIR}/x/font-mutt-misc-*.txz
+linkpackage ${SLACKPKGDIR}/x/font-schumacher-misc-*.txz
+linkpackage ${SLACKPKGDIR}/x/font-sun-misc-*.txz
+linkpackage ${SLACKPKGDIR}/x/font-util-*.txz
+linkpackage ${SLACKPKGDIR}/x/font-xfree86-type1-*.txz
 linkpackage ${SLACKPKGDIR}/x/liberation-fonts-ttf-*.txz
 linkpackage ${SLACKPKGDIR}/x/urw-core35-fonts-otf-*.txz
 #######################################
@@ -126,16 +136,6 @@ if [ "${INCGHOSTSCRIPT}" == "Y" ]; then
   linkpackage ${SLACKPKGDIR}/ap/ghostscript-fonts-std-*.txz
 fi
 
-#if [ "${INCALLXFONTS}" == "Y" ]; then
-#  linkpackage ${SLACKPKGDIR}/x/sazanami-fonts-ttf-*.txz
-#  linkpackage ${SLACKPKGDIR}/x/sinhala_lklug-font-ttf-*.txz
-#  linkpackage ${SLACKPKGDIR}/x/tibmachuni-font-ttf-*.txz
-#  linkpackage ${SLACKPKGDIR}/x/ttf-indic-fonts-*.txz
-#  linkpackage ${SLACKPKGDIR}/x/ttf-tlwg-*.txz
-#  linkpackage ${SLACKPKGDIR}/x/wqy-zenhei-font-ttf-*.txz
-#  for PKG in ${SLACKPKGDIR}/x/font-*.txz; do linkpackage ${PKG}; done
-#fi
-
 if [ "${INCLIBXKLAVIER}" == "Y" ]; then
   linkpackage ${SLACKPKGDIR}/l/libxklavier-*.txz
 fi
@@ -204,6 +204,11 @@ if [ "${INCMOTIF}" == "Y" ]; then
   linkpackage ${SLACKPKGDIR}/x/motif-*.txz
 fi
 
+if [ "${INCSETXKBMAP}" == "Y" ]; then
+# Necessary to switch to DVORAK keyboard map
+  linkpackage ${SLACKPKGDIR}/x/setxkbmap-*.txz
+fi
+
 if [ "${INCTRANSSET}" == "Y" ]; then
   linkpackage ${SLACKPKGDIR}/x/transset-*.txz
 fi
@@ -255,10 +260,6 @@ fi
 
 if [ "${INCXSETROOT}" == "Y" ]; then
   linkpackage ${SLACKPKGDIR}/x/xsetroot-*.txz
-fi
-
-if [ "${INCXKBMAP}" == "Y" ]; then
-  linkpackage ${SLACKPKGDIR}/x/setxkbmap-*.txz
 fi
 
 if [ "${INCXVINFO}" == "Y" ]; then

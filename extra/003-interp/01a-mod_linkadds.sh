@@ -35,7 +35,7 @@ if [ "${INCJINJATWO}" == "Y" ]; then
 fi
 
 if [ "${INCKEEPNOTE}" == "Y" ]; then
-  linkpackage "${PACKAGESDIR}/python_mods/keepnote-0.7.8-${ARCH}-bksrc2.xzm"
+  linkpackage "${PACKAGESDIR}/python_mods/keepnote-0.7.8-${ARCH}-bksrc3.xzm"
 fi
 
 if [ "${INCLXML}" == "Y" ]; then
@@ -77,18 +77,14 @@ if [ "${INCSETUPTOOLSSCM}" == "Y" ]; then
   linkpackage "${PACKAGESDIR}/python_mods/setuptools_scm-3.2.0-${ARCH}-bksrc1.xzm"
 fi
 
-if [ "${INCTERMINATOR}" == "Y" ]; then
-  linkpackage "${PACKAGESDIR}/python_mods/terminator-1.91-${ARCH}-bksrc2.xzm"
-fi
-
 if [ "${INCTORNADO}" == "Y" ]; then
   linkpackage "${PACKAGESDIR}/python_mods/tornado-6.0.1-${ARCH}-bksrc1.xzm"
 fi
 
 if [ "${INCVIRTUALENV}" == "Y" ]; then
-  linkpackage "${PACKAGESDIR}/python_mods/virtualenv-16.4.3-${ARCH}-bksrc1.xzm"
+  linkpackage "${PACKAGESDIR}/python_mods/virtualenv-16.6.0-${ARCH}-bksrc1.xzm"
 fi
 
 if [ "${INCWEBSOCKIFY}" == "Y" ]; then
-  linkpackage "${PACKAGESDIR}/python_mods/websockify-20181217-noarch-bksrc1.xzm"
+  linkpackage "${PACKAGESDIR}/python_mods/websockify-20190530-noarch-bksrc1.xzm"
 fi

@@ -104,6 +104,7 @@ fi
 
 if [ "${INCPYGOBJECT}" == "Y" ]; then
   linkpackage ${SLACKPKGDIR}/l/pygobject-*.txz
+  linkpackage ${SLACKPKGDIR}/l/pygobject3-*.txz
 fi
 
 if [ "${INCPYQT}" == "Y" ]; then
