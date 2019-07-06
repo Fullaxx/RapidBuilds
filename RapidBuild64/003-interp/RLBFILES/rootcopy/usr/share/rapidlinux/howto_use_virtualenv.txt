@@ -24,3 +24,10 @@ Jupyter Notebook Example
 # source JN/bin/activate
 # pip install jupyter
 # jupyter-notebook
+
+###############################################################################
+sudo /sbin/installpkg slackware64/l/gobject-introspection-1.60.1-x86_64-1.txz
+# virtualenv --python=python3.7 --system-site-packages pandas
+virtualenv --python=python3.7 --no-site-packages /tmp/pandas
+source /tmp/pandas/bin/activate
+pip install pandas matplotlib scipy pycairo pygobject
