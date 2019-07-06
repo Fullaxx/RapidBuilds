@@ -3,7 +3,8 @@
 source ../spec.sh
 source ./module_spec.sh
 
-rm -f ${DIR}/fonts.*
+# Whatever this was, is now unnecessary
+# rm -f ${DIR}/fonts.*
 
 echo "Unzipping all compressed fonts ..."
 find ${DIR}/usr/share/fonts -name '*.gz' -exec gunzip {} \;
@@ -25,4 +26,9 @@ if [ -d ${DIR}/etc/X11/xinit ]; then
     echo 'exec /usr/bin/X -nolisten tcp "$@"' >> ${DIR}/etc/X11/xinit/xserverrc
     chmod 0755 ${DIR}/etc/X11/xinit/xserverrc
   fi
+fi
+
+# Set the default font xterm font size to unreadable
+if [ -f ${DIR}/etc/X11/app-defaults/XTerm ]; then
+  sed -e 's|XTerm.vt100.font: -\*-terminus-bold-r-normal-\*-20|XTerm.vt100.font: -\*-terminus-bold-r-normal-\*-12|' -i ${DIR}/etc/X11/app-defaults/XTerm
 fi
