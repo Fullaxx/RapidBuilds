@@ -31,4 +31,4 @@ verbosecopymodule ${PACKAGESDIR}/docker/docker-18.09.8-${ARCH}-1.xzm ${MODSDIR}/
 verbosecopymodule ${PACKAGESDIR}/java8/jre-8u191-${ARCH}-1.xzm ${MODSDIR}/
 verbosecopymodule ${PACKAGESDIR}/veracrypt/veracrypt-console-1.23-${ARCH}-1.xzm ${MODSDIR}/
 verbosecopymodule ${PACKAGESDIR}/vivaldi/vivaldi-stable-2.6.1566.49-1.${ARCH}.xzm ${MODSDIR}/
-verbosecopymodule ${PACKAGESDIR}/vivaldi-codecs-ffmpeg-extra/vivaldi-codecs-ffmpeg-extra-73.0.3683.86-${ARCH}-1.xzm ${MODSDIR}/
+verbosecopymodule ${PACKAGESDIR}/vivaldi-codecs-ffmpeg-extra/vivaldi-codecs-ffmpeg-extra-74.0.3729.169-${ARCH}-1.xzm ${MODSDIR}/
