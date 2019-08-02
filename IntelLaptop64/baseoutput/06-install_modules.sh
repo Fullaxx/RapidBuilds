@@ -11,7 +11,7 @@ fi
 
 # Chrome needs RDL
 if [ "${INCCHROME}" == "Y" ]; then
-  verbosecopymodule ${PACKAGESDIR}/chrome/chrome-74.0.3729.169-x86_64-1.xzm ${MODSDIR}/
+  verbosecopymodule ${PACKAGESDIR}/chrome/chrome-75.0.3770.142-x86_64-1.xzm ${MODSDIR}/
 fi
 
 # VSCode needs RDL
