@@ -119,5 +119,5 @@ if [ "${INCWIRESHARK}" == "Y" ]; then
 fi
 
 if [ "${INCXFE}" == "Y" ]; then
-  linkpackage "${PACKAGESDIR}/xfe/xfe-1.43.1-${ARCH}-bksrc1.xzm"
+  linkpackage "${PACKAGESDIR}/xfe/xfe-1.43.2-${ARCH}-bksrc1.xzm"
 fi
