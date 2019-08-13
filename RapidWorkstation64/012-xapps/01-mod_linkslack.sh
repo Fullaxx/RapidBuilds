@@ -98,6 +98,10 @@ if [ "${INCMPLAYER}" == "Y" ]; then
   linkpackage ${SLACKPKGDIR}/xap/MPlayer-*.txz
 fi
 
+if [ "${INCPIDGIN}" == "Y" ]; then
+  linkpackage ${SLACKPKGDIR}/xap/pidgin-*.txz
+fi
+
 if [ "${INCRDESKTOP}" == "Y" ]; then
   linkpackage ${SLACKPKGDIR}/xap/rdesktop-*.txz
 fi
@@ -314,6 +318,10 @@ fi
 
 if [ "${INCGTKTHREE}" == "Y" ]; then
   linkpackage ${SLACKPKGDIR}/l/gtk+3-*.txz
+fi
+
+if [ "${INCGTKSPELL}" == "Y" ]; then
+  linkpackage ${SLACKPKGDIR}/l/gtkspell-*.txz
 fi
 
 if [ "${INCILMBASE}" == "Y" ]; then
