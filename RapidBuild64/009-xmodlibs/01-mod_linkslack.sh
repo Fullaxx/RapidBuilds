@@ -235,7 +235,7 @@ if [ "${INCLIBSSHONE}" == "Y" ]; then
 fi
 
 if [ "${INCLIBUNWIND}" == "Y" ]; then
-# strace,zeromq needs libunwind
+# strace needs libunwind
   linkpackage ${SLACKPKGDIR}/l/libunwind-*.txz
 fi
 
