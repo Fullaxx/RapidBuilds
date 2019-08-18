@@ -3,6 +3,9 @@
 source ../spec.sh
 source ./module_spec.sh
 
+# Everyone gets this
+linkpackage "${PACKAGESDIR}/staticlibs/staticlibs-openssl-1.1.1c-${ARCH}-bksrc1.xzm"
+
 if [ "${INCASTYLE}" == "Y" ]; then
   linkpackage "${PACKAGESDIR}/astyle/astyle-3.1-${ARCH}-bksrc1.xzm"
 fi
