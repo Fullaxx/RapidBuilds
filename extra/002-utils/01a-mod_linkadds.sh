@@ -35,6 +35,10 @@ if [ "${INCCURLLOADER}" == "Y" ]; then
   linkpackage "${PACKAGESDIR}/curl-loader/curl-loader-0.56-${ARCH}-bksrc1.xzm"
 fi
 
+if [ "${INCDAVFSTWO}" == "Y" ]; then
+  linkpackage "${PACKAGESDIR}/davfs2/davfs2-1.5.5-${ARCH}-bksrc1.xzm"
+fi
+
 if [ "${INCEXFAT}" == "Y" ]; then
   linkpackage "${PACKAGESDIR}/exfat/fuse-exfat-1.3.0-${ARCH}-bksrc1.xzm"
   linkpackage "${PACKAGESDIR}/exfat/exfat-utils-1.3.0-${ARCH}-bksrc1.xzm"
