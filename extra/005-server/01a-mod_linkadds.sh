@@ -24,7 +24,7 @@ if [ "${INCNGINX}" == "Y" ]; then
 fi
 
 if [ "${INCNNG}" == "Y" ]; then
-  linkpackage "${PACKAGESDIR}/mbedtls/mbedtls-2.16.0-${ARCH}-bksrc1.xzm"
+  linkpackage "${PACKAGESDIR}/mbedtls/mbedtls-2.16.2-${ARCH}-bksrc1.xzm"
   linkpackage "${PACKAGESDIR}/nng/nng-1.1.1-${ARCH}-bksrc1.xzm"
 fi
 
