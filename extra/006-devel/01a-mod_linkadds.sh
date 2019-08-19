@@ -40,8 +40,11 @@ if [ "${INCCODEEXAMPLES}" == "Y" ]; then
 
   linkpackage "${PACKAGESDIR}/codex/csrp-20190108-noarch-bksrc1.xzm"
   linkpackage "${PACKAGESDIR}/codex/csrp-rfc5054-20190108-noarch-bksrc1.xzm"
-  linkpackage "${PACKAGESDIR}/codex/mbedtls-csrp-20190108-noarch-bksrc1.xzm"
   linkpackage "${PACKAGESDIR}/codex/csrp-gmp-20190108-noarch-bksrc1.xzm"
+  linkpackage "${PACKAGESDIR}/codex/mbedtls-csrp-dwimberger-20190819-noarch-bksrc1.xzm"
+  linkpackage "${PACKAGESDIR}/codex/mbedtls-csrp-damv-20190819-noarch-bksrc1.xzm"
+  linkpackage "${PACKAGESDIR}/codex/mbedtls-csrp-dunkelstern-20190819-noarch-bksrc1.xzm"
+  linkpackage "${PACKAGESDIR}/codex/mbedtls-csrp-sdrsdr-20190819-noarch-bksrc1.xzm"
 
   linkpackage "${PACKAGESDIR}/codex/lz4-20190110-noarch-bksrc1.xzm"
   linkpackage "${PACKAGESDIR}/codex/miniz-20190110-noarch-bksrc1.xzm"
