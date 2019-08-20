@@ -49,7 +49,7 @@ if [ -d ${DIR}/usr/share/gtk-doc ]; then
   mv ${DIR}/usr/share/gtk-doc ${MODGTKDOCDIR}/usr/share
 fi
 
-PYEXISTS=`ls -d1 ${DIR}/usr/lib64/python?.? 2>/dev/null | wc -l`
+PYEXISTS=`ls -d1 ${DIR}/usr/${LIBDIR}/python?.? 2>/dev/null | wc -l`
 if [ "${PYEXISTS}" -ne "0" ]; then
   mkdir -p ${MODPYTHONDIR}/usr/${LIBDIR}
   mv ${DIR}/usr/${LIBDIR}/python?.? ${MODPYTHONDIR}/usr/${LIBDIR}/

@@ -3,6 +3,10 @@
 source ../spec.sh
 source ./module_spec.sh
 
+if [ -x ${DIR}/usr/${LIBDIR}/libnl.a ]; then
+  chmod 0644 ${DIR}/usr/${LIBDIR}/libnl.a
+fi
+
 # This is required if using the RapidLinux repo
 echo "user_allow_other" >> ${DIR}/etc/fuse.conf
 
