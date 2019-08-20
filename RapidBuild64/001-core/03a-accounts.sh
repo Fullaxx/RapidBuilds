@@ -22,6 +22,8 @@ echo "postgres:x:209:" >> ${DIR}/etc/group
 echo "clamav:x:210:210:clamav:/:/bin/false" >> ${DIR}/etc/passwd
 echo "clamav:x:210:" >> ${DIR}/etc/group
 echo "kvm:x:221:" >> ${DIR}/etc/group
+echo "davfs2:x:230:230:davfs2:/:/bin/false" >> ${DIR}/etc/passwd
+echo "davfs2:x:230:" >> ${DIR}/etc/group
 echo "tomcat:x:232:232:tomcat:/:/bin/false" >> ${DIR}/etc/passwd
 echo "tomcat:x:232:" >> ${DIR}/etc/group
 echo "docker:x:281:" >> ${DIR}/etc/group
