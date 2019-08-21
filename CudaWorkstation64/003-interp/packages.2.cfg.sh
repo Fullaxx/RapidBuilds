@@ -6,7 +6,7 @@ if [ "${INCMOD003INTERP}" == "Y" ]; then
   INCPSSH="N"
 
 # Custom Additions
-  INCBOKEH="Y"
+# INCBOKEH="N"
   INCFTPSYNC="N"
   INCGNURADIO="N"
   INCJUPYTER="N"

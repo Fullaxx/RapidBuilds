@@ -61,7 +61,7 @@ if [ "${INCPYTHONDATEUTIL}" == "Y" ]; then
 fi
 
 if [ "${INCPYYAML}" == "Y" ]; then
-  linkpackage "${PACKAGESDIR}/python_mods/PyYAML-3.13-${ARCH}-bksrc2.xzm"
+  linkpackage "${PACKAGESDIR}/python_mods/PyYAML-5.1.2-${ARCH}-bksrc1.xzm"
 fi
 
 if [ "${INCPYZMQ}" == "Y" ]; then
