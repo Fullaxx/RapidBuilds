@@ -105,7 +105,7 @@ fi
 if [ "${INCVLC}" == "Y" ]; then
   linkpackage "${PACKAGESDIR}/libmpeg2/libmpeg2-0.5.1-${ARCH}-bksrc1.xzm"
   linkpackage "${PACKAGESDIR}/libdvbpsi/libdvbpsi-1.3.2-${ARCH}-bksrc1.xzm"
-  linkpackage "${PACKAGESDIR}/vlc/vlc-3.0.7.1-${ARCH}-bksrc1.xzm"
+  linkpackage "${PACKAGESDIR}/vlc/vlc-3.0.8-${ARCH}-bksrc1.xzm"
 
 ### TEMPORARY ###
 # REMOVE THIS WHEN VLC SUPPORTS libvpx-1.8.0
