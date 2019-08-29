@@ -11,3 +11,13 @@ sed -e 's#PATH=/usr/local/sbin:/usr/sbin:/sbin#PATH=/usr/sbin:/sbin#' -i ${DIR}/
 
 sed -e 's/export LANG=en_US.UTF-8/#export LANG=en_US.UTF-8/g' -i ${DIR}/etc/profile.d/lang.sh
 sed -e 's/#export LANG=C/export LANG=C/g' -i ${DIR}/etc/profile.d/lang.sh
+
+cat << EOFF >> ${DIR}/etc/skel/.bashrc
+PS1='[\u@\h (\w)]\$ '
+EOFF
+chmod 0644 ${DIR}/etc/skel/.bashrc
+
+cat << EOFF >> ${DIR}/root/.bashrc
+PS1='[\u@\h (\w)]\$ '
+EOFF
+chmod 0644 ${DIR}/root/.bashrc
