@@ -1,7 +1,9 @@
 #!/bin/bash
 
-GCDIR="/tmp/.gc"
+BROWSERDIR="/tmp/.gc"
+if [ ! -d ${BROWSERDIR} ]; then mkdir -p ${BROWSERDIR}; fi
 
-if [ ! -d ${GCDIR} ]; then mkdir -p ${GCDIR}; fi
+unset NOSANDBOX
+if [ `id -u` == "0" ]; then NOSANDBOX="--no-sandbox"; fi
 
-google-chrome --user-data-dir=${GCDIR} 2>${GCDIR}/err.log
+google-chrome ${NOSANDBOX} --user-data-dir=${BROWSERDIR} 2>${BROWSERDIR}/err.log

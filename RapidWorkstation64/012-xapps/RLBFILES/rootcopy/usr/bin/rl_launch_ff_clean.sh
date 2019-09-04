@@ -1,7 +1,6 @@
 #!/bin/bash
 
-FFDIR="/tmp/.ff"
+BROWSERDIR="/tmp/.ff"
+if [ ! -d ${BROWSERDIR} ]; then mkdir -p ${BROWSERDIR}; fi
 
-if [ ! -d ${FFDIR} ]; then mkdir -p ${FFDIR}; fi
-
-firefox --new-instance --profile ${FFDIR} 2>${FFDIR}/err.log
+firefox --new-instance --profile ${BROWSERDIR} 2>${BROWSERDIR}/err.log

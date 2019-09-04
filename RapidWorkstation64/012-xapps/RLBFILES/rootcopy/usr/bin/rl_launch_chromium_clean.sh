@@ -1,7 +1,9 @@
 #!/bin/bash
 
-GCDIR="/tmp/.chr"
+BROWSERDIR="/tmp/.chr"
+if [ ! -d ${BROWSERDIR} ]; then mkdir -p ${BROWSERDIR}; fi
 
-if [ ! -d ${GCDIR} ]; then mkdir -p ${GCDIR}; fi
+unset NOSANDBOX
+if [ `id -u` == "0" ]; then NOSANDBOX="--no-sandbox"; fi
 
-chromium --user-data-dir=${GCDIR} 2>${GCDIR}/err.log
+chromium ${NOSANDBOX} --user-data-dir=${BROWSERDIR} 2>${BROWSERDIR}/err.log
