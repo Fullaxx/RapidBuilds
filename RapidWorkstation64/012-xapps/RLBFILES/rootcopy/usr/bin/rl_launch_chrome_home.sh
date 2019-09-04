@@ -1,9 +1,9 @@
 #!/bin/bash
 
-GCDIR="${HOME}/.config/google-chrome"
-if [ ! -d ${GCDIR} ]; then mkdir -p ${GCDIR}; fi
+BROWSERDIR="${HOME}/.config/google-chrome"
+if [ ! -d ${BROWSERDIR} ]; then mkdir -p ${BROWSERDIR}; fi
 
-unset GCNOSANDBOX
-if [ `id -u` == "0" ]; then GCNOSANDBOX="--no-sandbox"; fi
+unset NOSANDBOX
+if [ `id -u` == "0" ]; then NOSANDBOX="--no-sandbox"; fi
 
-google-chrome ${GCNOSANDBOX} --user-data-dir=${GCDIR} 2>$GCDIR/err.log
+google-chrome ${NOSANDBOX} --user-data-dir=${BROWSERDIR} 2>${BROWSERDIR}/err.log

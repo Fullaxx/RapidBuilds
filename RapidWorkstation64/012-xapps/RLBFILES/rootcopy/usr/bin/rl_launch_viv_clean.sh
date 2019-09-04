@@ -1,7 +1,9 @@
 #!/bin/bash
 
-VIVDIR="/tmp/.viv"
+BROWSERDIR="/tmp/.viv"
+if [ ! -d ${BROWSERDIR} ]; then mkdir -p ${BROWSERDIR}; fi
 
-if [ ! -d ${VIVDIR} ]; then mkdir -p ${VIVDIR}; fi
+unset NOSANDBOX
+if [ `id -u` == "0" ]; then NOSANDBOX="--no-sandbox"; fi
 
-vivaldi-stable --user-data-dir=${VIVDIR} 2>${VIVDIR}/err.log
+vivaldi-stable ${NOSANDBOX} --user-data-dir=${BROWSERDIR} 2>${BROWSERDIR}/err.log
