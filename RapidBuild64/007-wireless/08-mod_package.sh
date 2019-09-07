@@ -13,10 +13,10 @@ if [ -d ${MODDOCDIR} ]; then
   rm -r ${MODDOCDIR}
 fi
 
-if [ -d ${MODINCDIR} ]; then
-  echo "Creating ${MODNUM}a-inc.xzm ..."
-  dir2xzm ${MODINCDIR} ${MODNUM}a-inc.xzm >/dev/null
-  rm -r ${MODINCDIR}
+if [ -d ${MODDEVDIR} ]; then
+  echo "Creating ${MODNUM}a-dev.xzm ..."
+  dir2xzm ${MODDEVDIR} ${MODNUM}a-dev.xzm >/dev/null
+  rm -r ${MODDEVDIR}
 fi
 
 if [ -d ${MODINFODIR} ]; then

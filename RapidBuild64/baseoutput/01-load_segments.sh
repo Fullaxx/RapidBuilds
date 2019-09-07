@@ -72,7 +72,7 @@ mkdir ${DIR}
 
 echo "Exploding 006-devel.xzm ..."
 xzm2dir 006-devel.xzm ${DIR} >/dev/null
-for PKG in ../0[01]*/0[01]?a-inc.xzm; do
+for PKG in ../0[01]*/0[01]?a-dev.xzm; do
   echo "Exploding ${PKG} ..."
   xzm2dir ${PKG} ${DIR} >/dev/null
 done
