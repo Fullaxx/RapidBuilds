@@ -35,8 +35,20 @@ if [ -d ${DIR}/usr/doc ]; then
 fi
 
 if [ -d ${DIR}/usr/include ]; then
-  mkdir -p ${MODINCDIR}/usr
-  mv ${DIR}/usr/include ${MODINCDIR}/usr/
+  mkdir -p ${MODDEVDIR}/usr
+  mv ${DIR}/usr/include ${MODDEVDIR}/usr/
+fi
+
+SLCNT=`ls -1 ${DIR}/${LIBDIR}/*.a 2>/dev/null | wc -l`
+if [ ${SLCNT} != "0" ]; then
+  mkdir -p ${MODDEVDIR}/${LIBDIR}
+  mv ${DIR}/${LIBDIR}/*.a ${MODDEVDIR}/${LIBDIR}/
+fi
+
+SLCNT=`ls -1 ${DIR}/usr/${LIBDIR}/*.a 2>/dev/null | wc -l`
+if [ ${SLCNT} != "0" ]; then
+  mkdir -p ${MODDEVDIR}/usr/${LIBDIR}
+  mv ${DIR}/usr/${LIBDIR}/*.a ${MODDEVDIR}/usr/${LIBDIR}/
 fi
 
 if [ -d ${DIR}/usr/info ]; then
