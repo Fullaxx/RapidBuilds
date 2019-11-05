@@ -17,7 +17,7 @@ verbosecopymodule ${PACKAGESDIR}/nvidia_driver/011-nvidia-418.88-${KERNVERS}.xzm
 
 # Chrome needs RDL
 if [ "${INCCHROME}" == "Y" ]; then
-  verbosecopymodule ${PACKAGESDIR}/chrome/chrome-76.0.3809.132-x86_64-1.xzm ${MODSDIR}/
+  verbosecopymodule ${PACKAGESDIR}/chrome/chrome-77.0.3865.120-x86_64-1.xzm ${MODSDIR}/
 fi
 
 # VSCode needs RDL
