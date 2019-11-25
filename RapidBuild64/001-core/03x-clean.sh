@@ -24,15 +24,12 @@ rm -f ${DIR}/usr/${LIBDIR}/libcurl.*
 rm -f ${DIR}/usr/${LIBDIR}/libasound.*
 rm -f ${DIR}/usr/${LIBDIR}/libtiff.*
 rm -f ${DIR}/usr/${LIBDIR}/libtiffxx.*
+rm -f ${DIR}/usr/${LIBDIR}/libraw.*
+rm -f ${DIR}/usr/${LIBDIR}/libraw_r.*
+rm -f ${DIR}/usr/${LIBDIR}/libexiv2.*
 
 # Unnecessary here, libidn2 is mandatory in 002-utils
 rm -f ${DIR}/usr/${LIBDIR}/libidn2.so.*
-
-# # For RapidInstall - if libidn2 package exists in 001-core do not clean
-# if ! ls -l | grep -q libidn2; then
-# # Unnecessary here, libidn2 is mandatory in 002-utils
-#   rm -f ${DIR}/usr/${LIBDIR}/libidn2.so.*
-# fi
 
 # Not ready for this yet
 # rm -f ${DIR}/usr/${LIBDIR}/libidn.so.*
