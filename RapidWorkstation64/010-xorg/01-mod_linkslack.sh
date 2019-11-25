@@ -57,7 +57,7 @@ linkpackage ${SLACKPKGDIR}/x/libpciaccess-*.txz
 linkpackage ${SLACKPKGDIR}/x/libxcb-*.txz
 linkpackage ${SLACKPKGDIR}/x/libxkbfile-*.txz
 linkpackage ${SLACKPKGDIR}/x/libxshmfence-*.txz
-linkpackage ${SLACKPKGDIR}/x/mkfontdir-*.txz
+# linkpackage ${SLACKPKGDIR}/x/mkfontdir-*.txz - removed Mon Oct 28 20:22:51 UTC 2019
 linkpackage ${SLACKPKGDIR}/x/mkfontscale-*.txz
 linkpackage ${SLACKPKGDIR}/x/pixman-*.txz
 linkpackage ${SLACKPKGDIR}/x/util-macros-*.txz # What is this used for?
