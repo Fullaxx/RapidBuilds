@@ -76,6 +76,10 @@ if [ "${INCGDB}" == "Y" ]; then
   linkpackage ${SLACKPKGDIR}/d/gdb-*.txz
 fi
 
+if [ "${INCGETTEXT}" == "Y" ]; then
+  linkpackage ${SLACKPKGDIR}/a/gettext-0.*.txz
+fi
+
 if [ "${INCGETTEXTTOOLS}" == "Y" ]; then
   linkpackage ${SLACKPKGDIR}/d/gettext-tools-*.txz
 fi

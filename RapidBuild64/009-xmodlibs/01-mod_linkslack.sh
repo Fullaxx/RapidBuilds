@@ -87,6 +87,10 @@ if [ "${INCFFTW}" == "Y" ]; then
   linkpackage ${SLACKPKGDIR}/l/fftw-*.txz
 fi
 
+if [ "${INCFUSETHREE}" == "Y" ]; then
+  linkpackage ${SLACKPKGDIR}/l/fuse3-*.txz
+fi
+
 if [ "${INCGC}" == "Y" ]; then
 # XXX needs GC
   linkpackage ${SLACKPKGDIR}/l/gc-*.txz
