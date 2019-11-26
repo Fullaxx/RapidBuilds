@@ -20,7 +20,7 @@ if [ "${INCVSCODE}" == "Y" ]; then
 fi
 
 # Copy any extra modules that don't need RDL
-verbosecopymodule ${PACKAGESDIR}/VirtualBox/VirtualBox-5.2.32-${ARCH}-1.xzm ${MODSDIR}/
+verbosecopymodule ${PACKAGESDIR}/VirtualBox/VirtualBox-6.0.14-x86_64-1.xzm ${MODSDIR}/
 verbosecopymodule ${PACKAGESDIR}/LibreOffice/LibreOffice-5.4.7-${ARCH}-1.xzm ${MODSDIR}/
 # verbosecopymodule ${PACKAGESDIR}/archipelago/archipelago-3.2.1-x86_64-1.xzm ${MODSDIR}/
 verbosecopymodule ${PACKAGESDIR}/chromium/chromium-77.0.3865.90-${ARCH}-1alien.xzm ${MODSDIR}/
