@@ -216,9 +216,7 @@ if [ "${INCTERMINUSFONT}" == "Y" ]; then
 fi
 
 if [ "${INCTMUX}" == "Y" ]; then
-#  linkpackage ${SLACKPKGDIR}/ap/tmux-*.txz
-# XXX TEMOPORARY
-  linkpackage "${PACKAGESDIR}/tmux/tmux-2.9a-${ARCH}-1.txz"
+  linkpackage ${SLACKPKGDIR}/ap/tmux-*.txz
 fi
 
 ###########################################################
