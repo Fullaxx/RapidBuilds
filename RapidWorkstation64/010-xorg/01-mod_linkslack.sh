@@ -149,6 +149,7 @@ if [ "${INCMESA}" == "Y" ]; then
   linkpackage ${SLACKPKGDIR}/x/glew-*.txz
   linkpackage ${SLACKPKGDIR}/x/glu-*.txz
   linkpackage ${SLACKPKGDIR}/x/libepoxy-*.txz
+  linkpackage ${SLACKPKGDIR}/x/libglvnd-*.txz
   linkpackage ${SLACKPKGDIR}/x/mesa-*.txz
 fi
 
