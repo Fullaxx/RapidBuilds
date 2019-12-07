@@ -19,6 +19,10 @@ if [ "${INCLIBWEBSOCKETS}" == "Y" ]; then
   linkpackage "${PACKAGESDIR}/libwebsockets/libwebsockets-3.1.0-${ARCH}-bksrc1.xzm"
 fi
 
+if [ "${INCMONGOCDRIVER}" == "Y" ]; then
+  linkpackage "${PACKAGESDIR}/mongo/mongo-c-driver-1.15.2-${ARCH}-bksrc1.xzm"
+fi
+
 if [ "${INCNGINX}" == "Y" ]; then
   linkpackage "${PACKAGESDIR}/nginx/nginx-1.15.9-${ARCH}-bksrc1.xzm"
 fi
