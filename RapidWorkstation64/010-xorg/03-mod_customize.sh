@@ -30,5 +30,5 @@ fi
 
 # Set the default font xterm font size to unreadable
 if [ -f ${DIR}/etc/X11/app-defaults/XTerm ]; then
-  sed -e 's|XTerm.vt100.font: -\*-terminus-bold-r-normal-\*-20|XTerm.vt100.font: -\*-terminus-bold-r-normal-\*-12|' -i ${DIR}/etc/X11/app-defaults/XTerm
+  sed -e 's|XTerm.vt100.font: -\*-terminus-medium-r-normal-\*-20|XTerm.vt100.font: -\*-terminus-medium-r-normal-\*-12|' -i ${DIR}/etc/X11/app-defaults/XTerm
 fi
