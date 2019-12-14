@@ -1,6 +1,4 @@
 if [ "${INCNEON}" == "Y" ]; then
   INCEXPAT="Y"
   INCLIBPROXY="Y"
-# INCJSONEEIGHTYFIVE="Y"
-# INCMOZJSFIFTYTWO="Y"
 fi
