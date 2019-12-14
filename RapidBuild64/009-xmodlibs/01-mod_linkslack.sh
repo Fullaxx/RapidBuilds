@@ -288,9 +288,9 @@ if [ "${INCMOZILLANSS}" == "Y" ]; then
   linkpackage ${SLACKPKGDIR}/l/mozilla-nss-*.txz
 fi
 
-if [ "${INCMOZJSFIFTYTWO}" == "Y" ]; then
-# polkit needs mozjs52
-  linkpackage ${SLACKPKGDIR}/l/mozjs52-*.txz
+if [ "${INCMOZJSSIXTY}" == "Y" ]; then
+# polkit needs mozjs60
+  linkpackage ${SLACKPKGDIR}/l/mozjs60-*.txz
 fi
 
 if [ "${INCNEON}" == "Y" ]; then
