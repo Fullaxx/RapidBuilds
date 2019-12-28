@@ -12,7 +12,7 @@ if [ "${INCLIBMICROHTTPD}" == "Y" ]; then
 fi
 
 if [ "${INCLIBVIRT}" == "Y" ]; then
-  linkpackage "${PACKAGESDIR}/libvirt/libvirt-5.3.0-${ARCH}-bksrc1.xzm"
+  linkpackage "${PACKAGESDIR}/libvirt/libvirt-5.9.0-${ARCH}-bksrc1.xzm"
 fi
 
 if [ "${INCLIBWEBSOCKETS}" == "Y" ]; then
@@ -20,7 +20,7 @@ if [ "${INCLIBWEBSOCKETS}" == "Y" ]; then
 fi
 
 if [ "${INCMONGOCDRIVER}" == "Y" ]; then
-  linkpackage "${PACKAGESDIR}/mongo/mongo-c-driver-1.15.2-${ARCH}-bksrc1.xzm"
+  linkpackage "${PACKAGESDIR}/mongo/mongo-c-driver-1.15.3-${ARCH}-bksrc1.xzm"
 fi
 
 if [ "${INCNGINX}" == "Y" ]; then
@@ -66,7 +66,7 @@ if [ "${INCREDIS}" == "Y" ]; then
 fi
 
 if [ "${INCQEMU}" == "Y" ]; then
-  linkpackage "${PACKAGESDIR}/qemu/qemu-3.0.1-${ARCH}-bksrc1.xzm"
+  linkpackage "${PACKAGESDIR}/qemu/qemu-3.1.1.1-${ARCH}-bksrc1.xzm"
 fi
 
 if [ "${INCYAJL}" == "Y" ]; then
