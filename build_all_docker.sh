@@ -1,7 +1,5 @@
 #!/bin/bash
 
-set -e
-
 if [ `id -u` != "0" ]; then
   echo "Got Root?"
   exit 1
@@ -13,6 +11,8 @@ fullaxx/vps64 \
 fullaxx/rapidworkstation64 \
 fullaxx/rapidfileserver64 \
 fullaxx/rapidbuild64
+
+set -e
 
 RAPIDBUILDSDIR=${RAPIDBUILDSDIR:-`dirname $0`}
 if [ "${RAPIDBUILDSDIR}" == "." ]; then RAPIDBUILDSDIR=`pwd`; fi
