@@ -6,7 +6,7 @@ source ./module_spec.sh
 if [ "${INCPYTHON}" == "Y" ]; then
 # pyconfig.h needs to be in the main modules always, not relegated to 006-devel
   tar xf python-2.?.*-*.txz  -C ${DIR} --wildcards 'usr/include/python2.?/pyconfig.h'
-  tar xf python3-3.?.*-*.txz -C ${DIR} --wildcards 'usr/include/python3.??/pyconfig.h'
+  tar xf python3-3.?.*-*.txz -C ${DIR} --wildcards 'usr/include/python3.?/pyconfig.h'
 # ls -l ${DIR}/usr/include/python2.?/pyconfig.h ${DIR}/usr/include/python3.??/pyconfig.h
 fi
 
