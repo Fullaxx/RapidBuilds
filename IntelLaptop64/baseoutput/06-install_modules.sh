@@ -23,7 +23,7 @@ fi
 verbosecopymodule ${PACKAGESDIR}/VirtualBox/VirtualBox-6.0.16-x86_64-1.xzm ${MODSDIR}/
 verbosecopymodule ${PACKAGESDIR}/LibreOffice/LibreOffice-5.4.7-${ARCH}-1.xzm ${MODSDIR}/
 # verbosecopymodule ${PACKAGESDIR}/archipelago/archipelago-3.2.1-x86_64-1.xzm ${MODSDIR}/
-verbosecopymodule ${PACKAGESDIR}/chromium/chromium-77.0.3865.90-${ARCH}-1alien.xzm ${MODSDIR}/
+verbosecopymodule ${PACKAGESDIR}/chromium/chromium-79.0.3945.130-${ARCH}-1alien.xzm ${MODSDIR}/
 # verbosecopymodule ${PACKAGESDIR}/cutter/cutter-1.8.0-x86_64-1.xzm ${MODSDIR}/
 verbosecopymodule ${PACKAGESDIR}/dbwalls/dbwalls-1920-130207.xzm ${MODSDIR}/
 verbosecopymodule ${PACKAGESDIR}/docker/docker-19.03.5-${ARCH}-1.xzm ${MODSDIR}/
