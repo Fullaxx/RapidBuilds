@@ -29,6 +29,8 @@ if [ -d ${DIR}/etc/X11/xinit ]; then
 fi
 
 # Set the default font xterm font size to unreadable
+# Set the double click character class to a reasonable default
 if [ -f ${DIR}/etc/X11/app-defaults/XTerm ]; then
   sed -e 's|XTerm.vt100.font: -\*-terminus-medium-r-normal-\*-20|XTerm.vt100.font: -\*-terminus-medium-r-normal-\*-12|' -i ${DIR}/etc/X11/app-defaults/XTerm
+  sed -e 's|45-47:48,58:48,64:48|33:48,35:48,37-38:48,43-47:48,58:48,61:48,63-64:48,95:48,126:48|' -i ${DIR}/etc/X11/app-defaults/XTerm
 fi
