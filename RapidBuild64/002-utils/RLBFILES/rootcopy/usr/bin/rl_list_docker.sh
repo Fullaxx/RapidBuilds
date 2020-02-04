@@ -10,3 +10,5 @@ echo
 docker images
 echo
 docker volume ls
+echo
+docker network ls
