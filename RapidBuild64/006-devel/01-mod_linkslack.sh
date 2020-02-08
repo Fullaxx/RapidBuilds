@@ -88,6 +88,10 @@ if [ "${INCGIT}" == "Y" ]; then
   linkpackage ${SLACKPKGDIR}/d/git-*.txz
 fi
 
+if [ "${INCGPERF}" == "Y" ]; then
+  linkpackage ${SLACKPKGDIR}/d/gperf-*.txz
+fi
+
 if [ "${INCGUILE}" == "Y" ]; then
   linkpackage ${SLACKPKGDIR}/d/guile-*.txz
 fi
@@ -104,7 +108,7 @@ if [ "${INCLLVM}" == "Y" ]; then
   linkpackage ${SLACKPKGDIR}/d/llvm-*.txz
 fi
 
-if [ "${INCM4}" == "Y" ]; then
+if [ "${INCMFOUR}" == "Y" ]; then
   linkpackage ${SLACKPKGDIR}/d/m4-*.txz
 fi
 
