@@ -176,6 +176,10 @@ if [ "${INCEMACS}" == "Y" ]; then
   linkpackage ${SLACKPKGDIR}/e/emacs-*.txz
 fi
 
+if [ "${INCSIP}" == "Y" ]; then
+  linkpackage ${SLACKPKGDIR}/l/sip-*.txz
+fi
+
 linkpackage "${KERNELPKGDIR}/kernel-crippledsrc.xzm"
 linkpackage "${KERNELPKGDIR}/kernel-headers.xzm"
 echo -n "Using Kernel: "; echo "${KERNVERS}"
