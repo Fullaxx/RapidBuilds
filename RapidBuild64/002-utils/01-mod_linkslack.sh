@@ -187,6 +187,10 @@ if [ "${INCMPGONETWOTHREE}" == "Y" ]; then
   linkpackage ${SLACKPKGDIR}/ap/mpg123-*.txz
 fi
 
+if [ "${INCNVMECLI}" == "Y" ]; then
+  linkpackage ${SLACKPKGDIR}/ap/nvme-cli-*.txz
+fi
+
 if [ "${INCRZIP}" == "Y" ]; then
   linkpackage ${SLACKPKGDIR}/ap/rzip-*.txz
 fi
