@@ -88,6 +88,10 @@ if [ "${INCGIT}" == "Y" ]; then
   linkpackage ${SLACKPKGDIR}/d/git-*.txz
 fi
 
+if [ "${INCGPERF}" == "Y" ]; then
+  linkpackage ${SLACKPKGDIR}/d/gperf-*.txz
+fi
+
 if [ "${INCGUILE}" == "Y" ]; then
   linkpackage ${SLACKPKGDIR}/d/guile-*.txz
 fi
@@ -104,7 +108,7 @@ if [ "${INCLLVM}" == "Y" ]; then
   linkpackage ${SLACKPKGDIR}/d/llvm-*.txz
 fi
 
-if [ "${INCM4}" == "Y" ]; then
+if [ "${INCMFOUR}" == "Y" ]; then
   linkpackage ${SLACKPKGDIR}/d/m4-*.txz
 fi
 
@@ -160,12 +164,20 @@ if [ "${INCSUBVERSION}" == "Y" ]; then
   linkpackage ${SLACKPKGDIR}/d/subversion-*.txz
 fi
 
+if [ "${INCSWIG}" == "Y" ]; then
+  linkpackage ${SLACKPKGDIR}/d/swig-*.txz
+fi
+
 if [ "${INCYASM}" == "Y" ]; then
   linkpackage ${SLACKPKGDIR}/d/yasm-*.txz
 fi
 
 if [ "${INCEMACS}" == "Y" ]; then
   linkpackage ${SLACKPKGDIR}/e/emacs-*.txz
+fi
+
+if [ "${INCSIP}" == "Y" ]; then
+  linkpackage ${SLACKPKGDIR}/l/sip-*.txz
 fi
 
 linkpackage "${KERNELPKGDIR}/kernel-crippledsrc.xzm"

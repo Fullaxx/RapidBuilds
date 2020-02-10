@@ -123,10 +123,6 @@ if [ "${INCSCONS}" == "Y" ]; then
   linkpackage ${SLACKPKGDIR}/d/scons-*.txz
 fi
 
-if [ "${INCSWIG}" == "Y" ]; then
-  linkpackage ${SLACKPKGDIR}/d/swig-*.txz
-fi
-
 if [ "${INCTCL}" == "Y" ]; then
   linkpackage ${SLACKPKGDIR}/tcl/tcl-*.txz
   linkpackage ${SLACKPKGDIR}/tcl/tk-*.txz

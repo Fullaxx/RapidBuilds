@@ -85,6 +85,10 @@ if [ "${INCMINICOM}" == "Y" ]; then
   linkpackage ${SLACKPKGDIR}/a/minicom-*.txz
 fi
 
+if [ "${INCMLOCATE}" == "Y" ]; then
+  linkpackage ${SLACKPKGDIR}/a/mlocate-*.txz
+fi
+
 if [ "${INCNCOMPRESS}" == "Y" ]; then
   linkpackage ${SLACKPKGDIR}/a/ncompress-*.txz
 fi
@@ -111,10 +115,6 @@ fi
 
 if [ "${INCSHARUTILS}" == "Y" ]; then
   linkpackage ${SLACKPKGDIR}/a/sharutils-*.txz
-fi
-
-if [ "${INCMLOCATE}" == "Y" ]; then
-  linkpackage ${SLACKPKGDIR}/a/mlocate-*.txz
 fi
 
 if [ "${INCSMARTMONTOOLS}" == "Y" ]; then
@@ -185,6 +185,10 @@ fi
 
 if [ "${INCMPGONETWOTHREE}" == "Y" ]; then
   linkpackage ${SLACKPKGDIR}/ap/mpg123-*.txz
+fi
+
+if [ "${INCNVMECLI}" == "Y" ]; then
+  linkpackage ${SLACKPKGDIR}/ap/nvme-cli-*.txz
 fi
 
 if [ "${INCRZIP}" == "Y" ]; then
