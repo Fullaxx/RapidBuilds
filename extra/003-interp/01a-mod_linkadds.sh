@@ -16,6 +16,10 @@ if [ "${INCDSTAT}" == "Y" ]; then
   linkpackage "${PACKAGESDIR}/python_mods/dstat-0.7.3-noarch-bksrc1.xzm"
 fi
 
+if [ "${INCENUMTHREEFOUR}" == "Y" ]; then
+  linkpackage "${PACKAGESDIR}/python_mods/enum34-1.1.6-${ARCH}-bksrc1.xzm"
+fi
+
 if [ "${INCFTPSYNC}" == "Y" ]; then
 # ftpsync needs File-Listing
 # File-Listing needs HTTP-Date
@@ -25,8 +29,9 @@ if [ "${INCFTPSYNC}" == "Y" ]; then
 fi
 
 if [ "${INCGNURADIO}" == "Y" ]; then
-  linkpackage "${PACKAGESDIR}/cppunit/cppunit-1.14.0-${ARCH}-bksrc1.xzm"
-  linkpackage "${PACKAGESDIR}/python_mods/gnuradio-3.7.13.4-${ARCH}-bksrc1.xzm"
+  echo "TODO"
+#  linkpackage "${PACKAGESDIR}/cppunit/cppunit-1.14.0-${ARCH}-bksrc1.xzm"
+#  linkpackage "${PACKAGESDIR}/python_mods/gnuradio-3.7.13.4-${ARCH}-bksrc1.xzm"
 fi
 
 if [ "${INCJINJATWO}" == "Y" ]; then

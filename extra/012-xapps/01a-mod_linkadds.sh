@@ -79,6 +79,11 @@ if [ "${INCOPENBOX}" == "Y" ]; then
   linkpackage "${PACKAGESDIR}/openbox/openbox-3.6.1-${ARCH}-bksrc1.xzm"
 fi
 
+if [ "${INCQTFIVE}" == "Y" ]; then
+  echo "TODO"
+#  linkpackage "${PACKAGESDIR}/qt5/qt5-5.9.9-${ARCH}-bksrc1.xzm"
+fi
+
 if [ "${INCSLOCK}" == "Y" ]; then
   linkpackage "${PACKAGESDIR}/slock/slock-1.4-${ARCH}-bksrc1.xzm"
 fi
