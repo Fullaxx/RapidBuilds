@@ -8,7 +8,7 @@ if [ "${INCMOD003INTERP}" == "Y" ]; then
 # Custom Additions
 # INCBOKEH="N"
   INCFTPSYNC="N"
-  INCGNURADIO="N"
+  INCGNURADIO="Y"
   INCJUPYTER="N"
   INCKEEPNOTE="Y"
 # INCSCIPY pulls INCNUMPY
