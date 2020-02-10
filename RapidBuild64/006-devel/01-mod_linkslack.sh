@@ -164,6 +164,10 @@ if [ "${INCSUBVERSION}" == "Y" ]; then
   linkpackage ${SLACKPKGDIR}/d/subversion-*.txz
 fi
 
+if [ "${INCSWIG}" == "Y" ]; then
+  linkpackage ${SLACKPKGDIR}/d/swig-*.txz
+fi
+
 if [ "${INCYASM}" == "Y" ]; then
   linkpackage ${SLACKPKGDIR}/d/yasm-*.txz
 fi
