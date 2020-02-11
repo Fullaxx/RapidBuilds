@@ -1,24 +1,24 @@
 if [ "${INCGNURADIO}" == "Y" ]; then
   INCBOOST="Y"
-  INCCHEETAHTHREE="Y"
+  INCCLICK="Y"
   INCGSL="Y"
-  INCLXML="Y"
   INCMAKO="Y"
   INCNUMPY="Y"
   INCORC="Y"
   INCPYGTK="Y"
-  INCPYQT="Y"
   INCPYTHONSIX="Y"
+  INCPYYAML="Y"
   INCPYZMQ="Y"
-  INCQWT="Y"
+  INCQTFIVE="Y"
   INCSWIG="Y"
 fi
 
-# WHAT NEEDS CPPUNIT?
-# INCCPPUNIT="Y"
+#  INCLXML="Y" ?? what about this
+#  INCCHEETAHTHREE="Y" - what about this?
 
 # gnu-radio companion needs:
 # INCCHEETAH="Y"
 # INCLXML="Y"
 # INCNUMPY="Y"
 # INCPYGTK="Y"
+# INCPYYAML="Y"

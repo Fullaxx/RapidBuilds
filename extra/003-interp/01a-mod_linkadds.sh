@@ -8,8 +8,12 @@ if [ "${INCBOKEH}" == "Y" ]; then
 fi
 
 if [ "${INCCHEETAHTHREE}" == "Y" ]; then
-# linkpackage "${PACKAGESDIR}/python_mods/cheetah3-2.4.4-${ARCH}-bksrc1.xzm"
   linkpackage "${PACKAGESDIR}/python_mods/cheetah3-3.2.0-${ARCH}-bksrc1.xzm"
+fi
+
+if [ "${INCCLICK}" == "Y" ]; then
+  linkpackage "${PACKAGESDIR}/python_mods/click-plugins-1.1.1-${ARCH}-bksrc1.xzm"
+  linkpackage "${PACKAGESDIR}/python_mods/Click-7.0-${ARCH}-bksrc1.xzm"
 fi
 
 if [ "${INCDSTAT}" == "Y" ]; then
