@@ -29,9 +29,8 @@ if [ "${INCFTPSYNC}" == "Y" ]; then
 fi
 
 if [ "${INCGNURADIO}" == "Y" ]; then
-  echo "TODO"
-#  linkpackage "${PACKAGESDIR}/cppunit/cppunit-1.14.0-${ARCH}-bksrc1.xzm"
-#  linkpackage "${PACKAGESDIR}/python_mods/gnuradio-3.7.13.4-${ARCH}-bksrc1.xzm"
+  linkpackage "${PACKAGESDIR}/log4cpp/log4cpp-1.1.3-${ARCH}-bksrc1.xzm"
+#  linkpackage "${PACKAGESDIR}/python_mods/gnuradio-3.8.0.0-${ARCH}-bksrc1.xzm"
 fi
 
 if [ "${INCJINJATWO}" == "Y" ]; then
@@ -48,7 +47,7 @@ if [ "${INCLXML}" == "Y" ]; then
 fi
 
 if [ "${INCNUMPY}" == "Y" ]; then
-  linkpackage "${PACKAGESDIR}/python_mods/numpy-1.16.2-${ARCH}-bksrc1.xzm"
+  linkpackage "${PACKAGESDIR}/python_mods/numpy-1.16.6-${ARCH}-bksrc1.xzm"
 fi
 
 if [ "${INCPASTEBINIT}" == "Y" ]; then
@@ -66,7 +65,7 @@ if [ "${INCPYTHONDATEUTIL}" == "Y" ]; then
 fi
 
 if [ "${INCPYYAML}" == "Y" ]; then
-  linkpackage "${PACKAGESDIR}/python_mods/PyYAML-5.1.2-${ARCH}-bksrc1.xzm"
+  linkpackage "${PACKAGESDIR}/python_mods/PyYAML-5.3-${ARCH}-bksrc1.xzm"
 fi
 
 if [ "${INCPYZMQ}" == "Y" ]; then
