@@ -59,7 +59,7 @@ if [ "${INCPASTEBINIT}" == "Y" ]; then
 fi
 
 if [ "${INCPSUTIL}" == "Y" ]; then
-  linkpackage "${PACKAGESDIR}/python_mods/psutil-5.6.0-${ARCH}-bksrc1.xzm"
+  linkpackage "${PACKAGESDIR}/python_mods/psutil-5.6.7-${ARCH}-bksrc1.xzm"
 fi
 
 if [ "${INCPYTHONDATEUTIL}" == "Y" ]; then
@@ -74,11 +74,11 @@ fi
 
 if [ "${INCPYZMQ}" == "Y" ]; then
 # pyzmq needs zmq,Cython
-  linkpackage "${PACKAGESDIR}/python_mods/pyzmq-18.0.1-${ARCH}-bksrc1.xzm"
+  linkpackage "${PACKAGESDIR}/python_mods/pyzmq-18.1.1-${ARCH}-bksrc1.xzm"
 fi
 
 if [ "${INCREDIS}" == "Y" ]; then
-  linkpackage "${PACKAGESDIR}/python_mods/redis-py-3.2.1-${ARCH}-bksrc1.xzm"
+  linkpackage "${PACKAGESDIR}/python_mods/redis-py-3.3.11-${ARCH}-bksrc1.xzm"
 fi
 
 if [ "${INCSETUPTOOLSSCM}" == "Y" ]; then
@@ -90,7 +90,7 @@ if [ "${INCTORNADO}" == "Y" ]; then
 fi
 
 if [ "${INCVIRTUALENV}" == "Y" ]; then
-  linkpackage "${PACKAGESDIR}/python_mods/virtualenv-16.6.1-${ARCH}-bksrc1.xzm"
+  linkpackage "${PACKAGESDIR}/python_mods/virtualenv-16.7.9-${ARCH}-bksrc1.xzm"
 fi
 
 if [ "${INCWEBSOCKIFY}" == "Y" ]; then
