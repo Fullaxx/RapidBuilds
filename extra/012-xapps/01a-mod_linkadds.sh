@@ -81,7 +81,7 @@ fi
 
 if [ "${INCQTFIVE}" == "Y" ]; then
   echo "TODO"
-#  linkpackage "${PACKAGESDIR}/qt5/qt5-5.9.9-${ARCH}-bksrc1.xzm"
+  linkpackage "${PACKAGESDIR}/qt5/qt5-5.13.2-${ARCH}-bksrc1.xzm"
 fi
 
 if [ "${INCSLOCK}" == "Y" ]; then
