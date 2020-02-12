@@ -74,7 +74,7 @@ fi
 
 if [ "${INCPYZMQ}" == "Y" ]; then
 # pyzmq needs zmq,Cython
-  linkpackage "${PACKAGESDIR}/python_mods/pyzmq-18.0.1-${ARCH}-bksrc1.xzm"
+  linkpackage "${PACKAGESDIR}/python_mods/pyzmq-18.1.1-${ARCH}-bksrc1.xzm"
 fi
 
 if [ "${INCREDIS}" == "Y" ]; then
