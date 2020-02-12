@@ -34,7 +34,7 @@ fi
 
 if [ "${INCGNURADIO}" == "Y" ]; then
   linkpackage "${PACKAGESDIR}/log4cpp/log4cpp-1.1.3-${ARCH}-bksrc1.xzm"
-#  linkpackage "${PACKAGESDIR}/python_mods/gnuradio-3.8.0.0-${ARCH}-bksrc1.xzm"
+  linkpackage "${PACKAGESDIR}/python_mods/gnuradio-3.8.0.0-${ARCH}-bksrc1.xzm"
 fi
 
 if [ "${INCJINJATWO}" == "Y" ]; then

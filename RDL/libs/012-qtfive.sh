@@ -14,4 +14,4 @@ if [ "${INCQTFIVE}" == "Y" ]; then
   INCSIP="Y"
 fi
 
-# ffmpeg ?
+# ffmpeg for qtmultimedia ?
