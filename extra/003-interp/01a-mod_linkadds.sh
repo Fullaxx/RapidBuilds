@@ -78,7 +78,7 @@ if [ "${INCPYZMQ}" == "Y" ]; then
 fi
 
 if [ "${INCREDIS}" == "Y" ]; then
-  linkpackage "${PACKAGESDIR}/python_mods/redis-py-3.2.1-${ARCH}-bksrc1.xzm"
+  linkpackage "${PACKAGESDIR}/python_mods/redis-py-3.3.11-${ARCH}-bksrc1.xzm"
 fi
 
 if [ "${INCSETUPTOOLSSCM}" == "Y" ]; then
