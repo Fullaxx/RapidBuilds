@@ -93,6 +93,10 @@ if [ "${INCNCOMPRESS}" == "Y" ]; then
   linkpackage ${SLACKPKGDIR}/a/ncompress-*.txz
 fi
 
+if [ "${INCNVI}" == "Y" ]; then
+  linkpackage ${SLACKPKGDIR}/a/nvi-*.txz
+fi
+
 if [ "${INCNTFSTHREEG}" == "Y" ]; then
   linkpackage ${SLACKPKGDIR}/a/ntfs-3g-*.txz
 fi
