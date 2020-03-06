@@ -30,4 +30,4 @@ verbosecopymodule ${PACKAGESDIR}/docker/docker-19.03.5-${ARCH}-1.xzm ${MODSDIR}/
 # verbosecopymodule ${PACKAGESDIR}/hyper/hyper-2.1.2-x86_64-1.xzm ${MODSDIR}/
 verbosecopymodule ${PACKAGESDIR}/java8/jre-8u191-${ARCH}-1.xzm ${MODSDIR}/
 verbosecopymodule ${PACKAGESDIR}/veracrypt/veracrypt-console-1.24.4-${ARCH}-1.xzm ${MODSDIR}/
-verbosecopymodule ${PACKAGESDIR}/vivaldi/vivaldi-2.11.1811.44-${ARCH}-1.xzm ${MODSDIR}/
+verbosecopymodule ${PACKAGESDIR}/vivaldi/vivaldi-2.11.1811.47-${ARCH}-1.xzm ${MODSDIR}/
