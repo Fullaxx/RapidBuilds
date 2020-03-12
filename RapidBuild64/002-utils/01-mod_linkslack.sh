@@ -137,6 +137,10 @@ if [ "${INCUSBUTILS}" == "Y" ]; then
   linkpackage ${SLACKPKGDIR}/a/usbutils-*.txz
 fi
 
+if [ "${INCZEROFREE}" == "Y" ]; then
+  linkpackage ${SLACKPKGDIR}/a/zerofree-*.txz
+fi
+
 ###########################################################
 
 if [ "${INCCUPS}" == "Y" ]; then
