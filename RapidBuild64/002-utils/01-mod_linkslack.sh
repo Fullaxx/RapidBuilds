@@ -330,6 +330,10 @@ if [ "${INCPPP}" == "Y" ]; then
   linkpackage ${SLACKPKGDIR}/n/ppp-*.txz
 fi
 
+if [ "${INCSOCAT}" == "Y" ]; then
+  linkpackage ${SLACKPKGDIR}/n/socat-*.txz
+fi
+
 if [ "${INCSSHFS}" == "Y" ]; then
   linkpackage ${SLACKPKGDIR}/n/sshfs-*.txz
 fi
