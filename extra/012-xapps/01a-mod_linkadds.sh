@@ -80,7 +80,6 @@ if [ "${INCOPENBOX}" == "Y" ]; then
 fi
 
 if [ "${INCQTFIVE}" == "Y" ]; then
-  echo "TODO"
   linkpackage "${PACKAGESDIR}/qt5/qt5-5.13.2-${ARCH}-bksrc1.xzm"
 fi
 
@@ -116,8 +115,4 @@ fi
 
 if [ "${INCXFE}" == "Y" ]; then
   linkpackage "${PACKAGESDIR}/xfe/xfe-1.43.2-${ARCH}-bksrc1.xzm"
-fi
-
-if [ "${INCLIBXKBCOMMON}" == "Y" ]; then
-  linkpackage "${PACKAGESDIR}/libxkbcommon/libxkbcommon-0.8.4-${ARCH}-bksrc1.xzm"
 fi
