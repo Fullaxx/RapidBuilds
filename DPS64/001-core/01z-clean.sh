@@ -9,7 +9,7 @@ rm bzip2-*.txz
 rm dbus-*.txz
 rm dialog-*.txz
 rm dosfstools-*.txz
-rm e2fsprogs-*.txz
+# rm e2fsprogs-*.txz - this holds lib64/libcom_err.so.2.1
 rm gmp-*.txz
 rm gpm-*.txz
 rm gptfdisk-*.txz

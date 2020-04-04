@@ -24,6 +24,8 @@ rm -f ${DIR}/usr/${LIBDIR}/libturbojpeg.*
 
 rm -f ${DIR}/usr/${LIBDIR}/libpng??.*
 
+rm -f ${DIR}/usr/${LIBDIR}/libpsl.*
+
 rm -f ${DIR}/usr/${LIBDIR}/libtiff.*
 rm -f ${DIR}/usr/${LIBDIR}/libtiffxx.*
 

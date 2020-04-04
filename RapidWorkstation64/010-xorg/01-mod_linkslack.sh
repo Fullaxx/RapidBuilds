@@ -70,6 +70,16 @@ linkpackage ${SLACKPKGDIR}/x/xrandr-*.txz
 linkpackage ${SLACKPKGDIR}/x/xrdb-*.txz
 linkpackage ${SLACKPKGDIR}/x/xterm-*.txz
 
+if [ "${INCLIBXKBCOMMON}" == "Y" ]; then
+  linkpackage ${SLACKPKGDIR}/l/libxkbcommon-*.txz
+fi
+
+if [ "${INCWAYLAND}" == "Y" ]; then
+  linkpackage ${SLACKPKGDIR}/x/wayland-protocols-*.txz
+  linkpackage ${SLACKPKGDIR}/x/wayland-?.??.?-*.txz
+  linkpackage ${SLACKPKGDIR}/x/xorg-server-xwayland-*.txz
+fi
+
 if [ "${INCXDESKTOPENVIRONMENT}" == "Y" ]; then
   linkpackage ${SLACKPKGDIR}/x/libXtst-*.txz
   linkpackage ${SLACKPKGDIR}/x/libevdev-*.txz

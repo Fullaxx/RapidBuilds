@@ -34,6 +34,7 @@ if [ "${INCMOD002UTILS}" == "Y" ]; then
   INCTCSH="N"
   INCUSBMODESWITCH="Y"
   INCUSBUTILS="Y"
+  INCZEROFREE="Y"
 
 # ap family of packages
   INCCUPS="N"
@@ -80,6 +81,7 @@ if [ "${INCMOD002UTILS}" == "Y" ]; then
   INCNMAP="N"
   INCOPENVPN="N"
   INCPPP="N"
+  INCSOCAT="Y"
   INCSSHFS="Y"
   INCSTUNNEL="Y"
   INCTCPDUMP="Y"

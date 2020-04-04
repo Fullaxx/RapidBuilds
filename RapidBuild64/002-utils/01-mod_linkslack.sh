@@ -137,6 +137,10 @@ if [ "${INCUSBUTILS}" == "Y" ]; then
   linkpackage ${SLACKPKGDIR}/a/usbutils-*.txz
 fi
 
+if [ "${INCZEROFREE}" == "Y" ]; then
+  linkpackage ${SLACKPKGDIR}/a/zerofree-*.txz
+fi
+
 ###########################################################
 
 if [ "${INCCUPS}" == "Y" ]; then
@@ -324,6 +328,10 @@ fi
 
 if [ "${INCPPP}" == "Y" ]; then
   linkpackage ${SLACKPKGDIR}/n/ppp-*.txz
+fi
+
+if [ "${INCSOCAT}" == "Y" ]; then
+  linkpackage ${SLACKPKGDIR}/n/socat-*.txz
 fi
 
 if [ "${INCSSHFS}" == "Y" ]; then

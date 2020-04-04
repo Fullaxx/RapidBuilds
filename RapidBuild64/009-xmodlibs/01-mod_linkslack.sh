@@ -5,6 +5,7 @@ source ./module_spec.sh
 
 rm -f *.txz *.xzm
 
+linkpackage ${SLACKPKGDIR}/l/brotli-*.txz
 linkpackage ${SLACKPKGDIR}/l/fuse-*.txz
 linkpackage ${SLACKPKGDIR}/l/icu4c-*.txz
 
