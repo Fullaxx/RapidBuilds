@@ -371,6 +371,11 @@ if [ "${INCCDIO}" == "Y" ]; then
   linkpackage ${SLACKPKGDIR}/l/libcdio-paranoia-*.txz
 fi
 
+if [ "${INCLIBCUE}" == "Y" ]; then
+# Audacious needs libcue
+  linkpackage ${SLACKPKGDIR}/l/libcue-*.txz
+fi
+
 if [ "${INCLIBDVDNAV}" == "Y" ]; then
 # MPlayer needs libdvdnav
   linkpackage ${SLACKPKGDIR}/l/libdvdnav-*.txz

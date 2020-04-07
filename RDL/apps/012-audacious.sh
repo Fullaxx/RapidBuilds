@@ -22,6 +22,9 @@ if [ "${INCAUDACIOUS}" == "Y" ]; then
 # audacious/Output/filewriter.so:
   INCLAME="Y"
 
+# audacious/Container/cue.so
+  INCLIBCUE="Y"
+
 # audacious/General/notify.so:
   INCLIBNOTIFY="Y"
 
