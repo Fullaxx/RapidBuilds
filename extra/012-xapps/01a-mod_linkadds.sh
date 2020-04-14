@@ -80,7 +80,7 @@ if [ "${INCOPENBOX}" == "Y" ]; then
 fi
 
 if [ "${INCQTFIVE}" == "Y" ]; then
-  linkpackage "${PACKAGESDIR}/qt5/qt5-5.13.2-${ARCH}-bksrc1.xzm"
+  linkpackage "${PACKAGESDIR}/qt5/qt5-5.13.2-${ARCH}-bksrc2.xzm"
 fi
 
 if [ "${INCSLOCK}" == "Y" ]; then

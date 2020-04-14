@@ -77,9 +77,10 @@ if [ "${INCPYZMQ}" == "Y" ]; then
   linkpackage "${PACKAGESDIR}/python_mods/pyzmq-18.1.1-${ARCH}-bksrc1.xzm"
 fi
 
-if [ "${INCREDIS}" == "Y" ]; then
-  linkpackage "${PACKAGESDIR}/python_mods/redis-py-3.3.11-${ARCH}-bksrc1.xzm"
-fi
+# This is now bundled with redis
+#if [ "${INCREDIS}" == "Y" ]; then
+#  linkpackage "${PACKAGESDIR}/python_mods/redis-py-3.3.11-${ARCH}-bksrc1.xzm"
+#fi
 
 if [ "${INCSETUPTOOLSSCM}" == "Y" ]; then
   linkpackage "${PACKAGESDIR}/python_mods/setuptools_scm-3.2.0-${ARCH}-bksrc1.xzm"

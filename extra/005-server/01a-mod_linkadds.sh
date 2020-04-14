@@ -61,7 +61,7 @@ if [ "${INCNOVNC}" == "Y" ]; then
 fi
 
 if [ "${INCREDIS}" == "Y" ]; then
-  linkpackage "${PACKAGESDIR}/redis/redis-5.0.5-${ARCH}-bksrc1.xzm"
+  linkpackage "${PACKAGESDIR}/redis/redis-5.0.8-${ARCH}-bksrc1.xzm"
   linkpackage "${PACKAGESDIR}/redis/webdis-0.1.7-${ARCH}-bksrc1.xzm"
 fi
 
