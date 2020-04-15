@@ -105,7 +105,7 @@ fi
 if [ "${INCVLC}" == "Y" ]; then
   linkpackage "${PACKAGESDIR}/libmpeg2/libmpeg2-0.5.1-${ARCH}-bksrc1.xzm"
   linkpackage "${PACKAGESDIR}/libdvbpsi/libdvbpsi-1.3.2-${ARCH}-bksrc1.xzm"
-  linkpackage "${PACKAGESDIR}/vlc/vlc-3.0.8-${ARCH}-bksrc2.xzm"
+  linkpackage "${PACKAGESDIR}/vlc/vlc-3.0.8-${ARCH}-bksrc3.xzm"
 fi
 
 if [ "${INCWIRESHARK}" == "Y" ]; then
