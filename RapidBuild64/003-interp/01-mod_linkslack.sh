@@ -31,7 +31,7 @@ fi
 
 if [ "${INCPYTHON}" == "Y" ]; then
   linkpackage ${SLACKPKGDIR}/d/python3-3.?.*-*-?.txz
-  linkpackage ${SLACKPKGDIR}/d/python-2.?.*-*-?.txz
+  linkpackage ${SLACKPKGDIR}/d/python2-2.?.*-*-?.txz
 fi
 
 if [ "${INCPYTHONPIP}" == "Y" ]; then
