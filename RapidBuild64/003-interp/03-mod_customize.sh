@@ -9,9 +9,10 @@ if [ "${INCMARIADB}" != "Y" ]; then
   rm -rf ${DIR}/usr/${LIBDIR}/perl5/vendor_perl/auto/DBD/mysql
 fi
 
-# WRAP THIS WITH INCTCL INCTK or something
-rm -f ${DIR}/usr/${LIBDIR}/python?.?/lib-dynload/_tkinter.so
-rm -f ${DIR}/usr/${LIBDIR}/python?.?/lib-dynload/_tkinter.cpython-*.so
+if [ "${INCTCL}" != "Y" ]; then
+  rm -f ${DIR}/usr/${LIBDIR}/python?.?/lib-dynload/_tkinter.so
+  rm -f ${DIR}/usr/${LIBDIR}/python?.?/lib-dynload/_tkinter.cpython-*.so
+fi
 
 if [ -x ${DIR}/usr/bin/gtkless.py ]; then
   ln -s gtkless.py ${DIR}/usr/bin/gtkless
