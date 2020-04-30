@@ -18,4 +18,5 @@ if [ "${ENABLE_NVIDIA_FOR_DOCKER}" == "1" ]; then
   verbosecopymodule ${PACKAGESDIR}/nvidia-container-runtime/libnvidia-container-1.0.5-${ARCH}-1.xzm ${MODSDIR}/
   verbosecopymodule ${PACKAGESDIR}/nvidia-container-runtime/libgo-14-${ARCH}.xzm ${MODSDIR}/
   verbosecopymodule ${PACKAGESDIR}/nvidia-container-runtime/nvidia-container-runtime-3.1.4-${ARCH}-bksrc1.xzm ${MODSDIR}/
+  verbosecopymodule ${PACKAGESDIR}/nvidia-container-runtime/nvidia-container-toolkit-3.1.4-${ARCH}-bksrc1.xzm ${MODSDIR}/
 fi
