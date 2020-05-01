@@ -233,6 +233,10 @@ fi
 
 ###########################################################
 
+if [ "${INCGIT}" == "Y" ]; then
+  linkpackage ${SLACKPKGDIR}/d/git-*.txz
+fi
+
 if [ "${INCNETFILTER}" == "Y" ]; then
   linkpackage ${SLACKPKGDIR}/n/conntrack-tools-*.txz
 # linkpackage ${SLACKPKGDIR}/n/ipset-*.txz

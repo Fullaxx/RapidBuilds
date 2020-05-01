@@ -60,6 +60,9 @@ if [ "${INCMOD002UTILS}" == "Y" ]; then
   INCTERMINUSFONT="N"
   INCTMUX="N"
 
+# d family of packages
+  INCGIT="Y"
+
 # n family of packages
   INCNETFILTER="Y"
   INCBRIDGEUTILS="Y"
