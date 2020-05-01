@@ -84,10 +84,6 @@ if [ "${INCGETTEXTTOOLS}" == "Y" ]; then
   linkpackage ${SLACKPKGDIR}/d/gettext-tools-*.txz
 fi
 
-if [ "${INCGIT}" == "Y" ]; then
-  linkpackage ${SLACKPKGDIR}/d/git-*.txz
-fi
-
 if [ "${INCGPERF}" == "Y" ]; then
   linkpackage ${SLACKPKGDIR}/d/gperf-*.txz
 fi
