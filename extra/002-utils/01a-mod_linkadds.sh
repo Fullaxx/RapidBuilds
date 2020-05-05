@@ -90,7 +90,7 @@ if [ "${INCMOSH}" == "Y" ]; then
 fi
 
 if [ "${INCNBD}" == "Y" ]; then
-  linkpackage "${PACKAGESDIR}/nbd/nbd-3.18-${ARCH}-bksrc1.xzm"
+  linkpackage "${PACKAGESDIR}/nbd/nbd-3.20-${ARCH}-bksrc1.xzm"
 fi
 
 if [ "${INCNUMACTL}" == "Y" ]; then
