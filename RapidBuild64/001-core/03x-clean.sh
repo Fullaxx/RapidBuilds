@@ -20,13 +20,14 @@ if [ "${INCGD}" != "Y" ]; then
 fi
 
 # What other libraries from aaa_elflibs-*.txz can we remove?
-rm -f ${DIR}/usr/${LIBDIR}/libcurl.*
 rm -f ${DIR}/usr/${LIBDIR}/libasound.*
-rm -f ${DIR}/usr/${LIBDIR}/libtiff.*
-rm -f ${DIR}/usr/${LIBDIR}/libtiffxx.*
+rm -f ${DIR}/usr/${LIBDIR}/libcurl.*
+rm -f ${DIR}/usr/${LIBDIR}/libdvdread.*
+rm -f ${DIR}/usr/${LIBDIR}/libexiv2.*
 rm -f ${DIR}/usr/${LIBDIR}/libraw.*
 rm -f ${DIR}/usr/${LIBDIR}/libraw_r.*
-rm -f ${DIR}/usr/${LIBDIR}/libexiv2.*
+rm -f ${DIR}/usr/${LIBDIR}/libtiff.*
+rm -f ${DIR}/usr/${LIBDIR}/libtiffxx.*
 
 # Unnecessary here, libidn2 is mandatory in 002-utils
 rm -f ${DIR}/usr/${LIBDIR}/libidn2.so.*
