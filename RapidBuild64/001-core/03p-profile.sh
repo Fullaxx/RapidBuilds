@@ -21,3 +21,22 @@ cat << EOFF >> ${DIR}/root/.bashrc
 PS1='[\u@\h (\w)]\$ '
 EOFF
 chmod 0644 ${DIR}/root/.bashrc
+
+# https://unix.stackexchange.com/questions/26676/how-to-check-if-a-shell-is-login-interactive-batch
+# https://serverfault.com/questions/146745/how-can-i-check-in-bash-if-a-shell-is-running-in-interactive-mode
+
+# if we need to test for an interactive shell
+# if [[ $- == *i* ]]; then
+#   do_interactive_stuff
+# fi
+
+# So ~/.bashrc is only sourced for interactive shells.
+# Sometimes, people source it from ~/.bash_profile or ~/.profile
+# which is incorrect since it interferes with the expected behavior.
+# If you want to simplify maintenance of code that is common,
+# you should use a separate file to contain the common code
+# and source it independently from both rc files.
+
+# It's best if there is no output to stdout from login rc files
+# such as ~/.bash_profile or ~/.profile
+# since it can interfere with the proper operation of rsync for example.
