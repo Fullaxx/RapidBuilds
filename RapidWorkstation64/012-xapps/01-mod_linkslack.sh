@@ -463,19 +463,24 @@ if [ "${INCOPENCL}" == "Y" ]; then
   linkpackage ${SLACKPKGDIR}/l/ocl-icd-*.txz
 fi
 
+if [ "${INCOPENALSOFT}" == "Y" ]; then
+# mplayer needs openal-soft
+  linkpackage ${SLACKPKGDIR}/l/openal-soft-*.txz
+fi
+
 if [ "${INCOPENEXR}" == "Y" ]; then
 # GIMP,GEGL,imagemagick need openexr
   linkpackage ${SLACKPKGDIR}/l/openexr-*.txz
 fi
 
-if [ "${INCOPUS}" == "Y" ]; then
-# GIMP,GEGL,imagemagick need openexr
-  linkpackage ${SLACKPKGDIR}/l/opus-*.txz
-fi
-
 if [ "${INCOPENJPEG}" == "Y" ]; then
 # Evince, ffmpeg, vlc
   linkpackage ${SLACKPKGDIR}/l/openjpeg-*.txz
+fi
+
+if [ "${INCOPUS}" == "Y" ]; then
+# GIMP,GEGL,imagemagick need openexr
+  linkpackage ${SLACKPKGDIR}/l/opus-*.txz
 fi
 
 if [ "${INCORC}" == "Y" ]; then
