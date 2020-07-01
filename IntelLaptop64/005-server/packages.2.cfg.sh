@@ -17,6 +17,7 @@ if [ "${INCMOD005SERVER}" == "Y" ]; then
   INCNODESIX="N"
   INCNODEEIGHT="N"
   INCNOVNC="Y"
+  INCQUARK="Y"
   INCREDIS="Y"
   INCZEROMQ="Y"
 fi

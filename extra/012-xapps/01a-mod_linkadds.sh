@@ -60,6 +60,11 @@ if [ "${INCIMLIBTWO}" == "Y" ]; then
   linkpackage "${PACKAGESDIR}/Eterm/imlib2-1.5.1-${ARCH}-bksrc1.xzm"
 fi
 
+if [ "${INCLIBASS}" == "Y" ]; then
+# vlc needs libass
+  linkpackage "${PACKAGESDIR}/libass/libass-0.14.0-${ARCH}-bksrc1.xzm"
+fi
+
 if [ "${INCLIBGXPS}" == "Y" ]; then
 # evince needs libgxps
   linkpackage "${PACKAGESDIR}/libgxps/libgxps-0.2.5-${ARCH}-bksrc1.xzm"
@@ -105,7 +110,7 @@ fi
 if [ "${INCVLC}" == "Y" ]; then
   linkpackage "${PACKAGESDIR}/libmpeg2/libmpeg2-0.5.1-${ARCH}-bksrc1.xzm"
   linkpackage "${PACKAGESDIR}/libdvbpsi/libdvbpsi-1.3.2-${ARCH}-bksrc1.xzm"
-  linkpackage "${PACKAGESDIR}/vlc/vlc-3.0.10-${ARCH}-bksrc1.xzm"
+  linkpackage "${PACKAGESDIR}/vlc/vlc-3.0.11-${ARCH}-bksrc1.xzm"
 fi
 
 if [ "${INCWIRESHARK}" == "Y" ]; then

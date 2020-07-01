@@ -60,6 +60,10 @@ if [ "${INCNOVNC}" == "Y" ]; then
   linkpackage "${PACKAGESDIR}/noVNC/noVNC-1.1.0-noarch-bksrc1.xzm"
 fi
 
+if [ "${INCQUARK}" == "Y" ]; then
+  linkpackage "${PACKAGESDIR}/quark/quark-20200527-${ARCH}-bksrc1.xzm"
+fi
+
 if [ "${INCREDIS}" == "Y" ]; then
   linkpackage "${PACKAGESDIR}/redis/redis-5.0.8-${ARCH}-bksrc1.xzm"
   linkpackage "${PACKAGESDIR}/redis/webdis-0.1.7-${ARCH}-bksrc1.xzm"
