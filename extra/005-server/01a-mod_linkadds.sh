@@ -70,7 +70,7 @@ if [ "${INCREDIS}" == "Y" ]; then
 fi
 
 if [ "${INCQEMU}" == "Y" ]; then
-  linkpackage "${PACKAGESDIR}/qemu/qemu-3.1.1.1-${ARCH}-bksrc1.xzm"
+  linkpackage "${PACKAGESDIR}/qemu/qemu-3.1.1.1-${ARCH}-bksrc2.xzm"
 fi
 
 if [ "${INCYAJL}" == "Y" ]; then
