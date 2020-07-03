@@ -114,7 +114,9 @@ if [ "${INCVLC}" == "Y" ]; then
 fi
 
 if [ "${INCWIRESHARK}" == "Y" ]; then
+  linkpackage "${PACKAGESDIR}/libsmi/libsmi-0.5.0-${ARCH}-bksrc1.xzm"
   linkpackage "${PACKAGESDIR}/portaudio/portaudio-v19-${ARCH}-bksrc1.xzm"
+  linkpackage "${PACKAGESDIR}/spandsp/spandsp-0.0.6-${ARCH}-bksrc1.xzm"
 #  linkpackage "${PACKAGESDIR}/wireshark/wireshark-2.6.14-GTK2-${ARCH}-bksrc1.xzm"
   linkpackage "${PACKAGESDIR}/wireshark/wireshark-3.0.10-${ARCH}-bksrc1.xzm"
 fi
