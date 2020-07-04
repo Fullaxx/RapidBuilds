@@ -91,7 +91,7 @@ if [ "${INCTORNADO}" == "Y" ]; then
 fi
 
 if [ "${INCVIRTUALENV}" == "Y" ]; then
-  linkpackage "${PACKAGESDIR}/python_mods/virtualenv-20.0.18-${ARCH}-bksrc1.xzm"
+  linkpackage "${PACKAGESDIR}/python_mods/virtualenv-20.0.25-${ARCH}-bksrc1.xzm"
 fi
 
 if [ "${INCWEBSOCKIFY}" == "Y" ]; then
