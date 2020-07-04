@@ -114,6 +114,7 @@ if [ "${INCVLC}" == "Y" ]; then
 fi
 
 if [ "${INCWIRESHARK}" == "Y" ]; then
+  linkpackage "${PACKAGESDIR}/libmaxminddb/libmaxminddb-1.3.2-${ARCH}-bksrc1.xzm"
   linkpackage "${PACKAGESDIR}/libsmi/libsmi-0.5.0-${ARCH}-bksrc1.xzm"
   linkpackage "${PACKAGESDIR}/portaudio/portaudio-v19-${ARCH}-bksrc1.xzm"
   linkpackage "${PACKAGESDIR}/spandsp/spandsp-0.0.6-${ARCH}-bksrc1.xzm"
