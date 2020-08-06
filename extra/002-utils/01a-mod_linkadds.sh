@@ -114,6 +114,10 @@ if [ "${INCTWEAK}" == "Y" ]; then
   linkpackage "${PACKAGESDIR}/tweak/tweak-3.02-${ARCH}-bksrc1.xzm"
 fi
 
+if [ "${INCUDFTOOLS}" == "Y" ]; then
+  linkpackage "${PACKAGESDIR}/udftools/udftools-20200806-${ARCH}-bksrc1.xzm"
+fi
+
 if [ "${INCXNBD}" == "Y" ]; then
   linkpackage "${PACKAGESDIR}/xnbd/xnbd-0.4.0-${ARCH}-bksrc1.xzm"
 fi

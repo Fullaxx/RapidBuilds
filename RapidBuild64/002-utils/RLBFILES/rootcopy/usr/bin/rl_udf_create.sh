@@ -14,5 +14,5 @@ else
 fi
 
 DEV="$1"
-dd if=/dev/zero of=$DEV bs=512 count=1 2>/dev/null
-mkudffs -b 512 --media-type=hd --utf8 $DEV
+dd if=/dev/zero of=${DEV} bs=512 count=1 2>/dev/null
+mkudffs --utf8 -b 512 --media-type=hd ${DEV}
