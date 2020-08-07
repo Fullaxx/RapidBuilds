@@ -26,7 +26,7 @@ verbosecopymodule ${PACKAGESDIR}/LibreOffice/LibreOffice-6.3.6-${ARCH}-1.xzm ${M
 # Copy any extra modules that don't need RDL
 verbosecopymodule ${PACKAGESDIR}/VirtualBox/VirtualBox-6.0.24-x86_64-1.xzm ${MODSDIR}/
 # verbosecopymodule ${PACKAGESDIR}/archipelago/archipelago-3.2.1-x86_64-1.xzm ${MODSDIR}/
-verbosecopymodule ${PACKAGESDIR}/chromium/chromium-83.0.4103.116-${ARCH}-1alien.xzm ${MODSDIR}/
+verbosecopymodule ${PACKAGESDIR}/chromium/chromium-84.0.4147.105-${ARCH}-1alien.xzm ${MODSDIR}/
 # verbosecopymodule ${PACKAGESDIR}/cutter/cutter-1.8.0-x86_64-1.xzm ${MODSDIR}/
 verbosecopymodule ${PACKAGESDIR}/dbwalls/dbwalls-1920-130207.xzm ${MODSDIR}/
 verbosecopymodule ${PACKAGESDIR}/docker/docker-19.03.12-${ARCH}-1.xzm ${MODSDIR}/
