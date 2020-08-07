@@ -27,10 +27,6 @@ if [ "${INCIPWFIRMWARE}" == "Y" ]; then
   for PKG in ${SLACKPKGDIR}/n/ipw*.txz; do linkpackage ${PKG}; done
 fi
 
-if [ "${INCWICD}" == "Y" ]; then
-  linkpackage ${SLACKEXTRA}/wicd/wicd-*.txz
-fi
-
 if [ "${INCWPASUPPLICANT}" == "Y" ]; then
   linkpackage ${SLACKPKGDIR}/n/wpa_supplicant-*.txz
 fi
