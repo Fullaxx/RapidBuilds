@@ -52,6 +52,10 @@ if [ "${INCHEXYL}" == "Y" ]; then
   linkpackage "${PACKAGESDIR}/hexyl/hexyl-0.5.0-${ARCH}-1.xzm"
 fi
 
+if [ "${INCHPINGTHREE}" == "Y" ]; then
+  linkpackage "${PACKAGESDIR}/hping3/hping3-20051105-${ARCH}-bksrc1.xzm"
+fi
+
 if [ "${INCIOPING}" == "Y" ]; then
   linkpackage "${PACKAGESDIR}/ioping/ioping-1.1-${ARCH}-bksrc1.xzm"
 fi
