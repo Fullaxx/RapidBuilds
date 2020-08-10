@@ -48,6 +48,10 @@ if [ "${INCEXTUNDELETE}" == "Y" ]; then
   linkpackage "${PACKAGESDIR}/extundelete/extundelete-0.2.4-${ARCH}-bksrc1.xzm"
 fi
 
+if [ "${INCFLITE}" == "Y" ]; then
+  linkpackage "${PACKAGESDIR}/flite/flite-1.4-${ARCH}-bksrc1.xzm"
+fi
+
 if [ "${INCHEXYL}" == "Y" ]; then
   linkpackage "${PACKAGESDIR}/hexyl/hexyl-0.5.0-${ARCH}-1.xzm"
 fi
