@@ -16,3 +16,6 @@ if [ -d ${SEARCHDIR} ]; then
     install -Dp -o root -g root -m 0755 ${FILE} "${DIR}/usr/bin/`basename ${FILE}`"
   done
 fi
+
+install -Dp -o root -g root -m 0644 RLBFILES/rootcopy/root/gdbinit ${DIR}/root/.gdbinit
+install -Dp -o root -g root -m 0644 RLBFILES/rootcopy/usr/share/rapidlinux/gdbinit.txt ${DIR}/usr/share/rapidlinux/gdbinit.txt

@@ -1,0 +1,4 @@
+https://github.com/cyrus-and/gdb-dashboard
+https://github.com/cyrus-and/gdb-dashboard/wiki
+
+wget https://raw.githubusercontent.com/cyrus-and/gdb-dashboard/master/.gdbinit
