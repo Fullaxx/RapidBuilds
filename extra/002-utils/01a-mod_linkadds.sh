@@ -118,6 +118,10 @@ if [ "${INCPROTOBUFC}" == "Y" ]; then
   linkpackage "${PACKAGESDIR}/protobuf/protobuf-c-1.3.3-${ARCH}-bksrc1.xzm"
 fi
 
+if [ "${INCRASDAEMON}" == "Y" ]; then
+  linkpackage "${PACKAGESDIR}/rasdaemon/rasdaemon-0.6.6-${ARCH}-bksrc1.xzm"
+fi
+
 if [ "${INCTWEAK}" == "Y" ]; then
   linkpackage "${PACKAGESDIR}/tweak/tweak-3.02-${ARCH}-bksrc1.xzm"
 fi
