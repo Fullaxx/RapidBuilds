@@ -15,7 +15,7 @@ fi
 
 # Chrome needs RDL
 if [ "${INCCHROME}" == "Y" ]; then
-  verbosecopymodule ${PACKAGESDIR}/chrome/chrome-83.0.4103.116-x86_64-1.xzm ${MODSDIR}/
+  verbosecopymodule ${PACKAGESDIR}/chrome/chrome-84.0.4147.125-x86_64-1.xzm ${MODSDIR}/
 fi
 
 # VSCode needs RDL
@@ -25,7 +25,7 @@ fi
 
 # LibreOffice needs avahi-libs
 verbosecopymodule ${PACKAGESDIR}/avahi/avahi-libs-0.8-${ARCH}-bksrc1.xzm ${MODSDIR}/
-verbosecopymodule ${PACKAGESDIR}/LibreOffice/LibreOffice-6.3.6-${ARCH}-1.xzm ${MODSDIR}/
+verbosecopymodule ${PACKAGESDIR}/LibreOffice/LibreOffice-6.4.6-${ARCH}-1.xzm ${MODSDIR}/
 
 # Copy any extra modules that don't need RDL
 verbosecopymodule ${PACKAGESDIR}/VirtualBox/VirtualBox-6.0.24-x86_64-1.xzm ${MODSDIR}/
