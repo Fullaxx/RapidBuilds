@@ -1,0 +1,27 @@
+--- rc.6	2018-12-19 09:48:50.281953010 -0700
++++ rc.6.new	2018-12-19 09:49:44.965029575 -0700
+@@ -71,11 +71,24 @@
+   fi
+ fi
+ 
++### RL Added ###
++# Run the RapidLinux AutoSave script before shutdown
++if [ -x /usr/bin/rl_autosave.sh ]; then
++  /usr/bin/rl_autosave.sh
++fi
++### RL Added ###
++
+ # Run any local shutdown scripts:
+ if [ -x /etc/rc.d/rc.local_shutdown ]; then
+   /etc/rc.d/rc.local_shutdown stop
+ fi
+
++### RL Added ###
++if [ -x /etc/rc.d/rc.rl_docker ]; then
++  /etc/rc.d/rc.rl_docker stop
++fi
++### RL Added ###
++
+ # Stop the Apache web server:
+ if [ -x /etc/rc.d/rc.httpd ]; then
+   /etc/rc.d/rc.httpd stop
