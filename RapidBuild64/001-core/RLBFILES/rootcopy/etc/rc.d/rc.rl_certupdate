@@ -1,0 +1,13 @@
+#!/bin/bash
+# Update CA certificates
+#
+# Author: Brett Kuskie <fullaxx@gmail.com>
+#
+
+if [ -x /usr/sbin/update-ca-certificates ]; then
+  if [ -x /usr/bin/perl ]; then
+    /usr/sbin/update-ca-certificates -f
+  else
+    echo "Cannot update CA certificates! (Perl not found)"
+  fi
+fi

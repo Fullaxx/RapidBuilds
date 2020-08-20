@@ -1,13 +1,13 @@
---- rc.M	2020-08-17 02:45:13.035926229 -0600
-+++ rc.M.new	2020-08-17 02:51:08.557385800 -0600
+--- rc.M	2020-08-20 09:17:14.565132095 -0600
++++ rc.M.new	2020-08-20 09:22:54.136666944 -0600
 @@ -409,6 +409,34 @@
    /etc/rc.d/rc.iceccd start
  fi
  
 +### RL Added ###
 +# This doesnt seem to be done anywhere else
-+if [ -x /usr/sbin/update-ca-certificates ]; then
-+  /usr/sbin/update-ca-certificates -f
++if [ -x /etc/rc.d/rc.rl_certupdate ]; then
++  /etc/rc.d/rc.rl_certupdate
 +fi
 +
 +# Setup and Start docker
