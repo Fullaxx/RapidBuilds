@@ -17,7 +17,7 @@ verbosecopymodule ${PACKAGESDIR}/nvidia_driver/011-nvidia-440.100-${KERNVERS}.xz
 
 # Chrome needs RDL
 if [ "${INCCHROME}" == "Y" ]; then
-  verbosecopymodule ${PACKAGESDIR}/chrome/chrome-84.0.4147.125-x86_64-1.xzm ${MODSDIR}/
+  verbosecopymodule ${PACKAGESDIR}/chrome/chrome-84.0.4147.135-x86_64-1.xzm ${MODSDIR}/
 fi
 
 # VSCode needs RDL
@@ -46,4 +46,4 @@ verbosecopymodule ${PACKAGESDIR}/netbeans/netbeans-8.2.0.xzm ${MODSDIR}/
 #verbosecopymodule ${PACKAGESDIR}/nvidia_cuda_toolkit/cuda_samples-10.1.243-noarch-1.xzm ${MODSDIR}/
 
 # Desktop Configuration
-verbosecopymodule ${PACKAGESDIR}/rapidconfigs/rapidconfig-rapidworkstation-20200212-noarch-1.xzm ${MODSDIR}/
+verbosecopymodule ${PACKAGESDIR}/rapidconfigs/rapidconfig-rapidworkstation-20200821-noarch-1.xzm ${MODSDIR}/

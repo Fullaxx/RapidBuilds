@@ -6,5 +6,6 @@ if [ `id -u` != "0" ]; then
 fi
 
 if [ ! -e /sys/kernel/debug/sleep_time ]; then
-  mount -t debugfs nodev /sys/kernel/debug
+# mount -t debugfs nodev /sys/kernel/debug
+  mount -t debugfs debugfs /sys/kernel/debug
 fi
