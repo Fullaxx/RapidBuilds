@@ -65,8 +65,7 @@ if [ "${INCQUARK}" == "Y" ]; then
 fi
 
 if [ "${INCREDIS}" == "Y" ]; then
-  linkpackage "${PACKAGESDIR}/redis/redis-5.0.8-${ARCH}-bksrc1.xzm"
-  linkpackage "${PACKAGESDIR}/redis/webdis-0.1.7-${ARCH}-bksrc1.xzm"
+  linkpackage "${PACKAGESDIR}/redis/redis-6.0.6-${ARCH}-bksrc1.xzm"
 fi
 
 if [ "${INCQEMU}" == "Y" ]; then
