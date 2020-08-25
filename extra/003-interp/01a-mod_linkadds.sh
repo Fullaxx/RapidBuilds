@@ -16,12 +16,20 @@ if [ "${INCCLICK}" == "Y" ]; then
   linkpackage "${PACKAGESDIR}/python_mods/Click-7.0-${ARCH}-bksrc1.xzm"
 fi
 
+if [ "${INCDISTLIB}" == "Y" ]; then
+  linkpackage "${PACKAGESDIR}/python_mods/distlib-0.3.1-${ARCH}-bksrc1.xzm"
+fi
+
 if [ "${INCDSTAT}" == "Y" ]; then
   linkpackage "${PACKAGESDIR}/python_mods/dstat-0.7.3-noarch-bksrc1.xzm"
 fi
 
 if [ "${INCENUMTHREEFOUR}" == "Y" ]; then
   linkpackage "${PACKAGESDIR}/python_mods/enum34-1.1.6-${ARCH}-bksrc1.xzm"
+fi
+
+if [ "${INCFILELOCK}" == "Y" ]; then
+  linkpackage "${PACKAGESDIR}/python_mods/filelock-3.0.12-${ARCH}-bksrc1.xzm"
 fi
 
 if [ "${INCFTPSYNC}" == "Y" ]; then
@@ -46,12 +54,20 @@ if [ "${INCKEEPNOTE}" == "Y" ]; then
   linkpackage "${PACKAGESDIR}/python_mods/keepnote-0.7.8-${ARCH}-bksrc3.xzm"
 fi
 
+if [ "${INCKHANSOUL}" == "Y" ]; then
+  linkpackage "${PACKAGESDIR}/python_mods/khansoul-2.0.0-${ARCH}-bksrc1.xzm"
+fi
+
 if [ "${INCLXML}" == "Y" ]; then
   linkpackage "${PACKAGESDIR}/python_mods/lxml-4.3.2-${ARCH}-bksrc1.xzm"
 fi
 
 if [ "${INCNUMPY}" == "Y" ]; then
-  linkpackage "${PACKAGESDIR}/python_mods/numpy-1.16.6-${ARCH}-bksrc1.xzm"
+  linkpackage "${PACKAGESDIR}/python_mods/numpy-1.18.4-${ARCH}-bksrc1.xzm"
+fi
+
+if [ "${INCPANDAS}" == "Y" ]; then
+  linkpackage "${PACKAGESDIR}/python_mods/pandas-1.1.0-${ARCH}-bksrc1.xzm"
 fi
 
 if [ "${INCPASTEBINIT}" == "Y" ]; then
@@ -65,25 +81,23 @@ fi
 if [ "${INCPYTHONDATEUTIL}" == "Y" ]; then
 # python-dateutil needs six,setuptools_scm??
 # http://slackbuilds.org/repository/14.2/python/python-dateutil/
-  linkpackage "${PACKAGESDIR}/python_mods/python-dateutil-2.8.0-${ARCH}-bksrc1.xzm"
+  linkpackage "${PACKAGESDIR}/python_mods/python-dateutil-2.8.1-${ARCH}-bksrc1.xzm"
+fi
+
+if [ "${INCPYTZ}" == "Y" ]; then
+  linkpackage "${PACKAGESDIR}/python_mods/pytz-2020.1-${ARCH}-bksrc1.xzm"
 fi
 
 if [ "${INCPYYAML}" == "Y" ]; then
   linkpackage "${PACKAGESDIR}/python_mods/PyYAML-5.3-${ARCH}-bksrc1.xzm"
 fi
 
-if [ "${INCPYZMQ}" == "Y" ]; then
-# pyzmq needs zmq,Cython
-  linkpackage "${PACKAGESDIR}/python_mods/pyzmq-18.1.1-${ARCH}-bksrc1.xzm"
-fi
-
-# This is now bundled with redis
-#if [ "${INCREDIS}" == "Y" ]; then
-#  linkpackage "${PACKAGESDIR}/python_mods/redis-py-3.3.11-${ARCH}-bksrc1.xzm"
-#fi
-
 if [ "${INCSETUPTOOLSSCM}" == "Y" ]; then
   linkpackage "${PACKAGESDIR}/python_mods/setuptools_scm-3.2.0-${ARCH}-bksrc1.xzm"
+fi
+
+if [ "${INCTERMINATOR}" == "Y" ]; then
+  linkpackage "${PACKAGESDIR}/python_mods/terminator-1.91-${ARCH}-bksrc1.xzm"
 fi
 
 if [ "${INCTORNADO}" == "Y" ]; then

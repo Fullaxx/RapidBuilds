@@ -1,19 +1,19 @@
 # 003-interp options
 if [ "${INCMOD003INTERP}" == "Y" ]; then
+# Departure from Default
   INCEXPECT="Y"
+  INCPYTHONTWO="Y"
 
 # n family of packages
   INCPSSH="N"
 
 # Custom Additions
-# INCBOKEH="N"
   INCFTPSYNC="N"
-  INCGNURADIO="N"
-  INCJUPYTER="N"
   INCKEEPNOTE="Y"
-# INCSCIPY pulls INCNUMPY
+  INCPANDAS="Y"
   INCPASTEBINIT="N"
 # INCNOVNC pulls INCWEBSOCKIFY
 # INCOPENBOX pulls INCPYXDG
+  INCTERMINATOR="Y"
   INCVIRTUALENV="Y"
 fi

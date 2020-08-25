@@ -1,0 +1,6 @@
+if [ "${INCPANDAS}" == "Y" ]; then
+  INCNUMPY="Y"
+  INCPYTHONDATEUTIL="Y"
+  INCPYTHONSIX="Y"
+  INCPYTZ="Y"
+fi

@@ -31,22 +31,11 @@ fi
 
 if [ "${INCPYTHON}" == "Y" ]; then
   linkpackage ${SLACKPKGDIR}/d/python3-3.?.*-*-?.txz
+fi
+
+if [ "${INCPYTHONTWO}" == "Y" ]; then
   linkpackage ${SLACKPKGDIR}/d/python2-2.?.*-*-?.txz
-fi
-
-if [ "${INCPYTHONPIP}" == "Y" ]; then
-  linkpackage ${SLACKPKGDIR}/d/python-pip-*.txz
-fi
-if [ "${INCPYTHONSETUPTOOLS}" == "Y" ]; then
-  linkpackage ${SLACKPKGDIR}/d/python-setuptools-*.txz
-fi
-
-if [ "${INCPYCURL}" == "Y" ]; then
-  linkpackage ${SLACKPKGDIR}/l/pycurl-*.txz
-fi
-
-if [ "${INCPYTHONPYPARSING}" == "Y" ]; then
-  linkpackage ${SLACKPKGDIR}/l/python-pyparsing-*.txz
+  linkpackage ${SLACKPKGDIR}/l/python2-module-collection-*.txz
 fi
 
 if [ "${INCPYTHONAPPDIRS}" == "Y" ]; then
@@ -77,12 +66,24 @@ if [ "${INCPYTHONPILLOW}" == "Y" ]; then
   linkpackage ${SLACKPKGDIR}/l/python-pillow-*.txz
 fi
 
+if [ "${INCPYTHONPIP}" == "Y" ]; then
+  linkpackage ${SLACKPKGDIR}/d/python-pip-*.txz
+fi
+
+if [ "${INCPYTHONPYPARSING}" == "Y" ]; then
+  linkpackage ${SLACKPKGDIR}/l/python-pyparsing-*.txz
+fi
+
 if [ "${INCPYTHONREQUESTS}" == "Y" ]; then
   linkpackage ${SLACKPKGDIR}/l/python-requests-*.txz
 fi
 
 if [ "${INCPYTHONSANE}" == "Y" ]; then
   linkpackage ${SLACKPKGDIR}/l/python-sane-*.txz
+fi
+
+if [ "${INCPYTHONSETUPTOOLS}" == "Y" ]; then
+  linkpackage ${SLACKPKGDIR}/d/python-setuptools-*.txz
 fi
 
 if [ "${INCPYTHONSIX}" == "Y" ]; then
@@ -96,6 +97,10 @@ fi
 
 if [ "${INCPYCAIRO}" == "Y" ]; then
   linkpackage ${SLACKPKGDIR}/l/pycairo-*.txz
+fi
+
+if [ "${INCPYCURL}" == "Y" ]; then
+  linkpackage ${SLACKPKGDIR}/l/pycurl-*.txz
 fi
 
 if [ "${INCPYGTK}" == "Y" ]; then
