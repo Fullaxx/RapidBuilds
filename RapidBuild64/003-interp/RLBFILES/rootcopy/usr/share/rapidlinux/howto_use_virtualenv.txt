@@ -1,33 +1,38 @@
-For virtualenv first make an environment:
+# For virtualenv first make an environment:
 
-# virtualenv --python=python2.7 newsite
-# virtualenv --no-site-packages newsite
-# virtualenv --system-site-packages newsite
+virtualenv --python=python2.7 newsite
+virtualenv --no-site-packages newsite
+virtualenv --system-site-packages newsite
 
-Then activate the environment:
+# Then activate the environment:
 
-# source newsite/bin/activate
+source newsite/bin/activate
 
-Now all your pip installs will be localized to that folder (not /usr/lib64/pthon2.7/site-packages)
-You can easily turn that <path_to_folder> folder into an xzm with the full path.
+# Now all your pip installs will be localized to that folder (not /usr/lib64/pthon2.7/site-packages)
+# You can easily turn that <path_to_folder> folder into an xzm with the full path.
 
-Example install
-# pip install jupyter
+# Example install
+pip install jupyter
 
-More Info:
-https://www.pythonforbeginners.com/basics/how-to-use-python-virtualenv/
-https://packaging.python.org/guides/installing-using-pip-and-virtualenv/
-https://docs.python-guide.org/dev/virtualenvs/
+# More Info:
+# https://www.pythonforbeginners.com/basics/how-to-use-python-virtualenv/
+# https://packaging.python.org/guides/installing-using-pip-and-virtualenv/
+# https://docs.python-guide.org/dev/virtualenvs/
 
-Jupyter Notebook Example
-# virtualenv --no-site-packages JN
-# source JN/bin/activate
-# pip install jupyter
-# jupyter-notebook
+# Jupyter Notebook Example
+virtualenv --no-site-packages JN
+source JN/bin/activate
+pip install jupyter
+jupyter-notebook
 
 ###############################################################################
-sudo /sbin/installpkg slackware64/l/gobject-introspection-1.60.1-x86_64-1.txz
+# sudo /sbin/installpkg slackware64/l/gobject-introspection-1.60.1-x86_64-1.txz
 # virtualenv --python=python3.7 --system-site-packages pandas
-virtualenv --python=python3.7 --no-site-packages /tmp/pandas
+virtualenv /tmp/pandas
 source /tmp/pandas/bin/activate
-pip install pandas matplotlib scipy pycairo pygobject
+pip install pandas
+###############################################################################
+virtualenv /tmp/khansoul
+source /tmp/khansoul/bin/activate
+pip install khansoul
+###############################################################################

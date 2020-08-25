@@ -18,10 +18,6 @@ if [ "${INCBLUEFISHTWO}" == "Y" ]; then
   linkpackage "${PACKAGESDIR}/bluefish/bluefish-2.2.10-${ARCH}-bksrc1.xzm"
 fi
 
-if [ "${INCKHANSOUL}" == "Y" ]; then
-  linkpackage "${PACKAGESDIR}/python_mods/khansoul-2.0.0-${ARCH}-bksrc1.xzm"
-fi
-
 if [ "${INCETERM}" == "Y" ]; then
   linkpackage "${PACKAGESDIR}/Eterm/libast-0.7-${ARCH}-bksrc1.xzm"
   linkpackage "${PACKAGESDIR}/Eterm/Eterm-0.9.6-${ARCH}-bksrc1.xzm"
@@ -94,10 +90,6 @@ fi
 
 if [ "${INCST}" == "Y" ]; then
   linkpackage "${PACKAGESDIR}/st/st-0.8.1-${ARCH}-bksrc1.xzm"
-fi
-
-if [ "${INCTERMINATOR}" == "Y" ]; then
-  linkpackage "${PACKAGESDIR}/python_mods/terminator-1.91-${ARCH}-bksrc1.xzm"
 fi
 
 if [ "${INCTILDA}" == "Y" ]; then
