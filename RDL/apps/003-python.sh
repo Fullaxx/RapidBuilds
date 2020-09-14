@@ -1,4 +1,3 @@
 if [ "${INCPYTHON}" == "Y" ]; then
   INCGOBJECTINTROSPECTION="Y"
-  INCLIBTIRPC="Y"
 fi

@@ -20,6 +20,8 @@ if [ "${INCGD}" != "Y" ]; then
 fi
 
 # What other libraries from aaa_elflibs-*.txz can we remove?
+rm -f ${DIR}/usr/${LIBDIR}/libargon2*
+rm -f ${DIR}/usr/${LIBDIR}/libjson-c.*
 rm -f ${DIR}/usr/${LIBDIR}/libasound.*
 rm -f ${DIR}/usr/${LIBDIR}/libcurl.*
 rm -f ${DIR}/usr/${LIBDIR}/libdvdread.*

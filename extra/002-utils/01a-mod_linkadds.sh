@@ -12,7 +12,7 @@ if [ "${INCATOP}" == "Y" ]; then
 fi
 
 if [ "${INCBINDTOOLS}" == "Y" ]; then
-  linkpackage "${PACKAGESDIR}/bindtools/bindtools-9.12.3_P1-${ARCH}-3.xzm"
+  linkpackage "${PACKAGESDIR}/bindtools/bindtools-9.16.6-${ARCH}-1.xzm"
 fi
 
 if [ "${INCCALC}" == "Y" ]; then
@@ -89,16 +89,16 @@ if [ "${INCLOOPAESSETUP}" == "Y" ]; then
   linkpackage "${PACKAGESDIR}/loop-aes-losetup/loop-aes-losetup-2.30.1-${ARCH}-bksrc1.xzm"
 fi
 
-if [ "${INCLZFOUR}" == "Y" ]; then
-  linkpackage "${PACKAGESDIR}/lz4/lz4-1.8.3-${ARCH}-bksrc1.xzm"
-fi
-
 if [ "${INCMOSH}" == "Y" ]; then
   linkpackage "${PACKAGESDIR}/mosh/mosh-1.3.2-${ARCH}-bksrc5.xzm"
 fi
 
 if [ "${INCNBD}" == "Y" ]; then
   linkpackage "${PACKAGESDIR}/nbd/nbd-3.20-${ARCH}-bksrc1.xzm"
+fi
+
+if [ "${INCNMON}" == "Y" ]; then
+  linkpackage "${PACKAGESDIR}/nmon/nmon-16m-${ARCH}-bksrc1.xzm"
 fi
 
 if [ "${INCNUMACTL}" == "Y" ]; then

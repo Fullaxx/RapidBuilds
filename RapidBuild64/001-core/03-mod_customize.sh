@@ -19,3 +19,8 @@ sed -e '/include /d' -i ${DIR}/etc/ld.so.conf
 echo "include /etc/ld.so.conf.d/*.conf" >> ${DIR}/etc/ld.so.conf
 
 rm ${DIR}/etc/gshadow
+
+# Revert Pam to something that works
+sed -e 's/^password    requisite     pam_pwquality.so minlen=6 retry=3/#password    requisite     pam_pwquality.so minlen=6 retry=3/' -i ${DIR}/etc/pam.d/system-auth
+sed -e 's/^password    sufficient    pam_unix.so nullok sha512 shadow minlen=6 try_first_pass use_authtok/#password    sufficient    pam_unix.so nullok sha512 shadow minlen=4 try_first_pass use_authtok/' -i ${DIR}/etc/pam.d/system-auth
+sed -e 's/^#password    sufficient    pam_unix.so nullok sha512 shadow minlen=6/password    sufficient    pam_unix.so nullok sha512 shadow minlen=12/' -i ${DIR}/etc/pam.d/system-auth

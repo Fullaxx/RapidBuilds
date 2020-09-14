@@ -24,9 +24,9 @@ if [ "${INCDSTAT}" == "Y" ]; then
   linkpackage "${PACKAGESDIR}/python_mods/dstat-0.7.3-noarch-bksrc1.xzm"
 fi
 
-if [ "${INCENUMTHREEFOUR}" == "Y" ]; then
-  linkpackage "${PACKAGESDIR}/python_mods/enum34-1.1.6-${ARCH}-bksrc1.xzm"
-fi
+#if [ "${INCENUMTHREEFOUR}" == "Y" ]; then
+#  linkpackage "${PACKAGESDIR}/python_mods/enum34-1.1.6-${ARCH}-bksrc1.xzm"
+#fi
 
 if [ "${INCFILELOCK}" == "Y" ]; then
   linkpackage "${PACKAGESDIR}/python_mods/filelock-3.0.12-${ARCH}-bksrc1.xzm"

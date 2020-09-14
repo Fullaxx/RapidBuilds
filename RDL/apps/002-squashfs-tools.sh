@@ -1,4 +1,4 @@
 if [ "${INCSQUASHFSTOOLS}" == "Y" ]; then
   INCLZO="Y"
-  INCZSTD="Y"
+#  INCZSTD="Y"
 fi

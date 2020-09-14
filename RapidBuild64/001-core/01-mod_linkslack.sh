@@ -14,6 +14,7 @@ linkpackage ${SLACKPKGDIR}/a/attr-*.txz
 linkpackage ${SLACKPKGDIR}/a/bash-*.txz
 linkpackage ${SLACKPKGDIR}/a/bin-*.txz
 linkpackage ${SLACKPKGDIR}/a/bzip2-*.txz
+linkpackage ${SLACKPKGDIR}/a/cracklib-*.txz #pam needs cracklib
 linkpackage ${SLACKPKGDIR}/a/coreutils-*.txz
 linkpackage ${SLACKPKGDIR}/a/dbus-*.txz
 linkpackage ${SLACKPKGDIR}/a/dialog-*.txz
@@ -38,6 +39,7 @@ linkpackage ${SLACKPKGDIR}/a/less-*.txz
 linkpackage ${SLACKPKGDIR}/a/lvm2-*.txz
 linkpackage ${SLACKPKGDIR}/a/openssl-solibs-*.txz
 linkpackage ${SLACKPKGDIR}/a/os-prober-*.txz
+linkpackage ${SLACKPKGDIR}/a/pam-1.?.?-*.txz
 linkpackage ${SLACKPKGDIR}/a/pciutils-*.txz
 linkpackage ${SLACKPKGDIR}/a/procps-*.txz
 linkpackage ${SLACKPKGDIR}/a/sed-*.txz
@@ -100,6 +102,7 @@ linkpackage ${SLACKPKGDIR}/n/net-tools-*.txz
 linkpackage ${SLACKPKGDIR}/n/ntp-*.txz
 linkpackage ${SLACKPKGDIR}/n/openssh-*.txz
 linkpackage ${SLACKPKGDIR}/n/libmnl-*.txz
+linkpackage ${SLACKPKGDIR}/n/libtirpc-*.txz #pam needs libtirpc
 
 linkpackage ${SLACKEXTRA}/bash-completion/bash-completion-*.txz
 

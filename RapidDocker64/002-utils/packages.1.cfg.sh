@@ -44,12 +44,14 @@ if [ "${INCMOD002UTILS}" == "Y" ]; then
   INCDMIDECODE="N"
   INCDVDPLUSRWTOOLS="N"
   INCGROFF="N"
+  INCINXI="N"
   INCJOE="N"
   INCLMSENSORS="N"
   INCMANPAGES="N"
   INCMIDNIGHTCOMMANDER="N"
   INCMOST="Y"
   INCMPGONETWOTHREE="N"
+  INCNEOFETCH="N"
   INCNVMECLI="Y"
   INCRZIP="N"
   INCPMUTILS="N"
@@ -59,9 +61,13 @@ if [ "${INCMOD002UTILS}" == "Y" ]; then
   INCSYSSTAT="N"
   INCTERMINUSFONT="N"
   INCTMUX="N"
+  INCUNDERVOLT="N"
 
 # d family of packages
   INCGIT="Y"
+
+# l family of packages
+  INCTIDYHTMLFIVE="N"
 
 # n family of packages
   INCNETFILTER="Y"

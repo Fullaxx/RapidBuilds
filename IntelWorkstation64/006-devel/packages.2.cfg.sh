@@ -1,9 +1,9 @@
 # 006-devel options
 if [ "${INCMOD006DEVEL}" == "Y" ]; then
 # Departure from Default
-  INCCVS="Y"
+  INCCVS="N"
   INCDOXYGEN="Y"
-  INCEMACS="Y"
+  INCEMACS="N"
   INCLLVM="Y"
   INCMERCURIAL="Y"
   INCOPENCLHEADERS="Y"

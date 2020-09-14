@@ -5,14 +5,13 @@ source ./module_spec.sh
 
 rm -f *.txz *.xzm
 
-# Some default fonts to get things working
-linkpackage ${SLACKPKGDIR}/ap/terminus-font-*.txz
 linkpackage ${SLACKPKGDIR}/l/freetype-*.txz
 linkpackage ${SLACKPKGDIR}/l/harfbuzz-*.txz
-# harfbuzz requires graphite2
-linkpackage ${SLACKPKGDIR}/l/graphite2-*.txz
+linkpackage ${SLACKPKGDIR}/l/graphite2-*.txz # harfbuzz requires graphite2
+
+### FONTS ##############################
+linkpackage ${SLACKPKGDIR}/ap/terminus-font-*.txz
 linkpackage ${SLACKPKGDIR}/x/dejavu-fonts-ttf-*.txz
-linkpackage ${SLACKPKGDIR}/x/encodings-*.txz
 linkpackage ${SLACKPKGDIR}/x/font-cursor-misc-*.txz
 linkpackage ${SLACKPKGDIR}/x/font-ibm-type1-*.txz
 linkpackage ${SLACKPKGDIR}/x/font-micro-misc-*.txz
@@ -22,10 +21,13 @@ linkpackage ${SLACKPKGDIR}/x/font-schumacher-misc-*.txz
 linkpackage ${SLACKPKGDIR}/x/font-sun-misc-*.txz
 linkpackage ${SLACKPKGDIR}/x/font-util-*.txz
 linkpackage ${SLACKPKGDIR}/x/font-xfree86-type1-*.txz
+linkpackage ${SLACKPKGDIR}/x/hack-fonts-ttf-*.txz
 linkpackage ${SLACKPKGDIR}/x/liberation-fonts-ttf-*.txz
+linkpackage ${SLACKPKGDIR}/x/noto-fonts-ttf-*.txz
 linkpackage ${SLACKPKGDIR}/x/urw-core35-fonts-otf-*.txz
-#######################################
+########################################
 
+linkpackage ${SLACKPKGDIR}/x/encodings-*.txz
 linkpackage ${SLACKPKGDIR}/x/fontconfig-*.txz
 linkpackage ${SLACKPKGDIR}/x/iceauth-*.txz
 linkpackage ${SLACKPKGDIR}/x/libICE-*.txz
@@ -57,13 +59,13 @@ linkpackage ${SLACKPKGDIR}/x/libpciaccess-*.txz
 linkpackage ${SLACKPKGDIR}/x/libxcb-*.txz
 linkpackage ${SLACKPKGDIR}/x/libxkbfile-*.txz
 linkpackage ${SLACKPKGDIR}/x/libxshmfence-*.txz
-# linkpackage ${SLACKPKGDIR}/x/mkfontdir-*.txz - removed Mon Oct 28 20:22:51 UTC 2019
 linkpackage ${SLACKPKGDIR}/x/mkfontscale-*.txz
 linkpackage ${SLACKPKGDIR}/x/pixman-*.txz
 linkpackage ${SLACKPKGDIR}/x/util-macros-*.txz # What is this used for?
 linkpackage ${SLACKPKGDIR}/x/x11-skel-*.txz
 linkpackage ${SLACKPKGDIR}/x/xauth-*.txz
 linkpackage ${SLACKPKGDIR}/x/xhost-*.txz
+linkpackage ${SLACKPKGDIR}/x/xisxwayland-*.txz
 linkpackage ${SLACKPKGDIR}/x/xorg-server-?.??.?-*.txz
 linkpackage ${SLACKPKGDIR}/x/xorgproto-*.txz
 linkpackage ${SLACKPKGDIR}/x/xrandr-*.txz
@@ -173,12 +175,24 @@ fi
 
 if [ "${INCXCBUTIL}" == "Y" ]; then
   linkpackage ${SLACKPKGDIR}/x/xcb-util-?.?.?-*.txz
-# linkpackage ${SLACKPKGDIR}/x//xcb-util-image-0.4.0-x86_64-2.txz
-# linkpackage ${SLACKPKGDIR}/x//xcb-util-keysyms-0.4.0-x86_64-2.txz
-# linkpackage ${SLACKPKGDIR}/x//xcb-util-wm-0.4.1-x86_64-2.txz
-# linkpackage ${SLACKPKGDIR}/x//xcb-util-errors-1.0-x86_64-1.txz
-# linkpackage ${SLACKPKGDIR}/x/xcb-util-renderutil-0.3.9-x86_64-2.txz
+# linkpackage ${SLACKPKGDIR}/x/xcb-util-errors-1.0-x86_64-1.txz
 # linkpackage ${SLACKPKGDIR}/x/xcb-util-cursor-0.1.3-x86_64-1.txz
+fi
+
+if [ "${INCXCBUTILIMAGE}" == "Y" ]; then
+  linkpackage ${SLACKPKGDIR}/x/xcb-util-image-?.?.?-*.txz
+fi
+
+if [ "${INCXCBUTILKEYSYMS}" == "Y" ]; then
+  linkpackage ${SLACKPKGDIR}/x/xcb-util-keysyms-?.?.?-*.txz
+fi
+
+if [ "${INCXCBUTILRENDERUTIL}" == "Y" ]; then
+  linkpackage ${SLACKPKGDIR}/x/xcb-util-renderutil-?.?.?-*.txz
+fi
+
+if [ "${INCXCBUTILWM}" == "Y" ]; then
+  linkpackage ${SLACKPKGDIR}/x/xcb-util-wm-?.?.?-*.txz
 fi
 
 if [ "${INCLIBXAW3DXFT}" == "Y" ]; then

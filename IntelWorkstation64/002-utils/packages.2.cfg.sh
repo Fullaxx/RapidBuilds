@@ -8,6 +8,10 @@ if [ "${INCMOD002UTILS}" == "Y" ]; then
   INCDMIDECODE="Y"
   INCTMUX="Y"
 
+# d family of packages
+
+# l family of packages
+
 # Custom Additions
   INCACPI="Y"
   INCATOP="Y"
@@ -31,6 +35,7 @@ if [ "${INCMOD002UTILS}" == "Y" ]; then
   INCLOOPAESSETUP="Y"
   INCMOSH="Y"
   INCNBD="Y"
+  INCNMON="Y"
   INCPROTOBUF="Y"
   INCPROTOBUFC="Y"
   INCRASDAEMON="Y"

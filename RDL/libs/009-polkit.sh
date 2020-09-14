@@ -1,3 +1,3 @@
 if [ "${INCPOLKIT}" == "Y" ]; then
-  INCMOZJSSIXTY="Y"
+  INCMOZJSSIXTYEIGHT="Y"
 fi

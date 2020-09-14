@@ -81,7 +81,9 @@ if [ "${INCOPENBOX}" == "Y" ]; then
 fi
 
 if [ "${INCQTFIVE}" == "Y" ]; then
-  linkpackage "${PACKAGESDIR}/qt5/qt5-5.13.2-${ARCH}-bksrc2.xzm"
+  if [ "${INCCUSTOMQTFIVE}" == "Y" ]; then
+    linkpackage "${PACKAGESDIR}/qt5/qt5-5.15.1-${ARCH}-bksrc1.xzm"
+  fi
 fi
 
 if [ "${INCSLOCK}" == "Y" ]; then
@@ -110,7 +112,7 @@ if [ "${INCWIRESHARK}" == "Y" ]; then
   linkpackage "${PACKAGESDIR}/portaudio/portaudio-v19-${ARCH}-bksrc1.xzm"
   linkpackage "${PACKAGESDIR}/spandsp/spandsp-0.0.6-${ARCH}-bksrc1.xzm"
 #  linkpackage "${PACKAGESDIR}/wireshark/wireshark-2.6.14-GTK2-${ARCH}-bksrc1.xzm"
-  linkpackage "${PACKAGESDIR}/wireshark/wireshark-3.0.12-${ARCH}-bksrc1.xzm"
+  linkpackage "${PACKAGESDIR}/wireshark/wireshark-3.0.12-${ARCH}-bksrc2.xzm"
 fi
 
 if [ "${INCXFE}" == "Y" ]; then

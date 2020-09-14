@@ -92,6 +92,10 @@ if [ "${INCGUILE}" == "Y" ]; then
   linkpackage ${SLACKPKGDIR}/d/guile-*.txz
 fi
 
+if [ "${INCGYP}" == "Y" ]; then
+  linkpackage ${SLACKPKGDIR}/d/gyp-*.txz
+fi
+
 if [ "${INCINTLTOOL}" == "Y" ]; then
   linkpackage ${SLACKPKGDIR}/d/intltool-*.txz
 fi
