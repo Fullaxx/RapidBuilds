@@ -44,7 +44,7 @@ verbosecopymodule ${PACKAGESDIR}/maven/maven-3.6.3-noarch-1.xzm ${MODSDIR}/
 verbosecopymodule ${PACKAGESDIR}/netbeans/netbeans-8.2.0.xzm ${MODSDIR}/
 #verbosecopymodule ${PACKAGESDIR}/nvidia_cuda_toolkit/cuda-10.1.243-${ARCH}-1.xzm ${MODSDIR}/
 #verbosecopymodule ${PACKAGESDIR}/nvidia_cuda_toolkit/cuda_samples-10.1.243-noarch-1.xzm ${MODSDIR}/
-verbosecopymodule ${PACKAGESDIR}/vivaldi/vivaldi-3.3.2022.39-${ARCH}-1.xzm ${MODSDIR}/
+verbosecopymodule ${PACKAGESDIR}/vivaldi/vivaldi-3.3.2022.45-${ARCH}-1.xzm ${MODSDIR}/
 
 # Desktop Configuration
-verbosecopymodule ${PACKAGESDIR}/rapidconfigs/rapidconfig-rapidworkstation-20200821-noarch-1.xzm ${MODSDIR}/
+verbosecopymodule ${PACKAGESDIR}/rapidconfigs/rapidconfig-rapidworkstation-20200914-noarch-1.xzm ${MODSDIR}/
