@@ -39,6 +39,10 @@ if [ "${INCDAVFSTWO}" == "Y" ]; then
   linkpackage "${PACKAGESDIR}/davfs2/davfs2-1.5.5-${ARCH}-bksrc1.xzm"
 fi
 
+if [ "${INCDOSTWOUNIX}" == "Y" ]; then
+  linkpackage "${PACKAGESDIR}/dos2unix/dos2unix-7.4.1-${ARCH}-bksrc1.xzm"
+fi
+
 if [ "${INCEXFAT}" == "Y" ]; then
   linkpackage "${PACKAGESDIR}/exfat/fuse-exfat-1.3.0-${ARCH}-bksrc1.xzm"
   linkpackage "${PACKAGESDIR}/exfat/exfat-utils-1.3.0-${ARCH}-bksrc1.xzm"
