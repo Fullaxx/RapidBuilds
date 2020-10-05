@@ -39,7 +39,7 @@ verbosecopymodule ${PACKAGESDIR}/java8/jdkdocs-8u191-noarch-1.xzm ${MODSDIR}/
 verbosecopymodule ${PACKAGESDIR}/java8/jdk-8u191-${ARCH}-1.xzm ${MODSDIR}/
 verbosecopymodule ${PACKAGESDIR}/maven/maven-3.6.3-noarch-1.xzm ${MODSDIR}/
 verbosecopymodule ${PACKAGESDIR}/netbeans/netbeans-8.2.0.xzm ${MODSDIR}/
-verbosecopymodule ${PACKAGESDIR}/vivaldi/vivaldi-3.3.2022.45-${ARCH}-1.xzm ${MODSDIR}/
+verbosecopymodule ${PACKAGESDIR}/vivaldi/vivaldi-3.3.2022.47-${ARCH}-1.xzm ${MODSDIR}/
 
 # Desktop Configuration
 verbosecopymodule ${PACKAGESDIR}/rapidconfigs/rapidconfig-rapidworkstation-20200914-noarch-1.xzm ${MODSDIR}/
