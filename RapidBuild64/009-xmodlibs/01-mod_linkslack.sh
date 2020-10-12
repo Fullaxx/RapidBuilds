@@ -244,6 +244,11 @@ if [ "${INCLIBUNWIND}" == "Y" ]; then
   linkpackage ${SLACKPKGDIR}/l/libunwind-*.txz
 fi
 
+if [ "${INCLIBUSB}" == "Y" ]; then
+# usbredir needs libusb
+  linkpackage ${SLACKPKGDIR}/l/libusb-*.txz
+fi
+
 if [ "${INCLIBUV}" == "Y" ]; then
   linkpackage ${SLACKPKGDIR}/l/libuv-*.txz
 fi
@@ -299,7 +304,7 @@ if [ "${INCMOZJSSEVENTYEIGHT}" == "Y" ]; then
 fi
 
 if [ "${INCNEON}" == "Y" ]; then
-# audactous needs neon
+# audacious needs neon
   linkpackage ${SLACKPKGDIR}/l/neon-*.txz
 fi
 

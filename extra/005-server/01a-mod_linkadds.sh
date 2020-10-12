@@ -60,6 +60,10 @@ if [ "${INCNOVNC}" == "Y" ]; then
   linkpackage "${PACKAGESDIR}/noVNC/noVNC-1.1.0-noarch-bksrc1.xzm"
 fi
 
+if [ "${INCQEMU}" == "Y" ]; then
+  linkpackage "${PACKAGESDIR}/qemu/qemu-4.2.1-${ARCH}-bksrc1.xzm"
+fi
+
 if [ "${INCQUARK}" == "Y" ]; then
   linkpackage "${PACKAGESDIR}/quark/quark-20200527-${ARCH}-bksrc1.xzm"
 fi
@@ -68,8 +72,9 @@ if [ "${INCREDIS}" == "Y" ]; then
   linkpackage "${PACKAGESDIR}/redis/redis-6.0.6-${ARCH}-bksrc1.xzm"
 fi
 
-if [ "${INCQEMU}" == "Y" ]; then
-  linkpackage "${PACKAGESDIR}/qemu/qemu-3.1.1.1-${ARCH}-bksrc2.xzm"
+if [ "${INCSPICE}" == "Y" ]; then
+  linkpackage "${PACKAGESDIR}/spice/spice-protocol-0.14.3-noarch-bksrc1.xzm"
+  linkpackage "${PACKAGESDIR}/spice/spice-0.14.3-${ARCH}-bksrc1.xzm"
 fi
 
 if [ "${INCYAJL}" == "Y" ]; then

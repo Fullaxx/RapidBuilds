@@ -6,5 +6,6 @@ if [ "${INCQEMU}" == "Y" ]; then
   INCLIBPNG="Y"
   INCNUMACTL="Y"
   INCSDLTWO="Y"
+  INCSPICE="Y"
   INCVTE="Y"
 fi
