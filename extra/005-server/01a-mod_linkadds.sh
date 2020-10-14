@@ -77,6 +77,10 @@ if [ "${INCSPICE}" == "Y" ]; then
   linkpackage "${PACKAGESDIR}/spice/spice-0.14.3-${ARCH}-bksrc1.xzm"
 fi
 
+if [ "${INCUSBREDIR}" == "Y" ]; then
+  linkpackage "${PACKAGESDIR}/spice/usbredir-0.8.0-${ARCH}-bksrc1.xzm"
+fi
+
 if [ "${INCYAJL}" == "Y" ]; then
   linkpackage "${PACKAGESDIR}/yajl/yajl-2.1.0-${ARCH}-bksrc1.xzm"
 fi

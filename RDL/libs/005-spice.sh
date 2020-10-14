@@ -1,4 +1,4 @@
 if [ "${INCSPICE}" == "Y" ]; then
   INCLIBUSB="Y"
-  INCLIBUSBREDIR="Y"
+  INCUSBREDIR="Y"
 fi
