@@ -63,11 +63,11 @@ if [ "${INCLXML}" == "Y" ]; then
 fi
 
 if [ "${INCNUMPY}" == "Y" ]; then
-  linkpackage "${PACKAGESDIR}/python_mods/numpy-1.18.4-${ARCH}-bksrc1.xzm"
+  linkpackage "${PACKAGESDIR}/python_mods/numpy-1.19.4-${ARCH}-bksrc1.xzm"
 fi
 
 if [ "${INCPANDAS}" == "Y" ]; then
-  linkpackage "${PACKAGESDIR}/python_mods/pandas-1.1.0-${ARCH}-bksrc1.xzm"
+  linkpackage "${PACKAGESDIR}/python_mods/pandas-1.1.4-${ARCH}-bksrc1.xzm"
 fi
 
 if [ "${INCPASTEBINIT}" == "Y" ]; then
@@ -75,7 +75,7 @@ if [ "${INCPASTEBINIT}" == "Y" ]; then
 fi
 
 if [ "${INCPSUTIL}" == "Y" ]; then
-  linkpackage "${PACKAGESDIR}/python_mods/psutil-5.6.7-${ARCH}-bksrc1.xzm"
+  linkpackage "${PACKAGESDIR}/python_mods/psutil-5.7.3-${ARCH}-bksrc1.xzm"
 fi
 
 if [ "${INCPYTHONDATEUTIL}" == "Y" ]; then
@@ -85,7 +85,7 @@ if [ "${INCPYTHONDATEUTIL}" == "Y" ]; then
 fi
 
 if [ "${INCPYTZ}" == "Y" ]; then
-  linkpackage "${PACKAGESDIR}/python_mods/pytz-2020.1-${ARCH}-bksrc1.xzm"
+  linkpackage "${PACKAGESDIR}/python_mods/pytz-2020.4-${ARCH}-bksrc1.xzm"
 fi
 
 if [ "${INCPYYAML}" == "Y" ]; then
@@ -105,7 +105,7 @@ if [ "${INCTORNADO}" == "Y" ]; then
 fi
 
 if [ "${INCVIRTUALENV}" == "Y" ]; then
-  linkpackage "${PACKAGESDIR}/python_mods/virtualenv-20.0.31-${ARCH}-bksrc1.xzm"
+  linkpackage "${PACKAGESDIR}/python_mods/virtualenv-20.1.0-${ARCH}-bksrc1.xzm"
 fi
 
 if [ "${INCWEBSOCKIFY}" == "Y" ]; then
