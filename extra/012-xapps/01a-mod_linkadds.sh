@@ -24,7 +24,7 @@ if [ "${INCETERM}" == "Y" ]; then
 fi
 
 if [ "${INCEVINCE}" == "Y" ]; then
-  linkpackage "${PACKAGESDIR}/evince/evince-3.28.2-${ARCH}-bksrc1.xzm"
+  linkpackage "${PACKAGESDIR}/evince/evince-3.36.7-${ARCH}-bksrc1.xzm"
 fi
 
 if [ "${INCFBPANEL}" == "Y" ]; then
