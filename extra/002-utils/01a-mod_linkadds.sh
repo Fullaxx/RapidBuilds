@@ -12,7 +12,7 @@ if [ "${INCATOP}" == "Y" ]; then
 fi
 
 if [ "${INCBINDTOOLS}" == "Y" ]; then
-  linkpackage "${PACKAGESDIR}/bindtools/bindtools-9.16.7-${ARCH}-1.xzm"
+  linkpackage "${PACKAGESDIR}/bindtools/bindtools-9.16.8-${ARCH}-2.xzm"
 fi
 
 if [ "${INCCALC}" == "Y" ]; then
