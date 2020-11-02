@@ -114,8 +114,8 @@ if [ "${INCNUMAD}" == "Y" ]; then
 fi
 
 if [ "${INCPROTOBUF}" == "Y" ]; then
-  linkpackage "${PACKAGESDIR}/protobuf/protobuf-java-3.11.4-noarch-1.xzm"
-  linkpackage "${PACKAGESDIR}/protobuf/protobuf-3.11.4-${ARCH}-bksrc1.xzm"
+  linkpackage "${PACKAGESDIR}/protobuf/protobuf-java-3.12.4-noarch-1.xzm"
+  linkpackage "${PACKAGESDIR}/protobuf/protobuf-3.12.4-${ARCH}-bksrc1.xzm"
 fi
 
 if [ "${INCPROTOBUFC}" == "Y" ]; then
