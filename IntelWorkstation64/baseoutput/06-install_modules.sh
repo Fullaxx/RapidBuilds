@@ -25,7 +25,7 @@ fi
 
 # LibreOffice needs avahi-libs
 verbosecopymodule ${PACKAGESDIR}/avahi/avahi-libs-0.8-${ARCH}-bksrc1.xzm ${MODSDIR}/
-verbosecopymodule ${PACKAGESDIR}/LibreOffice/LibreOffice-6.4.6-${ARCH}-1.xzm ${MODSDIR}/
+verbosecopymodule ${PACKAGESDIR}/LibreOffice/LibreOffice-6.4.7-${ARCH}-1.xzm ${MODSDIR}/
 
 # Copy any extra modules that don't need RDL
 verbosecopymodule ${PACKAGESDIR}/VirtualBox/VirtualBox-6.1.16-x86_64-1.xzm ${MODSDIR}/
