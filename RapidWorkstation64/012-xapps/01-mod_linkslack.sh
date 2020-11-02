@@ -295,6 +295,10 @@ if [ "${INCGOBJECTINTROSPECTION}" == "Y" ]; then
   linkpackage ${SLACKPKGDIR}/l/gobject-introspection-*.txz
 fi
 
+if [ "${INCGRAPHENE}" == "Y" ]; then
+  linkpackage ${SLACKPKGDIR}/l/graphene-*.txz
+fi
+
 if [ "${INCGSTREAMER}" == "Y" ]; then
   linkpackage ${SLACKPKGDIR}/l/gstreamer-*.txz
   linkpackage ${SLACKPKGDIR}/l/gst-plugins-base-*.txz
@@ -326,10 +330,6 @@ fi
 
 if [ "${INCGTKSPELL}" == "Y" ]; then
   linkpackage ${SLACKPKGDIR}/l/gtkspell-*.txz
-fi
-
-if [ "${INCILMBASE}" == "Y" ]; then
-  linkpackage ${SLACKPKGDIR}/l/ilmbase-*.txz
 fi
 
 if [ "${INCIMAGEMAGICK}" == "Y" ]; then
@@ -499,7 +499,7 @@ if [ "${INCPAVUCONTROL}" == "Y" ]; then
 fi
 
 if [ "${INCPOPPLER}" == "Y" ]; then
-  linkpackage ${SLACKPKGDIR}/l/poppler-0.*.txz
+  linkpackage ${SLACKPKGDIR}/l/poppler-20.*.txz
   linkpackage ${SLACKPKGDIR}/l/poppler-data-*.txz
 fi
 

@@ -1,5 +1,6 @@
 if [ "${INCGSTREAMER}" == "Y" ]; then
   INCFFMPEG="Y"
+  INCGRAPHENE="Y"
   INCLIBVPX="Y"
   INCLIBPROXY="Y"
   INCNEON="Y"
