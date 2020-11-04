@@ -61,6 +61,7 @@ if [ "${INCNOVNC}" == "Y" ]; then
 fi
 
 if [ "${INCQEMU}" == "Y" ]; then
+  linkpackage "${PACKAGESDIR}/tianocore/tianocore-20201104-noarch-bksrc1.xzm"
   linkpackage "${PACKAGESDIR}/qemu/qemu-4.2.1-${ARCH}-bksrc1.xzm"
 fi
 
