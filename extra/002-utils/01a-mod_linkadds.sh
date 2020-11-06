@@ -119,7 +119,7 @@ if [ "${INCPROTOBUF}" == "Y" ]; then
 fi
 
 if [ "${INCPROTOBUFC}" == "Y" ]; then
-  linkpackage "${PACKAGESDIR}/protobuf/protobuf-c-1.3.3-${ARCH}-bksrc1.xzm"
+  linkpackage "${PACKAGESDIR}/protobuf/protobuf-c-1.3.3-${ARCH}-bksrc2.xzm"
 fi
 
 if [ "${INCRASDAEMON}" == "Y" ]; then
