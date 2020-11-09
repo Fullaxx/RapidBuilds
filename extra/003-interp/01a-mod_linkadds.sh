@@ -96,9 +96,9 @@ if [ "${INCPYYAML}" == "Y" ]; then
   linkpackage "${PACKAGESDIR}/python_mods/PyYAML-5.3-${ARCH}-bksrc1.xzm"
 fi
 
-if [ "${INCSETUPTOOLSSCM}" == "Y" ]; then
-  linkpackage "${PACKAGESDIR}/python_mods/setuptools_scm-3.2.0-${ARCH}-bksrc1.xzm"
-fi
+#if [ "${INCSETUPTOOLSSCM}" == "Y" ]; then
+#  linkpackage "${PACKAGESDIR}/python_mods/setuptools_scm-3.2.0-${ARCH}-bksrc1.xzm"
+#fi
 
 if [ "${INCTERMINATOR}" == "Y" ]; then
   linkpackage "${PACKAGESDIR}/python_mods/terminator-1.92-${ARCH}-bksrc1.xzm"
