@@ -11,6 +11,10 @@ if [ "${INCCHEETAHTHREE}" == "Y" ]; then
   linkpackage "${PACKAGESDIR}/python_mods/cheetah3-3.2.0-${ARCH}-bksrc1.xzm"
 fi
 
+if [ "${INCCONFIGOBJ}" == "Y" ]; then
+  linkpackage "${PACKAGESDIR}/python_mods/configobj-5.0.6-${ARCH}-bksrc1.xzm"
+fi
+
 if [ "${INCCLICK}" == "Y" ]; then
   linkpackage "${PACKAGESDIR}/python_mods/click-plugins-1.1.1-${ARCH}-bksrc1.xzm"
   linkpackage "${PACKAGESDIR}/python_mods/Click-7.0-${ARCH}-bksrc1.xzm"
@@ -97,7 +101,7 @@ if [ "${INCSETUPTOOLSSCM}" == "Y" ]; then
 fi
 
 if [ "${INCTERMINATOR}" == "Y" ]; then
-  linkpackage "${PACKAGESDIR}/python_mods/terminator-1.91-${ARCH}-bksrc1.xzm"
+  linkpackage "${PACKAGESDIR}/python_mods/terminator-1.92-${ARCH}-bksrc1.xzm"
 fi
 
 if [ "${INCTORNADO}" == "Y" ]; then
