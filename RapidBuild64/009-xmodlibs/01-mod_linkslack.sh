@@ -125,6 +125,10 @@ if [ "${INCHYPHEN}" == "Y" ]; then
   linkpackage ${SLACKPKGDIR}/l/hyphen-*.txz
 fi
 
+if [ "${INCISL}" == "Y" ]; then
+  linkpackage ${SLACKPKGDIR}/l/isl-*.txz
+fi
+
 if [ "${INCISOCODES}" == "Y" ]; then
   linkpackage ${SLACKPKGDIR}/l/iso-codes-*.txz
 fi

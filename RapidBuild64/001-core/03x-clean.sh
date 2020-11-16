@@ -43,6 +43,10 @@ rm -f ${DIR}/usr/${LIBDIR}/libImath-*
 rm -f ${DIR}/usr/${LIBDIR}/libpoppler*
 # TEST 31 OCT 2020
 
+# TEST 16 NOV 2020
+rm -f ${DIR}/usr/${LIBDIR}/libisl*
+# TEST 16 NOV 2020
+
 # Unnecessary here, libidn2 is mandatory in 002-utils
 rm -f ${DIR}/usr/${LIBDIR}/libidn2.so.*
 
