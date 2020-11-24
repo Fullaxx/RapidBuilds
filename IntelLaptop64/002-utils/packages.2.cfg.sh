@@ -7,7 +7,6 @@ if [ "${INCMOD002UTILS}" == "Y" ]; then
   INCDMIDECODE="Y"
   INCINXI="Y"
   INCNEOFETCH="Y"
-  INCSCIM="Y"
   INCTMUX="Y"
   INCUNDERVOLT="Y"
 
