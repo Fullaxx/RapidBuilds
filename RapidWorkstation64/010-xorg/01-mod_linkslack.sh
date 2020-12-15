@@ -66,7 +66,7 @@ linkpackage ${SLACKPKGDIR}/x/x11-skel-*.txz
 linkpackage ${SLACKPKGDIR}/x/xauth-*.txz
 linkpackage ${SLACKPKGDIR}/x/xhost-*.txz
 linkpackage ${SLACKPKGDIR}/x/xisxwayland-*.txz
-linkpackage ${SLACKPKGDIR}/x/xorg-server-?.??.?-*.txz
+linkpackage ${SLACKPKGDIR}/x/xorg-server-?.??.*-*.txz
 linkpackage ${SLACKPKGDIR}/x/xorgproto-*.txz
 linkpackage ${SLACKPKGDIR}/x/xrandr-*.txz
 linkpackage ${SLACKPKGDIR}/x/xrdb-*.txz
@@ -78,7 +78,7 @@ fi
 
 if [ "${INCWAYLAND}" == "Y" ]; then
   linkpackage ${SLACKPKGDIR}/x/wayland-protocols-*.txz
-  linkpackage ${SLACKPKGDIR}/x/wayland-?.??.?-*.txz
+  linkpackage ${SLACKPKGDIR}/x/wayland-?.??.*-*.txz
   linkpackage ${SLACKPKGDIR}/x/xorg-server-xwayland-*.txz
 fi
 
