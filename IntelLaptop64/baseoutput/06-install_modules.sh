@@ -29,7 +29,7 @@ verbosecopymodule ${PACKAGESDIR}/VirtualBox/VirtualBox-6.1.16-x86_64-1.xzm ${MOD
 verbosecopymodule ${PACKAGESDIR}/chromium/chromium-86.0.4240.183-${ARCH}-1alien.xzm ${MODSDIR}/
 # verbosecopymodule ${PACKAGESDIR}/cutter/cutter-1.8.0-x86_64-1.xzm ${MODSDIR}/
 verbosecopymodule ${PACKAGESDIR}/dbwalls/dbwalls-1920-130207.xzm ${MODSDIR}/
-verbosecopymodule ${PACKAGESDIR}/docker/docker-19.03.13-${ARCH}-1.xzm ${MODSDIR}/
+verbosecopymodule ${PACKAGESDIR}/docker/docker-19.03.14-${ARCH}-1.xzm ${MODSDIR}/
 # verbosecopymodule ${PACKAGESDIR}/hyper/hyper-2.1.2-x86_64-1.xzm ${MODSDIR}/
 verbosecopymodule ${PACKAGESDIR}/java8/jre-8u191-${ARCH}-1.xzm ${MODSDIR}/
 verbosecopymodule ${PACKAGESDIR}/veracrypt/veracrypt-console-1.24.7-${ARCH}-1.xzm ${MODSDIR}/
