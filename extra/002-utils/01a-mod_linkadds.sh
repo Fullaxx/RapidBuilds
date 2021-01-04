@@ -131,7 +131,7 @@ if [ "${INCTWEAK}" == "Y" ]; then
 fi
 
 if [ "${INCUDFTOOLS}" == "Y" ]; then
-  linkpackage "${PACKAGESDIR}/udftools/udftools-20200806-${ARCH}-bksrc1.xzm"
+  linkpackage "${PACKAGESDIR}/udftools/udftools-20210104-${ARCH}-bksrc1.xzm"
 fi
 
 if [ "${INCXNBD}" == "Y" ]; then
