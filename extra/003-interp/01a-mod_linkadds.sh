@@ -96,6 +96,11 @@ if [ "${INCPYYAML}" == "Y" ]; then
   linkpackage "${PACKAGESDIR}/python_mods/PyYAML-5.3-${ARCH}-bksrc1.xzm"
 fi
 
+if [ "${INCRDIFFBACKUP}" == "Y" ]; then
+  linkpackage "${PACKAGESDIR}/librsync/librsync-0.9.7-${ARCH}-bksrc1.xzm"
+  linkpackage "${PACKAGESDIR}/python_mods/rdiff-backup-2.0.5-${ARCH}-bksrc1.xzm"
+fi
+
 #if [ "${INCSETUPTOOLSSCM}" == "Y" ]; then
 #  linkpackage "${PACKAGESDIR}/python_mods/setuptools_scm-3.2.0-${ARCH}-bksrc1.xzm"
 #fi
