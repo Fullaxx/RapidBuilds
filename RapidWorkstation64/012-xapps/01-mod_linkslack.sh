@@ -456,11 +456,15 @@ if [ "${INCLIBWMF}" == "Y" ]; then
   linkpackage ${SLACKPKGDIR}/l/libwmf-*.txz
 fi
 
+if [ "${INCNETPBM}" == "Y" ]; then
+# xpaint needs netpbm
+  linkpackage ${SLACKPKGDIR}/l/netpbm-*.txz
+fi
+
 if [ "${INCOPENCL}" == "Y" ]; then
 # imagemagick needs OpenCL
   linkpackage ${SLACKPKGDIR}/l/ocl-icd-*.txz
 fi
-
 if [ "${INCOPENALSOFT}" == "Y" ]; then
 # mplayer,QT5 from slackware needs openal-soft
   linkpackage ${SLACKPKGDIR}/l/openal-soft-*.txz
