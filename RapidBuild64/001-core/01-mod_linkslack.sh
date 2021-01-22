@@ -20,6 +20,7 @@ linkpackage ${SLACKPKGDIR}/a/dbus-*.txz
 linkpackage ${SLACKPKGDIR}/a/dialog-*.txz
 linkpackage ${SLACKPKGDIR}/a/dosfstools-*.txz
 linkpackage ${SLACKPKGDIR}/a/e2fsprogs-*.txz
+linkpackage ${SLACKPKGDIR}/a/elogind-*.txz
 linkpackage ${SLACKPKGDIR}/a/etc-*.txz
 linkpackage ${SLACKPKGDIR}/a/file-*.txz
 linkpackage ${SLACKPKGDIR}/a/findutils-*.txz
@@ -57,12 +58,12 @@ linkpackage ${SLACKPKGDIR}/a/util-linux-*.txz
 linkpackage ${SLACKPKGDIR}/a/which-*.txz
 linkpackage ${SLACKPKGDIR}/a/xz-*.txz
 
-# Replaced udev with eudev
 linkpackage ${SLACKPKGDIR}/a/eudev-*.txz
 linkpackage ${SLACKPKGDIR}/l/libffi-*.txz
 
 linkpackage ${SLACKPKGDIR}/a/reiserfsprogs-*.txz
 linkpackage ${SLACKPKGDIR}/a/xfsprogs-*.txz
+linkpackage ${SLACKPKGDIR}/a/inih-*.txz
 linkpackage ${SLACKPKGDIR}/ap/xfsdump-*.txz
 
 linkpackage ${SLACKPKGDIR}/ap/htop-*.txz
@@ -77,6 +78,8 @@ linkpackage ${SLACKPKGDIR}/l/libevent-*.txz
 
 # libcap appears unnecessary when aaa_elflibs is installed
 # linkpackage ${SLACKPKGDIR}/l/libcap-*.txz
+
+# setpriv (from util-linux-2.36.1) needs libcap-ng
 linkpackage ${SLACKPKGDIR}/l/libcap-ng-*.txz
 
 linkpackage ${SLACKPKGDIR}/l/glib2-*.txz
@@ -105,11 +108,3 @@ linkpackage ${SLACKPKGDIR}/n/libmnl-*.txz
 linkpackage ${SLACKPKGDIR}/n/libtirpc-*.txz #pam needs libtirpc
 
 linkpackage ${SLACKEXTRA}/bash-completion/bash-completion-*.txz
-
-# Needed for udisks
-# linkpackage ${SLACKPKGDIR}/l/libatasmart-*.txz
-# rm udisks-*.txz upower-*.txz
-
-# udisks2 is a seperate project
-# rm udisks2-*.txz
-# NEED to figure out what to do here... maybe ldm?

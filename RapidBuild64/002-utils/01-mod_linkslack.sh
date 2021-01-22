@@ -13,10 +13,6 @@ if [ "${INCBTRFSPROGS}" == "Y" ]; then
   linkpackage ${SLACKPKGDIR}/a/btrfs-progs-*.txz
 fi
 
-if [ "${INCCGMANAGER}" == "Y" ]; then
-  linkpackage ${SLACKPKGDIR}/ap/cgmanager-*.txz
-fi
-
 if [ "${INCCPIO}" == "Y" ]; then
   linkpackage ${SLACKPKGDIR}/a/cpio-*.txz
 fi

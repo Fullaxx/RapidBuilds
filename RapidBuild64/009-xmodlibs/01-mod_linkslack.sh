@@ -62,10 +62,6 @@ if [ "${INCBOOST}" == "Y" ]; then
   linkpackage ${SLACKPKGDIR}/l/boost-*.txz
 fi
 
-if [ "${INCCONSOLEKITTWO}" == "Y" ]; then
-  linkpackage ${SLACKPKGDIR}/l/ConsoleKit2-*.txz
-fi
-
 if [ "${INCDB48}" == "Y" ]; then
 # rpm needs db48
   linkpackage ${SLACKPKGDIR}/l/db48-*.txz

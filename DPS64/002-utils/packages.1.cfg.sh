@@ -3,7 +3,6 @@ if [ "${INCMOD002UTILS}" == "Y" ]; then
 # a family of packages
   INCKERNELFIRMWARE="N"
   INCBTRFSPROGS="N"
-  INCCGMANAGER="N"
   INCCPIO="N"
   INCCPUFREQUTILS="N"
   INCCRYPTSETUP="N"
