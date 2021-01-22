@@ -465,6 +465,7 @@ if [ "${INCOPENCL}" == "Y" ]; then
 # imagemagick needs OpenCL
   linkpackage ${SLACKPKGDIR}/l/ocl-icd-*.txz
 fi
+
 if [ "${INCOPENALSOFT}" == "Y" ]; then
 # mplayer,QT5 from slackware needs openal-soft
   linkpackage ${SLACKPKGDIR}/l/openal-soft-*.txz
@@ -503,7 +504,7 @@ if [ "${INCPAVUCONTROL}" == "Y" ]; then
 fi
 
 if [ "${INCPOPPLER}" == "Y" ]; then
-  linkpackage ${SLACKPKGDIR}/l/poppler-20.*.txz
+  linkpackage ${SLACKPKGDIR}/l/poppler-??.*.txz
   linkpackage ${SLACKPKGDIR}/l/poppler-data-*.txz
 fi
 
@@ -569,19 +570,3 @@ if [ "${INCWAVPACK}" == "Y" ]; then
   linkpackage ${SLACKPKGDIR}/l/wavpack-*.txz
 fi
 ### Libraries #########################
-
-# IS THIS GONE NOW??
-#if [ "${INCMOZILLAFIREFOX}" == "Y" -a "${INCMPLAYER}" == "Y" ]; then
-#  linkpackage ${SLACKEXTRA}/mplayerplug-in/mplayerplug-in-*.txz
-#fi
-
-# XXX FIXME
-#if [ "${INCMMPACKAGE}" == "Y" ]; then
-#  linkpackage ${SLACKPKGDIR}/l/glibmm-*.txz
-#  linkpackage ${SLACKPKGDIR}/l/gtkmm2-*.txz
-#  linkpackage ${SLACKPKGDIR}/l/gtkmm3-*.txz
-#  linkpackage ${SLACKPKGDIR}/l/atkmm-*.txz
-#  linkpackage ${SLACKPKGDIR}/l/cairomm-*.txz
-#  linkpackage ${SLACKPKGDIR}/l/pangomm-*.txz
-#fi
-# XXX FIXME

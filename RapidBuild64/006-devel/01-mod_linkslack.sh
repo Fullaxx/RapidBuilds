@@ -61,7 +61,7 @@ if [ "${INCFLEX}" == "Y" ]; then
 fi
 
 if [ "${INCGCC}" == "Y" ]; then
-  linkpackage ${SLACKPKGDIR}/d/gcc-?.?.?-*.txz
+  linkpackage ${SLACKPKGDIR}/d/gcc-??.?.?-*.txz
 fi
 
 if [ "${INCGCCGO}" == "Y" ]; then
@@ -69,7 +69,7 @@ if [ "${INCGCCGO}" == "Y" ]; then
 fi
 
 if [ "${INCGCCGPLUSPLUS}" == "Y" ]; then
-  linkpackage ${SLACKPKGDIR}/d/gcc-g++-?.?.?-*.txz
+  linkpackage ${SLACKPKGDIR}/d/gcc-g++-??.?.?-*.txz
 fi
 
 if [ "${INCGDB}" == "Y" ]; then

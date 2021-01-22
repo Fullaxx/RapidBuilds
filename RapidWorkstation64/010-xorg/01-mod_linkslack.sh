@@ -166,7 +166,7 @@ if [ "${INCMESA}" == "Y" ]; then
 fi
 
 if [ "${INCLIBVA}" == "Y" ]; then
-  linkpackage ${SLACKPKGDIR}/x/libva-?.?.?-*.txz
+  linkpackage ${SLACKPKGDIR}/x/libva-?.*-*.txz
 fi
 
 if [ "${INCLIBVDPAU}" == "Y" ]; then
