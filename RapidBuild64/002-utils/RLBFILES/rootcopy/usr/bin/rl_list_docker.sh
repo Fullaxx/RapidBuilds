@@ -7,6 +7,8 @@ fi
 
 docker ps -a
 echo
+docker system df
+echo
 docker images
 echo
 docker volume ls
