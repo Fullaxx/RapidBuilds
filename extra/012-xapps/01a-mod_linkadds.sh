@@ -86,6 +86,10 @@ if [ "${INCQTFIVE}" == "Y" ]; then
   fi
 fi
 
+if [ "${INCRECORDMYDESKTOP}" == "Y" ]; then
+  linkpackage "${PACKAGESDIR}/recordmydesktop/recordmydesktop-0.3.8.1-${ARCH}-bksrc1.xzm"
+fi
+
 if [ "${INCSLOCK}" == "Y" ]; then
   linkpackage "${PACKAGESDIR}/slock/slock-1.4-${ARCH}-bksrc1.xzm"
 fi

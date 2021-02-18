@@ -150,10 +150,6 @@ fi
 if [ "${INCFLTK}" == "Y" ]; then
   linkpackage ${SLACKEXTRA}/fltk/fltk-*.txz
 fi
-
-if [ "${INCRECORDMYDESKTOP}" == "Y" ]; then
-  linkpackage ${SLACKEXTRA}/recordmydesktop/recordmydesktop-*.txz
-fi
 ### Apps ##############################
 
 ### Themes ############################
