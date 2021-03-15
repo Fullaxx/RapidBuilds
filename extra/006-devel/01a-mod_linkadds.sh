@@ -7,6 +7,9 @@ source ./module_spec.sh
 linkpackage "${PACKAGESDIR}/staticlibs/staticlibs-openssl-1.1.1g-${ARCH}-bksrc1.xzm"
 linkpackage "${PACKAGESDIR}/staticlibs/staticlibs-libevent-2.1.11-${ARCH}-bksrc1.xzm"
 linkpackage "${PACKAGESDIR}/staticlibs/staticlibs-libgcrypt-1.8.6-${ARCH}-bksrc1.xzm"
+linkpackage "${PACKAGESDIR}/staticlibs/staticlibs-libsodium-1.0.18-${ARCH}-bksrc1.xzm"
+linkpackage "${PACKAGESDIR}/staticlibs/staticlibs-libpcap-1.9.1-${ARCH}-bksrc1.xzm"
+linkpackage "${PACKAGESDIR}/libnet/libnet-20210227-${ARCH}-bksrc1.xzm"
 
 if [ "${INCASTYLE}" == "Y" ]; then
   linkpackage "${PACKAGESDIR}/astyle/astyle-3.1-${ARCH}-bksrc1.xzm"
