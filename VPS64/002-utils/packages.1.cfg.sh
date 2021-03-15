@@ -110,5 +110,6 @@ if [ "${INCMOD002UTILS}" == "Y" ]; then
   INCNMON="Y"
   INCPROTOBUF="Y"
   INCPROTOBUFC="Y"
+  INCSEVENZIP="N"
   INCXNBD="Y"
 fi
