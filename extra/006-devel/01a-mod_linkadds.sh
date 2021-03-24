@@ -5,7 +5,7 @@ source ./module_spec.sh
 
 # Everyone gets this
 linkpackage "${PACKAGESDIR}/staticlibs/staticlibs-openssl-1.1.1g-${ARCH}-bksrc1.xzm"
-linkpackage "${PACKAGESDIR}/staticlibs/staticlibs-libevent-2.1.11-${ARCH}-bksrc1.xzm"
+linkpackage "${PACKAGESDIR}/staticlibs/staticlibs-libevent-2.1.12-${ARCH}-bksrc1.xzm"
 linkpackage "${PACKAGESDIR}/staticlibs/staticlibs-libgcrypt-1.8.6-${ARCH}-bksrc1.xzm"
 linkpackage "${PACKAGESDIR}/staticlibs/staticlibs-libsodium-1.0.18-${ARCH}-bksrc1.xzm"
 linkpackage "${PACKAGESDIR}/staticlibs/staticlibs-libpcap-1.9.1-${ARCH}-bksrc1.xzm"
