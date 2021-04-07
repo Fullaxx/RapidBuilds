@@ -16,7 +16,7 @@ fi
 
 # VSCode needs RDL
 if [ "${INCVSCODE}" == "Y" ]; then
-  verbosecopymodule ${PACKAGESDIR}/vscode/vscode-1.52.1-${ARCH}-1.xzm ${MODSDIR}/
+  verbosecopymodule ${PACKAGESDIR}/vscode/vscode-1.54.3-${ARCH}-1.xzm ${MODSDIR}/
 fi
 
 # LibreOffice needs avahi-libs
