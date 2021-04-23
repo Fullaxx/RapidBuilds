@@ -10,6 +10,10 @@ cat << EOFF >> ${DIR}/etc/rc.d/rc.modules.local
 if /usr/bin/grep flags /proc/cpuinfo | /usr/bin/grep -q vmx; then
   /sbin/modprobe kvm-intel
 fi
+
+if /sbin/lspci -v | /usr/bin/grep -qi ASPEED; then
+  modprobe ast
+fi
 EOFF
 
 #echo "/sbin/modprobe psmouse" >> ${DIR}/etc/rc.d/rc.modules.local
