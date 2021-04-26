@@ -44,7 +44,7 @@ verbosecopymodule ${PACKAGESDIR}/docker/docker-19.03.15-${ARCH}-1.xzm ${MODSDIR}
 # verbosecopymodule ${PACKAGESDIR}/netbeans/netbeans-8.2.0.xzm ${MODSDIR}/
 #verbosecopymodule ${PACKAGESDIR}/nvidia_cuda_toolkit/cuda-10.1.243-${ARCH}-1.xzm ${MODSDIR}/
 #verbosecopymodule ${PACKAGESDIR}/nvidia_cuda_toolkit/cuda_samples-10.1.243-noarch-1.xzm ${MODSDIR}/
-verbosecopymodule ${PACKAGESDIR}/vivaldi/vivaldi-3.7.2218.55-${ARCH}-1.xzm ${MODSDIR}/
+verbosecopymodule ${PACKAGESDIR}/vivaldi/vivaldi-3.7.2218.58-${ARCH}-1.xzm ${MODSDIR}/
 
 # Desktop Configuration
 verbosecopymodule ${PACKAGESDIR}/rapidconfigs/rapidconfig-rapidworkstation-20200914-noarch-1.xzm ${MODSDIR}/
