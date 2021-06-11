@@ -9,6 +9,7 @@ if [ ! -d ${MODSDIR} ]; then
 fi
 
 verbosecopymodule ${PACKAGESDIR}/docker/docker-19.03.15-${ARCH}-1.xzm ${MODSDIR}/
+verbosecopymodule ${PACKAGESDIR}/vim-tiny/vim-tiny-20210610-${ARCH}-bksrc1.xzm ${MODSDIR}/
 
 ### export ENABLE_NVIDIA_FOR_DOCKER="1" for nvidia-container-runtime support ###
 if [ "${ENABLE_NVIDIA_FOR_DOCKER}" == "1" ]; then
