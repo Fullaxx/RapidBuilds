@@ -42,7 +42,7 @@ rm -rf ${DIR}/lib/modules/*/kernel/drivers/gpu/drm/radeon
 rm -rf ${DIR}/lib/modules/*/kernel/drivers/gpu/drm/vmwgfx
 
 pushd ${DIR}/lib/modules/*/kernel/drivers
-tar cf media.tar media/media.ko
+tar cf media.tar media/mc
 tar uf media.tar media/v4l2-core
 tar uf media.tar media/usb/uvc
 tar uf media.tar media/common/videobuf2
