@@ -5,18 +5,16 @@ The Build System for RapidLinux
 This repository will build 10 different LiveCD projects based on slackware packages. \
 The goal is to show how to create different LiveCDs with a very specific set of features. \
 The 10 projects are as follows:
-```
-RapidInstall64
-DPS64
-VPS64
-RapidDocker64
-RapidFileserver64
-RapidBuild64
-IntelLaptop64
-RapidWorkstation64
-IntelWorkstation64
-CudaWorkstation64
-```
+* RapidInstall64
+* DPS64
+* VPS64
+* RapidDocker64
+* RapidFileserver64
+* RapidBuild64
+* IntelLaptop64
+* RapidWorkstation64
+* IntelWorkstation64
+* CudaWorkstation64
 
 ## Configuration
 Each project contains config files that detail exactly what software will exist on the ISO. \
