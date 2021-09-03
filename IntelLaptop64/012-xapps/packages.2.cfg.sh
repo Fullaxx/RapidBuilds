@@ -56,5 +56,6 @@ if [ "${INCMOD012XAPPS}" == "Y" ]; then
 
 # Tagged for inclusion into Modules dir by baseoutput
   INCCHROME="Y"
+  INCLIBREOFFICE="Y"
   INCVSCODE="N"
 fi
