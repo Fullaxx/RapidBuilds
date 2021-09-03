@@ -295,6 +295,7 @@ if [ "${INCPOLKIT}" == "Y" ]; then
 fi
 
 if [ "${INCMOZILLANSS}" == "Y" ]; then
+# chrome needs this
   linkpackage ${SLACKPKGDIR}/l/mozilla-nss-*.txz
 fi
 
