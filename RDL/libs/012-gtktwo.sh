@@ -1,6 +1,7 @@
 if [ "${INCGTKTWO}" == "Y" ]; then
   INCMESA="Y"
   INCLIBXCOMPOSITE="Y"
+  INCLIBXKBCOMMON="Y"
 
   INCATK="Y"
   INCCAIRO="Y"
