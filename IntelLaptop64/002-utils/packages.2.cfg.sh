@@ -1,24 +1,5 @@
 # 002-utils options
 if [ "${INCMOD002UTILS}" == "Y" ]; then
-# a family of packages
-  INCKERNELFIRMWARE="Y"
-
-# ap family of packages
-  INCDMIDECODE="Y"
-  INCINXI="Y"
-  INCNEOFETCH="Y"
-  INCTMUX="Y"
-  INCUNDERVOLT="Y"
-
-# d family of packages
-
-# l family of packages
-
-# n family of packages
-  INCIRSSI="Y"
-  INCNMAP="Y"
-  INCOPENVPN="Y"
-
 # Custom Additions
   INCACPI="Y"
   INCATOP="Y"
