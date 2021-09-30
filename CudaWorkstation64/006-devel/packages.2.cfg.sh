@@ -1,18 +1,16 @@
 # 006-devel options
 if [ "${INCMOD006DEVEL}" == "Y" ]; then
 # Departure from Default
-  INCCVS="N"
   INCDOXYGEN="Y"
-  INCEMACS="N"
   INCLLVM="Y"
   INCMERCURIAL="Y"
   INCOPENCLHEADERS="Y"
-  INCSUBVERSION="N"
 
 # Custom Additions
   INCASTYLE="Y"
   INCCGDB="Y"
   INCCODEEXAMPLES="Y"
+  INCQLIBC="Y"
   INCVALGRIND="Y"
   INCVALKYRIE="N"
 fi

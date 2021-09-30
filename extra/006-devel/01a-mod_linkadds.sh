@@ -71,6 +71,10 @@ if [ "${INCCODEEXAMPLES}" == "Y" ]; then
   linkpackage "${PACKAGESDIR}/codex/redisson-20190403-noarch-bksrc1.xzm"
 fi
 
+if [ "${INCQLIBC}" == "Y" ]; then
+  linkpackage "${PACKAGESDIR}/qlibc/qlibc-2.4.5-${ARCH}-bksrc1.xzm"
+fi
+
 if [ "${INCVALGRIND}" == "Y" ]; then
   linkpackage "${PACKAGESDIR}/valgrind/valgrind-3.13.0-${ARCH}-bksrc1.xzm"
 fi
