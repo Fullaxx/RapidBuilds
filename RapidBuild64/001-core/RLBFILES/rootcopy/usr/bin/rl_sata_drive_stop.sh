@@ -27,10 +27,10 @@ fi
 /usr/bin/rl_disk_unmount.sh ${DEV} || bail "rl_disk_unmount.sh ${DEV} failed!"
 sync
 
-echo "Executing STOP command:"
-/usr/sbin/sdparm --command=stop ${DEV}
-sleep 0.5
-sync
+#echo "Executing STOP command:"
+#/usr/sbin/sdparm --command=stop ${DEV}
+#sleep 0.5
+#sync
 
 KD=`basename ${DEV}`
 echo "Marking ${DEV} offline ..."
