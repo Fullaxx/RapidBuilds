@@ -57,11 +57,11 @@ else
   RLPARTTHREE="${DISK}3"
 fi
 
-mkfs.ext2 -q -m0 "${RLPARTTWO}"
-tune2fs -L boot "${RLPARTTWO}"
+mkfs.ext2 -q -m0 ${RLPARTTWO}
+tune2fs -L boot ${RLPARTTWO}
 
-mkfs.ext4 -q -m0 "${RLPARTTHREE}"
-tune2fs -L storage "${RLPARTTHREE}"
+mkfs.ext4 -q -m0 ${RLPARTTHREE}
+tune2fs -L storage ${RLPARTTHREE}
 
 # Use ext4 since RapidInstall lacks xfs_utils
 # mkfs.xfs "${RLPARTTHREE}"

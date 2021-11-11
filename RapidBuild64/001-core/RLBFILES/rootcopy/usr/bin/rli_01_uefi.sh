@@ -53,13 +53,13 @@ else
   RLPARTTHREE="${DISK}3"
 fi
 
-mkfs.vfat "${RLPARTONE}"
+mkfs.vfat ${RLPARTONE}
 
-mkfs.ext2 -q -m0 "${RLPARTTWO}"
-tune2fs -L RL "${RLPARTTWO}"
+mkfs.ext2 -q -m0 ${RLPARTTWO}
+tune2fs -L RL ${RLPARTTWO}
 
-mkfs.ext4 -q -m0 "${RLPARTTHREE}"
-tune2fs -L storage "${RLPARTTHREE}"
+mkfs.ext4 -q -m0 ${RLPARTTHREE}
+tune2fs -L storage ${RLPARTTHREE}
 
 # Use ext4 since RapidInstall lacks xfs_utils
 # mkfs.xfs "${RLPARTTHREE}"
