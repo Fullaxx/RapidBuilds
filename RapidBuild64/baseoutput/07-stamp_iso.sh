@@ -26,6 +26,6 @@ chown -R root.root ${RLDIR}
 
 # Build the ISO
 cd ${RLDIR}
-./make_iso.sh ${ISOOUTPUTDIR}/${ISOFILENAME} || bail "ISO CREATION FAILED!"
+RLUEFIBOOT="${RLUEFIBOOT}" ./make_iso.sh ${ISOOUTPUTDIR}/${ISOFILENAME} || bail "ISO CREATION FAILED!"
 
 echo "${ISOOUTPUTDIR}/${ISOFILENAME} created"

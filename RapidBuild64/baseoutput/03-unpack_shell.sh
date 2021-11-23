@@ -29,10 +29,23 @@ install -D -m 0644 RLBFILES/boot/isolinux/isolinux.cfg ${BDIR}/shell/boot/isolin
 install -D -m 0644 RLBFILES/boot/syslinux/syslinux.cfg ${BDIR}/shell/boot/syslinux/syslinux.cfg
 install -D -m 0755 RLBFILES/rl/make_iso.sh ${BDIR}/shell/rl/make_iso.sh
 
-# Grub
+# EFI bootable CD/DVD components
+if [ "${RLUEFIBOOT}" == "REFIND" ]; then
+  tar xf RLBFILES/UEFI/refind.tar -C ${BDIR}/shell/
+#  mkdir -p ${BDIR}/shell/EFI/
+#  cp -r RLBFILES/EFI/{BOOT,tools} ${BDIR}/shell/EFI/
+  cp -v RLBFILES/boot/refind.conf ${BDIR}/shell/EFI/BOOT/
+fi
+
+if [ "${RLUEFIBOOT}" == "GRUB" ]; then
+  tar xf RLBFILES/UEFI/grub.tar -C ${BDIR}/shell/
+  cp -v RLBFILES/boot/grub.cfg ${BDIR}/shell/boot/grub/
+fi
+
+# Template Grub Config for install
 install -D -m 0644 RLBFILES/install/grub/grub.cfg ${BDIR}/shell/install/grub.cfg
 
-# Refind
+# Template Refind Config for install
 install -D -m 0644 RLBFILES/install/refind/refind.conf ${BDIR}/shell/install/refind.conf
 if [ -f RLBFILES/install/refind/banner.jpg ]; then
   install -D -m 0644 RLBFILES/install/refind/banner.jpg ${BDIR}/shell/install/banner.jpg

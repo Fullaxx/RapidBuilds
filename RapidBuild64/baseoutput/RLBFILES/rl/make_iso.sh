@@ -25,6 +25,20 @@ if [ "$ISONAME" = "" ]; then
    if [ "$ISONAME" = "" ]; then ISONAME="$SUGGEST"; fi
 fi
 
+# From Ubuntu ISO:
+# -eltorito-alt-boot -e boot/grub/efi.img -no-emul-boot -isohybrid-gpt-basdat
+
+# EFI bootable CD/DVD components
+if [ "${RLUEFIBOOT}" == "REFIND" ]; then
+  BOOTISOWITHUEFI="-eltorito-alt-boot -eltorito-platform efi -eltorito-boot EFI/BOOT/bootx64.efi -no-emul-boot"
+fi
+
+if [ "${RLUEFIBOOT}" == "GRUB" ]; then
+  BOOTISOWITHUEFI="-eltorito-alt-boot -eltorito-platform efi -eltorito-boot boot/grub/efi.img -no-emul-boot"
+fi
+
 mkisofs -o "$ISONAME" -v -J -R -D -A "$CDLABEL" -V "$CDLABEL" \
 -no-emul-boot -boot-info-table -boot-load-size 4 \
--b boot/isolinux/isolinux.bin -c boot/isolinux/isolinux.boot ../.
+-b boot/isolinux/isolinux.bin -c boot/isolinux/isolinux.boot \
+${BOOTISOWITHUEFI} \
+../.
