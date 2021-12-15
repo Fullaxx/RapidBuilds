@@ -34,12 +34,12 @@ if [ "${RLUEFIBOOT}" == "REFIND" ]; then
   tar xf RLBFILES/UEFI/refind.tar -C ${BDIR}/shell/
 #  mkdir -p ${BDIR}/shell/EFI/
 #  cp -r RLBFILES/EFI/{BOOT,tools} ${BDIR}/shell/EFI/
-  cp -v RLBFILES/boot/refind.conf ${BDIR}/shell/EFI/BOOT/
+  install -D -m 0644 RLBFILES/boot/refind.conf ${BDIR}/shell/EFI/BOOT/refind.conf
 fi
 
 if [ "${RLUEFIBOOT}" == "GRUB" ]; then
   tar xf RLBFILES/UEFI/grub.tar -C ${BDIR}/shell/
-  cp -v RLBFILES/boot/grub.cfg ${BDIR}/shell/boot/grub/
+  install -D -m 0644 RLBFILES/boot/grub.cfg ${BDIR}/shell/boot/grub/grub.cfg
 fi
 
 # Template Grub Config for install
