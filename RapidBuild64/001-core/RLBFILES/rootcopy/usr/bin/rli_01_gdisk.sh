@@ -60,7 +60,7 @@ fi
 mkfs.ext2 -q -m0 ${RLPARTTWO}
 tune2fs -L boot ${RLPARTTWO}
 
-mkfs.ext4 -q -m0 ${RLPARTTHREE}
+mkfs.ext4 -q -m0 -O 64bit ${RLPARTTHREE}
 tune2fs -L storage ${RLPARTTHREE}
 
 # Use ext4 since RapidInstall lacks xfs_utils
