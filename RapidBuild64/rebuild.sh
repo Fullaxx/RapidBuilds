@@ -13,6 +13,10 @@ if [ "$0" != "./rebuild.sh" ]; then
   cd `dirname $0`
 fi
 
+if [ -z "${RAPIDBUILDSDIR}" ]; then
+  export RAPIDBUILDSDIR=$(dirname `pwd`)
+fi
+
 if [ -r spec.sh ]; then
   source spec.sh
 else
@@ -20,18 +24,22 @@ else
   exit 1
 fi
 
-if [ "$1" == "all" ]; then
-  ./rebuild.sh ${PROJECTCATEGORIES}
+if [ "$1" == "bo" ]; then
   cd baseoutput
   ./00-all.sh
   exit 0
 fi
 
-while [ -n "$1" ]; do
-  cd 00$1-* 2>/dev/null || cd 0$1-*
-#  if [ "$?" != "0" ]; then exit 1; fi
+if [ "$1" == "all" ]; then
+  ./rebuild.sh ${PROJECTCATEGORIES}
+  ./rebuild.sh bo
+  exit 0
+fi
 
+while [ -n "$1" ]; do
+  if [ ! -d $1-* ]; then bail "$1 is not a project category under ${PROJNAME}!"; fi
+  pushd $1-*
   ./00-all.sh
-  cd ../
+  popd
   shift
 done

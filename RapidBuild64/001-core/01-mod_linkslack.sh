@@ -6,7 +6,7 @@ source ./module_spec.sh
 rm -f *.txz *.xzm
 
 linkpackage ${SLACKPKGDIR}/a/aaa_base-*.txz
-linkpackage ${SLACKPKGDIR}/a/aaa_elflibs-*.txz
+linkpackage ${SLACKPKGDIR}/a/aaa_libraries-*.txz
 linkpackage ${SLACKPKGDIR}/a/aaa_terminfo-*.txz
 linkpackage ${SLACKPKGDIR}/a/acl-*.txz
 linkpackage ${SLACKPKGDIR}/a/acpid-*.txz
@@ -25,8 +25,6 @@ linkpackage ${SLACKPKGDIR}/a/etc-*.txz
 linkpackage ${SLACKPKGDIR}/a/file-*.txz
 linkpackage ${SLACKPKGDIR}/a/findutils-*.txz
 linkpackage ${SLACKPKGDIR}/a/gawk-*.txz
-# linkpackage ${SLACKPKGDIR}/a/getty-ps-*.txz - removed Fri Oct 18 21:00:50 UTC 2019
-# linkpackage ${SLACKPKGDIR}/a/glibc-solibs-*.txz  can we get away with this?? - looks like it
 linkpackage ${SLACKPKGDIR}/a/glibc-zoneinfo-*.txz
 linkpackage ${SLACKPKGDIR}/a/gpm-*.txz
 linkpackage ${SLACKPKGDIR}/a/gptfdisk-*.txz

@@ -300,8 +300,8 @@ if [ "${INCXWININFO}" == "Y" ]; then
   linkpackage ${SLACKPKGDIR}/x/xwininfo-*.txz
 fi
 
-if [ "${INCINTELGPUTOOLS}" == "Y" ]; then
-  linkpackage ${SLACKPKGDIR}/x/intel-gpu-tools-*.txz
+if [ "${INCIGTGPUTOOLS}" == "Y" ]; then
+  linkpackage ${SLACKPKGDIR}/x/igt-gpu-tools-*.txz
 fi
 
 if [ "${INCVULKANSDK}" == "Y" ]; then

@@ -1,23 +1,27 @@
 set -e
 
 PROJNAME="RAPIDINSTALL"
-SLACKPKGVERS="current"
+SLACKPKGVERS="15.0"
 KERNVERS="5.4.182"
 ARCH="x86_64"
 TIMESTAMPEDISO="0"
 
 # This is the list of categories that will be rebuilt by "./rebuild.sh all"
-PROJECTCATEGORIES="1"
+PROJECTCATEGORIES="001"
 
-RAPIDBUILDSDIR=${RAPIDBUILDSDIR:-/opt/RL/RapidBuilds}
 PACKAGESDIR=${PACKAGESDIR:-/opt/RL/packages}
 ISOOUTPUTDIR=${ISOOUTPUTDIR:-/opt/RL/output}
+
+if [ -z "${RAPIDBUILDSDIR}" ]; then
+  >&2 echo "RAPIDBUILDSDIR is not set"
+  exit 1
+fi
 
 PROJECTBASE="${RAPIDBUILDSDIR}/RapidInstall64"
 RAPIDDEPLOGIC="${RAPIDBUILDSDIR}/RDL"
 RLSHELL="${PACKAGESDIR}/rapidshells/RapidLinuxShell-190310.tar.xz"
 
-if [ "$ARCH" == "x86_64" ]; then
+if [ "${ARCH}" == "x86_64" ]; then
   SLACKPKGDIR="${PACKAGESDIR}/slackware/Slack64-${SLACKPKGVERS}/slackware64"
   SLACKEXTRA="${PACKAGESDIR}/slackware/Slack64-${SLACKPKGVERS}/extra"
   KERNELPKGDIR="${PACKAGESDIR}/rapidkernels/64/${KERNVERS}"

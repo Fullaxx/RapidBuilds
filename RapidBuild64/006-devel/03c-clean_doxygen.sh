@@ -5,8 +5,8 @@ source ./module_spec.sh
 
 # Clean up doxygen
 if [ "${INCDOXYGEN}" == "Y" ]; then
-# if we dont have QT
-  if [ "${INCQT}" != "Y" ]; then
+# if we dont have QT5
+  if [ "${INCQTFIVE}" != "Y" ]; then
     rm ${DIR}/usr/bin/doxywizard
   fi
 

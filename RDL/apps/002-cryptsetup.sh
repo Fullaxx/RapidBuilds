@@ -3,4 +3,5 @@ if [ "${INCCRYPTSETUP}" == "Y" ]; then
   INCJSONC="Y"
   INCLIBGCRYPT="Y"
   INCLIBGPGERROR="Y"
+  INCLIBSSHONE="Y"
 fi

@@ -157,8 +157,8 @@ if [ "${INCADWAITAICONTHEME}" == "Y" ]; then
   linkpackage ${SLACKPKGDIR}/l/adwaita-icon-theme-*.txz
 fi
 
-if [ "${INCGNOMETHEMESSTANDARD}" == "Y" ]; then
-  linkpackage ${SLACKPKGDIR}/l/gnome-themes-standard-*.txz
+if [ "${INCGNOMETHEMESEXTRA}" == "Y" ]; then
+  linkpackage ${SLACKPKGDIR}/l/gnome-themes-extra-*.txz
 fi
 
 if [ "${INCHICOLORICONTHEME}" == "Y" ]; then
@@ -510,17 +510,10 @@ if [ "${INCPULSE}" == "Y" ]; then
   linkpackage ${SLACKPKGDIR}/l/sbc-*.txz
 fi
 
-if [ "${INCQT}" == "Y" ]; then
-  linkpackage ${SLACKPKGDIR}/l/qt-*.txz
-  linkpackage ${SLACKPKGDIR}/l/polkit-qt-?-*.txz
-fi
-
 if [ "${INCQTFIVE}" == "Y" ]; then
-  if [ "${INCSLACKQTFIVE}" == "Y" ]; then
-    linkpackage ${SLACKPKGDIR}/l/PyQt5-*.txz
-    linkpackage ${SLACKPKGDIR}/l/qt5-webkit-*.txz
-    linkpackage ${SLACKPKGDIR}/l/qt5-5.*.txz
-  fi
+  linkpackage ${SLACKPKGDIR}/l/PyQt5-*.txz
+  linkpackage ${SLACKPKGDIR}/l/qt5-webkit-*.txz
+  linkpackage ${SLACKPKGDIR}/l/qt5-5.*.txz
 fi
 
 if [ "${INCSDL}" == "Y" ]; then
@@ -551,6 +544,10 @@ fi
 
 if [ "${INCVFOURLUTILS}" == "Y" ]; then
   linkpackage ${SLACKPKGDIR}/l/v4l-utils-*.txz
+fi
+
+if [ "${INCVIDSTAB}" == "Y" ]; then
+  linkpackage ${SLACKPKGDIR}/l/vid.stab-*.txz
 fi
 
 if [ "${INCVORBISTOOLS}" == "Y" ]; then

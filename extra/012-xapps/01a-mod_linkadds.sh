@@ -80,12 +80,6 @@ if [ "${INCOPENBOX}" == "Y" ]; then
   linkpackage "${PACKAGESDIR}/openbox/openbox-3.6.1-${ARCH}-bksrc1.xzm"
 fi
 
-if [ "${INCQTFIVE}" == "Y" ]; then
-  if [ "${INCCUSTOMQTFIVE}" == "Y" ]; then
-    linkpackage "${PACKAGESDIR}/qt5/qt5-5.15.1-${ARCH}-bksrc1.xzm"
-  fi
-fi
-
 if [ "${INCRECORDMYDESKTOP}" == "Y" ]; then
   linkpackage "${PACKAGESDIR}/recordmydesktop/recordmydesktop-0.3.8.1-${ARCH}-bksrc1.xzm"
 fi

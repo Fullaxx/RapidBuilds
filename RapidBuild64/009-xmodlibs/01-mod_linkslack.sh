@@ -15,6 +15,7 @@ linkpackage ${SLACKPKGDIR}/l/libnl3-*.txz
 # wget,libsoup require libpsl
 linkpackage ${SLACKPKGDIR}/l/libpsl-*.txz
 linkpackage ${SLACKPKGDIR}/l/libsigc++-*.txz
+linkpackage ${SLACKPKGDIR}/l/libseccomp-*.txz
 linkpackage ${SLACKPKGDIR}/l/libtasn1-*.txz
 linkpackage ${SLACKPKGDIR}/l/libunistring-*.txz
 linkpackage ${SLACKPKGDIR}/l/libxml2-*.txz
@@ -240,8 +241,13 @@ if [ "${INCLIBSSHONE}" == "Y" ]; then
 fi
 
 if [ "${INCLIBUNWIND}" == "Y" ]; then
-# strace needs libunwind
+# strace,samba needs libunwind
   linkpackage ${SLACKPKGDIR}/l/libunwind-*.txz
+fi
+
+if [ "${INCLIBURING}" == "Y" ]; then
+# mariadb,samba needs liburing
+  linkpackage ${SLACKPKGDIR}/l/liburing-*.txz
 fi
 
 if [ "${INCLIBUSB}" == "Y" ]; then

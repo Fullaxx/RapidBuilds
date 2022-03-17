@@ -208,10 +208,6 @@ if [ "${INCRZIP}" == "Y" ]; then
   linkpackage ${SLACKPKGDIR}/ap/rzip-*.txz
 fi
 
-if [ "${INCPMUTILS}" == "Y" ]; then
-  linkpackage ${SLACKPKGDIR}/ap/pm-utils-*.txz
-fi
-
 if [ "${INCSCIM}" == "Y" ]; then
   linkpackage ${SLACKPKGDIR}/ap/sc-im-*.txz
 fi

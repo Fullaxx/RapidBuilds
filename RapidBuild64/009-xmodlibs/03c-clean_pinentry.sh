@@ -11,8 +11,9 @@ if [ "${INCPINENTRY}" == "Y" ]; then
     rm ${DIR}/usr/bin/pinentry
     ln -s pinentry-curses ${DIR}/usr/bin/pinentry
   fi
-  if [ "${INCQT}" != "Y" ]; then
+
+# if we dont have QT5
+  if [ "${INCQTFIVE}" != "Y" ]; then
     rm ${DIR}/usr/bin/pinentry-qt
-    rm ${DIR}/usr/bin/pinentry-qt4
   fi
 fi

@@ -5,4 +5,5 @@ if [ "${INCGSTREAMER}" == "Y" ]; then
   INCLIBPROXY="Y"
   INCNEON="Y"
   INCORC="Y"
+  INCVIDSTAB="Y"
 fi
