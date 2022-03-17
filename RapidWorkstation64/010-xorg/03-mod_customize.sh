@@ -33,7 +33,7 @@ if [ -f ${DIR}/etc/X11/app-defaults/XTerm ]; then
   sed -e "s/*saveLines: 1024/xterm*vt100.background: black\nxterm*vt100.foreground: lightgray\n\n*saveLines: 16384/" -i ${DIR}/etc/X11/app-defaults/XTerm
 
 # Set the double click character class to a reasonable default
-  sed -e 's/^!*charClass:/*charClass:/' -i ${DIR}/etc/X11/app-defaults/XTerm
+  sed -e 's/^\!\*charClass:/\*charClass:/' -i ${DIR}/etc/X11/app-defaults/XTerm
 
 # (OLD) Set the default xterm font size to unreadable
 # sed -e 's|XTerm.vt100.font: -\*-terminus-medium-r-normal-\*-20|XTerm.vt100.font: -\*-terminus-medium-r-normal-\*-12|' -i ${DIR}/etc/X11/app-defaults/XTerm
