@@ -13,10 +13,6 @@ if [ "${INCBTRFSPROGS}" == "Y" ]; then
   linkpackage ${SLACKPKGDIR}/a/btrfs-progs-*.txz
 fi
 
-if [ "${INCCGMANAGER}" == "Y" ]; then
-  linkpackage ${SLACKPKGDIR}/ap/cgmanager-*.txz
-fi
-
 if [ "${INCCPIO}" == "Y" ]; then
   linkpackage ${SLACKPKGDIR}/a/cpio-*.txz
 fi
@@ -170,6 +166,11 @@ fi
 if [ "${INCGROFF}" == "Y" ]; then
   linkpackage ${SLACKPKGDIR}/ap/groff-*.txz
 fi
+
+if [ "${INCINXI}" == "Y" ]; then
+  linkpackage ${SLACKPKGDIR}/ap/inxi-*.txz
+fi
+
 if [ "${INCJOE}" == "Y" ]; then
   linkpackage ${SLACKPKGDIR}/ap/joe-*.txz
 fi
@@ -195,16 +196,16 @@ if [ "${INCMPGONETWOTHREE}" == "Y" ]; then
   linkpackage ${SLACKPKGDIR}/ap/mpg123-*.txz
 fi
 
+if [ "${INCNEOFETCH}" == "Y" ]; then
+  linkpackage ${SLACKPKGDIR}/ap/neofetch-*.txz
+fi
+
 if [ "${INCNVMECLI}" == "Y" ]; then
   linkpackage ${SLACKPKGDIR}/ap/nvme-cli-*.txz
 fi
 
 if [ "${INCRZIP}" == "Y" ]; then
   linkpackage ${SLACKPKGDIR}/ap/rzip-*.txz
-fi
-
-if [ "${INCPMUTILS}" == "Y" ]; then
-  linkpackage ${SLACKPKGDIR}/ap/pm-utils-*.txz
 fi
 
 if [ "${INCSCIM}" == "Y" ]; then
@@ -231,10 +232,18 @@ if [ "${INCTMUX}" == "Y" ]; then
   linkpackage ${SLACKPKGDIR}/ap/tmux-*.txz
 fi
 
+if [ "${INCUNDERVOLT}" == "Y" ]; then
+  linkpackage ${SLACKPKGDIR}/ap/undervolt-*.txz
+fi
+
 ###########################################################
 
 if [ "${INCGIT}" == "Y" ]; then
   linkpackage ${SLACKPKGDIR}/d/git-*.txz
+fi
+
+if [ "${INCTIDYHTMLFIVE}" == "Y" ]; then
+  linkpackage ${SLACKPKGDIR}/l/tidy-html5-*.txz
 fi
 
 if [ "${INCNETFILTER}" == "Y" ]; then

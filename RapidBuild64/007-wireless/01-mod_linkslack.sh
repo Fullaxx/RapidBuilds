@@ -9,14 +9,7 @@ linkpackage ${SLACKPKGDIR}/n/iw-*.txz
 linkpackage ${SLACKPKGDIR}/n/wireless_tools-*.txz
 
 if [ "${INCBLUETOOTH}" == "Y" ]; then
-
   for PKG in ${SLACKPKGDIR}/n/bluez-*.txz; do linkpackage ${PKG}; done
-
-# BlueDevil is a set of components which integrate Bluetooth in KDE
-  if [ "${INCQT}" == "Y" ]; then
-    linkpackage ${SLACKPKGDIR}/l/libbluedevil-*.txz
-  fi
-
 fi
 
 if [ "${INCCRDA}" == "Y" ]; then

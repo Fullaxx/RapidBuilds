@@ -24,7 +24,7 @@ if [ "${INCETERM}" == "Y" ]; then
 fi
 
 if [ "${INCEVINCE}" == "Y" ]; then
-  linkpackage "${PACKAGESDIR}/evince/evince-3.28.2-${ARCH}-bksrc1.xzm"
+  linkpackage "${PACKAGESDIR}/evince/evince-3.36.7-${ARCH}-bksrc1.xzm"
 fi
 
 if [ "${INCFBPANEL}" == "Y" ]; then
@@ -80,8 +80,8 @@ if [ "${INCOPENBOX}" == "Y" ]; then
   linkpackage "${PACKAGESDIR}/openbox/openbox-3.6.1-${ARCH}-bksrc1.xzm"
 fi
 
-if [ "${INCQTFIVE}" == "Y" ]; then
-  linkpackage "${PACKAGESDIR}/qt5/qt5-5.13.2-${ARCH}-bksrc2.xzm"
+if [ "${INCRECORDMYDESKTOP}" == "Y" ]; then
+  linkpackage "${PACKAGESDIR}/recordmydesktop/recordmydesktop-0.3.8.1-${ARCH}-bksrc1.xzm"
 fi
 
 if [ "${INCSLOCK}" == "Y" ]; then
@@ -102,7 +102,7 @@ fi
 if [ "${INCVLC}" == "Y" ]; then
   linkpackage "${PACKAGESDIR}/libmpeg2/libmpeg2-0.5.1-${ARCH}-bksrc1.xzm"
   linkpackage "${PACKAGESDIR}/libdvbpsi/libdvbpsi-1.3.2-${ARCH}-bksrc1.xzm"
-  linkpackage "${PACKAGESDIR}/vlc/vlc-3.0.11-${ARCH}-bksrc1.xzm"
+  linkpackage "${PACKAGESDIR}/vlc/vlc-3.0.11-${ARCH}-bksrc2.xzm"
 fi
 
 if [ "${INCWIRESHARK}" == "Y" ]; then
@@ -110,7 +110,7 @@ if [ "${INCWIRESHARK}" == "Y" ]; then
   linkpackage "${PACKAGESDIR}/portaudio/portaudio-v19-${ARCH}-bksrc1.xzm"
   linkpackage "${PACKAGESDIR}/spandsp/spandsp-0.0.6-${ARCH}-bksrc1.xzm"
 #  linkpackage "${PACKAGESDIR}/wireshark/wireshark-2.6.14-GTK2-${ARCH}-bksrc1.xzm"
-  linkpackage "${PACKAGESDIR}/wireshark/wireshark-3.0.12-${ARCH}-bksrc1.xzm"
+  linkpackage "${PACKAGESDIR}/wireshark/wireshark-3.2.12-${ARCH}-bksrc1.xzm"
 fi
 
 if [ "${INCXFE}" == "Y" ]; then

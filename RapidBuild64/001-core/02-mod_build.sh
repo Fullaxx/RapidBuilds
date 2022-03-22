@@ -23,6 +23,11 @@ for PKG in *.txz; do
 
   tar xf ${PKG} -C ${DIR}
 
+  if [[ ${PKG} == sysvinit-?.??-*.txz ]]; then
+    echo "${PKG}: Removing /sbin/init reload from sysvinit install/doinst.sh ..."
+    sed -e 's@  /sbin/init u@  echo "/sbin/init u" >/dev/null@' -i ${DIR}/install/doinst.sh
+  fi
+
   if [[ ${PKG} == glibc-zoneinfo-*.txz ]]; then
     echo "${PKG}: Removing default timezone setting from glibc-zoneinfo install/doinst.sh ..."
     patch ${DIR}/install/doinst.sh RLBFILES/patches/glibc-zoneinfo-install.diff

@@ -15,6 +15,7 @@ linkpackage ${SLACKPKGDIR}/l/libnl3-*.txz
 # wget,libsoup require libpsl
 linkpackage ${SLACKPKGDIR}/l/libpsl-*.txz
 linkpackage ${SLACKPKGDIR}/l/libsigc++-*.txz
+linkpackage ${SLACKPKGDIR}/l/libseccomp-*.txz
 linkpackage ${SLACKPKGDIR}/l/libtasn1-*.txz
 linkpackage ${SLACKPKGDIR}/l/libunistring-*.txz
 linkpackage ${SLACKPKGDIR}/l/libxml2-*.txz
@@ -23,6 +24,11 @@ linkpackage ${SLACKPKGDIR}/l/pcre-*.txz
 linkpackage ${SLACKPKGDIR}/l/pcre2-*.txz
 linkpackage ${SLACKPKGDIR}/l/sg3_utils-*.txz
 linkpackage ${SLACKPKGDIR}/l/shared-mime-info-*.txz
+# rsync needs xxHash
+linkpackage ${SLACKPKGDIR}/l/xxHash-*.txz
+
+linkpackage ${SLACKPKGDIR}/l/lz4-*.txz
+linkpackage ${SLACKPKGDIR}/l/zstd-*.txz
 
 linkpackage ${SLACKPKGDIR}/n/ca-certificates-*.txz
 linkpackage ${SLACKPKGDIR}/n/cyrus-sasl-*.txz
@@ -50,15 +56,11 @@ fi
 if [ "${INCASPELL}" == "Y" ]; then
 # enchant and bluefish need aspell
   linkpackage ${SLACKPKGDIR}/l/aspell-en-*.txz
-  linkpackage ${SLACKPKGDIR}/l/aspell-?.*.txz
+  linkpackage ${SLACKPKGDIR}/l/aspell-0.*.txz
 fi
 
 if [ "${INCBOOST}" == "Y" ]; then
   linkpackage ${SLACKPKGDIR}/l/boost-*.txz
-fi
-
-if [ "${INCCONSOLEKITTWO}" == "Y" ]; then
-  linkpackage ${SLACKPKGDIR}/l/ConsoleKit2-*.txz
 fi
 
 if [ "${INCDB48}" == "Y" ]; then
@@ -116,6 +118,14 @@ if [ "${INCHUNSPELL}" == "Y" ]; then
   linkpackage ${SLACKPKGDIR}/l/hunspell-*.txz
 fi
 
+if [ "${INCHYPHEN}" == "Y" ]; then
+  linkpackage ${SLACKPKGDIR}/l/hyphen-*.txz
+fi
+
+if [ "${INCISL}" == "Y" ]; then
+  linkpackage ${SLACKPKGDIR}/l/isl-*.txz
+fi
+
 if [ "${INCISOCODES}" == "Y" ]; then
   linkpackage ${SLACKPKGDIR}/l/iso-codes-*.txz
 fi
@@ -160,11 +170,6 @@ fi
 if [ "${INCLIBASSUAN}" == "Y" ]; then
 # Samba,gpgme,gnupg2,pinentry reqs libassuan
   linkpackage ${SLACKPKGDIR}/n/libassuan-*.txz
-fi
-
-if [ "${INCLIBCROCO}" == "Y" ]; then
-# gettext,librsvg needs libcroco
-  linkpackage ${SLACKPKGDIR}/l/libcroco-*.txz
 fi
 
 if [ "${INCLIBGCRYPT}" == "Y" ]; then
@@ -225,10 +230,6 @@ if [ "${INCLIBSECRET}" == "Y" ]; then
   linkpackage ${SLACKPKGDIR}/l/libsecret-*.txz
 fi
 
-if [ "${INCLIBTIRPC}" == "Y" ]; then
-  linkpackage ${SLACKPKGDIR}/n/libtirpc-*.txz
-fi
-
 if [ "${INCLIBSODIUM}" == "Y" ]; then
 # zeromq needs libsodium
   linkpackage ${SLACKPKGDIR}/l/libsodium-*.txz
@@ -240,8 +241,22 @@ if [ "${INCLIBSSHONE}" == "Y" ]; then
 fi
 
 if [ "${INCLIBUNWIND}" == "Y" ]; then
-# strace needs libunwind
+# strace,samba needs libunwind
   linkpackage ${SLACKPKGDIR}/l/libunwind-*.txz
+fi
+
+if [ "${INCLIBURING}" == "Y" ]; then
+# mariadb,samba needs liburing
+  linkpackage ${SLACKPKGDIR}/l/liburing-*.txz
+fi
+
+if [ "${INCLIBUSB}" == "Y" ]; then
+# usbredir needs libusb
+  linkpackage ${SLACKPKGDIR}/l/libusb-*.txz
+fi
+
+if [ "${INCLIBUV}" == "Y" ]; then
+  linkpackage ${SLACKPKGDIR}/l/libuv-*.txz
 fi
 
 if [ "${INCLIBVPX}" == "Y" ]; then
@@ -259,7 +274,7 @@ if [ "${INCLIBYAML}" == "Y" ]; then
 fi
 
 if [ "${INCLIBZIP}" == "Y" ]; then
-# scim needs libzip
+# imagemagick,scim needs libzip
   linkpackage ${SLACKPKGDIR}/l/libzip-*.txz
 fi
 
@@ -286,16 +301,17 @@ if [ "${INCPOLKIT}" == "Y" ]; then
 fi
 
 if [ "${INCMOZILLANSS}" == "Y" ]; then
+# chrome needs this
   linkpackage ${SLACKPKGDIR}/l/mozilla-nss-*.txz
 fi
 
-if [ "${INCMOZJSSIXTY}" == "Y" ]; then
-# polkit needs mozjs60
-  linkpackage ${SLACKPKGDIR}/l/mozjs60-*.txz
+if [ "${INCMOZJSSEVENTYEIGHT}" == "Y" ]; then
+# polkit needs mozjs78
+  linkpackage ${SLACKPKGDIR}/l/mozjs78-*.txz
 fi
 
 if [ "${INCNEON}" == "Y" ]; then
-# audactous needs neon
+# audacious needs neon
   linkpackage ${SLACKPKGDIR}/l/neon-*.txz
 fi
 
@@ -336,7 +352,6 @@ if [ "${INCUTFEIGHTPROC}" == "Y" ]; then
   linkpackage ${SLACKPKGDIR}/l/utf8proc-*.txz
 fi
 
-if [ "${INCZSTD}" == "Y" ]; then
-# squashfs-tools needs zstd
-  linkpackage ${SLACKPKGDIR}/l/zstd-*.txz
+if [ "${INCWOFFTWO}" == "Y" ]; then
+  linkpackage ${SLACKPKGDIR}/l/woff2-*.txz
 fi

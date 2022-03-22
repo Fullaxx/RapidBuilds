@@ -42,7 +42,10 @@ rm -rf ${DIR}/lib/modules/*/kernel/drivers/gpu/drm/radeon
 rm -rf ${DIR}/lib/modules/*/kernel/drivers/gpu/drm/vmwgfx
 
 pushd ${DIR}/lib/modules/*/kernel/drivers
-tar cf media.tar media/media.ko media/usb/uvc media/v4l2-core
+tar cf media.tar media/mc
+tar uf media.tar media/v4l2-core
+tar uf media.tar media/usb/uvc
+tar uf media.tar media/common/videobuf2
 rm -rf media; tar xvf media.tar; rm media.tar
 popd
 
@@ -53,7 +56,10 @@ rm -rf ${DIR}/lib/modules/*/kernel/drivers/net/can
 rm -rf ${DIR}/lib/modules/*/kernel/drivers/net/dsa
 
 pushd ${DIR}/lib/modules/*/kernel/drivers/net
-tar cf ethernet.tar ethernet/8390 ethernet/amd ethernet/intel ethernet/realtek
+tar cf ethernet.tar ethernet/8390
+tar uf ethernet.tar ethernet/amd
+tar uf ethernet.tar ethernet/intel
+tar uf ethernet.tar ethernet/realtek
 rm -rf ethernet; tar xvf ethernet.tar; rm ethernet.tar
 popd
 
@@ -101,7 +107,10 @@ rm -rf ${DIR}/lib/modules/*/kernel/net/vmw_vsock
 rm -rf ${DIR}/lib/modules/*/kernel/net/xfrm
 
 pushd ${DIR}/lib/modules/*/kernel
-tar cf sound.tar sound/*.ko sound/core sound/drivers/snd-*.ko sound/hda sound/pci/ac97 sound/pci/hda sound/usb/snd-usb-audio.ko
+tar cf sound.tar sound/*.ko sound/core sound/drivers/snd-*.ko sound/hda sound/pci/{ac97,hda}
+tar uf sound.tar sound/usb/snd-usb-audio.ko
+tar uf sound.tar sound/soc/snd-soc-core.ko
+tar uf sound.tar sound/soc/codecs/snd-soc-rl6231.ko
 rm -rf sound; tar xvf sound.tar; rm sound.tar
 rm -r sound/core/seq
 rm sound/drivers/{snd-mtpav.ko,snd-virmidi.ko}

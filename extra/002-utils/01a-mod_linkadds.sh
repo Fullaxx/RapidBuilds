@@ -12,7 +12,7 @@ if [ "${INCATOP}" == "Y" ]; then
 fi
 
 if [ "${INCBINDTOOLS}" == "Y" ]; then
-  linkpackage "${PACKAGESDIR}/bindtools/bindtools-9.12.3_P1-${ARCH}-3.xzm"
+  linkpackage "${PACKAGESDIR}/bindtools/bindtools-9.16.8-${ARCH}-2.xzm"
 fi
 
 if [ "${INCCALC}" == "Y" ]; then
@@ -37,6 +37,10 @@ fi
 
 if [ "${INCDAVFSTWO}" == "Y" ]; then
   linkpackage "${PACKAGESDIR}/davfs2/davfs2-1.5.5-${ARCH}-bksrc1.xzm"
+fi
+
+if [ "${INCDOSTWOUNIX}" == "Y" ]; then
+  linkpackage "${PACKAGESDIR}/dos2unix/dos2unix-7.4.1-${ARCH}-bksrc1.xzm"
 fi
 
 if [ "${INCEXFAT}" == "Y" ]; then
@@ -89,16 +93,16 @@ if [ "${INCLOOPAESSETUP}" == "Y" ]; then
   linkpackage "${PACKAGESDIR}/loop-aes-losetup/loop-aes-losetup-2.30.1-${ARCH}-bksrc1.xzm"
 fi
 
-if [ "${INCLZFOUR}" == "Y" ]; then
-  linkpackage "${PACKAGESDIR}/lz4/lz4-1.8.3-${ARCH}-bksrc1.xzm"
-fi
-
 if [ "${INCMOSH}" == "Y" ]; then
-  linkpackage "${PACKAGESDIR}/mosh/mosh-1.3.2-${ARCH}-bksrc5.xzm"
+  linkpackage "${PACKAGESDIR}/mosh/mosh-1.3.2-${ARCH}-bksrc1.xzm"
 fi
 
 if [ "${INCNBD}" == "Y" ]; then
   linkpackage "${PACKAGESDIR}/nbd/nbd-3.20-${ARCH}-bksrc1.xzm"
+fi
+
+if [ "${INCNMON}" == "Y" ]; then
+  linkpackage "${PACKAGESDIR}/nmon/nmon-16m-${ARCH}-bksrc1.xzm"
 fi
 
 if [ "${INCNUMACTL}" == "Y" ]; then
@@ -110,16 +114,20 @@ if [ "${INCNUMAD}" == "Y" ]; then
 fi
 
 if [ "${INCPROTOBUF}" == "Y" ]; then
-  linkpackage "${PACKAGESDIR}/protobuf/protobuf-java-3.11.4-noarch-1.xzm"
-  linkpackage "${PACKAGESDIR}/protobuf/protobuf-3.11.4-${ARCH}-bksrc1.xzm"
+  linkpackage "${PACKAGESDIR}/protobuf/protobuf-java-3.12.4-noarch-1.xzm"
+  linkpackage "${PACKAGESDIR}/protobuf/protobuf-3.12.4-${ARCH}-bksrc1.xzm"
 fi
 
 if [ "${INCPROTOBUFC}" == "Y" ]; then
-  linkpackage "${PACKAGESDIR}/protobuf/protobuf-c-1.3.3-${ARCH}-bksrc1.xzm"
+  linkpackage "${PACKAGESDIR}/protobuf/protobuf-c-1.3.3-${ARCH}-bksrc2.xzm"
 fi
 
 if [ "${INCRASDAEMON}" == "Y" ]; then
   linkpackage "${PACKAGESDIR}/rasdaemon/rasdaemon-0.6.6-${ARCH}-bksrc1.xzm"
+fi
+
+if [ "${INCSEVENZIP}" == "Y" ]; then
+  linkpackage "${PACKAGESDIR}/7z/7z-20210315-${ARCH}-bksrc1.xzm"
 fi
 
 if [ "${INCTWEAK}" == "Y" ]; then
@@ -127,7 +135,7 @@ if [ "${INCTWEAK}" == "Y" ]; then
 fi
 
 if [ "${INCUDFTOOLS}" == "Y" ]; then
-  linkpackage "${PACKAGESDIR}/udftools/udftools-20200806-${ARCH}-bksrc1.xzm"
+  linkpackage "${PACKAGESDIR}/udftools/udftools-20210104-${ARCH}-bksrc1.xzm"
 fi
 
 if [ "${INCXNBD}" == "Y" ]; then

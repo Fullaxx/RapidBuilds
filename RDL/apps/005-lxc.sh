@@ -1,4 +1,3 @@
-if [ "${INCLXC}" == "Y" ]; then
-  INCCGMANAGER="Y"
-  INCLIBNIH="Y"
-fi
+#if [ "${INCLXC}" == "Y" ]; then
+#  INCLIBNIH="Y"
+#fi

@@ -2,7 +2,6 @@
 if [ "${INCMOD006DEVEL}" == "Y" ]; then
 # Departure from Default
   INCDOXYGEN="Y"
-  INCEMACS="N"
   INCLLVM="Y"
   INCMERCURIAL="Y"
 
@@ -10,6 +9,7 @@ if [ "${INCMOD006DEVEL}" == "Y" ]; then
   INCASTYLE="Y"
   INCCGDB="Y"
   INCCODEEXAMPLES="Y"
+  INCQLIBC="Y"
   INCVALGRIND="Y"
   INCVALKYRIE="N"
 fi

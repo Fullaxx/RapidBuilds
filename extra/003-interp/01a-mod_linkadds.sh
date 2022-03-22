@@ -11,6 +11,10 @@ if [ "${INCCHEETAHTHREE}" == "Y" ]; then
   linkpackage "${PACKAGESDIR}/python_mods/cheetah3-3.2.0-${ARCH}-bksrc1.xzm"
 fi
 
+if [ "${INCCONFIGOBJ}" == "Y" ]; then
+  linkpackage "${PACKAGESDIR}/python_mods/configobj-5.0.6-${ARCH}-bksrc1.xzm"
+fi
+
 if [ "${INCCLICK}" == "Y" ]; then
   linkpackage "${PACKAGESDIR}/python_mods/click-plugins-1.1.1-${ARCH}-bksrc1.xzm"
   linkpackage "${PACKAGESDIR}/python_mods/Click-7.0-${ARCH}-bksrc1.xzm"
@@ -24,9 +28,9 @@ if [ "${INCDSTAT}" == "Y" ]; then
   linkpackage "${PACKAGESDIR}/python_mods/dstat-0.7.3-noarch-bksrc1.xzm"
 fi
 
-if [ "${INCENUMTHREEFOUR}" == "Y" ]; then
-  linkpackage "${PACKAGESDIR}/python_mods/enum34-1.1.6-${ARCH}-bksrc1.xzm"
-fi
+#if [ "${INCENUMTHREEFOUR}" == "Y" ]; then
+#  linkpackage "${PACKAGESDIR}/python_mods/enum34-1.1.6-${ARCH}-bksrc1.xzm"
+#fi
 
 if [ "${INCFILELOCK}" == "Y" ]; then
   linkpackage "${PACKAGESDIR}/python_mods/filelock-3.0.12-${ARCH}-bksrc1.xzm"
@@ -63,11 +67,11 @@ if [ "${INCLXML}" == "Y" ]; then
 fi
 
 if [ "${INCNUMPY}" == "Y" ]; then
-  linkpackage "${PACKAGESDIR}/python_mods/numpy-1.18.4-${ARCH}-bksrc1.xzm"
+  linkpackage "${PACKAGESDIR}/python_mods/numpy-1.19.4-${ARCH}-bksrc1.xzm"
 fi
 
 if [ "${INCPANDAS}" == "Y" ]; then
-  linkpackage "${PACKAGESDIR}/python_mods/pandas-1.1.0-${ARCH}-bksrc1.xzm"
+  linkpackage "${PACKAGESDIR}/python_mods/pandas-1.1.4-${ARCH}-bksrc1.xzm"
 fi
 
 if [ "${INCPASTEBINIT}" == "Y" ]; then
@@ -75,7 +79,7 @@ if [ "${INCPASTEBINIT}" == "Y" ]; then
 fi
 
 if [ "${INCPSUTIL}" == "Y" ]; then
-  linkpackage "${PACKAGESDIR}/python_mods/psutil-5.6.7-${ARCH}-bksrc1.xzm"
+  linkpackage "${PACKAGESDIR}/python_mods/psutil-5.7.3-${ARCH}-bksrc1.xzm"
 fi
 
 if [ "${INCPYTHONDATEUTIL}" == "Y" ]; then
@@ -85,19 +89,24 @@ if [ "${INCPYTHONDATEUTIL}" == "Y" ]; then
 fi
 
 if [ "${INCPYTZ}" == "Y" ]; then
-  linkpackage "${PACKAGESDIR}/python_mods/pytz-2020.1-${ARCH}-bksrc1.xzm"
+  linkpackage "${PACKAGESDIR}/python_mods/pytz-2020.4-${ARCH}-bksrc1.xzm"
 fi
 
 if [ "${INCPYYAML}" == "Y" ]; then
   linkpackage "${PACKAGESDIR}/python_mods/PyYAML-5.3-${ARCH}-bksrc1.xzm"
 fi
 
-if [ "${INCSETUPTOOLSSCM}" == "Y" ]; then
-  linkpackage "${PACKAGESDIR}/python_mods/setuptools_scm-3.2.0-${ARCH}-bksrc1.xzm"
+if [ "${INCRDIFFBACKUP}" == "Y" ]; then
+  linkpackage "${PACKAGESDIR}/librsync/librsync-0.9.7-${ARCH}-bksrc1.xzm"
+  linkpackage "${PACKAGESDIR}/python_mods/rdiff-backup-2.0.5-${ARCH}-bksrc1.xzm"
 fi
 
+#if [ "${INCSETUPTOOLSSCM}" == "Y" ]; then
+#  linkpackage "${PACKAGESDIR}/python_mods/setuptools_scm-3.2.0-${ARCH}-bksrc1.xzm"
+#fi
+
 if [ "${INCTERMINATOR}" == "Y" ]; then
-  linkpackage "${PACKAGESDIR}/python_mods/terminator-1.91-${ARCH}-bksrc1.xzm"
+  linkpackage "${PACKAGESDIR}/python_mods/terminator-1.92-${ARCH}-bksrc1.xzm"
 fi
 
 if [ "${INCTORNADO}" == "Y" ]; then
@@ -105,7 +114,7 @@ if [ "${INCTORNADO}" == "Y" ]; then
 fi
 
 if [ "${INCVIRTUALENV}" == "Y" ]; then
-  linkpackage "${PACKAGESDIR}/python_mods/virtualenv-20.0.31-${ARCH}-bksrc1.xzm"
+  linkpackage "${PACKAGESDIR}/python_mods/virtualenv-20.1.0-${ARCH}-bksrc1.xzm"
 fi
 
 if [ "${INCWEBSOCKIFY}" == "Y" ]; then

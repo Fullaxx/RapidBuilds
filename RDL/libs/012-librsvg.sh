@@ -3,7 +3,6 @@ if [ "${INCLIBRSVG}" == "Y" ]; then
   INCEXPAT="Y"
   INCFRIBIDI="Y"
   INCGDK="Y"
-  INCLIBCROCO="Y"
   INCMESA="Y"
   INCPANGO="Y"
 fi

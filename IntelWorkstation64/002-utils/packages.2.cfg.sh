@@ -1,13 +1,5 @@
 # 002-utils options
 if [ "${INCMOD002UTILS}" == "Y" ]; then
-# a family of packages
-  INCTCSH="Y"
-
-# ap family of packages
-  INCCUPS="Y"
-  INCDMIDECODE="Y"
-  INCTMUX="Y"
-
 # Custom Additions
   INCACPI="Y"
   INCATOP="Y"
@@ -18,6 +10,7 @@ if [ "${INCMOD002UTILS}" == "Y" ]; then
   INCCURLFTPFS="Y"
   INCCURLLOADER="Y"
   INCDAVFSTWO="Y"
+  INCDOSTWOUNIX="Y"
   INCEXFAT="Y"
   INCEXTUNDELETE="Y"
   INCFLITE="Y"
@@ -31,9 +24,11 @@ if [ "${INCMOD002UTILS}" == "Y" ]; then
   INCLOOPAESSETUP="Y"
   INCMOSH="Y"
   INCNBD="Y"
+  INCNMON="Y"
   INCPROTOBUF="Y"
   INCPROTOBUFC="Y"
   INCRASDAEMON="Y"
+  INCSEVENZIP="Y"
   INCTWEAK="Y"
   INCUDFTOOLS="Y"
   INCXNBD="Y"

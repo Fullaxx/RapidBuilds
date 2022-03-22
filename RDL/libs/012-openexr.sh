@@ -1,3 +1,4 @@
 if [ "${INCOPENEXR}" == "Y" ]; then
-  INCILMBASE="Y"
+# usr/lib64/python?.?/site-packages/imath.so requires boost
+  INCBOOST="Y"
 fi

@@ -25,32 +25,31 @@ if ! /usr/bin/lsscsi | grep -q ${DEV} ; then
 fi
 
 /usr/bin/rl_disk_unmount.sh ${DEV} || bail "rl_disk_unmount.sh ${DEV} failed!"
-
 sync
 
-/usr/sbin/sdparm --command=stop ${DEV}
+#echo "Executing STOP command:"
+#/usr/sbin/sdparm --command=stop ${DEV}
+#sleep 0.5
+#sync
 
 KD=`basename ${DEV}`
-
-sleep 2
-
+echo "Marking ${DEV} offline ..."
 if [ -r /sys/block/${KD}/device/state ]; then
   echo offline > /sys/block/${KD}/device/state
 fi
+sleep 0.5
+sync
 
-sleep 2
-
+echo "Safely removing ${DEV} ..."
 if [ -r /sys/block/${KD}/device/delete ]; then
   echo 1 > /sys/block/${KD}/device/delete
 fi
 
-sleep 2
+# echo -n "Waiting for ${DEV} to disappear ..."
+while [ -b ${DEV} ]; do
+  sleep 0.1
+  echo -n '.'
+done
 
-if [ -b ${DEV} ]; then
-  bail "${DEV} stop failed!!"
-else
-  echo "${DEV} successfully stopped!"
-fi
-
-#hcil=`echo $device | awk '{split(substr($0, 2, 7),a,":"); print a[1], a[2], a[3], a[4]}'`
-#scsiadd -r $hcil
+echo
+echo "${DEV} successfully stopped!"

@@ -94,6 +94,10 @@ if [ "${INCSEAMONKEY}" == "Y" ]; then
   linkpackage ${SLACKPKGDIR}/xap/seamonkey-*.txz
 fi
 
+if [ "${INCSSR}" == "Y" ]; then
+  linkpackage ${SLACKPKGDIR}/xap/ssr-*.txz
+fi
+
 if [ "${INCMPLAYER}" == "Y" ]; then
   linkpackage ${SLACKPKGDIR}/xap/MPlayer-*.txz
 fi
@@ -146,10 +150,6 @@ fi
 if [ "${INCFLTK}" == "Y" ]; then
   linkpackage ${SLACKEXTRA}/fltk/fltk-*.txz
 fi
-
-if [ "${INCRECORDMYDESKTOP}" == "Y" ]; then
-  linkpackage ${SLACKEXTRA}/recordmydesktop/recordmydesktop-*.txz
-fi
 ### Apps ##############################
 
 ### Themes ############################
@@ -157,8 +157,8 @@ if [ "${INCADWAITAICONTHEME}" == "Y" ]; then
   linkpackage ${SLACKPKGDIR}/l/adwaita-icon-theme-*.txz
 fi
 
-if [ "${INCGNOMETHEMESSTANDARD}" == "Y" ]; then
-  linkpackage ${SLACKPKGDIR}/l/gnome-themes-standard-*.txz
+if [ "${INCGNOMETHEMESEXTRA}" == "Y" ]; then
+  linkpackage ${SLACKPKGDIR}/l/gnome-themes-extra-*.txz
 fi
 
 if [ "${INCHICOLORICONTHEME}" == "Y" ]; then
@@ -176,17 +176,6 @@ fi
 ### Themes ############################
 
 ### Libraries #########################
-# XXX FIXME
-if [ "${INCMMPACKAGE}" == "Y" ]; then
-  linkpackage ${SLACKPKGDIR}/l/glibmm-*.txz
-  linkpackage ${SLACKPKGDIR}/l/gtkmm2-*.txz
-  linkpackage ${SLACKPKGDIR}/l/gtkmm3-*.txz
-  linkpackage ${SLACKPKGDIR}/l/atkmm-*.txz
-  linkpackage ${SLACKPKGDIR}/l/cairomm-*.txz
-  linkpackage ${SLACKPKGDIR}/l/pangomm-*.txz
-fi
-# XXX FIXME
-
 if [ "${INCAFIFTYTWO}" == "Y" ]; then
 # MPlayer needs liba52
   linkpackage ${SLACKPKGDIR}/l/a52dec-*.txz
@@ -221,6 +210,17 @@ fi
 
 if [ "${INCCAIROMM}" == "Y" ]; then
   linkpackage ${SLACKPKGDIR}/l/cairomm-*.txz
+fi
+
+if [ "${INCCDDB}" == "Y" ]; then
+# Audacious,paranoia need libcddb
+  linkpackage ${SLACKPKGDIR}/l/libcddb-*.txz
+fi
+
+if [ "${INCCDIO}" == "Y" ]; then
+  linkpackage ${SLACKPKGDIR}/l/libcdio-?.?.?-*.txz
+# libcdio-paranoia holds libcdio_cdda.so.?.?.?, it also wants libcddb
+  linkpackage ${SLACKPKGDIR}/l/libcdio-paranoia-*.txz
 fi
 
 if [ "${INCDJVULIBRE}" == "Y" ]; then
@@ -291,12 +291,16 @@ if [ "${INCGOBJECTINTROSPECTION}" == "Y" ]; then
   linkpackage ${SLACKPKGDIR}/l/gobject-introspection-*.txz
 fi
 
+if [ "${INCGRAPHENE}" == "Y" ]; then
+  linkpackage ${SLACKPKGDIR}/l/graphene-*.txz
+fi
+
 if [ "${INCGSTREAMER}" == "Y" ]; then
   linkpackage ${SLACKPKGDIR}/l/gstreamer-*.txz
   linkpackage ${SLACKPKGDIR}/l/gst-plugins-base-*.txz
   linkpackage ${SLACKPKGDIR}/l/gst-plugins-good-*.txz
   if [ "${INCFFMPEG}" == "Y" ]; then
-  linkpackage ${SLACKPKGDIR}/l/gst-plugins-libav-*.txz
+    linkpackage ${SLACKPKGDIR}/l/gst-plugins-libav-*.txz
   fi
 fi
 
@@ -322,10 +326,6 @@ fi
 
 if [ "${INCGTKSPELL}" == "Y" ]; then
   linkpackage ${SLACKPKGDIR}/l/gtkspell-*.txz
-fi
-
-if [ "${INCILMBASE}" == "Y" ]; then
-  linkpackage ${SLACKPKGDIR}/l/ilmbase-*.txz
 fi
 
 if [ "${INCIMAGEMAGICK}" == "Y" ]; then
@@ -360,17 +360,6 @@ if [ "${INCLIBCANBERRA}" == "Y" ]; then
   linkpackage ${SLACKPKGDIR}/l/libcanberra-*.txz
 fi
 
-if [ "${INCCDDB}" == "Y" ]; then
-# Audacious,paranoia need libcddb
-  linkpackage ${SLACKPKGDIR}/l/libcddb-*.txz
-fi
-
-if [ "${INCCDIO}" == "Y" ]; then
-  linkpackage ${SLACKPKGDIR}/l/libcdio-?.?.?-*.txz
-# libcdio-paranoia holds libcdio_cdda.so.?.?.?, it also wants libcddb
-  linkpackage ${SLACKPKGDIR}/l/libcdio-paranoia-*.txz
-fi
-
 if [ "${INCLIBCUE}" == "Y" ]; then
 # Audacious needs libcue
   linkpackage ${SLACKPKGDIR}/l/libcue-*.txz
@@ -401,6 +390,11 @@ fi
 
 if [ "${INCLIBMNG}" == "Y" ]; then
   linkpackage ${SLACKPKGDIR}/l/libmng-*.txz
+fi
+
+if [ "${INCLIBMYPAINT}" == "Y" ]; then
+  linkpackage ${SLACKPKGDIR}/x/libmypaint-*.txz
+  linkpackage ${SLACKPKGDIR}/x/mypaint-brushes-*.txz
 fi
 
 if [ "${INCLIBNOTIFY}" == "Y" ]; then
@@ -458,13 +452,18 @@ if [ "${INCLIBWMF}" == "Y" ]; then
   linkpackage ${SLACKPKGDIR}/l/libwmf-*.txz
 fi
 
+if [ "${INCNETPBM}" == "Y" ]; then
+# xpaint needs netpbm
+  linkpackage ${SLACKPKGDIR}/l/netpbm-*.txz
+fi
+
 if [ "${INCOPENCL}" == "Y" ]; then
 # imagemagick needs OpenCL
   linkpackage ${SLACKPKGDIR}/l/ocl-icd-*.txz
 fi
 
 if [ "${INCOPENALSOFT}" == "Y" ]; then
-# mplayer needs openal-soft
+# mplayer,QT5 from slackware needs openal-soft
   linkpackage ${SLACKPKGDIR}/l/openal-soft-*.txz
 fi
 
@@ -501,7 +500,7 @@ if [ "${INCPAVUCONTROL}" == "Y" ]; then
 fi
 
 if [ "${INCPOPPLER}" == "Y" ]; then
-  linkpackage ${SLACKPKGDIR}/l/poppler-?.*.txz
+  linkpackage ${SLACKPKGDIR}/l/poppler-??.*.txz
   linkpackage ${SLACKPKGDIR}/l/poppler-data-*.txz
 fi
 
@@ -511,9 +510,10 @@ if [ "${INCPULSE}" == "Y" ]; then
   linkpackage ${SLACKPKGDIR}/l/sbc-*.txz
 fi
 
-if [ "${INCQT}" == "Y" ]; then
-  linkpackage ${SLACKPKGDIR}/l/qt-*.txz
-  linkpackage ${SLACKPKGDIR}/l/polkit-qt-?-*.txz
+if [ "${INCQTFIVE}" == "Y" ]; then
+  linkpackage ${SLACKPKGDIR}/l/PyQt5-*.txz
+  linkpackage ${SLACKPKGDIR}/l/qt5-webkit-*.txz
+  linkpackage ${SLACKPKGDIR}/l/qt5-5.*.txz
 fi
 
 if [ "${INCSDL}" == "Y" ]; then
@@ -546,6 +546,10 @@ if [ "${INCVFOURLUTILS}" == "Y" ]; then
   linkpackage ${SLACKPKGDIR}/l/v4l-utils-*.txz
 fi
 
+if [ "${INCVIDSTAB}" == "Y" ]; then
+  linkpackage ${SLACKPKGDIR}/l/vid.stab-*.txz
+fi
+
 if [ "${INCVORBISTOOLS}" == "Y" ]; then
   linkpackage ${SLACKPKGDIR}/ap/vorbis-tools-*.txz
 fi
@@ -558,14 +562,4 @@ fi
 if [ "${INCWAVPACK}" == "Y" ]; then
   linkpackage ${SLACKPKGDIR}/l/wavpack-*.txz
 fi
-
-if [ "${INCLIBMYPAINT}" == "Y" ]; then
-  linkpackage ${SLACKPKGDIR}/x/libmypaint-*.txz
-  linkpackage ${SLACKPKGDIR}/x/mypaint-brushes-*.txz
-fi
 ### Libraries #########################
-
-# IS THIS GONE NOW??
-#if [ "${INCMOZILLAFIREFOX}" == "Y" -a "${INCMPLAYER}" == "Y" ]; then
-#  linkpackage ${SLACKEXTRA}/mplayerplug-in/mplayerplug-in-*.txz
-#fi

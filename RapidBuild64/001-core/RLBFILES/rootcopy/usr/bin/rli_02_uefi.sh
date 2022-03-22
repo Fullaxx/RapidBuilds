@@ -26,10 +26,10 @@ else
   RLPARTTHREE="${DISK}3"
 fi
 
-if [ ! -d "${MNTDIR}" ]; then mkdir "${MNTDIR}"; fi
-mount "${RLPARTTWO}" "${MNTDIR}" -o noatime
+if [ ! -d ${MNTDIR} ]; then mkdir ${MNTDIR}; fi
+mount ${RLPARTTWO} ${MNTDIR} -o noatime
 
 echo "Copying OS from ${SRCDIR} to ${RLPARTTWO} (mounted on ${MNTDIR}) ..."
-cp -av "${SRCDIR}/rl" "${MNTDIR}/"
+cp -av ${SRCDIR}/rl ${MNTDIR}/
 
-umount "${RLPARTTWO}"
+umount ${RLPARTTWO}

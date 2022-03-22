@@ -1,3 +1,4 @@
-if [ "${INCXPDF}" == "Y" ]; then
-  INCQT="Y"
-fi
+#if [ "${INCXPDF}" == "Y" ]; then
+#  should this be INCQTFIVE
+#  INCQT="Y"
+#fi

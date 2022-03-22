@@ -24,17 +24,18 @@ else
   LIBDIR="lib"
 fi
 
-if [ ! -d "${MNTDIR}" ]; then mkdir "${MNTDIR}"; fi
-mount "${RLPART}" "${MNTDIR}" -o noatime
+if [ ! -d ${MNTDIR} ]; then mkdir ${MNTDIR}; fi
+mount ${RLPART} ${MNTDIR} -o noatime
 
 echo "Copying OS from ${SRCDIR} to ${RLPART} (mounted on ${MNTDIR})..."
-cp -av "${SRCDIR}"/* "${MNTDIR}"
+cp -av ${SRCDIR}/rl ${MNTDIR}
 
-rm -rf "${MNTDIR}"/boot/grub/i386-pc
-cp -a /usr/${LIBDIR}/grub/i386-pc "${MNTDIR}"/boot/grub/
-
-if [ -d "${MNTDIR}"/boot/grub/locale ]; then
-  rm -rf "${MNTDIR}"/boot/grub/locale
+mkdir -p ${MNTDIR}/boot/grub
+cp -av ${SRCDIR}/boot/{vmlinuz,irfs.img,mt86p} ${MNTDIR}/boot/
+cp -av ${SRCDIR}/install/grub.cfg ${MNTDIR}/boot/grub/
+cp -a /usr/${LIBDIR}/grub/i386-pc ${MNTDIR}/boot/grub/
+if [ -d ${MNTDIR}/boot/grub/locale ]; then
+  rm -rf ${MNTDIR}/boot/grub/locale
 fi
 
 # for NVMe devices
@@ -42,6 +43,6 @@ if echo "${RLPARTNUM}" | grep -q 'p' ; then
   RLPARTNUM=`echo "${RLPARTNUM}" | cut -dp -f2`
 fi
 
-sed -e "s/hd0,x/hd0,${RLPARTNUM}/g" -i "${MNTDIR}"/boot/grub/grub.cfg
+sed -e "s/hd0,x/hd0,${RLPARTNUM}/g" -i ${MNTDIR}/boot/grub/grub.cfg
 # export NOW=`date "+%Y%m%d%H%M%S"`
 # echo -n $NOW | sha1sum

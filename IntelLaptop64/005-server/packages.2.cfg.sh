@@ -1,8 +1,5 @@
 # 005-server options
 if [ "${INCMOD005SERVER}" == "Y" ]; then
-# Departure from Default
-  INCSAMBA="N"
-
 # Custom Additions
   INCDARKHTTPD="Y"
   INCLIBMICROHTTPD="Y"

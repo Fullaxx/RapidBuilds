@@ -1,6 +1,5 @@
 if [ "${INCGEGL}" == "Y" ]; then
 # SOFT INCFFMPEG="Y"
-  INCILMBASE="Y"
   INCJSONGLIB="Y"
   INCLIBRAW="Y"
   INCLIBRSVG="Y"

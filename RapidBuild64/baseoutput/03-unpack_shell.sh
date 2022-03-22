@@ -27,11 +27,26 @@ install -D -m 0644 RLBFILES/boot/rl.cfg ${BDIR}/shell/boot/rl.cfg
 install -D -m 0644 RLBFILES/boot/rl.jpg ${BDIR}/shell/boot/rl.jpg
 install -D -m 0644 RLBFILES/boot/isolinux/isolinux.cfg ${BDIR}/shell/boot/isolinux/isolinux.cfg
 install -D -m 0644 RLBFILES/boot/syslinux/syslinux.cfg ${BDIR}/shell/boot/syslinux/syslinux.cfg
-install -D -m 0644 RLBFILES/boot/grub/grub.cfg ${BDIR}/shell/boot/grub/grub.cfg
 install -D -m 0755 RLBFILES/rl/make_iso.sh ${BDIR}/shell/rl/make_iso.sh
 
-# Refind Conf and Banner
-install -D -m 0644 RLBFILES/boot/refind/refind.conf ${BDIR}/shell/boot/refind/refind.conf
-if [ -f RLBFILES/boot/refind/banner.jpg ]; then
-  install -D -m 0644 RLBFILES/boot/refind/banner.jpg ${BDIR}/shell/boot/refind/banner.jpg
+# EFI bootable CD/DVD components
+if [ "${RLUEFIBOOT}" == "REFIND" ]; then
+  tar xf RLBFILES/UEFI/refind.tar -C ${BDIR}/shell/
+#  mkdir -p ${BDIR}/shell/EFI/
+#  cp -r RLBFILES/EFI/{BOOT,tools} ${BDIR}/shell/EFI/
+  install -D -m 0644 RLBFILES/boot/refind.conf ${BDIR}/shell/EFI/BOOT/refind.conf
+fi
+
+if [ "${RLUEFIBOOT}" == "GRUB" ]; then
+  tar xf RLBFILES/UEFI/grub.tar -C ${BDIR}/shell/
+  install -D -m 0644 RLBFILES/boot/grub.cfg ${BDIR}/shell/boot/grub/grub.cfg
+fi
+
+# Template Grub Config for install
+install -D -m 0644 RLBFILES/install/grub/grub.cfg ${BDIR}/shell/install/grub.cfg
+
+# Template Refind Config for install
+install -D -m 0644 RLBFILES/install/refind/refind.conf ${BDIR}/shell/install/refind.conf
+if [ -f RLBFILES/install/refind/banner.jpg ]; then
+  install -D -m 0644 RLBFILES/install/refind/banner.jpg ${BDIR}/shell/install/banner.jpg
 fi

@@ -1,3 +1,3 @@
-if [ "${INCMONGOCDRIVER}" == "Y" ]; then
-  INCZSTD="Y"
-fi
+#if [ "${INCMONGOCDRIVER}" == "Y" ]; then
+#  INCZSTD="Y"
+#fi

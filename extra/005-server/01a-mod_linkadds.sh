@@ -12,15 +12,15 @@ if [ "${INCLIBMICROHTTPD}" == "Y" ]; then
 fi
 
 if [ "${INCLIBVIRT}" == "Y" ]; then
-  linkpackage "${PACKAGESDIR}/libvirt/libvirt-5.10.0-${ARCH}-bksrc1.xzm"
+  linkpackage "${PACKAGESDIR}/libvirt/libvirt-6.6.0-${ARCH}-bksrc1.xzm"
 fi
 
 if [ "${INCLIBWEBSOCKETS}" == "Y" ]; then
-  linkpackage "${PACKAGESDIR}/libwebsockets/libwebsockets-3.1.0-${ARCH}-bksrc1.xzm"
+  linkpackage "${PACKAGESDIR}/libwebsockets/libwebsockets-4.0.21-${ARCH}-bksrc1.xzm"
 fi
 
 if [ "${INCMONGOCDRIVER}" == "Y" ]; then
-  linkpackage "${PACKAGESDIR}/mongo/mongo-c-driver-1.15.3-${ARCH}-bksrc1.xzm"
+  linkpackage "${PACKAGESDIR}/mongo/mongo-c-driver-1.21.1-${ARCH}-bksrc1.xzm"
 fi
 
 if [ "${INCNGINX}" == "Y" ]; then
@@ -28,8 +28,8 @@ if [ "${INCNGINX}" == "Y" ]; then
 fi
 
 if [ "${INCNNG}" == "Y" ]; then
-  linkpackage "${PACKAGESDIR}/mbedtls/mbedtls-2.16.2-${ARCH}-bksrc1.xzm"
-  linkpackage "${PACKAGESDIR}/nng/nng-1.1.1-${ARCH}-bksrc1.xzm"
+  linkpackage "${PACKAGESDIR}/mbedtls/mbedtls-2.16.8-${ARCH}-bksrc1.xzm"
+  linkpackage "${PACKAGESDIR}/nng/nng-1.3.2-${ARCH}-bksrc1.xzm"
 fi
 
 if [ "${INCNODEZEROTEN}" == "Y" ]; then
@@ -60,16 +60,26 @@ if [ "${INCNOVNC}" == "Y" ]; then
   linkpackage "${PACKAGESDIR}/noVNC/noVNC-1.1.0-noarch-bksrc1.xzm"
 fi
 
+if [ "${INCQEMU}" == "Y" ]; then
+  linkpackage "${PACKAGESDIR}/tianocore/tianocore-20201104-noarch-bksrc1.xzm"
+  linkpackage "${PACKAGESDIR}/qemu/qemu-4.2.1-${ARCH}-bksrc1.xzm"
+fi
+
 if [ "${INCQUARK}" == "Y" ]; then
   linkpackage "${PACKAGESDIR}/quark/quark-20200527-${ARCH}-bksrc1.xzm"
 fi
 
 if [ "${INCREDIS}" == "Y" ]; then
-  linkpackage "${PACKAGESDIR}/redis/redis-6.0.6-${ARCH}-bksrc1.xzm"
+  linkpackage "${PACKAGESDIR}/redis/redis-6.2.3-${ARCH}-bksrc1.xzm"
 fi
 
-if [ "${INCQEMU}" == "Y" ]; then
-  linkpackage "${PACKAGESDIR}/qemu/qemu-3.1.1.1-${ARCH}-bksrc2.xzm"
+if [ "${INCSPICE}" == "Y" ]; then
+  linkpackage "${PACKAGESDIR}/spice/spice-protocol-0.14.3-noarch-bksrc1.xzm"
+  linkpackage "${PACKAGESDIR}/spice/spice-0.14.3-${ARCH}-bksrc1.xzm"
+fi
+
+if [ "${INCUSBREDIR}" == "Y" ]; then
+  linkpackage "${PACKAGESDIR}/spice/usbredir-0.8.0-${ARCH}-bksrc1.xzm"
 fi
 
 if [ "${INCYAJL}" == "Y" ]; then
@@ -77,7 +87,7 @@ if [ "${INCYAJL}" == "Y" ]; then
 fi
 
 if [ "${INCZEROMQ}" == "Y" ]; then
-  linkpackage "${PACKAGESDIR}/zeromq/zeromq-4.3.2-${ARCH}-bksrc2.xzm"
+  linkpackage "${PACKAGESDIR}/zeromq/zeromq-4.3.3-${ARCH}-bksrc1.xzm"
   linkpackage "${PACKAGESDIR}/zeromq/libpgm-5.2.122-${ARCH}-bksrc2.xzm"
   linkpackage "${PACKAGESDIR}/zeromq/czmq-4.1.1-${ARCH}-bksrc2.xzm"
   linkpackage "${PACKAGESDIR}/zeromq/jzmq-20181026-${ARCH}-bksrc1.xzm"

@@ -6,85 +6,102 @@ LOGFILE="/var/log/rl_autosave.log"
 NOW=`date "+%Y%m%d %H%M%S"`
 RLRC="/makesurethisdoesnotexistuntilsetproperly"
 
-write_to_log() {
-	echo "$NOW $1" >> $LOGFILE
+write_to_log()
+{
+	echo "${NOW} $1" >>${LOGFILE}
 }
 
-# This could be more elegant ...
-# All this needs to do is create all the parents directories for the incoming saved file
-create_rc_dirpath() {
-	touch "$1" 2>/dev/null || ( mkdir -p "$1"; rmdir "$1"; )
-	if [ -f "$1" ]; then rm "$1"; fi
+error()
+{
+	>&2 echo "$1"
+	write_to_log "$1"
 }
 
-savefile_if_needed() {
+save_file()
+{
+	echo "Saving $1 to $2/$1 ..."
+	write_to_log "Saving $1 to $2/$1 ..."
+	cp -a "$1" "$2/$1" || error "$1 could not be saved to $2/$1!"
+}
+
+check_file()
+{
 	FILE="$1"
-	LIVE="0"
-	SAVED="0"
-	
-	# if we can't find rootcopy ... bail
-	if [ ! -d "$RLRC" ]; then
-		write_to_log "Invalid rootcopy ($RLRC)!"
+	LIVESUM="init"
+	SAVEDSUM="none"
+
+# if we can't find rootcopy ... bail
+	if [ ! -d "${RLRC}" ]; then
+		error "Invalid rootcopy (${RLRC})!"
 		return
 	fi
 
-	if [ -f "/$FILE" ]; then
-		LIVE=`md5sum "/$FILE" | awk '{print $1}'`
+# Only files are allowed to be autosaved
+	if [ -f "${FILE}" ]; then
+		LIVESUM=`md5sum "${FILE}" | awk '{print $1}'`
 	else
-		write_to_log "/$FILE is not a file ... not saving"
-		return;
+		error "${FILE} is not a file ... not saving"
+		return
 	fi
-	
-	if [ -f "$RLRC/$FILE" ]; then
-		SAVED=`md5sum "$RLRC/$FILE" | awk '{print $1}'`
+
+# Grab the md5sum of saved file in rootcopy
+# or make all the parents in rootcopy for first save
+	if [ -f "${RLRC}/${FILE}" ]; then
+		SAVEDSUM=`md5sum "${RLRC}/${FILE}" | awk '{print $1}'`
 	else
-		create_rc_dirpath "$RLRC/$FILE"
+		PDIR=`dirname ${RLRC}/${FILE}`
+		mkdir -p ${PDIR}
 	fi
-	
-	if [ "$LIVE" != "$SAVED" ]; then
-	  write_to_log "Saving /$FILE to $RLRC/$FILE ..."
-	  cp -p "/$FILE" "$RLRC/$FILE" || write_to_log "/$FILE could not be saved to $RLRC/$FILE!"
+
+	if [ "${LIVESUM}" == "${SAVEDSUM}" ]; then
+		write_to_log "${FILE} matches ${RLRC}/${FILE}"
 	else
-	  write_to_log "/$FILE matches $RLRC/$FILE"
+		save_file "${FILE}" "${RLRC}"
 	fi
 }
 
-echo "Starting autosave ... log will be written to $LOGFILE"
+cd /
+echo "Starting autosave ... log will be written to ${LOGFILE}"
 
-if [ ! -r "$CONFFILE" ]; then
-	write_to_log "Invalid conf file ($CONFFILE)!"
+if [ ! -r "${CONFFILE}" ]; then
+	write_to_log "Invalid conf file (${CONFFILE})!"
 	exit 1
 fi
 
+# Start Autosave
 write_to_log "autosave started"
 
 while read line; do
-	command=$(echo "$line" | awk '{print $1}')
-	target=$(echo "$line" | awk '{print $2}')
+	COMMAND=$(echo "$line" | awk '{print $1}')
+	TARGET=$(echo "$line" | awk '{print $2}')
 
-	if [ "$command" == "autosave" ]; then
-		if [ "$target" == "on" ]; then
+	if [ "${COMMAND}" == "autosave" ]; then
+		if [ "${TARGET}" == "on" ]; then
 			AUTOSAVE="on";
+		else
+			echo "autosave is off, edit ${CONFFILE} to enable autosaving"
+			exit 0
 		fi
 	fi
 
-	if [ "$command" == "rootcopydir" ]; then
-		if [ -n "$target" ]; then
-			RLRC="$target";
+	if [ "${COMMAND}" == "rootcopydir" ]; then
+		if [ -n "${TARGET}" ]; then
+			RLRC="${TARGET}";
 		fi
 	fi
-	
-	if [ "$command" == "savefile" ]; then
-		if [ "$AUTOSAVE" == "on" ]; then
-			if [ -n "$target" ]; then
-				savefile_if_needed "$target"
+
+	if [ "${COMMAND}" == "savefile" ]; then
+		if [ "${AUTOSAVE}" == "on" ]; then
+			if [ -n "${TARGET}" ]; then
+				check_file "${TARGET}"
 			fi
 		else
-			write_to_log "autosave is off, edit $CONFFILE to enable autosaving"
+			echo "autosave is off, edit ${CONFFILE} to enable autosaving"
 		fi
 	fi
-done < "$CONFFILE"
+done <"${CONFFILE}"
 
+# End Autosave
 write_to_log "autosave complete"
 
 sync

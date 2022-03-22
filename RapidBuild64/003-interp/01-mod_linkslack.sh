@@ -112,10 +112,6 @@ if [ "${INCPYGOBJECT}" == "Y" ]; then
   linkpackage ${SLACKPKGDIR}/l/pygobject3-*.txz
 fi
 
-if [ "${INCPYQT}" == "Y" ]; then
-  linkpackage ${SLACKPKGDIR}/l/PyQt-*.txz
-fi
-
 if [ "${INCPYXDG}" == "Y" ]; then
   linkpackage ${SLACKPKGDIR}/x/pyxdg-*.txz
 fi

@@ -3,15 +3,15 @@
 source ../spec.sh
 source ./module_spec.sh
 
-# Clean up QT
-if [ "${INCQT}" == "Y" ]; then
+# Clean up QT5
+if [ "${INCQTFIVE}" == "Y" ]; then
+# libgstcamerabin needs gst-plugins-bad-free
+  rm ${DIR}/usr/${LIBDIR}/qt5/plugins/mediaservice/libgstcamerabin.so
 
-if [ "${INCMARIADB}" != "Y" ]; then
-  rm ${DIR}/usr/lib64/qt/plugins/sqldrivers/libqsqlmysql.so
-fi
+  rm ${DIR}/usr/${LIBDIR}/qt5/plugins/texttospeech/libqtexttospeech_speechd.so
+  rmdir ${DIR}/usr/${LIBDIR}/qt5/plugins/texttospeech
 
-if [ "${INCLIBIODBC}" != "Y" ]; then
-  rm ${DIR}/usr/lib64/qt/plugins/sqldrivers/libqsqlodbc.so
-fi
-
+  if [ "${INCMARIADB}" != "Y" ]; then
+    rm ${DIR}/usr/${LIBDIR}/qt5/plugins/sqldrivers/libqsqlmysql.so
+  fi
 fi

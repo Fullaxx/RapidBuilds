@@ -12,3 +12,5 @@ echo
 docker volume ls
 echo
 docker network ls
+echo
+docker system df

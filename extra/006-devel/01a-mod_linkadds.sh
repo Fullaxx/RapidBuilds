@@ -5,14 +5,18 @@ source ./module_spec.sh
 
 # Everyone gets this
 linkpackage "${PACKAGESDIR}/staticlibs/staticlibs-openssl-1.1.1g-${ARCH}-bksrc1.xzm"
-linkpackage "${PACKAGESDIR}/staticlibs/staticlibs-libevent-2.1.11-${ARCH}-bksrc1.xzm"
+linkpackage "${PACKAGESDIR}/staticlibs/staticlibs-libevent-2.1.12-${ARCH}-bksrc1.xzm"
+linkpackage "${PACKAGESDIR}/staticlibs/staticlibs-libgcrypt-1.8.6-${ARCH}-bksrc1.xzm"
+linkpackage "${PACKAGESDIR}/staticlibs/staticlibs-libsodium-1.0.18-${ARCH}-bksrc1.xzm"
+linkpackage "${PACKAGESDIR}/staticlibs/staticlibs-libpcap-1.9.1-${ARCH}-bksrc1.xzm"
+linkpackage "${PACKAGESDIR}/libnet/libnet-20210227-${ARCH}-bksrc1.xzm"
 
 if [ "${INCASTYLE}" == "Y" ]; then
   linkpackage "${PACKAGESDIR}/astyle/astyle-3.1-${ARCH}-bksrc1.xzm"
 fi
 
 if [ "${INCCGDB}" == "Y" ]; then
-  linkpackage "${PACKAGESDIR}/cgdb/cgdb-0.7.0-${ARCH}-bksrc1.xzm"
+  linkpackage "${PACKAGESDIR}/cgdb/cgdb-20210310-${ARCH}-bksrc1.xzm"
 fi
 
 if [ "${INCCODEEXAMPLES}" == "Y" ]; then
@@ -65,6 +69,10 @@ if [ "${INCCODEEXAMPLES}" == "Y" ]; then
   linkpackage "${PACKAGESDIR}/codex/jedis-20190403-noarch-bksrc1.xzm"
   linkpackage "${PACKAGESDIR}/codex/lettuce-core-20190403-noarch-bksrc1.xzm"
   linkpackage "${PACKAGESDIR}/codex/redisson-20190403-noarch-bksrc1.xzm"
+fi
+
+if [ "${INCQLIBC}" == "Y" ]; then
+  linkpackage "${PACKAGESDIR}/qlibc/qlibc-2.4.5-${ARCH}-bksrc1.xzm"
 fi
 
 if [ "${INCVALGRIND}" == "Y" ]; then

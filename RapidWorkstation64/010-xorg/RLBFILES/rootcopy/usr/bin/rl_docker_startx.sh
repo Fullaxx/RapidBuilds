@@ -21,11 +21,6 @@ if [ -x /etc/rc.d/rc.messagebus ]; then
   /etc/rc.d/rc.messagebus start
 fi
 
-# Start console-kit-daemon:
-if [ -x /etc/rc.d/rc.consolekit ]; then
-  /etc/rc.d/rc.consolekit start
-fi
-
 # Make sure X knows about all the installed fonts
 if [ -x /usr/bin/mkfontdir ]; then
   for FDIR in /usr/share/fonts/*; do
