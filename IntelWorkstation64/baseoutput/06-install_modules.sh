@@ -21,7 +21,7 @@ fi
 # LibreOffice needs RDL
 if [ "${INCLIBREOFFICE}" == "Y" ]; then
   verbosecopymodule ${PACKAGESDIR}/avahi/avahi-libs-0.8-${ARCH}-bksrc1.xzm ${MODSDIR}/
-  verbosecopymodule ${PACKAGESDIR}/LibreOffice/LibreOffice-7.1.6-${ARCH}-1.xzm ${MODSDIR}/
+  verbosecopymodule ${PACKAGESDIR}/LibreOffice/LibreOffice-7.2.6-${ARCH}-1.xzm ${MODSDIR}/
 fi
 
 # VSCode needs RDL
