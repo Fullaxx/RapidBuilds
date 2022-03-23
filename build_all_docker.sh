@@ -14,8 +14,9 @@ fullaxx/rapidbuild64
 
 set -e
 
-RAPIDBUILDSDIR=${RAPIDBUILDSDIR:-`dirname $0`}
-if [ "${RAPIDBUILDSDIR}" == "." ]; then RAPIDBUILDSDIR=`pwd`; fi
+RBDIR=`dirname $0`
+if [ "${RBDIR}" == "." ]; then RBDIR=`pwd`; fi
+export RAPIDBUILDSDIR="${RBDIR}"
 
 ${RAPIDBUILDSDIR}/RapidInstall64/rebuild.sh all
 
