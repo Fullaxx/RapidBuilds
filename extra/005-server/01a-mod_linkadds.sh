@@ -87,8 +87,7 @@ if [ "${INCYAJL}" == "Y" ]; then
 fi
 
 if [ "${INCZEROMQ}" == "Y" ]; then
-  linkpackage "${PACKAGESDIR}/zeromq/zeromq-4.3.3-${ARCH}-bksrc1.xzm"
+  linkpackage "${PACKAGESDIR}/zeromq/zeromq-4.3.4-${ARCH}-bksrc1.xzm"
   linkpackage "${PACKAGESDIR}/zeromq/libpgm-5.2.122-${ARCH}-bksrc2.xzm"
-  linkpackage "${PACKAGESDIR}/zeromq/czmq-4.1.1-${ARCH}-bksrc2.xzm"
-  linkpackage "${PACKAGESDIR}/zeromq/jzmq-20181026-${ARCH}-bksrc1.xzm"
+  linkpackage "${PACKAGESDIR}/zeromq/czmq-4.2.1-${ARCH}-bksrc1.xzm"
 fi

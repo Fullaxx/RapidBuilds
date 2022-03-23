@@ -63,6 +63,11 @@ if [ "${INCBOOST}" == "Y" ]; then
   linkpackage ${SLACKPKGDIR}/l/boost-*.txz
 fi
 
+if [ "${INCCARES}" == "Y" ]; then
+# wireshark needs c-ares
+  linkpackage ${SLACKPKGDIR}/n/c-ares-*.txz
+fi
+
 if [ "${INCDB48}" == "Y" ]; then
 # rpm needs db48
   linkpackage ${SLACKPKGDIR}/l/db48-*.txz

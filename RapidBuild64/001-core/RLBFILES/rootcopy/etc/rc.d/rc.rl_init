@@ -14,11 +14,6 @@ cmdline_value()
   egrep -o "(^|[[:space:]])$1=[^[:space:]]+" /proc/cmdline | cut -d "=" -f 2- | tail -n 1
 }
 
-# We used to rebuild kmod deps before udev starts
-# rc.modules is handling this like normal, but it does --quick
-# echo "Updating Kernel Module Dependencies ..."
-# /sbin/depmod -a
-
 echo "/dev/sr0 /mnt/cdrom auto noauto,nodev,nosuid 0 0" >> /etc/fstab
 
 # Toggle the "executableness" of your startup scripts
@@ -34,6 +29,13 @@ fi
 # LVM Automounter
 if [ -x /etc/rc.d/rc.rl_lvm ]; then
   /etc/rc.d/rc.rl_lvm
+fi
+
+# Optional OS harden script
+if grep -qw osharden /proc/cmdline; then
+  if [ -x /etc/rc.d/rc.rl_os_harden.sh ]; then
+    /etc/rc.d/rc.rl_os_harden.sh
+  fi
 fi
 
 # Change the root home dir
