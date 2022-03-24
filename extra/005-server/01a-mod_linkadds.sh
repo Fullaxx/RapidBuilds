@@ -12,7 +12,7 @@ if [ "${INCLIBMICROHTTPD}" == "Y" ]; then
 fi
 
 if [ "${INCLIBVIRT}" == "Y" ]; then
-  linkpackage "${PACKAGESDIR}/libvirt/libvirt-6.6.0-${ARCH}-bksrc1.xzm"
+  linkpackage "${PACKAGESDIR}/libvirt/libvirt-8.1.0-${ARCH}-bksrc1.xzm"
 fi
 
 if [ "${INCLIBWEBSOCKETS}" == "Y" ]; then
@@ -61,8 +61,8 @@ if [ "${INCNOVNC}" == "Y" ]; then
 fi
 
 if [ "${INCQEMU}" == "Y" ]; then
-  linkpackage "${PACKAGESDIR}/tianocore/tianocore-20201104-noarch-bksrc1.xzm"
-  linkpackage "${PACKAGESDIR}/qemu/qemu-4.2.1-${ARCH}-bksrc1.xzm"
+  linkpackage "${PACKAGESDIR}/tianocore/tianocore-20220324-noarch-bksrc1.xzm"
+  linkpackage "${PACKAGESDIR}/qemu/qemu-6.2.0-${ARCH}-bksrc1.xzm"
 fi
 
 if [ "${INCQUARK}" == "Y" ]; then
@@ -74,12 +74,12 @@ if [ "${INCREDIS}" == "Y" ]; then
 fi
 
 if [ "${INCSPICE}" == "Y" ]; then
-  linkpackage "${PACKAGESDIR}/spice/spice-protocol-0.14.3-noarch-bksrc1.xzm"
-  linkpackage "${PACKAGESDIR}/spice/spice-0.14.3-${ARCH}-bksrc1.xzm"
+  linkpackage "${PACKAGESDIR}/spice/spice-protocol-0.14.4-noarch-bksrc1.xzm"
+  linkpackage "${PACKAGESDIR}/spice/spice-0.15.0-${ARCH}-bksrc1.xzm"
 fi
 
 if [ "${INCUSBREDIR}" == "Y" ]; then
-  linkpackage "${PACKAGESDIR}/spice/usbredir-0.8.0-${ARCH}-bksrc1.xzm"
+  linkpackage "${PACKAGESDIR}/spice/usbredir-0.9.0-${ARCH}-bksrc1.xzm"
 fi
 
 if [ "${INCYAJL}" == "Y" ]; then
