@@ -44,6 +44,7 @@ if [ "${INCDOSTWOUNIX}" == "Y" ]; then
 fi
 
 if [ "${INCEXFAT}" == "Y" ]; then
+# When we get to linux-5.7, we can replace this with a/exfatprogs-1.1.3-${ARCH}.txz
   linkpackage "${PACKAGESDIR}/exfat/fuse-exfat-1.3.0-${ARCH}-bksrc1.xzm"
   linkpackage "${PACKAGESDIR}/exfat/exfat-utils-1.3.0-${ARCH}-bksrc1.xzm"
 fi
