@@ -16,7 +16,7 @@ if [ "${INCLIBVIRT}" == "Y" ]; then
 fi
 
 if [ "${INCLIBWEBSOCKETS}" == "Y" ]; then
-  linkpackage "${PACKAGESDIR}/libwebsockets/libwebsockets-4.0.21-${ARCH}-bksrc1.xzm"
+  linkpackage "${PACKAGESDIR}/libwebsockets/libwebsockets-4.3.1-${ARCH}-bksrc1.xzm"
 fi
 
 if [ "${INCMONGOCDRIVER}" == "Y" ]; then
