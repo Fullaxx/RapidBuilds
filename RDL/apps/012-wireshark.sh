@@ -1,4 +1,5 @@
 if [ "${INCWIRESHARK}" == "Y" ]; then
+  INCCARES="Y"
   INCLIBMAXMINDDB="Y"
 #  INCLZFOUR="Y"
   INCPORTAUDIO="Y"
