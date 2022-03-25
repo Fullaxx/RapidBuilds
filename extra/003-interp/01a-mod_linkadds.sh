@@ -106,7 +106,7 @@ fi
 #fi
 
 if [ "${INCTERMINATOR}" == "Y" ]; then
-  linkpackage "${PACKAGESDIR}/python_mods/terminator-1.92-${ARCH}-bksrc1.xzm"
+  linkpackage "${PACKAGESDIR}/python_mods/terminator-2.1.1-${ARCH}-bksrc1.xzm"
 fi
 
 if [ "${INCTORNADO}" == "Y" ]; then
