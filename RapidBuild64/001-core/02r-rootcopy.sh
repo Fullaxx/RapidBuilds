@@ -8,6 +8,8 @@ if [ ! -e RLBFILES ]; then
   exit 1
 fi
 
+FILE="etc/usgbanner"; install -D -o root -g root -m 0644 "RLBFILES/rootcopy/${FILE}" "${DIR}/${FILE}"
+
 SEARCHDIR="RLBFILES/rootcopy/etc/profile.d"
 if [ -d ${SEARCHDIR} ]; then
   for FILE in ${SEARCHDIR}/* ; do
