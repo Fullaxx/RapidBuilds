@@ -1,0 +1,1 @@
+../basis/baseoutput/07-stamp_iso.sh
