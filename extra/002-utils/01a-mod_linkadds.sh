@@ -16,7 +16,7 @@ if [ "${INCBINDTOOLS}" == "Y" ]; then
 fi
 
 if [ "${INCCALC}" == "Y" ]; then
-  linkpackage "${PACKAGESDIR}/calc/calc-2.12.6.5-${ARCH}-bksrc1.xzm"
+  linkpackage "${PACKAGESDIR}/calc/calc-2.14.0.14-${ARCH}-bksrc1.xzm"
 fi
 
 if [ "${INCCOLORTAIL}" == "Y" ]; then

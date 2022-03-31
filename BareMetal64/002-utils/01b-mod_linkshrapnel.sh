@@ -3,7 +3,7 @@
 source ../spec.sh
 source ./module_spec.sh
 
-linkpackage ${PACKAGESDIR}/calc/calc-2.12.6.5-${ARCH}-bksrc1.xzm
+linkpackage ${PACKAGESDIR}/calc/calc-2.14.0.14-${ARCH}-bksrc1.xzm
 linkpackage ${PACKAGESDIR}/colortail/colortail-0.3.3-${ARCH}-bksrc1.xzm
 linkpackage ${PACKAGESDIR}/curl-loader/curl-loader-0.56-${ARCH}-bksrc1.xzm
 linkpackage ${PACKAGESDIR}/darkhttpd/darkhttpd-1.12-${ARCH}-bksrc1.xzm
