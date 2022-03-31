@@ -11,7 +11,7 @@ linkpackage ${PACKAGESDIR}/iperf/iperf-2.0.12-${ARCH}-bksrc1.xzm
 linkpackage ${PACKAGESDIR}/iperf/iperf-3.6-${ARCH}-bksrc1.xzm
 linkpackage ${PACKAGESDIR}/ipmitool/ipmitool-20181113-${ARCH}-bksrc1.xzm
 linkpackage ${PACKAGESDIR}/loop-aes-losetup/loop-aes-losetup-2.30.1-${ARCH}-bksrc1.xzm
-linkpackage ${PACKAGESDIR}/nbd/nbd-3.18-${ARCH}-bksrc1.xzm
+linkpackage ${PACKAGESDIR}/nbd/nbd-3.24-${ARCH}-bksrc1.xzm
 linkpackage ${PACKAGESDIR}/numactl/numactl-2.0.11-${ARCH}-bksrc1.xzm
 
 # mosh needs protobuf
