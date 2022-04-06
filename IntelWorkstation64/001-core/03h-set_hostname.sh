@@ -3,4 +3,6 @@
 source ../spec.sh
 source ./module_spec.sh
 
-echo "IntelWorkstation" >${DIR}/etc/HOSTNAME
+HOSTNAME="IntelWorkstation"
+echo ${HOSTNAME} >${DIR}/etc/HOSTNAME
+sed -e "s/darkstar.example.net darkstar/${HOSTNAME}/g" -i ${DIR}/etc/hosts
