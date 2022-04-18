@@ -16,7 +16,7 @@ if [ "${INCBINDTOOLS}" == "Y" ]; then
 fi
 
 if [ "${INCCALC}" == "Y" ]; then
-  linkpackage "${PACKAGESDIR}/calc/calc-2.12.6.5-${ARCH}-bksrc1.xzm"
+  linkpackage "${PACKAGESDIR}/calc/calc-2.14.0.14-${ARCH}-bksrc1.xzm"
 fi
 
 if [ "${INCCOLORTAIL}" == "Y" ]; then
@@ -99,7 +99,7 @@ if [ "${INCMOSH}" == "Y" ]; then
 fi
 
 if [ "${INCNBD}" == "Y" ]; then
-  linkpackage "${PACKAGESDIR}/nbd/nbd-3.20-${ARCH}-bksrc1.xzm"
+  linkpackage "${PACKAGESDIR}/nbd/nbd-3.24-${ARCH}-bksrc1.xzm"
 fi
 
 if [ "${INCNMON}" == "Y" ]; then
