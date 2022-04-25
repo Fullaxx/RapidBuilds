@@ -24,10 +24,13 @@ else
   RLPARTTWO="${DISK}2"
 fi
 
-echo "Installing rEFInd ..."
-( set -e; cd /opt/refind && \
-./refind-install --usedefault ${RLPARTONE} >/dev/null && \
-umount ${RLPARTONE} )
+(
+  set -e
+  echo "Installing rEFInd ..."
+  cd /opt/refind && \
+  ./refind-install --usedefault ${RLPARTONE} >/dev/null && \
+  umount ${RLPARTONE}
+)
 
 # Remount our EFI partition and load it
 if [ ! -d "${MNTLOC}" ]; then mkdir ${MNTLOC}; fi
