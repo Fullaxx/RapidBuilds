@@ -102,14 +102,12 @@ if [ "${HAVERLSOURCE}" == "0" ]; then
   exit 7
 fi
 
-if [ -n "${DOUEFI}" ] && [ "${DOUEFI}" == "1" ]; then
-  UEFI="1"
-  echo "This will *erase* ${DISK} and install RapidLinux with EFI!"
-else
+if [ -n "${LEGACYGRUB}" ] && [ "${LEGACYGRUB}" == "1" ]; then
   echo "This will *erase* ${DISK} and install RapidLinux with GRUB!"
+else
+  echo "This will *erase* ${DISK} and install RapidLinux with EFI!"
 fi
 
-#echo "This will *erase* ${DISK} and install RapidLinux onto it!"
 echo "Are you sure you want to do this (y/N)"
 read ANS
 
@@ -129,14 +127,14 @@ fi
 MNTDIR="/mnt/newos"
 if echo "${DISK}" | grep -q nvme ; then RLPARTNUM="p2"; fi
 
-if [ "${UEFI}" == "1" ]; then
-  rli_01_uefi.sh ${DISK} && \
-  rli_02_uefi.sh ${DISK} ${SRCDIR} ${MNTDIR} && \
-  rli_03_refind.sh ${DISK} ${SRCDIR} || RLIERROR="1"
-else
+if [ "${LEGACYGRUB}" == "1" ]; then
   ${NEXTSCRIPT} ${DISK} && \
   rli_02_copy.sh ${DISK} ${RLPARTNUM} ${SRCDIR} ${MNTDIR} && \
   rli_03_grub.sh ${DISK} ${MNTDIR} || RLIERROR="1"
+else
+  rli_01_uefi.sh ${DISK} && \
+  rli_02_uefi.sh ${DISK} ${SRCDIR} ${MNTDIR} && \
+  rli_03_refind.sh ${DISK} ${SRCDIR} || RLIERROR="1"
 fi
 
 if [ -n "${RLIERROR}" ]; then
