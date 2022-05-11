@@ -18,9 +18,9 @@ RBDIR=`dirname $0`
 if [ "${RBDIR}" == "." ]; then RBDIR=`pwd`; fi
 export RAPIDBUILDSDIR="${RBDIR}"
 
-${RAPIDBUILDSDIR}/RapidInstall64/rebuild.sh all
+# ${RAPIDBUILDSDIR}/RapidInstall64/rebuild.sh all
 
-${RAPIDBUILDSDIR}/RapidDocker64/rebuild.sh all
+# ${RAPIDBUILDSDIR}/RapidDocker64/rebuild.sh all
 
 DOCKERTAG="fullaxx/rapidbuild64" \
 ${RAPIDBUILDSDIR}/RapidBuild64/rebuild.sh all
@@ -38,8 +38,8 @@ DOCKERTAG="fullaxx/dps64" \
 ${RAPIDBUILDSDIR}/DPS64/rebuild.sh all
 
 # DOCKERTAG="fullaxx/intellaptop64" \
-${RAPIDBUILDSDIR}/IntelLaptop64/rebuild.sh all
+# ${RAPIDBUILDSDIR}/IntelLaptop64/rebuild.sh all
 
-${RAPIDBUILDSDIR}/CudaWorkstation64/rebuild.sh all
+# ${RAPIDBUILDSDIR}/CudaWorkstation64/rebuild.sh all
 
-${RAPIDBUILDSDIR}/IntelWorkstation64/rebuild.sh all
+# ${RAPIDBUILDSDIR}/IntelWorkstation64/rebuild.sh all
