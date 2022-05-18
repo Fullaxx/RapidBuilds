@@ -9,6 +9,7 @@ cat << EOFF >> ${DIR}/etc/rc.d/rc.modules.local
 
 # Load driver for Dektec cards
 /sbin/modprobe Dta
+/sbin/modprobe DtPcie
 
 # Check for the presence of a ICE PIC card
 # If found, Insert the picdrv module and make ice nodes in /dev
