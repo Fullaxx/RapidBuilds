@@ -15,13 +15,13 @@ fi
 
 # Chrome needs RDL
 if [ "${INCCHROME}" == "Y" ]; then
-  verbosecopymodule ${PACKAGESDIR}/chrome/chrome-99.0.4844.84-x86_64-1.xzm ${MODSDIR}/
+  verbosecopymodule ${PACKAGESDIR}/chrome/chrome-100.0.4896.127-x86_64-1.xzm ${MODSDIR}/
 fi
 
 # LibreOffice needs RDL
 if [ "${INCLIBREOFFICE}" == "Y" ]; then
   verbosecopymodule ${PACKAGESDIR}/avahi/avahi-libs-0.8-${ARCH}-bksrc1.xzm ${MODSDIR}/
-  verbosecopymodule ${PACKAGESDIR}/LibreOffice/LibreOffice-7.2.6-${ARCH}-1.xzm ${MODSDIR}/
+  verbosecopymodule ${PACKAGESDIR}/LibreOffice/LibreOffice-7.2.7-${ARCH}-1.xzm ${MODSDIR}/
 fi
 
 # VSCode needs RDL
@@ -30,7 +30,7 @@ if [ "${INCVSCODE}" == "Y" ]; then
 fi
 
 # Copy any extra modules that don't need RDL
-verbosecopymodule ${PACKAGESDIR}/VirtualBox/VirtualBox-6.1.32-x86_64-1.xzm ${MODSDIR}/
+verbosecopymodule ${PACKAGESDIR}/VirtualBox/VirtualBox-6.1.34-x86_64-1.xzm ${MODSDIR}/
 verbosecopymodule ${PACKAGESDIR}/dbwalls/dbwalls-1920-220325.xzm ${MODSDIR}/
 verbosecopymodule ${PACKAGESDIR}/docker/docker-20.10.16-${ARCH}-1.xzm ${MODSDIR}/
 verbosecopymodule ${PACKAGESDIR}/veracrypt/veracrypt-console-1.25.9-${ARCH}-1.xzm ${MODSDIR}/
