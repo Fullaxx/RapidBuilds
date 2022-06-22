@@ -29,6 +29,7 @@ if [ "${INCMOD012XAPPS}" == "Y" ]; then
   INCXINE="N"
   INCXLOCK="N"
   INCXPAINT="Y"
+  INCXPDF="Y"
 
 # extra family of packages
   INCRECORDMYDESKTOP="Y"
