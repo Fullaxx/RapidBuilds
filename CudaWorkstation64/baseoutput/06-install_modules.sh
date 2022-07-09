@@ -41,3 +41,6 @@ verbosecopymodule ${PACKAGESDIR}/vivaldi/vivaldi-5.1.2567.66-${ARCH}-1.xzm ${MOD
 
 # Desktop Configuration
 verbosecopymodule ${PACKAGESDIR}/rapidconfigs/rapidconfig-rapidworkstation-20211114-noarch-1.xzm ${MODSDIR}/
+
+# Multicast Xfer
+verbosecopymodule ${PACKAGESDIR}/mcast_xfer/mcastxfer-20220709-x86_64-bksrc1.xzm ${MODSDIR}/

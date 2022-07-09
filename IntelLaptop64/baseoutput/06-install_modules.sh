@@ -32,3 +32,6 @@ verbosecopymodule ${PACKAGESDIR}/dbwalls/dbwalls-1920-220325.xzm ${MODSDIR}/
 verbosecopymodule ${PACKAGESDIR}/docker/docker-20.10.16-${ARCH}-1.xzm ${MODSDIR}/
 verbosecopymodule ${PACKAGESDIR}/veracrypt/veracrypt-console-1.25.9-${ARCH}-1.xzm ${MODSDIR}/
 verbosecopymodule ${PACKAGESDIR}/vivaldi/vivaldi-5.1.2567.66-${ARCH}-1.xzm ${MODSDIR}/
+
+# Multicast Xfer
+verbosecopymodule ${PACKAGESDIR}/mcast_xfer/mcastxfer-20220709-x86_64-bksrc1.xzm ${MODSDIR}/
