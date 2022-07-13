@@ -11,7 +11,7 @@ fi
 
 # Chrome needs RDL
 if [ "${INCCHROME}" == "Y" ]; then
-  verbosecopymodule ${PACKAGESDIR}/chrome/chrome-101.0.4951.64-x86_64-1.xzm ${MODSDIR}/
+  verbosecopymodule ${PACKAGESDIR}/chrome/chrome-102.0.5005.115-x86_64-1.xzm ${MODSDIR}/
 fi
 
 # LibreOffice needs RDL
