@@ -13,6 +13,7 @@ linkpackage ${PACKAGESDIR}/ipmitool/ipmitool-20181113-${ARCH}-bksrc1.xzm
 linkpackage ${PACKAGESDIR}/loop-aes-losetup/loop-aes-losetup-2.30.1-${ARCH}-bksrc1.xzm
 linkpackage ${PACKAGESDIR}/nbd/nbd-3.24-${ARCH}-bksrc1.xzm
 linkpackage ${PACKAGESDIR}/numactl/numactl-2.0.11-${ARCH}-bksrc1.xzm
+linkpackage ${PACKAGESDIR}/wireshark/tshark-3.4.16-${ARCH}-bksrc1.xzm
 
 # mosh needs protobuf
 linkpackage ${PACKAGESDIR}/protobuf/protobuf-3.19.4-${ARCH}-bksrc1.xzm
