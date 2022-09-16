@@ -17,7 +17,10 @@ rm -f ${DIR}/usr/sbin/{ninfod,ntpsnmpd}
 
 rm -f ${DIR}/usr/${LIBDIR}/libcups.*
 rm -f ${DIR}/usr/${LIBDIR}/libcupsimage.*
-rm -f ${DIR}/usr/${LIBDIR}/libldap-*
+
+# Mon Mar 7 01:57:45 UTC 2022
+rm -f ${DIR}/usr/${LIBDIR}/libldap*
+rm -f ${DIR}/usr/${LIBDIR}/liblber*
 
 rm -f ${DIR}/usr/${LIBDIR}/libjpeg.*
 rm -f ${DIR}/usr/${LIBDIR}/libturbojpeg.*

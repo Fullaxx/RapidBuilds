@@ -80,6 +80,8 @@ linkpackage ${SLACKPKGDIR}/l/libevent-*.txz
 # setpriv (from util-linux-2.36.1) needs libcap-ng
 linkpackage ${SLACKPKGDIR}/l/libcap-ng-*.txz
 
+linkpackage ${SLACKPKGDIR}/l/libseccomp-*.txz
+
 linkpackage ${SLACKPKGDIR}/l/glib2-*.txz
 linkpackage ${SLACKPKGDIR}/l/glibc-?.*.txz
 # linkpackage ${SLACKPKGDIR}/l/glibc-profile-*.txz

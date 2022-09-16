@@ -57,6 +57,7 @@ linkpackage ${SLACKPKGDIR}/x/libdrm-*.txz
 linkpackage ${SLACKPKGDIR}/x/libfontenc-*.txz
 linkpackage ${SLACKPKGDIR}/x/libpciaccess-*.txz
 linkpackage ${SLACKPKGDIR}/x/libxcb-*.txz
+linkpackage ${SLACKPKGDIR}/x/libxcvt-*.txz
 linkpackage ${SLACKPKGDIR}/x/libxkbfile-*.txz
 linkpackage ${SLACKPKGDIR}/x/libxshmfence-*.txz
 linkpackage ${SLACKPKGDIR}/x/mkfontscale-*.txz
@@ -66,7 +67,7 @@ linkpackage ${SLACKPKGDIR}/x/x11-skel-*.txz
 linkpackage ${SLACKPKGDIR}/x/xauth-*.txz
 linkpackage ${SLACKPKGDIR}/x/xhost-*.txz
 linkpackage ${SLACKPKGDIR}/x/xisxwayland-*.txz
-linkpackage ${SLACKPKGDIR}/x/xorg-server-?.??.*-*.txz
+linkpackage ${SLACKPKGDIR}/x/xorg-server-??.?.*-*.txz
 linkpackage ${SLACKPKGDIR}/x/xorgproto-*.txz
 linkpackage ${SLACKPKGDIR}/x/xrandr-*.txz
 linkpackage ${SLACKPKGDIR}/x/xrdb-*.txz
@@ -97,9 +98,6 @@ if [ "${INCXDESKTOPENVIRONMENT}" == "Y" ]; then
   for PKG in ${SLACKPKGDIR}/x/xf86-input-*.txz; do linkpackage ${PKG}; done
 
   linkpackage ${SLACKPKGDIR}/x/xf86-video-vesa-*.txz
-  linkpackage ${SLACKPKGDIR}/x/xf86-video-cirrus-*.txz
-  linkpackage ${SLACKPKGDIR}/x/xf86-video-vboxvideo-*.txz
-  linkpackage ${SLACKPKGDIR}/x/xf86-video-v4l-*.txz
 fi
 
 if [ "${INCXF86VIDEOAMDGPU}" == "Y" ]; then
