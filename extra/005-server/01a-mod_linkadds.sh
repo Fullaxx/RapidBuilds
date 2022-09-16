@@ -20,7 +20,7 @@ if [ "${INCLIBWEBSOCKETS}" == "Y" ]; then
 fi
 
 if [ "${INCMONGOCDRIVER}" == "Y" ]; then
-  linkpackage "${PACKAGESDIR}/mongo/mongo-c-driver-1.21.1-${ARCH}-bksrc1.xzm"
+  linkpackage "${PACKAGESDIR}/mongo/mongo-c-driver-1.23.0-${ARCH}-bksrc1.xzm"
 fi
 
 if [ "${INCNGINX}" == "Y" ]; then
