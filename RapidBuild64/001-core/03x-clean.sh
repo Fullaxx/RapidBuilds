@@ -47,9 +47,6 @@ rm -f ${DIR}/usr/${LIBDIR}/libpoppler*
 rm -f ${DIR}/usr/${LIBDIR}/libisl*
 # 16 NOV 2020
 
-# Fri Aug 12 01:47:02 UTC 2022
-rm -f ${DIR}/usr/${LIBDIR}//libboost_*
-
 # Unnecessary here, libidn2 is mandatory in 002-utils
 rm -f ${DIR}/usr/${LIBDIR}/libidn2.so.*
 
