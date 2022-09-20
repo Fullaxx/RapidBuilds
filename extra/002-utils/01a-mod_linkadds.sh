@@ -106,6 +106,10 @@ if [ "${INCNBD}" == "Y" ]; then
   linkpackage "${PACKAGESDIR}/nbd/nbd-3.24-${ARCH}-bksrc1.xzm"
 fi
 
+if [ "${INCNLOAD}" == "Y" ]; then
+  linkpackage "${PACKAGESDIR}/nload/nload-20220919-${ARCH}-bksrc1.xzm"
+fi
+
 if [ "${INCNMON}" == "Y" ]; then
   linkpackage "${PACKAGESDIR}/nmon/nmon-16m-${ARCH}-bksrc1.xzm"
 fi
