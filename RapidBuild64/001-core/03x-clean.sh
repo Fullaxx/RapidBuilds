@@ -31,7 +31,7 @@ rm -f ${DIR}/usr/${LIBDIR}/libraw_r.*
 rm -f ${DIR}/usr/${LIBDIR}/libtiff.*
 rm -f ${DIR}/usr/${LIBDIR}/libtiffxx.*
 
-# TEST 31 OCT 2020
+# 31 OCT 2020
 rm -f ${DIR}/usr/${LIBDIR}/libicu*
 rm -f ${DIR}/usr/${LIBDIR}/libHalf.*
 rm -f ${DIR}/usr/${LIBDIR}/libIex-*
@@ -41,11 +41,11 @@ rm -f ${DIR}/usr/${LIBDIR}/libIlmImfUtil-*
 rm -f ${DIR}/usr/${LIBDIR}/libIlmThread-*
 rm -f ${DIR}/usr/${LIBDIR}/libImath-*
 rm -f ${DIR}/usr/${LIBDIR}/libpoppler*
-# TEST 31 OCT 2020
+# 31 OCT 2020
 
-# TEST 16 NOV 2020
+# 16 NOV 2020
 rm -f ${DIR}/usr/${LIBDIR}/libisl*
-# TEST 16 NOV 2020
+# 16 NOV 2020
 
 # Unnecessary here, libidn2 is mandatory in 002-utils
 rm -f ${DIR}/usr/${LIBDIR}/libidn2.so.*

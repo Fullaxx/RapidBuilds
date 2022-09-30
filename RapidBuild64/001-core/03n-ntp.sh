@@ -12,11 +12,11 @@ if [ -f ${DIR}/etc/rc.d/rc.ntpd ]; then
 fi
 
 if [ -f ${DIR}/etc/ntp.conf ]; then
-	sed -e 's@server\t127.127.1.0@#server\t127.127.1.0@' -i ${DIR}/etc/ntp.conf
-	sed -e 's/#server 0.pool.ntp.org iburst/server 0.pool.ntp.org iburst/' -i ${DIR}/etc/ntp.conf
-	sed -e 's/#server 1.pool.ntp.org iburst/server 1.pool.ntp.org iburst/' -i ${DIR}/etc/ntp.conf
-	sed -e 's/#server 2.pool.ntp.org iburst/server 2.pool.ntp.org iburst/' -i ${DIR}/etc/ntp.conf
-	sed -e 's/#server 3.pool.ntp.org iburst/server 3.pool.ntp.org iburst/' -i ${DIR}/etc/ntp.conf
+  sed -e 's@server\t127.127.1.0@#server\t127.127.1.0@' -i ${DIR}/etc/ntp.conf
+  sed -e 's/#server 0.pool.ntp.org iburst/server 0.pool.ntp.org iburst minpoll 3 maxpoll 4/' -i ${DIR}/etc/ntp.conf
+  sed -e 's/#server 1.pool.ntp.org iburst/server 1.pool.ntp.org iburst minpoll 3 maxpoll 4/' -i ${DIR}/etc/ntp.conf
+  sed -e 's/#server 2.pool.ntp.org iburst/server 2.pool.ntp.org iburst minpoll 3 maxpoll 4/' -i ${DIR}/etc/ntp.conf
+  sed -e 's/#server 3.pool.ntp.org iburst/server 3.pool.ntp.org iburst minpoll 3 maxpoll 4/' -i ${DIR}/etc/ntp.conf
 fi
 
 NTPSNMPDBINARY="${DIR}/usr/sbin/ntpsnmpd"

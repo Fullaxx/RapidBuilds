@@ -156,6 +156,10 @@ if [ "${INCRETWOC}" == "Y" ]; then
   linkpackage ${SLACKPKGDIR}/d/re2c-*.txz
 fi
 
+if [ "${INCRUST}" == "Y" ]; then
+  linkpackage ${SLACKPKGDIR}/d/rust-*.txz
+fi
+
 if [ "${INCSTRACE}" == "Y" ]; then
   linkpackage ${SLACKPKGDIR}/d/strace-*.txz
 fi

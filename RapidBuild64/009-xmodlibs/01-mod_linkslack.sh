@@ -15,7 +15,6 @@ linkpackage ${SLACKPKGDIR}/l/libnl3-*.txz
 # wget,libsoup require libpsl
 linkpackage ${SLACKPKGDIR}/l/libpsl-*.txz
 linkpackage ${SLACKPKGDIR}/l/libsigc++-*.txz
-linkpackage ${SLACKPKGDIR}/l/libseccomp-*.txz
 linkpackage ${SLACKPKGDIR}/l/libtasn1-*.txz
 linkpackage ${SLACKPKGDIR}/l/libunistring-*.txz
 linkpackage ${SLACKPKGDIR}/l/libxml2-*.txz

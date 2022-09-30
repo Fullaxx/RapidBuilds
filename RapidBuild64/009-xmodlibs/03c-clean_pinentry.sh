@@ -15,5 +15,12 @@ if [ "${INCPINENTRY}" == "Y" ]; then
 # if we dont have QT5
   if [ "${INCQTFIVE}" != "Y" ]; then
     rm ${DIR}/usr/bin/pinentry-qt
+  else
+#   pinentry-qt needs libKF5WaylandClient.so from kwayland
+    KWLVERS="5.98.0"
+    KWLPKG="${PACKAGESDIR}/kde/kwayland-${KWLVERS}-${ARCH}-1.txz"
+    if [ -f ${KWLPKG} ]; then
+      ( set -e; cd ${DIR}/; tar xvf ${KWLPKG} --wildcards usr/lib64/libKF5WaylandClient.so.* )
+    fi
   fi
 fi

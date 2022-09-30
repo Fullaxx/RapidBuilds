@@ -332,6 +332,11 @@ if [ "${INCIMAGEMAGICK}" == "Y" ]; then
   linkpackage ${SLACKPKGDIR}/l/imagemagick-*.txz
 fi
 
+if [ "${INCIMATH}" == "Y" ]; then
+# openexr needs Imath
+  linkpackage ${SLACKPKGDIR}/l/Imath-*.txz
+fi
+
 if [ "${INCJASPER}" == "Y" ]; then
 # GIMP,libraw,imagemagick need jasper
   linkpackage ${SLACKPKGDIR}/l/jasper-*.txz
