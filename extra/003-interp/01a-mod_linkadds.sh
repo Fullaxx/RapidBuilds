@@ -79,7 +79,7 @@ if [ "${INCPASTEBINIT}" == "Y" ]; then
 fi
 
 if [ "${INCPSUTIL}" == "Y" ]; then
-  linkpackage "${PACKAGESDIR}/python_mods/psutil-5.9.0-${ARCH}-bksrc1.xzm"
+  linkpackage "${PACKAGESDIR}/python_mods/psutil-5.9.2-${ARCH}-bksrc1.xzm"
 fi
 
 if [ "${INCPYTHONDATEUTIL}" == "Y" ]; then
