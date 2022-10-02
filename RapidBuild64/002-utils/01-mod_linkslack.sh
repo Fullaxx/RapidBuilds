@@ -204,6 +204,10 @@ if [ "${INCNVMECLI}" == "Y" ]; then
   linkpackage ${SLACKPKGDIR}/ap/nvme-cli-*.txz
 fi
 
+if [ "${INCPOWERTOP}" == "Y" ]; then
+  linkpackage ${SLACKPKGDIR}/ap/powertop-*.txz
+fi
+
 if [ "${INCRZIP}" == "Y" ]; then
   linkpackage ${SLACKPKGDIR}/ap/rzip-*.txz
 fi

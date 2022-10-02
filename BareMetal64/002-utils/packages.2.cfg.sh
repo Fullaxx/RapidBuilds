@@ -4,6 +4,7 @@ if [ "${INCMOD002UTILS}" == "Y" ]; then
   INCINFOZIP="Y"
 
 # ap family of packages
+  INCPOWERTOP="Y"
   INCTMUX="Y"
 
 # n family of packages
