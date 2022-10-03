@@ -21,7 +21,7 @@ if [ "${INCCLICK}" == "Y" ]; then
 fi
 
 if [ "${INCDISTLIB}" == "Y" ]; then
-  linkpackage "${PACKAGESDIR}/python_mods/distlib-0.3.1-${ARCH}-bksrc1.xzm"
+  linkpackage "${PACKAGESDIR}/python_mods/distlib-0.3.4-${ARCH}-bksrc1.xzm"
 fi
 
 if [ "${INCDSTAT}" == "Y" ]; then
@@ -33,7 +33,7 @@ fi
 #fi
 
 if [ "${INCFILELOCK}" == "Y" ]; then
-  linkpackage "${PACKAGESDIR}/python_mods/filelock-3.0.12-${ARCH}-bksrc1.xzm"
+  linkpackage "${PACKAGESDIR}/python_mods/filelock-3.8.0-${ARCH}-bksrc1.xzm"
 fi
 
 if [ "${INCFTPSYNC}" == "Y" ]; then
@@ -114,7 +114,7 @@ if [ "${INCTORNADO}" == "Y" ]; then
 fi
 
 if [ "${INCVIRTUALENV}" == "Y" ]; then
-  linkpackage "${PACKAGESDIR}/python_mods/virtualenv-20.1.0-${ARCH}-bksrc1.xzm"
+  linkpackage "${PACKAGESDIR}/python_mods/virtualenv-20.4.7-${ARCH}-bksrc1.xzm"
 fi
 
 if [ "${INCWEBSOCKIFY}" == "Y" ]; then
