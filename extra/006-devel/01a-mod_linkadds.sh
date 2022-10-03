@@ -72,7 +72,7 @@ if [ "${INCCODEEXAMPLES}" == "Y" ]; then
 fi
 
 if [ "${INCQLIBC}" == "Y" ]; then
-  linkpackage "${PACKAGESDIR}/qlibc/qlibc-2.4.5-${ARCH}-bksrc1.xzm"
+  linkpackage "${PACKAGESDIR}/qlibc/qlibc-2.4.6-${ARCH}-bksrc1.xzm"
 fi
 
 if [ "${INCVALGRIND}" == "Y" ]; then
