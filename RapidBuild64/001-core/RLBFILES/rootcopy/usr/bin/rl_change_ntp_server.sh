@@ -18,6 +18,7 @@ rm ${TEMP}
 # add our reference to pool.ntp.org
 echo "Setting NTP server to $1..."
 echo "$1 0.pool.ntp.org gps" >>/etc/hosts
+ntpdate $1
 
 # Start the ntp daemon
 /etc/rc.d/rc.ntpd start
