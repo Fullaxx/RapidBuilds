@@ -136,7 +136,7 @@ if [ "${INCRASDAEMON}" == "Y" ]; then
 fi
 
 if [ "${INCSEVENZIP}" == "Y" ]; then
-  linkpackage "${PACKAGESDIR}/7z/7z-20210315-${ARCH}-bksrc1.xzm"
+  linkpackage "${PACKAGESDIR}/jinfeihan57_p7zip/p7zip-17.04-${ARCH}-bksrc1.xzm"
 fi
 
 if [ "${INCTWEAK}" == "Y" ]; then
