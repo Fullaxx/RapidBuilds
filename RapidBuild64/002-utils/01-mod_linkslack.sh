@@ -192,6 +192,10 @@ if [ "${INCMIDNIGHTCOMMANDER}" == "Y" ]; then
   linkpackage ${SLACKPKGDIR}/ap/mc-*.txz
 fi
 
+if [ "${INCMOC}" == "Y" ]; then
+  linkpackage ${SLACKPKGDIR}/ap/moc-*.txz
+fi
+
 if [ "${INCMOST}" == "Y" ]; then
   linkpackage ${SLACKPKGDIR}/ap/most-*.txz
 fi
