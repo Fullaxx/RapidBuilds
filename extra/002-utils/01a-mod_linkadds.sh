@@ -16,7 +16,7 @@ if [ "${INCAXEL}" == "Y" ]; then
 fi
 
 if [ "${INCBINDTOOLS}" == "Y" ]; then
-  linkpackage "${PACKAGESDIR}/bindtools/bindtools-9.16.8-${ARCH}-2.xzm"
+  linkpackage "${PACKAGESDIR}/bindtools/bindtools-9.18.7-${ARCH}-1.xzm"
 fi
 
 if [ "${INCCALC}" == "Y" ]; then
@@ -47,11 +47,10 @@ if [ "${INCDOSTWOUNIX}" == "Y" ]; then
   linkpackage "${PACKAGESDIR}/dos2unix/dos2unix-7.4.1-${ARCH}-bksrc1.xzm"
 fi
 
-if [ "${INCEXFAT}" == "Y" ]; then
-# When we get to linux-5.7, we can replace this with a/exfatprogs-1.1.3-${ARCH}.txz
-  linkpackage "${PACKAGESDIR}/exfat/fuse-exfat-1.3.0-${ARCH}-bksrc1.xzm"
-  linkpackage "${PACKAGESDIR}/exfat/exfat-utils-1.3.0-${ARCH}-bksrc1.xzm"
-fi
+#if [ "${INCFUSEEXFAT}" == "Y" ]; then
+#  linkpackage "${PACKAGESDIR}/exfat/fuse-exfat-1.3.0-${ARCH}-bksrc1.xzm"
+#  linkpackage "${PACKAGESDIR}/exfat/exfat-utils-1.3.0-${ARCH}-bksrc1.xzm"
+#fi
 
 if [ "${INCEXTUNDELETE}" == "Y" ]; then
   linkpackage "${PACKAGESDIR}/extundelete/extundelete-0.2.4-${ARCH}-bksrc1.xzm"
@@ -136,7 +135,7 @@ if [ "${INCRASDAEMON}" == "Y" ]; then
 fi
 
 if [ "${INCSEVENZIP}" == "Y" ]; then
-  linkpackage "${PACKAGESDIR}/7z/7z-20210315-${ARCH}-bksrc1.xzm"
+  linkpackage "${PACKAGESDIR}/jinfeihan57_p7zip/p7zip-17.04-${ARCH}-bksrc1.xzm"
 fi
 
 if [ "${INCTWEAK}" == "Y" ]; then

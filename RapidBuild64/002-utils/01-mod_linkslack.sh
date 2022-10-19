@@ -29,6 +29,10 @@ if [ "${INCDCRON}" == "Y" ]; then
   linkpackage ${SLACKPKGDIR}/a/dcron-*.txz
 fi
 
+if [ "${INCEXFATPROGS}" == "Y" ]; then
+  linkpackage ${SLACKPKGDIR}/a//exfatprogs-*.txz
+fi
+
 if [ "${INCFLOPPY}" == "Y" ]; then
   linkpackage ${SLACKPKGDIR}/a/floppy-*.txz
 fi
@@ -186,6 +190,10 @@ fi
 
 if [ "${INCMIDNIGHTCOMMANDER}" == "Y" ]; then
   linkpackage ${SLACKPKGDIR}/ap/mc-*.txz
+fi
+
+if [ "${INCMOC}" == "Y" ]; then
+  linkpackage ${SLACKPKGDIR}/ap/moc-*.txz
 fi
 
 if [ "${INCMOST}" == "Y" ]; then

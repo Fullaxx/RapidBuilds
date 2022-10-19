@@ -37,7 +37,7 @@ if [ "${INCFOX}" == "Y" ]; then
 fi
 
 if [ "${INCGEANY}" == "Y" ]; then
-  linkpackage "${PACKAGESDIR}/geany/geany-1.36-${ARCH}-bksrc1.xzm"
+  linkpackage "${PACKAGESDIR}/geany/geany-1.38-${ARCH}-bksrc1.xzm"
 fi
 
 if [ "${INCGHEX}" == "Y" ]; then
