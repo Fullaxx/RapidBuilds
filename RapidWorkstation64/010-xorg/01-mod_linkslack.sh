@@ -186,7 +186,7 @@ if [ "${INCXCBUTILKEYSYMS}" == "Y" ]; then
 fi
 
 if [ "${INCXCBUTILRENDERUTIL}" == "Y" ]; then
-  linkpackage ${SLACKPKGDIR}/x/xcb-util-renderutil-?.?.?-*.txz
+  linkpackage ${SLACKPKGDIR}/x/xcb-util-renderutil-?.?.*-*.txz
 fi
 
 if [ "${INCXCBUTILWM}" == "Y" ]; then
