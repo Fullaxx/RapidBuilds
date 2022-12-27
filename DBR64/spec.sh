@@ -1,0 +1,50 @@
+set -e
+
+PROJNAME="DBR"
+SLACKPKGVERS="current"
+KERNVERS="5.10.152"
+ARCH="x86_64"
+TIMESTAMPEDISO="0"
+
+# This is the list of categories that will be rebuilt by "./rebuild.sh all"
+PROJECTCATEGORIES="001 002 003 006 009 010 012"
+
+# Can we automate this by checking the existance of dirs?
+INCMOD002UTILS="Y"
+INCMOD003INTERP="Y"
+INCMOD006DEVEL="Y"
+INCMOD010XORG="Y"
+INCMOD012XAPPS="Y"
+
+PACKAGESDIR=${PACKAGESDIR:-/opt/RL/packages}
+ISOOUTPUTDIR=${ISOOUTPUTDIR:-/opt/RL/output}
+
+if [ -z "${RAPIDBUILDSDIR}" ]; then
+  >&2 echo "RAPIDBUILDSDIR is not set"
+  exit 1
+fi
+
+PROJECTBASE="${RAPIDBUILDSDIR}/DBR64"
+RAPIDDEPLOGIC="${RAPIDBUILDSDIR}/RDL"
+RLSHELL="${PACKAGESDIR}/rapidshells/RapidLinuxShell-190310.tar.xz"
+
+if [ "${ARCH}" == "x86_64" ]; then
+  SLACKPKGDIR="${PACKAGESDIR}/slackware/Slack64-${SLACKPKGVERS}/slackware64"
+  SLACKEXTRA="${PACKAGESDIR}/slackware/Slack64-${SLACKPKGVERS}/extra"
+  KERNELPKGDIR="${PACKAGESDIR}/rapidkernels/64/${KERNVERS}"
+  LIBDIR="lib64"
+else
+  SLACKPKGDIR="${PACKAGESDIR}/slackware/Slack32-${SLACKPKGVERS}/slackware"
+  SLACKEXTRA="${PACKAGESDIR}/slackware/Slack32-${SLACKPKGVERS}/extra"
+  KERNELPKGDIR="${PACKAGESDIR}/rapidkernels/32/${KERNVERS}"
+  LIBDIR="lib"
+fi
+
+FUNCTIONSFILE="${PROJECTBASE}/functions.sh"
+if [ ! -r ${FUNCTIONSFILE} ]; then
+  echo "${FUNCTIONSFILE} not found"
+  exit 1
+fi
+source ${FUNCTIONSFILE}
+
+loadconfig

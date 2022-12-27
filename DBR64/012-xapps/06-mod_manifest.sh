@@ -1,0 +1,1 @@
+../basis/012-xapps/06-mod_manifest.sh

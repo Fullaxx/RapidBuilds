@@ -1,0 +1,1 @@
+../basis/010-xorg/06-mod_manifest.sh

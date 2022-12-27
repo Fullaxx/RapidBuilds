@@ -25,3 +25,4 @@ ${RAPIDBUILDSDIR}/RapidWorkstation64/rebuild.sh all
 ${RAPIDBUILDSDIR}/IntelLaptop64/rebuild.sh all
 ${RAPIDBUILDSDIR}/CudaWorkstation64/rebuild.sh all
 ${RAPIDBUILDSDIR}/IntelWorkstation64/rebuild.sh all
+${RAPIDBUILDSDIR}/DBR64/rebuild.sh all
