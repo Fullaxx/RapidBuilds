@@ -23,6 +23,10 @@ if [ "${INCCALC}" == "Y" ]; then
   linkpackage "${PACKAGESDIR}/calc/calc-2.14.0.14-${ARCH}-bksrc1.xzm"
 fi
 
+if [ "${INCCCAT}" == "Y" ]; then
+  linkpackage "${PACKAGESDIR}/ccat/ccat-1.1.0-${ARCH}-1.xzm"
+fi
+
 if [ "${INCCOLORTAIL}" == "Y" ]; then
   linkpackage "${PACKAGESDIR}/colortail/colortail-0.3.3-${ARCH}-bksrc1.xzm"
 fi
