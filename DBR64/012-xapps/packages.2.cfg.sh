@@ -9,6 +9,9 @@ if [ "${INCMOD012XAPPS}" == "Y" ]; then
   INCTIGERVNC="Y"
   INCXFE="Y"
 
+# Custom Additions
+  INCHSETROOT="Y"
+
 # Tagged for inclusion into Modules dir by baseoutput
   INCCHROME="N"
   INCLIBREOFFICE="Y"

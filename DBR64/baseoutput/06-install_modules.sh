@@ -30,4 +30,4 @@ fi
 
 # NextMidas (NextMidas package includes ICE driver package)
 verbosecopymodule ${PACKAGESDIR}/java8/jdk-8u191-${ARCH}-1.xzm ${MODSDIR}/
-verbosecopymodule ${PACKAGESDIR}/NextMidas/NextMidas-220623.xzm ${MODSDIR}/
+verbosecopymodule ${PACKAGESDIR}/NextMidas/NextMidas-230109.xzm ${MODSDIR}/
