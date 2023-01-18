@@ -7,6 +7,9 @@ cat << EOFF >> ${DIR}/etc/rc.d/rc.modules.local
 
 /sbin/modprobe ipmi_devintf
 
+# Load driver for DDMax cards
+/sbin/modprobe ddbridge
+
 # Load driver for Dektec cards
 /sbin/modprobe Dta
 /sbin/modprobe DtPcie
