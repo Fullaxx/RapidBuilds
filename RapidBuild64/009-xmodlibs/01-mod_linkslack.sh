@@ -291,9 +291,9 @@ if [ "${INCLOUDMOUTH}" == "Y" ]; then
   linkpackage ${SLACKPKGDIR}/l/loudmouth-*.txz
 fi
 
-if [ "${INCLZLIB}" == "Y" ]; then
-  linkpackage ${SLACKPKGDIR}/a/lzlib-*.txz
-fi
+#if [ "${INCLZLIB}" == "Y" ]; then
+#  linkpackage ${SLACKPKGDIR}/a/lzlib-*.txz
+#fi
 
 if [ "${INCLZO}" == "Y" ]; then
 # squashfs-tools,btrsfs-progs,lrzip needs lzo

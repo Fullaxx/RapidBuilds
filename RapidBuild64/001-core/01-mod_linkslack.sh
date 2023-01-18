@@ -59,6 +59,9 @@ linkpackage ${SLACKPKGDIR}/a/xz-*.txz
 linkpackage ${SLACKPKGDIR}/a/eudev-*.txz
 linkpackage ${SLACKPKGDIR}/l/libffi-*.txz
 
+# file needs lzlib
+linkpackage ${SLACKPKGDIR}/a/lzlib-*.txz
+
 linkpackage ${SLACKPKGDIR}/a/reiserfsprogs-*.txz
 linkpackage ${SLACKPKGDIR}/a/xfsprogs-*.txz
 linkpackage ${SLACKPKGDIR}/a/inih-*.txz
