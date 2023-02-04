@@ -72,6 +72,10 @@ if [ "${INCMEDIT}" == "Y" ]; then
   linkpackage "${PACKAGESDIR}/medit/medit-20190312-${ARCH}-bksrc1.xzm"
 fi
 
+if [ "${INCMPV}" == "Y" ]; then
+  linkpackage "${PACKAGESDIR}/mpv/mpv-0.35.0-${ARCH}-bksrc1.xzm"
+fi
+
 if [ "${INCOBCONF}" == "Y" ]; then
   linkpackage "${PACKAGESDIR}/openbox/obconf-2.0.4-${ARCH}-bksrc1.xzm"
 fi
