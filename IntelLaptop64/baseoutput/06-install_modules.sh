@@ -26,7 +26,7 @@ if [ "${INCVSCODE}" == "Y" ]; then
 fi
 
 # Copy any extra modules that don't need RDL
-verbosecopymodule ${PACKAGESDIR}/VirtualBox/VirtualBox-6.1.40-x86_64-1.xzm ${MODSDIR}/
+verbosecopymodule ${PACKAGESDIR}/VirtualBox/VirtualBox-6.1.42-x86_64-1.xzm ${MODSDIR}/
 verbosecopymodule ${PACKAGESDIR}/chromium/chromium-106.0.5249.119-${ARCH}-1alien.xzm ${MODSDIR}/
 verbosecopymodule ${PACKAGESDIR}/dbwalls/dbwalls-1920-221014.xzm ${MODSDIR}/
 verbosecopymodule ${PACKAGESDIR}/docker/docker-20.10.21-${ARCH}-1.xzm ${MODSDIR}/
