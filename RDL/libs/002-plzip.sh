@@ -1,3 +1,4 @@
-if [ "${INCPLZIP}" == "Y" ]; then
-  INCLZLIB="Y"
-fi
+#if [ "${INCPLZIP}" == "Y" ]; then
+#  LZLIB is now mandatory in 001-core
+#  INCLZLIB="Y"
+#fi

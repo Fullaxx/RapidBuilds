@@ -15,6 +15,8 @@ rm -f ${DIR}/usr/bin/memusagestat
 
 rm -f ${DIR}/usr/sbin/{ninfod,ntpsnmpd}
 
+rm -f ${DIR}/usr/${LIBDIR}/libboost_*
+
 rm -f ${DIR}/usr/${LIBDIR}/libcups.*
 rm -f ${DIR}/usr/${LIBDIR}/libcupsimage.*
 

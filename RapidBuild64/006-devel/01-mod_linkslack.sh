@@ -106,6 +106,7 @@ fi
 
 if [ "${INCLLVM}" == "Y" ]; then
   linkpackage ${SLACKPKGDIR}/d/llvm-*.txz
+  linkpackage ${SLACKPKGDIR}/l/spirv-llvm-translator-*.txz
 fi
 
 if [ "${INCMFOUR}" == "Y" ]; then
