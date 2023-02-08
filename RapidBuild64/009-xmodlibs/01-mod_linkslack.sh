@@ -291,9 +291,9 @@ if [ "${INCLOUDMOUTH}" == "Y" ]; then
   linkpackage ${SLACKPKGDIR}/l/loudmouth-*.txz
 fi
 
-if [ "${INCLZLIB}" == "Y" ]; then
-  linkpackage ${SLACKPKGDIR}/a/lzlib-*.txz
-fi
+#if [ "${INCLZLIB}" == "Y" ]; then
+#  linkpackage ${SLACKPKGDIR}/a/lzlib-*.txz
+#fi
 
 if [ "${INCLZO}" == "Y" ]; then
 # squashfs-tools,btrsfs-progs,lrzip needs lzo
@@ -301,7 +301,7 @@ if [ "${INCLZO}" == "Y" ]; then
 fi
 
 if [ "${INCPOLKIT}" == "Y" ]; then
-  linkpackage ${SLACKPKGDIR}/l/polkit-?.*.txz
+  linkpackage ${SLACKPKGDIR}/l/polkit-[0-9][0-9][0-9]-*.txz
 fi
 
 if [ "${INCMOZILLANSS}" == "Y" ]; then
@@ -310,8 +310,8 @@ if [ "${INCMOZILLANSS}" == "Y" ]; then
 fi
 
 if [ "${INCMOZJSSEVENTYEIGHT}" == "Y" ]; then
-# polkit needs mozjs78
-  linkpackage ${SLACKPKGDIR}/l/mozjs78-*.txz
+# polkit needs mozjs
+  linkpackage ${SLACKPKGDIR}/l/mozjs102-*.txz
 fi
 
 if [ "${INCNEON}" == "Y" ]; then

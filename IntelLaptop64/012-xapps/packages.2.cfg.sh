@@ -47,6 +47,7 @@ if [ "${INCMOD012XAPPS}" == "Y" ]; then
   INCGRAVEMAN="Y"
   INCHSETROOT="Y"
   INCMEDIT="Y"
+  INCMPV="Y"
   INCOBCONF="Y"
   INCSLOCK="Y"
   INCST="Y"

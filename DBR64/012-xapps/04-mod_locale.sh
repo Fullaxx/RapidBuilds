@@ -1,0 +1,1 @@
+../basis/012-xapps/04-mod_locale.sh

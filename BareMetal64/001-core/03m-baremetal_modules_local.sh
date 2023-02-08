@@ -7,6 +7,9 @@ cat << EOFF >> ${DIR}/etc/rc.d/rc.modules.local
 
 /sbin/modprobe ipmi_devintf
 
+# Load driver for DDMax cards
+/sbin/modprobe ddbridge
+
 # Load driver for Dektec cards
 /sbin/modprobe Dta
 /sbin/modprobe DtPcie
@@ -32,4 +35,18 @@ if [ -x /usr/bin/nvidia-persistenced ]; then
   echo "Starting nvidia-persistenced --user root ..."
   /usr/bin/nvidia-persistenced --user root
 fi
+
+# Set EXCLUSIVE_PROCESS with nvidia-smi
+if [ -x /usr/bin/nvidia-smi ]; then
+  echo "Setting GPU EXCLUSIVE_PROCESS with nvidia-smi ..."
+  /usr/bin/nvidia-smi -i 0 -c EXCLUSIVE_PROCESS
+  /usr/bin/nvidia-smi -i 1 -c EXCLUSIVE_PROCESS
+fi
+
+# Start nvidia-cuda-mps-control daemon
+if [ -x /usr/bin/nvidia-cuda-mps-control ]; then
+  echo "Starting nvidia-cuda-mps-control -d ..."
+  /usr/bin/nvidia-cuda-mps-control -d
+fi
+
 EOFF

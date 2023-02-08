@@ -14,7 +14,10 @@ if [ ! -d ${MODSDIR} ]; then
 fi
 
 # ICE kernel module
-verbosecopymodule ${PACKAGESDIR}/picdrv/000a-picdrv-3.9.8.56-${KERNVERS}.xzm ${BASEDIR}/
+verbosecopymodule ${PACKAGESDIR}/picdrv/000a-picdrv-3.9.8.56-${KERNVERS}-x86_64-bksrc1.xzm ${BASEDIR}/
 
 # Dektec kernel module
-verbosecopymodule ${PACKAGESDIR}/dektec/dektec-2022.06.0-${KERNVERS}.xzm ${BASEDIR}/
+verbosecopymodule ${PACKAGESDIR}/dektec/000a-dektec-2022.06.0-${KERNVERS}-x86_64-bksrc1.xzm ${BASEDIR}/
+
+# dddvb kernel module
+verbosecopymodule ${PACKAGESDIR}/dddvb/000a-dddvb-20230117-${KERNVERS}-x86_64-bksrc1.xzm ${BASEDIR}/

@@ -1,0 +1,1 @@
+../basis/002-utils/06-mod_manifest.sh

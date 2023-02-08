@@ -150,6 +150,10 @@ if [ "${INCLIBXKLAVIER}" == "Y" ]; then
   linkpackage ${SLACKPKGDIR}/l/libxklavier-*.txz
 fi
 
+if [ "${INCLIBXPRESENT}" == "Y" ]; then
+  linkpackage ${SLACKPKGDIR}/x/libXpresent-*.txz
+fi
+
 if [ "${INCLIBXRES}" == "Y" ]; then
   linkpackage ${SLACKPKGDIR}/x/libXres-*.txz
 fi

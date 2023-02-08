@@ -17,6 +17,7 @@ ${RAPIDBUILDSDIR}/VPS64/rebuild.sh all
 
 ${RAPIDBUILDSDIR}/RapidDocker64/rebuild.sh all
 ${RAPIDBUILDSDIR}/BareMetal64/rebuild.sh all
+${RAPIDBUILDSDIR}/DBR64/rebuild.sh all
 
 ${RAPIDBUILDSDIR}/RapidBuild64/rebuild.sh all
 ${RAPIDBUILDSDIR}/RapidFileserver64/rebuild.sh all
