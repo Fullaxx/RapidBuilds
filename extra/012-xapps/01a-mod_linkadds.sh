@@ -73,7 +73,7 @@ if [ "${INCMEDIT}" == "Y" ]; then
 fi
 
 if [ "${INCMPV}" == "Y" ]; then
-  linkpackage "${PACKAGESDIR}/mpv/mpv-0.35.0-${ARCH}-bksrc1.xzm"
+  linkpackage "${PACKAGESDIR}/mpv/mpv-0.35.1-${ARCH}-bksrc1.xzm"
 fi
 
 if [ "${INCOBCONF}" == "Y" ]; then
