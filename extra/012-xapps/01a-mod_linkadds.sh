@@ -45,7 +45,7 @@ if [ "${INCGHEX}" == "Y" ]; then
 fi
 
 if [ "${INCGRAVEMAN}" == "Y" ]; then
-  linkpackage "${PACKAGESDIR}/graveman/graveman-0.3.12-5-${ARCH}-bksrc1.xzm"
+  linkpackage "${PACKAGESDIR}/graveman/graveman-0.3.12-5-${ARCH}-bksrc2.xzm"
 fi
 
 if [ "${INCHSETROOT}" == "Y" ]; then
