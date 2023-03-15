@@ -117,6 +117,10 @@ if [ "${INCWIRESHARK}" == "Y" ]; then
   linkpackage "${PACKAGESDIR}/wireshark/wireshark-3.6.12-${ARCH}-bksrc1.xzm"
 fi
 
+if [ "${INCXAUTOLOCK}" == "Y" ]; then
+  linkpackage "${PACKAGESDIR}/xautolock/xautolock-2.2-${ARCH}-bksrc1.xzm"
+fi
+
 if [ "${INCXFE}" == "Y" ]; then
   linkpackage "${PACKAGESDIR}/xfe/xfe-1.43.2-${ARCH}-bksrc1.xzm"
 fi

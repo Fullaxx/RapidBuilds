@@ -53,6 +53,7 @@ if [ "${INCMOD012XAPPS}" == "Y" ]; then
   INCTILDA="N"
   INCVLC="Y"
   INCWIRESHARK="Y"
+  INCXAUTOLOCK="Y"
   INCXFE="Y"
 
 # Tagged for inclusion into Modules dir by baseoutput
