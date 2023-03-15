@@ -46,6 +46,12 @@ if [ "${INCAUDACIOUS}" == "Y" ]; then
 # audacious/Transport/neon.so:
   INCNEON="Y"
 
+# audacious/Input/opus.so:
+  INCOPUSFILE="Y"
+
+# audacious/Output/pipewire.so:
+  INCPIPEWIRE="Y"
+
 # SOFT INCPULSE="Y"
 # SOFT INCSDLTWO="Y"
 

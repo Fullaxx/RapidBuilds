@@ -487,6 +487,11 @@ if [ "${INCOPUS}" == "Y" ]; then
   linkpackage ${SLACKPKGDIR}/l/opus-*.txz
 fi
 
+if [ "${INCOPUSFILE}" == "Y" ]; then
+# Audacious plugins needs opusfile
+  linkpackage ${SLACKPKGDIR}/l/opusfile-*.txz
+fi
+
 if [ "${INCORC}" == "Y" ]; then
 # gstreamer needs orc
   linkpackage ${SLACKPKGDIR}/l/orc-*.txz
@@ -502,6 +507,11 @@ fi
 
 if [ "${INCPAVUCONTROL}" == "Y" ]; then
   linkpackage ${SLACKPKGDIR}/xap/pavucontrol-*.txz
+fi
+
+if [ "${INCPIPEWIRE}" == "Y" ]; then
+# audacious needs pipewire
+  linkpackage ${SLACKPKGDIR}/l/pipewire-*.txz
 fi
 
 if [ "${INCPOPPLER}" == "Y" ]; then
