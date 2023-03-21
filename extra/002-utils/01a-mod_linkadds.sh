@@ -7,6 +7,10 @@ if [ "${INCACPI}" == "Y" ]; then
   linkpackage "${PACKAGESDIR}/acpi/acpi-1.7-${ARCH}-bksrc1.xzm"
 fi
 
+if [ "${INCAG}" == "Y" ]; then
+  linkpackage "${PACKAGESDIR}/ag/ag-20230321-${ARCH}-bksrc1.xzm"
+fi
+
 if [ "${INCATOP}" == "Y" ]; then
   linkpackage "${PACKAGESDIR}/atop/atop-2.3.0-${ARCH}-bksrc1.xzm"
 fi
@@ -132,6 +136,10 @@ fi
 
 if [ "${INCPROTOBUFC}" == "Y" ]; then
   linkpackage "${PACKAGESDIR}/protobuf/protobuf-c-1.4.0-${ARCH}-bksrc1.xzm"
+fi
+
+if [ "${INCPV}" == "Y" ]; then
+  linkpackage "${PACKAGESDIR}/pv/pv-1.6.20-${ARCH}-bksrc1.xzm"
 fi
 
 if [ "${INCRASDAEMON}" == "Y" ]; then

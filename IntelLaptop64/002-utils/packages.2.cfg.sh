@@ -2,6 +2,7 @@
 if [ "${INCMOD002UTILS}" == "Y" ]; then
 # Custom Additions
   INCACPI="Y"
+  INCAG="Y"
   INCATOP="Y"
   INCAXEL="Y"
   INCBINDTOOLS="Y"
@@ -30,6 +31,7 @@ if [ "${INCMOD002UTILS}" == "Y" ]; then
   INCNMON="Y"
   INCPROTOBUF="Y"
   INCPROTOBUFC="Y"
+  INCPV="Y"
   INCRASDAEMON="Y"
   INCSEVENZIP="Y"
   INCTWEAK="Y"
