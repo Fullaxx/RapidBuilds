@@ -45,7 +45,7 @@ if [ "${INCGHEX}" == "Y" ]; then
 fi
 
 if [ "${INCGRAVEMAN}" == "Y" ]; then
-  linkpackage "${PACKAGESDIR}/graveman/graveman-0.3.12-5-${ARCH}-bksrc1.xzm"
+  linkpackage "${PACKAGESDIR}/graveman/graveman-0.3.12-5-${ARCH}-bksrc2.xzm"
 fi
 
 if [ "${INCHSETROOT}" == "Y" ]; then
@@ -73,7 +73,7 @@ if [ "${INCMEDIT}" == "Y" ]; then
 fi
 
 if [ "${INCMPV}" == "Y" ]; then
-  linkpackage "${PACKAGESDIR}/mpv/mpv-0.35.0-${ARCH}-bksrc1.xzm"
+  linkpackage "${PACKAGESDIR}/mpv/mpv-0.35.1-${ARCH}-bksrc2.xzm"
 fi
 
 if [ "${INCOBCONF}" == "Y" ]; then
@@ -114,8 +114,11 @@ if [ "${INCWIRESHARK}" == "Y" ]; then
   linkpackage "${PACKAGESDIR}/libsmi/libsmi-0.5.0-${ARCH}-bksrc1.xzm"
   linkpackage "${PACKAGESDIR}/portaudio/portaudio-v19-${ARCH}-bksrc1.xzm"
   linkpackage "${PACKAGESDIR}/spandsp/spandsp-0.0.6-${ARCH}-bksrc1.xzm"
-#  linkpackage "${PACKAGESDIR}/wireshark/wireshark-2.6.14-GTK2-${ARCH}-bksrc1.xzm"
-  linkpackage "${PACKAGESDIR}/wireshark/wireshark-3.4.16-${ARCH}-bksrc1.xzm"
+  linkpackage "${PACKAGESDIR}/wireshark/wireshark-3.6.12-${ARCH}-bksrc1.xzm"
+fi
+
+if [ "${INCXAUTOLOCK}" == "Y" ]; then
+  linkpackage "${PACKAGESDIR}/xautolock/xautolock-2.2-${ARCH}-bksrc1.xzm"
 fi
 
 if [ "${INCXFE}" == "Y" ]; then

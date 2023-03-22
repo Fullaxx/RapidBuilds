@@ -17,7 +17,7 @@ verbosecopymodule ${PACKAGESDIR}/nvidia_driver/${KERNVERS}/011-nvidia-515.76-${K
 
 # Chrome needs RDL
 if [ "${INCCHROME}" == "Y" ]; then
-  verbosecopymodule ${PACKAGESDIR}/chrome/chrome-108.0.5359.124-x86_64-1.xzm ${MODSDIR}/
+  verbosecopymodule ${PACKAGESDIR}/chrome/chrome-110.0.5481.177-x86_64-1.xzm ${MODSDIR}/
 fi
 
 # LibreOffice needs RDL
@@ -28,14 +28,14 @@ fi
 
 # VSCode needs RDL
 if [ "${INCVSCODE}" == "Y" ]; then
-  verbosecopymodule ${PACKAGESDIR}/vscode/vscode-1.73.1-${ARCH}-1.xzm ${MODSDIR}/
+  verbosecopymodule ${PACKAGESDIR}/vscode/vscode-1.74.3-${ARCH}-1.xzm ${MODSDIR}/
 fi
 
 # Copy any extra modules that don't need RDL
 verbosecopymodule ${PACKAGESDIR}/VirtualBox/VirtualBox-6.1.42-x86_64-1.xzm ${MODSDIR}/
 verbosecopymodule ${PACKAGESDIR}/dbwalls/dbwalls-1920-221014.xzm ${MODSDIR}/
 verbosecopymodule ${PACKAGESDIR}/dbwalls/dbwalls-2160-170805.xzm ${MODSDIR}/
-verbosecopymodule ${PACKAGESDIR}/docker/docker-20.10.23-${ARCH}-1.xzm ${MODSDIR}/
+verbosecopymodule ${PACKAGESDIR}/docker/docker-20.10.23-${ARCH}-2.xzm ${MODSDIR}/
 verbosecopymodule ${PACKAGESDIR}/veracrypt/veracrypt-console-1.25.9-${ARCH}-1.xzm ${MODSDIR}/
 verbosecopymodule ${PACKAGESDIR}/vivaldi/vivaldi-5.5.2805.42-${ARCH}-1.xzm ${MODSDIR}/
 

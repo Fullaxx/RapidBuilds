@@ -3,6 +3,8 @@
 source ../spec.sh
 source ./module_spec.sh
 
+linkpackage ${PACKAGESDIR}/ag/ag-20230321-${ARCH}-bksrc1.xzm
+linkpackage ${PACKAGESDIR}/arpscan/arp-scan-1.10.0-${ARCH}-bksrc1.xzm
 linkpackage ${PACKAGESDIR}/axel/axel-2.17.11-${ARCH}-bksrc1.xzm
 linkpackage ${PACKAGESDIR}/calc/calc-2.14.0.14-${ARCH}-bksrc1.xzm
 linkpackage ${PACKAGESDIR}/ccat/ccat-1.1.0-${ARCH}-1.xzm
@@ -14,10 +16,12 @@ linkpackage ${PACKAGESDIR}/iperf/iperf-3.6-${ARCH}-bksrc1.xzm
 linkpackage ${PACKAGESDIR}/ipmitool/ipmitool-20181113-${ARCH}-bksrc1.xzm
 linkpackage ${PACKAGESDIR}/loop-aes-losetup/loop-aes-losetup-2.30.1-${ARCH}-bksrc1.xzm
 linkpackage ${PACKAGESDIR}/nbd/nbd-3.24-${ARCH}-bksrc1.xzm
+linkpackage ${PACKAGESDIR}/nbdkit/nbdkit-20230322-${ARCH}-bksrc1.xzm
 linkpackage ${PACKAGESDIR}/numactl/numactl-2.0.11-${ARCH}-bksrc1.xzm
+linkpackage ${PACKAGESDIR}/pv/pv-1.6.20-${ARCH}-bksrc1.xzm
 
 # tshark needs libsmi
-linkpackage ${PACKAGESDIR}/wireshark/tshark-3.4.16-${ARCH}-bksrc1.xzm
+linkpackage ${PACKAGESDIR}/wireshark/tshark-3.6.12-${ARCH}-bksrc1.xzm
 linkpackage ${PACKAGESDIR}/libsmi/libsmi-0.5.0-${ARCH}-bksrc1.xzm
 
 # mosh needs protobuf
