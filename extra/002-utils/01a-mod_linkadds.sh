@@ -11,6 +11,10 @@ if [ "${INCAG}" == "Y" ]; then
   linkpackage "${PACKAGESDIR}/ag/ag-20230321-${ARCH}-bksrc1.xzm"
 fi
 
+if [ "${INCARPSCAN}" == "Y" ]; then
+  linkpackage "${PACKAGESDIR}/arpscan/arp-scan-1.10.0-${ARCH}-bksrc1.xzm"
+fi
+
 if [ "${INCATOP}" == "Y" ]; then
   linkpackage "${PACKAGESDIR}/atop/atop-2.3.0-${ARCH}-bksrc1.xzm"
 fi

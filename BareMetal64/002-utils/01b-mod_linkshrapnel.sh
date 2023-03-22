@@ -4,6 +4,7 @@ source ../spec.sh
 source ./module_spec.sh
 
 linkpackage ${PACKAGESDIR}/ag/ag-20230321-${ARCH}-bksrc1.xzm
+linkpackage ${PACKAGESDIR}/arpscan/arp-scan-1.10.0-${ARCH}-bksrc1.xzm
 linkpackage ${PACKAGESDIR}/axel/axel-2.17.11-${ARCH}-bksrc1.xzm
 linkpackage ${PACKAGESDIR}/calc/calc-2.14.0.14-${ARCH}-bksrc1.xzm
 linkpackage ${PACKAGESDIR}/ccat/ccat-1.1.0-${ARCH}-1.xzm
