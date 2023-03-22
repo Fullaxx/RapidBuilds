@@ -117,6 +117,10 @@ if [ "${INCNBD}" == "Y" ]; then
   linkpackage "${PACKAGESDIR}/nbd/nbd-3.24-${ARCH}-bksrc1.xzm"
 fi
 
+if [ "${INCNBDKIT}" == "Y" ]; then
+  linkpackage "${PACKAGESDIR}/nbdkit/nbdkit-20230322-${ARCH}-bksrc1.xzm"
+fi
+
 if [ "${INCNLOAD}" == "Y" ]; then
   linkpackage "${PACKAGESDIR}/nload/nload-20220919-${ARCH}-bksrc1.xzm"
 fi
