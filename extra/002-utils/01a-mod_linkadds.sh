@@ -101,8 +101,8 @@ if [ "${INCIPMITOOL}" == "Y" ]; then
 fi
 
 if [ "${INCLIBMAXMINDDB}" == "Y" ]; then
-  linkpackage "${PACKAGESDIR}/geoipdat/geoipdat-190320-noarch-1.xzm"
-  linkpackage "${PACKAGESDIR}/libmaxminddb/libmaxminddb-1.3.2-${ARCH}-bksrc1.xzm"
+  linkpackage "${PACKAGESDIR}/geoipdat/geoipdat-230326-noarch-1.xzm"
+  linkpackage "${PACKAGESDIR}/libmaxminddb/libmaxminddb-1.7.1-${ARCH}-bksrc1.xzm"
 fi
 
 if [ "${INCLOOPAESSETUP}" == "Y" ]; then
