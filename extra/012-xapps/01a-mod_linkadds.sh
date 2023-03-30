@@ -56,6 +56,10 @@ if [ "${INCIMLIBTWO}" == "Y" ]; then
   linkpackage "${PACKAGESDIR}/Eterm/imlib2-1.5.1-${ARCH}-bksrc1.xzm"
 fi
 
+if [ "${INCKITTY}" == "Y" ]; then
+  linkpackage "${PACKAGESDIR}/kitty/kitty-0.27.1-x86_64-1.xzm"
+fi
+
 if [ "${INCLIBASS}" == "Y" ]; then
 # vlc needs libass
   linkpackage "${PACKAGESDIR}/libass/libass-0.14.0-${ARCH}-bksrc1.xzm"
