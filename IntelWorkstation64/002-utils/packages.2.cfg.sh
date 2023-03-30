@@ -38,5 +38,6 @@ if [ "${INCMOD002UTILS}" == "Y" ]; then
   INCSEVENZIP="Y"
   INCTWEAK="Y"
   INCUDFTOOLS="Y"
+  INCWOL="Y"
   INCXNBD="Y"
 fi

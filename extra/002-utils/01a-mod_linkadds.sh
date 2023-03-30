@@ -166,6 +166,10 @@ if [ "${INCUDFTOOLS}" == "Y" ]; then
   linkpackage "${PACKAGESDIR}/udftools/udftools-20220324-${ARCH}-bksrc1.xzm"
 fi
 
+if [ "${INCWOL}" == "Y" ]; then
+  linkpackage "${PACKAGESDIR}/wol/wol-20230330-${ARCH}-bksrc1.xzm"
+fi
+
 if [ "${INCXNBD}" == "Y" ]; then
   linkpackage "${PACKAGESDIR}/xnbd/xnbd-0.4.0-${ARCH}-bksrc1.xzm"
 fi
