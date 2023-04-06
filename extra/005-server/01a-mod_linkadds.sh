@@ -75,11 +75,11 @@ fi
 
 if [ "${INCSPICE}" == "Y" ]; then
   linkpackage "${PACKAGESDIR}/spice/spice-protocol-0.14.4-noarch-bksrc1.xzm"
-  linkpackage "${PACKAGESDIR}/spice/spice-0.15.0-${ARCH}-bksrc1.xzm"
+  linkpackage "${PACKAGESDIR}/spice/spice-0.15.1-${ARCH}-bksrc1.xzm"
 fi
 
 if [ "${INCUSBREDIR}" == "Y" ]; then
-  linkpackage "${PACKAGESDIR}/spice/usbredir-0.9.0-${ARCH}-bksrc1.xzm"
+  linkpackage "${PACKAGESDIR}/spice/usbredir-0.13.0-${ARCH}-bksrc1.xzm"
 fi
 
 if [ "${INCYAJL}" == "Y" ]; then
