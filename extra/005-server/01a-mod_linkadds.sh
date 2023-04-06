@@ -12,11 +12,11 @@ if [ "${INCLIBMICROHTTPD}" == "Y" ]; then
 fi
 
 if [ "${INCLIBVIRT}" == "Y" ]; then
-  linkpackage "${PACKAGESDIR}/libvirt/libvirt-8.1.0-${ARCH}-bksrc1.xzm"
+  linkpackage "${PACKAGESDIR}/libvirt/libvirt-9.2.0-${ARCH}-bksrc1.xzm"
 fi
 
 if [ "${INCLIBWEBSOCKETS}" == "Y" ]; then
-  linkpackage "${PACKAGESDIR}/libwebsockets/libwebsockets-4.3.1-${ARCH}-bksrc1.xzm"
+  linkpackage "${PACKAGESDIR}/libwebsockets/libwebsockets-4.3.2-${ARCH}-bksrc1.xzm"
 fi
 
 if [ "${INCMONGOCDRIVER}" == "Y" ]; then
@@ -61,8 +61,8 @@ if [ "${INCNOVNC}" == "Y" ]; then
 fi
 
 if [ "${INCQEMU}" == "Y" ]; then
-  linkpackage "${PACKAGESDIR}/tianocore/tianocore-20220324-noarch-bksrc1.xzm"
-  linkpackage "${PACKAGESDIR}/qemu/qemu-6.2.0-${ARCH}-bksrc1.xzm"
+  linkpackage "${PACKAGESDIR}/tianocore/tianocore-20230406-noarch-bksrc1.xzm"
+  linkpackage "${PACKAGESDIR}/qemu/qemu-7.2.1-${ARCH}-bksrc1.xzm"
 fi
 
 if [ "${INCQUARK}" == "Y" ]; then

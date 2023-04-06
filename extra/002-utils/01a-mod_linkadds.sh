@@ -24,7 +24,7 @@ if [ "${INCAXEL}" == "Y" ]; then
 fi
 
 if [ "${INCBINDTOOLS}" == "Y" ]; then
-  linkpackage "${PACKAGESDIR}/bindtools/bindtools-9.18.7-${ARCH}-1.xzm"
+  linkpackage "${PACKAGESDIR}/bindtools/bindtools-9.18.13-${ARCH}-1.xzm"
 fi
 
 if [ "${INCCALC}" == "Y" ]; then
@@ -48,7 +48,7 @@ if [ "${INCCURLFTPFS}" == "Y" ]; then
 fi
 
 if [ "${INCCURLLOADER}" == "Y" ]; then
-  linkpackage "${PACKAGESDIR}/curl-loader/curl-loader-0.56-${ARCH}-bksrc1.xzm"
+  linkpackage "${PACKAGESDIR}/curl-loader/curl-loader-0.56-${ARCH}-bksrc2.xzm"
 fi
 
 if [ "${INCDAVFSTWO}" == "Y" ]; then
@@ -93,7 +93,7 @@ if [ "${INCIPERFTWO}" == "Y" ]; then
 fi
 
 if [ "${INCIPERFTHREE}" == "Y" ]; then
-  linkpackage "${PACKAGESDIR}/iperf/iperf-3.6-${ARCH}-bksrc1.xzm"
+  linkpackage "${PACKAGESDIR}/iperf/iperf-3.13-${ARCH}-bksrc1.xzm"
 fi
 
 if [ "${INCIPMITOOL}" == "Y" ]; then
