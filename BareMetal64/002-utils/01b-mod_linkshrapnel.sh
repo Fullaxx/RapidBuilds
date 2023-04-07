@@ -13,7 +13,7 @@ linkpackage ${PACKAGESDIR}/curl-loader/curl-loader-0.56-${ARCH}-bksrc2.xzm
 linkpackage ${PACKAGESDIR}/darkhttpd/darkhttpd-1.12-${ARCH}-bksrc1.xzm
 linkpackage ${PACKAGESDIR}/iperf/iperf-2.0.12-${ARCH}-bksrc1.xzm
 linkpackage ${PACKAGESDIR}/iperf/iperf-3.13-${ARCH}-bksrc1.xzm
-linkpackage ${PACKAGESDIR}/ipmitool/ipmitool-20181113-${ARCH}-bksrc1.xzm
+linkpackage ${PACKAGESDIR}/ipmitool/ipmitool-20230406-${ARCH}-bksrc1.xzm
 linkpackage ${PACKAGESDIR}/loop-aes-losetup/loop-aes-losetup-2.30.1-${ARCH}-bksrc1.xzm
 linkpackage ${PACKAGESDIR}/nbd/nbd-3.24-${ARCH}-bksrc1.xzm
 linkpackage ${PACKAGESDIR}/nbdkit/nbdkit-20230322-${ARCH}-bksrc1.xzm
@@ -26,5 +26,5 @@ linkpackage ${PACKAGESDIR}/wireshark/tshark-3.6.12-${ARCH}-bksrc1.xzm
 linkpackage ${PACKAGESDIR}/libsmi/libsmi-0.5.0-${ARCH}-bksrc1.xzm
 
 # mosh needs protobuf
-linkpackage ${PACKAGESDIR}/protobuf/protobuf-3.19.4-${ARCH}-bksrc1.xzm
-linkpackage ${PACKAGESDIR}/mosh/mosh-1.3.2-${ARCH}-bksrc1.xzm
+linkpackage ${PACKAGESDIR}/protobuf/protobuf-3.20.3-${ARCH}-bksrc1.xzm
+linkpackage ${PACKAGESDIR}/mosh/mosh-1.3.2-${ARCH}-bksrc2.xzm

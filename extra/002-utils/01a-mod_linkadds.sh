@@ -97,7 +97,7 @@ if [ "${INCIPERFTHREE}" == "Y" ]; then
 fi
 
 if [ "${INCIPMITOOL}" == "Y" ]; then
-  linkpackage "${PACKAGESDIR}/ipmitool/ipmitool-20181113-${ARCH}-bksrc1.xzm"
+  linkpackage "${PACKAGESDIR}/ipmitool/ipmitool-20230406-${ARCH}-bksrc1.xzm"
 fi
 
 if [ "${INCLIBMAXMINDDB}" == "Y" ]; then
@@ -110,7 +110,7 @@ if [ "${INCLOOPAESSETUP}" == "Y" ]; then
 fi
 
 if [ "${INCMOSH}" == "Y" ]; then
-  linkpackage "${PACKAGESDIR}/mosh/mosh-1.3.2-${ARCH}-bksrc1.xzm"
+  linkpackage "${PACKAGESDIR}/mosh/mosh-1.3.2-${ARCH}-bksrc2.xzm"
 fi
 
 if [ "${INCNBD}" == "Y" ]; then
@@ -138,12 +138,11 @@ if [ "${INCNUMAD}" == "Y" ]; then
 fi
 
 if [ "${INCPROTOBUF}" == "Y" ]; then
-  linkpackage "${PACKAGESDIR}/protobuf/protobuf-java-3.19.4-noarch-1.xzm"
-  linkpackage "${PACKAGESDIR}/protobuf/protobuf-3.19.4-${ARCH}-bksrc1.xzm"
+  linkpackage "${PACKAGESDIR}/protobuf/protobuf-3.20.3-${ARCH}-bksrc1.xzm"
 fi
 
 if [ "${INCPROTOBUFC}" == "Y" ]; then
-  linkpackage "${PACKAGESDIR}/protobuf/protobuf-c-1.4.0-${ARCH}-bksrc1.xzm"
+  linkpackage "${PACKAGESDIR}/protobuf/protobuf-c-1.4.1-${ARCH}-bksrc1.xzm"
 fi
 
 if [ "${INCPV}" == "Y" ]; then
