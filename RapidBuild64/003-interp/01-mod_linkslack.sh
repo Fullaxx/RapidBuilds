@@ -58,6 +58,10 @@ if [ "${INCPYTHONIDNA}" == "Y" ]; then
   linkpackage ${SLACKPKGDIR}/l/python-idna-*.txz
 fi
 
+if [ "${INCPYTHONIMPORTLIBMETADATA}" == "Y" ]; then
+  linkpackage ${SLACKPKGDIR}/l/python-importlib_metadata-*.txz
+fi
+
 if [ "${INCPYTHONPACKAGING}" == "Y" ]; then
   linkpackage ${SLACKPKGDIR}/l/python-packaging-*.txz
 fi
