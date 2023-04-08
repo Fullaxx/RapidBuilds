@@ -34,4 +34,4 @@ verbosecopymodule ${PACKAGESDIR}/veracrypt/veracrypt-console-1.25.9-${ARCH}-1.xz
 verbosecopymodule ${PACKAGESDIR}/vivaldi/vivaldi-5.5.2805.42-${ARCH}-1.xzm ${MODSDIR}/
 
 # Multicast Xfer
-verbosecopymodule ${PACKAGESDIR}/mcast_xfer/mcastxfer-20220709-x86_64-bksrc1.xzm ${MODSDIR}/
+verbosecopymodule ${PACKAGESDIR}/mcast_xfer/mcastxfer-20230408-x86_64-bksrc1.xzm ${MODSDIR}/
