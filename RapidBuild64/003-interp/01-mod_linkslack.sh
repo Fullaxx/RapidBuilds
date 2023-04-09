@@ -33,11 +33,6 @@ if [ "${INCPYTHON}" == "Y" ]; then
   linkpackage ${SLACKPKGDIR}/d/python3-3.?.*-*-?.txz
 fi
 
-if [ "${INCPYTHONTWO}" == "Y" ]; then
-  linkpackage ${SLACKPKGDIR}/d/python2-2.?.*-*-?.txz
-  linkpackage ${SLACKPKGDIR}/l/python2-module-collection-*.txz
-fi
-
 if [ "${INCPYTHONAPPDIRS}" == "Y" ]; then
   linkpackage ${SLACKPKGDIR}/l/python-appdirs-*.txz
 fi

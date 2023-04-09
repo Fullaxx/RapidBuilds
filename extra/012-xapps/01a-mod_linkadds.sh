@@ -70,12 +70,6 @@ if [ "${INCLIBGXPS}" == "Y" ]; then
   linkpackage "${PACKAGESDIR}/libgxps/libgxps-0.2.5-${ARCH}-bksrc1.xzm"
 fi
 
-if [ "${INCMEDIT}" == "Y" ]; then
-# do we need txt2tags? or is that only for building?
-#  linkpackage "${PACKAGESDIR}/txt2tags/txt2tags-20181126-x86_64-bksrc1.xzm"
-  linkpackage "${PACKAGESDIR}/medit/medit-20190312-${ARCH}-bksrc1.xzm"
-fi
-
 if [ "${INCMPV}" == "Y" ]; then
   linkpackage "${PACKAGESDIR}/mpv/mpv-0.35.1-${ARCH}-bksrc2.xzm"
 fi

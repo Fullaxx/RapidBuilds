@@ -1,5 +1,5 @@
-if [ "${INCMEDIT}" == "Y" ]; then
-  INCFRIBIDI="Y"
-  INCGTKTWO="Y"
-  INCLIBXCOMPOSITE="Y"
-fi
+#if [ "${INCMEDIT}" == "Y" ]; then
+#  INCFRIBIDI="Y"
+#  INCGTKTWO="Y"
+#  INCLIBXCOMPOSITE="Y"
+#fi
