@@ -44,9 +44,7 @@ dir2xzm ${BDIR}/fsdoc 021-doc.xzm >/dev/null
 if [ -e 003-interp.xzm ] && [ -d ${BDIR}/fspython ]; then
   echo "Colocating python code ..."
   rm 003-interp.xzm
-  if [ "${INCPYTHONTWO}" != "Y" ]; then
-    rm -rf ${BDIR}/fspython/usr/${LIBDIR}/python2.7
-  fi
+  rm -rf ${BDIR}/fspython/usr/${LIBDIR}/python2.7
   dir2xzm ${BDIR}/fspython 003-interp.xzm >/dev/null
 fi
 
