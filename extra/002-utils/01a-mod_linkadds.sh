@@ -166,7 +166,7 @@ if [ "${INCUDFTOOLS}" == "Y" ]; then
 fi
 
 if [ "${INCWOL}" == "Y" ]; then
-  linkpackage "${PACKAGESDIR}/wol/wol-20230330-${ARCH}-bksrc1.xzm"
+  linkpackage "${PACKAGESDIR}/wol/wol-20230410-${ARCH}-bksrc1.xzm"
 fi
 
 if [ "${INCXNBD}" == "Y" ]; then
