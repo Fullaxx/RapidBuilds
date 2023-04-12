@@ -23,6 +23,10 @@ if [ "${INCAXEL}" == "Y" ]; then
   linkpackage "${PACKAGESDIR}/axel/axel-2.17.11-${ARCH}-bksrc1.xzm"
 fi
 
+if [ "${INCBTOPPLUSPLUS}" == "Y" ]; then
+  linkpackage "${PACKAGESDIR}/btopplusplus/btop-1.2.13-${ARCH}-1.xzm"
+fi
+
 if [ "${INCBINDTOOLS}" == "Y" ]; then
   linkpackage "${PACKAGESDIR}/bindtools/bindtools-9.18.13-${ARCH}-1.xzm"
 fi
