@@ -39,8 +39,8 @@ if [ -x ${DIR}/usr/bin/rl_mnt_floppy.sh ]; then
   ln -s rl_mnt_floppy.sh ${DIR}/usr/bin/rl_floppy_mnt.sh
 fi
 
-if [ -x ${DIR}/usr/bin/rl_autosave_md5sum.sh ]; then
-  ln -s rl_autosave_md5sum.sh ${DIR}/usr/bin/rl_autosave.sh
+if [ -x ${DIR}/usr/bin/rl_autosave_rsync.sh ]; then
+  ln -s rl_autosave_rsync.sh ${DIR}/usr/bin/rl_autosave.sh
 fi
 
 chmod 0700 ${DIR}/usr/bin/rl_autosave*.sh

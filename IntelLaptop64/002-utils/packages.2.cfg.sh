@@ -6,6 +6,7 @@ if [ "${INCMOD002UTILS}" == "Y" ]; then
   INCARPSCAN="Y"
   INCATOP="Y"
   INCAXEL="Y"
+  INCBTOPPLUSPLUS="Y"
   INCBINDTOOLS="Y"
   INCCALC="Y"
   INCCCAT="Y"
@@ -38,5 +39,6 @@ if [ "${INCMOD002UTILS}" == "Y" ]; then
   INCSEVENZIP="Y"
   INCTWEAK="Y"
   INCUDFTOOLS="Y"
+  INCWOL="Y"
   INCXNBD="Y"
 fi

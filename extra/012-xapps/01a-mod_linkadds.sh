@@ -56,6 +56,10 @@ if [ "${INCIMLIBTWO}" == "Y" ]; then
   linkpackage "${PACKAGESDIR}/Eterm/imlib2-1.5.1-${ARCH}-bksrc1.xzm"
 fi
 
+if [ "${INCKITTY}" == "Y" ]; then
+  linkpackage "${PACKAGESDIR}/kitty/kitty-0.27.1-x86_64-1.xzm"
+fi
+
 if [ "${INCLIBASS}" == "Y" ]; then
 # vlc needs libass
   linkpackage "${PACKAGESDIR}/libass/libass-0.14.0-${ARCH}-bksrc1.xzm"
@@ -64,12 +68,6 @@ fi
 if [ "${INCLIBGXPS}" == "Y" ]; then
 # evince needs libgxps
   linkpackage "${PACKAGESDIR}/libgxps/libgxps-0.2.5-${ARCH}-bksrc1.xzm"
-fi
-
-if [ "${INCMEDIT}" == "Y" ]; then
-# do we need txt2tags? or is that only for building?
-#  linkpackage "${PACKAGESDIR}/txt2tags/txt2tags-20181126-x86_64-bksrc1.xzm"
-  linkpackage "${PACKAGESDIR}/medit/medit-20190312-${ARCH}-bksrc1.xzm"
 fi
 
 if [ "${INCMPV}" == "Y" ]; then

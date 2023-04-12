@@ -41,7 +41,7 @@ linkpackage ${SLACKPKGDIR}/a/lvm2-*.txz
 # Slackware switched to openssl-3.x.x
 # This is here for temporary backward compatibility
 # Remove this when full recompilation succeeds
-linkpackage ${SLACKPKGDIR}/a/openssl11-solibs-*.txz
+# linkpackage ${SLACKPKGDIR}/a/openssl11-solibs-*.txz
 
 linkpackage ${SLACKPKGDIR}/a/openssl-solibs-*.txz
 linkpackage ${SLACKPKGDIR}/a/os-prober-*.txz

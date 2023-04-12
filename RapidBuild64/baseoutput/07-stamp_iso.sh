@@ -22,7 +22,7 @@ echo "Finalizing initramfs ..."
 ( set -e; cd ${IRFSDIR} && find . | cpio -H newc -o | lzma > ${BOOTDIR}/irfs.img )
 
 # Set Permissions
-chown -R root.root ${RLDIR}
+chown -R root:root ${RLDIR}
 
 # Build the ISO
 cd ${RLDIR}

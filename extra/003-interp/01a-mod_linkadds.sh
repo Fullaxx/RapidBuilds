@@ -54,10 +54,6 @@ if [ "${INCJINJATWO}" == "Y" ]; then
   linkpackage "${PACKAGESDIR}/python_mods/Jinja2-2.10-${ARCH}-bksrc2.xzm"
 fi
 
-if [ "${INCKEEPNOTE}" == "Y" ]; then
-  linkpackage "${PACKAGESDIR}/python_mods/keepnote-0.7.8-${ARCH}-bksrc3.xzm"
-fi
-
 if [ "${INCKHANSOUL}" == "Y" ]; then
   linkpackage "${PACKAGESDIR}/python_mods/khansoul-2.0.0-${ARCH}-bksrc1.xzm"
 fi

@@ -23,8 +23,12 @@ if [ "${INCAXEL}" == "Y" ]; then
   linkpackage "${PACKAGESDIR}/axel/axel-2.17.11-${ARCH}-bksrc1.xzm"
 fi
 
+if [ "${INCBTOPPLUSPLUS}" == "Y" ]; then
+  linkpackage "${PACKAGESDIR}/btopplusplus/btop-1.2.13-${ARCH}-1.xzm"
+fi
+
 if [ "${INCBINDTOOLS}" == "Y" ]; then
-  linkpackage "${PACKAGESDIR}/bindtools/bindtools-9.18.7-${ARCH}-1.xzm"
+  linkpackage "${PACKAGESDIR}/bindtools/bindtools-9.18.13-${ARCH}-1.xzm"
 fi
 
 if [ "${INCCALC}" == "Y" ]; then
@@ -48,7 +52,7 @@ if [ "${INCCURLFTPFS}" == "Y" ]; then
 fi
 
 if [ "${INCCURLLOADER}" == "Y" ]; then
-  linkpackage "${PACKAGESDIR}/curl-loader/curl-loader-0.56-${ARCH}-bksrc1.xzm"
+  linkpackage "${PACKAGESDIR}/curl-loader/curl-loader-0.56-${ARCH}-bksrc2.xzm"
 fi
 
 if [ "${INCDAVFSTWO}" == "Y" ]; then
@@ -93,16 +97,16 @@ if [ "${INCIPERFTWO}" == "Y" ]; then
 fi
 
 if [ "${INCIPERFTHREE}" == "Y" ]; then
-  linkpackage "${PACKAGESDIR}/iperf/iperf-3.6-${ARCH}-bksrc1.xzm"
+  linkpackage "${PACKAGESDIR}/iperf/iperf-3.13-${ARCH}-bksrc1.xzm"
 fi
 
 if [ "${INCIPMITOOL}" == "Y" ]; then
-  linkpackage "${PACKAGESDIR}/ipmitool/ipmitool-20181113-${ARCH}-bksrc1.xzm"
+  linkpackage "${PACKAGESDIR}/ipmitool/ipmitool-20230406-${ARCH}-bksrc1.xzm"
 fi
 
 if [ "${INCLIBMAXMINDDB}" == "Y" ]; then
-  linkpackage "${PACKAGESDIR}/geoipdat/geoipdat-190320-noarch-1.xzm"
-  linkpackage "${PACKAGESDIR}/libmaxminddb/libmaxminddb-1.3.2-${ARCH}-bksrc1.xzm"
+  linkpackage "${PACKAGESDIR}/geoipdat/geoipdat-230326-noarch-1.xzm"
+  linkpackage "${PACKAGESDIR}/libmaxminddb/libmaxminddb-1.7.1-${ARCH}-bksrc1.xzm"
 fi
 
 if [ "${INCLOOPAESSETUP}" == "Y" ]; then
@@ -110,7 +114,7 @@ if [ "${INCLOOPAESSETUP}" == "Y" ]; then
 fi
 
 if [ "${INCMOSH}" == "Y" ]; then
-  linkpackage "${PACKAGESDIR}/mosh/mosh-1.3.2-${ARCH}-bksrc1.xzm"
+  linkpackage "${PACKAGESDIR}/mosh/mosh-1.3.2-${ARCH}-bksrc2.xzm"
 fi
 
 if [ "${INCNBD}" == "Y" ]; then
@@ -138,12 +142,11 @@ if [ "${INCNUMAD}" == "Y" ]; then
 fi
 
 if [ "${INCPROTOBUF}" == "Y" ]; then
-  linkpackage "${PACKAGESDIR}/protobuf/protobuf-java-3.19.4-noarch-1.xzm"
-  linkpackage "${PACKAGESDIR}/protobuf/protobuf-3.19.4-${ARCH}-bksrc1.xzm"
+  linkpackage "${PACKAGESDIR}/protobuf/protobuf-3.20.3-${ARCH}-bksrc1.xzm"
 fi
 
 if [ "${INCPROTOBUFC}" == "Y" ]; then
-  linkpackage "${PACKAGESDIR}/protobuf/protobuf-c-1.4.0-${ARCH}-bksrc1.xzm"
+  linkpackage "${PACKAGESDIR}/protobuf/protobuf-c-1.4.1-${ARCH}-bksrc1.xzm"
 fi
 
 if [ "${INCPV}" == "Y" ]; then
@@ -164,6 +167,10 @@ fi
 
 if [ "${INCUDFTOOLS}" == "Y" ]; then
   linkpackage "${PACKAGESDIR}/udftools/udftools-20220324-${ARCH}-bksrc1.xzm"
+fi
+
+if [ "${INCWOL}" == "Y" ]; then
+  linkpackage "${PACKAGESDIR}/wol/wol-20230410-${ARCH}-bksrc1.xzm"
 fi
 
 if [ "${INCXNBD}" == "Y" ]; then

@@ -24,4 +24,4 @@ verbosecopymodule ${PACKAGESDIR}/dddvb/000a-dddvb-20230117-${KERNVERS}-x86_64-bk
 
 # Docker Images
 verbosecopymodule ${PACKAGESDIR}/dimgs/netdata-1.38.1.xzm ${MODSDIR}/
-verbosecopymodule ${PACKAGESDIR}/dimgs/portainer-2.16.2.xzm ${MODSDIR}/
+verbosecopymodule ${PACKAGESDIR}/dimgs/portainer-2.17.1.xzm ${MODSDIR}/
