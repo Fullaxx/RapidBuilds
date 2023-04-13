@@ -75,7 +75,7 @@ if [ "${INCPASTEBINIT}" == "Y" ]; then
 fi
 
 if [ "${INCPSUTIL}" == "Y" ]; then
-  linkpackage "${PACKAGESDIR}/python_mods/psutil-5.9.2-${ARCH}-bksrc1.xzm"
+  linkpackage "${PACKAGESDIR}/python_mods/psutil-5.9.4-${ARCH}-bksrc1.xzm"
 fi
 
 if [ "${INCPYTHONDATEUTIL}" == "Y" ]; then
@@ -102,7 +102,7 @@ fi
 #fi
 
 if [ "${INCTERMINATOR}" == "Y" ]; then
-  linkpackage "${PACKAGESDIR}/python_mods/terminator-2.1.1-${ARCH}-bksrc1.xzm"
+  linkpackage "${PACKAGESDIR}/python_mods/terminator-2.1.3-${ARCH}-bksrc1.xzm"
 fi
 
 if [ "${INCTORNADO}" == "Y" ]; then
