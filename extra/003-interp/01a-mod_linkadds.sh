@@ -81,7 +81,7 @@ fi
 if [ "${INCPYTHONDATEUTIL}" == "Y" ]; then
 # python-dateutil needs six,setuptools_scm??
 # http://slackbuilds.org/repository/14.2/python/python-dateutil/
-  linkpackage "${PACKAGESDIR}/python_mods/python-dateutil-2.8.1-${ARCH}-bksrc1.xzm"
+  linkpackage "${PACKAGESDIR}/python_mods/python-dateutil-2.8.2-${ARCH}-bksrc1.xzm"
 fi
 
 if [ "${INCPYTZ}" == "Y" ]; then
