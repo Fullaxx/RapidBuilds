@@ -85,7 +85,7 @@ if [ "${INCPYTHONDATEUTIL}" == "Y" ]; then
 fi
 
 if [ "${INCPYTZ}" == "Y" ]; then
-  linkpackage "${PACKAGESDIR}/python_mods/pytz-2020.4-${ARCH}-bksrc1.xzm"
+  linkpackage "${PACKAGESDIR}/python_mods/pytz-2023.3-${ARCH}-bksrc1.xzm"
 fi
 
 if [ "${INCPYYAML}" == "Y" ]; then
