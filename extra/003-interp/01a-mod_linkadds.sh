@@ -63,11 +63,11 @@ if [ "${INCLXML}" == "Y" ]; then
 fi
 
 if [ "${INCNUMPY}" == "Y" ]; then
-  linkpackage "${PACKAGESDIR}/python_mods/numpy-1.19.4-${ARCH}-bksrc1.xzm"
+  linkpackage "${PACKAGESDIR}/python_mods/numpy-1.21.6-${ARCH}-bksrc1.xzm"
 fi
 
 if [ "${INCPANDAS}" == "Y" ]; then
-  linkpackage "${PACKAGESDIR}/python_mods/pandas-1.1.4-${ARCH}-bksrc1.xzm"
+  linkpackage "${PACKAGESDIR}/python_mods/pandas-1.3.5-${ARCH}-bksrc1.xzm"
 fi
 
 if [ "${INCPASTEBINIT}" == "Y" ]; then
