@@ -12,7 +12,7 @@ if [ "${INCCHEETAHTHREE}" == "Y" ]; then
 fi
 
 if [ "${INCCONFIGOBJ}" == "Y" ]; then
-  linkpackage "${PACKAGESDIR}/python_mods/configobj-5.0.6-${ARCH}-bksrc1.xzm"
+  linkpackage "${PACKAGESDIR}/python_mods/configobj-5.0.8-${ARCH}-bksrc1.xzm"
 fi
 
 if [ "${INCCLICK}" == "Y" ]; then
