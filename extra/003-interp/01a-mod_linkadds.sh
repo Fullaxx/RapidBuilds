@@ -27,10 +27,6 @@ if [ "${INCFTPSYNC}" == "Y" ]; then
   linkpackage "${PACKAGESDIR}/perl_mods/ftpsync-20180521-noarch-bksrc1.xzm"
 fi
 
-if [ "${INCKHANSOUL}" == "Y" ]; then
-  linkpackage "${PACKAGESDIR}/python_mods/khansoul-2.0.0-${ARCH}-bksrc1.xzm"
-fi
-
 if [ "${INCNUMPY}" == "Y" ]; then
   linkpackage "${PACKAGESDIR}/python_mods/numpy-1.21.6-${ARCH}-bksrc1.xzm"
 fi
