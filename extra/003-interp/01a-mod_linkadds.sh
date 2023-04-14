@@ -3,21 +3,8 @@
 source ../spec.sh
 source ./module_spec.sh
 
-if [ "${INCBOKEH}" == "Y" ]; then
-  linkpackage "${PACKAGESDIR}/python_mods/bokeh-1.0.4-${ARCH}-bksrc2.xzm"
-fi
-
-if [ "${INCCHEETAHTHREE}" == "Y" ]; then
-  linkpackage "${PACKAGESDIR}/python_mods/cheetah3-3.2.0-${ARCH}-bksrc1.xzm"
-fi
-
 if [ "${INCCONFIGOBJ}" == "Y" ]; then
   linkpackage "${PACKAGESDIR}/python_mods/configobj-5.0.8-${ARCH}-bksrc1.xzm"
-fi
-
-if [ "${INCCLICK}" == "Y" ]; then
-  linkpackage "${PACKAGESDIR}/python_mods/click-plugins-1.1.1-${ARCH}-bksrc1.xzm"
-  linkpackage "${PACKAGESDIR}/python_mods/Click-7.0-${ARCH}-bksrc1.xzm"
 fi
 
 if [ "${INCDISTLIB}" == "Y" ]; then
@@ -27,10 +14,6 @@ fi
 if [ "${INCDSTAT}" == "Y" ]; then
   linkpackage "${PACKAGESDIR}/python_mods/dstat-0.7.3-noarch-bksrc1.xzm"
 fi
-
-#if [ "${INCENUMTHREEFOUR}" == "Y" ]; then
-#  linkpackage "${PACKAGESDIR}/python_mods/enum34-1.1.6-${ARCH}-bksrc1.xzm"
-#fi
 
 if [ "${INCFILELOCK}" == "Y" ]; then
   linkpackage "${PACKAGESDIR}/python_mods/filelock-3.8.0-${ARCH}-bksrc1.xzm"
@@ -44,22 +27,8 @@ if [ "${INCFTPSYNC}" == "Y" ]; then
   linkpackage "${PACKAGESDIR}/perl_mods/ftpsync-20180521-noarch-bksrc1.xzm"
 fi
 
-if [ "${INCGNURADIO}" == "Y" ]; then
-  linkpackage "${PACKAGESDIR}/log4cpp/log4cpp-1.1.3-${ARCH}-bksrc1.xzm"
-  linkpackage "${PACKAGESDIR}/python_mods/gnuradio-3.8.0.0-${ARCH}-bksrc1.xzm"
-fi
-
-if [ "${INCJINJATWO}" == "Y" ]; then
-  linkpackage "${PACKAGESDIR}/python_mods/MarkupSafe-1.1.1-${ARCH}-bksrc1.xzm"
-  linkpackage "${PACKAGESDIR}/python_mods/Jinja2-2.10-${ARCH}-bksrc2.xzm"
-fi
-
 if [ "${INCKHANSOUL}" == "Y" ]; then
   linkpackage "${PACKAGESDIR}/python_mods/khansoul-2.0.0-${ARCH}-bksrc1.xzm"
-fi
-
-if [ "${INCLXML}" == "Y" ]; then
-  linkpackage "${PACKAGESDIR}/python_mods/lxml-4.3.2-${ARCH}-bksrc1.xzm"
 fi
 
 if [ "${INCNUMPY}" == "Y" ]; then
@@ -103,10 +72,6 @@ fi
 
 if [ "${INCTERMINATOR}" == "Y" ]; then
   linkpackage "${PACKAGESDIR}/python_mods/terminator-2.1.3-${ARCH}-bksrc1.xzm"
-fi
-
-if [ "${INCTORNADO}" == "Y" ]; then
-  linkpackage "${PACKAGESDIR}/python_mods/tornado-6.0.1-${ARCH}-bksrc1.xzm"
 fi
 
 if [ "${INCVIRTUALENV}" == "Y" ]; then
