@@ -59,6 +59,10 @@ if [ "${INCDAVFSTWO}" == "Y" ]; then
   linkpackage "${PACKAGESDIR}/davfs2/davfs2-1.5.5-${ARCH}-bksrc1.xzm"
 fi
 
+if [ "${INCDELTA}" == "Y" ]; then
+  linkpackage "${PACKAGESDIR}/delta/delta-0.15.1-${ARCH}-1.xzm"
+fi
+
 if [ "${INCDOSTWOUNIX}" == "Y" ]; then
   linkpackage "${PACKAGESDIR}/dos2unix/dos2unix-7.4.1-${ARCH}-bksrc1.xzm"
 fi
