@@ -47,6 +47,10 @@ if [ "${INCCORKSCREW}" == "Y" ]; then
   linkpackage "${PACKAGESDIR}/corkscrew/corkscrew-2.0-${ARCH}-bksrc1.xzm"
 fi
 
+if [ "${INCCTOP}" == "Y" ]; then
+  linkpackage "${PACKAGESDIR}/ctop/ctop-0.7.7-${ARCH}-1.xzm"
+fi
+
 if [ "${INCCURLFTPFS}" == "Y" ]; then
   linkpackage "${PACKAGESDIR}/curlftpfs/curlftpfs-0.9.2-${ARCH}-bksrc1.xzm"
 fi
