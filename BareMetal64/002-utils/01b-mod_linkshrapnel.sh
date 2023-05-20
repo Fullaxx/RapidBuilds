@@ -14,12 +14,16 @@ linkpackage ${PACKAGESDIR}/ctop/ctop-0.7.7-${ARCH}-1.xzm
 linkpackage ${PACKAGESDIR}/curl-loader/curl-loader-0.56-${ARCH}-bksrc2.xzm
 linkpackage ${PACKAGESDIR}/darkhttpd/darkhttpd-1.12-${ARCH}-bksrc1.xzm
 linkpackage ${PACKAGESDIR}/delta/delta-0.15.1-${ARCH}-1.xzm
+linkpackage ${PACKAGESDIR}/dry/dry-0.11.1-${ARCH}-1.xzm
 linkpackage ${PACKAGESDIR}/iperf/iperf-2.0.12-${ARCH}-bksrc1.xzm
 linkpackage ${PACKAGESDIR}/iperf/iperf-3.13-${ARCH}-bksrc1.xzm
 linkpackage ${PACKAGESDIR}/ipmitool/ipmitool-20230406-${ARCH}-bksrc1.xzm
 linkpackage ${PACKAGESDIR}/loop-aes-losetup/loop-aes-losetup-2.30.1-${ARCH}-bksrc1.xzm
+linkpackage ${PACKAGESDIR}/micro/micro-2.0.11-${ARCH}-1.xzm
 linkpackage ${PACKAGESDIR}/nbd/nbd-3.24-${ARCH}-bksrc1.xzm
 linkpackage ${PACKAGESDIR}/nbdkit/nbdkit-20230322-${ARCH}-bksrc1.xzm
+linkpackage ${PACKAGESDIR}/ncdu/ncdu-2.2.1-${ARCH}-1.xzm
+linkpackage ${PACKAGESDIR}/nnn/nnn-4.8-${ARCH}-bksrc1.xzm
 linkpackage ${PACKAGESDIR}/numactl/numactl-2.0.11-${ARCH}-bksrc1.xzm
 linkpackage ${PACKAGESDIR}/pv/pv-1.6.20-${ARCH}-bksrc1.xzm
 linkpackage ${PACKAGESDIR}/wol/wol-20230330-${ARCH}-bksrc1.xzm
