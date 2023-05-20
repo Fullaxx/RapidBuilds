@@ -23,6 +23,12 @@ if [ "${INCAXEL}" == "Y" ]; then
   linkpackage "${PACKAGESDIR}/axel/axel-2.17.11-${ARCH}-bksrc1.xzm"
 fi
 
+if [ "${INCBMON}" == "Y" ]; then
+# libconfuse could be moved to 009-xmodlibs if something else needs it
+  linkpackage "${PACKAGESDIR}/libconfuse/libconfuse-3.2.2-${ARCH}-bksrc1.xzm"
+  linkpackage "${PACKAGESDIR}/bmon/bmon-4.0-${ARCH}-bksrc1.xzm"
+fi
+
 if [ "${INCBTOPPLUSPLUS}" == "Y" ]; then
   linkpackage "${PACKAGESDIR}/btopplusplus/btop-1.2.13-${ARCH}-1.xzm"
 fi
