@@ -28,17 +28,17 @@ echo
 echo "Creating Partition (1) ..."
 sgdisk -n 1:0:+4M ${DISK} | grep successfully
 sgdisk -t 1:EF02 ${DISK} | grep successfully
-sgdisk -c 1:grub_boot ${DISK} | grep successfully
+#sgdisk -c 1:grub_boot ${DISK} | grep successfully
 
 echo "Creating Partition (2) ..."
 PSIZE="+8192M"
 sgdisk -n "2:0:${PSIZE}" ${DISK} | grep successfully
-sgdisk -c 2:boot ${DISK} | grep successfully
+#sgdisk -c 2:boot ${DISK} | grep successfully
 sgdisk -A 2:set:2 ${DISK} | grep successfully
 
 echo "Creating Partition (3) ..."
 sgdisk -n 3:0:0 ${DISK} | grep successfully
-sgdisk -c 3:storage ${DISK} | grep successfully
+#sgdisk -c 3:storage ${DISK} | grep successfully
 
 # According to https://wiki.archlinux.org/index.php/GPT
 # Syslinux requires the /boot partition to be marked as "Legacy BIOS Bootable" GPT attribute
@@ -58,10 +58,10 @@ else
 fi
 
 mkfs.ext2 -q -m0 ${RLPARTTWO}
-tune2fs -L boot ${RLPARTTWO}
+#tune2fs -L boot ${RLPARTTWO}
 
 mkfs.ext4 -q -m0 -O 64bit ${RLPARTTHREE}
-tune2fs -L storage ${RLPARTTHREE}
+#tune2fs -L storage ${RLPARTTHREE}
 
 # Use ext4 since RapidInstall lacks xfs_utils
 # mkfs.xfs "${RLPARTTHREE}"
