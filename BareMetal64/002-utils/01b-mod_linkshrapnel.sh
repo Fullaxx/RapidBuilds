@@ -6,6 +6,7 @@ source ./module_spec.sh
 linkpackage ${PACKAGESDIR}/ag/ag-20230321-${ARCH}-bksrc1.xzm
 linkpackage ${PACKAGESDIR}/arpscan/arp-scan-1.10.0-${ARCH}-bksrc1.xzm
 linkpackage ${PACKAGESDIR}/axel/axel-2.17.11-${ARCH}-bksrc1.xzm
+linkpackage ${PACKAGESDIR}/broot/broot-1.22.1-${ARCH}-1.xzm
 linkpackage ${PACKAGESDIR}/btopplusplus/btop-1.2.13-${ARCH}-1.xzm
 linkpackage ${PACKAGESDIR}/calc/calc-2.14.0.14-${ARCH}-bksrc1.xzm
 linkpackage ${PACKAGESDIR}/ccat/ccat-1.1.0-${ARCH}-1.xzm
@@ -15,6 +16,7 @@ linkpackage ${PACKAGESDIR}/curl-loader/curl-loader-0.56-${ARCH}-bksrc2.xzm
 linkpackage ${PACKAGESDIR}/darkhttpd/darkhttpd-1.12-${ARCH}-bksrc1.xzm
 linkpackage ${PACKAGESDIR}/delta/delta-0.15.1-${ARCH}-1.xzm
 linkpackage ${PACKAGESDIR}/dry/dry-0.11.1-${ARCH}-1.xzm
+linkpackage ${PACKAGESDIR}/gping/gping-1.12.0-${ARCH}-1.xzm
 linkpackage ${PACKAGESDIR}/iperf/iperf-2.0.12-${ARCH}-bksrc1.xzm
 linkpackage ${PACKAGESDIR}/iperf/iperf-3.13-${ARCH}-bksrc1.xzm
 linkpackage ${PACKAGESDIR}/ipmitool/ipmitool-20230406-${ARCH}-bksrc1.xzm
