@@ -53,4 +53,5 @@ UDPMIN="1073741824"
 increasekval "udp_rmem_min" "/proc/sys/net/ipv4/udp_rmem_min" "${UDPMIN}"
 increasekval "udp_wmem_min" "/proc/sys/net/ipv4/udp_wmem_min" "${UDPMIN}"
 
-echo "1073741824 1073741824 1073741824" >/proc/sys/net/ipv4/udp_mem
+
+echo "2147483648 2147483648 2147483648" >/proc/sys/net/ipv4/udp_mem
