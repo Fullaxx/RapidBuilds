@@ -21,10 +21,11 @@ doublekval()
 {
 	ORIG=`cat $1`
 #	ANSWER=`calc "2*${VALUE}" | awk '{print $1}'`
-	NEW=$(( 2 * ORIG ));
-	SIZEMB=$(( NEW / 1000000));
-	echo "${NEW}" >$1
-	echo "$1 doubled to ${SIZEMB}MB"
+	NEW=$(( 2 * ORIG ))
+	SIZEMB=$(( NEW / 1000000))
+	echo "${NEW}" >$1 && \
+	echo "$1 doubled to ${SIZEMB}MB" || \
+	echo "Setting $1 to ${NEW} failed!"
 }
 
 doublekudpmem()
@@ -32,10 +33,11 @@ doublekudpmem()
 	ORIGFIRST=`cat /proc/sys/net/ipv4/udp_mem | awk '{print $1}'`
 	ORIGSECOND=`cat /proc/sys/net/ipv4/udp_mem | awk '{print $2}'`
 	ORIGTHIRD=`cat /proc/sys/net/ipv4/udp_mem | awk '{print $3}'`
-	NEWONE=$(( 2 * ORIGFIRST ));
-	NEWTWO=$(( 2 * ORIGSECOND ));
-	NEWTHREE=$(( 2 * ORIGTHIRD ));
-	echo "${NEWONE} ${NEWTWO} ${NEWTHREE}" >/proc/sys/net/ipv4/udp_mem
+	NEWONE=$(( 2 * ORIGFIRST ))
+	NEWTWO=$(( 2 * ORIGSECOND ))
+	NEWTHREE=$(( 2 * ORIGTHIRD ))
+	echo "${NEWONE} ${NEWTWO} ${NEWTHREE}" >/proc/sys/net/ipv4/udp_mem && \
+	echo "/proc/sys/net/ipv4/udp_mem doubled to ${NEWONE} ${NEWTWO} ${NEWTHREE}"
 }
 
 doublekval "/proc/sys/net/core/rmem_default"
