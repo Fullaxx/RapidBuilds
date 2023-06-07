@@ -23,6 +23,6 @@ verbosecopymodule ${PACKAGESDIR}/dektec/000a-dektec-2022.06.0-${KERNVERS}-x86_64
 verbosecopymodule ${PACKAGESDIR}/dddvb/000a-dddvb-20230117-${KERNVERS}-x86_64-bksrc1.xzm ${BASEDIR}/
 
 # Docker Images
-verbosecopymodule ${PACKAGESDIR}/dimgs/netdata-1.39.0.xzm ${MODSDIR}/
-verbosecopymodule ${PACKAGESDIR}/dimgs/portainer-2.18.2.xzm ${MODSDIR}/
+verbosecopymodule ${PACKAGESDIR}/dimgs/netdata-1.39.1.xzm ${MODSDIR}/
+verbosecopymodule ${PACKAGESDIR}/dimgs/portainer-2.18.3.xzm ${MODSDIR}/
 verbosecopymodule ${PACKAGESDIR}/dimgs/dockly-230517.xzm ${MODSDIR}/
