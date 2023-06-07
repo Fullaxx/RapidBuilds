@@ -20,4 +20,4 @@ if [ "${ENABLE_NVIDIA_FOR_DOCKER}" == "1" ]; then
 fi
 
 # Multicast Xfer
-verbosecopymodule ${PACKAGESDIR}/mcast_xfer/mcastxfer-20230408-x86_64-bksrc1.xzm ${MODSDIR}/
+verbosecopymodule ${PACKAGESDIR}/mcast_xfer/mcastxfer-20230607-x86_64-bksrc1.xzm ${MODSDIR}/
