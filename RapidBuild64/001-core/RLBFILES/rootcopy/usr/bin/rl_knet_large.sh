@@ -12,6 +12,11 @@
 #  512MB = 536870912
 # 1024MB = 1073741824
 
+if [ `id -u` != "0" ]; then
+  echo "Got Root?"
+  exit 1
+fi
+
 increasekval()
 {
 	VALUE=`cat $2`
@@ -49,6 +54,3 @@ increasekval "udp_rmem_min" "/proc/sys/net/ipv4/udp_rmem_min" "${UDPMIN}"
 increasekval "udp_wmem_min" "/proc/sys/net/ipv4/udp_wmem_min" "${UDPMIN}"
 
 echo "134217728 1073741824 1073741824" >/proc/sys/net/ipv4/udp_mem
-
-# Just in case this happens to do anything at all
-echo 1 >/proc/sys/net/ipv4/route/flush
