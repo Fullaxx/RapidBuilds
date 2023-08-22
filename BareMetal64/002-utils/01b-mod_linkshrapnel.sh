@@ -20,6 +20,8 @@ linkpackage ${PACKAGESDIR}/gping/gping-1.12.0-${ARCH}-1.xzm
 linkpackage ${PACKAGESDIR}/iperf/iperf-2.0.12-${ARCH}-bksrc1.xzm
 linkpackage ${PACKAGESDIR}/iperf/iperf-3.13-${ARCH}-bksrc1.xzm
 linkpackage ${PACKAGESDIR}/ipmitool/ipmitool-20230406-${ARCH}-bksrc1.xzm
+linkpackage ${PACKAGESDIR}/lazy/lazydocker-0.21.1-${ARCH}-1.xzm
+linkpackage ${PACKAGESDIR}/lazy/lazygit-0.40.2-${ARCH}-1.xzm
 linkpackage ${PACKAGESDIR}/loop-aes-losetup/loop-aes-losetup-2.30.1-${ARCH}-bksrc1.xzm
 linkpackage ${PACKAGESDIR}/micro/micro-2.0.11-${ARCH}-1.xzm
 linkpackage ${PACKAGESDIR}/nbd/nbd-3.24-${ARCH}-bksrc1.xzm
