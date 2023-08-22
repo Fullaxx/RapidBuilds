@@ -71,6 +71,10 @@ if [ "${INCCODEEXAMPLES}" == "Y" ]; then
   linkpackage "${PACKAGESDIR}/codex/redisson-20190403-noarch-bksrc1.xzm"
 fi
 
+if [ "${INCCYBERCHEF}" == "Y" ]; then
+  linkpackage "${PACKAGESDIR}/CyberChef/CyberChef-10.5.2-1.xzm"
+fi
+
 if [ "${INCQLIBC}" == "Y" ]; then
   linkpackage "${PACKAGESDIR}/qlibc/qlibc-2.4.6-${ARCH}-bksrc1.xzm"
 fi
