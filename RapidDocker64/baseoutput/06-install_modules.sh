@@ -8,7 +8,7 @@ if [ ! -d ${MODSDIR} ]; then
   exit 1
 fi
 
-verbosecopymodule ${PACKAGESDIR}/docker/docker-20.10.23-${ARCH}-2.xzm ${MODSDIR}/
+verbosecopymodule ${PACKAGESDIR}/docker/docker-20.10.24-${ARCH}-1.xzm ${MODSDIR}/
 verbosecopymodule ${PACKAGESDIR}/vim-tiny/vim-tiny-20230404-${ARCH}-bksrc1.xzm ${MODSDIR}/
 
 ### export ENABLE_NVIDIA_FOR_DOCKER="1" for nvidia-container-runtime support ###
@@ -20,4 +20,4 @@ if [ "${ENABLE_NVIDIA_FOR_DOCKER}" == "1" ]; then
 fi
 
 # Multicast Xfer
-verbosecopymodule ${PACKAGESDIR}/mcast_xfer/mcastxfer-20230408-x86_64-bksrc1.xzm ${MODSDIR}/
+verbosecopymodule ${PACKAGESDIR}/mcast_xfer/mcastxfer-20230607-x86_64-bksrc1.xzm ${MODSDIR}/

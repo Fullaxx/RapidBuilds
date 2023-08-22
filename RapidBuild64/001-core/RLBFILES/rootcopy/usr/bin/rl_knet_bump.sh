@@ -1,25 +1,9 @@
 #!/bin/bash
 
-#   1MB =   1048576
-#   2MB =   2097152
-#   4MB =   4194304
-#   8MB =   8388608
-#  16MB =  16777216
-#  32MB =  33554432
-#  64MB =  67108864
-# 128MB = 134217728
-# 256MB = 268435456
-
-increasekval()
-{
-	VALUE=`cat $2`
-	echo -n "$1: ${VALUE}"
-	if [ ${VALUE} -lt "$3" ]; then
-		echo "$3" > "$2"
-		echo -n " (bumped to $3)"
-	fi
-	echo
-}
+if [ `id -u` != "0" ]; then
+  echo "Got Root?"
+  exit 1
+fi
 
 # cat /proc/sys/net/core/rmem_default
 # cat /proc/sys/net/core/wmem_default
@@ -33,19 +17,37 @@ increasekval()
 # cat /proc/sys/net/ipv4/udp_rmem_min
 # cat /proc/sys/net/ipv4/udp_wmem_min
 
-COREDEF="1048576"
-increasekval "rmem_default" "/proc/sys/net/core/rmem_default" "${COREDEF}"
-increasekval "wmem_default" "/proc/sys/net/core/wmem_default" "${COREDEF}"
+doublekval()
+{
+	ORIG=`cat $1`
+#	ANSWER=`calc "2*${VALUE}" | awk '{print $1}'`
+	NEW=$(( 2 * ORIG ))
+	SIZEMB=$(( NEW / 1000000))
+	echo "${NEW}" >$1 && \
+	echo "$1 doubled to ${SIZEMB}MB" || \
+	echo "Setting $1 to ${NEW} failed!"
+}
 
-COREMAX="67108864"
-increasekval "rmem_max" "/proc/sys/net/core/rmem_max" "${COREMAX}"
-increasekval "wmem_max" "/proc/sys/net/core/wmem_max" "${COREMAX}"
+doublekudpmem()
+{
+	ORIGFIRST=`cat /proc/sys/net/ipv4/udp_mem | awk '{print $1}'`
+	ORIGSECOND=`cat /proc/sys/net/ipv4/udp_mem | awk '{print $2}'`
+	ORIGTHIRD=`cat /proc/sys/net/ipv4/udp_mem | awk '{print $3}'`
+	NEWONE=$(( 2 * ORIGFIRST ))
+	NEWTWO=$(( 2 * ORIGSECOND ))
+	NEWTHREE=$(( 2 * ORIGTHIRD ))
+	echo "${NEWONE} ${NEWTWO} ${NEWTHREE}" >/proc/sys/net/ipv4/udp_mem && \
+	echo "/proc/sys/net/ipv4/udp_mem doubled to ${NEWONE} ${NEWTWO} ${NEWTHREE}"
+}
 
-UDPMIN="16777216"
-increasekval "udp_rmem_min" "/proc/sys/net/ipv4/udp_rmem_min" "${UDPMIN}"
-increasekval "udp_wmem_min" "/proc/sys/net/ipv4/udp_wmem_min" "${UDPMIN}"
+doublekval "/proc/sys/net/core/rmem_default"
+doublekval "/proc/sys/net/core/wmem_default"
 
-echo "6187002 268435456 268435456" > /proc/sys/net/ipv4/udp_mem
+doublekval "/proc/sys/net/core/rmem_max"
+doublekval "/proc/sys/net/core/wmem_max"
 
-# Just in case this happens to do anything at all
-echo 1 > /proc/sys/net/ipv4/route/flush
+doublekval "/proc/sys/net/ipv4/udp_rmem_min"
+doublekval "/proc/sys/net/ipv4/udp_wmem_min"
+
+# echo "134217728 1073741824 1073741824" >/proc/sys/net/ipv4/udp_mem
+doublekudpmem

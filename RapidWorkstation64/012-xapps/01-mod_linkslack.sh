@@ -111,6 +111,7 @@ if [ "${INCRDESKTOP}" == "Y" ]; then
 fi
 
 if [ "${INCRXVTUNICODE}" == "Y" ]; then
+  linkpackage ${SLACKPKGDIR}/l/libptytty-*.txz
   linkpackage ${SLACKPKGDIR}/xap/rxvt-unicode-*.txz
 fi
 

@@ -38,17 +38,17 @@ echo
 echo "Creating Partition (1) ..."
 sgdisk -n 1:0:+512M ${DISK} | grep successfully
 sgdisk -t 1:EF00 ${DISK} | grep successfully
-sgdisk -c 1:EFI ${DISK} | grep successfully
+#sgdisk -c 1:EFI ${DISK} | grep successfully
 
 echo "Creating Partition (2) ..."
 sgdisk -n "2:0:${PSIZE}" ${DISK} | grep successfully
-sgdisk -c 2:RL ${DISK} | grep successfully
+#sgdisk -c 2:RL ${DISK} | grep successfully
 sgdisk -A 2:set:2 ${DISK} | grep successfully
 
 if [ "${PSIZE}" != "0" ]; then
   echo "Creating Partition (3) ..."
   sgdisk -n 3:0:0 ${DISK} | grep successfully
-  sgdisk -c 3:storage ${DISK} | grep successfully
+#  sgdisk -c 3:storage ${DISK} | grep successfully
 fi
 
 echo
@@ -67,11 +67,11 @@ fi
 mkfs.vfat ${RLPARTONE}
 
 mkfs.ext2 -q -m0 ${RLPARTTWO}
-tune2fs -L RL ${RLPARTTWO}
+#tune2fs -L RL ${RLPARTTWO}
 
 if [ "${PSIZE}" != "0" ]; then
   mkfs.ext4 -q -m0 -O 64bit ${RLPARTTHREE}
-  tune2fs -L storage ${RLPARTTHREE}
+#  tune2fs -L storage ${RLPARTTHREE}
 fi
 
 # Use ext4 since RapidInstall lacks xfs_utils

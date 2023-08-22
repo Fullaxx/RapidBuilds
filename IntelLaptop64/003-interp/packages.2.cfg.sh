@@ -4,8 +4,8 @@ if [ "${INCMOD003INTERP}" == "Y" ]; then
 
 # Custom Additions
   INCFTPSYNC="Y"
-  INCJUPYTER="N"
-  INCPANDAS="Y"
+  INCPANDAS="N"
   INCPASTEBINIT="Y"
   INCTERMINATOR="Y"
+  INCVIRTUALENV="N"
 fi

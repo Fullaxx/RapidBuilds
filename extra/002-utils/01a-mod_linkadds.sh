@@ -23,6 +23,16 @@ if [ "${INCAXEL}" == "Y" ]; then
   linkpackage "${PACKAGESDIR}/axel/axel-2.17.11-${ARCH}-bksrc1.xzm"
 fi
 
+if [ "${INCBMON}" == "Y" ]; then
+# libconfuse could be moved to 009-xmodlibs if something else needs it
+  linkpackage "${PACKAGESDIR}/libconfuse/libconfuse-3.2.2-${ARCH}-bksrc1.xzm"
+  linkpackage "${PACKAGESDIR}/bmon/bmon-4.0-${ARCH}-bksrc1.xzm"
+fi
+
+if [ "${INCBROOT}" == "Y" ]; then
+  linkpackage ${PACKAGESDIR}/broot/broot-1.22.1-${ARCH}-1.xzm
+fi
+
 if [ "${INCBTOPPLUSPLUS}" == "Y" ]; then
   linkpackage "${PACKAGESDIR}/btopplusplus/btop-1.2.13-${ARCH}-1.xzm"
 fi
@@ -47,6 +57,10 @@ if [ "${INCCORKSCREW}" == "Y" ]; then
   linkpackage "${PACKAGESDIR}/corkscrew/corkscrew-2.0-${ARCH}-bksrc1.xzm"
 fi
 
+if [ "${INCCTOP}" == "Y" ]; then
+  linkpackage "${PACKAGESDIR}/ctop/ctop-0.7.7-${ARCH}-1.xzm"
+fi
+
 if [ "${INCCURLFTPFS}" == "Y" ]; then
   linkpackage "${PACKAGESDIR}/curlftpfs/curlftpfs-0.9.2-${ARCH}-bksrc1.xzm"
 fi
@@ -59,8 +73,16 @@ if [ "${INCDAVFSTWO}" == "Y" ]; then
   linkpackage "${PACKAGESDIR}/davfs2/davfs2-1.5.5-${ARCH}-bksrc1.xzm"
 fi
 
+if [ "${INCDELTA}" == "Y" ]; then
+  linkpackage "${PACKAGESDIR}/delta/delta-0.15.1-${ARCH}-1.xzm"
+fi
+
 if [ "${INCDOSTWOUNIX}" == "Y" ]; then
   linkpackage "${PACKAGESDIR}/dos2unix/dos2unix-7.4.1-${ARCH}-bksrc1.xzm"
+fi
+
+if [ "${INCDRY}" == "Y" ]; then
+  linkpackage "${PACKAGESDIR}/dry/dry-0.11.1-${ARCH}-1.xzm"
 fi
 
 #if [ "${INCFUSEEXFAT}" == "Y" ]; then
@@ -74,6 +96,10 @@ fi
 
 if [ "${INCFLITE}" == "Y" ]; then
   linkpackage "${PACKAGESDIR}/flite/flite-1.4-${ARCH}-bksrc1.xzm"
+fi
+
+if [ "${INCGPING}" == "Y" ]; then
+  linkpackage "${PACKAGESDIR}/gping/gping-1.12.0-${ARCH}-1.xzm"
 fi
 
 if [ "${INCHEXYL}" == "Y" ]; then
@@ -113,6 +139,10 @@ if [ "${INCLOOPAESSETUP}" == "Y" ]; then
   linkpackage "${PACKAGESDIR}/loop-aes-losetup/loop-aes-losetup-2.30.1-${ARCH}-bksrc1.xzm"
 fi
 
+if [ "${INCMICRO}" == "Y" ]; then
+  linkpackage "${PACKAGESDIR}/micro/micro-2.0.11-${ARCH}-1.xzm"
+fi
+
 if [ "${INCMOSH}" == "Y" ]; then
   linkpackage "${PACKAGESDIR}/mosh/mosh-1.3.2-${ARCH}-bksrc2.xzm"
 fi
@@ -125,12 +155,20 @@ if [ "${INCNBDKIT}" == "Y" ]; then
   linkpackage "${PACKAGESDIR}/nbdkit/nbdkit-20230322-${ARCH}-bksrc1.xzm"
 fi
 
+if [ "${INCNCDU}" == "Y" ]; then
+  linkpackage "${PACKAGESDIR}/ncdu/ncdu-2.2.1-${ARCH}-1.xzm"
+fi
+
 if [ "${INCNLOAD}" == "Y" ]; then
   linkpackage "${PACKAGESDIR}/nload/nload-20220919-${ARCH}-bksrc1.xzm"
 fi
 
 if [ "${INCNMON}" == "Y" ]; then
   linkpackage "${PACKAGESDIR}/nmon/nmon-16m-${ARCH}-bksrc1.xzm"
+fi
+
+if [ "${INCNNN}" == "Y" ]; then
+  linkpackage "${PACKAGESDIR}/nnn/nnn-4.8-${ARCH}-bksrc1.xzm"
 fi
 
 if [ "${INCNUMACTL}" == "Y" ]; then

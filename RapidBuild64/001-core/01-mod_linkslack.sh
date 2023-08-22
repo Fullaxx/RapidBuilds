@@ -70,6 +70,8 @@ linkpackage ${SLACKPKGDIR}/l/libffi-*.txz
 linkpackage ${SLACKPKGDIR}/a/lzlib-*.txz
 
 linkpackage ${SLACKPKGDIR}/a/reiserfsprogs-*.txz
+# xfsprogs needs userspace-rcu
+linkpackage ${SLACKPKGDIR}/a/userspace-rcu-*.txz
 linkpackage ${SLACKPKGDIR}/a/xfsprogs-*.txz
 linkpackage ${SLACKPKGDIR}/a/inih-*.txz
 linkpackage ${SLACKPKGDIR}/ap/xfsdump-*.txz

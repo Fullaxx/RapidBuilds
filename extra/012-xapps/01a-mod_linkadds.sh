@@ -94,13 +94,6 @@ if [ "${INCST}" == "Y" ]; then
   linkpackage "${PACKAGESDIR}/st/st-0.8.1-${ARCH}-bksrc1.xzm"
 fi
 
-if [ "${INCTILDA}" == "Y" ]; then
-# tilda needs libconfuse
-# libconfuse could be moved to extra/009-xmodlibs once something else needs it
-  linkpackage "${PACKAGESDIR}/libconfuse/libconfuse-3.2.2-${ARCH}-bksrc1.xzm"
-  linkpackage "${PACKAGESDIR}/tilda/tilda-1.4.1-${ARCH}-bksrc1.xzm"
-fi
-
 if [ "${INCVLC}" == "Y" ]; then
   linkpackage "${PACKAGESDIR}/libmpeg2/libmpeg2-0.5.1-${ARCH}-bksrc1.xzm"
   linkpackage "${PACKAGESDIR}/libdvbpsi/libdvbpsi-1.3.2-${ARCH}-bksrc1.xzm"

@@ -34,4 +34,4 @@ parted ${DISK} set 1 boot on
 echo
 echo "Creating Filesystems ..."
 mkfs.ext2 -q -m0 "${DISK}1"
-tune2fs -L boot "${DISK}1"
+#tune2fs -L boot "${DISK}1"

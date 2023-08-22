@@ -6,6 +6,8 @@ if [ "${INCMOD003INTERP}" == "Y" ]; then
   INCLUA="N"
   INCTCL="N"
 
+  INCPYTHONIMPORTLIBMETADATA="Y"
+  INCPYTHONPIP="Y"
   INCPYTHONSETUPTOOLS="Y"
 
 # n family of packages

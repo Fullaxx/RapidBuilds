@@ -2,6 +2,7 @@
 if [ "${INCMOD002UTILS}" == "Y" ]; then
 # a family of packages
   INCINFOZIP="Y"
+  INCMLOCATE="Y"
 
 # ap family of packages
   INCPOWERTOP="Y"

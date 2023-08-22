@@ -47,14 +47,15 @@ for file_rpm in $*; do
 
 	echo "$file_rpm => $file_xzm"
 
-        if [ -e /usr/bin/rpmoffset ]; then
-        dd ibs=`rpmoffset < $file_rpm` skip=1 if=$file_rpm of=$file_cpio_z 2> /dev/null
-        else
-	dd ibs=`/usr/lib/rpm2xzm/rpmoffset < $file_rpm` skip=1 if=$file_rpm of=$file_cpio_z 2> /dev/null
-        fi
+	if [ -e /usr/bin/rpmoffset ]; then
+		dd ibs=`rpmoffset < $file_rpm` skip=1 if=$file_rpm of=$file_cpio_z 2> /dev/null
+	else
+		dd ibs=`/usr/lib/rpm2xzm/rpmoffset < $file_rpm` skip=1 if=$file_rpm of=$file_cpio_z 2> /dev/null
+	fi
 
-
-	if file $file_cpio_z | grep "bzip2 compressed data"; then
+	if file $file_cpio_z | grep "XZ compressed data"; then
+		xz -dc < $file_cpio_z > $file_cpio
+	elif file $file_cpio_z | grep "bzip2 compressed data"; then
 		bzip2 -dc < $file_cpio_z > $file_cpio
 	else
 		gzip -dc < $file_cpio_z > $file_cpio
@@ -63,8 +64,9 @@ for file_rpm in $*; do
 	(	cd $dir_xzm
 		cpio --quiet -i -m -d < $file_cpio
 		find . -type d -perm 700 -exec chmod 755 {} \;
-	) 
-        dir2xzm "$dir_xzm" "$file_xzm".xzm
+	)
+
+	dir2xzm "$dir_xzm" "$file_xzm".xzm
 	rm -rf $file_cpio $file_cpio_z "$dir_xzm"
 done
 

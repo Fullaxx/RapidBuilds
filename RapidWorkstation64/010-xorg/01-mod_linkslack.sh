@@ -142,8 +142,9 @@ if [ "${INCBITSTREAMFONTS}" == "Y" ]; then
 fi
 
 if [ "${INCGHOSTSCRIPT}" == "Y" ]; then
-  linkpackage ${SLACKPKGDIR}/ap/ghostscript-?.*.txz
+  linkpackage ${SLACKPKGDIR}/ap/ghostscript-??.*.txz
   linkpackage ${SLACKPKGDIR}/ap/ghostscript-fonts-std-*.txz
+  linkpackage ${SLACKPKGDIR}/l/libpaper-*.txz
 fi
 
 if [ "${INCLIBXKLAVIER}" == "Y" ]; then
