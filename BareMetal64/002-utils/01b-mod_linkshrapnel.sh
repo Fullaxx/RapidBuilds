@@ -15,6 +15,7 @@ linkpackage ${PACKAGESDIR}/ctop/ctop-0.7.7-${ARCH}-1.xzm
 linkpackage ${PACKAGESDIR}/curl-loader/curl-loader-0.56-${ARCH}-bksrc2.xzm
 linkpackage ${PACKAGESDIR}/darkhttpd/darkhttpd-1.12-${ARCH}-bksrc1.xzm
 linkpackage ${PACKAGESDIR}/delta/delta-0.15.1-${ARCH}-1.xzm
+linkpackage ${PACKAGESDIR}/dive/dive-0.11.0-${ARCH}-1.xzm
 linkpackage ${PACKAGESDIR}/dry/dry-0.11.1-${ARCH}-1.xzm
 linkpackage ${PACKAGESDIR}/gping/gping-1.12.0-${ARCH}-1.xzm
 linkpackage ${PACKAGESDIR}/iperf/iperf-2.0.12-${ARCH}-bksrc1.xzm
