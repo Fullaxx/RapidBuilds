@@ -176,6 +176,11 @@ if [ "${INCLIBASSUAN}" == "Y" ]; then
   linkpackage ${SLACKPKGDIR}/n/libassuan-*.txz
 fi
 
+if [ "${INCLIBDEFLATE}" == "Y" ]; then
+# openexr reqs libdeflate
+  linkpackage ${SLACKPKGDIR}/l/libdeflate-*.txz
+fi
+
 if [ "${INCLIBGCRYPT}" == "Y" ]; then
   linkpackage ${SLACKPKGDIR}/n/libgcrypt-*.txz
 fi
