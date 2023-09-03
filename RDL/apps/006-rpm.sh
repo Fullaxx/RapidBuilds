@@ -3,5 +3,6 @@ if [ "${INCRPM}" == "Y" ]; then
   INCELFUTILS="Y"
   INCLIBARCHIVE="Y"
   INCLMDB="Y"
+  INCLUA="Y"
   INCMOZILLANSS="Y"
 fi

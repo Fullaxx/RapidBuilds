@@ -3,7 +3,6 @@ if [ "${INCMOD003INTERP}" == "Y" ]; then
   INCPERL="N"
   INCPYTHON="N"
   INCRUBY="N"
-  INCLUA="N"
   INCTCL="N"
 
   INCPYTHONSETUPTOOLS="N"
