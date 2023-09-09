@@ -1,0 +1,12 @@
+--- rc.S	2023-05-24 17:54:46.000000000 -0600
++++ rc.S.new	2023-09-09 03:10:16.737110441 -0600
+@@ -467,3 +467,9 @@
+   unset SEED
+   umask "$OLD_UMASK"
+ fi
++
++### RL Added ###
++if [ -x /etc/rc.d/rc.rl_init ]; then
++  /etc/rc.d/rc.rl_init
++fi
++### RL Added ###
