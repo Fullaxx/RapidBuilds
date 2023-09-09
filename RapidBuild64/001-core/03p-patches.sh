@@ -3,11 +3,13 @@
 source ../spec.sh
 source ./module_spec.sh
 
-PATCHESDIR="RLBFILES/patches/220314-startup"
+PATCHESDIR="RLBFILES/patches/230909-startup"
 if [ ! -d ${PATCHESDIR}  ]; then
   echo "patches are missing..."
   exit 1
 fi
+
+patch ${DIR}/etc/rc.d/rc.modules < ${PATCHESDIR}/rc.modules.diff
 
 patch ${DIR}/etc/rc.d/rc.udev < ${PATCHESDIR}/rc.udev.diff
 

@@ -109,6 +109,10 @@ if [ "${INCLLVM}" == "Y" ]; then
   linkpackage ${SLACKPKGDIR}/l/spirv-llvm-translator-*.txz
 fi
 
+if [ "${INCLUA}" == "Y" ]; then
+  linkpackage ${SLACKPKGDIR}/d/lua-*.txz
+fi
+
 if [ "${INCMFOUR}" == "Y" ]; then
   linkpackage ${SLACKPKGDIR}/d/m4-*.txz
 fi

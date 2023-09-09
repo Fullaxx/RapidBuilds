@@ -1,0 +1,20 @@
+--- rc.6	2023-09-09 02:42:09.612121663 -0600
++++ rc.6.new	2023-09-09 02:42:13.992143213 -0600
+@@ -357,6 +357,17 @@
+   echo "LXC container stopped."
+ fi
+ 
++# Make sure to call poweroff instead of halt
++if [ ! "${shutdown_command}" = "reboot" ]; then
++  shutdown_command=poweroff
++fi
++
++# start RapidLinux cleanup script
++# which ensures everything is correctly unmounted
++if [ -x /mnt/live/cleanup ]; then
++  exec /mnt/live/cleanup --start ${shutdown_command}
++fi
++
+ # Now halt (poweroff with APM or ACPI enabled kernels) or reboot.
+ if [ "$shutdown_command" = "reboot" ]; then
+   echo "Rebooting."
