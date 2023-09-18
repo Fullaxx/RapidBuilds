@@ -187,8 +187,6 @@ if [ "${INCAALIB}" == "Y" ]; then
 fi
 
 if [ "${INCATK}" == "Y" ]; then
-  linkpackage ${SLACKPKGDIR}/l/atk-*.txz
-  linkpackage ${SLACKPKGDIR}/l/at-spi2-atk-*.txz
   linkpackage ${SLACKPKGDIR}/l/at-spi2-core-*.txz
 fi
 
