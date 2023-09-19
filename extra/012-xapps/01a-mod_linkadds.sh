@@ -71,7 +71,7 @@ if [ "${INCLIBGXPS}" == "Y" ]; then
 fi
 
 if [ "${INCMPV}" == "Y" ]; then
-  linkpackage "${PACKAGESDIR}/mpv/mpv-0.35.1-${ARCH}-bksrc2.xzm"
+  linkpackage "${PACKAGESDIR}/mpv/mpv-0.36.0-${ARCH}-bksrc1.xzm"
 fi
 
 if [ "${INCOBCONF}" == "Y" ]; then
