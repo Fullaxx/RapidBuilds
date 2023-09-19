@@ -1,0 +1,10 @@
+if [ "${INCGTKFOUR}" == "Y" ]; then
+  INCMESA="Y"
+  INCLIBXCOMPOSITE="Y"
+  INCLIBXKBCOMMON="Y"
+
+  INCATK="Y"
+  INCCAIRO="Y"
+  INCGDK="Y"
+  INCPANGO="Y"
+fi
