@@ -31,6 +31,7 @@ if [ "${INCMOD010XORG}" == "Y" ]; then
   INCXKILL="N"
   INCXMAN="Y"
   INCXMESSAGE="Y"
+  INCXMODMAP="N"
   INCXMORE="Y"
   INCXPROP="N"
   INCXSET="Y"
