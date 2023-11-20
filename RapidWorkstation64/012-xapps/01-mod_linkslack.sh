@@ -187,8 +187,6 @@ if [ "${INCAALIB}" == "Y" ]; then
 fi
 
 if [ "${INCATK}" == "Y" ]; then
-  linkpackage ${SLACKPKGDIR}/l/atk-*.txz
-  linkpackage ${SLACKPKGDIR}/l/at-spi2-atk-*.txz
   linkpackage ${SLACKPKGDIR}/l/at-spi2-core-*.txz
 fi
 
@@ -300,6 +298,7 @@ if [ "${INCGSTREAMER}" == "Y" ]; then
   linkpackage ${SLACKPKGDIR}/l/gstreamer-*.txz
   linkpackage ${SLACKPKGDIR}/l/gst-plugins-base-*.txz
   linkpackage ${SLACKPKGDIR}/l/gst-plugins-good-*.txz
+#  linkpackage ${SLACKPKGDIR}/l/gst-plugins-bad-free-*.txz
   if [ "${INCFFMPEG}" == "Y" ]; then
     linkpackage ${SLACKPKGDIR}/l/gst-plugins-libav-*.txz
   fi
@@ -323,6 +322,10 @@ fi
 
 if [ "${INCGTKTHREE}" == "Y" ]; then
   linkpackage ${SLACKPKGDIR}/l/gtk+3-*.txz
+fi
+
+if [ "${INCGTKFOUR}" == "Y" ]; then
+  linkpackage ${SLACKPKGDIR}/l/gtk4-*.txz
 fi
 
 if [ "${INCGTKSPELL}" == "Y" ]; then

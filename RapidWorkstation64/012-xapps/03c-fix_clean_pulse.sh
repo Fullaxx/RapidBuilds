@@ -9,7 +9,7 @@ if [ "${INCPULSE}" == "Y" ]; then
   chmod 0755 ${DIR}/etc/rc.d/rc.pulseaudio
 
 # Clean up pulse, if we dont have GCONF
-  if [ "${INCGCONF}" != "Y" ]; then
-    rm ${DIR}/usr/libexec/pulse/gconf-helper
-  fi
+#  if [ "${INCGCONF}" != "Y" ]; then
+#    rm ${DIR}/usr/libexec/pulse/gconf-helper
+#  fi
 fi

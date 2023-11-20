@@ -71,7 +71,7 @@ if [ "${INCLIBGXPS}" == "Y" ]; then
 fi
 
 if [ "${INCMPV}" == "Y" ]; then
-  linkpackage "${PACKAGESDIR}/mpv/mpv-0.35.1-${ARCH}-bksrc2.xzm"
+  linkpackage "${PACKAGESDIR}/mpv/mpv-0.36.0-${ARCH}-bksrc1.xzm"
 fi
 
 if [ "${INCOBCONF}" == "Y" ]; then
@@ -83,7 +83,7 @@ if [ "${INCOPENBOX}" == "Y" ]; then
 fi
 
 if [ "${INCRECORDMYDESKTOP}" == "Y" ]; then
-  linkpackage "${PACKAGESDIR}/recordmydesktop/recordmydesktop-0.3.8.1-${ARCH}-bksrc1.xzm"
+  linkpackage "${PACKAGESDIR}/recordmydesktop/recordmydesktop-0.4.0-${ARCH}-bksrc1.xzm"
 fi
 
 if [ "${INCSLOCK}" == "Y" ]; then
@@ -105,7 +105,7 @@ if [ "${INCWIRESHARK}" == "Y" ]; then
   linkpackage "${PACKAGESDIR}/libsmi/libsmi-0.5.0-${ARCH}-bksrc1.xzm"
   linkpackage "${PACKAGESDIR}/portaudio/portaudio-v19-${ARCH}-bksrc1.xzm"
   linkpackage "${PACKAGESDIR}/spandsp/spandsp-0.0.6-${ARCH}-bksrc1.xzm"
-  linkpackage "${PACKAGESDIR}/wireshark/wireshark-3.6.12-${ARCH}-bksrc1.xzm"
+  linkpackage "${PACKAGESDIR}/wireshark/wireshark-3.6.16-${ARCH}-bksrc1.xzm"
 fi
 
 if [ "${INCXAUTOLOCK}" == "Y" ]; then

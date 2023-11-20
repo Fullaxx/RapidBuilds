@@ -274,6 +274,10 @@ if [ "${INCXMESSAGE}" == "Y" ]; then
   linkpackage ${SLACKPKGDIR}/x/xmessage-*.txz
 fi
 
+if [ "${INCXMODMAP}" == "Y" ]; then
+  linkpackage ${SLACKPKGDIR}/x/xmodmap-*.txz
+fi
+
 if [ "${INCXMORE}" == "Y" ]; then
   linkpackage ${SLACKPKGDIR}/x/xmore-*.txz
 fi

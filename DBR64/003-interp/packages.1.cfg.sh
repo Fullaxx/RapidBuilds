@@ -1,6 +1,6 @@
 # 003-interp options
 if [ "${INCMOD003INTERP}" == "Y" ]; then
-  INCPERL="N"
+  INCPERL="Y"
   INCPYTHON="Y"
   INCRUBY="N"
   INCTCL="N"

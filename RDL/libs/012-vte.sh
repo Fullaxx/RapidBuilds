@@ -1,3 +1,3 @@
 if [ "${INCVTE}" == "Y" ]; then
-  INCGTKTWO="Y"
+  INCGTKFOUR="Y"
 fi
