@@ -216,6 +216,10 @@ if [ "${INCPOWERTOP}" == "Y" ]; then
   linkpackage ${SLACKPKGDIR}/ap/powertop-*.txz
 fi
 
+if [ "${INCRDFIND}" == "Y" ]; then
+  linkpackage ${SLACKPKGDIR}/ap/rdfind-*.txz
+fi
+
 if [ "${INCRZIP}" == "Y" ]; then
   linkpackage ${SLACKPKGDIR}/ap/rzip-*.txz
 fi
