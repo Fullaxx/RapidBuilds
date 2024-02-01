@@ -1,5 +1,6 @@
 if [ "${INCMPV}" == "Y" ]; then
   INCFFMPEG="Y"
+  INCLIBPLACEBO="Y"
   INCLIBXPRESENT="Y"
   INCMESA="Y"
 fi

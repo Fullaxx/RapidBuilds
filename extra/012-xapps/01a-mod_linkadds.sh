@@ -60,18 +60,13 @@ if [ "${INCKITTY}" == "Y" ]; then
   linkpackage "${PACKAGESDIR}/kitty/kitty-0.27.1-x86_64-1.xzm"
 fi
 
-if [ "${INCLIBASS}" == "Y" ]; then
-# vlc needs libass
-  linkpackage "${PACKAGESDIR}/libass/libass-0.14.0-${ARCH}-bksrc1.xzm"
-fi
-
 if [ "${INCLIBGXPS}" == "Y" ]; then
 # evince needs libgxps
   linkpackage "${PACKAGESDIR}/libgxps/libgxps-0.2.5-${ARCH}-bksrc1.xzm"
 fi
 
 if [ "${INCMPV}" == "Y" ]; then
-  linkpackage "${PACKAGESDIR}/mpv/mpv-0.36.0-${ARCH}-bksrc1.xzm"
+  linkpackage "${PACKAGESDIR}/mpv/mpv-0.37.0-${ARCH}-bksrc1.xzm"
 fi
 
 if [ "${INCOBCONF}" == "Y" ]; then
