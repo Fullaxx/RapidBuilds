@@ -210,6 +210,7 @@ fi
 
 if [ "${INCNVMECLI}" == "Y" ]; then
   linkpackage ${SLACKPKGDIR}/ap/nvme-cli-*.txz
+  linkpackage ${SLACKPKGDIR}/l/libnvme-*.txz
 fi
 
 if [ "${INCPOWERTOP}" == "Y" ]; then
