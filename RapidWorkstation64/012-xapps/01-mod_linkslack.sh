@@ -354,6 +354,11 @@ if [ "${INCLCMS}" == "Y" ]; then
   linkpackage ${SLACKPKGDIR}/l/lcms-*.txz
 fi
 
+if [ "${INCLIBASS}" == "Y" ]; then
+# ffmpeg,vlc needs libass
+  linkpackage ${SLACKPKGDIR}/l/libass-*.txz
+fi
+
 if [ "${INCLIBBLURAY}" == "Y" ]; then
 # MPlayer needs libbluray
   linkpackage ${SLACKPKGDIR}/l/libbluray-*.txz
@@ -414,6 +419,10 @@ if [ "${INCLIBOGG}" == "Y" ]; then
   linkpackage ${SLACKPKGDIR}/l/libogg-*.txz
 fi
 
+if [ "${INCLIBPLACEBO}" == "Y" ]; then
+  linkpackage ${SLACKPKGDIR}/l/libplacebo-*.txz
+fi
+
 if [ "${INCLIBPNG}" == "Y" ]; then
   linkpackage ${SLACKPKGDIR}/l/libpng-*.txz
 fi
@@ -442,6 +451,10 @@ fi
 if [ "${INCLIBTIFF}" == "Y" ]; then
 # evince needs libtiff
   linkpackage ${SLACKPKGDIR}/l/libtiff-*.txz
+fi
+
+if [ "${INCLIBUNIBREAK}" == "Y" ]; then
+  linkpackage ${SLACKPKGDIR}/l/libunibreak-*.txz
 fi
 
 if [ "${INCLIBVORBIS}" == "Y" ]; then

@@ -15,8 +15,8 @@ rm -f ${DIR}/usr/bin/memusagestat
 
 rm -f ${DIR}/usr/sbin/{ninfod,ntpsnmpd}
 
-# Sat Apr 15 03:23:22 UTC 2023
-# rm -f ${DIR}/usr/${LIBDIR}/libboost_*
+# We don't need boost from a/aaa_libraries
+rm -f ${DIR}/usr/${LIBDIR}/libboost_*
 
 rm -f ${DIR}/usr/${LIBDIR}/libcups.*
 rm -f ${DIR}/usr/${LIBDIR}/libcupsimage.*
