@@ -110,6 +110,10 @@ if [ "${INCHPINGTHREE}" == "Y" ]; then
   linkpackage "${PACKAGESDIR}/hping3/hping3-20051105-${ARCH}-bksrc1.xzm"
 fi
 
+if [ "${INCHPNSSH}" == "Y" ]; then
+  linkpackage "${PACKAGESDIR}/hpnssh/hpnssh-18.3.1-${ARCH}-bksrc1.xzm"
+fi
+
 if [ "${INCIOPING}" == "Y" ]; then
   linkpackage "${PACKAGESDIR}/ioping/ioping-1.1-${ARCH}-bksrc1.xzm"
 fi
