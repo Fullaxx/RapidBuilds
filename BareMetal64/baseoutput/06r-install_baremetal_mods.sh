@@ -17,10 +17,10 @@ fi
 verbosecopymodule ${PACKAGESDIR}/picdrv/000b-picdrv-3.9.8.56-${KERNVERS}-x86_64-bksrc1.xzm ${BASEDIR}/
 
 # Dektec kernel module
-verbosecopymodule ${PACKAGESDIR}/dektec/000c-dektec-2023.06.0-${KERNVERS}-x86_64-bksrc1.xzm ${BASEDIR}/
+# verbosecopymodule ${PACKAGESDIR}/dektec/000c-dektec-2023.06.0-${KERNVERS}-x86_64-bksrc1.xzm ${BASEDIR}/
 
 # dddvb kernel module
-verbosecopymodule ${PACKAGESDIR}/dddvb/000d-dddvb-20230909-${KERNVERS}-x86_64-bksrc1.xzm ${BASEDIR}/
+# verbosecopymodule ${PACKAGESDIR}/dddvb/000d-dddvb-20230909-${KERNVERS}-x86_64-bksrc1.xzm ${BASEDIR}/
 
 # Docker Images
 verbosecopymodule ${PACKAGESDIR}/dimgs/netdata-1.44.3.xzm ${MODSDIR}/
