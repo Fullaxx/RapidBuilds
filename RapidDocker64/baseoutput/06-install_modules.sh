@@ -13,7 +13,7 @@ verbosecopymodule ${PACKAGESDIR}/vim-tiny/vim-tiny-20230404-${ARCH}-bksrc1.xzm $
 
 ### export ENABLE_NVIDIA_FOR_DOCKER="1" for nvidia-container-runtime support ###
 if [ "${ENABLE_NVIDIA_FOR_DOCKER}" == "1" ]; then
-  verbosecopymodule ${PACKAGESDIR}/nvidia_driver/${KERNVERS}/000a-nvmods-535.104.05-${KERNVERS}.xzm ${BASEDIR}/
+  verbosecopymodule ${PACKAGESDIR}/nvidia_driver/${KERNVERS}/000a-nvmods-535.161.07-${KERNVERS}.xzm ${BASEDIR}/
   verbosecopymodule ${PACKAGESDIR}/nvidia-container-runtime/libnvidia-container-1.9.0-${ARCH}-1.xzm ${MODSDIR}/
   verbosecopymodule ${PACKAGESDIR}/nvidia-container-runtime/nvidia-container-toolkit-1.9.0-${ARCH}-bksrc1.xzm ${MODSDIR}/
   verbosecopymodule ${PACKAGESDIR}/nvidia-container-runtime/libgo-19-${ARCH}.xzm ${MODSDIR}/
