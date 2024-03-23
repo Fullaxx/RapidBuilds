@@ -32,6 +32,7 @@ linkpackage ${PACKAGESDIR}/nnn/nnn-4.8-${ARCH}-bksrc1.xzm
 linkpackage ${PACKAGESDIR}/numactl/numactl-2.0.11-${ARCH}-bksrc1.xzm
 linkpackage ${PACKAGESDIR}/nvtop/nvtop-3.0.2-x86_64-1.xzm
 linkpackage ${PACKAGESDIR}/pv/pv-1.6.20-${ARCH}-bksrc1.xzm
+linkpackage ${PACKAGESDIR}/strace/strace-6.7-${ARCH}-1.xzm
 linkpackage ${PACKAGESDIR}/wol/wol-20230330-${ARCH}-bksrc1.xzm
 
 # bmon needs libconfuse
