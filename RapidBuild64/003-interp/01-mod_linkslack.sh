@@ -30,7 +30,7 @@ if [ "${INCPSSH}" == "Y" ]; then
 fi
 
 if [ "${INCPYTHON}" == "Y" ]; then
-  linkpackage ${SLACKPKGDIR}/d/python3-3.?.*-*-?.txz
+  linkpackage ${SLACKPKGDIR}/d/python3-3.*.*-*-?.txz
 fi
 
 if [ "${INCPYTHONAPPDIRS}" == "Y" ]; then
