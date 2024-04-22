@@ -69,6 +69,10 @@ if [ "${INCPYTHONPIP}" == "Y" ]; then
   linkpackage ${SLACKPKGDIR}/d/python-pip-*.txz
 fi
 
+if [ "${INCPYTHONPSUTIL}" == "Y" ]; then
+  linkpackage ${SLACKPKGDIR}/l/python-psutil-*.txz
+fi
+
 if [ "${INCPYTHONPYPARSING}" == "Y" ]; then
   linkpackage ${SLACKPKGDIR}/l/python-pyparsing-*.txz
 fi
