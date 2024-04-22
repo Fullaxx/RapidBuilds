@@ -186,6 +186,10 @@ if [ "${INCAALIB}" == "Y" ]; then
   linkpackage ${SLACKPKGDIR}/l/aalib-*.txz
 fi
 
+if [ "${INCAOM}" == "Y" ]; then
+  linkpackage ${SLACKPKGDIR}/l/aom-*.txz
+fi
+
 if [ "${INCATK}" == "Y" ]; then
   linkpackage ${SLACKPKGDIR}/l/at-spi2-core-*.txz
 fi
@@ -220,6 +224,10 @@ if [ "${INCCDIO}" == "Y" ]; then
   linkpackage ${SLACKPKGDIR}/l/libcdio-?.?.?-*.txz
 # libcdio-paranoia holds libcdio_cdda.so.?.?.?, it also wants libcddb
   linkpackage ${SLACKPKGDIR}/l/libcdio-paranoia-*.txz
+fi
+
+if [ "${INCDAV1D}" == "Y" ]; then
+  linkpackage ${SLACKPKGDIR}/l/dav1d-*.txz
 fi
 
 if [ "${INCDJVULIBRE}" == "Y" ]; then

@@ -1,4 +1,6 @@
 if [ "${INCFFMPEG}" == "Y" ]; then
+  INCAOM="Y"
+  INCDAV1D="Y"
   INCEXPAT="Y"
   INCLAME="Y"
   INCLIBASS="Y"
