@@ -76,6 +76,11 @@ if [ "${INCDBUSGLIB}" == "Y" ]; then
   linkpackage ${SLACKPKGDIR}/l/dbus-glib-*.txz
 fi
 
+if [ "${INCDUKTAPE}" == "Y" ]; then
+# polkit needs duktape
+  linkpackage ${SLACKPKGDIR}/l/duktape-*.txz
+fi
+
 if [ "${INCELFUTILS}" == "Y" ]; then
 # rpm needs elfutils
   linkpackage ${SLACKPKGDIR}/l/elfutils-*.txz
