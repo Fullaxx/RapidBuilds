@@ -79,10 +79,6 @@ if [ "${INCQLIBC}" == "Y" ]; then
   linkpackage "${PACKAGESDIR}/qlibc/qlibc-2.4.6-${ARCH}-bksrc1.xzm"
 fi
 
-if [ "${INCVALGRIND}" == "Y" ]; then
-  linkpackage "${PACKAGESDIR}/valgrind/valgrind-3.13.0-${ARCH}-bksrc1.xzm"
-fi
-
 if [ "${INCVALKYRIE}" == "Y" ]; then
   linkpackage "${PACKAGESDIR}/valgrind/valkyrie-2.0.0-${ARCH}-bksrc1.xzm"
 fi
