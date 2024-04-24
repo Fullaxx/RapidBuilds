@@ -62,7 +62,7 @@ fi
 
 if [ "${INCLIBGXPS}" == "Y" ]; then
 # evince needs libgxps
-  linkpackage "${PACKAGESDIR}/libgxps/libgxps-0.2.5-${ARCH}-bksrc1.xzm"
+  linkpackage "${PACKAGESDIR}/libgxps/libgxps-0.2.5-${ARCH}-bksrc2.xzm"
 fi
 
 if [ "${INCMPV}" == "Y" ]; then
@@ -99,7 +99,7 @@ fi
 if [ "${INCWIRESHARK}" == "Y" ]; then
   linkpackage "${PACKAGESDIR}/libsmi/libsmi-0.5.0-${ARCH}-bksrc1.xzm"
   linkpackage "${PACKAGESDIR}/portaudio/portaudio-v19-${ARCH}-bksrc1.xzm"
-  linkpackage "${PACKAGESDIR}/spandsp/spandsp-0.0.6-${ARCH}-bksrc1.xzm"
+  linkpackage "${PACKAGESDIR}/spandsp/spandsp-0.0.6-${ARCH}-bksrc2.xzm"
   linkpackage "${PACKAGESDIR}/wireshark/wireshark-3.6.16-${ARCH}-bksrc1.xzm"
 fi
 
