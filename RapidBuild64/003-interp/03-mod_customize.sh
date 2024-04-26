@@ -10,8 +10,8 @@ if [ "${INCMARIADB}" != "Y" ]; then
 fi
 
 if [ "${INCTCL}" != "Y" ]; then
-  rm -f ${DIR}/usr/${LIBDIR}/python?.?/lib-dynload/_tkinter.so
-  rm -f ${DIR}/usr/${LIBDIR}/python?.?/lib-dynload/_tkinter.cpython-*.so
+  rm -f ${DIR}/usr/${LIBDIR}/python?.*/lib-dynload/_tkinter.so
+  rm -f ${DIR}/usr/${LIBDIR}/python?.*/lib-dynload/_tkinter.cpython-*.so
 fi
 
 if [ "${INCPYTHON}" == "Y" ]; then
