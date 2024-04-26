@@ -156,7 +156,7 @@ if [ "${INCNBD}" == "Y" ]; then
 fi
 
 if [ "${INCNBDKIT}" == "Y" ]; then
-  linkpackage "${PACKAGESDIR}/nbdkit/nbdkit-20230322-${ARCH}-bksrc1.xzm"
+  linkpackage "${PACKAGESDIR}/nbdkit/nbdkit-20240426-${ARCH}-bksrc1.xzm"
 fi
 
 if [ "${INCNCDU}" == "Y" ]; then
