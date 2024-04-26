@@ -12,9 +12,14 @@ if [ "${INCPINENTRY}" == "Y" ]; then
     ln -s pinentry-curses ${DIR}/usr/bin/pinentry
   fi
 
+# if we dont have QT6
+  if [ "${INCQTSIX}" != "Y" ]; then
+    rm ${DIR}/usr/bin/pinentry-qt
+  fi
+
 # if we dont have QT5
   if [ "${INCQTFIVE}" != "Y" ]; then
-    rm ${DIR}/usr/bin/pinentry-qt
+    rm ${DIR}/usr/bin/pinentry-qt5
   else
 #   pinentry-qt needs libKF5WaylandClient.so from kwayland
     KWLVERS="5.98.0"

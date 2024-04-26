@@ -76,6 +76,11 @@ if [ "${INCDBUSGLIB}" == "Y" ]; then
   linkpackage ${SLACKPKGDIR}/l/dbus-glib-*.txz
 fi
 
+if [ "${INCDUKTAPE}" == "Y" ]; then
+# polkit needs duktape
+  linkpackage ${SLACKPKGDIR}/l/duktape-*.txz
+fi
+
 if [ "${INCELFUTILS}" == "Y" ]; then
 # rpm needs elfutils
   linkpackage ${SLACKPKGDIR}/l/elfutils-*.txz
@@ -314,9 +319,9 @@ if [ "${INCMOZILLANSS}" == "Y" ]; then
   linkpackage ${SLACKPKGDIR}/l/mozilla-nss-*.txz
 fi
 
-if [ "${INCMOZJSSEVENTYEIGHT}" == "Y" ]; then
+if [ "${INCMOZJS}" == "Y" ]; then
 # polkit needs mozjs
-  linkpackage ${SLACKPKGDIR}/l/mozjs102-*.txz
+  linkpackage ${SLACKPKGDIR}/l/mozjs???-*.txz
 fi
 
 if [ "${INCNEON}" == "Y" ]; then

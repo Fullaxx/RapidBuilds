@@ -189,6 +189,10 @@ if [ "${INCSIP}" == "Y" ]; then
   linkpackage ${SLACKPKGDIR}/l/sip-*.txz
 fi
 
+if [ "${INCVALGRIND}" == "Y" ]; then
+  linkpackage ${SLACKPKGDIR}/d/valgrind-*.txz
+fi
+
 linkpackage "${KERNELPKGDIR}/kernel-crippledsrc.xzm"
 linkpackage "${KERNELPKGDIR}/kernel-headers.xzm"
 echo -n "Using Kernel: "; echo "${KERNVERS}"

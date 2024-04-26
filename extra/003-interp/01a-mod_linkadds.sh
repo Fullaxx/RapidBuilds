@@ -3,8 +3,8 @@
 source ../spec.sh
 source ./module_spec.sh
 
-if [ "${INCCONFIGOBJ}" == "Y" ]; then
-  linkpackage "${PACKAGESDIR}/python_mods/configobj-5.0.8-${ARCH}-bksrc1.xzm"
+if [ "${INCPYTHONCONFIGOBJ}" == "Y" ]; then
+  linkpackage "${PACKAGESDIR}/python_mods/configobj-5.0.8-${ARCH}-bksrc2.xzm"
 fi
 
 if [ "${INCDISTLIB}" == "Y" ]; then
@@ -39,10 +39,6 @@ if [ "${INCPASTEBINIT}" == "Y" ]; then
   linkpackage "${PACKAGESDIR}/python_mods/pastebinit-1.5-noarch-bksrc1.xzm"
 fi
 
-if [ "${INCPSUTIL}" == "Y" ]; then
-  linkpackage "${PACKAGESDIR}/python_mods/psutil-5.9.4-${ARCH}-bksrc1.xzm"
-fi
-
 if [ "${INCPYTHONDATEUTIL}" == "Y" ]; then
 # python-dateutil needs six,setuptools_scm??
 # http://slackbuilds.org/repository/14.2/python/python-dateutil/
@@ -67,7 +63,7 @@ fi
 #fi
 
 if [ "${INCTERMINATOR}" == "Y" ]; then
-  linkpackage "${PACKAGESDIR}/python_mods/terminator-2.1.3-${ARCH}-bksrc1.xzm"
+  linkpackage "${PACKAGESDIR}/python_mods/terminator-2.1.3-${ARCH}-bksrc2.xzm"
 fi
 
 if [ "${INCVIRTUALENV}" == "Y" ]; then

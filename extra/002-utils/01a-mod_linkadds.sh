@@ -152,11 +152,11 @@ if [ "${INCMOSH}" == "Y" ]; then
 fi
 
 if [ "${INCNBD}" == "Y" ]; then
-  linkpackage "${PACKAGESDIR}/nbd/nbd-3.24-${ARCH}-bksrc1.xzm"
+  linkpackage "${PACKAGESDIR}/nbd/nbd-3.26.1-${ARCH}-bksrc1.xzm"
 fi
 
 if [ "${INCNBDKIT}" == "Y" ]; then
-  linkpackage "${PACKAGESDIR}/nbdkit/nbdkit-20230322-${ARCH}-bksrc1.xzm"
+  linkpackage "${PACKAGESDIR}/nbdkit/nbdkit-20240426-${ARCH}-bksrc1.xzm"
 fi
 
 if [ "${INCNCDU}" == "Y" ]; then
