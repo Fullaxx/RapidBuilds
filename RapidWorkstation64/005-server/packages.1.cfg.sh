@@ -8,6 +8,6 @@ if [ "${INCMOD005SERVER}" == "Y" ]; then
   INCNETSNMP="N"
   INCPHP="N"
   INCPROFTPD="N"
-  INCSAMBA="Y"
+  INCSAMBA="N"
   INCVSFTPD="N"
 fi
