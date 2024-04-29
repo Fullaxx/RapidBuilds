@@ -108,6 +108,11 @@ if [ "${INCGC}" == "Y" ]; then
   linkpackage ${SLACKPKGDIR}/l/gc-*.txz
 fi
 
+if [ "${INCGDBM}" == "Y" ]; then
+# perl,python3.11 needs gdbm
+  linkpackage ${SLACKPKGDIR}/l/gdbm-*.txz
+fi
+
 if [ "${INCGLIBONE}" == "Y" ]; then
 # xmms needs glib
   linkpackage ${SLACKPKGDIR}/l/glib-1.2.10-*.txz

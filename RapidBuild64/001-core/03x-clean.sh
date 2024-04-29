@@ -47,6 +47,11 @@ rm -f ${DIR}/usr/${LIBDIR}/libpoppler*
 rm -f ${DIR}/usr/${LIBDIR}/libisl*
 # 16 NOV 2020
 
+# 24 APR 2024
+rm -f ${DIR}/usr/${LIBDIR}/libgdbm*
+rm -f ${DIR}/usr/${LIBDIR}/{libcups,libcupsimage}.*
+# 24 APR 2024
+
 # We don't need boost from a/aaa_libraries
 rm -f ${DIR}/usr/${LIBDIR}/libboost_*
 
@@ -55,7 +60,6 @@ rm -f ${DIR}/usr/${LIBDIR}/libidn2.so.*
 
 # Not ready for this yet
 # rm -f ${DIR}/usr/${LIBDIR}/libidn.so.*
-# rm -f ${DIR}/usr/${LIBDIR}/{libcups,libcupsimage}.*
 # rm -f ${DIR}/usr/${LIBDIR}/{libjpeg,libturbojpeg,libpng14,libpng16}.*
 
 if [ -d ${DIR}/mnt/cdrecorder ]; then rmdir ${DIR}/mnt/cdrecorder; fi
