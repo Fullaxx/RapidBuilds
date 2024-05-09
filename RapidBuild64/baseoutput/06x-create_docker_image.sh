@@ -55,10 +55,7 @@ echo 'CMD ["/bin/bash"]' >> ${DOCKERFILE}
 
 if [ -S /var/run/docker.sock ]; then
   echo "Building docker image ${DOCKERTAG} ..."
-  docker build . >Dockerlog 2>Dockererr
-  if [ "$?" != "0" ]; then cat Dockererr; exit 1; fi
-  DOCKERIMAGEID=`grep 'Successfully built' Dockerlog | awk '{print $3}'`
-  docker tag ${DOCKERIMAGEID} ${DOCKERTAG}
+  docker build -t "${DOCKERTAG}" .
 fi
 
 cd; rm -rf ${DOCKERTEMP}
