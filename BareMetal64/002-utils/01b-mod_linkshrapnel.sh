@@ -26,7 +26,7 @@ linkpackage ${PACKAGESDIR}/lazy/lazygit-0.40.2-${ARCH}-1.xzm
 linkpackage ${PACKAGESDIR}/loop-aes-losetup/loop-aes-losetup-2.30.1-${ARCH}-bksrc1.xzm
 linkpackage ${PACKAGESDIR}/micro/micro-2.0.11-${ARCH}-1.xzm
 linkpackage ${PACKAGESDIR}/nbd/nbd-3.24-${ARCH}-bksrc1.xzm
-linkpackage ${PACKAGESDIR}/nbdkit/nbdkit-20230322-${ARCH}-bksrc1.xzm
+linkpackage ${PACKAGESDIR}/nbdkit/nbdkit-20240426-${ARCH}-bksrc1.xzm
 linkpackage ${PACKAGESDIR}/ncdu/ncdu-2.2.1-${ARCH}-1.xzm
 linkpackage ${PACKAGESDIR}/nnn/nnn-4.8-${ARCH}-bksrc1.xzm
 linkpackage ${PACKAGESDIR}/numactl/numactl-2.0.11-${ARCH}-bksrc1.xzm
