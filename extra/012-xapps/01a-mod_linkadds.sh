@@ -78,7 +78,7 @@ if [ "${INCOPENBOX}" == "Y" ]; then
 fi
 
 if [ "${INCRECORDMYDESKTOP}" == "Y" ]; then
-  linkpackage "${PACKAGESDIR}/recordmydesktop/recordmydesktop-0.4.0-${ARCH}-bksrc1.xzm"
+  linkpackage "${PACKAGESDIR}/recordmydesktop/recordmydesktop-0.4.0-${ARCH}-bksrc2.xzm"
 fi
 
 if [ "${INCSLOCK}" == "Y" ]; then
