@@ -6,4 +6,4 @@ source ./module_spec.sh
 rm -f  ${DIR}/sbin/arpd
 rm -f  ${DIR}/usr/sbin/arpd
 rm -f  ${DIR}/usr/sbin/rarpd
-rm -fr ${DIR}/var/lib/arpd
+# rm -fr ${DIR}/var/lib/arpd
