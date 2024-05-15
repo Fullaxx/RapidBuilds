@@ -26,7 +26,7 @@ fi
 
 # Copy any extra modules that don't need RDL
 # verbosecopymodule ${PACKAGESDIR}/dbwalls/dbwalls-1920-130207.xzm ${MODSDIR}/
-# verbosecopymodule ${PACKAGESDIR}/rapidconfigs/rapidconfig-rapidworkstation-20200914-noarch-1.xzm ${MODSDIR}/
+# verbosecopymodule ${PACKAGESDIR}/rapidconfigs/rapidconfig-rapidworkstation-20240515-noarch-1.xzm ${MODSDIR}/
 
 # NextMidas (NextMidas package includes ICE driver package)
 verbosecopymodule ${PACKAGESDIR}/java8/jdk-8u191-${ARCH}-1.xzm ${MODSDIR}/

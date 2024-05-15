@@ -39,4 +39,4 @@ verbosecopymodule ${PACKAGESDIR}/veracrypt/veracrypt-console-1.25.9-${ARCH}-1.xz
 verbosecopymodule ${PACKAGESDIR}/vivaldi/vivaldi-5.5.2805.42-${ARCH}-1.xzm ${MODSDIR}/
 
 # Desktop Configuration
-verbosecopymodule ${PACKAGESDIR}/rapidconfigs/rapidconfig-rapidworkstation-20230330-noarch-1.xzm ${MODSDIR}/
+verbosecopymodule ${PACKAGESDIR}/rapidconfigs/rapidconfig-rapidworkstation-20240515-noarch-1.xzm ${MODSDIR}/
