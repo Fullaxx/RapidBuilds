@@ -24,5 +24,5 @@ verbosecopymodule ${PACKAGESDIR}/picdrv/000b-picdrv-3.9.9.83-${KERNVERS}-x86_64-
 
 # Docker Images
 verbosecopymodule ${PACKAGESDIR}/dimgs/netdata-1.45.2.xzm ${MODSDIR}/
-verbosecopymodule ${PACKAGESDIR}/dimgs/portainer-2.19.4.xzm ${MODSDIR}/
+verbosecopymodule ${PACKAGESDIR}/dimgs/portainer-2.19.5.xzm ${MODSDIR}/
 #verbosecopymodule ${PACKAGESDIR}/dimgs/dockly-230517.xzm ${MODSDIR}/
