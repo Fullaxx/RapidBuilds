@@ -17,12 +17,12 @@ fi
 # LibreOffice needs RDL
 if [ "${INCLIBREOFFICE}" == "Y" ]; then
   verbosecopymodule ${PACKAGESDIR}/avahi/avahi-libs-0.8-${ARCH}-bksrc1.xzm ${MODSDIR}/
-  verbosecopymodule ${PACKAGESDIR}/LibreOffice/LibreOffice-7.5.9-${ARCH}-1.xzm ${MODSDIR}/
+  verbosecopymodule ${PACKAGESDIR}/LibreOffice/LibreOffice-7.6.7-${ARCH}-1.xzm ${MODSDIR}/
 fi
 
 # VSCode needs RDL
 if [ "${INCVSCODE}" == "Y" ]; then
-  verbosecopymodule ${PACKAGESDIR}/vscode/vscode-1.88.1-${ARCH}-1.xzm ${MODSDIR}/
+  verbosecopymodule ${PACKAGESDIR}/vscode/vscode-1.91.1-${ARCH}-1.xzm ${MODSDIR}/
 fi
 
 # Copy any extra modules that don't need RDL
