@@ -36,6 +36,11 @@ linkpackage ${SLACKPKGDIR}/n/nettle-*.txz
 linkpackage ${SLACKPKGDIR}/n/openssl-*.txz
 linkpackage ${SLACKPKGDIR}/n/p11-kit-*.txz
 linkpackage ${SLACKPKGDIR}/n/nghttp2-*.txz
+linkpackage ${SLACKPKGDIR}/n/nghttp3-*.txz
+
+if [ "${INCABSEILCPP}" == "Y" ]; then
+  linkpackage ${SLACKPKGDIR}/l/abseil-cpp-*.txz
+fi
 
 if [ "${INCALSA}" == "Y" ]; then
   linkpackage ${SLACKPKGDIR}/ap/alsa-utils-*.txz
@@ -338,6 +343,14 @@ if [ "${INCPINENTRY}" == "Y" ]; then
 # cryptsetup,gnupg2 reqs pinentry
   linkpackage ${SLACKPKGDIR}/n/pinentry-*.txz
 fi
+
+if [ "${INCPROTOBUF}" == "Y" ]; then
+  linkpackage ${SLACKPKGDIR}/l/protobuf-*.txz
+fi
+
+#if [ "${INCPROTOBUFC}" == "Y" ]; then
+#  linkpackage "${PACKAGESDIR}/protobuf/protobuf-c-1.4.1-${ARCH}-bksrc1.xzm"
+#fi
 
 if [ "${INCSERF}" == "Y" ]; then
 # subversion needs serf
