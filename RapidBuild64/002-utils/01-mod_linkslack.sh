@@ -89,6 +89,10 @@ if [ "${INCMLOCATE}" == "Y" ]; then
   linkpackage ${SLACKPKGDIR}/a/mlocate-*.txz
 fi
 
+if [ "${INCMOSH}" == "Y" ]; then
+  linkpackage ${SLACKPKGDIR}/n/mosh-*.txz
+fi
+
 if [ "${INCNCOMPRESS}" == "Y" ]; then
   linkpackage ${SLACKPKGDIR}/a/ncompress-*.txz
 fi

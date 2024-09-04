@@ -182,6 +182,10 @@ if [ "${INCXCBUTIL}" == "Y" ]; then
 # linkpackage ${SLACKPKGDIR}/x/xcb-util-cursor-0.1.3-x86_64-1.txz
 fi
 
+if [ "${INCXCBUTILCURSOR}" == "Y" ]; then
+  linkpackage ${SLACKPKGDIR}/x/xcb-util-cursor-*.txz
+fi
+
 if [ "${INCXCBUTILIMAGE}" == "Y" ]; then
   linkpackage ${SLACKPKGDIR}/x/xcb-util-image-?.?.?-*.txz
 fi

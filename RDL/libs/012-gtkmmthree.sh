@@ -1,3 +1,7 @@
 if [ "${INCGTKMMTHREE}" == "Y" ]; then
+  INCATKMM="Y"
+  INCCAIROMM="Y"
+  INCGLIBMM="Y"
   INCGTKTHREE="Y"
+  INCPANGOMM="Y"
 fi
