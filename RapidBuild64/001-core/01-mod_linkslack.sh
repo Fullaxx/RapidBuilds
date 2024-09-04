@@ -120,3 +120,7 @@ linkpackage ${SLACKPKGDIR}/n/libmnl-*.txz
 linkpackage ${SLACKPKGDIR}/n/libtirpc-*.txz #pam needs libtirpc
 
 linkpackage ${SLACKEXTRA}/bash-completion/bash-completion-*.txz
+
+# glibc plugins
+linkpackage ${SLACKPKGDIR}/n/nss-mdns-*.txz
+linkpackage ${SLACKPKGDIR}/l/libnss_nis-*.txz
