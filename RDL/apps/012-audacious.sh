@@ -52,6 +52,9 @@ if [ "${INCAUDACIOUS}" == "Y" ]; then
 # audacious/Output/pipewire.so:
   INCPIPEWIRE="Y"
 
+# audacious is now built with QT6
+  INCQTSIX="Y"
+
 # SOFT INCPULSE="Y"
 # SOFT INCSDLTWO="Y"
 
