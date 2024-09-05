@@ -83,6 +83,7 @@ if [ "${INCMOD002UTILS}" == "Y" ]; then
   INCIRSSI="N"
   INCLYNX="N"
   INCMCABBER="N"
+  INCMOSH="Y"
   INCMTR="N"
   INCNETCAT="N"
   INCNETPIPES="N"

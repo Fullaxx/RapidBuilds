@@ -147,10 +147,6 @@ if [ "${INCMICRO}" == "Y" ]; then
   linkpackage "${PACKAGESDIR}/micro/micro-2.0.11-${ARCH}-1.xzm"
 fi
 
-if [ "${INCMOSH}" == "Y" ]; then
-  linkpackage "${PACKAGESDIR}/mosh/mosh-1.3.2-${ARCH}-bksrc2.xzm"
-fi
-
 if [ "${INCNBD}" == "Y" ]; then
   linkpackage "${PACKAGESDIR}/nbd/nbd-3.26.1-${ARCH}-bksrc1.xzm"
 fi
@@ -181,14 +177,6 @@ fi
 
 if [ "${INCNUMAD}" == "Y" ]; then
   linkpackage "${PACKAGESDIR}/numad/numad-20181024-${ARCH}-bksrc1.xzm"
-fi
-
-if [ "${INCPROTOBUF}" == "Y" ]; then
-  linkpackage "${PACKAGESDIR}/protobuf/protobuf-3.20.3-${ARCH}-bksrc1.xzm"
-fi
-
-if [ "${INCPROTOBUFC}" == "Y" ]; then
-  linkpackage "${PACKAGESDIR}/protobuf/protobuf-c-1.4.1-${ARCH}-bksrc1.xzm"
 fi
 
 if [ "${INCPV}" == "Y" ]; then

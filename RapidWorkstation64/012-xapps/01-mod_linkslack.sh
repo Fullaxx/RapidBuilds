@@ -215,6 +215,10 @@ if [ "${INCCAIROMM}" == "Y" ]; then
   linkpackage ${SLACKPKGDIR}/l/cairomm-*.txz
 fi
 
+if [ "${INCCAIROMMONE}" == "Y" ]; then
+  linkpackage ${SLACKPKGDIR}/l/cairomm1-*.txz
+fi
+
 if [ "${INCCDDB}" == "Y" ]; then
 # Audacious,paranoia need libcddb
   linkpackage ${SLACKPKGDIR}/l/libcddb-*.txz
@@ -293,6 +297,10 @@ if [ "${INCGLIBMM}" == "Y" ]; then
   linkpackage ${SLACKPKGDIR}/l/glibmm-*.txz
 fi
 
+if [ "${INCGLIBMMTWO}" == "Y" ]; then
+  linkpackage ${SLACKPKGDIR}/l/glibmm2-*.txz
+fi
+
 if [ "${INCGOBJECTINTROSPECTION}" == "Y" ]; then
 # terminator needs gobject-introspection
   linkpackage ${SLACKPKGDIR}/l/gobject-introspection-*.txz
@@ -318,6 +326,10 @@ fi
 
 if [ "${INCGTKMMTHREE}" == "Y" ]; then
   linkpackage ${SLACKPKGDIR}/l/gtkmm3-*.txz
+fi
+
+if [ "${INCGTKMMFOUR}" == "Y" ]; then
+  linkpackage ${SLACKPKGDIR}/l/gtkmm4-*.txz
 fi
 
 if [ "${INCGTKONE}" == "Y" ]; then
@@ -530,6 +542,10 @@ if [ "${INCPANGOMM}" == "Y" ]; then
   linkpackage ${SLACKPKGDIR}/l/pangomm-*.txz
 fi
 
+if [ "${INCPANGOMMTWO}" == "Y" ]; then
+  linkpackage ${SLACKPKGDIR}/l/pangomm2-*.txz
+fi
+
 if [ "${INCPAVUCONTROL}" == "Y" ]; then
   linkpackage ${SLACKPKGDIR}/xap/pavucontrol-*.txz
 fi
@@ -554,6 +570,10 @@ if [ "${INCQTFIVE}" == "Y" ]; then
   linkpackage ${SLACKPKGDIR}/l/PyQt5-*.txz
   linkpackage ${SLACKPKGDIR}/l/qt5-webkit-*.txz
   linkpackage ${SLACKPKGDIR}/l/qt5-5.*.txz
+fi
+
+if [ "${INCQTSIX}" == "Y" ]; then
+  linkpackage ${SLACKPKGDIR}/l/qt6-6.*.txz
 fi
 
 if [ "${INCSDL}" == "Y" ]; then

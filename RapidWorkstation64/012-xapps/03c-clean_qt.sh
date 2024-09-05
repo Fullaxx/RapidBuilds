@@ -19,3 +19,15 @@ if [ "${INCQTFIVE}" == "Y" ]; then
     rm ${DIR}/usr/${LIBDIR}/qt5/plugins/sqldrivers/libqsqlmysql.so
   fi
 fi
+
+# Clean up QT6
+if [ "${INCQTFIVE}" == "Y" ]; then
+# libgstreamermediaplugin.so needs libgstphotography from gst-plugins-bad-free
+  rm ${DIR}/usr/${LIBDIR}/qt6/plugins/multimedia/libgstreamermediaplugin.so
+
+  rm ${DIR}/usr/${LIBDIR}/qt6/plugins/sqldrivers/libqsqlmysql.so
+
+  rm ${DIR}/usr/${LIBDIR}/qt6/plugins/sqldrivers/libqsqlodbc.so
+
+  rm ${DIR}/usr/${LIBDIR}/qt6/plugins/texttospeech/libqtexttospeech_speechd.so
+fi

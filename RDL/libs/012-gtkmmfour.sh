@@ -1,0 +1,6 @@
+if [ "${INCGTKMMFOUR}" == "Y" ]; then
+  INCATKMM="Y"
+  INCCAIROMMONE="Y"
+  INCGTKFOUR="Y"
+  INCPANGOMMTWO="Y"
+fi

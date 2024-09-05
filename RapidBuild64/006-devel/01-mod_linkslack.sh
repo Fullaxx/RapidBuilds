@@ -113,6 +113,10 @@ if [ "${INCLUA}" == "Y" ]; then
   linkpackage ${SLACKPKGDIR}/d/lua-*.txz
 fi
 
+if [ "${INCLUAJIT}" == "Y" ]; then
+  linkpackage ${SLACKPKGDIR}/d/luajit-*.txz
+fi
+
 if [ "${INCMFOUR}" == "Y" ]; then
   linkpackage ${SLACKPKGDIR}/d/m4-*.txz
 fi

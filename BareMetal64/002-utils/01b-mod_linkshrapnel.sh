@@ -41,9 +41,5 @@ linkpackage ${PACKAGESDIR}/bmon/bmon-4.0-${ARCH}-bksrc1.xzm
 
 # tshark needs libsmi
 linkpackage ${PACKAGESDIR}/libsmi/libsmi-0.5.0-${ARCH}-bksrc1.xzm
-linkpackage ${PACKAGESDIR}/wireshark/tshark-3.6.16-${ARCH}-bksrc1.xzm
+linkpackage ${PACKAGESDIR}/wireshark/tshark-3.6.24-${ARCH}-bksrc1.xzm
 linkpackage ${PACKAGESDIR}/termshark/termshark-2.4.0-${ARCH}-1.xzm
-
-# mosh needs protobuf
-linkpackage ${PACKAGESDIR}/protobuf/protobuf-3.20.3-${ARCH}-bksrc1.xzm
-linkpackage ${PACKAGESDIR}/mosh/mosh-1.3.2-${ARCH}-bksrc2.xzm
