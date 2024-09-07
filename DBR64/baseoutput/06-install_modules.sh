@@ -15,7 +15,7 @@ fi
 
 # Chrome needs RDL
 if [ "${INCCHROME}" == "Y" ]; then
-  verbosecopymodule ${PACKAGESDIR}/chrome/chrome-126.0.6478.182-x86_64-1.xzm ${MODSDIR}/
+  verbosecopymodule ${PACKAGESDIR}/chrome/chrome-127.0.6533.119-x86_64-1.xzm ${MODSDIR}/
 fi
 
 # LibreOffice needs RDL
@@ -30,5 +30,5 @@ fi
 
 # NextMidas (NextMidas package includes ICE driver package)
 verbosecopymodule ${PACKAGESDIR}/java8/jdk-8u191-${ARCH}-1.xzm ${MODSDIR}/
-verbosecopymodule ${PACKAGESDIR}/NextMidas/NextMidas-240901.xzm ${MODSDIR}/
+verbosecopymodule ${PACKAGESDIR}/NextMidas/NextMidas-240902.xzm ${MODSDIR}/
 verbosecopymodule ${PACKAGESDIR}/calc/calc-2.14.0.14-${ARCH}-bksrc1.xzm ${MODSDIR}/
