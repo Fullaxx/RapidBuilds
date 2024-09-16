@@ -23,6 +23,14 @@ if /sbin/lspci -vn | grep -q '1172:7777' ; then
   fi
 fi
 
+if [ -x /usr/bin/pic_test ]; then
+  ICEROOT="/" /usr/bin/pic_test pic 0 reset
+  ICEROOT="/" /usr/bin/pic_test pic 1 reset
+  ICEROOT="/" /usr/bin/pic_test pic 2 reset
+  ICEROOT="/" /usr/bin/pic_test pic 3 reset
+  ICEROOT="/" /usr/bin/pic_test detect
+fi
+
 # This will modprobe all necessary nvidia modules
 # and setup all necessary nvidia devices under /dev
 if [ -x /usr/bin/nvDeviceQuery ]; then
