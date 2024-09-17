@@ -19,16 +19,14 @@ cat << EOFF >> ${DIR}/etc/rc.d/rc.modules.local
 if /sbin/lspci -vn | grep -q '1172:7777' ; then
   echo "ICE card found"
   if [ -x /etc/rc.d/rc.icepic ]; then
+    export ICEROOT="/usr/share/icexxx"
     /etc/rc.d/rc.icepic start
+    /usr/bin/pic_test pic 0 reset
+    /usr/bin/pic_test pic 1 reset
+    /usr/bin/pic_test pic 2 reset
+    /usr/bin/pic_test pic 3 reset
+    /usr/bin/pic_test detect
   fi
-fi
-
-if [ -x /usr/bin/pic_test ]; then
-  ICEROOT="/" /usr/bin/pic_test pic 0 reset
-  ICEROOT="/" /usr/bin/pic_test pic 1 reset
-  ICEROOT="/" /usr/bin/pic_test pic 2 reset
-  ICEROOT="/" /usr/bin/pic_test pic 3 reset
-  ICEROOT="/" /usr/bin/pic_test detect
 fi
 
 # This will modprobe all necessary nvidia modules
