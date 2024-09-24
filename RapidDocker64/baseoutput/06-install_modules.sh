@@ -9,11 +9,11 @@ if [ ! -d ${MODSDIR} ]; then
 fi
 
 verbosecopymodule ${PACKAGESDIR}/docker/docker-24.0.9-${ARCH}-2.xzm ${MODSDIR}/
-verbosecopymodule ${PACKAGESDIR}/vim-tiny/vim-tiny-20230404-${ARCH}-bksrc1.xzm ${MODSDIR}/
+verbosecopymodule ${PACKAGESDIR}/vim-tiny/vim-tiny-20240918-${ARCH}-bksrc1.xzm ${MODSDIR}/
 
 ### export ENABLE_NVIDIA_FOR_DOCKER="1" for nvidia-container-runtime support ###
 if [ "${ENABLE_NVIDIA_FOR_DOCKER}" == "1" ]; then
-  verbosecopymodule ${PACKAGESDIR}/nvidia_driver/${KERNVERS}/000a-nvmods-550.107.02-${KERNVERS}.xzm ${BASEDIR}/
+  verbosecopymodule ${PACKAGESDIR}/nvidia_driver/${KERNVERS}/000a-nvmods-550.120-${KERNVERS}.xzm ${BASEDIR}/
   verbosecopymodule ${PACKAGESDIR}/nvidia-container-runtime/libnvidia-container-1.9.0-${ARCH}-1.xzm ${MODSDIR}/
   verbosecopymodule ${PACKAGESDIR}/nvidia-container-runtime/nvidia-container-toolkit-1.9.0-${ARCH}-bksrc1.xzm ${MODSDIR}/
   verbosecopymodule ${PACKAGESDIR}/nvidia-container-runtime/libgo-19-${ARCH}.xzm ${MODSDIR}/

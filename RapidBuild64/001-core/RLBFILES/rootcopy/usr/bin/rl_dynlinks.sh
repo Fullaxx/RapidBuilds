@@ -1,7 +1,7 @@
 #!/bin/bash
 
 ### ALWAYS DO THIS FIRST ###
-ldconfig
+/sbin/ldconfig
 ############################
 
 SEARCHPATH="/bin /sbin"
