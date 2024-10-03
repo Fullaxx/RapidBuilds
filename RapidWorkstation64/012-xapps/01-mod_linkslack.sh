@@ -90,6 +90,10 @@ if [ "${INCMOZILLATHUNDERBIRD}" == "Y" ]; then
   linkpackage ${SLACKPKGDIR}/xap/mozilla-thunderbird-*.txz
 fi
 
+if [ "${INCMPV}" == "Y" ]; then
+  linkpackage ${SLACKPKGDIR}/xap/mpv-*.txz
+fi
+
 if [ "${INCSEAMONKEY}" == "Y" ]; then
   linkpackage ${SLACKPKGDIR}/xap/seamonkey-*.txz
 fi
@@ -492,6 +496,11 @@ fi
 
 if [ "${INCLIBWMF}" == "Y" ]; then
   linkpackage ${SLACKPKGDIR}/l/libwmf-*.txz
+fi
+
+if [ "${INCMUJS}" == "Y" ]; then
+# mpv needs mujs
+  linkpackage ${SLACKPKGDIR}/l/mujs-*.txz
 fi
 
 if [ "${INCNETPBM}" == "Y" ]; then

@@ -65,9 +65,10 @@ if [ "${INCLIBGXPS}" == "Y" ]; then
   linkpackage "${PACKAGESDIR}/libgxps/libgxps-0.2.5-${ARCH}-bksrc2.xzm"
 fi
 
-if [ "${INCMPV}" == "Y" ]; then
-  linkpackage "${PACKAGESDIR}/mpv/mpv-0.38.0-${ARCH}-bksrc1.xzm"
-fi
+# replaced with slackware provided package
+#if [ "${INCMPV}" == "Y" ]; then
+#  linkpackage "${PACKAGESDIR}/mpv/mpv-0.38.0-${ARCH}-bksrc1.xzm"
+#fi
 
 if [ "${INCOBCONF}" == "Y" ]; then
   linkpackage "${PACKAGESDIR}/openbox/obconf-2.0.4-${ARCH}-bksrc1.xzm"

@@ -3,4 +3,5 @@ if [ "${INCMPV}" == "Y" ]; then
   INCLIBPLACEBO="Y"
   INCLIBXPRESENT="Y"
   INCMESA="Y"
+  INCMUJS="Y"
 fi
