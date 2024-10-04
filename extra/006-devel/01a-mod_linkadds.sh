@@ -16,7 +16,7 @@ if [ "${INCASTYLE}" == "Y" ]; then
 fi
 
 if [ "${INCCGDB}" == "Y" ]; then
-  linkpackage "${PACKAGESDIR}/cgdb/cgdb-20231122-${ARCH}-bksrc1.xzm"
+  linkpackage "${PACKAGESDIR}/cgdb/cgdb-20241004-${ARCH}-bksrc1.xzm"
 fi
 
 if [ "${INCCODEEXAMPLES}" == "Y" ]; then

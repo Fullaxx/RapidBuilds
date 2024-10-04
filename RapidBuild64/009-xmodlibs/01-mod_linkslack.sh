@@ -171,6 +171,10 @@ if [ "${INCJUDY}" == "Y" ]; then
   linkpackage ${SLACKPKGDIR}/l/judy-*.txz
 fi
 
+if [ "${INCKEYBINDERTHREE}" == "Y" ]; then
+  linkpackage ${SLACKPKGDIR}/l/keybinder3-*.txz
+fi
+
 if [ "${INCLCMSTWO}" == "Y" ]; then
 # openjpeg,imagemagick needs lcms2
 # moved in from 012-xapps
