@@ -8,7 +8,7 @@ if [ "${INCMOD006DEVEL}" == "Y" ]; then
 # Custom Additions
   INCASTYLE="Y"
   INCCGDB="Y"
-  INCCODEEXAMPLES="Y"
+  INCCODEEXAMPLES="N"
   INCQLIBC="Y"
   INCVALGRIND="Y"
   INCVALKYRIE="N"
