@@ -159,7 +159,7 @@ fi
 
 ### Themes ############################
 if [ "${INCADWAITAICONTHEME}" == "Y" ]; then
-  linkpackage ${SLACKPKGDIR}/l/adwaita-icon-theme-*.txz
+  linkpackage ${SLACKPKGDIR}/l/adwaita-icon-theme-??.?-noarch-*.txz
 fi
 
 if [ "${INCGNOMETHEMESEXTRA}" == "Y" ]; then
