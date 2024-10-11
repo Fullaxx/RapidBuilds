@@ -45,3 +45,7 @@ fi
 if [ "${INCVSFTPD}" == "Y" ]; then
   linkpackage ${SLACKPKGDIR}/n/vsftpd-*.txz
 fi
+
+if [ "${INCWSDDTWO}" == "Y" ]; then
+  linkpackage ${SLACKPKGDIR}/n/wsdd2-*.txz
+fi

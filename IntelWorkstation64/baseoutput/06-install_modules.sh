@@ -32,10 +32,10 @@ fi
 # Copy any extra modules that don't need RDL
 verbosecopymodule ${PACKAGESDIR}/VirtualBox/VirtualBox-6.1.50-x86_64-1.xzm ${MODSDIR}/
 verbosecopymodule ${PACKAGESDIR}/dbwalls/dbwalls-1920-221014.xzm ${MODSDIR}/
-verbosecopymodule ${PACKAGESDIR}/docker/docker-24.0.9-${ARCH}-2.xzm ${MODSDIR}/
+verbosecopymodule ${PACKAGESDIR}/docker/docker-26.1.4-${ARCH}-1.xzm ${MODSDIR}/
 verbosecopymodule ${PACKAGESDIR}/mcast_xfer/mcastxfer-20230607-${ARCH}-bksrc1.xzm ${MODSDIR}/
 verbosecopymodule ${PACKAGESDIR}/sublimetext/sublime_text-4143-${ARCH}-bksrc1.xzm ${MODSDIR}/
-verbosecopymodule ${PACKAGESDIR}/vivaldi/vivaldi-6.9.3447.41-${ARCH}-1.xzm ${MODSDIR}/
+verbosecopymodule ${PACKAGESDIR}/vivaldi/vivaldi-6.9.3447.54-${ARCH}-1.xzm ${MODSDIR}/
 
 # Desktop Configuration
 verbosecopymodule ${PACKAGESDIR}/rapidconfigs/rapidconfig-rapidworkstation-20240515-noarch-1.xzm ${MODSDIR}/
