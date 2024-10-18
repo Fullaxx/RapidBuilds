@@ -7,3 +7,7 @@
 *.bak
 *.sav
 *.saved
+*.mod_pkg_list.txt
+*.proj_pkg_list.txt
+
+manifesto.tar
