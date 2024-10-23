@@ -1,0 +1,37 @@
+--- rc.M	2024-10-23 08:59:56.863700586 +0000
++++ rc.M.new	2024-10-23 09:00:14.874078134 +0000
+@@ -445,6 +445,34 @@
+   /etc/rc.d/rc.gpm start
+ fi
+ 
++### RL Added ###
++# This doesnt seem to be done anywhere else
++if [ -x /etc/rc.d/rc.rl_certupdate ]; then
++  /etc/rc.d/rc.rl_certupdate
++fi
++
++# Setup and Start docker
++if [ -x /etc/rc.d/rc.rl_docker ]; then
++  /etc/rc.d/rc.rl_docker setup
++  /etc/rc.d/rc.rl_docker start
++fi
++
++# Start rasdaemon:
++if [ -x /etc/rc.d/rc.rasdaemon ]; then
++  /etc/rc.d/rc.rasdaemon start
++fi
++
++# Start Lighttpd web server:
++if [ -x /etc/rc.d/rc.lighttpd ] && [ -r /etc/lighttpd/lighttpd.conf ]; then
++  /etc/rc.d/rc.lighttpd start
++fi
++
++# Install VirtualBox if available
++if [ -x /etc/rc.d/rc.VirtualBox ]; then
++  /etc/rc.d/rc.VirtualBox
++fi
++### RL Added ###
++
+ # If there are SystemV init scripts for this runlevel, run them.
+ if [ -x /etc/rc.d/rc.sysvinit ]; then
+   /etc/rc.d/rc.sysvinit
