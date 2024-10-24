@@ -1,0 +1,24 @@
+--- rc.S	2024-08-16 17:42:56.000000000 +0000
++++ rc.S.new	2024-10-23 18:55:00.928597304 +0000
+@@ -391,6 +391,21 @@
+   /sbin/swapon -a 2> /dev/null
+ fi
+ 
++### RL Added ###
++if [ -L /dev/disk/by-label/varlog ]; then
++# Should only be empty log skeletons here
++  mv /var/log /var/log.empty
++  mkdir /var/log
++  /sbin/mount /dev/disk/by-label/varlog /var/log -o nodev,nosuid,noexec
++  (
++    cd /var/log.empty
++    for FILE in *; do
++      if [ ! -f /var/log/${FILE} ]; then mv ${FILE} /var/log/; fi
++    done
++  )
++fi
++### RL Added ###
++
+ # Clean up some temporary files:
+ rm -f /etc/nologin /etc/dhcpc/*.pid /etc/forcefsck /etc/fastboot \
+   /var/state/saslauthd/saslauthd.pid /tmp/.Xauth* 1> /dev/null 2> /dev/null

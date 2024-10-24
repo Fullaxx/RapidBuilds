@@ -1,0 +1,7 @@
+520a521,526
+> 
+> ### RL Added ###
+> if [ -x /etc/rc.d/rc.rl_init ]; then
+>   /etc/rc.d/rc.rl_init
+> fi
+> ### RL Added ###
