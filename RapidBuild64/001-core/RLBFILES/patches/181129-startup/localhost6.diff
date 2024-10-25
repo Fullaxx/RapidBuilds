@@ -1,9 +1,0 @@
---- hosts	1999-01-28 01:11:36.000000000 +0000
-+++ hosts.new	2017-10-18 18:31:27.547888303 +0000
-@@ -18,4 +18,6 @@
- # Linux box.
- 127.0.0.1	darkstar.example.net darkstar
- 
-+::1			localhost6
-+
- # End of hosts.
