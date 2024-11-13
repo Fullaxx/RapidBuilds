@@ -577,7 +577,7 @@ fi
 
 if [ "${INCQTFIVE}" == "Y" ]; then
   linkpackage ${SLACKPKGDIR}/l/PyQt5-*.txz
-  linkpackage ${SLACKPKGDIR}/l/qt5-webkit-*.txz
+#  linkpackage ${SLACKPKGDIR}/l/qt5-webkit-*.txz Removed Mon Oct 28 21:22:48 UTC 2024
   linkpackage ${SLACKPKGDIR}/l/qt5-5.*.txz
 fi
 
