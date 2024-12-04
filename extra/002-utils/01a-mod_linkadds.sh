@@ -134,6 +134,10 @@ if [ "${INCIPMITOOL}" == "Y" ]; then
   linkpackage "${PACKAGESDIR}/ipmitool/ipmitool-20230406-${ARCH}-bksrc1.xzm"
 fi
 
+if [ "${INCJQ}" == "Y" ]; then
+  linkpackage "${PACKAGESDIR}/jq/jq-1.7.1-${ARCH}-1.xzm"
+fi
+
 if [ "${INCLIBMAXMINDDB}" == "Y" ]; then
   linkpackage "${PACKAGESDIR}/geoipdat/geoipdat-230326-noarch-1.xzm"
   linkpackage "${PACKAGESDIR}/libmaxminddb/libmaxminddb-1.7.1-${ARCH}-bksrc1.xzm"

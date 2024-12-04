@@ -100,4 +100,7 @@ if [ "${INCMOD002UTILS}" == "Y" ]; then
   INCTFTPHPA="N"
   INCTRACEROUTE="Y"
   INCVLAN="N"
+
+# Custom Additions
+  INCJQ="Y"
 fi
