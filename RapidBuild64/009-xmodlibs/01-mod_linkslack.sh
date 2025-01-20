@@ -158,10 +158,6 @@ if [ "${INCJEMALLOC}" == "Y" ]; then
   linkpackage ${SLACKPKGDIR}/l/jemalloc-*.txz
 fi
 
-if [ "${INCJSONC}" == "Y" ]; then
-  linkpackage ${SLACKPKGDIR}/l/json-c-*.txz
-fi
-
 if [ "${INCJSONGLIB}" == "Y" ]; then
   linkpackage ${SLACKPKGDIR}/l/json-glib-*.txz
 fi

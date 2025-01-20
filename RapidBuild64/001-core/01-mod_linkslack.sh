@@ -37,6 +37,11 @@ linkpackage ${SLACKPKGDIR}/a/kmod-*.txz
 linkpackage ${SLACKPKGDIR}/a/less-*.txz
 linkpackage ${SLACKPKGDIR}/a/lvm2-*.txz
 
+# LVM2 now requires libnvme and json-c (may as well include nvme-cli also)
+linkpackage ${SLACKPKGDIR}/ap/nvme-cli-*.txz
+linkpackage ${SLACKPKGDIR}/l/libnvme-*.txz
+linkpackage ${SLACKPKGDIR}/l/json-c-*.txz
+
 # Wed Mar 8 20:26:54 UTC 2023
 # Slackware switched to openssl-3.x.x
 # This is here for temporary backward compatibility
