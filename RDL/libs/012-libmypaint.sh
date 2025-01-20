@@ -1,2 +1,3 @@
-if [ "${INCLIBMYPAINT}" == "Y" ]; then
-fi
+#if [ "${INCLIBMYPAINT}" == "Y" ]; then
+#
+#fi
