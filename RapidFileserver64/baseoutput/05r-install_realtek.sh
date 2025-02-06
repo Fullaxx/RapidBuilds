@@ -8,4 +8,4 @@ if [ ! -d ${BASEDIR} ]; then
   exit 1
 fi
 
-verbosecopymodule ${PACKAGESDIR}/realtek/000r-kmods-r8125-9.013.02-${KERNVERS}.xzm ${BASEDIR}/
+verbosecopymodule ${PACKAGESDIR}/realtek/000r-kmods-r8125-9.014.01-${KERNVERS}.xzm ${BASEDIR}/
