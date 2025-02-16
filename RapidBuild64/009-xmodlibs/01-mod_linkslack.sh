@@ -235,6 +235,10 @@ if [ "${INCLIBNDP}" == "Y" ]; then
   linkpackage ${SLACKPKGDIR}/n/libndp-*.txz
 fi
 
+if [ "${INCLIBNICE}" == "Y" ]; then
+  linkpackage ${SLACKPKGDIR}/l/libnice-*.txz
+fi
+
 if [ "${INCLIBNIH}" == "Y" ]; then
   linkpackage ${SLACKPKGDIR}/l/libnih-*.txz
 fi
@@ -345,6 +349,10 @@ fi
 if [ "${INCNEON}" == "Y" ]; then
 # audacious needs neon
   linkpackage ${SLACKPKGDIR}/l/neon-*.txz
+fi
+
+if [ "${INCOPENCV}" == "Y" ]; then
+  linkpackage ${SLACKPKGDIR}/l/opencv-*.txz
 fi
 
 if [ "${INCPINENTRY}" == "Y" ]; then
