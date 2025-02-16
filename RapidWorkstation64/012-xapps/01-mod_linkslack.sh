@@ -599,6 +599,10 @@ if [ "${INCSDLTWO}" == "Y" ]; then
   linkpackage ${SLACKPKGDIR}/l/SDL2_ttf-*.txz
 fi
 
+if [ "${INCSDLTHREE}" == "Y" ]; then
+  linkpackage ${SLACKPKGDIR}/l/SDL3-*.txz
+fi
+
 if [ "${INCSPEEX}" == "Y" ]; then
   linkpackage ${SLACKPKGDIR}/l/speex-*.txz
 fi
