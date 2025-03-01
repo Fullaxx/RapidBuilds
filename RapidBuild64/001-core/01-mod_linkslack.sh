@@ -35,7 +35,13 @@ linkpackage ${SLACKPKGDIR}/a/hostname-*.txz
 linkpackage ${SLACKPKGDIR}/a/kbd-*.txz
 linkpackage ${SLACKPKGDIR}/a/kmod-*.txz
 linkpackage ${SLACKPKGDIR}/a/less-*.txz
+linkpackage ${SLACKPKGDIR}/a/libpwquality-*.txz
 linkpackage ${SLACKPKGDIR}/a/lvm2-*.txz
+
+# Thu May 16 02:31:40 UTC 2024 bcachefs-tools added
+linkpackage ${SLACKPKGDIR}/a/bcachefs-tools-*.txz
+linkpackage ${SLACKPKGDIR}/l/libsodium-*.txz
+linkpackage ${SLACKPKGDIR}/l/lz4-*.txz
 
 # LVM2 now requires libnvme and json-c (may as well include nvme-cli also)
 linkpackage ${SLACKPKGDIR}/ap/nvme-cli-*.txz

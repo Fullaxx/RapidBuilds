@@ -26,7 +26,6 @@ linkpackage ${SLACKPKGDIR}/l/shared-mime-info-*.txz
 # rsync needs xxHash
 linkpackage ${SLACKPKGDIR}/l/xxHash-*.txz
 
-linkpackage ${SLACKPKGDIR}/l/lz4-*.txz
 linkpackage ${SLACKPKGDIR}/l/zstd-*.txz
 
 linkpackage ${SLACKPKGDIR}/n/ca-certificates-*.txz
@@ -264,11 +263,6 @@ fi
 
 if [ "${INCLIBSIGCPLUSPLUSTHREE}" == "Y" ]; then
   linkpackage ${SLACKPKGDIR}/l/libsigc++3-*.txz
-fi
-
-if [ "${INCLIBSODIUM}" == "Y" ]; then
-# zeromq needs libsodium
-  linkpackage ${SLACKPKGDIR}/l/libsodium-*.txz
 fi
 
 if [ "${INCLIBSSHONE}" == "Y" ]; then
