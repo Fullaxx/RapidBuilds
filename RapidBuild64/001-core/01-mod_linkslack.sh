@@ -43,9 +43,10 @@ linkpackage ${SLACKPKGDIR}/a/bcachefs-tools-*.txz
 linkpackage ${SLACKPKGDIR}/l/libsodium-*.txz
 linkpackage ${SLACKPKGDIR}/l/lz4-*.txz
 
-# LVM2 now requires libnvme and json-c (may as well include nvme-cli also)
+# LVM2 now requires libnvme, liburing, json-c (may as well include nvme-cli also)
 linkpackage ${SLACKPKGDIR}/ap/nvme-cli-*.txz
 linkpackage ${SLACKPKGDIR}/l/libnvme-*.txz
+linkpackage ${SLACKPKGDIR}/l/liburing-*.txz
 linkpackage ${SLACKPKGDIR}/l/json-c-*.txz
 
 # Wed Mar 8 20:26:54 UTC 2023

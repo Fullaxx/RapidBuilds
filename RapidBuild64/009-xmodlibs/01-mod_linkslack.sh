@@ -275,11 +275,6 @@ if [ "${INCLIBUNWIND}" == "Y" ]; then
   linkpackage ${SLACKPKGDIR}/l/libunwind-*.txz
 fi
 
-if [ "${INCLIBURING}" == "Y" ]; then
-# mariadb,samba needs liburing
-  linkpackage ${SLACKPKGDIR}/l/liburing-*.txz
-fi
-
 if [ "${INCLIBUSB}" == "Y" ]; then
 # usbredir needs libusb
   linkpackage ${SLACKPKGDIR}/l/libusb-*.txz

@@ -1,6 +1,5 @@
 if [ "${INCMARIADB}" == "Y" ]; then
   INCLIBAIO="Y"
-  INCLIBURING="Y"
   INCJUDY="Y"
   INCJEMALLOC="Y"
 fi
