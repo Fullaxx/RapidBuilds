@@ -73,6 +73,10 @@ linkpackage ${SLACKPKGDIR}/x/xrandr-*.txz
 linkpackage ${SLACKPKGDIR}/x/xrdb-*.txz
 linkpackage ${SLACKPKGDIR}/x/xterm-*.txz
 
+if [ "${INCLIBDISPLAYINFO}" == "Y" ]; then
+  linkpackage ${SLACKPKGDIR}/x/libdisplay-info-*.txz
+fi
+
 if [ "${INCLIBXKBCOMMON}" == "Y" ]; then
   linkpackage ${SLACKPKGDIR}/l/libxkbcommon-*.txz
 fi
