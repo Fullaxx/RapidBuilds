@@ -47,6 +47,10 @@ if [ "${INCALSA}" == "Y" ]; then
   linkpackage ${SLACKPKGDIR}/l/alsa-oss-*.txz
 fi
 
+if [ "${INCAPPSTREAMGLIB}" == "Y" ]; then
+  linkpackage ${SLACKPKGDIR}/l/appstream-glib-*.txz
+fi
+
 if [ "${INCAPR}" == "Y" ]; then
   linkpackage ${SLACKPKGDIR}/l/apr-1.*.txz
   linkpackage ${SLACKPKGDIR}/l/apr-util-*.txz
@@ -69,6 +73,11 @@ fi
 if [ "${INCCARES}" == "Y" ]; then
 # wireshark needs c-ares
   linkpackage ${SLACKPKGDIR}/n/c-ares-*.txz
+fi
+
+if [ "${INCCFTISIO}" == "Y" ]; then
+# gimp file-fits plugin needs cfitsio
+  linkpackage ${SLACKPKGDIR}/l/cfitsio-*.txz
 fi
 
 if [ "${INCDB48}" == "Y" ]; then
@@ -340,6 +349,11 @@ if [ "${INCNEON}" == "Y" ]; then
   linkpackage ${SLACKPKGDIR}/l/neon-*.txz
 fi
 
+if [ "${INCOPENBLAS}" == "Y" ]; then
+  linkpackage ${SLACKPKGDIR}/l/openblas-*.txz
+  linkpackage ${SLACKPKGDIR}/d/gcc-gfortran-*.txz
+fi
+
 if [ "${INCOPENCV}" == "Y" ]; then
   linkpackage ${SLACKPKGDIR}/l/opencv-*.txz
 fi
@@ -360,6 +374,11 @@ fi
 if [ "${INCSERF}" == "Y" ]; then
 # subversion needs serf
   linkpackage ${SLACKPKGDIR}/l/serf-*.txz
+fi
+
+if [ "${INCSUITESPARSE}" == "Y" ]; then
+# gegl matting-levin plugin needs suitesparse
+  linkpackage ${SLACKPKGDIR}/l/suitesparse-*.txz
 fi
 
 if [ "${INCTALLOC}" == "Y" ]; then
