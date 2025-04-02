@@ -106,12 +106,7 @@ if [ "${INCPYCURL}" == "Y" ]; then
   linkpackage ${SLACKPKGDIR}/l/pycurl-*.txz
 fi
 
-if [ "${INCPYGTK}" == "Y" ]; then
-  linkpackage ${SLACKPKGDIR}/l/pygtk-*.txz
-fi
-
 if [ "${INCPYGOBJECT}" == "Y" ]; then
-  linkpackage ${SLACKPKGDIR}/l/pygobject-*.txz
   linkpackage ${SLACKPKGDIR}/l/pygobject3-*.txz
 fi
 

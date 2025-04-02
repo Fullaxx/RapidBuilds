@@ -22,6 +22,5 @@ if [ "${INCGIMP}" == "Y" ]; then
   INCLIBYAML="Y"
   INCPOPPLER="Y"
   INCPYCAIRO="Y"
-  INCPYGTK="Y"
   INCPYGOBJECT="Y"
 fi
