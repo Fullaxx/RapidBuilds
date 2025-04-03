@@ -1,7 +1,8 @@
-if [ "${INCOPENBOX}" == "Y" ]; then
+if [ "${INCOBCONF}" == "Y" ]; then
   INCFRIBIDI="Y"
   INCGTKTWO="Y"
-  INCIMLIBTWO="Y"
+#  INCIMLIBTWO="Y"
   INCLIBPNG="Y"
   INCSTARTUPNOTIFICATION="Y"
+  INCLIBGLADE="Y"
 fi
