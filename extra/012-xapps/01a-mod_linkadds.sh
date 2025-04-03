@@ -45,7 +45,7 @@ if [ "${INCGHEX}" == "Y" ]; then
 fi
 
 if [ "${INCGRAVEMAN}" == "Y" ]; then
-  linkpackage "${PACKAGESDIR}/graveman/graveman-0.3.12-5-${ARCH}-bksrc2.xzm"
+  linkpackage "${PACKAGESDIR}/graveman/graveman-0.3.12-5-${ARCH}-bksrc3.xzm"
 fi
 
 if [ "${INCHSETROOT}" == "Y" ]; then
@@ -79,7 +79,7 @@ if [ "${INCOPENBOX}" == "Y" ]; then
 fi
 
 if [ "${INCRECORDMYDESKTOP}" == "Y" ]; then
-  linkpackage "${PACKAGESDIR}/recordmydesktop/recordmydesktop-0.4.0-${ARCH}-bksrc3.xzm"
+  linkpackage "${PACKAGESDIR}/recordmydesktop/recordmydesktop-0.4.0-${ARCH}-bksrc4.xzm"
 fi
 
 if [ "${INCSLOCK}" == "Y" ]; then
