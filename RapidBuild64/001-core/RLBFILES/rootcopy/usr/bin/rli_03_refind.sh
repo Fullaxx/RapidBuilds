@@ -45,10 +45,13 @@ cp -v ${SRCDIR}/boot/vmlinuz ${MNTLOC}/rl/
 cp -v ${SRCDIR}/boot/irfs.img ${MNTLOC}/rl/
 cp -v ${SRCDIR}/boot/memtest86.efi ${MNTLOC}/EFI/tools/
 if [ -f ${SRCDIR}/install/banner.jpg ]; then
-  cp ${SRCDIR}/install/banner.jpg ${MNTLOC}/banner.jpg
+  cp -v ${SRCDIR}/install/banner.jpg ${MNTLOC}/banner.jpg
 else
-  cp ${SRCDIR}/boot/rl.jpg ${MNTLOC}/banner.jpg
+  cp -v ${SRCDIR}/boot/rl.jpg ${MNTLOC}/banner.jpg
 fi
+
+# Install an update script to the boot partition
+cp -v ${SRCDIR}/install/update_from_iso.sh ${MNTLOC}/
 
 # Clean up a bit
 rm -r ${MNTLOC}/EFI/BOOT/icons/licenses

@@ -52,7 +52,6 @@ if [ "${INCMOD002UTILS}" == "Y" ]; then
   INCMOST="Y"
   INCMPGONETWOTHREE="N"
   INCNEOFETCH="N"
-  INCNVMECLI="Y"
   INCPOWERTOP="N"
   INCRDFIND="Y"
   INCRZIP="N"
@@ -100,4 +99,7 @@ if [ "${INCMOD002UTILS}" == "Y" ]; then
   INCTFTPHPA="N"
   INCTRACEROUTE="Y"
   INCVLAN="N"
+
+# Custom Additions
+  INCJQ="Y"
 fi

@@ -212,11 +212,6 @@ if [ "${INCNEOFETCH}" == "Y" ]; then
   linkpackage ${SLACKPKGDIR}/ap/neofetch-*.txz
 fi
 
-if [ "${INCNVMECLI}" == "Y" ]; then
-  linkpackage ${SLACKPKGDIR}/ap/nvme-cli-*.txz
-  linkpackage ${SLACKPKGDIR}/l/libnvme-*.txz
-fi
-
 if [ "${INCPOWERTOP}" == "Y" ]; then
   linkpackage ${SLACKPKGDIR}/ap/powertop-*.txz
 fi

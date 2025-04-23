@@ -5,6 +5,10 @@ source ./module_spec.sh
 
 rm -f *.txz *.xzm
 
+if [ "${INCAMFHEADERS}" == "Y" ]; then
+  linkpackage ${SLACKPKGDIR}/d/AMF-headers-*.txz
+fi
+
 if [ "${INCBC}" == "Y" ]; then
 # bc is req'd for kerel compilation
   linkpackage ${SLACKPKGDIR}/ap/bc-*.txz

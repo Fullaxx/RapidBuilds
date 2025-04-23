@@ -8,4 +8,5 @@ if [ "${INCGEGL}" == "Y" ]; then
   INCLUAJIT="Y"
   INCOPENEXR="Y"
   INCSDL="Y"
+  INCSUITESPARSE="Y"
 fi

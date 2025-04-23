@@ -1,0 +1,15 @@
+--- rc.sshd	2025-04-16 18:35:45.000000000 +0000
++++ rc.sshd.new	2025-04-16 22:52:34.580698187 +0000
+@@ -9,10 +9,10 @@
+ sshd_start() {
+   # Create host keys if needed.
+   if [ ! -f /etc/ssh/ssh_host_rsa_key ]; then
+-    /usr/bin/ssh-keygen -t rsa -f /etc/ssh/ssh_host_rsa_key -N ''
++    /usr/bin/ssh-keygen -t rsa -b 8192 -f /etc/ssh/ssh_host_rsa_key -N ''
+   fi
+   if [ ! -f /etc/ssh/ssh_host_ecdsa_key ]; then
+-    /usr/bin/ssh-keygen -t ecdsa -f /etc/ssh/ssh_host_ecdsa_key -N ''
++    /usr/bin/ssh-keygen -t ecdsa -b 521 -f /etc/ssh/ssh_host_ecdsa_key -N ''
+   fi
+   if [ ! -f /etc/ssh/ssh_host_ed25519_key ]; then
+     /usr/bin/ssh-keygen -t ed25519 -f /etc/ssh/ssh_host_ed25519_key -N ''

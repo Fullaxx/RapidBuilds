@@ -1,3 +1,3 @@
-if [ "${INCCLAMAV}" == "Y" ]; then
-  INCJSONC="Y"
-fi
+#if [ "${INCCLAMAV}" == "Y" ]; then
+#
+#fi

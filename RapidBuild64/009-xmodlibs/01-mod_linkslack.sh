@@ -26,7 +26,6 @@ linkpackage ${SLACKPKGDIR}/l/shared-mime-info-*.txz
 # rsync needs xxHash
 linkpackage ${SLACKPKGDIR}/l/xxHash-*.txz
 
-linkpackage ${SLACKPKGDIR}/l/lz4-*.txz
 linkpackage ${SLACKPKGDIR}/l/zstd-*.txz
 
 linkpackage ${SLACKPKGDIR}/n/ca-certificates-*.txz
@@ -46,6 +45,10 @@ if [ "${INCALSA}" == "Y" ]; then
   linkpackage ${SLACKPKGDIR}/ap/alsa-utils-*.txz
   linkpackage ${SLACKPKGDIR}/l/alsa-lib-*.txz
   linkpackage ${SLACKPKGDIR}/l/alsa-oss-*.txz
+fi
+
+if [ "${INCAPPSTREAMGLIB}" == "Y" ]; then
+  linkpackage ${SLACKPKGDIR}/l/appstream-glib-*.txz
 fi
 
 if [ "${INCAPR}" == "Y" ]; then
@@ -70,6 +73,11 @@ fi
 if [ "${INCCARES}" == "Y" ]; then
 # wireshark needs c-ares
   linkpackage ${SLACKPKGDIR}/n/c-ares-*.txz
+fi
+
+if [ "${INCCFTISIO}" == "Y" ]; then
+# gimp file-fits plugin needs cfitsio
+  linkpackage ${SLACKPKGDIR}/l/cfitsio-*.txz
 fi
 
 if [ "${INCDB48}" == "Y" ]; then
@@ -158,10 +166,6 @@ if [ "${INCJEMALLOC}" == "Y" ]; then
   linkpackage ${SLACKPKGDIR}/l/jemalloc-*.txz
 fi
 
-if [ "${INCJSONC}" == "Y" ]; then
-  linkpackage ${SLACKPKGDIR}/l/json-c-*.txz
-fi
-
 if [ "${INCJSONGLIB}" == "Y" ]; then
   linkpackage ${SLACKPKGDIR}/l/json-glib-*.txz
 fi
@@ -239,6 +243,10 @@ if [ "${INCLIBNDP}" == "Y" ]; then
   linkpackage ${SLACKPKGDIR}/n/libndp-*.txz
 fi
 
+if [ "${INCLIBNICE}" == "Y" ]; then
+  linkpackage ${SLACKPKGDIR}/l/libnice-*.txz
+fi
+
 if [ "${INCLIBNIH}" == "Y" ]; then
   linkpackage ${SLACKPKGDIR}/l/libnih-*.txz
 fi
@@ -266,11 +274,6 @@ if [ "${INCLIBSIGCPLUSPLUSTHREE}" == "Y" ]; then
   linkpackage ${SLACKPKGDIR}/l/libsigc++3-*.txz
 fi
 
-if [ "${INCLIBSODIUM}" == "Y" ]; then
-# zeromq needs libsodium
-  linkpackage ${SLACKPKGDIR}/l/libsodium-*.txz
-fi
-
 if [ "${INCLIBSSHONE}" == "Y" ]; then
 # ffmpeg,libvirt needs libssh
   linkpackage ${SLACKPKGDIR}/l/libssh-*.txz
@@ -279,11 +282,6 @@ fi
 if [ "${INCLIBUNWIND}" == "Y" ]; then
 # strace,samba needs libunwind
   linkpackage ${SLACKPKGDIR}/l/libunwind-*.txz
-fi
-
-if [ "${INCLIBURING}" == "Y" ]; then
-# mariadb,samba needs liburing
-  linkpackage ${SLACKPKGDIR}/l/liburing-*.txz
 fi
 
 if [ "${INCLIBUSB}" == "Y" ]; then
@@ -351,6 +349,15 @@ if [ "${INCNEON}" == "Y" ]; then
   linkpackage ${SLACKPKGDIR}/l/neon-*.txz
 fi
 
+if [ "${INCOPENBLAS}" == "Y" ]; then
+  linkpackage ${SLACKPKGDIR}/l/openblas-*.txz
+  linkpackage ${SLACKPKGDIR}/d/gcc-gfortran-*.txz
+fi
+
+if [ "${INCOPENCV}" == "Y" ]; then
+  linkpackage ${SLACKPKGDIR}/l/opencv-*.txz
+fi
+
 if [ "${INCPINENTRY}" == "Y" ]; then
 # cryptsetup,gnupg2 reqs pinentry
   linkpackage ${SLACKPKGDIR}/n/pinentry-*.txz
@@ -367,6 +374,11 @@ fi
 if [ "${INCSERF}" == "Y" ]; then
 # subversion needs serf
   linkpackage ${SLACKPKGDIR}/l/serf-*.txz
+fi
+
+if [ "${INCSUITESPARSE}" == "Y" ]; then
+# gegl matting-levin plugin needs suitesparse
+  linkpackage ${SLACKPKGDIR}/l/suitesparse-*.txz
 fi
 
 if [ "${INCTALLOC}" == "Y" ]; then

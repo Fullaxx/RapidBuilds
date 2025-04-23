@@ -15,7 +15,7 @@ if [ "${INCBLUEFISH}" == "Y" ]; then
 fi
 
 if [ "${INCBLUEFISHTWO}" == "Y" ]; then
-  linkpackage "${PACKAGESDIR}/bluefish/bluefish-2.2.15-${ARCH}-bksrc1.xzm"
+  linkpackage "${PACKAGESDIR}/bluefish/bluefish-2.2.16-${ARCH}-bksrc1.xzm"
 fi
 
 if [ "${INCETERM}" == "Y" ]; then
@@ -45,7 +45,7 @@ if [ "${INCGHEX}" == "Y" ]; then
 fi
 
 if [ "${INCGRAVEMAN}" == "Y" ]; then
-  linkpackage "${PACKAGESDIR}/graveman/graveman-0.3.12-5-${ARCH}-bksrc2.xzm"
+  linkpackage "${PACKAGESDIR}/graveman/graveman-0.3.12-5-${ARCH}-bksrc3.xzm"
 fi
 
 if [ "${INCHSETROOT}" == "Y" ]; then
@@ -79,7 +79,7 @@ if [ "${INCOPENBOX}" == "Y" ]; then
 fi
 
 if [ "${INCRECORDMYDESKTOP}" == "Y" ]; then
-  linkpackage "${PACKAGESDIR}/recordmydesktop/recordmydesktop-0.4.0-${ARCH}-bksrc3.xzm"
+  linkpackage "${PACKAGESDIR}/recordmydesktop/recordmydesktop-0.4.0-${ARCH}-bksrc4.xzm"
 fi
 
 if [ "${INCSLOCK}" == "Y" ]; then
@@ -101,7 +101,7 @@ if [ "${INCWIRESHARK}" == "Y" ]; then
   linkpackage "${PACKAGESDIR}/libsmi/libsmi-0.5.0-${ARCH}-bksrc1.xzm"
   linkpackage "${PACKAGESDIR}/portaudio/portaudio-v19-${ARCH}-bksrc1.xzm"
   linkpackage "${PACKAGESDIR}/spandsp/spandsp-0.0.6-${ARCH}-bksrc2.xzm"
-  linkpackage "${PACKAGESDIR}/wireshark/wireshark-3.6.24-${ARCH}-bksrc1.xzm"
+  linkpackage "${PACKAGESDIR}/wireshark/wireshark-4.2.10-${ARCH}-bksrc1.xzm"
 fi
 
 if [ "${INCXAUTOLOCK}" == "Y" ]; then

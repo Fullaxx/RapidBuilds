@@ -1,3 +1,3 @@
-if [ "${INCLIBMYPAINT}" == "Y" ]; then
-  INCJSONC="Y"
-fi
+#if [ "${INCLIBMYPAINT}" == "Y" ]; then
+#
+#fi

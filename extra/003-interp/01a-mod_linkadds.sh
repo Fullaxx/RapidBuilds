@@ -4,7 +4,7 @@ source ../spec.sh
 source ./module_spec.sh
 
 if [ "${INCPYTHONCONFIGOBJ}" == "Y" ]; then
-  linkpackage "${PACKAGESDIR}/python_mods/configobj-5.0.8-${ARCH}-bksrc2.xzm"
+  linkpackage "${PACKAGESDIR}/python_mods/configobj-5.0.9-${ARCH}-bksrc1.xzm"
 fi
 
 if [ "${INCDISTLIB}" == "Y" ]; then
@@ -63,7 +63,7 @@ fi
 #fi
 
 if [ "${INCTERMINATOR}" == "Y" ]; then
-  linkpackage "${PACKAGESDIR}/python_mods/terminator-2.1.4-${ARCH}-bksrc1.xzm"
+  linkpackage "${PACKAGESDIR}/python_mods/terminator-2.1.4-${ARCH}-bksrc2.xzm"
 fi
 
 if [ "${INCVIRTUALENV}" == "Y" ]; then

@@ -9,7 +9,7 @@ if [ ! -e ${PATCHESDIR}  ]; then
   exit 1
 fi
 
-PATCHFILE="${PATCHESDIR}/rc.sshd.diff"
+PATCHFILE="${PATCHESDIR}/sshd-250416.diff"
 if [ -f ${DIR}/etc/rc.d/rc.sshd -a -r ${PATCHFILE} ]; then
   patch ${DIR}/etc/rc.d/rc.sshd < ${PATCHFILE}
 fi

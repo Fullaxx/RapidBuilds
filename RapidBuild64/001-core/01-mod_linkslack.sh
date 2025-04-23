@@ -35,7 +35,19 @@ linkpackage ${SLACKPKGDIR}/a/hostname-*.txz
 linkpackage ${SLACKPKGDIR}/a/kbd-*.txz
 linkpackage ${SLACKPKGDIR}/a/kmod-*.txz
 linkpackage ${SLACKPKGDIR}/a/less-*.txz
+linkpackage ${SLACKPKGDIR}/a/libpwquality-*.txz
 linkpackage ${SLACKPKGDIR}/a/lvm2-*.txz
+
+# Thu May 16 02:31:40 UTC 2024 bcachefs-tools added
+linkpackage ${SLACKPKGDIR}/a/bcachefs-tools-*.txz
+linkpackage ${SLACKPKGDIR}/l/libsodium-*.txz
+linkpackage ${SLACKPKGDIR}/l/lz4-*.txz
+
+# LVM2 now requires libnvme, liburing, json-c (may as well include nvme-cli also)
+linkpackage ${SLACKPKGDIR}/ap/nvme-cli-*.txz
+linkpackage ${SLACKPKGDIR}/l/libnvme-*.txz
+linkpackage ${SLACKPKGDIR}/l/liburing-*.txz
+linkpackage ${SLACKPKGDIR}/l/json-c-*.txz
 
 # Wed Mar 8 20:26:54 UTC 2023
 # Slackware switched to openssl-3.x.x

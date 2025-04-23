@@ -50,3 +50,6 @@ install -D -m 0644 RLBFILES/install/refind/refind.conf ${BDIR}/shell/install/ref
 if [ -f RLBFILES/install/refind/banner.jpg ]; then
   install -D -m 0644 RLBFILES/install/refind/banner.jpg ${BDIR}/shell/install/banner.jpg
 fi
+
+# Stage an update script in the install dir on the ISO
+install -D -m 0755 RLBFILES/install/update_from_iso.sh ${BDIR}/shell/install/update_from_iso.sh

@@ -318,7 +318,7 @@ if [ "${INCGSTREAMER}" == "Y" ]; then
   linkpackage ${SLACKPKGDIR}/l/gstreamer-*.txz
   linkpackage ${SLACKPKGDIR}/l/gst-plugins-base-*.txz
   linkpackage ${SLACKPKGDIR}/l/gst-plugins-good-*.txz
-#  linkpackage ${SLACKPKGDIR}/l/gst-plugins-bad-free-*.txz
+  linkpackage ${SLACKPKGDIR}/l/gst-plugins-bad-free-*.txz
   if [ "${INCFFMPEG}" == "Y" ]; then
     linkpackage ${SLACKPKGDIR}/l/gst-plugins-libav-*.txz
   fi
@@ -577,7 +577,7 @@ fi
 
 if [ "${INCQTFIVE}" == "Y" ]; then
   linkpackage ${SLACKPKGDIR}/l/PyQt5-*.txz
-  linkpackage ${SLACKPKGDIR}/l/qt5-webkit-*.txz
+#  linkpackage ${SLACKPKGDIR}/l/qt5-webkit-*.txz Removed Mon Oct 28 21:22:48 UTC 2024
   linkpackage ${SLACKPKGDIR}/l/qt5-5.*.txz
 fi
 
@@ -597,6 +597,10 @@ if [ "${INCSDLTWO}" == "Y" ]; then
   linkpackage ${SLACKPKGDIR}/l/SDL2_mixer-*.txz
   linkpackage ${SLACKPKGDIR}/l/SDL2_net-*.txz
   linkpackage ${SLACKPKGDIR}/l/SDL2_ttf-*.txz
+fi
+
+if [ "${INCSDLTHREE}" == "Y" ]; then
+  linkpackage ${SLACKPKGDIR}/l/SDL3-*.txz
 fi
 
 if [ "${INCSPEEX}" == "Y" ]; then
