@@ -69,6 +69,10 @@ if [ "${INCCURLLOADER}" == "Y" ]; then
   linkpackage "${PACKAGESDIR}/curl-loader/curl-loader-0.56-${ARCH}-bksrc2.xzm"
 fi
 
+if [ "${INCDARKHTTPD}" == "Y" ]; then
+  linkpackage "${PACKAGESDIR}/darkhttpd/darkhttpd-1.12-${ARCH}-bksrc1.xzm"
+fi
+
 if [ "${INCDAVFSTWO}" == "Y" ]; then
   linkpackage "${PACKAGESDIR}/davfs2/davfs2-1.5.5-${ARCH}-bksrc1.xzm"
 fi

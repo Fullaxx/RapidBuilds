@@ -6,7 +6,6 @@ if [ "${INCMOD005SERVER}" == "Y" ]; then
   INCVSFTPD="Y"
 
 # Custom Additions
-  INCDARKHTTPD="Y"
   INCLIBMICROHTTPD="Y"
   INCLIBVIRT="Y"
   INCLIBWEBSOCKETS="Y"

@@ -3,10 +3,6 @@
 source ../spec.sh
 source ./module_spec.sh
 
-if [ "${INCDARKHTTPD}" == "Y" ]; then
-  linkpackage "${PACKAGESDIR}/darkhttpd/darkhttpd-1.12-${ARCH}-bksrc1.xzm"
-fi
-
 if [ "${INCLIBMICROHTTPD}" == "Y" ]; then
   linkpackage "${PACKAGESDIR}/libmicrohttpd/libmicrohttpd-0.9.75-${ARCH}-bksrc1.xzm"
 fi

@@ -1,7 +1,6 @@
 # 005-server options
 if [ "${INCMOD005SERVER}" == "Y" ]; then
 # Custom Additions
-  INCDARKHTTPD="Y"
   INCLIBMICROHTTPD="Y"
   INCLIBVIRT="Y"
   INCLIBWEBSOCKETS="Y"
