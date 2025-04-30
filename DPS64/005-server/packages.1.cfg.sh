@@ -2,7 +2,6 @@
 if [ "${INCMOD005SERVER}" == "Y" ]; then
   INCAPACHEHTTPD="N"
   INCBIND="N"
-  INCDNSMASQ="N"
   INCLXC="N"
   INCMARIADB="N"
   INCNETSNMP="N"
@@ -12,7 +11,6 @@ if [ "${INCMOD005SERVER}" == "Y" ]; then
   INCVSFTPD="N"
 
 # Custom Additions
-  INCDARKHTTPD="Y"
   INCLIBMICROHTTPD="Y"
   INCLIBWEBSOCKETS="Y"
 # NGINX will bring in perl, dont need it right now

@@ -71,6 +71,7 @@ if [ "${INCMOD002UTILS}" == "Y" ]; then
 # n family of packages
   INCNETFILTER="Y"
   INCBRIDGEUTILS="Y"
+  INCDNSMASQ="Y"
   INCEBTABLES="N"
   INCEPICFIVE="N"
   INCETHTOOL="Y"
@@ -98,4 +99,13 @@ if [ "${INCMOD002UTILS}" == "Y" ]; then
   INCTFTPHPA="N"
   INCTRACEROUTE="N"
   INCVLAN="N"
+
+# Custom Additions
+  INCATOP="Y"
+  INCHPNSSH="Y"
+  INCIOPING="Y"
+  INCIOTOP="Y"
+  INCJQ="Y"
+  INCNLOAD="Y"
+  INCNMON="Y"
 fi

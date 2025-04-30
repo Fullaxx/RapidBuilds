@@ -13,10 +13,6 @@ if [ "${INCBIND}" == "Y" ]; then
   linkpackage ${SLACKPKGDIR}/n/bind-*.txz
 fi
 
-if [ "${INCDNSMASQ}" == "Y" ]; then
-  linkpackage ${SLACKPKGDIR}/n/dnsmasq-*.txz
-fi
-
 if [ "${INCLXC}" == "Y" ]; then
   linkpackage ${SLACKPKGDIR}/ap/lxc-*.txz
   linkpackage ${SLACKPKGDIR}/a/libcgroup-*.txz
