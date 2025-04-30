@@ -71,6 +71,7 @@ if [ "${INCMOD002UTILS}" == "Y" ]; then
 # n family of packages
   INCNETFILTER="Y"
   INCBRIDGEUTILS="Y"
+  INCDNSMASQ="Y"
   INCEBTABLES="N"
   INCEPICFIVE="N"
   INCETHTOOL="Y"
