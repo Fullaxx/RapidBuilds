@@ -106,6 +106,7 @@ if [ "${INCMOD002UTILS}" == "Y" ]; then
   INCIOPING="Y"
   INCIOTOP="Y"
   INCJQ="Y"
+  INCLAZYDOCKER="Y"
   INCNLOAD="Y"
   INCNMON="Y"
 fi
