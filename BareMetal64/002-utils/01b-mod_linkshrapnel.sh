@@ -3,8 +3,6 @@
 source ../spec.sh
 source ./module_spec.sh
 
-linkpackage ${PACKAGESDIR}/dive/dive-0.11.0-${ARCH}-1.xzm
-linkpackage ${PACKAGESDIR}/nvtop/nvtop-3.0.2-x86_64-1.xzm
 linkpackage ${PACKAGESDIR}/strace_standalone/strace-240325.xzm
 
 # tshark needs libsmi

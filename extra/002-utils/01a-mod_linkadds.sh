@@ -81,6 +81,10 @@ if [ "${INCDELTA}" == "Y" ]; then
   linkpackage "${PACKAGESDIR}/delta/delta-0.15.1-${ARCH}-1.xzm"
 fi
 
+if [ "${INCDIVE}" == "Y" ]; then
+  linkpackage "${PACKAGESDIR}/dive/dive-0.11.0-${ARCH}-1.xzm"
+fi
+
 if [ "${INCDOSTWOUNIX}" == "Y" ]; then
   linkpackage "${PACKAGESDIR}/dos2unix/dos2unix-7.4.1-${ARCH}-bksrc1.xzm"
 fi
@@ -193,6 +197,10 @@ fi
 
 if [ "${INCNUMAD}" == "Y" ]; then
   linkpackage "${PACKAGESDIR}/numad/numad-20181024-${ARCH}-bksrc1.xzm"
+fi
+
+if [ "${INCNVTOP}" == "Y" ]; then
+  linkpackage "${PACKAGESDIR}/nvtop/nvtop-3.0.2-${ARCH}-1.xzm"
 fi
 
 if [ "${INCPV}" == "Y" ]; then

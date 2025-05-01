@@ -28,6 +28,7 @@ if [ "${INCMOD002UTILS}" == "Y" ]; then
   INCCURLLOADER="Y"
   INCDARKHTTPD="Y"
   INCDELTA="Y"
+  INCDIVE="Y"
   INCDRY="Y"
   INCGPING="Y"
   INCIPERFTWO="Y"
@@ -41,6 +42,7 @@ if [ "${INCMOD002UTILS}" == "Y" ]; then
   INCNCDU="Y"
   INCNNN="Y"
   INCNUMACTL="Y"
+  INCNVTOP="Y"
   INCPV="Y"
   INCWOL="Y"
 fi
