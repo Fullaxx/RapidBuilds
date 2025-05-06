@@ -81,6 +81,10 @@ if [ "${INCDELTA}" == "Y" ]; then
   linkpackage "${PACKAGESDIR}/delta/delta-0.15.1-${ARCH}-1.xzm"
 fi
 
+if [ "${INCDIVE}" == "Y" ]; then
+  linkpackage "${PACKAGESDIR}/dive/dive-0.11.0-${ARCH}-1.xzm"
+fi
+
 if [ "${INCDOSTWOUNIX}" == "Y" ]; then
   linkpackage "${PACKAGESDIR}/dos2unix/dos2unix-7.4.1-${ARCH}-bksrc1.xzm"
 fi
@@ -142,6 +146,14 @@ if [ "${INCJQ}" == "Y" ]; then
   linkpackage "${PACKAGESDIR}/jq/jq-1.7.1-${ARCH}-1.xzm"
 fi
 
+if [ "${INCLAZYDOCKER}" == "Y" ]; then
+  linkpackage "${PACKAGESDIR}/lazy/lazydocker-0.21.1-${ARCH}-1.xzm"
+fi
+
+if [ "${INCLAZYGIT}" == "Y" ]; then
+  linkpackage "${PACKAGESDIR}/lazy/lazygit-0.40.2-${ARCH}-1.xzm"
+fi
+
 if [ "${INCLIBMAXMINDDB}" == "Y" ]; then
   linkpackage "${PACKAGESDIR}/geoipdat/geoipdat-230326-noarch-1.xzm"
   linkpackage "${PACKAGESDIR}/libmaxminddb/libmaxminddb-1.7.1-${ARCH}-bksrc1.xzm"
@@ -185,6 +197,10 @@ fi
 
 if [ "${INCNUMAD}" == "Y" ]; then
   linkpackage "${PACKAGESDIR}/numad/numad-20181024-${ARCH}-bksrc1.xzm"
+fi
+
+if [ "${INCNVTOP}" == "Y" ]; then
+  linkpackage "${PACKAGESDIR}/nvtop/nvtop-3.0.2-${ARCH}-1.xzm"
 fi
 
 if [ "${INCPV}" == "Y" ]; then
