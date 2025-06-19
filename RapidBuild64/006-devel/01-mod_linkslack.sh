@@ -161,8 +161,8 @@ if [ "${INCPATCHELF}" == "Y" ]; then
   linkpackage ${SLACKPKGDIR}/d/patchelf-*.txz
 fi
 
-if [ "${INCPKGCONFIG}" == "Y" ]; then
-  linkpackage ${SLACKPKGDIR}/d/pkg-config-*.txz
+if [ "${INCPKGCONF}" == "Y" ]; then
+  linkpackage ${SLACKPKGDIR}/d/pkgconf-*.txz
 fi
 
 if [ "${INCPMAKE}" == "Y" ]; then
