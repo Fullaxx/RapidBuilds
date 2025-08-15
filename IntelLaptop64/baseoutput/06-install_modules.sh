@@ -27,7 +27,7 @@ fi
 
 # Copy any extra modules that don't need RDL
 verbosecopymodule ${PACKAGESDIR}/VirtualBox/VirtualBox-7.0.26-x86_64-1.xzm ${MODSDIR}/
-verbosecopymodule ${PACKAGESDIR}/chromium/chromium-109.0.5414.119-${ARCH}-1alien.xzm ${MODSDIR}/
+verbosecopymodule ${PACKAGESDIR}/chromium/chromium-138.0.7204.183-${ARCH}-1alien.xzm ${MODSDIR}/
 verbosecopymodule ${PACKAGESDIR}/dbwalls/dbwalls-1920-221014.xzm ${MODSDIR}/
 verbosecopymodule ${PACKAGESDIR}/docker/docker-27.3.1-${ARCH}-1.xzm ${MODSDIR}/
 verbosecopymodule ${PACKAGESDIR}/mcast_xfer/mcastxfer-20230607-${ARCH}-bksrc1.xzm ${MODSDIR}/
