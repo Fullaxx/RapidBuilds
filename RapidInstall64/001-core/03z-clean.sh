@@ -18,10 +18,12 @@ rm -f ${DIR}/usr/bin/memusagestat
 rm -f ${DIR}/usr/sbin/{ninfod,ntpsnmpd}
 
 # We don't need boost from a/aaa_libraries
-rm -f ${DIR}/usr/${LIBDIR}/libboost_*
+# This is already in RapidBuild64/001-core/03x-clean.sh
+#rm -f ${DIR}/usr/${LIBDIR}/libboost_*
 
-rm -f ${DIR}/usr/${LIBDIR}/libcups.*
-rm -f ${DIR}/usr/${LIBDIR}/libcupsimage.*
+# This is already in RapidBuild64/001-core/03x-clean.sh
+#rm -f ${DIR}/usr/${LIBDIR}/libcups.*
+#rm -f ${DIR}/usr/${LIBDIR}/libcupsimage.*
 
 # Mon Mar 7 01:57:45 UTC 2022
 rm -f ${DIR}/usr/${LIBDIR}/libldap*
