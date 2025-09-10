@@ -19,6 +19,13 @@ if [ "${INCGD}" != "Y" ]; then
   rm ${DIR}/usr/bin/memusagestat
 fi
 
+# Fri Aug 22 21:42:24 UTC 2025
+# We don't need ffmpeg from a/aaa_libraries
+rm -f ${DIR}/usr/${LIBDIR}/libav*
+rm -f ${DIR}/usr/${LIBDIR}/libbluray.*
+rm -f ${DIR}/usr/${LIBDIR}/libpostproc.*
+rm -f ${DIR}/usr/${LIBDIR}/libsw{resample,scale}.*
+
 # What other libraries from aaa_elflibs-*.txz can we remove?
 rm -f ${DIR}/usr/${LIBDIR}/libargon2*
 rm -f ${DIR}/usr/${LIBDIR}/libasound.*
