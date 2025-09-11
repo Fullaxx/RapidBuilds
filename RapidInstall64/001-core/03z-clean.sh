@@ -7,14 +7,6 @@ rm -f ${DIR}/bin/ping6
 
 rm -f ${DIR}/sbin/arpd
 
-rm -f ${DIR}/usr/bin/dbus-launch
-
-rm -f ${DIR}/usr/bin/fuse2fs
-rm -f ${DIR}/usr/bin/grub-mkfont
-rm -f ${DIR}/usr/bin/grub-mount
-
-rm -f ${DIR}/usr/bin/memusagestat
-
 rm -f ${DIR}/usr/sbin/{ninfod,ntpsnmpd}
 
 # We don't need boost from a/aaa_libraries

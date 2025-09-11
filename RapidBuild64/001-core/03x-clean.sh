@@ -8,6 +8,12 @@ rm -r ${DIR}/var/log/setup
 rm ${DIR}/run/lock/pkgtools/ldconfig.lock
 rmdir ${DIR}/run/lock/pkgtools
 
+# Clean up e2fsprogs,grub if we dont have fuse3
+if [ "${INCFUSETHREE}" != "Y" ]; then
+  rm ${DIR}/usr/bin/fuse2fs
+  rm -f ${DIR}/usr/bin/grub-mount
+fi
+
 # Clean up dbus and grub
 if [ "${INCMOD010XORG}" != "Y" ]; then
   rm -f ${DIR}/usr/bin/dbus-launch
