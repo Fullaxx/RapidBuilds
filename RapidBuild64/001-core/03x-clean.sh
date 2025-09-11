@@ -38,7 +38,6 @@ rm -f ${DIR}/usr/${LIBDIR}/libtiff.*
 rm -f ${DIR}/usr/${LIBDIR}/libtiffxx.*
 
 # 31 OCT 2020
-rm -f ${DIR}/usr/${LIBDIR}/libicu*
 rm -f ${DIR}/usr/${LIBDIR}/libHalf.*
 rm -f ${DIR}/usr/${LIBDIR}/libIex-*
 rm -f ${DIR}/usr/${LIBDIR}/libIexMath-*

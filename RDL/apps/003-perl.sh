@@ -1,3 +1,3 @@
-if [ "${INCPERL}" == "Y" ]; then
-  INCGDBM="Y"
-fi
+#if [ "${INCPERL}" == "Y" ]; then
+#  INCGDBM="Y"
+#fi
