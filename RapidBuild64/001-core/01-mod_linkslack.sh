@@ -94,6 +94,10 @@ linkpackage ${SLACKPKGDIR}/ap/lsscsi-*.txz
 linkpackage ${SLACKPKGDIR}/ap/nano-*.txz
 linkpackage ${SLACKPKGDIR}/ap/screen-*.txz
 
+# 250910 Lets put sqlite in 001-core
+linkpackage ${SLACKPKGDIR}/ap/sqlite-*.txz
+linkpackage ${SLACKPKGDIR}/l/icu4c-*.txz
+
 # req'd for NTP, and others
 linkpackage ${SLACKPKGDIR}/l/libedit-*.txz
 linkpackage ${SLACKPKGDIR}/l/libevent-*.txz

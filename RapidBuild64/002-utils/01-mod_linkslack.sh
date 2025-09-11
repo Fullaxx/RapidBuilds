@@ -399,10 +399,7 @@ fi
 
 # Don't you want to burn a RapidLinux LiveCD?
 linkpackage ${SLACKPKGDIR}/ap/cdrtools-*.txz
-
-linkpackage ${SLACKPKGDIR}/ap/sqlite-*.txz
-linkpackage ${SLACKPKGDIR}/ap/sudo-*.txz
-
 linkpackage ${SLACKPKGDIR}/n/curl-*.txz
 linkpackage ${SLACKPKGDIR}/n/rsync-*.txz
+linkpackage ${SLACKPKGDIR}/ap/sudo-*.txz
 linkpackage ${SLACKPKGDIR}/n/wget-*.txz

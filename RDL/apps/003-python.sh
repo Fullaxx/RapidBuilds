@@ -1,4 +1,4 @@
 if [ "${INCPYTHON}" == "Y" ]; then
   INCGOBJECTINTROSPECTION="Y"
-  INCGDBM="Y"
+#  INCGDBM="Y"
 fi

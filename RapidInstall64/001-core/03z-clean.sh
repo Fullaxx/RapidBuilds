@@ -44,7 +44,3 @@ rm -f ${DIR}/usr/${LIBDIR}/libvgagl.*
 
 rm -f ${DIR}/sbin/tc
 rm -f ${DIR}/usr/${LIBDIR}/tc/m_*.so
-
-rm -f ${DIR}/lib64/security/pam_lastlog2.*
-rm -f ${DIR}/usr/lib64/liblastlog2.*
-rm -f ${DIR}/usr/bin/lastlog2
