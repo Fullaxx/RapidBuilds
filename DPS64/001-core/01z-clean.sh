@@ -4,7 +4,7 @@ source ../spec.sh
 source ./module_spec.sh
 
 rm acpid-*.txz
-rm bash-completion-*.txz
+# rm bash-completion-*.txz - make this a little more useful
 rm bzip2-*.txz
 rm dbus-*.txz
 rm dialog-*.txz
@@ -22,7 +22,7 @@ rm htop-*.txz
 
 rm iputils-*.txz
 rm kbd-*.txz
-rm less-*.txz
+# rm less-*.txz - make this a little more useful
 rm libedit-*.txz
 
 # webdis reqs libevent
@@ -44,7 +44,7 @@ rm screen-*.txz
 rm sysklogd-*.txz
 # rm sysvinit-*.txz (rc.S)
 rm tar-*.txz
-rm tree-*.txz
+# rm tree-*.txz - make this a little more useful
 rm utempter-*.txz
 rm xfsdump-*.txz xfsprogs-*.txz
 rm xz-*.txz
