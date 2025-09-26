@@ -39,7 +39,7 @@ rm openssh-*.txz
 rm parted-*.txz
 rm pciutils-*.txz
 rm readline-*.txz
-rm reiserfsprogs-*.txz
+# rm reiserfsprogs-*.txz - Removed as of Wed Sep 17 22:13:56 UTC 2025
 rm screen-*.txz
 rm sysklogd-*.txz
 # rm sysvinit-*.txz (rc.S)

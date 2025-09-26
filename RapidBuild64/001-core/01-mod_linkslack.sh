@@ -81,7 +81,7 @@ linkpackage ${SLACKPKGDIR}/l/libffi-*.txz
 # file needs lzlib
 linkpackage ${SLACKPKGDIR}/a/lzlib-*.txz
 
-linkpackage ${SLACKPKGDIR}/a/reiserfsprogs-*.txz
+# linkpackage ${SLACKPKGDIR}/a/reiserfsprogs-*.txz - Removed as of Wed Sep 17 22:13:56 UTC 2025
 # xfsprogs needs userspace-rcu
 linkpackage ${SLACKPKGDIR}/a/userspace-rcu-*.txz
 linkpackage ${SLACKPKGDIR}/a/xfsprogs-*.txz
