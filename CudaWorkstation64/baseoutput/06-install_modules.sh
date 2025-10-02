@@ -17,7 +17,7 @@ verbosecopymodule ${PACKAGESDIR}/nvidia_driver/${KERNVERS}/011-nvidia-550.144.03
 
 # Chrome needs RDL
 if [ "${INCCHROME}" == "Y" ]; then
-  verbosecopymodule ${PACKAGESDIR}/chrome/chrome-139.0.7258.154-x86_64-1.xzm ${MODSDIR}/
+  verbosecopymodule ${PACKAGESDIR}/chrome/chrome-140.0.7339.207-x86_64-1.xzm ${MODSDIR}/
 fi
 
 # LibreOffice needs RDL
