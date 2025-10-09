@@ -93,6 +93,10 @@ if [ "${INCMLOCATE}" == "Y" ]; then
   linkpackage ${SLACKPKGDIR}/a/mlocate-*.txz
 fi
 
+if [ "${INCMOREUTILS}" == "Y" ]; then
+  linkpackage ${SLACKPKGDIR}/a/moreutils-*.txz
+fi
+
 if [ "${INCMOSH}" == "Y" ]; then
   linkpackage ${SLACKPKGDIR}/n/mosh-*.txz
 fi
