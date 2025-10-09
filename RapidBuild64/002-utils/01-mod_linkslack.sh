@@ -57,6 +57,10 @@ if [ "${INCINOTIFYTOOLS}" == "Y" ]; then
   linkpackage ${SLACKPKGDIR}/a/inotify-tools-*.txz
 fi
 
+if [ "${INCJQ}" == "Y" ]; then
+  linkpackage ${SLACKPKGDIR}/d/jq-*.txz
+fi
+
 if [ "${INCLOGROTATE}" == "Y" ]; then
   linkpackage ${SLACKPKGDIR}/a/logrotate-*.txz
 fi

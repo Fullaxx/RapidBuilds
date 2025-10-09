@@ -142,10 +142,6 @@ if [ "${INCIPMITOOL}" == "Y" ]; then
   linkpackage "${PACKAGESDIR}/ipmitool/ipmitool-20230406-${ARCH}-bksrc1.xzm"
 fi
 
-if [ "${INCJQ}" == "Y" ]; then
-  linkpackage "${PACKAGESDIR}/jq/jq-1.7.1-${ARCH}-1.xzm"
-fi
-
 if [ "${INCLAZYDOCKER}" == "Y" ]; then
   linkpackage "${PACKAGESDIR}/lazy/lazydocker-0.21.1-${ARCH}-1.xzm"
 fi
