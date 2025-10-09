@@ -50,8 +50,9 @@ if [ "${INCALSA}" == "Y" ]; then
   linkpackage ${SLACKPKGDIR}/l/alsa-oss-*.txz
 fi
 
-if [ "${INCAPPSTREAMGLIB}" == "Y" ]; then
-  linkpackage ${SLACKPKGDIR}/l/appstream-glib-*.txz
+if [ "${INCAPPSTREAM}" == "Y" ]; then
+# gimp requires appstream
+  linkpackage ${SLACKPKGDIR}/l/appstream-*.txz
 fi
 
 if [ "${INCAPR}" == "Y" ]; then
@@ -204,6 +205,11 @@ fi
 if [ "${INCLIBDEFLATE}" == "Y" ]; then
 # openexr reqs libdeflate
   linkpackage ${SLACKPKGDIR}/l/libdeflate-*.txz
+fi
+
+if [ "${INCLIBFYAML}" == "Y" ]; then
+# appstream reqs libfyaml
+  linkpackage ${SLACKPKGDIR}/l/libfyaml-*.txz
 fi
 
 if [ "${INCLIBGCRYPT}" == "Y" ]; then
