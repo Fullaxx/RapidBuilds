@@ -26,7 +26,7 @@ rm mpfr-*.txz
 rm ncurses-*.txz
 rm openssh-*.txz
 rm popt-*.txz
-rm reiserfsprogs-*.txz
+# rm reiserfsprogs-*.txz - Removed as of Wed Sep 17 22:13:56 UTC 2025
 rm screen-*.txz
 rm sysfsutils-*.txz
 rm tar-*.txz

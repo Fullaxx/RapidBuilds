@@ -8,6 +8,12 @@ rm -r ${DIR}/var/log/setup
 rm ${DIR}/run/lock/pkgtools/ldconfig.lock
 rmdir ${DIR}/run/lock/pkgtools
 
+# Clean up e2fsprogs,grub if we dont have fuse3
+if [ "${INCFUSETHREE}" != "Y" ]; then
+  rm ${DIR}/usr/bin/fuse2fs
+  rm -f ${DIR}/usr/bin/grub-mount
+fi
+
 # Clean up dbus and grub
 if [ "${INCMOD010XORG}" != "Y" ]; then
   rm -f ${DIR}/usr/bin/dbus-launch
@@ -18,6 +24,13 @@ fi
 if [ "${INCGD}" != "Y" ]; then
   rm ${DIR}/usr/bin/memusagestat
 fi
+
+# Fri Aug 22 21:42:24 UTC 2025
+# We don't need ffmpeg from a/aaa_libraries
+rm -f ${DIR}/usr/${LIBDIR}/libav*
+rm -f ${DIR}/usr/${LIBDIR}/libbluray.*
+rm -f ${DIR}/usr/${LIBDIR}/libpostproc.*
+rm -f ${DIR}/usr/${LIBDIR}/libsw{resample,scale}.*
 
 # What other libraries from aaa_elflibs-*.txz can we remove?
 rm -f ${DIR}/usr/${LIBDIR}/libargon2*
@@ -31,7 +44,6 @@ rm -f ${DIR}/usr/${LIBDIR}/libtiff.*
 rm -f ${DIR}/usr/${LIBDIR}/libtiffxx.*
 
 # 31 OCT 2020
-rm -f ${DIR}/usr/${LIBDIR}/libicu*
 rm -f ${DIR}/usr/${LIBDIR}/libHalf.*
 rm -f ${DIR}/usr/${LIBDIR}/libIex-*
 rm -f ${DIR}/usr/${LIBDIR}/libIexMath-*

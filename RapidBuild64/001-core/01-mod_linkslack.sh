@@ -81,7 +81,7 @@ linkpackage ${SLACKPKGDIR}/l/libffi-*.txz
 # file needs lzlib
 linkpackage ${SLACKPKGDIR}/a/lzlib-*.txz
 
-linkpackage ${SLACKPKGDIR}/a/reiserfsprogs-*.txz
+# linkpackage ${SLACKPKGDIR}/a/reiserfsprogs-*.txz - Removed as of Wed Sep 17 22:13:56 UTC 2025
 # xfsprogs needs userspace-rcu
 linkpackage ${SLACKPKGDIR}/a/userspace-rcu-*.txz
 linkpackage ${SLACKPKGDIR}/a/xfsprogs-*.txz
@@ -93,6 +93,10 @@ linkpackage ${SLACKPKGDIR}/ap/lsof-*.txz
 linkpackage ${SLACKPKGDIR}/ap/lsscsi-*.txz
 linkpackage ${SLACKPKGDIR}/ap/nano-*.txz
 linkpackage ${SLACKPKGDIR}/ap/screen-*.txz
+
+# 250910 Lets put sqlite in 001-core
+linkpackage ${SLACKPKGDIR}/ap/sqlite-*.txz
+linkpackage ${SLACKPKGDIR}/l/icu4c-*.txz
 
 # req'd for NTP, and others
 linkpackage ${SLACKPKGDIR}/l/libedit-*.txz

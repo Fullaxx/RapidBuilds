@@ -21,6 +21,7 @@ if [ "${INCMOD002UTILS}" == "Y" ]; then
   INCMDADM="Y"
   INCMINICOM="N"
   INCMLOCATE="N"
+  INCMOREUTILS="Y"
   INCNCOMPRESS="N"
   INCNVI="N"
   INCNTFSTHREEG="Y"
@@ -64,6 +65,7 @@ if [ "${INCMOD002UTILS}" == "Y" ]; then
 
 # d family of packages
   INCGIT="Y"
+  INCJQ="Y"
 
 # l family of packages
   INCTIDYHTMLFIVE="N"
@@ -105,7 +107,6 @@ if [ "${INCMOD002UTILS}" == "Y" ]; then
   INCHPNSSH="Y"
   INCIOPING="Y"
   INCIOTOP="Y"
-  INCJQ="Y"
   INCLAZYDOCKER="Y"
   INCNLOAD="Y"
   INCNMON="Y"

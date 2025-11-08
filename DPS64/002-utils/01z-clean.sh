@@ -9,9 +9,4 @@ rm -f cdrtools-*.txz
 # do we need certs?
 # rm -f dcron-*.txz
 
-if [ ${INCGNUPGTWO} != "Y" ]; then
-# gpg2 needs sqlite
-  rm -f sqlite-*.txz
-fi
-
 rm -f wget-*.txz

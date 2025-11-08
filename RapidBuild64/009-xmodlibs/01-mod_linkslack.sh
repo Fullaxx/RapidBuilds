@@ -7,7 +7,6 @@ rm -f *.txz *.xzm
 
 linkpackage ${SLACKPKGDIR}/l/brotli-*.txz
 linkpackage ${SLACKPKGDIR}/l/fuse-*.txz
-linkpackage ${SLACKPKGDIR}/l/icu4c-*.txz
 
 linkpackage ${SLACKPKGDIR}/l/libidn2-*.txz
 linkpackage ${SLACKPKGDIR}/l/libnl-*.txz
@@ -28,6 +27,7 @@ linkpackage ${SLACKPKGDIR}/l/xxHash-*.txz
 
 linkpackage ${SLACKPKGDIR}/l/zstd-*.txz
 
+# curl (002-utils) dependencies
 linkpackage ${SLACKPKGDIR}/n/ca-certificates-*.txz
 linkpackage ${SLACKPKGDIR}/n/cyrus-sasl-*.txz
 linkpackage ${SLACKPKGDIR}/n/gnutls-*.txz
@@ -36,6 +36,9 @@ linkpackage ${SLACKPKGDIR}/n/openssl-*.txz
 linkpackage ${SLACKPKGDIR}/n/p11-kit-*.txz
 linkpackage ${SLACKPKGDIR}/n/nghttp2-*.txz
 linkpackage ${SLACKPKGDIR}/n/nghttp3-*.txz
+
+# cyrus-sasl,perl,python3.11 needs gdbm
+linkpackage ${SLACKPKGDIR}/l/gdbm-*.txz
 
 if [ "${INCABSEILCPP}" == "Y" ]; then
   linkpackage ${SLACKPKGDIR}/l/abseil-cpp-*.txz
@@ -47,8 +50,9 @@ if [ "${INCALSA}" == "Y" ]; then
   linkpackage ${SLACKPKGDIR}/l/alsa-oss-*.txz
 fi
 
-if [ "${INCAPPSTREAMGLIB}" == "Y" ]; then
-  linkpackage ${SLACKPKGDIR}/l/appstream-glib-*.txz
+if [ "${INCAPPSTREAM}" == "Y" ]; then
+# gimp requires appstream
+  linkpackage ${SLACKPKGDIR}/l/appstream-*.txz
 fi
 
 if [ "${INCAPR}" == "Y" ]; then
@@ -119,11 +123,6 @@ fi
 if [ "${INCGC}" == "Y" ]; then
 # XXX needs GC
   linkpackage ${SLACKPKGDIR}/l/gc-*.txz
-fi
-
-if [ "${INCGDBM}" == "Y" ]; then
-# perl,python3.11 needs gdbm
-  linkpackage ${SLACKPKGDIR}/l/gdbm-*.txz
 fi
 
 if [ "${INCGLIBONE}" == "Y" ]; then
@@ -206,6 +205,11 @@ fi
 if [ "${INCLIBDEFLATE}" == "Y" ]; then
 # openexr reqs libdeflate
   linkpackage ${SLACKPKGDIR}/l/libdeflate-*.txz
+fi
+
+if [ "${INCLIBFYAML}" == "Y" ]; then
+# appstream reqs libfyaml
+  linkpackage ${SLACKPKGDIR}/l/libfyaml-*.txz
 fi
 
 if [ "${INCLIBGCRYPT}" == "Y" ]; then

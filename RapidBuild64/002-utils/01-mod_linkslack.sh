@@ -57,6 +57,10 @@ if [ "${INCINOTIFYTOOLS}" == "Y" ]; then
   linkpackage ${SLACKPKGDIR}/a/inotify-tools-*.txz
 fi
 
+if [ "${INCJQ}" == "Y" ]; then
+  linkpackage ${SLACKPKGDIR}/d/jq-*.txz
+fi
+
 if [ "${INCLOGROTATE}" == "Y" ]; then
   linkpackage ${SLACKPKGDIR}/a/logrotate-*.txz
 fi
@@ -87,6 +91,10 @@ fi
 
 if [ "${INCMLOCATE}" == "Y" ]; then
   linkpackage ${SLACKPKGDIR}/a/mlocate-*.txz
+fi
+
+if [ "${INCMOREUTILS}" == "Y" ]; then
+  linkpackage ${SLACKPKGDIR}/a/moreutils-*.txz
 fi
 
 if [ "${INCMOSH}" == "Y" ]; then
@@ -399,10 +407,7 @@ fi
 
 # Don't you want to burn a RapidLinux LiveCD?
 linkpackage ${SLACKPKGDIR}/ap/cdrtools-*.txz
-
-linkpackage ${SLACKPKGDIR}/ap/sqlite-*.txz
-linkpackage ${SLACKPKGDIR}/ap/sudo-*.txz
-
 linkpackage ${SLACKPKGDIR}/n/curl-*.txz
 linkpackage ${SLACKPKGDIR}/n/rsync-*.txz
+linkpackage ${SLACKPKGDIR}/ap/sudo-*.txz
 linkpackage ${SLACKPKGDIR}/n/wget-*.txz
