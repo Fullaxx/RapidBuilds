@@ -85,7 +85,7 @@ if [ "${INCGDB}" == "Y" ]; then
 fi
 
 if [ "${INCGETTEXT}" == "Y" ]; then
-  linkpackage ${SLACKPKGDIR}/a/gettext-0.*.txz
+  linkpackage ${SLACKPKGDIR}/a/gettext-1.*.txz
 fi
 
 if [ "${INCGETTEXTTOOLS}" == "Y" ]; then
