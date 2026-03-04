@@ -38,3 +38,5 @@ echo "vboxweb:x:240:215:vboxweb:/:/bin/false" >> ${DIR}/etc/passwd
 echo "docker:x:281:" >> ${DIR}/etc/group
 echo "openldap:x:330:330:openldap:/:/bin/false" >> ${DIR}/etc/passwd
 echo "openldap:x:330:" >> ${DIR}/etc/group
+echo "chrony:x:354:354:chrony:/var/lib/chrony:/bin/false" >> ${DIR}/etc/passwd
+echo "chrony:x:354:" >> ${DIR}/etc/group
