@@ -353,6 +353,10 @@ if [ "${INCNEON}" == "Y" ]; then
   linkpackage ${SLACKPKGDIR}/l/neon-*.txz
 fi
 
+if [ "${INCONIGURUMA}" == "Y" ]; then
+  linkpackage ${SLACKPKGDIR}/l/oniguruma-*.txz
+fi
+
 if [ "${INCOPENBLAS}" == "Y" ]; then
   linkpackage ${SLACKPKGDIR}/l/openblas-*.txz
   linkpackage ${SLACKPKGDIR}/d/gcc-gfortran-*.txz
