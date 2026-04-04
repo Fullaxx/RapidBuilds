@@ -302,6 +302,10 @@ if [ "${INCLIBVPX}" == "Y" ]; then
   linkpackage ${SLACKPKGDIR}/l/libvpx-*.txz
 fi
 
+if [ "${INCLIBXMLB}" == "Y" ]; then
+  linkpackage ${SLACKPKGDIR}/l/libxmlb-*.txz
+fi
+
 if [ "${INCLIBXSLT}" == "Y" ]; then
 # needed by PHP and /usr/lib64/java/lib/amd64/libjfxwebkit.so
   linkpackage ${SLACKPKGDIR}/l/libxslt-*.txz
