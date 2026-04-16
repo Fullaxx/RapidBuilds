@@ -32,6 +32,7 @@ linkpackage ${SLACKPKGDIR}/n/ca-certificates-*.txz
 linkpackage ${SLACKPKGDIR}/n/cyrus-sasl-*.txz
 linkpackage ${SLACKPKGDIR}/n/gnutls-*.txz
 linkpackage ${SLACKPKGDIR}/n/nettle-*.txz
+linkpackage ${SLACKPKGDIR}/n/ngtcp2-*.txz
 linkpackage ${SLACKPKGDIR}/n/openssl-*.txz
 linkpackage ${SLACKPKGDIR}/n/p11-kit-*.txz
 linkpackage ${SLACKPKGDIR}/n/nghttp2-*.txz
