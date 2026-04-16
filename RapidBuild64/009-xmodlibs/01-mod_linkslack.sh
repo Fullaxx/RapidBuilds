@@ -389,6 +389,10 @@ if [ "${INCSERF}" == "Y" ]; then
   linkpackage ${SLACKPKGDIR}/l/serf-*.txz
 fi
 
+if [ "${INCSIMDUTF}" == "Y" ]; then
+  linkpackage ${SLACKPKGDIR}/l/simdutf-*.txz
+fi
+
 if [ "${INCSUITESPARSE}" == "Y" ]; then
 # gegl matting-levin plugin needs suitesparse
   linkpackage ${SLACKPKGDIR}/l/suitesparse-*.txz
