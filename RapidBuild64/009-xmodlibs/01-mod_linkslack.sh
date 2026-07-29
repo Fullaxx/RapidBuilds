@@ -136,6 +136,11 @@ if [ "${INCGPGME}" == "Y" ]; then
   linkpackage ${SLACKPKGDIR}/n/gpgme-*.txz
 fi
 
+if [ "${INCGPGMEPP}" == "Y" ]; then
+# poppler needs gpgmepp
+  linkpackage ${SLACKPKGDIR}/n/gpgmepp-*.txz
+fi
+
 if [ "${INCGSL}" == "Y" ]; then
 # intel-gpu-tools needs gsl, does anything else need it?
   linkpackage ${SLACKPKGDIR}/l/gsl-*.txz
