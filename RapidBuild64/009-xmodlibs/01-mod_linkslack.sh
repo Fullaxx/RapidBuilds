@@ -195,6 +195,11 @@ if [ "${INCLENSFUN}" == "Y" ]; then
   linkpackage ${SLACKPKGDIR}/l/lensfun-*.txz
 fi
 
+if [ "${INCLEPTONICA}" == "Y" ]; then
+# ghostscript needs leptonica
+  linkpackage ${SLACKPKGDIR}/l/leptonica-*.txz
+fi
+
 if [ "${INCLIBAIO}" == "Y" ]; then
   linkpackage ${SLACKPKGDIR}/l/libaio-*.txz
 fi
@@ -405,6 +410,11 @@ fi
 
 if [ "${INCTALLOC}" == "Y" ]; then
   linkpackage ${SLACKPKGDIR}/l/talloc-*.txz
+fi
+
+if [ "${INCTESSERACT}" == "Y" ]; then
+# ghostscript needs tesseract
+  linkpackage ${SLACKPKGDIR}/l/tesseract-5.5.2-*.txz
 fi
 
 if [ "${INCTEVENT}" == "Y" ]; then
