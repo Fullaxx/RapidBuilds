@@ -38,7 +38,7 @@ if [ "${INCBTOPPLUSPLUS}" == "Y" ]; then
 fi
 
 if [ "${INCBINDTOOLS}" == "Y" ]; then
-  linkpackage "${PACKAGESDIR}/bindtools/bindtools-9.18.13-${ARCH}-1.xzm"
+  linkpackage "${PACKAGESDIR}/bindtools/bindtools-9.20.26-${ARCH}-1.xzm"
 fi
 
 if [ "${INCCALC}" == "Y" ]; then
