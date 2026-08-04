@@ -414,7 +414,7 @@ fi
 
 if [ "${INCTESSERACT}" == "Y" ]; then
 # ghostscript needs tesseract
-  linkpackage ${SLACKPKGDIR}/l/tesseract-5.5.2-*.txz
+  linkpackage ${SLACKPKGDIR}/l/tesseract-*.txz
 fi
 
 if [ "${INCTEVENT}" == "Y" ]; then
