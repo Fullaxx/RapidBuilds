@@ -124,7 +124,9 @@ linkpackage ${SLACKPKGDIR}/l/popt-*.txz
 linkpackage ${SLACKPKGDIR}/l/readline-*.txz
 linkpackage ${SLACKPKGDIR}/l/zlib-*.txz
 
-linkpackage ${SLACKPKGDIR}/n/dhcp-*.txz # For dhclient
+# 260815 removed n/dhcp-*.txz in favor of n/kea-* (dhclient went with it)
+# linkpackage ${SLACKPKGDIR}/n/dhcp-*.txz # For dhclient
+
 linkpackage ${SLACKPKGDIR}/n/dhcpcd-*.txz
 linkpackage ${SLACKPKGDIR}/n/iproute2-*.txz
 linkpackage ${SLACKPKGDIR}/n/iputils-*.txz
