@@ -12,7 +12,7 @@ rm acl-*.txz
 rm attr-*.txz
 rm bash-completion-*.txz
 rm bin-*.txz
-rm dhcp-*.txz
+# rm dhcp-*.txz - Removed 260815 removed n/dhcp-*.txz in favor of n/kea-* (dhclient went with it)
 rm dhcpcd-*.txz
 rm dialog-*.txz
 rm glib2-*.txz
