@@ -478,18 +478,6 @@ mount_module()
    mount_device "$1" "$2" loop,ro squashfs
 }
 
-# Insert a directory tree $2 to an union specified by $1
-# Top-level read-write branch is specified by it's index 0
-# Using =rr enables aufs to optimize real readonly branches
-# $1 = union absolute path (starting with /)
-# $2 = path to data directory
-#
-union_insert_dir()
-{
-   debug_log "union_insert_dir" "$*"
-   mount -n -o remount,add:1:$2=rr aufs $1
-}
-
 # Find LZM modules in given dir
 # $1 = root directory of mounted DATAdir
 #
@@ -518,45 +506,6 @@ list_modules()
       fi
       if [ "$NOLOAD" -a "$(echo $MODNAME | egrep -i "$NOLOAD")" ]; then continue; fi
       echo $LINE
-   done
-}
-
-# Insert one single filesystem module to the union
-# $1 = union absolute path
-# $2 = module full path
-# $3 = destination folder, where images will be mounted to
-# $4 = preffix length strip (number of characters)
-#
-union_insert_module()
-{
-   debug_log "union_insert_module" "$*"
-   local TARGET
-
-   TARGET="$3/$(basename $2)"
-   if ismountpoint $TARGET; then return 1; fi # skip already used modules
-   mkdir -p $TARGET
-   mount_module $2 $TARGET
-   if [ $? -ne 0 ]; then echo "Cannot read module data. corrupted download?" >&2; return 1; fi
-   union_insert_dir $1 $TARGET
-   if [ $? -ne 0 ]; then echo "can't insert module to union" >&2; return 2; fi
-   echo "$2" | cut -b $(($4+1))-
-   echolog "$2" >/dev/null
-   return 0
-}
-
-# Insert all filesystem modules from $2 directory and subdirectories, to the union
-# $1 = union absolute path (starting with /)
-# $2 = LiveCD data dir (with directories /base, /modules, etc.)
-# $3 = destination folder, where images will be mounted to
-#
-union_insert_modules()
-{
-   debug_log "union_insert_modules" "$*"
-   local INSERTED
-
-   list_modules $2 | while read MODULE; do
-      INSERTED=$(union_insert_module $1 $MODULE $3 ${#2})
-      if [ "$INSERTED" != "" ]; then echolog " -> $(echo $INSERTED | sed -r s:^/::)"; fi
    done
 }
 
@@ -975,7 +924,7 @@ fstab_update()
    mkdir -p $1/etc $1/mnt
    cat $FSTAB 2>/dev/null | grep -v "$FSTABLLFLAG" >$FSTABTMP
 
-   fstab_add_line $FSTABTMP aufs / aufs defaults
+   fstab_add_line $FSTABTMP overlay / overlay defaults
    fstab_add_line $FSTABTMP proc /proc proc defaults
    fstab_add_line $FSTABTMP sysfs /sys sysfs defaults
    fstab_add_line $FSTABTMP devpts /dev/pts devpts gid=5,mode=620
