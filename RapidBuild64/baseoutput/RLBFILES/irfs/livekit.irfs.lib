@@ -194,7 +194,7 @@ init_aufs()
 # $1 = changes directory (ramfs or persistent changes)
 # $2 = union directory where to mount the union
 #
-init_union()
+init_aufs_union()
 {
   debug_log "init_union" "$*"
 
@@ -204,6 +204,30 @@ init_union()
   mkdir -p "$2"
 #  mount -t aufs -o xino="/.xino",trunc_xino,br="$1" aufs "$2"
   mount -t aufs -o xino="/.xino",br="$1" aufs "$2"
+}
+
+# load the overlay kernel module if needed
+#
+init_overlay()
+{
+  debug_log "init_overlay" "$*"
+  modprobe overlay 2>/dev/null
+}
+
+# Setup empty union
+# $1 = changes directory (ramfs or persistent changes)
+# $2 = union directory where to mount the union
+#
+init_union()
+{
+  debug_log "init_union" "$*"
+
+  echo_green_star
+  echo "Setting up union"
+  mkdir -p "$1"
+  mkdir -p "$2"
+  mkdir -p /memory/overlay-lower /memory/overlay-upper /memory/overlay-work
+  mount -t overlay overlay -o lowerdir="/memory/overlay-lower",upperdir="/memory/overlay-upper",workdir=/memory/overlay-work "$2"
 }
 
 # Return device mounted for given directory
@@ -630,13 +654,18 @@ union_append_bundles()
 
   echo_green_star
   echo "Adding $4 to union"
-  ( cd "$1" ; find "$4/" 2>/dev/null | sortmod | filter_load) | grep '[.]xzm$' | filter_noload | while read BUNDLE; do
+  ( cd "$1" ; find "$4/" 2>/dev/null | sortmod | filter_load ) | grep '[.]xzm$' | filter_noload | while read BUNDLE; do
     echo "* $BUNDLE"
     BUN="$(basename "$BUNDLE")"
     mkdir -p "$2/$BUN"
     mount -o loop -t squashfs "$1/$BUNDLE" "$2/$BUN"
-    mount -o remount,add:1:"$2/$BUN" aufs "$3"
+    mount -o remount,add:1:"$2/$BUN" overlay "$3"
   done
+
+# XXX FIXME
+  mount
+  ls -l $3
+  df -h $3
 }
 
 # Create empty fstab properly
@@ -648,7 +677,7 @@ fstab_create()
 
   local FSTAB
   FSTAB="$1/etc/fstab"
-  echo aufs / aufs defaults 0 0 > $FSTAB
+  echo overlay / overlay defaults 0 0 > $FSTAB
   echo proc /proc proc defaults 0 0 >> $FSTAB
   echo sysfs /sys sysfs defaults 0 0 >> $FSTAB
   echo devpts /dev/pts devpts gid=5,mode=620 0 0 >> $FSTAB
@@ -676,7 +705,7 @@ change_root()
   if [ ! -e dev/tty0 ]; then mknod dev/tty0 c 4 0; fi
   if [ ! -e dev/tty1 ]; then mknod dev/tty1 c 4 1; fi
   if [ ! -e dev/null ]; then mknod dev/null c 1 3; fi
-  if [ ! -e sbin/fsck.aufs ]; then ln -s /bin/true sbin/fsck.aufs; fi
+  if [ ! -e sbin/fsck.overlay ]; then ln -s /bin/true sbin/fsck.overlay; fi
 
   # find chroot and init
   if [ -x bin/chroot ]; then  CHROOT=bin/chroot; fi
@@ -690,7 +719,7 @@ change_root()
   if [ "$INIT" = "" ]; then fatal "Can't find executable init command"; fi
 
   mkdir -p mnt/live
-  mount -n -o remount,ro aufs .
+  mount -n -o remount,ro overlay .
   # LEFT AS COMMENT JUST IN CASE - mount -n -o remount,rw aufs .
   pivot_root . mnt/live
   exec $CHROOT . $INIT < dev/console > dev/console 2>&1
