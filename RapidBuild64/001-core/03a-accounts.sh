@@ -29,7 +29,7 @@ echo "vboxadd:x:215:215:vboxadd:/:/bin/false" >> ${DIR}/etc/passwd
 echo "vboxusers:x:215:" >> ${DIR}/etc/group
 echo "pulse:x:216:216:pulse:/:/bin/false" >> ${DIR}/etc/passwd
 echo "pulse:x:216:" >> ${DIR}/etc/group
-echo "kvm:x:221:" >> ${DIR}/etc/group
+# Slackware put this at 36?? echo "kvm:x:221:" >> ${DIR}/etc/group
 echo "thttpd:x:227:227:thttpd:/:/bin/false" >> ${DIR}/etc/passwd
 echo "thttpd:x:227:" >> ${DIR}/etc/group
 echo "davfs2:x:230:230:davfs2:/:/bin/false" >> ${DIR}/etc/passwd
