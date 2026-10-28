@@ -3,7 +3,7 @@
 source ../spec.sh
 source ./module_spec.sh
 
-PATCHESDIR="RLBFILES/patches/rc-241024"
+PATCHESDIR="RLBFILES/patches/rc-261028"
 if [ ! -d ${PATCHESDIR}  ]; then
   echo "patches are missing..."
   exit 1

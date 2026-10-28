@@ -1,0 +1,15 @@
+--- rc.S	2026-10-28 09:35:16.000000000 +0000
++++ rc.S.new	2026-10-28 09:35:42.211093615 +0000
+@@ -518,6 +518,12 @@
+ # written to /dev/urandom to actually add to the entropy, and the new seed
+ # that's output immediately afterward might actually have less entropy. This
+ # would only be an issue in case a power failure occured before a proper
++
++### RL Added ###
++if [ -x /etc/rc.d/rc.rl_init ]; then
++  /etc/rc.d/rc.rl_init
++fi
++### RL Added ###
+ # shutdown, or if a proper shutdown happened before enough time had gone by
+ # to generate good entropy. We'll favor using seedrng, but if it's missing
+ # (shouldn't be) then we'll fall back on using the script method.

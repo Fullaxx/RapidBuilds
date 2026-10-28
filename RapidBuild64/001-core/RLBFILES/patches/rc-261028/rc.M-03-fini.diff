@@ -1,0 +1,14 @@
+--- rc.M	2026-10-28 09:34:12.011781122 +0000
++++ rc.M.new	2026-10-28 09:34:16.001750591 +0000
+@@ -536,4 +536,11 @@
+   /etc/rc.d/rc.local
+ fi
+ 
++### RL Added ###
++# Start the rc.fini script
++if [ -x /etc/rc.d/rc.rl_fini ]; then
++  /etc/rc.d/rc.rl_fini
++fi
++### RL Added ###
++
+ # All done.

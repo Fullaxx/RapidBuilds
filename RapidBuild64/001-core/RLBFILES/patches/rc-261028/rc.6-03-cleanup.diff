@@ -1,0 +1,14 @@
+--- rc.6	2026-10-28 09:24:38.000000000 +0000
++++ rc.6.new	2026-10-28 09:29:57.173754757 +0000
+@@ -417,5 +417,10 @@
+   fi
+ else
+   echo "Powering off."
+-  /sbin/poweroff
++  # start RapidLinux cleanup script which ensures everything is correctly unmounted
++  if [ -x /mnt/live/cleanup ]; then
++    exec /mnt/live/cleanup --start /sbin/poweroff
++  else
++    /sbin/poweroff
++  fi
+ fi

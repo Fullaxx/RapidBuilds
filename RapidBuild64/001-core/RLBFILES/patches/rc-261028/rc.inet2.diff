@@ -1,0 +1,30 @@
+--- rc.inet2	2026-10-19 20:15:46.000000000 +0000
++++ rc.inet2.new	2026-10-28 09:39:02.099589716 +0000
+@@ -124,7 +124,7 @@
+ # Start the OpenSSH SSH daemon:
+ if [ -x /etc/rc.d/rc.sshd ]; then
+   echo "Starting OpenSSH SSH daemon:  /usr/sbin/sshd"
+-  /etc/rc.d/rc.sshd start
++  /etc/rc.d/rc.sshd start 1>/dev/null &
+ fi
+ 
+ # Start the BIND name server daemon:
+@@ -147,6 +147,18 @@
+   /etc/rc.d/rc.nfsd start
+ fi
+ 
++### RL Added ###
++# Start the IPv6 radvd service
++if [ -x /etc/rc.d/rc.radvd ]; then
++  /etc/rc.d/rc.radvd start
++fi
++
++# Start the libvirt daemon
++if [ -x /etc/rc.d/rc.libvirtd ]; then
++  /etc/rc.d/rc.libvirtd start
++fi
++### RL Added ###
++
+ # Stuff you won't need follows.  ;-)
+ 
+ # # Start the network routing daemon:
