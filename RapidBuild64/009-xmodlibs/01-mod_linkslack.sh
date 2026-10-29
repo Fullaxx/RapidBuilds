@@ -32,6 +32,7 @@ linkpackage ${SLACKPKGDIR}/n/ca-certificates-*.txz
 linkpackage ${SLACKPKGDIR}/n/cyrus-sasl-*.txz
 linkpackage ${SLACKPKGDIR}/n/gnutls-*.txz
 linkpackage ${SLACKPKGDIR}/n/nettle-*.txz
+linkpackage ${SLACKPKGDIR}/n/ngtcp2-*.txz
 linkpackage ${SLACKPKGDIR}/n/openssl-*.txz
 linkpackage ${SLACKPKGDIR}/n/p11-kit-*.txz
 linkpackage ${SLACKPKGDIR}/n/nghttp2-*.txz
@@ -135,6 +136,11 @@ if [ "${INCGPGME}" == "Y" ]; then
   linkpackage ${SLACKPKGDIR}/n/gpgme-*.txz
 fi
 
+if [ "${INCGPGMEPP}" == "Y" ]; then
+# poppler needs gpgmepp
+  linkpackage ${SLACKPKGDIR}/n/gpgmepp-*.txz
+fi
+
 if [ "${INCGSL}" == "Y" ]; then
 # intel-gpu-tools needs gsl, does anything else need it?
   linkpackage ${SLACKPKGDIR}/l/gsl-*.txz
@@ -187,6 +193,11 @@ fi
 
 if [ "${INCLENSFUN}" == "Y" ]; then
   linkpackage ${SLACKPKGDIR}/l/lensfun-*.txz
+fi
+
+if [ "${INCLEPTONICA}" == "Y" ]; then
+# ghostscript needs leptonica
+  linkpackage ${SLACKPKGDIR}/l/leptonica-*.txz
 fi
 
 if [ "${INCLIBAIO}" == "Y" ]; then
@@ -302,6 +313,10 @@ if [ "${INCLIBVPX}" == "Y" ]; then
   linkpackage ${SLACKPKGDIR}/l/libvpx-*.txz
 fi
 
+if [ "${INCLIBXMLB}" == "Y" ]; then
+  linkpackage ${SLACKPKGDIR}/l/libxmlb-*.txz
+fi
+
 if [ "${INCLIBXSLT}" == "Y" ]; then
 # needed by PHP and /usr/lib64/java/lib/amd64/libjfxwebkit.so
   linkpackage ${SLACKPKGDIR}/l/libxslt-*.txz
@@ -353,6 +368,10 @@ if [ "${INCNEON}" == "Y" ]; then
   linkpackage ${SLACKPKGDIR}/l/neon-*.txz
 fi
 
+if [ "${INCONIGURUMA}" == "Y" ]; then
+  linkpackage ${SLACKPKGDIR}/l/oniguruma-*.txz
+fi
+
 if [ "${INCOPENBLAS}" == "Y" ]; then
   linkpackage ${SLACKPKGDIR}/l/openblas-*.txz
   linkpackage ${SLACKPKGDIR}/d/gcc-gfortran-*.txz
@@ -380,6 +399,10 @@ if [ "${INCSERF}" == "Y" ]; then
   linkpackage ${SLACKPKGDIR}/l/serf-*.txz
 fi
 
+if [ "${INCSIMDUTF}" == "Y" ]; then
+  linkpackage ${SLACKPKGDIR}/l/simdutf-*.txz
+fi
+
 if [ "${INCSUITESPARSE}" == "Y" ]; then
 # gegl matting-levin plugin needs suitesparse
   linkpackage ${SLACKPKGDIR}/l/suitesparse-*.txz
@@ -387,6 +410,11 @@ fi
 
 if [ "${INCTALLOC}" == "Y" ]; then
   linkpackage ${SLACKPKGDIR}/l/talloc-*.txz
+fi
+
+if [ "${INCTESSERACT}" == "Y" ]; then
+# ghostscript needs tesseract
+  linkpackage ${SLACKPKGDIR}/l/tesseract-*.txz
 fi
 
 if [ "${INCTEVENT}" == "Y" ]; then

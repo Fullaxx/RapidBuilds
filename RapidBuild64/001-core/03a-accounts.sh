@@ -29,7 +29,7 @@ echo "vboxadd:x:215:215:vboxadd:/:/bin/false" >> ${DIR}/etc/passwd
 echo "vboxusers:x:215:" >> ${DIR}/etc/group
 echo "pulse:x:216:216:pulse:/:/bin/false" >> ${DIR}/etc/passwd
 echo "pulse:x:216:" >> ${DIR}/etc/group
-echo "kvm:x:221:" >> ${DIR}/etc/group
+# Slackware put this at 36?? echo "kvm:x:221:" >> ${DIR}/etc/group
 echo "thttpd:x:227:227:thttpd:/:/bin/false" >> ${DIR}/etc/passwd
 echo "thttpd:x:227:" >> ${DIR}/etc/group
 echo "davfs2:x:230:230:davfs2:/:/bin/false" >> ${DIR}/etc/passwd
@@ -38,3 +38,5 @@ echo "vboxweb:x:240:215:vboxweb:/:/bin/false" >> ${DIR}/etc/passwd
 echo "docker:x:281:" >> ${DIR}/etc/group
 echo "openldap:x:330:330:openldap:/:/bin/false" >> ${DIR}/etc/passwd
 echo "openldap:x:330:" >> ${DIR}/etc/group
+echo "chrony:x:354:354:chrony:/var/lib/chrony:/bin/false" >> ${DIR}/etc/passwd
+echo "chrony:x:354:" >> ${DIR}/etc/group

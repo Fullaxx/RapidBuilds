@@ -38,7 +38,7 @@ if [ "${INCBTOPPLUSPLUS}" == "Y" ]; then
 fi
 
 if [ "${INCBINDTOOLS}" == "Y" ]; then
-  linkpackage "${PACKAGESDIR}/bindtools/bindtools-9.18.13-${ARCH}-1.xzm"
+  linkpackage "${PACKAGESDIR}/bindtools/bindtools-9.20.26-${ARCH}-1.xzm"
 fi
 
 if [ "${INCCALC}" == "Y" ]; then
@@ -47,6 +47,10 @@ fi
 
 if [ "${INCCCAT}" == "Y" ]; then
   linkpackage "${PACKAGESDIR}/ccat/ccat-1.1.0-${ARCH}-1.xzm"
+fi
+
+if [ "${INCCHRONY}" == "Y" ]; then
+  linkpackage "${PACKAGESDIR}/chrony/chrony-4.8-${ARCH}-bksrc1.xzm"
 fi
 
 if [ "${INCCOLORTAIL}" == "Y" ]; then

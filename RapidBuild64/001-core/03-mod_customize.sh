@@ -24,3 +24,7 @@ rm ${DIR}/etc/gshadow
 sed -e 's/^password    requisite     pam_pwquality.so minlen=6 retry=3/#password    requisite     pam_pwquality.so minlen=6 retry=3/' -i ${DIR}/etc/pam.d/system-auth
 sed -e 's/^password    sufficient    pam_unix.so nullok sha512 shadow minlen=6 try_first_pass use_authtok/#password    sufficient    pam_unix.so nullok sha512 shadow minlen=4 try_first_pass use_authtok/' -i ${DIR}/etc/pam.d/system-auth
 sed -e 's/^#password    sufficient    pam_unix.so nullok sha512 shadow minlen=6/password    sufficient    pam_unix.so nullok sha512 shadow minlen=12/' -i ${DIR}/etc/pam.d/system-auth
+
+# Sat Sep 5 02:49:41 UTC 2026 - proper symlinks are missing from aaa_libraries ??
+# ldconfig -v for verbose mode
+chroot ${DIR} ldconfig

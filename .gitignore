@@ -6,6 +6,7 @@
 *.err
 *.bak
 *.sav
+*.swp
 *.saved
 *.mod_pkg_list.txt
 *.proj_pkg_list.txt

@@ -89,6 +89,10 @@ if [ "${INCMINICOM}" == "Y" ]; then
   linkpackage ${SLACKPKGDIR}/a/minicom-*.txz
 fi
 
+if [ "${INCLMDB}" == "Y" ]; then
+  linkpackage ${SLACKPKGDIR}/l/lmdb-*.txz
+fi
+
 if [ "${INCMLOCATE}" == "Y" ]; then
   linkpackage ${SLACKPKGDIR}/a/mlocate-*.txz
 fi

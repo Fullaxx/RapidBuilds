@@ -1,0 +1,19 @@
+--- rc.M	2026-10-13 21:03:58.000000000 +0000
++++ rc.M.new	2026-10-28 09:33:34.562068248 +0000
+@@ -113,6 +113,16 @@
+   /etc/rc.d/rc.iceccd start
+ fi
+ 
++### RL Added ###
++# Make sure X knows about all the installed fonts
++if [ -x /usr/bin/mkfontdir -a -x /usr/bin/mkfontscale ]; then
++  for FDIR in /usr/share/fonts/*; do
++    /usr/bin/mkfontscale ${FDIR}
++    /usr/bin/mkfontdir ${FDIR}
++  done
++fi
++### RL Added ###
++
+ # Update the X font indexes:
+ if [ -x /usr/bin/fc-cache ]; then
+   echo "Updating X font indexes:  /usr/bin/fc-cache -f &"

@@ -1,8 +1,11 @@
 if [ "${INCGHOSTSCRIPT}" == "Y" ]; then
   INCEXPAT="Y"
   INCLCMSTWO="Y"
+  INCLEPTONICA="Y"
 
 #  INCLIBPAPER="Y"
+
+  INCTESSERACT="Y"
 fi
 
 # usr/bin/gsx:

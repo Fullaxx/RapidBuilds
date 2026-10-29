@@ -528,6 +528,11 @@ if [ "${INCOPENJPEG}" == "Y" ]; then
   linkpackage ${SLACKPKGDIR}/l/openjpeg-*.txz
 fi
 
+if [ "${INCOPENJPH}" == "Y" ]; then
+# openexr
+  linkpackage ${SLACKPKGDIR}/l/openjph-*.txz
+fi
+
 if [ "${INCOPUS}" == "Y" ]; then
 # GIMP,GEGL,imagemagick need openexr
   linkpackage ${SLACKPKGDIR}/l/opus-*.txz

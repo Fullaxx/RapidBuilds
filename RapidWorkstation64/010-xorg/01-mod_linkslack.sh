@@ -85,6 +85,8 @@ if [ "${INCWAYLAND}" == "Y" ]; then
   linkpackage ${SLACKPKGDIR}/x/wayland-protocols-*.txz
   linkpackage ${SLACKPKGDIR}/x/wayland-?.??.*-*.txz
   linkpackage ${SLACKPKGDIR}/x/xorg-server-xwayland-*.txz
+  linkpackage ${SLACKPKGDIR}/x/libdecor-*.txz
+  linkpackage ${SLACKPKGDIR}/x/libei-*.txz
 fi
 
 if [ "${INCXDESKTOPENVIRONMENT}" == "Y" ]; then
